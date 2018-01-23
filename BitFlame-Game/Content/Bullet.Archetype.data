@@ -87,6 +87,6 @@ Cog =
 	},
 	DamageOnHit = 
 	{
-		float Damage = 2,
+		float Damage = 1,
 	},
 },
