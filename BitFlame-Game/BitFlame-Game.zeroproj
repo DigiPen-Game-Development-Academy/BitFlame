@@ -9,6 +9,7 @@ Cog =
 		uint ProjectEngineRevision = 16386,
 		bool AutoTakeProjectScreenshot = true,
 		uint64 Guid = 5a1c06d3238566b2,
+		uint64 Guid = 5a860b078ec0e361,
 	},
 	EditorSettings = 
 	{
