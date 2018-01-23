@@ -1,3 +1,16 @@
+/*************************************
+Filename: PlayerShooting
+Author: Sage Dupuy
+Contributors: 
+-
+-
+-
+-
+Last modified: 1/23/2018
+Brief:
+Destroys after a certain amount of time
+******************************************/
+
 class TimedDestroy : ZilchComponent
 {
     [Property] var Lifetime : Real = 10.0;

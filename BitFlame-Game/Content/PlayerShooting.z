@@ -1,3 +1,17 @@
+/*************************************
+Filename: PlayerShooting
+Author: Sage Dupuy
+Contributors: 
+-
+-
+-
+-
+Last modified: 1/23/2018
+Brief:
+This controls the shooting for the player.
+******************************************/
+
+
 class PlayerShooting : ZilchComponent
 {
     [Property] var FireRate : Real = 0.5;
