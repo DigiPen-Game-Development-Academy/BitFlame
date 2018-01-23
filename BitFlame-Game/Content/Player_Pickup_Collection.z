@@ -1,0 +1,57 @@
+/*************************************
+Filename: Player_Pickup_Collection.z
+Author: Jakob McFarland
+Contributors: NULL
+Last modified: 1/23/18
+Brief: This Component will cause the owner to collect the set amount of resources when it collides with a resource pickup
+******************************************/
+
+
+class Player_Pickup_Collection : ZilchComponent
+{
+    //on initialize
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Owner, Events.GroupCollisionStarted, this.OnGroupCollisionStarted);
+    }
+
+    //on collision started
+    function OnGroupCollisionStarted(event : CollisionGroupEvent)
+    {
+        var otherObject = event.OtherObject;
+        
+        if(otherObject.ResourcePickup != null)
+        {
+            this.GameSession.GameVars.PlayerResources += otherObject.ResourcePickup.PickupValue;
+            otherObject.Destroy();
+        }
+        
+        if(otherObject.OxygenPickup != null)
+        {
+            this.GameSession.GameVars.PlayerResources += otherObject.OxygenPickup.PickupValue;
+            otherObject.Destroy();
+        }
+    }
+}
+
+// allows owner to collect this up as a resource pickup
+class ResourcePickup : ZilchComponent
+{
+    [Property] var PickupValue : Integer = 0;
+    
+    function Initialize(init : CogInitializer)
+    {
+       
+    }
+}
+
+// allows owner to collect this up as an oxygen pickup
+class OxygenPickup : ZilchComponent
+{
+    [Property] var PickupValue : Integer = 0;
+    
+    function Initialize(init : CogInitializer)
+    {
+       
+    }
+}
