@@ -1,0 +1,31 @@
+/*************************************
+Filename: GameVars.z
+Author: Jakob McFarland
+Contributors: NULL
+Last modified: 1/23/18
+Brief: This Component stores the vars that are constant the whole game, include Player Health, Player Resources, and Player Oxygen
+******************************************/
+    
+class GameVars : ZilchComponent
+{
+    //setable starting values for the player 
+    [Property] var StartingPlayerHealth : Integer = 0; 
+    [Property] var StartingPlayerResources : Integer = 0; 
+    [Property] var StartingPlayerOxygen : Integer = 0; 
+    
+    //the actaul values stored on gamevars, these are the values that your scripts should be changing
+    var PlayerHealth : Integer; 
+    var PlayerResources : Integer; 
+    var PlayerOxygen: Integer; 
+    
+    //initialization function, runs when the owner object is created
+    function Initialize(init : CogInitializer)
+    {
+        //setting the working game var values to their preset values.
+        this.PlayerHealth = this.StartingPlayerHealth;
+        this.PlayerResources = this.StartingPlayerResources;
+        this.PlayerOxygen = this.StartingPlayerOxygen;
+        
+    }
+
+}
