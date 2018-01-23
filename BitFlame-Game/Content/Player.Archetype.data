@@ -52,11 +52,9 @@ Cog =
 		Vec3 Velocity = [0, 0, 0],
 		Vec3 AngularVelocity = [0, 0, 0],
 	},
-	PlayerShooting = 
+	PlayerDeath = 
 	{
-		float FireRate = 0.5,
-		float BulletSpeed = 10,
-		string Bullet = "5a1c3c0e55b6fbd1:Bullet",
+		int ResourcesToLose = 10,
 	},
 	IgnoreSpaceEffects = 
 	{
