@@ -2,8 +2,8 @@ ImageContent =
 {
 	SpriteSourceBuilder = 
 	{
-		string Name = "EnemySpikeball_Sprite",
-		uint64 ResourceId = 5a1c288939b62f26,
+		string Name = "MenuStartButton_Sprite (2)",
+		uint64 ResourceId = 5a1c2449454a305d,
 		uint64 AtlasId = 5274cf95e4a661fd,
 		uint FrameSizeX = 0,
 		uint FrameSizeY = 0,

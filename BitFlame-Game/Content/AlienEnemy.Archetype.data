@@ -6,11 +6,11 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "Player",
+		string Name = "Enemy",
 	},
 	Archetyped = 
 	{
-		string Name = "5a1c06ab2df03606:Player",
+		string Name = "5a1c25102e8b8ff5:AlienEnemy",
 	},
 	Transform = 
 	{
@@ -24,7 +24,7 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [1, 1, 1, 1],
+		Vec4 Color = [0, 0.975000024, 0.506999969, 1],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -36,43 +36,34 @@ Cog =
 		float AnimationSpeed = 1,
 		uint StartFrame = 0,
 	},
-	BoxCollider = 
+	Orientation = 
 	{
-		bool Ghost = false,
-		bool SendsMessages = true,
-		bool Seamless = true,
-		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-		Vec3 Offset = [0, 0, 0],
-		Vec3 Size = [0.5, 0.5, 0.5],
-	},
-	Player_Movement_Script = 
-	{
-		float Speed = 10,
+		Vec3 GlobalUp = [0, 1, 0],
+		Vec3 UpVector = [0, 0, 1],
+		Vec3 ForwardVector = [1, 0, 0],
+		OrientationBases DefaultBases = ForwardXUpZ,
 	},
 	RigidBody = 
 	{
 		bool Static = false,
 		bool Asleep = false,
 		bool Kinematic = false,
-		bool RotationLocked = true,
-		bool Mode2D = true,
+		bool RotationLocked = false,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
 		Vec3 AngularVelocity = [0, 0, 0],
 	},
-	PlayerDeath = 
+	EnemyLogic = 
 	{
-		int ResourcesToLose = 10,
+		float Speed = 5,
 	},
-	Player_Collection = 
+	Player_LookAt = 
 	{
 	},
-	PlayerShooting = 
+	Health = 
 	{
-		float FireRate = 0.5,
-		float BulletSpeed = 10,
-		string Bullet = "5a1c3c0e55b6fbd1:Bullet",
+		float Health = 10,
 	},
 },

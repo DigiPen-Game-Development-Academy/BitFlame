@@ -42,7 +42,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = false,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -71,8 +71,22 @@ Cog =
 		Vec3 ForwardVector = [1, 0, 0],
 		OrientationBases DefaultBases = ForwardXUpZ,
 	},
+	BoxCollider = 
+	{
+		bool Ghost = false,
+		bool SendsMessages = true,
+		bool Seamless = true,
+		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+		Vec3 Offset = [0, 0, 0],
+		Vec3 Size = [0.5, 0.5, 0.5],
+	},
 	TimedDestroy = 
 	{
 		float Lifetime = 5,
+	},
+	DamageOnHit = 
+	{
+		float Damage = 2,
 	},
 },
