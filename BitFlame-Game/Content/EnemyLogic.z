@@ -1,0 +1,59 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Filename: EnemyLogic                                                                                   //
+//Created by: Justin                                                                                     //
+//Contributors:                                                                                          //
+//Last Modified:                                                                                         //
+//Brief: Controls the enemy's AI                                                                         //
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+class EnemyLogic : ZilchComponent
+{
+    [Property] var TargetName : String;
+    [Property] var Speed : Real = 5;
+    var VelocitySet : Boolean = false;
+    var Velocity : Real3;
+    
+    var Target : Cog;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+    }
+    
+    function HurtPlayer()
+    {
+        
+    }
+    
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        var otherObject = event.OtherObject;
+        if (otherObject.Name == this.TargetName)
+        {
+            Console.WriteLine("boom");
+        }
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        //Finds the target by name
+        this.Target = this.Space.FindObjectByName(this.TargetName);
+        //Makes sure the target exists
+        if (this.Target == null )
+        {
+            Console.WriteLine("no");
+        }
+        else
+        {
+            //all the script is inside an else so it just stays still if the player doesn't exist
+            this.Owner.Transform.Translation += 
+            this.Velocity * event.Dt;
+            this.VelocitySet = true;
+            this.Velocity = this.Target.Transform.Translation - 
+                this.Owner.Transform.Translation;
+            this.Velocity = Math.Normalize(this.Velocity);
+            this.Velocity *= this.Speed;
+        }
+    }
+}
