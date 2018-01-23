@@ -1,0 +1,38 @@
+class Player_Movement_Script : ZilchComponent
+{
+    //******
+    // Player_Movement_Script
+    // Luke Taranowski
+    // Contributors:
+    // 1/23/2018
+    // This script controls the players movement
+    //******
+    
+    // Controls the players speed
+    [Property]
+    var Speed : Real = 5;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        // If player is pushing W move player up
+        if(Zero.Keyboard.KeyIsDown(Keys.W))
+        this.Owner.RigidBody.Velocity += Real3(0, 1, 0) * this.Speed * event.Dt;
+        
+        // If player is pushing A move player left
+        if(Zero.Keyboard.KeyIsDown(Keys.A))
+        this.Owner.RigidBody.Velocity -= Real3(1, 0, 0) * this.Speed * event.Dt;
+        
+        // If player is pushing S move player down
+        if(Zero.Keyboard.KeyIsDown(Keys.S))
+        this.Owner.RigidBody.Velocity -= Real3(0, 1, 0) * this.Speed * event.Dt;
+        
+        // If player is pushing D move player right
+        if(Zero.Keyboard.KeyIsDown(Keys.D))
+        this.Owner.RigidBody.Velocity += Real3(1, 0, 0) * this.Speed * event.Dt;
+    }
+}
