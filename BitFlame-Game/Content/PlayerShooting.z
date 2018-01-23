@@ -1,0 +1,38 @@
+class PlayerShooting : ZilchComponent
+{
+    [Property] var FireRate : Real = 0.5;
+    
+    [Property] var BulletSpeed : Real = 10.0;
+    
+    [Property] var Bullet : Archetype = null;
+    
+    var Timer : Real = 0.0;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        var screenPos = Zero.Mouse.ScreenPosition;
+        var mousePos = this.LevelSettings.CameraViewport.ScreenToWorldZPlane(screenPos, 0.0);
+        var mouseDirection = mousePos - this.Owner.Transform.WorldTranslation;
+        mouseDirection = Math.Normalize(mouseDirection);
+        
+        if(Zero.Mouse.IsButtonDown(MouseButtons.Left) && this.Timer >= this.FireRate)
+        {
+            var bullet = this.Space.CreateAtPosition(this.Bullet,this.Owner.Transform.Translation);
+            
+            bullet.RigidBody.Velocity += mouseDirection * this.BulletSpeed;
+            
+            bullet.Orientation.LookAtDirectionWithUp(mouseDirection, Real3(0.0,0.0,1.0));
+            
+            this.Timer = 0.0;
+        }
+        else
+        {
+            this.Timer += event.Dt;
+        }
+    }
+}
