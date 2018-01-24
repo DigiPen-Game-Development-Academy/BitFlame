@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [2.97132635, 0.0392284691, 0],
+		Vec3 Translation = [-2.53739643, -0.107369706, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -36,9 +36,17 @@ Cog =
 		float AnimationSpeed = 1,
 		uint StartFrame = 0,
 	},
-	ResourcePickup = 
+	RigidBody = 
 	{
-		int PickupValue = 1,
+		bool Static = false,
+		bool Asleep = false,
+		bool Kinematic = false,
+		bool RotationLocked = false,
+		bool Mode2D = true,
+		bool AllowSleep = true,
+		bool Inherit2DMode = true,
+		Vec3 Velocity = [0, 0, 0],
+		Vec3 AngularVelocity = [0, 0, 0],
 	},
 	SphereCollider = 
 	{
@@ -49,5 +57,11 @@ Cog =
 		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 		Vec3 Offset = [0, 0, 0],
 		float Radius = 0.375,
+	},
+	ResourcePickup = 
+	{
+		int PickupValue = 1,
+		float PickupRange = 3,
+		float PickupSpeed = 10,
 	},
 },

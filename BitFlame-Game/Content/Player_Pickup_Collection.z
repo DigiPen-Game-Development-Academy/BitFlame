@@ -12,11 +12,11 @@ class Player_Pickup_Collection : ZilchComponent
     //on initialize
     function Initialize(init : CogInitializer)
     {
-        Zero.Connect(this.Owner, Events.GroupCollisionStarted, this.OnGroupCollisionStarted);
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
     }
 
     //on collision started
-    function OnGroupCollisionStarted(event : CollisionGroupEvent)
+    function OnCollisionStarted(event : CollisionEvent)
     {
         var otherObject = event.OtherObject;
         
@@ -39,9 +39,23 @@ class ResourcePickup : ZilchComponent
 {
     [Property] var PickupValue : Integer = 0;
     
+    [Property] var PickupRange : Real = 0.0;
+    
+    [Property] var PickupSpeed : Real = 0.0;
+    
     function Initialize(init : CogInitializer)
     {
-       
+       Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        var player = this.Space.FindObjectByName("Player");
+        
+        if(Math.Distance(this.Owner.Transform.Translation, player.Transform.Translation) <= this.PickupRange)
+        {
+            this.Owner.RigidBody.Velocity += Math.Normalize(player.Transform.Translation - this.Owner.Transform.Translation) * event.Dt * this.PickupSpeed;
+        }
     }
 }
 
@@ -50,8 +64,22 @@ class OxygenPickup : ZilchComponent
 {
     [Property] var PickupValue : Integer = 0;
     
+    [Property] var PickupRange : Real = 0.0;
+    
+    [Property] var PickupSpeed : Real = 0.0;
+    
     function Initialize(init : CogInitializer)
     {
-       
+       Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        var player = this.Space.FindObjectByName("Player");
+        
+        if(Math.Distance(this.Owner.Transform.Translation, player.Transform.Translation) <= this.PickupRange)
+        {
+            this.Owner.RigidBody.Velocity += Math.Normalize(player.Transform.Translation - this.Owner.Transform.Translation) * event.Dt * this.PickupSpeed;
+        }
     }
 }
