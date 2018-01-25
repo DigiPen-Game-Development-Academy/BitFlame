@@ -1,0 +1,30 @@
+enum DisplayType{Health, Oxygen, MaterialCount}
+
+class SetXToVariable : ZilchComponent
+{
+    [Property] var Type : DisplayType;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(this.Type == DisplayType.MaterialCount)
+        {
+            this.Owner.SpriteText.Text = "`this.GameSession.GameVars.PlayerResources`";
+        }
+        
+        if(this.Type == DisplayType.Health)
+        {
+            this.Owner.Area.Size = Real2(this.GameSession.GameVars.PlayerHealth, 1.0);
+        }
+        
+        if(this.Type == DisplayType.Oxygen)
+        {
+            this.Owner.Area.Size = Real2(this.GameSession.GameVars.PlayerOxygen, 1.0);
+        }
+        
+    }
+}
