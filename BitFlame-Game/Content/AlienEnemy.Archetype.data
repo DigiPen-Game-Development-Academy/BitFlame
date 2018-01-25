@@ -68,6 +68,7 @@ Cog =
 	EnemyLogic = 
 	{
 		float Speed = 5,
+		float Range = 5,
 	},
 	Player_LookAt = 
 	{
