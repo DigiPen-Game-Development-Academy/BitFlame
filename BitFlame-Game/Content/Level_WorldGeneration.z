@@ -16,13 +16,13 @@ class Level_WorldGeneration : ZilchComponent
     [Property] var HiveArchetype : Archetype = null;
     
     //each range is the inputed value
-    [Property] var AsteroidProbability : Integer = 50;
+    [Property] var AsteroidProbability : Real = 50;
     
-    [Property] var EmptySpaceProbability : Integer = 25;
+    [Property] var EmptySpaceProbability : Real = 25;
       
-    [Property] var HiveProbability : Integer = 20;
+    [Property] var HiveProbability : Real = 20;
     
-    [Property] var EnemyProbability : Integer = 5;
+    [Property] var EnemyProbability : Real = 5;
     
     [Property] var MaxX : Integer = 245;
     
@@ -35,9 +35,9 @@ class Level_WorldGeneration : ZilchComponent
         var currentX = -this.MaxX;
         var currentY = -this.MaxY; 
    
-        for(currentY; currentY <= this.MaxY; currentY += 10)
+        for(currentY = -this.MaxY; currentY <= this.MaxY; currentY += 10)
         {
-            for(currentX; currentX <= this.MaxX; currentX += 10)
+            for(currentX = -this.MaxX; currentX <= this.MaxX; currentX += 10)
             {
                 this.BuildSquare(currentX, currentY);
                 
@@ -45,6 +45,7 @@ class Level_WorldGeneration : ZilchComponent
                 Console.WriteLine(currentY);
             }
             
+            Console.WriteLine("Test");
         }
         
     }

@@ -96,10 +96,10 @@ Level =
 			string AsteroidArchetype = "5a1180f76f978cdf:AssteroidChunk",
 			string EnemyArchetype = "5a1c25102e8b8ff5:AlienEnemy",
 			string HiveArchetype = "5a1c2405f45e8ddd:EnemyHive",
-			int AsteroidProbability = 50,
-			int EmptySpaceProbability = 25,
-			int HiveProbability = 20,
-			int EnemyProbability = 5,
+			float AsteroidProbability = 15,
+			float EmptySpaceProbability = 80,
+			float HiveProbability = 2,
+			float EnemyProbability = 3,
 			int MaxX = 245,
 			int MaxY = 245,
 		},
@@ -128,7 +128,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 67.0320358,
+			float Size = 20.1896744,
 		},
 		EditorCameraController = 
 		{
@@ -245,7 +245,7 @@ Level =
 					float FieldOfView = 45,
 					float NearPlane = 0.5,
 					float FarPlane = 200,
-					float Size = 100,
+					float Size = 20,
 				},
 				SoundListener = 
 				{
