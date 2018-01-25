@@ -34,7 +34,10 @@ class Asteroid_Mining : ZilchComponent
         {
             this.FirstTime = false;
             
-            this.MineStrength += 0.05;
+            if(this.MineStrength <= 0.5)
+            {
+                this.MineStrength += 0.05;
+            }
             
             this.Timer = 0.0;
         }
@@ -42,8 +45,6 @@ class Asteroid_Mining : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        Console.WriteLine(this.OriginPos);
-        
         if(this.Timer >= this.ResetTime && this.MineStrength > 0.0)
         {
             this.MineStrength = 0.0;
@@ -68,7 +69,7 @@ class Asteroid_Mining : ZilchComponent
             {
                 var resource = this.Space.CreateAtPosition(this.ResourceArchetype, this.Owner.Transform.Translation);
                 
-                resource.RigidBody.Velocity += Real3(this.RandomGen.Range(-1.0, 1.0), this.RandomGen.Range(-1.0, 1.0), 0.0) * event.Dt;
+                resource.RigidBody.Velocity += Real3(this.RandomGen.Range(-1.0, 1.0), this.RandomGen.Range(-1.0, 1.0), 0.0);
             }
             
             this.Owner.Destroy();

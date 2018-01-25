@@ -6,15 +6,15 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "Enemy",
+		string Name = "Asteroid Chunk",
 	},
 	Archetyped = 
 	{
-		string Name = "5a1c25102e8b8ff5:AlienEnemy",
+		string Name = "5a1180f76f978cdf:AssteroidChunk",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [2.5, 3.5, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -24,7 +24,7 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [0, 0.975000024, 0.506999969, 1],
+		Vec4 Color = [1, 1, 1, 1],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -36,13 +36,6 @@ Cog =
 		float AnimationSpeed = 1,
 		uint StartFrame = 0,
 	},
-	Orientation = 
-	{
-		Vec3 GlobalUp = [0, 1, 0],
-		Vec3 UpVector = [0, 0, 1],
-		Vec3 ForwardVector = [1, 0, 0],
-		OrientationBases DefaultBases = ForwardXUpZ,
-	},
 	BoxCollider = 
 	{
 		bool Ghost = false,
@@ -53,31 +46,13 @@ Cog =
 		Vec3 Offset = [0, 0, 0],
 		Vec3 Size = [0.5, 0.5, 0.5],
 	},
-	RigidBody = 
+	Asteroid_Mining = 
 	{
-		bool Static = false,
-		bool Asleep = false,
-		bool Kinematic = false,
-		bool RotationLocked = false,
-		bool Mode2D = false,
-		bool AllowSleep = true,
-		bool Inherit2DMode = true,
-		Vec3 Velocity = [0, 0, 0],
-		Vec3 AngularVelocity = [0, 0, 0],
-	},
-	EnemyLogic = 
-	{
-		float Speed = 5,
-	},
-	Player_LookAt = 
-	{
+		float DropAmount = 1,
+		string ResourceArchetype = "5a86165eb2745571:Game_ResourceOre_Pickup",
 	},
 	Health = 
 	{
-		float Health = 2,
-	},
-	DamageOnCollide = 
-	{
-		int Damage = 1,
+		float Health = 6,
 	},
 },

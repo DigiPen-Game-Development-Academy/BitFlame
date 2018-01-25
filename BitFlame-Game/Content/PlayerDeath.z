@@ -50,7 +50,6 @@ class PlayerDeath : ZilchComponent
         {
             gameVars.PlayerHealth = 0;
             Console.WriteLine("You Died");
-            Console.WriteLine(gameVars.PlayerResources);
         }
     }
 }
