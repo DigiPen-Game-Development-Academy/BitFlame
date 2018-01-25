@@ -35,7 +35,7 @@ Level =
 			},
 			CogPath Camera = 
 			{
-				string Path = ":/Camera",
+				string Path = ":/Player/Camera",
 				bool ErrorOnResolveToNull = false,
 				bool ErrorOnPathCantCompute = false,
 				bool ErrorOnDirectLinkFail = false,
@@ -116,7 +116,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.30350757, 1.32766521, 50],
+			Vec3 Translation = [7.34746361, -28.4800224, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -128,7 +128,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 14.9568939,
+			float Size = 100,
 		},
 		EditorCameraController = 
 		{
@@ -136,7 +136,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [1.30350757, 1.32766521, -1.30256311e-07],
+			Vec3 LookTarget = [7.34746361, -28.4800224, 1.3393344e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -193,96 +193,6 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [45.5, -46.5, 0],
-			Vec3 Scale = [3, 3, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Enemy Hive",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5a1c2405f45e8ddd:EnemyHive",
-		LinkId = 
-		{
-			uint Id = 7,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-0.5, -44, 0],
-			Vec3 Scale = [3, 3, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Enemy Hive",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5a1c2405f45e8ddd:EnemyHive",
-		LinkId = 
-		{
-			uint Id = 8,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-0.5, -44, 0],
-			Vec3 Scale = [3, 3, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Enemy Hive",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5a1c2405f45e8ddd:EnemyHive",
-		LinkId = 
-		{
-			uint Id = 9,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-31, -47.5, 0],
-			Vec3 Scale = [3, 3, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Enemy Hive",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5a1c2405f45e8ddd:EnemyHive",
-		LinkId = 
-		{
-			uint Id = 10,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-31, -47.5, 0],
-			Vec3 Scale = [3, 3, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Enemy Hive",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5a1c2405f45e8ddd:EnemyHive",
-		LinkId = 
-		{
-			uint Id = 11,
-		},
-		Transform = 
-		{
 			Vec3 Translation = [-245, 245.5, 0],
 			Vec3 Scale = [3, 3, 1],
 			Quat Rotation = [0, 0, 0, 1],
@@ -297,7 +207,7 @@ Level =
 		string Name = "5a1c2405f45e8ddd:EnemyHive",
 		LinkId = 
 		{
-			uint Id = 12,
+			uint Id = 7,
 		},
 		Transform = 
 		{

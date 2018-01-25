@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-6, 0, 0],
+		Vec3 Translation = [-15, -7.5, 0],
 		Vec3 Scale = [4, 4, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -38,7 +38,7 @@ Cog =
 	},
 	OxygenGauge = 
 	{
-		float DecaySpeed = 10,
+		float DecaySpeed = 1,
 		float OxygenModifier = 1,
 	},
 	Hierarchy = 

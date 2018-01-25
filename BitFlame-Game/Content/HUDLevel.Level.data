@@ -10,14 +10,6 @@ Level =
 		{
 			string Name = "LevelSettings",
 		},
-		GravityEffect = 
-		{
-			bool Active = true,
-			bool WakeUpOnChange = false,
-			bool LocalSpaceDirection = true,
-			float Strength = 10,
-			Vec3 Direction = [0, -1, 0],
-		},
 		DragEffect = 
 		{
 			bool Active = true,
@@ -30,9 +22,9 @@ Level =
 			bool Background = false,
 			Vec2 Offset = [0, 0],
 			Vec2 Size = [1, 1],
-			int Layer = 0,
+			int Layer = 1,
 			bool Active = true,
-			bool Blocking = true,
+			bool Blocking = false,
 			CogPath Renderer = 
 			{
 				string Path = ".",
@@ -118,7 +110,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 4,
+				uint ResolvedCog = 4294967293,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -133,7 +125,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 5,
+				uint ResolvedCog = 4,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -144,7 +136,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 6,
+			uint Id = 5,
 		},
 		Named = 
 		{
@@ -152,7 +144,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [11.1205578, -4.19034958, 50],
+			Vec3 Translation = [-9.98554993, -6.80764151, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -164,7 +156,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 18.0967503,
+			float Size = 24.428051,
 		},
 		EditorCameraController = 
 		{
@@ -172,7 +164,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [11.1205578, -4.19034958, 4.86095018e-07],
+			Vec3 LookTarget = [-9.98554993, -6.80764151, -4.36482168e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -228,7 +220,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-17.5, -9, 0],
+			Vec3 Translation = [-12, -9, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -268,50 +260,6 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "OxygenBar",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-17.5, -7.5, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.840000033, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Area = 
-		{
-			Vec2 Size = [10, 1],
-			Location Origin = CenterLeft,
-		},
-		SetXToVariable = 
-		{
-			Enum Type = Oxygen,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 5,
-		},
-		Named = 
-		{
 			string Name = "Material Indicator",
 		},
 		Transform = 
@@ -340,6 +288,24 @@ Level =
 		SetXToVariable = 
 		{
 			Enum Type = MaterialCount,
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ac104f6bc42814b:OxygenGauge",
+		LinkId = 
+		{
+			uint Id = 6,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-15, -7.5, 0],
+			Vec3 Scale = [4, 4, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "OxygenGauge",
 		},
 	},
 },
