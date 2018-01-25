@@ -28,7 +28,7 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5275aa4d802dd6dc:Square",
+		string SpriteSource = "5a1187921ddc92c6:PlayerBody_Sprite",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -43,8 +43,8 @@ Cog =
 		bool Seamless = true,
 		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-		Vec3 Offset = [0, 0, 0],
-		Vec3 Size = [0.5, 0.5, 0.5],
+		Vec3 Offset = [-0.100000001, 0, 0],
+		Vec3 Size = [0.25, 0.75, 0.5],
 	},
 	Player_Movement_Script = 
 	{
@@ -69,12 +69,6 @@ Cog =
 	Player_Pickup_Collection = 
 	{
 	},
-	PlayerShooting = 
-	{
-		float FireRate = 0.5,
-		float BulletSpeed = 10,
-		string Bullet = "5a1c3c0e55b6fbd1:Bullet",
-	},
 	IgnoreSpaceEffects = 
 	{
 		bool Drag = true,
@@ -95,6 +89,9 @@ Cog =
 	{
 		float FlashTime = 0.200000003,
 		Vec4 FlashColor = [1, 0, 0, 1],
+	},
+	FlipXWhenMouseGreaterThan = 
+	{
 	},
 	Hierarchy = 
 	{
@@ -128,6 +125,67 @@ Cog =
 			{
 				bool Active = true,
 				float Volume = 1,
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 3,
+			},
+			Named = 
+			{
+				string Name = "Arm",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [-0.129999995, 0.129999995, 0],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5a1187921ddd83b7:PlayerArm_Sprite",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+			},
+			BoxCollider = 
+			{
+				bool Ghost = false,
+				bool SendsMessages = true,
+				bool Seamless = true,
+				string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+				string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+				Vec3 Offset = [0.25, 0, 0],
+				Vec3 Size = [0.375, 0.125, 0.5],
+			},
+			Orientation = 
+			{
+				Vec3 GlobalUp = [0, 1, 0],
+				Vec3 UpVector = [0, 1, 0],
+				Vec3 ForwardVector = [1, 0, 0],
+				OrientationBases DefaultBases = ForwardXUpY,
+			},
+			LookAtMouse = 
+			{
+			},
+			PlayerShooting = 
+			{
+				float FireRate = 0.5,
+				float BulletSpeed = 10,
+				string Bullet = "5a1c3c0e55b6fbd1:Bullet",
 			},
 		},
 	},
