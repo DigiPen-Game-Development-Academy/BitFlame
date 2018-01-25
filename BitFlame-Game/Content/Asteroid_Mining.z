@@ -42,8 +42,6 @@ class Asteroid_Mining : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        Console.WriteLine(this.OriginPos);
-        
         if(this.Timer >= this.ResetTime && this.MineStrength > 0.0)
         {
             this.MineStrength = 0.0;
