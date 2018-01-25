@@ -11,25 +11,20 @@ class EnemyLogic : ZilchComponent
     var Target : Cog;
     [Property] var Speed : Real = 5;
     
+    [Property] var Range : Real = 0.0;
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
         
         this.Target = this.Space.FindObjectByName("Player");
-    }
-    
-    function OnCollisionStarted(event : CollisionEvent)
-    {
-        var otherObject = event.OtherObject;
-        if (otherObject == this.Target)
-        {
-            Console.WriteLine("boom");
-        }
     }
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        this.Owner.RigidBody.Velocity += Math.Normalize(this.Target.Transform.Translation - this.Owner.Transform.Translation) * event.Dt * this.Speed;
+        if(Math.Distance(this.Owner.Transform.Translation, this.Target.Transform.Translation) <= this.Range)
+        {
+            this.Owner.RigidBody.Velocity += Math.Normalize(this.Target.Transform.Translation - this.Owner.Transform.Translation) * event.Dt * this.Speed;
+        }
     }
 }

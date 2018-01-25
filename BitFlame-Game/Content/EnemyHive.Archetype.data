@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [8, 0, 0],
+		Vec3 Translation = [-19.5, 22, 0],
 		Vec3 Scale = [3, 3, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -46,6 +46,7 @@ Cog =
 		float Amount = 1,
 		float FireRate = 2,
 		float OutputSpeed = 10,
+		float Range = 20,
 	},
 	SphereCollider = 
 	{

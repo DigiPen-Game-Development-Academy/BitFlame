@@ -36,7 +36,7 @@ class PlayerShooting : ZilchComponent
         
         if(Zero.Mouse.IsButtonDown(MouseButtons.Left) && this.Timer >= this.FireRate)
         {
-            var bullet = this.Space.CreateAtPosition(this.Bullet,this.Owner.Transform.Translation);
+            var bullet = this.Space.CreateAtPosition(this.Bullet,this.Owner.Transform.WorldTranslation);
             
             bullet.RigidBody.Velocity += mouseDirection * this.BulletSpeed;
             
