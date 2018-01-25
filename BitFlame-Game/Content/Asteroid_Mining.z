@@ -42,9 +42,13 @@ class Asteroid_Mining : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        if(this.Timer >= this.ResetTime)
+        Console.WriteLine(this.OriginPos);
+        
+        if(this.Timer >= this.ResetTime && this.MineStrength > 0.0)
         {
             this.MineStrength = 0.0;
+            
+            this.Owner.Transform.Translation = this.OriginPos;
         }
         else
         {
@@ -56,7 +60,7 @@ class Asteroid_Mining : ZilchComponent
             this.Owner.Transform.Translation = this.OriginPos + Real3(this.RandomGen.Range(-0.25, 0.25), this.RandomGen.Range(-0.25, 0.25), 0.0) * this.MineStrength;
         }
         
-        if(this.MineStrength >= 0.5)
+        if(this.Owner.Health.Health <= 1.0)
         {
             this.MineStrength = 0.0;
             
