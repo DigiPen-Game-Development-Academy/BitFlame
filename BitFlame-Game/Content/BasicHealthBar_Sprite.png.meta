@@ -2,8 +2,8 @@ ImageContent =
 {
 	SpriteSourceBuilder = 
 	{
-		string Name = "MenuStartButton_Sprite (2)",
-		uint64 ResourceId = 5a1c2449454a305d,
+		string Name = "BasicHealthBar_Sprite",
+		uint64 ResourceId = 5a11b6fe9f518e5b,
 		uint64 AtlasId = 5274cf95e4a661fd,
 		uint FrameSizeX = 32,
 		uint FrameSizeY = 32,
