@@ -4,9 +4,7 @@ class AsteroidGeneration : ZilchComponent
     
     var RandomGen : Random = Random();
     
-    var XPosArray : Array[any];
-    
-    var YPosArray : Array[any];
+    var AsteroidArray : Array[Cog];
     
     function Initialize(init : CogInitializer)
     {
@@ -23,18 +21,17 @@ class AsteroidGeneration : ZilchComponent
             {
                 var asteroid = this.Space.CreateAtPosition(this.Asteroid, this.Owner.Transform.Translation);
                 
-                
-                
                 for(var j = 0.0; j < size; ++j)
                 {
                     var randomDir = Real3(Math.Round(this.RandomGen.Range(-1, 1)), Math.Round(this.RandomGen.Range(-1, 1)), 0.0);
                     
                     asteroid.Transform.Translation += randomDir;
                 }
-                
-                foreach(var child in this.Owner.Children.All)
+                foreach(var object in this.AsteroidArray)
                 {
-                    while(child.Transform.Translation.X == asteroid.Transform.Translation.X && child.Transform.Translation.Y == asteroid.Transform.Translation.Y)
+                    asteroid.AttachTo(this.Owner);
+                    
+                    while(object.Transform.Translation.X == asteroid.Transform.Translation.X && object.Transform.Translation.Y == asteroid.Transform.Translation.Y)
                     {
                         asteroid.Transform.Translation = Real3.Zero;
                         
@@ -46,12 +43,7 @@ class AsteroidGeneration : ZilchComponent
                         }
                     }
                     
-                    if(child.Transform.Translation.X != asteroid.Transform.Translation.X && child.Transform.Translation.Y != asteroid.Transform.Translation.Y)
-                    {
-                        asteroid.AttachTo(this.Owner);
-                        
-                        break;
-                    }
+                    this.AsteroidArray.Add(asteroid);
                 }
             }
         }

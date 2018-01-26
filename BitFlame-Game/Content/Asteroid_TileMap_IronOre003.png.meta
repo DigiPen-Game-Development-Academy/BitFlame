@@ -2,16 +2,16 @@ ImageContent =
 {
 	SpriteSourceBuilder = 
 	{
-		string Name = "OxygenTank",
-		uint64 ResourceId = 5ac1603b08d0b032,
+		string Name = "Asteroid_TileMap_IronOre003",
+		uint64 ResourceId = 5ae6fa2c255bfdad,
 		uint64 AtlasId = 5274cf95e4a661fd,
-		uint FrameSizeX = 76,
-		uint FrameSizeY = 141,
+		uint FrameSizeX = 32,
+		uint FrameSizeY = 32,
 		uint FrameCount = 1,
 		float FrameDelay = 0.0833333358,
-		float OriginX = 38,
-		float OriginY = 70,
-		float PixelsPerUnit = 16,
+		float OriginX = 16,
+		float OriginY = 16,
+		float PixelsPerUnit = 32,
 		bool Smoothing = false,
 		bool Looping = true,
 		Vec4 Slices = [0, 0, 0, 0],
