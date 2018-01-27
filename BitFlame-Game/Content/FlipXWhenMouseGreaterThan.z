@@ -30,7 +30,5 @@ class FlipXWhenMouseGreaterThan : ZilchComponent
             this.Owner.FindChildByName("Arm").Transform.Translation = Real3(0.13, 
                                                                             this.Owner.FindChildByName("Arm").Transform.Translation.Y, 0.0);
         }
-        
-        Console.WriteLine(this.MousePos);
     }
 }

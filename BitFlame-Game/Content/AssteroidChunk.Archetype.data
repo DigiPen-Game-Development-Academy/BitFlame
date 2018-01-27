@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [2.5, 3.5, 0],
+		Vec3 Translation = [-8.5, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -54,5 +54,24 @@ Cog =
 	Health = 
 	{
 		float Health = 6,
+	},
+	GenerateCorrectSpriteSourse = 
+	{
+		string Plain1 = "5ae6fa2c255587b4:Asteroid_TileMap_IronOre000",
+		string Plain2 = "5ae6fa2c255115bb:Asteroid_TileMap_IronOre001",
+		string Plain3 = "5ae6fa2c255c7920:Asteroid_TileMap_IronOre002",
+		string Plain4 = "5ae6fa2c255bfdad:Asteroid_TileMap_IronOre003",
+		string LeftFlat = "5ae6fa2d2549e8f2:Asteroid_TileMap_IronOre007",
+		string RightFlat = "5ae6fa2d254ac9b2:Asteroid_TileMap_IronOre006",
+		string UpFlat = "5ae6fa2c25442c8b:Asteroid_TileMap_IronOre004",
+		string BottomFlat = "5ae6fa2d2540ab3f:Asteroid_TileMap_IronOre005",
+		string LeftBottomCorner = "5ae6fa2d24bd3d95:Asteroid_TileMap_IronOre010",
+		string RightBottomCorner = "5ae6fa2d24b12b9f:Asteroid_TileMap_IronOre009",
+		string LeftUpCorner = "5ae6fa2d24b9022d:Asteroid_TileMap_IronOre011",
+		string RightUpCorner = "5ae6fa2d24b570e0:Asteroid_TileMap_IronOre008",
+		string UpEnd = "5ae6fa2d24a4b216:Asteroid_TileMap_IronOre012",
+		string DownEnd = "5ae6fa2d24af728e:Asteroid_TileMap_IronOre014",
+		string LeftEnd = "5ae6fa2d24a0493b:Asteroid_TileMap_IronOre013",
+		string RightEnd = "5ae6fa2d24aa7fe3:Asteroid_TileMap_IronOre015",
 	},
 },

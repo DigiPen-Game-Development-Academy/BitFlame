@@ -103,6 +103,18 @@ Level =
 				CogPathPreference PathPreference2 = Absolute,
 			},
 		},
+		Level_WorldGeneration = 
+		{
+			string AsteroidArchetype = "",
+			string EnemyArchetype = "",
+			string HiveArchetype = "",
+			float AsteroidProbability = 50,
+			float EmptySpaceProbability = 25,
+			float HiveProbability = 20,
+			float EnemyProbability = 5,
+			int MaxX = 245,
+			int MaxY = 245,
+		},
 	},
 	Cog = 
 	{
@@ -116,7 +128,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-3.79011846, -2.14191318, 50],
+			Vec3 Translation = [-3.6577332, -1.62891936, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -128,7 +140,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 90.483757,
+			float Size = 12.2456627,
 		},
 		EditorCameraController = 
 		{
@@ -136,7 +148,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-3.79011846, -2.14191318, -3.44495731e-07],
+			Vec3 LookTarget = [-3.6577332, -1.62891936, -3.38708986e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
