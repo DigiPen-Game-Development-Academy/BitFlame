@@ -2,7 +2,7 @@
 Filename: PlayerShooting
 Author: Sage Dupuy
 Contributors: 
--
+- Jakob McFarland (Shooting speed is normal + Player Velocity)
 -
 -
 -
@@ -38,7 +38,7 @@ class PlayerShooting : ZilchComponent
         {
             var bullet = this.Space.CreateAtPosition(this.Bullet,this.Owner.Transform.WorldTranslation);
             
-            bullet.RigidBody.Velocity += mouseDirection * this.BulletSpeed;
+            bullet.RigidBody.Velocity += mouseDirection * this.BulletSpeed + this.Owner.Parent.RigidBody.Velocity;
             
             bullet.Orientation.LookAtDirectionWithUp(mouseDirection, Real3(0.0,0.0,1.0));
             

@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-19.5, 22, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [3, 3, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -38,7 +38,7 @@ Cog =
 	},
 	Health = 
 	{
-		float Health = 50,
+		float Health = 30,
 	},
 	HiveSpawner = 
 	{
