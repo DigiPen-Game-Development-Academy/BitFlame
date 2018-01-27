@@ -8,9 +8,13 @@ Cog =
 	{
 		string Name = "Asteroid",
 	},
+	Archetyped = 
+	{
+		string Name = "5ae1a538d02da41c:Asteroid",
+	},
 	Transform = 
 	{
-		Vec3 Translation = [-8.5, 0, 0],
+		Vec3 Translation = [-8, 5, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},

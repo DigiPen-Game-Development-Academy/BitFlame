@@ -128,7 +128,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 40.6569824,
+			float Size = 18.2683754,
 		},
 		EditorCameraController = 
 		{
@@ -432,61 +432,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-8.5, -0.5, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Asteroid",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5ae1a538d02da41c:Asteroid",
-		LinkId = 
-		{
-			uint Id = 9,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-4.5, 4, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Asteroid",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5ae1a538d02da41c:Asteroid",
-		LinkId = 
-		{
-			uint Id = 10,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0.5, -4.5, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Asteroid",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5ae1a538d02da41c:Asteroid",
-		LinkId = 
-		{
-			uint Id = 11,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [15.5, -2, 0],
+			Vec3 Translation = [-8, 5, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},

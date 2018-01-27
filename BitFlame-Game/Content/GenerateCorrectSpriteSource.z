@@ -42,7 +42,7 @@ class GenerateCorrectSpriteSourse : ZilchComponent
     
     var RandomGen : Random = Random();
     
-    var Generate : Boolean = false;
+    var Generate : Boolean = true;
     
     function RayCast(direction : Real3, start : Real3) : CastResult
     {
@@ -52,7 +52,6 @@ class GenerateCorrectSpriteSourse : ZilchComponent
         ray.Direction = direction;
         
         var castResults = this.Space.PhysicsSpace.CastRayFirst(ray);
-        
         return castResults;
     }
     
@@ -67,7 +66,6 @@ class GenerateCorrectSpriteSourse : ZilchComponent
     {
         if(this.Generate)
         {
-            
             this.UpResults = this.RayCast(Real3(0.0,1.0,0.0), this.Owner.Transform.Translation);
             
             this.DownResults = this.RayCast(Real3(0.0,-1.0,0.0), this.Owner.Transform.Translation);
@@ -77,11 +75,14 @@ class GenerateCorrectSpriteSourse : ZilchComponent
             this.RightResults = this.RayCast(Real3(1.0,0.0,0.0), this.Owner.Transform.Translation);
             
             Console.WriteLine(this.UpResults.Distance);
-            Console.WriteLine(this.RightResults.Distance);
+            
             Console.WriteLine(this.DownResults.Distance);
+            
+            Console.WriteLine(this.RightResults.Distance);
+            
             Console.WriteLine(this.LeftResults.Distance);
             
-            if(this.UpResults.Distance <= 1.0 && this.DownResults.Distance <= 1.0 && this.RightResults.Distance <= 1.0 && this.LeftResults.Distance <= 1.0)
+            if(this.UpResults.Distance <= 0.6 && this.DownResults.Distance <= 0.6 && this.RightResults.Distance <= 0.6 && this.LeftResults.Distance <= 0.6)
             {
                 var randomNum = Math.Round(this.RandomGen.Range(1,4));
                 
@@ -102,67 +103,60 @@ class GenerateCorrectSpriteSourse : ZilchComponent
                     this.Owner.Sprite.SpriteSource = this.Plain4;
                 }
             }
-            
-            if(this.UpResults.Distance >= 1.0 && this.DownResults.Distance <= 1.0 && this.RightResults.Distance <= 1.0 && this.LeftResults.Distance <= 1.0)
+            else if(this.UpResults.Distance >= 0.6 && this.DownResults.Distance <= 0.6 && this.RightResults.Distance <= 0.6 && this.LeftResults.Distance <= 0.6)
             {
                 this.Owner.Sprite.SpriteSource = this.UpFlat;
             }
-            
-            if(this.UpResults.Distance <= 1.0 && this.DownResults.Distance >= 1.0 && this.RightResults.Distance <= 1.0 && this.LeftResults.Distance <= 1.0)
+            else if(this.UpResults.Distance <= 0.6 && this.DownResults.Distance >= 0.6 && this.RightResults.Distance <= 0.6 && this.LeftResults.Distance <= 0.6)
             {
                 this.Owner.Sprite.SpriteSource = this.BottomFlat;
             }
-            
-            if(this.UpResults.Distance <= 1.0 && this.DownResults.Distance <= 1.0 && this.RightResults.Distance >= 1.0 && this.LeftResults.Distance <= 1.0)
+            else if(this.UpResults.Distance <= 0.6 && this.DownResults.Distance <= 0.6 && this.RightResults.Distance >= 0.6 && this.LeftResults.Distance <= 0.6)
             {
                 this.Owner.Sprite.SpriteSource = this.LeftFlat;
             }
-            
-            if(this.UpResults.Distance <= 1.0 && this.DownResults.Distance <= 1.0 && this.RightResults.Distance <= 1.0 && this.LeftResults.Distance >= 1.0)
+            else if(this.UpResults.Distance <= 0.6 && this.DownResults.Distance <= 0.6 && this.RightResults.Distance <= 0.6 && this.LeftResults.Distance >= 0.6)
             {
                 this.Owner.Sprite.SpriteSource = this.RightFlat;
             }
-            
-            if(this.UpResults.Distance >= 1.0 && this.DownResults.Distance <= 1.0 && this.RightResults.Distance >= 1.0 && this.LeftResults.Distance <= 1.0)
+            else if(this.UpResults.Distance >= 0.6 && this.DownResults.Distance <= 0.6 && this.RightResults.Distance >= 0.6 && this.LeftResults.Distance <= 0.6)
             {
                 this.Owner.Sprite.SpriteSource = this.RightUpCorner;
             }
-            
-            if(this.UpResults.Distance >= 1.0 && this.DownResults.Distance <= 1.0 && this.RightResults.Distance <= 1.0 && this.LeftResults.Distance >= 1.0)
+            else if(this.UpResults.Distance >= 0.6 && this.DownResults.Distance <= 0.6 && this.RightResults.Distance <= 0.6 && this.LeftResults.Distance >= 0.6)
             {
                 this.Owner.Sprite.SpriteSource = this.LeftUpCorner;
             }
-            
-            if(this.UpResults.Distance <= 1.0 && this.DownResults.Distance >= 1.0 && this.RightResults.Distance >= 1.0 && this.LeftResults.Distance <= 1.0)
+            else if(this.UpResults.Distance <= 0.6 && this.DownResults.Distance >= 0.6 && this.RightResults.Distance >= 0.6 && this.LeftResults.Distance <= 0.6)
             {
                 this.Owner.Sprite.SpriteSource = this.RightBottomCorner;
             }
-            
-            if(this.UpResults.Distance <= 1.0 && this.DownResults.Distance >= 1.0 && this.RightResults.Distance <= 1.0 && this.LeftResults.Distance >= 1.0)
+            else if(this.UpResults.Distance <= 0.6 && this.DownResults.Distance >= 0.6 && this.RightResults.Distance <= 0.6 && this.LeftResults.Distance >= 0.6)
             {
                 this.Owner.Sprite.SpriteSource = this.LeftBottomCorner;
             }
-            
-            if(this.UpResults.Distance >= 1.0 && this.DownResults.Distance >= 1.0 && this.RightResults.Distance >= 1.0 && this.LeftResults.Distance <= 1.0)
+            else if(this.UpResults.Distance >= 0.6 && this.DownResults.Distance >= 0.6 && this.RightResults.Distance >= 0.6 && this.LeftResults.Distance <= 0.6)
             {
                 this.Owner.Sprite.SpriteSource = this.RightEnd;
             }
-            
-            if(this.UpResults.Distance <= 1.0 && this.DownResults.Distance >= 1.0 && this.RightResults.Distance >= 1.0 && this.LeftResults.Distance >= 1.0)
+            else if(this.UpResults.Distance <= 0.6 && this.DownResults.Distance >= 0.6 && this.RightResults.Distance >= 0.6 && this.LeftResults.Distance >= 0.6)
             {
                 this.Owner.Sprite.SpriteSource = this.DownEnd;
             }
-            
-            if(this.UpResults.Distance >= 1.0 && this.DownResults.Distance >= 1.0 && this.RightResults.Distance <= 1.0 && this.LeftResults.Distance >= 1.0)
+            else if(this.UpResults.Distance >= 0.6 && this.DownResults.Distance >= 0.6 && this.RightResults.Distance <= 0.6 && this.LeftResults.Distance >= 0.6)
             {
                 this.Owner.Sprite.SpriteSource = this.LeftEnd;
             }
-            
-            if(this.UpResults.Distance >= 1.0 && this.DownResults.Distance <= 1.0 && this.RightResults.Distance >= 1.0 && this.LeftResults.Distance >= 1.0)
+            else if(this.UpResults.Distance >= 0.6 && this.DownResults.Distance <= 0.6 && this.RightResults.Distance >= 0.6 && this.LeftResults.Distance >= 0.6)
             {
                 this.Owner.Sprite.SpriteSource = this.UpEnd;
             }
+            else
+            {
+                Console.WriteLine("else");
+            }
+            
+            this.Owner.RemoveComponentByName("GenerateCorrectSpriteSourse");
         }
-        
     }
 }
