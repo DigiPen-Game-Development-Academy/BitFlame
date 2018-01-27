@@ -8,14 +8,7 @@ class AsteroidGeneration : ZilchComponent
     
     function Initialize(init : CogInitializer)
     {
-        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-    }
-    
-    function OnLogicUpdate(event : UpdateEvent)
-    {
-        if(Zero.Keyboard.KeyIsPressed(Keys.Space))
-        {
-            var size = this.RandomGen.Range(1, 10);
+        var size = this.RandomGen.Range(1, 10);
             
             for(var i = 0.0; i < size * size / 1.5; ++i)
             {
@@ -25,27 +18,8 @@ class AsteroidGeneration : ZilchComponent
                 {
                     var randomDir = Real3(Math.Round(this.RandomGen.Range(-1, 1)), Math.Round(this.RandomGen.Range(-1, 1)), 0.0);
                     
-                    asteroid.Transform.Translation += randomDir;
-                }
-                foreach(var object in this.AsteroidArray)
-                {
-                    asteroid.AttachTo(this.Owner);
-                    
-                    while(object.Transform.Translation.X == asteroid.Transform.Translation.X && object.Transform.Translation.Y == asteroid.Transform.Translation.Y)
-                    {
-                        asteroid.Transform.Translation = Real3.Zero;
-                        
-                        for(var j = 0.0; j < size; ++j)
-                        {
-                            var randomDir = Real3(Math.Round(this.RandomGen.Range(-1, 1)), Math.Round(this.RandomGen.Range(-1, 1)), 0.0);
-                            
-                            asteroid.Transform.Translation += randomDir;
-                        }
-                    }
-                    
-                    this.AsteroidArray.Add(asteroid);
+                    asteroid.Transform.Translation += randomDir + Real3(1.0, 0.0,0.0);
                 }
             }
-        }
     }
 }

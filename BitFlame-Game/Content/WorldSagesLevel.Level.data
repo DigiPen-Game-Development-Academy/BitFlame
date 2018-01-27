@@ -103,18 +103,6 @@ Level =
 				CogPathPreference PathPreference2 = Absolute,
 			},
 		},
-		Level_WorldGeneration = 
-		{
-			string AsteroidArchetype = "",
-			string EnemyArchetype = "",
-			string HiveArchetype = "",
-			float AsteroidProbability = 50,
-			float EmptySpaceProbability = 25,
-			float HiveProbability = 20,
-			float EnemyProbability = 5,
-			int MaxX = 245,
-			int MaxY = 245,
-		},
 	},
 	Cog = 
 	{
@@ -128,7 +116,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-3.6577332, -1.62891936, 50],
+			Vec3 Translation = [-1.9867785, -0.464600325, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -140,7 +128,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 12.2456627,
+			float Size = 40.6569824,
 		},
 		EditorCameraController = 
 		{
@@ -148,7 +136,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-3.6577332, -1.62891936, -3.38708986e-07],
+			Vec3 LookTarget = [-1.9867785, -0.464600325, -3.38708986e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -435,25 +423,76 @@ Level =
 			},
 		},
 	},
-	Cog = 
+	ArchetypeInstance = 
 	{
+		string Name = "5ae1a538d02da41c:Asteroid",
 		LinkId = 
 		{
 			uint Id = 8,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-8.5, -0.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
 		{
 			string Name = "Asteroid",
 		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ae1a538d02da41c:Asteroid",
+		LinkId = 
+		{
+			uint Id = 9,
+		},
 		Transform = 
 		{
-			Vec3 Translation = [-8.5, 0, 0],
+			Vec3 Translation = [-4.5, 4, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		AsteroidGeneration = 
+		Named = 
 		{
-			string Asteroid = "5a1180f76f978cdf:AssteroidChunk",
+			string Name = "Asteroid",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ae1a538d02da41c:Asteroid",
+		LinkId = 
+		{
+			uint Id = 10,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0.5, -4.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Asteroid",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ae1a538d02da41c:Asteroid",
+		LinkId = 
+		{
+			uint Id = 11,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [15.5, -2, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Asteroid",
 		},
 	},
 },

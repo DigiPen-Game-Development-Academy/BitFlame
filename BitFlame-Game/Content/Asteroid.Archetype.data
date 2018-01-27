@@ -1,0 +1,21 @@
+Cog = 
+{
+	LinkId = 
+	{
+		uint Id = 1,
+	},
+	Named = 
+	{
+		string Name = "Asteroid",
+	},
+	Transform = 
+	{
+		Vec3 Translation = [-8.5, 0, 0],
+		Vec3 Scale = [1, 1, 1],
+		Quat Rotation = [0, 0, 0, 1],
+	},
+	AsteroidGeneration = 
+	{
+		string Asteroid = "5a1180f76f978cdf:AssteroidChunk",
+	},
+},
