@@ -1,7 +1,7 @@
 /*************************************
 Filename: Player_Pickup_Collection.z
 Author: Jakob McFarland
-Contributors: NULL
+Contributors: Sage Dupuy
 Last modified: 1/23/18
 Brief: This Component will cause the owner to collect the set amount of resources when it collides with a resource pickup
 ******************************************/
