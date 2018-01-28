@@ -39,10 +39,16 @@ class Level_WorldGeneration : ZilchComponent
         {
             for(currentX = -this.MaxX; currentX <= this.MaxX; currentX += 10)
             {
+                if((currentX == 5 || currentX == -5) && (currentY == 5 || currentY == -5))
+                {
+                    continue;
+                } 
+                
                 this.BuildSquare(currentX, currentY);
                 
-                Console.WriteLine(currentX);
-                Console.WriteLine(currentY);
+                //Test Writes
+                //Console.WriteLine(currentX);
+                //Console.WriteLine(currentY);
             }
             
             Console.WriteLine("Test");
