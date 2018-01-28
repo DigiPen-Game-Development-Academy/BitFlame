@@ -13,12 +13,12 @@ class CameraFollow : ZilchComponent
   [Property] var Target : CogPath = null;
 
   //minimum x,y bounds 
-  [Property] var Min : Real2 = Real2(-100, -100);
+  [Property] var Min : Real2 = Real2(-1000, -1000);
   //maximum x,y bounds 
-  [Property] var Max: Real2 = Real2(100, 100);
+  [Property] var Max: Real2 = Real2(1000, 1000);
 
   //This needs to be between 0 and 1, determines how quickly the camera tracks the player
-  [Property] var LerpValue : Real = 0.1;
+  [Property] var LerpValue : Real = 0.9;
   
   function Initialize(init : CogInitializer)
   {
