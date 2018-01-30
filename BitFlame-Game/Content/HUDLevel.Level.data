@@ -144,7 +144,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [10.1565762, -3.18591094, 71.0189209],
+			Vec3 Translation = [-1.25558984, -4.02622223, 71.0189209],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -156,7 +156,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 27.2532082,
+			float Size = 24.6597252,
 		},
 		EditorCameraController = 
 		{
@@ -164,7 +164,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [10.1565762, -3.18591094, 21.018919],
+			Vec3 LookTarget = [-1.25558984, -4.02622223, 21.018919],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -219,7 +219,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 6,
+				uint ResolvedCog = 4294967293,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -242,7 +242,7 @@ Level =
 				},
 				Archetyped = 
 				{
-					string Name = "5adbf3bea2c454d3:HealthBar",
+					string Name = "4faa6050b86884ec:DefaultArchetype",
 				},
 				Transform = 
 				{
@@ -283,7 +283,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 7,
+							uint Id = 6,
 						},
 						Named = 
 						{
@@ -318,7 +318,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 8,
+							uint Id = 7,
 						},
 						Named = 
 						{
@@ -356,7 +356,7 @@ Level =
 				string Name = "5ac104f6bc42814b:OxygenGauge",
 				LinkId = 
 				{
-					uint Id = 9,
+					uint Id = 8,
 				},
 				Transform = 
 				{
