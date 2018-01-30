@@ -1,4 +1,4 @@
-class GenerateCorrectSpriteSourse : ZilchComponent
+class GenerateCorrectSpriteSource : ZilchComponent
 {
     [Property] var Plain1 : SpriteSource;
     
