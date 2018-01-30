@@ -1,0 +1,47 @@
+class Ship_Upgrade_Script : ZilchComponent
+{
+/*************************************
+Filename: Ship_Upgrade_Script.z
+Author: Luke Taranowski
+Contributors: NULL
+Last modified: 1/30/18
+Brief: This component checks if the player is in range, has pressed a button, and if they have a certain amount of resources
+******************************************/
+    // defines how close the player has to be
+    [Property] var ShipUpgradingRange : Real = 0.0;
+    
+    // defines what button the player has to press to upgrade ship
+    [Property] var ShipUpgradeButton : Keys = Keys.Space;
+    
+    // defines how mnay resources the player needs to upgrade the ship, also determines how many resources to subtract from player
+    [Property] var UpgradeCost : Integer = 1;
+    
+    function Initialize(init : CogInitializer)
+    {
+       Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        // Assigns variable to the player object
+        var player = this.Space.FindObjectByName("Player");
+        
+        // Checks if the player variable is in range
+        if(Math.Distance(this.Owner.Transform.Translation, player.Transform.Translation) <= this.ShipUpgradingRange)
+        {
+            // Checks if player has pushed the ShipUpgradeButton
+            if(Zero.Keyboard.KeyIsPressed(this.ShipUpgradeButton))
+            {
+                // Checks if player has enough resources
+                if(this.GameSession.GameVars.PlayerResources >= this.UpgradeCost)
+                {
+                    //Removes resources from player
+                    this.GameSession.GameVars.PlayerResources -= this.UpgradeCost;
+                    
+                    //Insert upgrade code here
+                    Console.WriteLine("Test");
+                }
+            }
+        }
+    }
+}
