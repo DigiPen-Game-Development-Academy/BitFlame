@@ -1,6 +1,6 @@
 class AsteroidGeneration : ZilchComponent
 {
-    [Property] var Asteroid : Archetype = null;
+    [Property] var AsteroidChunk : Archetype = null;
     
     var RandomGen : Random = Random();
     
@@ -8,27 +8,45 @@ class AsteroidGeneration : ZilchComponent
     
     function Initialize(init : CogInitializer)
     {
+        Zero.Connect(init, Events.AllObjectsInitialized, this.OnAllObjectsInitialized);
+    }
+
+    function OnAllObjectsInitialized(event : CogInitializerEvent)
+    {
         var asteroidArray = new Array[Cog]();
         
-        var size = this.RandomGen.Range(1, 10);
+        var size = this.RandomGen.Range(5, 20);
         
-        for(var i = 0.0; i < size * size / 1.5; ++i)
+        foreach(var child in this.Owner.Children)
         {
-            var asteroid = this.Space.CreateAtPosition(this.Asteroid, this.Owner.Transform.Translation);
-            
-            asteroidArray.Add(asteroid);
-            
-            for(var j = 0.0; j < size; ++j)
-            {
-                var randomDir = Real3(Math.Round(this.RandomGen.Range(-1, 1)), Math.Round(this.RandomGen.Range(-1, 1)), 0.0);
-                
-                asteroid.Transform.Translation += randomDir;
-            }
+            asteroidArray.Add(child);
         }
         
-        for(var object = 0; object < asteroidArray.Count; ++object)
+        for(var i = 0.0; i < size; ++i)
         {
-            asteroidArray.Get(object).AddComponentByName("GenerateCorrectSpriteSourse");
+            
+            if(asteroidArray.Count <= 0.0) return;
+            
+            var index = this.RandomGen.RangeExclusiveMax(0, asteroidArray.Count);
+            
+            var position = asteroidArray[index].Transform.WorldTranslation;
+             
+            var asteroidChunk = this.Space.CreateAtPosition(this.AsteroidChunk, position);
+            
+            if(asteroidChunk != null)
+            {
+                asteroidChunk.AttachToRelative(this.Owner);
+            }
+            
+            asteroidArray.RemoveSwap(index);
+        }
+        
+        foreach(var child in this.Owner.Children)
+        {
+            if(child.Name == "Asteroid Chunk")
+            {
+                child.AddComponentByName("GenerateCorrectSpriteSource");
+            }
         }
     }
 }

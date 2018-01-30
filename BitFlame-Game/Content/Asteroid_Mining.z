@@ -67,7 +67,7 @@ class Asteroid_Mining : ZilchComponent
             
             for(var i = 0.0; i < this.DropAmount; ++i)
             {
-                var resource = this.Space.CreateAtPosition(this.ResourceArchetype, this.Owner.Transform.Translation);
+                var resource = this.Space.CreateAtPosition(this.ResourceArchetype, this.Owner.Transform.WorldTranslation);
                 
                 resource.RigidBody.Velocity += Real3(this.RandomGen.Range(-1.0, 1.0), this.RandomGen.Range(-1.0, 1.0), 0.0);
             }
