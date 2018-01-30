@@ -45,7 +45,12 @@ class AsteroidGeneration : ZilchComponent
         {
             if(child.Name == "Asteroid Chunk")
             {
-                child.AddComponentByName("GenerateCorrectSpriteSource");
+                child.GenerateCorrectSpriteSource.Generate = true;
+            }
+            
+            if(child.Name == "Node")
+            {
+                child.Destroy();
             }
         }
     }
