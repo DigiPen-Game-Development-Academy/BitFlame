@@ -28,9 +28,16 @@ class Player_Pickup_Collection : ZilchComponent
         
         if(otherObject.OxygenPickup != null)
         {
-            this.GameSession.GameVars.PlayerResources += otherObject.OxygenPickup.PickupValue;
+            this.GameSession.GameVars.PlayerOxygen += otherObject.OxygenPickup.PickupValue;
             otherObject.Destroy();
         }
+        
+        if(otherObject.UpgradePickup != null)
+        {
+            this.GameSession.GameVars.PlayerUpgradePoints += otherObject.UpgradePickup.PickupValue;
+            otherObject.Destroy();
+        }
+        
     }
 }
 
@@ -61,6 +68,30 @@ class ResourcePickup : ZilchComponent
 
 // allows owner to collect this up as an oxygen pickup
 class OxygenPickup : ZilchComponent
+{
+    [Property] var PickupValue : Integer = 0;
+    
+    [Property] var PickupRange : Real = 0.0;
+    
+    [Property] var PickupSpeed : Real = 0.0;
+    
+    function Initialize(init : CogInitializer)
+    {
+       Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        var player = this.Space.FindObjectByName("Player");
+        
+        if(Math.Distance(this.Owner.Transform.Translation, player.Transform.Translation) <= this.PickupRange)
+        {
+            this.Owner.RigidBody.Velocity += Math.Normalize(player.Transform.Translation - this.Owner.Transform.Translation) * event.Dt * this.PickupSpeed;
+        }
+    }
+}
+
+class UpgradePickup : ZilchComponent
 {
     [Property] var PickupValue : Integer = 0;
     

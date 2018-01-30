@@ -12,11 +12,13 @@ class GameVars : ZilchComponent
     [Property] var StartingPlayerHealth : Integer = 0; 
     [Property] var StartingPlayerResources : Integer = 0; 
     [Property] var StartingPlayerOxygen : Integer = 0; 
+    [Property] var StartingUpgradePoints : Integer = 0; 
     
     //the actaul values stored on gamevars, these are the values that your scripts should be changing
     var PlayerHealth : Integer; 
     var PlayerResources : Integer; 
     var PlayerOxygen: Integer; 
+    var PlayerUpgradePoints : Integer;
     
     //initialization function, runs when the owner object is created
     function Initialize(init : CogInitializer)
@@ -25,6 +27,7 @@ class GameVars : ZilchComponent
         this.PlayerHealth = this.StartingPlayerHealth;
         this.PlayerResources = this.StartingPlayerResources;
         this.PlayerOxygen = this.StartingPlayerOxygen;
+        this.PlayerUpgradePoints = this.StartingUpgradePoints;
         
     }
 
