@@ -136,7 +136,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.460615754, -0.567070842, 49.9989891],
+			Vec3 Translation = [0.24299863, -2.41589618, 49.9989891],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -148,7 +148,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 14.7781296,
+			float Size = 24.3650055,
 		},
 		EditorCameraController = 
 		{
@@ -156,7 +156,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.460615754, -0.567070842, -0.00101069093],
+			Vec3 LookTarget = [0.24299863, -2.41589618, -0.0010106999],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -257,37 +257,23 @@ Level =
 			string Name = "Game_ResourceOre_Pickup",
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "5a70715bb5c81bfe:Game_OxygenOre_Pickup",
 		LinkId = 
 		{
 			uint Id = 6,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-5, 0, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
 		{
 			string Name = "Game_OxygenOre_Pickup",
 		},
-	},
-	Cog = 
-	{
-		LinkId = 
+		Archetyped = 
 		{
-			uint Id = 7,
-		},
-		Named = 
-		{
-			string Name = "Sprite",
+			string Name = "5a70715bb5c81bfe:Game_OxygenOre_Pickup",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 3, 0],
+			Vec3 Translation = [-5, 0, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -301,7 +287,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
+			string SpriteSource = "5a70768ba7400ede:Game_OxygenOre_Pickup_Animation",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -321,7 +307,7 @@ Level =
 			Vec3 Velocity = [0, 0, 0],
 			Vec3 AngularVelocity = [0, 0, 0],
 		},
-		BoxCollider = 
+		SphereCollider = 
 		{
 			bool Ghost = true,
 			bool SendsMessages = true,
@@ -329,11 +315,11 @@ Level =
 			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 			Vec3 Offset = [0, 0, 0],
-			Vec3 Size = [0.5, 0.5, 0.5],
+			float Radius = 0.375,
 		},
-		UpgradePickup = 
+		OxygenPickup = 
 		{
-			int PickupValue = 1,
+			int PickupValue = 5,
 			float PickupRange = 3,
 			float PickupSpeed = 10,
 		},
@@ -342,7 +328,92 @@ Level =
 	{
 		LinkId = 
 		{
+			uint Id = 7,
+		},
+		Named = 
+		{
+			string Name = "Game_Health_Pickup",
+		},
+		Archetyped = 
+		{
+			string Name = "5a91584aba2cd6fd:Game_Heath_Pickup",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, -3, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a91589db1903997:Game_SmallHealth_Pickup_Animated",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		RigidBody = 
+		{
+			bool Static = false,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = false,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
+		SphereCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			float Radius = 0.375,
+		},
+		HealthPickup = 
+		{
+			int PickupValue = 5,
+			float PickupRange = 3,
+			float PickupSpeed = 10,
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a9159819b85330d:Game_Health_Pickup",
+		LinkId = 
+		{
 			uint Id = 8,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 3, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Game_Health_Pickup",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 9,
 		},
 		Named = 
 		{
@@ -377,7 +448,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 9,
+			uint Id = 10,
 		},
 		Named = 
 		{
@@ -385,7 +456,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [10, 0, 0],
+			Vec3 Translation = [10, 0, -0.5],
 			Vec3 Scale = [10, 5, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -431,6 +502,7 @@ Level =
 		},
 		Ship_Interaction = 
 		{
+			Enum ShipAccessKey = E,
 			string HUDLevel = "5a917ce258f29948:ShipMenuLevel",
 			string SpaceArchetype = "554cea0f94af6dc4:Space",
 			CogPath PlayerRef = 
