@@ -16,8 +16,23 @@ class GameVars : ZilchComponent
     
     [Property] var HasUpgrade_SpreadI : Boolean = false;
     [Property] var HasUpgrade_SpreadII : Boolean = false;
-    
-    
+    [Property] var HasUpgrade_Homing : Boolean = false;
+    [Property] var HasUpgrade_FirerateI : Boolean = false;
+    [Property] var HasUpgrade_FirerateII : Boolean = false;
+    [Property] var HasUpgrade_Doubleshot : Boolean = false;
+    [Property] var HasUpgrade_PenitrationI : Boolean = false;
+    [Property] var HasUpgrade_PenitrationII : Boolean = false;
+    [Property] var HasUpgrade_KnockbackI : Boolean = false;
+    [Property] var HasUpgrade_KnockbackII : Boolean = false;
+    [Property] var HasUpgrade_Maxspeed : Boolean = false;
+    [Property] var HasUpgrade_Acceleration : Boolean = false;
+    [Property] var HasUpgrade_InertiaDampeners : Boolean = false;
+    [Property] var HasUpgrade_Vitals : Boolean = false;
+    [Property] var HasUpgrade_Maxhealth : Boolean = false;
+    [Property] var HasUpgrade_Maxoxygen : Boolean = false;
+    [Property] var HasUpgrade_ShieldI : Boolean = false;
+    [Property] var HasUpgrade_Shieldregenspeed : Boolean = false;
+    [Property] var HasUpgrade_ShieldII : Boolean = false;
     
     //the actaul values stored on gamevars, these are the values that your scripts should be changing
     var PlayerHealth : Integer; 
@@ -33,6 +48,37 @@ class GameVars : ZilchComponent
         this.PlayerResources = this.StartingPlayerResources;
         this.PlayerOxygen = this.StartingPlayerOxygen;
         this.PlayerUpgradePoints = this.StartingUpgradePoints;
+        
+        //var player = this.Space.FindAllObjectsByName("Player");
+        
+        if (this.HasUpgrade_SpreadI)
+        {
+            
+        }
+        if (this.HasUpgrade_SpreadII)
+        {
+            
+        }
+        if (this.HasUpgrade_Homing)
+        {
+            
+        }
+        if (this.HasUpgrade_FirerateI)
+        {
+            
+        }
+        if (this.HasUpgrade_FirerateII)
+        {
+            
+        }
+        if (this.HasUpgrade_Homing)
+        {
+            
+        }
+        
+        
+        
+        
         
     }
 
