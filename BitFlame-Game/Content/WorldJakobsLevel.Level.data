@@ -136,7 +136,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-1.17451108, 0.625305116, 49.9989891],
+			Vec3 Translation = [-3.077425, 4.1092329, 49.9989891],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -148,7 +148,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 30.1194439,
+			float Size = 9.07181263,
 		},
 		EditorCameraController = 
 		{
@@ -156,7 +156,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-1.17451108, 0.625305116, -0.00101076113],
+			Vec3 LookTarget = [-3.077425, 4.1092329, -0.00101084448],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -283,46 +283,11 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "TileMap",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, 0, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		MultiSprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		},
-		TileMap = 
-		{
-			string SourceName = "5a708f4414f508c1:WorldJakobsLevel_TileMap00",
-			string PaletteName = "5a11a214a012ad81:Asteroid",
-			float UnitsPerTile = 1,
-			float MeshThickness = 1.20000005,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 8,
-		},
-		Named = 
-		{
 			string Name = "Sprite",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 3, -1],
+			Vec3 Translation = [0, 3, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -358,7 +323,7 @@ Level =
 		},
 		BoxCollider = 
 		{
-			bool Ghost = false,
+			bool Ghost = true,
 			bool SendsMessages = true,
 			bool Seamless = true,
 			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
@@ -371,6 +336,41 @@ Level =
 			int PickupValue = 1,
 			float PickupRange = 3,
 			float PickupSpeed = 10,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 8,
+		},
+		Named = 
+		{
+			string Name = "TileMap",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		MultiSprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		},
+		TileMap = 
+		{
+			string SourceName = "5a91695d4356d0b3:WorldJakobsLevel_TileMap01",
+			string PaletteName = "5a916f950d549fdf:Asteroid_TileMap_Normal_Palette",
+			float UnitsPerTile = 1,
+			float MeshThickness = 1.20000005,
 		},
 	},
 },

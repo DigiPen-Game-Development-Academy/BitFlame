@@ -14,6 +14,11 @@ class GameVars : ZilchComponent
     [Property] var StartingPlayerOxygen : Integer = 0; 
     [Property] var StartingUpgradePoints : Integer = 0; 
     
+    [Property] var HasUpgrade_SpreadI : Boolean = false;
+    [Property] var HasUpgrade_SpreadII : Boolean = false;
+    
+    
+    
     //the actaul values stored on gamevars, these are the values that your scripts should be changing
     var PlayerHealth : Integer; 
     var PlayerResources : Integer; 
