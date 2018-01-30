@@ -6,16 +6,12 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "OxygenGauge",
-	},
-	Archetyped = 
-	{
-		string Name = "5ac104f6bc42814b:OxygenGauge",
+		string Name = "HealthBar",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-15.5, -7.5, -10],
-		Vec3 Scale = [4, 4, 1],
+		Vec3 Translation = [17.5769653, -8.90438271, 0],
+		Vec3 Scale = [0.756973147, 1.93317103, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -24,11 +20,11 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [1, 1, 1, 1],
+		Vec4 Color = [1, 0, 0, 1],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5ac100772e10037a:OxygenGauge",
+		string SpriteSource = "5275aa4d802dd6dc:Square",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -36,10 +32,14 @@ Cog =
 		float AnimationSpeed = 1,
 		uint StartFrame = 0,
 	},
-	OxygenGauge = 
+	Area = 
 	{
-		float DecaySpeed = 1,
-		float OxygenModifier = 1,
+		Vec2 Size = [10, 1],
+		Location Origin = CenterRight,
+	},
+	SetXToVariable = 
+	{
+		Enum Type = Health,
 	},
 	Hierarchy = 
 	{
@@ -51,57 +51,12 @@ Cog =
 			},
 			Named = 
 			{
-				string Name = "OxygenGauge_Pin",
+				string Name = "HealthBar_Overlay",
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0, 0, 0],
-				Vec3 Scale = [1, 1, 1],
-				Quat Rotation = [0, 0, 0.707106829, 0.707106829],
-			},
-			Sprite = 
-			{
-				bool Visible = true,
-				bool VisibilityCulling = true,
-				bool VisibilityEvents = true,
-				bool CastShadows = false,
-				Vec4 Color = [1, 1, 1, 1],
-				BlendMode BlendMode = Alpha,
-				SpriteGeometryMode GeometryMode = ZPlane,
-				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5ac1007830412424:OxygenGauge_Pin",
-				bool RenderMask = false,
-				bool FlipX = false,
-				bool FlipY = false,
-				bool AnimationActive = true,
-				float AnimationSpeed = 1,
-				uint StartFrame = 0,
-			},
-			Orientation = 
-			{
-				Vec3 GlobalUp = [0, 0, -1],
-				Vec3 UpVector = [0, 0, 1],
-				Vec3 ForwardVector = [1, 0, 0],
-				OrientationBases DefaultBases = ForwardXUpZ,
-			},
-			OxygenGauge_PinController = 
-			{
-			},
-		},
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 3,
-			},
-			Named = 
-			{
-				string Name = "OxygenTank",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [0, -0.25, -0.100000001],
-				Vec3 Scale = [0.25, 0.25, 1],
+				Vec3 Translation = [-5.01683283, 0.0125937462, 1],
+				Vec3 Scale = [5.39161444, 1.14504874, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			Sprite = 
@@ -114,7 +69,42 @@ Cog =
 				BlendMode BlendMode = Alpha,
 				SpriteGeometryMode GeometryMode = ZPlane,
 				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5ac1603b08d0b032:OxygenTank",
+				string SpriteSource = "5adbf2caf26c60b8:HealthBar_Overlay",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 3,
+			},
+			Named = 
+			{
+				string Name = "HealthBar_Background",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [-5.64205742, 0.52976799, -41],
+				Vec3 Scale = [6.01317358, 2.17973948, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5adbfd28e3ddec00:HealthBar_Background",
 				bool RenderMask = false,
 				bool FlipX = false,
 				bool FlipY = false,
