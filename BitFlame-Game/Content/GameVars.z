@@ -40,6 +40,8 @@ class GameVars : ZilchComponent
     var PlayerOxygen: Integer; 
     var PlayerUpgradePoints : Integer;
     
+    var PlayerActive : Boolean = false;
+    
     //initialization function, runs when the owner object is created
     function Initialize(init : CogInitializer)
     {
