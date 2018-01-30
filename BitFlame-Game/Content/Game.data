@@ -24,5 +24,6 @@ GameSession =
 		int StartingPlayerHealth = 10,
 		int StartingPlayerResources = 0,
 		int StartingPlayerOxygen = 10,
+		int StartingUpgradePoints = 1,
 	},
 },
