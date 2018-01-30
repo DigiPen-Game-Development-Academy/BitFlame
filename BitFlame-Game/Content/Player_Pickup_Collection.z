@@ -28,7 +28,7 @@ class Player_Pickup_Collection : ZilchComponent
         
         if(otherObject.OxygenPickup != null)
         {
-            this.GameSession.GameVars.PlayerResources += otherObject.OxygenPickup.PickupValue;
+            this.GameSession.GameVars.PlayerOxygen += otherObject.OxygenPickup.PickupValue;
             otherObject.Destroy();
         }
     }
