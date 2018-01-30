@@ -7,6 +7,7 @@ Contributors: NULL
 Last modified: 1/30/18
 Brief: This component checks if the player is in range, has pressed a button, and if they have a certain amount of resources
 ******************************************/
+
     // defines how close the player has to be
     [Property] var ShipUpgradingRange : Real = 0.0;
     
