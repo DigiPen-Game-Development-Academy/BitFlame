@@ -4,17 +4,19 @@ class AsteroidGeneration : ZilchComponent
     
     var RandomGen : Random = Random();
     
-    var AsteroidArray : Array[Cog];
+    
     
     function Initialize(init : CogInitializer)
     {
+        var asteroidArray = new Array[Cog]();
+        
         var size = this.RandomGen.Range(1, 10);
         
         for(var i = 0.0; i < size * size / 1.5; ++i)
         {
             var asteroid = this.Space.CreateAtPosition(this.Asteroid, this.Owner.Transform.Translation);
             
-            asteroid.AttachTo(this.Owner);
+            asteroidArray.Add(asteroid);
             
             for(var j = 0.0; j < size; ++j)
             {
@@ -24,9 +26,9 @@ class AsteroidGeneration : ZilchComponent
             }
         }
         
-        foreach(var child in this.Owner.Children.All)
+        for(var object = 0; object < asteroidArray.Count; ++object)
         {
-            child.GenerateCorrectSpriteSourse.Generate = true;
+            asteroidArray.Get(object).AddComponentByName("GenerateCorrectSpriteSourse");
         }
     }
 }
