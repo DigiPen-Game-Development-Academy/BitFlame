@@ -2,8 +2,8 @@ ImageContent =
 {
 	SpriteSourceBuilder = 
 	{
-		string Name = "Asteroid_TileMap_IronOre008",
-		uint64 ResourceId = 5ae6fa2d24b570e0,
+		string Name = "Asteroid_TileMap_Normal012",
+		uint64 ResourceId = 5afc1fb572bd57e8,
 		uint64 AtlasId = 5274cf95e4a661fd,
 		uint FrameSizeX = 32,
 		uint FrameSizeY = 32,

@@ -6,10 +6,6 @@ class GenerateCorrectSpriteSource : ZilchComponent
     
     [Property] var Plain2 : SpriteSource;
     
-    [Property] var Plain3 : SpriteSource;
-    
-    [Property] var Plain4 : SpriteSource;
-    
     [Property] var LeftFlat : SpriteSource;
     
     [Property] var RightFlat : SpriteSource;
@@ -84,7 +80,7 @@ class GenerateCorrectSpriteSource : ZilchComponent
             }
             else if(this.UpResults.Distance <= 0.6 && this.DownResults.Distance <= 0.6 && this.RightResults.Distance <= 0.6 && this.LeftResults.Distance <= 0.6)
             {
-                var randomNum = Math.Round(this.RandomGen.Range(1,4));
+                var randomNum = Math.Round(this.RandomGen.Range(1,2));
                 
                 if(randomNum == 1)
                 {
@@ -93,14 +89,6 @@ class GenerateCorrectSpriteSource : ZilchComponent
                 else if(randomNum == 2)
                 {
                     this.Owner.Sprite.SpriteSource = this.Plain2;
-                }
-                else if(randomNum == 3)
-                {
-                    this.Owner.Sprite.SpriteSource = this.Plain3;
-                }
-                else if(randomNum == 4)
-                {
-                    this.Owner.Sprite.SpriteSource = this.Plain4;
                 }
             }
             else if(this.UpResults.Distance >= 0.6 && this.DownResults.Distance <= 0.6 && this.RightResults.Distance <= 0.6 && this.LeftResults.Distance <= 0.6)

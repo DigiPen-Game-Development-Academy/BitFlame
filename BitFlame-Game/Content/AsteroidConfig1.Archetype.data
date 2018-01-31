@@ -6,11 +6,7 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "Asteroid",
-	},
-	Archetyped = 
-	{
-		string Name = "5ae1a538d02da41c:Asteroid",
+		string Name = "AsteroidConfig1",
 	},
 	Transform = 
 	{
