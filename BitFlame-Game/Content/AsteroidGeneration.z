@@ -45,7 +45,7 @@ class AsteroidGeneration : ZilchComponent
         {
             if(child.GenerateCorrectSpriteSource != null)
             {
-                child.GenerateCorrectSpriteSource.Generate = true;
+                child.GenerateCorrectSpriteSource.Generate = false;
             }
             
             if(child.Name == "Node")

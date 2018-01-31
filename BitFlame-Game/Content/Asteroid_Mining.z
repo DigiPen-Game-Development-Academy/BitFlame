@@ -4,16 +4,6 @@ class Asteroid_Mining : ZilchComponent
     
     [Property] var ResourceArchetype : Archetype = null;
     
-    var ResetTime : Real = 2.5;
-    
-    var MineStrength : Real = 0.0;
-    
-    var Timer : Real = 0.0;
-    
-    var FirstTime : Boolean = true;
-    
-    var OriginPos : Real3 = Real3.Zero;
-    
     var RandomGen : Random = Random();
     
     function Initialize(init : CogInitializer)
@@ -25,46 +15,16 @@ class Asteroid_Mining : ZilchComponent
 
     function OnCollisionStarted(event : CollisionEvent)
     {
-        if(this.FirstTime)
-        {
-            this.OriginPos = this.Owner.Transform.Translation;
-        }
-        
         if(event.OtherObject.Name == "Bullet")
         {
-            this.FirstTime = false;
-            
-            if(this.MineStrength <= 0.5)
-            {
-                this.MineStrength += 0.05;
-            }
-            
-            this.Timer = 0.0;
+            this.Owner.Transform.Scale -= this.Owner.Transform.Scale / 10.0;
         }
     }
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        if(this.Timer >= this.ResetTime && this.MineStrength > 0.0)
-        {
-            this.MineStrength = 0.0;
-            
-            this.Owner.Transform.Translation = this.OriginPos;
-        }
-        else
-        {
-            this.Timer += event.Dt;
-        }
-        
-        if(this.MineStrength > 0.0)
-        {
-            this.Owner.Transform.Translation = this.OriginPos + Real3(this.RandomGen.Range(-0.25, 0.25), this.RandomGen.Range(-0.25, 0.25), 0.0) * this.MineStrength;
-        }
-        
         if(this.Owner.Health.Health <= 1.0)
         {
-            this.MineStrength = 0.0;
-            
             for(var i = 0.0; i < this.DropAmount; ++i)
             {
                 var resource = this.Space.CreateAtPosition(this.ResourceArchetype, this.Owner.Transform.WorldTranslation);
