@@ -96,7 +96,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [28.6014328, -2.32971382, 70.9990005],
+			Vec3 Translation = [-0.812032104, 0.452330649, 70.9990005],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -108,7 +108,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 36.7880096,
+			float Size = 13.5335646,
 		},
 		EditorCameraController = 
 		{
@@ -116,7 +116,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [28.6014328, -2.32971382, 20.9990005],
+			Vec3 LookTarget = [-0.812032104, 0.452330649, 20.9990005],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -324,6 +324,7 @@ Level =
 			},
 			Vec3 NewCameraPosition = [30, 0, 0],
 			float MoveTime = 0.200000003,
+			bool Reload = false,
 			bool Quit = false,
 		},
 	},
@@ -332,6 +333,112 @@ Level =
 		LinkId = 
 		{
 			uint Id = 7,
+		},
+		Named = 
+		{
+			string Name = "Button",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 3.5, 0],
+			Vec3 Scale = [12, 3, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.0360000134, 0.800000012, 0.341599911, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		Ship_Menu_Button_Visual = 
+		{
+			Vec4 HoverColor = [0.181450009, 0.954999983, 0.235598639, 1],
+			Vec4 ClickColor = [0.466666698, 0.776470661, 0.588235319, 1],
+			float HoverScale = 1.20000005,
+			float ClickScale = 1,
+		},
+		Ship_Menu_Button_Function = 
+		{
+			CogPath Camera = 
+			{
+				string Path = ":/Camera",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 2,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			Vec3 NewCameraPosition = [0, 0, 0],
+			float MoveTime = 0.200000003,
+			bool Reload = true,
+			bool Quit = false,
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 8,
+				},
+				Named = 
+				{
+					string Name = "SpriteText",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0.25, 21],
+					Vec3 Scale = [0.0833333358, 0.333333343, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				SpriteText = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string FontName = "4e7bac697bec55c5:Verdana",
+					uint FontSize = 75,
+					string Text = "Random Warp",
+					TextAlign Align = Center,
+					float PixelsPerUnit = 64,
+					bool Smoothing = true,
+				},
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 9,
 		},
 		Named = 
 		{
@@ -392,6 +499,7 @@ Level =
 			},
 			Vec3 NewCameraPosition = [30, 0, 0],
 			float MoveTime = 0.200000003,
+			bool Reload = false,
 			bool Quit = false,
 		},
 	},
@@ -399,7 +507,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 8,
+			uint Id = 10,
 		},
 		Named = 
 		{
@@ -460,6 +568,7 @@ Level =
 			},
 			Vec3 NewCameraPosition = [60, 0, 0],
 			float MoveTime = 0.200000003,
+			bool Reload = false,
 			bool Quit = false,
 		},
 	},
@@ -467,7 +576,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 9,
+			uint Id = 11,
 		},
 		Named = 
 		{
@@ -502,7 +611,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 10,
+			uint Id = 12,
 		},
 		Named = 
 		{
@@ -537,7 +646,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 11,
+			uint Id = 13,
 		},
 		Named = 
 		{
@@ -598,6 +707,7 @@ Level =
 			},
 			Vec3 NewCameraPosition = [0, 0, 0],
 			float MoveTime = 0.200000003,
+			bool Reload = false,
 			bool Quit = false,
 		},
 	},
@@ -605,7 +715,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 12,
+			uint Id = 14,
 		},
 		Named = 
 		{
@@ -666,6 +776,7 @@ Level =
 			},
 			Vec3 NewCameraPosition = [60, 0, 0],
 			float MoveTime = 0.200000003,
+			bool Reload = false,
 			bool Quit = false,
 		},
 	},
@@ -673,7 +784,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 13,
+			uint Id = 15,
 		},
 		Named = 
 		{
@@ -708,7 +819,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 14,
+			uint Id = 16,
 		},
 		Named = 
 		{
@@ -743,7 +854,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 15,
+			uint Id = 17,
 		},
 		Named = 
 		{
@@ -804,6 +915,7 @@ Level =
 			},
 			Vec3 NewCameraPosition = [0, 0, 0],
 			float MoveTime = 0.200000003,
+			bool Reload = false,
 			bool Quit = false,
 		},
 	},
