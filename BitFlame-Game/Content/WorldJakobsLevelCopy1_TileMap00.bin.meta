@@ -1,0 +1,12 @@
+BinaryContent = 
+{
+	BinaryBuilder = 
+	{
+		string Name = "WorldJakobsLevelCopy1_TileMap00",
+		uint64 ResourceId = 5a08ef64b3e4b389,
+		string LoaderType = "TileMapSource",
+		uint Version = 0,
+		string FilterTag = "",
+		string ResourceOwner = "5a08cb3f59ead456:WorldJakobsLevelCopy1",
+	},
+},
