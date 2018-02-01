@@ -1,8 +1,13 @@
+
+    //Modified by Jakob McFarland
+
 class Asteroid_Mining : ZilchComponent
 {
     [Property] var DropAmount : Real = 0.0;
     
     [Property] var ResourceArchetype : Archetype = null;
+    
+    [Property] var ShrinkAmount : Real = 0.0;
     
     var RandomGen : Random = Random();
     
@@ -17,7 +22,7 @@ class Asteroid_Mining : ZilchComponent
     {
         if(event.OtherObject.Name == "Bullet")
         {
-            this.Owner.Transform.Scale -= this.Owner.Transform.Scale / 10.0;
+            this.Owner.Transform.Scale -= this.Owner.Transform.Scale / this.ShrinkAmount;
         }
     }
 
