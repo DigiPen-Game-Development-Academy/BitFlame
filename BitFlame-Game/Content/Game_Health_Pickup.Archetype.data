@@ -8,9 +8,13 @@ Cog =
 	{
 		string Name = "Game_Health_Pickup",
 	},
+	Archetyped = 
+	{
+		string Name = "5a9159819b85330d:Game_Health_Pickup",
+	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 3, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -24,7 +28,7 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5275aa4d802dd6dc:Square",
+		string SpriteSource = "5a91589db1903997:Game_SmallHealth_Pickup_Animated",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -38,7 +42,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = false,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],

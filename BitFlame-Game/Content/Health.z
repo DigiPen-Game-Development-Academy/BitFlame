@@ -1,6 +1,11 @@
+
+    //Modified by Jakob McFarland
 class Health : ZilchComponent
 {
     [Property] var Health : Real = 0.0;
+    
+    //leave null to spawn nothing
+    [Property] var ArchetypetoSpawnOnDeath : Archetype = null;
     
     function Initialize(init : CogInitializer)
     {
@@ -8,10 +13,17 @@ class Health : ZilchComponent
     }
 
     function OnLogicUpdate(event : UpdateEvent)
-    {
+    { 
         if(this.Health <= 0.0)
         {
+            if(this.ArchetypetoSpawnOnDeath != null)
+            {
+                this.Space.CreateAtPosition(this.ArchetypetoSpawnOnDeath, this.Owner.Transform.Translation);   
+                Console.WriteLine("boom"); 
+            }
+                
             this.Owner.Destroy();
+
         }
     }
 }
