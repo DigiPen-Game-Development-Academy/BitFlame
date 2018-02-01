@@ -187,6 +187,11 @@ Cog =
 			{
 				string Name = "Space",
 			},
+			EditorFlags = 
+			{
+				bool Locked = true,
+				bool Hidden = false,
+			},
 			Transform = 
 			{
 				Vec3 Translation = [0, 0, -1],
@@ -224,6 +229,11 @@ Cog =
 			Named = 
 			{
 				string Name = "Space",
+			},
+			EditorFlags = 
+			{
+				bool Locked = true,
+				bool Hidden = false,
 			},
 			Transform = 
 			{

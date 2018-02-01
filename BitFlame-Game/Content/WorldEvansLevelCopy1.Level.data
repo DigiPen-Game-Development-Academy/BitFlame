@@ -10,6 +10,21 @@ Level =
 		{
 			string Name = "LevelSettings",
 		},
+		GravityEffect = 
+		{
+			bool Active = false,
+			bool WakeUpOnChange = false,
+			bool LocalSpaceDirection = true,
+			float Strength = 10,
+			Vec3 Direction = [0, -1, 0],
+		},
+		DragEffect = 
+		{
+			bool Active = true,
+			bool WakeUpOnChange = false,
+			float Drag = 0.699999988,
+			float AngularDrag = 0.100000001,
+		},
 		CameraViewport = 
 		{
 			bool Background = true,
@@ -35,7 +50,7 @@ Level =
 			},
 			CogPath Camera = 
 			{
-				string Path = ":/Player/Camera",
+				string Path = ":/Camera",
 				bool ErrorOnResolveToNull = false,
 				bool ErrorOnPathCantCompute = false,
 				bool ErrorOnDirectLinkFail = false,
@@ -54,7 +69,7 @@ Level =
 		},
 		ForwardRenderer = 
 		{
-			Vec4 ClearColor = [0, 0, 0, 1],
+			Vec4 ClearColor = [0.155000001, 0.155000001, 0.155000001, 1],
 			bool DrawNonVisible = false,
 			bool DrawDebugObjects = true,
 			bool DrawEditorIcons = true,
@@ -67,7 +82,7 @@ Level =
 			bool HalfCellOffset = false,
 			float CellSize = 1,
 			GridAxis Axis = ZAxis,
-			int Lines = 500,
+			int Lines = 100,
 			bool DrawAxisOrigins = true,
 			bool AlwaysDrawInEditor = true,
 			bool DrawInGame = false,
@@ -76,20 +91,13 @@ Level =
 			int HilightInterval = 10,
 			bool FollowEditorCamera = false,
 		},
-		DragEffect = 
-		{
-			bool Active = true,
-			bool WakeUpOnChange = true,
-			float Drag = 0.699999988,
-			float AngularDrag = 0.100000001,
-		},
 		HudCreator = 
 		{
 			string HUDLevel = "5a11bb03ee000161:HUDLevel",
 			string SpaceArchetype = "554cea0f94af6dc4:Space",
 			CogPath PlayerRef = 
 			{
-				string Path = ":/Player",
+				string Path = "",
 				bool ErrorOnResolveToNull = false,
 				bool ErrorOnPathCantCompute = false,
 				bool ErrorOnDirectLinkFail = false,
@@ -97,30 +105,18 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 3,
+				uint ResolvedCog = 4294967293,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
-		},
-		Level_WorldGeneration = 
-		{
-			string AsteroidArchetype = "5afc186063c49e3c:AsteroidConfig1",
-			string EnemyArchetype = "5a1c25102e8b8ff5:AlienEnemy",
-			string HiveArchetype = "5a1c2405f45e8ddd:EnemyHive",
-			float AsteroidProbability = 10,
-			float EmptySpaceProbability = 80,
-			float HiveProbability = 6,
-			float EnemyProbability = 4,
-			int MaxX = 245,
-			int MaxY = 245,
 		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 4,
+			uint Id = 3,
 		},
 		Named = 
 		{
@@ -128,7 +124,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.75380522, -0.366069704, 50],
+			Vec3 Translation = [2.34994125, 0.0597891882, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -140,7 +136,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 12.2456656,
+			float Size = 32.9744415,
 		},
 		EditorCameraController = 
 		{
@@ -148,7 +144,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.75380522, -0.366069704, -3.57911034e-07],
+			Vec3 LookTarget = [2.34994125, 0.0597891882, 5.29696706e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -160,24 +156,6 @@ Level =
 			bool Wireframe = false,
 		},
 	},
-	ArchetypeInstance = 
-	{
-		string Name = "5a1c06ab2df03606:Player",
-		LinkId = 
-		{
-			uint Id = 3,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, 0, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Player",
-		},
-	},
 	Cog = 
 	{
 		LinkId = 
@@ -187,6 +165,11 @@ Level =
 		Named = 
 		{
 			string Name = "Camera",
+		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
 		},
 		Transform = 
 		{
@@ -221,7 +204,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 3,
+				uint ResolvedCog = 4,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -229,6 +212,84 @@ Level =
 			Vec2 Min = [-1000, -1000],
 			Vec2 Max = [1000, 1000],
 			float LerpValue = 0.899999976,
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a1c06ab2df03606:Player",
+		LinkId = 
+		{
+			uint Id = 4,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-5.5, 1, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Player",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 5,
+		},
+		Named = 
+		{
+			string Name = "Asteroid Chunk",
+		},
+		Archetyped = 
+		{
+			string Name = "5a1180f76f978cdf:AssteroidChunk",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [2.84818339, 1.32803702, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.449999988, 0.449999988, 0.5],
+		},
+		Asteroid_Mining = 
+		{
+			float DropAmount = 1,
+			string ResourceArchetype = "5a86165eb2745571:Game_ResourceOre_Pickup",
+			float ShrinkAmount = 20,
+		},
+		Health = 
+		{
+			float Health = 5,
+			string ArchetypetoSpawnOnDeath = "",
 		},
 	},
 },
