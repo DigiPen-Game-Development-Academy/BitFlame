@@ -106,7 +106,7 @@ class Ship_Menu_Button_Function : ZilchComponent
         
         if(this.Reload)
         {
-            
+            this.Player.Cog.Level_WorldRegeneration.Regenerate();
         }
         
         if(this.Camera != null)
