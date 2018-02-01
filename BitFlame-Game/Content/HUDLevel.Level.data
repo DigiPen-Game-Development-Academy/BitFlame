@@ -186,6 +186,11 @@ Level =
 		{
 			string Name = "Camera",
 		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
+		},
 		Transform = 
 		{
 			Vec3 Translation = [0, 0, 40],
@@ -425,7 +430,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [15.5, -6.5, 20],
+			Vec3 Translation = [14.2103901, -6.70686436, 20],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
