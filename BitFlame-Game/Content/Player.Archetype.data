@@ -171,6 +171,7 @@ Cog =
 				float FireRate = 0.5,
 				float BulletSpeed = 25,
 				string Bullet = "5a1c3c0e55b6fbd1:Bullet",
+				bool CanShoot = true,
 			},
 		},
 		Cog = 
@@ -258,7 +259,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0, 0, -1],
+				Vec3 Translation = [-0.400000006, 0, -1],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -287,19 +288,19 @@ Cog =
 			{
 				bool Active = true,
 				uint EmitCount = 0,
-				float EmitRate = 25,
+				float EmitRate = 500,
 				float EmitVariance = 0,
-				float Size = 0.5,
-				float SizeVariance = 0.100000001,
-				float Lifetime = 0.800000012,
-				float LifetimeVariance = 0.200000003,
+				float Size = 0.100000001,
+				float SizeVariance = 0,
+				float Lifetime = 0.5,
+				float LifetimeVariance = 0,
 				float Spin = 2,
 				float SpinVariance = 10,
 				bool RandomSpin = true,
 				float Fill = 1,
 				float EmitterVelocityPercent = 0,
-				Vec3 StartVelocity = [0, 0, 0],
-				Vec3 RandomVelocity = [0.75, 0.75, 0],
+				Vec3 StartVelocity = [0, -1, 0],
+				Vec3 RandomVelocity = [0.100000001, 0, 0],
 				Vec3 TangentVelocity = [0, 0, 0],
 				Vec3 EmitterSize = [0, 0, 0],
 				bool FastMovingEmitter = true,
@@ -315,11 +316,14 @@ Cog =
 			},
 			ParticleColorAnimator = 
 			{
-				Vec4 Color0 = [1, 1, 1, 0],
-				Vec4 Color1 = [1, 1, 1, 1],
-				Vec4 Color2 = [1, 1, 1, 1],
-				Vec4 Color3 = [1, 1, 1, 1],
-				Vec4 Color4 = [1, 1, 1, 0],
+				Vec4 Color0 = [0, 0.639999866, 1, 0.300000012],
+				Vec4 Color1 = [0.170000076, 0, 1, 1],
+				Vec4 Color2 = [1, 0.929999828, 0, 1],
+				Vec4 Color3 = [1, 0.509999871, 0, 1],
+				Vec4 Color4 = [1, 0, 0, 0.5],
+			},
+			ChangeParticleEffects = 
+			{
 			},
 		},
 	},

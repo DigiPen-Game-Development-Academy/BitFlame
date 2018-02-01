@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [3, 2, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -50,9 +50,11 @@ Cog =
 	{
 		float DropAmount = 1,
 		string ResourceArchetype = "5a86165eb2745571:Game_ResourceOre_Pickup",
+		float ShrinkAmount = 20,
 	},
 	Health = 
 	{
 		float Health = 6,
+		string ArchetypetoSpawnOnDeath = "",
 	},
 },
