@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-2.53739643, -0.107369706, 0],
+		Vec3 Translation = [-17.5343761, 10.3416548, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -61,7 +61,7 @@ Cog =
 	ResourcePickup = 
 	{
 		int PickupValue = 1,
-		float PickupRange = 3,
+		float PickupRange = 5,
 		float PickupSpeed = 10,
 	},
 },
