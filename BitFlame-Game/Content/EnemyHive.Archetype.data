@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [5, 8, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [3, 3, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -39,7 +39,7 @@ Cog =
 	Health = 
 	{
 		float Health = 30,
-		string ArchetypetoSpawnOnDeath = "5a08fb7240d5e7ed:ExplosionParticleEffect",
+		string ArchetypetoSpawnOnDeath = "",
 	},
 	HiveSpawner = 
 	{
@@ -63,6 +63,6 @@ Cog =
 	{
 		float DropAmount = 10,
 		string ResourceArchetype = "5a86165eb2745571:Game_ResourceOre_Pickup",
-		float ShrinkAmount = 200,
+		float ShrinkAmount = 50,
 	},
 },

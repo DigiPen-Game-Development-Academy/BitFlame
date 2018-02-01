@@ -40,7 +40,7 @@ Brief: This component checks if the player is in range, has pressed a button, an
                     this.GameSession.GameVars.PlayerResources -= this.UpgradeCost;
                     
                     //Insert upgrade code here
-                    Console.WriteLine("Test");
+                    
                 }
             }
         }
