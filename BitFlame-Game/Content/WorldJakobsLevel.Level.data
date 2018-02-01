@@ -192,7 +192,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 200,
-			float Size = 10,
+			float Size = 20,
 		},
 		SoundListener = 
 		{

@@ -85,4 +85,9 @@ class Level_WorldGeneration : ZilchComponent
             this.Space.CreateAtPosition( this.EnemyArchetype, Real3(x, y, 0));
         }
     }
+    
+    function Regenerate()
+    {
+         this.Space.ReloadLevel();
+    }
 }

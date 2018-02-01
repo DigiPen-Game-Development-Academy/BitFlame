@@ -84,6 +84,8 @@ class Ship_Menu_Button_Function : ZilchComponent
 
     [Property] var MoveTime : Real = 0.2; 
 
+    [Property] var Player : CogPath = null; 
+
     [Property] var Reload : Boolean = false; 
 
     [Property] var Quit : Boolean = false;  
@@ -104,7 +106,7 @@ class Ship_Menu_Button_Function : ZilchComponent
         
         if(this.Reload)
         {
-            this.Space.ReloadLevel();
+            
         }
         
         if(this.Camera != null)
