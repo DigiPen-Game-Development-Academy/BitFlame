@@ -54,7 +54,7 @@ Cog =
 	},
 	Health = 
 	{
-		float Health = 6,
+		float Health = 5,
 		string ArchetypetoSpawnOnDeath = "",
 	},
 },
