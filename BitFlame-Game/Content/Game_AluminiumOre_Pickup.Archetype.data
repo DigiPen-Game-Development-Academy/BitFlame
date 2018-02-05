@@ -6,15 +6,15 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "Game_Health_Pickup",
+		string Name = "Game_AluminiumOre_Pickup",
 	},
 	Archetyped = 
 	{
-		string Name = "5a9159819b85330d:Game_Health_Pickup",
+		string Name = "5a6ca514b81d8e50:Game_AluminiumOre_Pickup",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, -3, 0],
+		Vec3 Translation = [-10, -3, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -28,7 +28,7 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5a91589db1903997:Game_SmallHealth_Pickup_Animated",
+		string SpriteSource = "5a6ca865e6dcd3d6:Game_AluminiumOre_Pickup_Animation ",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -48,7 +48,7 @@ Cog =
 		Vec3 Velocity = [0, 0, 0],
 		Vec3 AngularVelocity = [0, 0, 0],
 	},
-	BoxCollider = 
+	SphereCollider = 
 	{
 		bool Ghost = true,
 		bool SendsMessages = true,
@@ -56,11 +56,11 @@ Cog =
 		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 		Vec3 Offset = [0, 0, 0],
-		Vec3 Size = [0.5, 0.5, 0.5],
+		float Radius = 0.375,
 	},
-	HealthPickup = 
+	AluminiumPickup = 
 	{
-		int PickupValue = 2,
+		int PickupValue = 1,
 		float PickupRange = 3,
 		float PickupSpeed = 10,
 	},

@@ -93,15 +93,20 @@ Level =
 		},
 		Level_WorldGeneration = 
 		{
-			string AsteroidArchetype = "5a1180f76f978cdf:AssteroidChunk",
+			string Asteroid_01Archetype = "5afc186063c49e3c:AsteroidConfig1",
+			string Asteroid_02Archetype = "5afc18c082beb4a9:AsteroidConfig2",
 			string EnemyArchetype = "5a1c25102e8b8ff5:AlienEnemy",
 			string HiveArchetype = "5a1c2405f45e8ddd:EnemyHive",
-			float AsteroidProbability = 15,
-			float EmptySpaceProbability = 80,
-			float HiveProbability = 2,
-			float EnemyProbability = 3,
-			int MaxX = 95,
-			int MaxY = 95,
+			float Asteroid_01Probability = 20,
+			float Asteroid_02Probability = 20,
+			float EmptySpaceProbability = 50,
+			float HiveProbability = 3,
+			float EnemyProbability = 7,
+			int MaxX = 96,
+			int MaxY = 96,
+			int SpawnCellwidth = 8,
+			int EmptyRange = 10,
+			int SafeRange = 20,
 		},
 		HudCreator = 
 		{
@@ -136,7 +141,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-1.04919517, -2.18996716, 50],
+			Vec3 Translation = [-8.44478607, -1.0886879, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -148,7 +153,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 27.2532139,
+			float Size = 7.4273839,
 		},
 		EditorCameraController = 
 		{
@@ -156,7 +161,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-1.04919517, -2.18996716, -4.58615901e-08],
+			Vec3 LookTarget = [-8.44478607, -1.0886879, -3.69133573e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -248,7 +253,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [3, 0, 0],
+			Vec3 Translation = [-10, 0, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -259,14 +264,68 @@ Level =
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5a70715bb5c81bfe:Game_OxygenOre_Pickup",
+		string Name = "5a6cae91a47b14d7:Game_CopperOre_Pickup",
 		LinkId = 
 		{
 			uint Id = 6,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-5, 0, 0],
+			Vec3 Translation = [-10, -1, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Game_CopperOre_Pickup",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a6ca525a5151ffd:Game_TitaniumOre_Pickup",
+		LinkId = 
+		{
+			uint Id = 7,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-10, -2, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Game_TitaniumOre_Pickup",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a6ca514b81d8e50:Game_AluminiumOre_Pickup",
+		LinkId = 
+		{
+			uint Id = 8,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-10, -3, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Game_AluminiumOre_Pickup",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a70715bb5c81bfe:Game_OxygenOre_Pickup",
+		LinkId = 
+		{
+			uint Id = 9,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-10, 2, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -280,11 +339,11 @@ Level =
 		string Name = "5a9159819b85330d:Game_Health_Pickup",
 		LinkId = 
 		{
-			uint Id = 7,
+			uint Id = 10,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, -3, 0],
+			Vec3 Translation = [-10, 3, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -293,29 +352,78 @@ Level =
 			string Name = "Game_Health_Pickup",
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "5a08cc0da512394f:Game_Upgrade_Pickup",
 		LinkId = 
 		{
-			uint Id = 8,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, 3, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
+			uint Id = 11,
 		},
 		Named = 
 		{
 			string Name = "Game_Upgrade_Pickup",
+		},
+		Archetyped = 
+		{
+			string Name = "5a08cc0da512394f:Game_Upgrade_Pickup",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-10, 1, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a0819a0df68bca3:Game_UpgradeChip",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		RigidBody = 
+		{
+			bool Static = false,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = false,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+		UpgradePickup = 
+		{
+			int PickupValue = 1,
+			float PickupRange = 3,
+			float PickupSpeed = 10,
 		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 9,
+			uint Id = 12,
 		},
 		Named = 
 		{
@@ -350,7 +458,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 10,
+			uint Id = 13,
 		},
 		Named = 
 		{
@@ -358,7 +466,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [10, 0, -0.5],
+			Vec3 Translation = [0, 0, -0.5],
 			Vec3 Scale = [10, 5, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},

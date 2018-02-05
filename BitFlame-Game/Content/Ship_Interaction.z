@@ -57,11 +57,16 @@ class Ship_Interaction : ZilchComponent
                 this.HUDSpace = this.GameSession.CreateNamedSpace("HUDSpace", this.SpaceArchetype);
                 
                 //Load the level specified in the HUDLevel Property above
-                this.HUDSpace.LoadLevel(Level.ShipMenuLevel);
+                this.HUDSpace.LoadLevel(Level.ShipMenuLevel);    
                 
                 var arm = player.FindChildByName("Arm");
                 arm.PlayerShooting.CanShoot = false;
                         
+                if(player.RigidBody != null)
+                {
+                    player.RigidBody.Velocity = Real3(0, 0, 0);
+                }
+                
             }
             
         }

@@ -15,7 +15,7 @@ Cog =
 	Transform = 
 	{
 		Vec3 Translation = [0, 0, 0],
-		Vec3 Scale = [3, 3, 1],
+		Vec3 Scale = [6, 6, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -24,7 +24,7 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [0.706992149, 0.499199957, 0.779999971, 1],
+		Vec4 Color = [1, 1, 1, 1],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -39,7 +39,7 @@ Cog =
 	Health = 
 	{
 		float Health = 30,
-		string ArchetypetoSpawnOnDeath = "",
+		string ArchetypetoSpawnOnDeath = "5a08fb7240d5e7ed:ExplosionParticleEffect",
 	},
 	HiveSpawner = 
 	{
@@ -63,6 +63,6 @@ Cog =
 	{
 		float DropAmount = 10,
 		string ResourceArchetype = "5a86165eb2745571:Game_ResourceOre_Pickup",
-		float ShrinkAmount = 50,
+		float ShrinkAmount = 200,
 	},
 },

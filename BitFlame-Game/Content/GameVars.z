@@ -11,9 +11,13 @@ class GameVars : ZilchComponent
     //setable starting values for the player 
     [Property] var StartingPlayerHealth : Integer = 0; 
     [Property] var StartingPlayerResources : Integer = 0; 
+    [Property] var StartingCopper : Integer = 0;
+    [Property] var StartingPlayerTitanium : Integer = 0;
+    [Property] var StartingPlayerAluminium : Integer = 0;
     [Property] var StartingPlayerOxygen : Integer = 0; 
     [Property] var StartingUpgradePoints : Integer = 0; 
     
+    //upgrade flags
     [Property] var HasUpgrade_SpreadI : Boolean = false;
     [Property] var HasUpgrade_SpreadII : Boolean = false;
     [Property] var HasUpgrade_Homing : Boolean = false;
@@ -37,6 +41,9 @@ class GameVars : ZilchComponent
     //the actaul values stored on gamevars, these are the values that your scripts should be changing
     var PlayerHealth : Integer; 
     var PlayerResources : Integer; 
+    var PlayerCopper : Integer;
+    var PlayerTitanium : Integer;
+    var PlayerAluminium : Integer;
     var PlayerOxygen: Integer; 
     var PlayerUpgradePoints : Integer;
     
