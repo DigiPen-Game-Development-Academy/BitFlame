@@ -86,7 +86,9 @@ function OnLogicUpdate(event: UpdateEvent)
       {
           if(this.GameSession.GameVars.PlayerTitanium >= 50 && this.GameSession.GameVars.PlayerAluminium >= 50)
           {
-             this.Sprite.Color = this.CanClickColor;
+             var seq = Action.Sequence(this.Owner.Actions);
+             var grp = Action.Group(seq);
+             Action.Property(grp, @this.Sprite.Color, this.CanClickColor, 0.03, Ease.QuadInOut);
           }
       }
     

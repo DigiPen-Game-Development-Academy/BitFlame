@@ -124,7 +124,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-2.12824416, -0.932611108, 50],
+			Vec3 Translation = [1.55394018, 1.26015019, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -144,7 +144,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-2.12824416, -0.932611108, 3.3395068e-07],
+			Vec3 LookTarget = [1.55394018, 1.26015019, 4.94903702e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -521,6 +521,73 @@ Level =
 		{
 			float Health = 0,
 			string ArchetypetoSpawnOnDeath = "",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 10,
+		},
+		Named = 
+		{
+			string Name = "Asteroid Chunk",
+		},
+		Archetyped = 
+		{
+			string Name = "5a1180f76f978cdf:AssteroidChunk",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [20.1717262, 10.2794313, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.449999988, 0.449999988, 0.5],
+		},
+		Health = 
+		{
+			float Health = 5,
+			string ArchetypetoSpawnOnDeath = "",
+		},
+		Asteroid_Mining = 
+		{
+			float DropAmount = 1,
+			float ShrinkAmount = 20,
+			string AluminiumArchetype = "5a6ca514b81d8e50:Game_AluminiumOre_Pickup",
+			string CopperArchetype = "5a6cae91a47b14d7:Game_CopperOre_Pickup",
+			string IronArchetype = "5a86165eb2745571:Game_ResourceOre_Pickup",
+			string TitaniumArchetype = "5a6ca525a5151ffd:Game_TitaniumOre_Pickup",
+			float AluminiumProbability = 35,
+			float CopperProbability = 30,
+			float IronProbability = 25,
+			float TitaniumProbability = 10,
 		},
 	},
 },
