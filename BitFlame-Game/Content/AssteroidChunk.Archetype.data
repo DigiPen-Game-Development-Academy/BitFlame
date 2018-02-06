@@ -49,8 +49,15 @@ Cog =
 	Asteroid_Mining = 
 	{
 		float DropAmount = 1,
-		string ResourceArchetype = "5a86165eb2745571:Game_ResourceOre_Pickup",
 		float ShrinkAmount = 20,
+		string AluminiumArchetype = "5a6ca514b81d8e50:Game_AluminiumOre_Pickup",
+		string CopperArchetype = "5a6cae91a47b14d7:Game_CopperOre_Pickup",
+		string IronArchetype = "5a86165eb2745571:Game_ResourceOre_Pickup",
+		string TitaniumArchetype = "5a6ca525a5151ffd:Game_TitaniumOre_Pickup",
+		float AluminiumProbability = 35,
+		float CopperProbability = 30,
+		float IronProbability = 25,
+		float TitaniumProbability = 10,
 	},
 	Health = 
 	{
