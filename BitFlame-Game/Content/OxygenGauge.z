@@ -12,20 +12,16 @@ class OxygenGauge : ZilchComponent
     //control the speed that oxygen decays (will be removed once oxygen decays by itself);
     [Property] var DecaySpeed : Real = 10;
     
-    //i made this in case the max amount of oxygen does not = 0
-    [Property] var OxygenModifier : Real = 1;
+    //i made this in case the max amount of oxygen does not = 100
+    var OxygenModifier : Real = 1;
     
     var CurrentOxygen : Real = 100;
     
     var Direction : Real3 = Real3(0.0, 0.0, 0.0);
     
-    var GameVars : Cog;
-    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-        
-        //this.GameVars = this.GameSession.GameVars;
         
         this.OxygenModifier = 100 / this.GameSession.GameVars.StartingPlayerOxygen;
         
@@ -33,15 +29,16 @@ class OxygenGauge : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        //this.CurrentOxygen = this.GameSession.GameVars.PlayerOxygen * this.OxygenModifier;
+        this.CurrentOxygen = this.GameSession.GameVars.PlayerOxygen * this.OxygenModifier;
         if (this.CurrentOxygen > 0)
         {
-            //this.GameSession.GameVars.PlayerOxygen -= (this.DecaySpeed * event.Dt)/this.OxygenModifier;
-            this.CurrentOxygen -= this.DecaySpeed * event.Dt;
+            this.GameSession.GameVars.PlayerOxygen -= (this.DecaySpeed * event.Dt)/this.OxygenModifier;
+            //this.CurrentOxygen -= this.DecaySpeed * event.Dt;
         }
         else
         {
-            this.CurrentOxygen = 0;
+            this.CurrentOxygen = 0.0;
+            this.GameSession.GameVars.PlayerOxygen = 0.0;
         }
         //complicated math stuff that works but i dont understand how
         var posX : Real = 0.0;
