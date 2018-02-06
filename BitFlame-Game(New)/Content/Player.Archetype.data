@@ -114,6 +114,9 @@ Cog =
 	FlipXWhenMouseGreaterThan = 
 	{
 	},
+	CheatSystem = 
+	{
+	},
 	Hierarchy = 
 	{
 		Cog = 
