@@ -12,7 +12,7 @@ class Ship_Menu_Repair_Button_Visual : ZilchComponent
   [Property] var ClickColor : Real4 = Real4(1.0, 1.0, 1.0, 1);  
   
   [Property] var CanClickColor : Real4 = Real4(1, 1, 1, 1);
-  
+
   var OriginalScale : Real3 = Real3();
   
   [Property] var HoverScale : Real = 1.2;
@@ -79,21 +79,20 @@ class Ship_Menu_Repair_Button_Visual : ZilchComponent
 
   }
 
-function OnLogicUpdate(event: UpdateEvent)
-{
-   
-      if(this.GameSession.GameVars.PlayerResources >= 50 && this.GameSession.GameVars.PlayerCopper >= 50)
-      {
-          if(this.GameSession.GameVars.PlayerTitanium >= 50 && this.GameSession.GameVars.PlayerAluminium >= 50)
+    function OnLogicUpdate(event: UpdateEvent)
+    {
+       
+          if(this.GameSession.GameVars.PlayerResources >= 50 && this.GameSession.GameVars.PlayerCopper >= 50)
           {
-             var seq = Action.Sequence(this.Owner.Actions);
-             var grp = Action.Group(seq);
-             Action.Property(grp, @this.Sprite.Color, this.CanClickColor, 0.03, Ease.QuadInOut);
+              if(this.GameSession.GameVars.PlayerTitanium >= 50 && this.GameSession.GameVars.PlayerAluminium >= 50)
+              {
+                 var seq = Action.Sequence(this.Owner.Actions);
+                 var grp = Action.Group(seq);
+                 Action.Property(grp, @this.Sprite.Color, this.CanClickColor, 0.03, Ease.QuadInOut);
+              }
           }
-      }
-    
-}
-
+        
+    }
 
 }
 
@@ -114,6 +113,8 @@ class Ship_Menu_Repair_Button_Function : ZilchComponent
     [Property] var Reload : Boolean = false; 
 
     [Property] var Quit : Boolean = false;  
+    
+    [Property] var ShipRepaired : Boolean = false;
   
     function Initialize(init : CogInitializer)
     {
@@ -141,5 +142,7 @@ class Ship_Menu_Repair_Button_Function : ZilchComponent
             var grp = Action.Group(seq);
             Action.Property(grp, @this.Camera.Cog.Transform.Translation, this.NewCameraPosition, this.MoveTime, Ease.QuadInOut);
         }
+        
+        this.ShipRepaired = true;
     }
 }

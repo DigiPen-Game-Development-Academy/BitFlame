@@ -1,7 +1,7 @@
 /***********************
 Ship_Menu_Button.Z
 by: Jakob McFarland
-Contributers:
+Contributers: Luke Taranowski
 Date: 2/1/18
 Brief: these components will make a button look good and be functional
 ***********************/
@@ -118,6 +118,65 @@ class Ship_Menu_Button_Function : ZilchComponent
             var seq = Action.Sequence(this.Camera.Cog.Actions);
             var grp = Action.Group(seq);
             Action.Property(grp, @this.Camera.Cog.Transform.Translation, this.NewCameraPosition, this.MoveTime, Ease.QuadInOut);
+        }
+    }
+}
+
+class Ship_Menu_Button_Upgrade : ZilchComponent
+{
+    [Property] var Camera : CogPath = null; 
+  
+    [Property] var NewCameraPosition : Real3 = Real3(0.0, 0.0, 0.0);
+
+    [Property] var MoveTime : Real = 0.2; 
+    
+    // Determines how many upgrade points player needs
+    [Property] var UpgradePoints_Needed : Integer = 0;
+    
+    // Lets us select the right upgrade for the button
+    [Property] var FireRateI_Upgrade : Boolean = false;
+    [Property] var MaxSpeed_Upgrade : Boolean = false;
+    // INSERT MORE UPGRADES HERE
+    
+    function Initialize(init : CogInitializer)
+    {
+        this.NewCameraPosition.Z =  this.Camera.Cog.Transform.Translation.Z;
+        Zero.Connect(this.Owner, Events.LeftMouseDown, this.OnLeftMouseDown);
+    }
+    
+    // Runs when player has pressed the button
+    function OnLeftMouseDown(event : ViewportMouseEvent)
+    {
+        // For Demonstation Purposes
+        Console.WriteLine("this means it detected button press");
+        
+        // Checks if player has enough points to purchase upgrade the amount of points needed is determined by a variable
+        if(this.GameSession.GameVars.PlayerUpgradePoints >= this.UpgradePoints_Needed)
+        {
+            // For Demonstation Purposes
+            Console.WriteLine("This means I have enough upgrade points");
+            
+            if(this.FireRateI_Upgrade == true)
+            {
+            // Sets the variable in GameVars to true
+            this.GameSession.GameVars.HasUpgrade_FirerateI = true;
+            
+            this.GameSession.GameVars.PlayerUpgradePoints -= this.UpgradePoints_Needed;
+            }
+            if(this.MaxSpeed_Upgrade == true)
+            {
+            // Sets the variable in GameVars to true
+            this.GameSession.GameVars.HasUpgrade_Maxspeed = true;
+            
+            this.GameSession.GameVars.PlayerUpgradePoints -= this.UpgradePoints_Needed;
+            }
+        }
+        else
+        {
+           this.Camera.Cog.Actions.Cancel();
+            var seq = Action.Sequence(this.Camera.Cog.Actions);
+            var grp = Action.Group(seq);
+            Action.Property(grp, @this.Camera.Cog.Transform.Translation, this.NewCameraPosition, this.MoveTime, Ease.QuadInOut); 
         }
     }
 }
