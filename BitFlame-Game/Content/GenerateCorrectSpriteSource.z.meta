@@ -1,8 +1,0 @@
-TextContent = 
-{
-	ZilchScriptBuilder = 
-	{
-		string Name = "GenerateCorrectSpriteSource",
-		uint64 ResourceId = 5ae6f116b5727a94,
-	},
-},

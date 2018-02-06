@@ -17,6 +17,8 @@ class Level_WorldGeneration : ZilchComponent
      
     [Property] var HiveArchetype : Archetype = null;
     
+    [Property] var UpgradePickupArchetype : Archetype = null;
+    
     //each range is the inputed value
     [Property] var Asteroid_01Probability : Real = 0;
     [Property] var Asteroid_02Probability : Real = 0;
@@ -26,6 +28,8 @@ class Level_WorldGeneration : ZilchComponent
     [Property] var HiveProbability : Real = 0;
     
     [Property] var EnemyProbability : Real = 0;
+    
+    [Property] var UpgradePickupProbability : Real = 0;
     
     //spawning vars
     [Property] var MaxX : Integer = 245;
@@ -109,6 +113,13 @@ class Level_WorldGeneration : ZilchComponent
            if(!safe)
             {  
                 this.Space.CreateAtPosition( this.EnemyArchetype, Real3(x, y, 0));
+            }
+        }
+        else if (selector < this.Asteroid_01Probability + this.Asteroid_02Probability + this.EmptySpaceProbability + this.HiveProbability + this.EnemyProbability + this.UpgradePickupProbability)
+        {
+           if(!safe)
+            {  
+                this.Space.CreateAtPosition( this.UpgradePickupArchetype, Real3(x, y, 0));
             }
         }
     }

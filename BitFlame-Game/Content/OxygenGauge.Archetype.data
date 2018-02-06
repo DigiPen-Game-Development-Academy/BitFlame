@@ -38,8 +38,7 @@ Cog =
 	},
 	OxygenGauge = 
 	{
-		float DecaySpeed = 1,
-		float OxygenModifier = 1,
+		float DecaySpeed = 5,
 	},
 	Hierarchy = 
 	{
