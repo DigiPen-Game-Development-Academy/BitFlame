@@ -144,7 +144,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [12.4371281, -2.23477578, 74.2286224],
+			Vec3 Translation = [15.7204876, -2.16105843, 74.2286224],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -156,7 +156,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 16.5299225,
+			float Size = 8.20851803,
 		},
 		EditorCameraController = 
 		{
@@ -164,7 +164,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [12.4371281, -2.23477578, 24.2286243],
+			Vec3 LookTarget = [15.7204876, -2.16105843, 24.2286243],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -390,6 +390,10 @@ Level =
 					Vec3 Scale = [0.899999976, 0.899999976, 0.899999976],
 					Quat Rotation = [0, 0, 0, 1],
 				},
+				SetXToVariable = 
+				{
+					Enum Type = Iron,
+				},
 				SpriteText = 
 				{
 					bool Visible = true,
@@ -400,16 +404,12 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
-					uint FontSize = 100,
+					string FontName = "57343753bb4eaaec:NotoSans-Regular",
+					uint FontSize = 101,
 					string Text = "0",
 					TextAlign Align = Right,
 					float PixelsPerUnit = 64,
 					bool Smoothing = true,
-				},
-				SetXToVariable = 
-				{
-					Enum Type = Iron,
 				},
 			},
 			Cog = 
