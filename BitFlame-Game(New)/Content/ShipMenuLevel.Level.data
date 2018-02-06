@@ -507,9 +507,12 @@ Level =
 		{
 			Vec4 HoverColor = [0, 1, 0.130000114, 1],
 			Vec4 ClickColor = [1, 1, 1, 1],
-			Vec4 CanClickColor = [0, 0, 0, 1],
 			float HoverScale = 1.20000005,
 			float ClickScale = 1,
+		},
+		Ship_Menu_Repair_Button2 = 
+		{
+			Vec4 ChangeColor = [0, 0, 0, 0.999899983],
 		},
 		Hierarchy = 
 		{
