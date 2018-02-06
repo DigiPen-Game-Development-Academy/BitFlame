@@ -32,12 +32,19 @@ class Ship_Menu_Repair_Button_Visual : ZilchComponent
 
   function OnLeftMouseDown(event : ViewportMouseEvent)
   {
+      
+      if(this.GameSession.GameVars.PlayerResources >= 50 && this.GameSession.GameVars.PlayerCopper >= 50)
+      {
+          if(this.GameSession.GameVars.PlayerTitanium >= 50 && this.GameSession.GameVars.PlayerAluminium >= 50)
+          {
     this.Owner.Actions.Cancel();
     var seq = Action.Sequence(this.Owner.Actions);
     var grp = Action.Group(seq);
     
     Action.Property(grp, @this.Sprite.Color, this.ClickColor, 0.03, Ease.QuadInOut);
     Action.Property(grp, @this.Transform.Scale, this.OriginalScale * this.ClickScale, 0.3, Ease.QuadInOut);
+}
+}
   }
 
   function OnMouseExit(event : ViewportMouseEvent)
@@ -71,6 +78,20 @@ class Ship_Menu_Repair_Button_Visual : ZilchComponent
     
 
   }
+
+function OnLogicUpdate(event: UpdateEvent)
+{
+   
+      if(this.GameSession.GameVars.PlayerResources >= 50 && this.GameSession.GameVars.PlayerCopper >= 50)
+      {
+          if(this.GameSession.GameVars.PlayerTitanium >= 50 && this.GameSession.GameVars.PlayerAluminium >= 50)
+          {
+             this.Sprite.Color = this.CanClickColor;
+          }
+      }
+    
+}
+
 
 }
 

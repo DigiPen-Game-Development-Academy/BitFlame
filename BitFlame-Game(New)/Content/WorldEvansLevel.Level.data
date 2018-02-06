@@ -318,7 +318,7 @@ Level =
 		},
 		Health = 
 		{
-			float Health = 1,
+			float Health = 0,
 			string ArchetypetoSpawnOnDeath = "",
 		},
 	},
@@ -385,7 +385,7 @@ Level =
 		},
 		Health = 
 		{
-			float Health = 1,
+			float Health = 0,
 			string ArchetypetoSpawnOnDeath = "",
 		},
 	},
@@ -452,7 +452,7 @@ Level =
 		},
 		Health = 
 		{
-			float Health = 1,
+			float Health = 0,
 			string ArchetypetoSpawnOnDeath = "",
 		},
 	},
@@ -519,7 +519,7 @@ Level =
 		},
 		Health = 
 		{
-			float Health = 1,
+			float Health = 0,
 			string ArchetypetoSpawnOnDeath = "",
 		},
 	},
