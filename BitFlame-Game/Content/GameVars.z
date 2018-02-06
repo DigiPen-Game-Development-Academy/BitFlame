@@ -39,12 +39,12 @@ class GameVars : ZilchComponent
     [Property] var HasUpgrade_ShieldII : Boolean = false;
     
     //the actaul values stored on gamevars, these are the values that your scripts should be changing
-    var PlayerHealth : Integer; 
-    var PlayerResources : Integer; 
+    var PlayerHealth : Integer;
+    var PlayerResources : Integer;
     var PlayerCopper : Integer;
     var PlayerTitanium : Integer;
     var PlayerAluminium : Integer;
-    var PlayerOxygen: Integer; 
+    var PlayerOxygen: Integer;
     var PlayerUpgradePoints : Integer;
     
     var PlayerActive : Boolean = false;

@@ -105,15 +105,20 @@ Level =
 		},
 		Level_WorldGeneration = 
 		{
-			string AsteroidArchetype = "5afc186063c49e3c:AsteroidConfig1",
+			string Asteroid_01Archetype = "5afc186063c49e3c:AsteroidConfig1",
+			string Asteroid_02Archetype = "5afc18c082beb4a9:AsteroidConfig2",
 			string EnemyArchetype = "5a1c25102e8b8ff5:AlienEnemy",
 			string HiveArchetype = "5a1c2405f45e8ddd:EnemyHive",
-			float AsteroidProbability = 15,
+			float Asteroid_01Probability = 7.5,
+			float Asteroid_02Probability = 7.5,
 			float EmptySpaceProbability = 80,
 			float HiveProbability = 4,
 			float EnemyProbability = 1,
 			int MaxX = 245,
 			int MaxY = 245,
+			int SpawnCellwidth = 10,
+			int EmptyRange = 10,
+			int SafeRange = 10,
 		},
 	},
 	Cog = 

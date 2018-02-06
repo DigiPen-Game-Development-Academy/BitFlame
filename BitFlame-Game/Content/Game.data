@@ -23,6 +23,9 @@ GameSession =
 	{
 		int StartingPlayerHealth = 10,
 		int StartingPlayerResources = 0,
+		int StartingCopper = 0,
+		int StartingPlayerTitanium = 0,
+		int StartingPlayerAluminium = 0,
 		int StartingPlayerOxygen = 10,
 		int StartingUpgradePoints = 1,
 		bool HasUpgrade_SpreadI = false,
