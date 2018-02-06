@@ -1,0 +1,94 @@
+/*************************************
+Filename: GameVars.z
+Author: Jakob McFarland
+Contributors: NULL
+Last modified: 1/23/18
+Brief: This Component stores the vars that are constant the whole game, include Player Health, Player Resources, and Player Oxygen
+******************************************/
+    
+class GameVars : ZilchComponent
+{
+    //setable starting values for the player 
+    [Property] var StartingPlayerHealth : Integer = 0; 
+    [Property] var StartingPlayerResources : Integer = 0; 
+    [Property] var StartingCopper : Integer = 0;
+    [Property] var StartingPlayerTitanium : Integer = 0;
+    [Property] var StartingPlayerAluminium : Integer = 0;
+    [Property] var StartingPlayerOxygen : Real = 0; 
+    [Property] var StartingUpgradePoints : Integer = 0; 
+    
+    //upgrade flags
+    [Property] var HasUpgrade_SpreadI : Boolean = false;
+    [Property] var HasUpgrade_SpreadII : Boolean = false;
+    [Property] var HasUpgrade_Homing : Boolean = false;
+    [Property] var HasUpgrade_FirerateI : Boolean = false;
+    [Property] var HasUpgrade_FirerateII : Boolean = false;
+    [Property] var HasUpgrade_Doubleshot : Boolean = false;
+    [Property] var HasUpgrade_PenitrationI : Boolean = false;
+    [Property] var HasUpgrade_PenitrationII : Boolean = false;
+    [Property] var HasUpgrade_KnockbackI : Boolean = false;
+    [Property] var HasUpgrade_KnockbackII : Boolean = false;
+    [Property] var HasUpgrade_Maxspeed : Boolean = false;
+    [Property] var HasUpgrade_Acceleration : Boolean = false;
+    [Property] var HasUpgrade_InertiaDampeners : Boolean = false;
+    [Property] var HasUpgrade_Vitals : Boolean = false;
+    [Property] var HasUpgrade_Maxhealth : Boolean = false;
+    [Property] var HasUpgrade_Maxoxygen : Boolean = false;
+    [Property] var HasUpgrade_ShieldI : Boolean = false;
+    [Property] var HasUpgrade_Shieldregenspeed : Boolean = false;
+    [Property] var HasUpgrade_ShieldII : Boolean = false;
+    
+    //the actaul values stored on gamevars, these are the values that your scripts should be changing
+    var PlayerHealth : Integer;
+    var PlayerResources : Integer;
+    var PlayerCopper : Integer;
+    var PlayerTitanium : Integer;
+    var PlayerAluminium : Integer;
+    var PlayerOxygen: Real;
+    var PlayerUpgradePoints : Integer;
+    
+    var PlayerActive : Boolean = false;
+    
+    //initialization function, runs when the owner object is created
+    function Initialize(init : CogInitializer)
+    {
+        //setting the working game var values to their preset values.
+        this.PlayerHealth = this.StartingPlayerHealth;
+        this.PlayerResources = this.StartingPlayerResources;
+        this.PlayerOxygen = this.StartingPlayerOxygen;
+        this.PlayerUpgradePoints = this.StartingUpgradePoints;
+        
+        //var player = this.Space.FindAllObjectsByName("Player");
+        
+        if (this.HasUpgrade_SpreadI)
+        {
+            
+        }
+        if (this.HasUpgrade_SpreadII)
+        {
+            
+        }
+        if (this.HasUpgrade_Homing)
+        {
+            
+        }
+        if (this.HasUpgrade_FirerateI)
+        {
+            
+        }
+        if (this.HasUpgrade_FirerateII)
+        {
+            
+        }
+        if (this.HasUpgrade_Homing)
+        {
+            
+        }
+        
+        
+        
+        
+        
+    }
+
+}

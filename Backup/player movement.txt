@@ -1,0 +1,76 @@
+class Move : ZilchComponent
+{
+    [Dependency]
+    var Transform : Transform = null;
+    
+    [Property]
+    var Speed : Real;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+    
+    
+    function OnRotation(event : UpdateEvent)
+    {
+        var screenPos = Zero.Mouse.ScreenPosition;
+        
+        var mousePos = this.LevelSettings.CameraViewport.ScreenToWorldZPlane(screenPos, 0.0);
+        
+        var mouseDirection = mousePos - this.Owner.Transform.WorldTranslation;
+        
+        mouseDirection = Math.Normalize(mouseDirection);
+        
+        
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        this.OnRotation(event);
+        
+        var movementDirection : Real3 = Real3(0.0,0.0,0.0);
+        
+        if(Zero.Keyboard.KeyIsDown(Keys.W) || Zero.Keyboard.KeyIsDown(Keys.Up))
+        {
+            
+            movementDirection += Real3(0.0, 1.0, 0.0);
+            
+        }
+        
+        if(Zero.Keyboard.KeyIsDown(Keys.S) || Zero.Keyboard.KeyIsDown(Keys.Down))
+        {
+            
+            movementDirection += Real3(0.0, -1.0, 0.0);
+            
+        }
+        
+        if(Zero.Keyboard.KeyIsDown(Keys.A) || Zero.Keyboard.KeyIsDown(Keys.Left))
+        {
+            
+            movementDirection += Real3(-1.0, 0.0, 0.0);
+            
+        }
+        
+        if(Zero.Keyboard.KeyIsDown(Keys.D) || Zero.Keyboard.KeyIsDown(Keys.Right))
+        {
+            
+            movementDirection += Real3(1.0, 0.0, 0.0);
+            
+        }
+        
+        if(Zero.Keyboard.KeyIsDown(Keys.Shift))
+        {
+            
+            this.Speed = 30.0;
+            
+        }
+        
+        
+        movementDirection = Math.Normalize(movementDirection);
+        
+        this.Owner.Transform.Translation += movementDirection * event.Dt * this.Speed;
+    }
+    
+    
+}

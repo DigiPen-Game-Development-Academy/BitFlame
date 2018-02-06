@@ -1,0 +1,12 @@
+BinaryContent = 
+{
+	BinaryBuilder = 
+	{
+		string Name = "LoseScreen_TileMap00",
+		uint64 ResourceId = 5a1c2465fe54e147,
+		string LoaderType = "TileMapSource",
+		uint Version = 0,
+		string FilterTag = "",
+		string ResourceOwner = "5a1c2a58091c3976:LoseScreen",
+	},
+},
