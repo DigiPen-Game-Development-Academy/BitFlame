@@ -232,4 +232,22 @@ Level =
 			string Name = "Player",
 		},
 	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a9842f78945b818:Ship",
+		LinkId = 
+		{
+			uint Id = 5,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [4, 3, 0],
+			Vec3 Scale = [10, 5, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Ship",
+		},
+	},
 },
