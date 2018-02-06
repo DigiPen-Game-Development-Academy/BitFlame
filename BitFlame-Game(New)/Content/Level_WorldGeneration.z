@@ -46,6 +46,21 @@ class Level_WorldGeneration : ZilchComponent
     
     function Initialize(init : CogInitializer)
     {
+      Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+      this.BuildWorld();
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(this.GameSession.GameVars.WorldRegen)
+        {
+            this.GameSession.GameVars.WorldRegen = false;
+             this.Space.ReloadLevel();
+        }
+    }
+    
+    function BuildWorld()
+    {
         var currentX = -this.MaxX;
         var currentY = -this.MaxY; 
         var safe : Boolean = false;
@@ -71,10 +86,8 @@ class Level_WorldGeneration : ZilchComponent
                 //Console.WriteLine(currentX);
                 //Console.WriteLine(currentY);
             }
-            
             //Console.WriteLine("Test");
         }
-        
     }
     
     //builds the square according to the probablity tables lain out.

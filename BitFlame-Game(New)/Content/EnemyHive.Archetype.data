@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [10.8628321, 8.83138084, 0],
 		Vec3 Scale = [3, 3, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -62,7 +62,14 @@ Cog =
 	Asteroid_Mining = 
 	{
 		float DropAmount = 10,
-		string ResourceArchetype = "5a86165eb2745571:Game_ResourceOre_Pickup",
 		float ShrinkAmount = 200,
+		string AluminiumArchetype = "5a6ca514b81d8e50:Game_AluminiumOre_Pickup",
+		string CopperArchetype = "5a6cae91a47b14d7:Game_CopperOre_Pickup",
+		string IronArchetype = "5a86165eb2745571:Game_ResourceOre_Pickup",
+		string TitaniumArchetype = "5a6ca525a5151ffd:Game_TitaniumOre_Pickup",
+		float AluminiumProbability = 20,
+		float CopperProbability = 15,
+		float IronProbability = 32,
+		float TitaniumProbability = 33,
 	},
 },

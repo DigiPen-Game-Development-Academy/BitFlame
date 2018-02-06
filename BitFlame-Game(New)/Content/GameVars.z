@@ -47,6 +47,11 @@ class GameVars : ZilchComponent
     var PlayerOxygen: Real;
     var PlayerUpgradePoints : Integer;
     
+    //ship repair
+    var ShipRepaired : Boolean = false;
+    
+    var WorldRegen : Boolean = false;
+    
     var PlayerActive : Boolean = false;
     
     //initialization function, runs when the owner object is created
@@ -84,11 +89,7 @@ class GameVars : ZilchComponent
         {
             
         }
-        
-        
-        
-        
-        
+    
     }
 
 }

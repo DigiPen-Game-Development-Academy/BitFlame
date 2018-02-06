@@ -1,12 +1,4 @@
-/***********************
-Ship_Menu_Button.Z
-by: Jakob McFarland
-Contributers:
-Date: 2/1/18
-Brief: these components will make a button look good and be functional
-***********************/
-
-class Ship_Menu_Button_Visual : ZilchComponent
+class Ship_Menu_Repair_Button_Visual : ZilchComponent
 {
   [Dependency] var Reactive : Reactive = null;
   [Dependency] var Sprite : Sprite = null;
@@ -18,6 +10,8 @@ class Ship_Menu_Button_Visual : ZilchComponent
   [Property] var HoverColor : Real4 = Real4(1, 1, 1, 1);
 
   [Property] var ClickColor : Real4 = Real4(1.0, 1.0, 1.0, 1);  
+  
+  [Property] var CanClickColor : Real4 = Real4(1, 1, 1, 1);
   
   var OriginalScale : Real3 = Real3();
   
@@ -38,12 +32,19 @@ class Ship_Menu_Button_Visual : ZilchComponent
 
   function OnLeftMouseDown(event : ViewportMouseEvent)
   {
+      
+      if(this.GameSession.GameVars.PlayerResources >= 50 && this.GameSession.GameVars.PlayerCopper >= 50)
+      {
+          if(this.GameSession.GameVars.PlayerTitanium >= 50 && this.GameSession.GameVars.PlayerAluminium >= 50)
+          {
     this.Owner.Actions.Cancel();
     var seq = Action.Sequence(this.Owner.Actions);
     var grp = Action.Group(seq);
     
     Action.Property(grp, @this.Sprite.Color, this.ClickColor, 0.03, Ease.QuadInOut);
     Action.Property(grp, @this.Transform.Scale, this.OriginalScale * this.ClickScale, 0.3, Ease.QuadInOut);
+}
+}
   }
 
   function OnMouseExit(event : ViewportMouseEvent)
@@ -59,7 +60,12 @@ class Ship_Menu_Button_Visual : ZilchComponent
 
   function OnMouseEnter(event : ViewportMouseEvent)
   {
-    this.Transform.Translation.Z += 10;
+      
+      if(this.GameSession.GameVars.PlayerResources >= 50 && this.GameSession.GameVars.PlayerCopper >= 50)
+      {
+          if(this.GameSession.GameVars.PlayerTitanium >= 50 && this.GameSession.GameVars.PlayerAluminium >= 50)
+          {
+              this.Transform.Translation.Z += 10;
         
     this.Owner.Actions.Cancel();
     var seq = Action.Sequence(this.Owner.Actions);
@@ -67,16 +73,32 @@ class Ship_Menu_Button_Visual : ZilchComponent
     
     Action.Property(grp, @this.Sprite.Color, this.HoverColor, 0.03, Ease.QuadInOut);
     Action.Property(grp, @this.Transform.Scale, this.OriginalScale * this.HoverScale, 0.3, Ease.QuadInOut);
+          }
+      }
+    
 
   }
 
+function OnLogicUpdate(event: UpdateEvent)
+{
+   
+      if(this.GameSession.GameVars.PlayerResources >= 50 && this.GameSession.GameVars.PlayerCopper >= 50)
+      {
+          if(this.GameSession.GameVars.PlayerTitanium >= 50 && this.GameSession.GameVars.PlayerAluminium >= 50)
+          {
+             var seq = Action.Sequence(this.Owner.Actions);
+             var grp = Action.Group(seq);
+             Action.Property(grp, @this.Sprite.Color, this.CanClickColor, 0.03, Ease.QuadInOut);
+          }
+      }
+    
 }
 
-class Ship_Menu_Button_Function : ZilchComponent
+
+}
+
+class Ship_Menu_Repair_Button_Function : ZilchComponent
 {
-    //world regen function 
-    sends WorldRegen : ZilchEvent;
-    
     [Dependency] var Reactive : Reactive = null;
 
     [Dependency] var Transform : Transform = null;
@@ -109,7 +131,7 @@ class Ship_Menu_Button_Function : ZilchComponent
         
         if(this.Reload)
         {
-            this.GameSession.GameVars.WorldRegen = true;
+            this.Player.Cog.Level_WorldRegeneration.Regenerate();
         }
         
         if(this.Camera != null)
