@@ -96,7 +96,11 @@ Level =
 		},
 		Transform = 
 		{
+<<<<<<< HEAD
+			Vec3 Translation = [17.5750732, 2.62030864, 50],
+=======
 			Vec3 Translation = [0.441419601, 18.7814903, 70.9990005],
+>>>>>>> parent of 9bb3023... editted scripts and added a ship repair button
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -108,7 +112,11 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
+<<<<<<< HEAD
+			float Size = 14.9569578,
+=======
 			float Size = 30.1195869,
+>>>>>>> parent of 9bb3023... editted scripts and added a ship repair button
 		},
 		EditorCameraController = 
 		{
@@ -116,7 +124,11 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
+<<<<<<< HEAD
+			Vec3 LookTarget = [17.5750732, 2.62030864, 7.68230905e-07],
+=======
 			Vec3 LookTarget = [0.441419601, 18.7814903, 20.9990005],
+>>>>>>> parent of 9bb3023... editted scripts and added a ship repair button
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -236,7 +248,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-9, 8.25, 0],
+			Vec3 Translation = [-9, 8.75, 0],
 			Vec3 Scale = [4, 1.5, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -271,7 +283,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-4.5, 8.25, 0],
+			Vec3 Translation = [-4.5, 8.75, 0],
 			Vec3 Scale = [4, 1.5, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -446,6 +458,97 @@ Level =
 		},
 		Transform = 
 		{
+<<<<<<< HEAD
+			Vec3 Translation = [24, 3, 0],
+			Vec3 Scale = [8, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.0360000134, 0.800000012, 0.341599911, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		Ship_Menu_Button_Visual = 
+		{
+			Vec4 HoverColor = [0.181450009, 0.954999983, 0.235598639, 1],
+			Vec4 ClickColor = [0.466666698, 0.776470661, 0.588235319, 1],
+			float HoverScale = 1.20000005,
+			float ClickScale = 1,
+		},
+		Ship_Menu_Button_Upgrade = 
+		{
+			bool Vitals_Upgrade = true,
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 10,
+				},
+				Named = 
+				{
+					string Name = "SpriteText",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0.25, 21],
+					Vec3 Scale = [0.0833333358, 0.333333343, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				SpriteText = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string FontName = "4e7bac697bec55c5:Verdana",
+					uint FontSize = 75,
+					string Text = "Vitals",
+					TextAlign Align = Center,
+					float PixelsPerUnit = 64,
+					bool Smoothing = true,
+				},
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 11,
+		},
+		Named = 
+		{
+			string Name = "Button",
+		},
+		Transform = 
+		{
+=======
+>>>>>>> parent of 9bb3023... editted scripts and added a ship repair button
 			Vec3 Translation = [55.5, 8.25, 1],
 			Vec3 Scale = [4, 1.5, 1],
 			Quat Rotation = [0, 0, 0, 1],
@@ -507,7 +610,11 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
+			uint Id = 12,
+=======
 			uint Id = 10,
+>>>>>>> parent of 9bb3023... editted scripts and added a ship repair button
 		},
 		Named = 
 		{
@@ -515,7 +622,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 8.25, 0],
+			Vec3 Translation = [0, 8.75, 0],
 			Vec3 Scale = [4, 1.5, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -576,7 +683,11 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
+			uint Id = 13,
+=======
 			uint Id = 11,
+>>>>>>> parent of 9bb3023... editted scripts and added a ship repair button
 		},
 		Named = 
 		{
@@ -611,7 +722,11 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
+			uint Id = 14,
+=======
 			uint Id = 12,
+>>>>>>> parent of 9bb3023... editted scripts and added a ship repair button
 		},
 		Named = 
 		{
@@ -646,7 +761,11 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
+			uint Id = 15,
+=======
 			uint Id = 13,
+>>>>>>> parent of 9bb3023... editted scripts and added a ship repair button
 		},
 		Named = 
 		{
@@ -715,7 +834,11 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
+			uint Id = 16,
+=======
 			uint Id = 14,
+>>>>>>> parent of 9bb3023... editted scripts and added a ship repair button
 		},
 		Named = 
 		{
@@ -784,7 +907,11 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
+			uint Id = 17,
+=======
 			uint Id = 15,
+>>>>>>> parent of 9bb3023... editted scripts and added a ship repair button
 		},
 		Named = 
 		{
@@ -819,7 +946,11 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
+			uint Id = 18,
+=======
 			uint Id = 16,
+>>>>>>> parent of 9bb3023... editted scripts and added a ship repair button
 		},
 		Named = 
 		{
@@ -854,7 +985,11 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
+			uint Id = 19,
+=======
 			uint Id = 17,
+>>>>>>> parent of 9bb3023... editted scripts and added a ship repair button
 		},
 		Named = 
 		{
@@ -923,7 +1058,11 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
+			uint Id = 20,
+=======
 			uint Id = 18,
+>>>>>>> parent of 9bb3023... editted scripts and added a ship repair button
 		},
 		Named = 
 		{
@@ -958,7 +1097,11 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
+			uint Id = 21,
+=======
 			uint Id = 19,
+>>>>>>> parent of 9bb3023... editted scripts and added a ship repair button
 		},
 		Named = 
 		{
@@ -992,7 +1135,11 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
+			uint Id = 22,
+=======
 			uint Id = 20,
+>>>>>>> parent of 9bb3023... editted scripts and added a ship repair button
 		},
 		Named = 
 		{
@@ -1026,7 +1173,11 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
+			uint Id = 23,
+=======
 			uint Id = 21,
+>>>>>>> parent of 9bb3023... editted scripts and added a ship repair button
 		},
 		Named = 
 		{
@@ -1060,7 +1211,11 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
+			uint Id = 24,
+=======
 			uint Id = 22,
+>>>>>>> parent of 9bb3023... editted scripts and added a ship repair button
 		},
 		Named = 
 		{
@@ -1130,7 +1285,11 @@ Level =
 			{
 				LinkId = 
 				{
+<<<<<<< HEAD
+					uint Id = 25,
+=======
 					uint Id = 23,
+>>>>>>> parent of 9bb3023... editted scripts and added a ship repair button
 				},
 				Named = 
 				{
@@ -1166,7 +1325,11 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
+			uint Id = 26,
+=======
 			uint Id = 24,
+>>>>>>> parent of 9bb3023... editted scripts and added a ship repair button
 		},
 		Named = 
 		{
@@ -1236,7 +1399,11 @@ Level =
 			{
 				LinkId = 
 				{
+<<<<<<< HEAD
+					uint Id = 27,
+=======
 					uint Id = 25,
+>>>>>>> parent of 9bb3023... editted scripts and added a ship repair button
 				},
 				Named = 
 				{
@@ -1272,7 +1439,11 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
+			uint Id = 28,
+=======
 			uint Id = 26,
+>>>>>>> parent of 9bb3023... editted scripts and added a ship repair button
 		},
 		Named = 
 		{
@@ -1306,7 +1477,11 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
+			uint Id = 29,
+=======
 			uint Id = 27,
+>>>>>>> parent of 9bb3023... editted scripts and added a ship repair button
 		},
 		Named = 
 		{
@@ -1340,7 +1515,11 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
+			uint Id = 30,
+=======
 			uint Id = 28,
+>>>>>>> parent of 9bb3023... editted scripts and added a ship repair button
 		},
 		Named = 
 		{

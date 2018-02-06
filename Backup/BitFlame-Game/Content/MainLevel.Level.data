@@ -12,7 +12,7 @@ Level =
 		},
 		GravityEffect = 
 		{
-			bool Active = false,
+			bool Active = true,
 			bool WakeUpOnChange = false,
 			bool LocalSpaceDirection = true,
 			float Strength = 10,
@@ -91,51 +91,12 @@ Level =
 			int HilightInterval = 10,
 			bool FollowEditorCamera = false,
 		},
-		Level_WorldGeneration = 
-		{
-			string Asteroid_01Archetype = "5afc186063c49e3c:AsteroidConfig1",
-			string Asteroid_02Archetype = "5afc18c082beb4a9:AsteroidConfig2",
-			string EnemyArchetype = "5a1c25102e8b8ff5:AlienEnemy",
-			string HiveArchetype = "5a1c2405f45e8ddd:EnemyHive",
-			string UpgradePickupArchetype = "5a08cc0da512394f:Game_Upgrade_Pickup",
-			float Asteroid_01Probability = 20,
-			float Asteroid_02Probability = 20,
-			float EmptySpaceProbability = 45,
-			float HiveProbability = 7,
-			float EnemyProbability = 3,
-			float UpgradePickupProbability = 5,
-			int MaxX = 96,
-			int MaxY = 96,
-			int SpawnCellwidth = 8,
-			int EmptyRange = 10,
-			int SafeRange = 20,
-		},
-		HudCreator = 
-		{
-			string HUDLevel = "5a11bb03ee000161:HUDLevel",
-			string SpaceArchetype = "554cea0f94af6dc4:Space",
-			CogPath PlayerRef = 
-			{
-				string Path = ":/Player",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 3,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 4,
+			uint Id = 3,
 		},
 		Named = 
 		{
@@ -155,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 11.0803318,
+			float Size = 26.9971695,
 		},
 		EditorCameraController = 
 		{
@@ -205,63 +166,6 @@ Level =
 		{
 			bool Active = true,
 			float Volume = 1,
-		},
-		CameraFollow = 
-		{
-			CogPath Target = 
-			{
-				string Path = ":/Player",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 3,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-			Vec2 Min = [-1000, -1000],
-			Vec2 Max = [1000, 1000],
-			float LerpValue = 0.899999976,
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5a9842f78945b818:Ship",
-		LinkId = 
-		{
-			uint Id = 5,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, 0, -0.5],
-			Vec3 Scale = [10, 5, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Ship",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5a1c06ab2df03606:Player",
-		LinkId = 
-		{
-			uint Id = 3,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, 0, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Player",
 		},
 	},
 },
