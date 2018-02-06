@@ -118,3 +118,20 @@ class Ship_Menu_Button_Function : ZilchComponent
         }
     }
 }
+
+class Ship_Menu_Button_Upgrade : ZilchComponent
+{
+    [Property] var Vitals_Upgrade : Boolean = false; 
+    function Initialize(init : CogInitializer)
+    {
+    Zero.Connect(this.Owner, Events.LeftMouseDown, this.OnLeftMouseDown);
+    }
+
+    function OnLeftMouseDown(event : ViewportMouseEvent)
+    {
+        if(this.Vitals_Upgrade == true && this.GameSession.GameVars.PlayerUpgradePoints >= 0)
+        {
+            this.GameSession.GameVars.HasUpgrade_Vitals = true;
+        }
+    }
+}
