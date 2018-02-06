@@ -96,7 +96,11 @@ Level =
 		},
 		Transform = 
 		{
+<<<<<<< HEAD
 			Vec3 Translation = [25.886261, 1.82384706, 70.9990005],
+=======
+			Vec3 Translation = [62.013195, 3.30563974, 70.9990005],
+>>>>>>> bd39619302a67f8d68837a426e99605d7c3cc026
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +120,11 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
+<<<<<<< HEAD
 			Vec3 LookTarget = [25.886261, 1.82384706, 20.9990005],
+=======
+			Vec3 LookTarget = [62.013195, 3.30563974, 20.9990005],
+>>>>>>> bd39619302a67f8d68837a426e99605d7c3cc026
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -476,8 +484,13 @@ Level =
 		},
 		Transform = 
 		{
+<<<<<<< HEAD
 			Vec3 Translation = [30, 6, 0.00100000005],
 			Vec3 Scale = [8, 2, 1],
+=======
+			Vec3 Translation = [56.7247276, 3.38015604, 0],
+			Vec3 Scale = [12, 3, 1],
+>>>>>>> bd39619302a67f8d68837a426e99605d7c3cc026
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -486,7 +499,11 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
+<<<<<<< HEAD
 			Vec4 Color = [0.0360000134, 0.800000012, 0.341599911, 1],
+=======
+			Vec4 Color = [1, 0, 0, 1],
+>>>>>>> bd39619302a67f8d68837a426e99605d7c3cc026
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -503,6 +520,7 @@ Level =
 			bool Active = true,
 			bool CaptureMouse = false,
 		},
+<<<<<<< HEAD
 		Ship_Menu_Button_Visual = 
 		{
 			Vec4 HoverColor = [0.181450009, 0.954999983, 0.235598639, 1],
@@ -533,6 +551,16 @@ Level =
 			bool FireRateI_Upgrade = true,
 			bool MaxSpeed_Upgrade = false,
 		},
+=======
+		Ship_Menu_Repair_Button_Visual = 
+		{
+			Vec4 HoverColor = [0, 1, 0.130000114, 1],
+			Vec4 ClickColor = [1, 1, 1, 1],
+			Vec4 CanClickColor = [0, 0, 0, 1],
+			float HoverScale = 1.20000005,
+			float ClickScale = 1,
+		},
+>>>>>>> bd39619302a67f8d68837a426e99605d7c3cc026
 		Hierarchy = 
 		{
 			Cog = 
@@ -547,7 +575,11 @@ Level =
 				},
 				Transform = 
 				{
+<<<<<<< HEAD
 					Vec3 Translation = [0, 0.25, 21],
+=======
+					Vec3 Translation = [-0.376676083, -0.164808154, 20.9990005],
+>>>>>>> bd39619302a67f8d68837a426e99605d7c3cc026
 					Vec3 Scale = [0.0833333358, 0.333333343, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -562,13 +594,20 @@ Level =
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 					string FontName = "4e7bac697bec55c5:Verdana",
+<<<<<<< HEAD
 					uint FontSize = 75,
 					string Text = "Firerate",
 					TextAlign Align = Center,
+=======
+					uint FontSize = 30,
+					string Text = "50",
+					TextAlign Align = Left,
+>>>>>>> bd39619302a67f8d68837a426e99605d7c3cc026
 					float PixelsPerUnit = 64,
 					bool Smoothing = true,
 				},
 			},
+<<<<<<< HEAD
 		},
 	},
 	Cog = 
@@ -642,6 +681,43 @@ Level =
 		},
 		Hierarchy = 
 		{
+=======
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 11,
+				},
+				Named = 
+				{
+					string Name = "Game_CopperOre_Pickup_Animation",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-0.184101582, -0.233923793, 21],
+					Vec3 Scale = [0.0833333358, 0.333333343, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5a6ca9e2c229190c:Game_CopperOre_Pickup_Animation",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+			},
+>>>>>>> bd39619302a67f8d68837a426e99605d7c3cc026
 			Cog = 
 			{
 				LinkId = 
@@ -650,11 +726,225 @@ Level =
 				},
 				Named = 
 				{
+<<<<<<< HEAD
+=======
+					string Name = "Game_ResourceOre_Pickup_Animation",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-0.434101582, -0.233923793, 21],
+					Vec3 Scale = [0.0833333358, 0.333333343, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5a861677b874ddb8:Game_ResourceOre_Pickup_Animation",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 13,
+				},
+				Named = 
+				{
+					string Name = "Game_AluminiumOre_Pickup_Animation ",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0.315898418, -0.233923793, 21],
+					Vec3 Scale = [0.0833333358, 0.333333343, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5a6ca865e6dcd3d6:Game_AluminiumOre_Pickup_Animation ",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 14,
+				},
+				Named = 
+				{
 					string Name = "SpriteText",
 				},
 				Transform = 
 				{
+					Vec3 Translation = [-0.1421175, -0.164808154, 20.9990005],
+					Vec3 Scale = [0.0833333358, 0.333333343, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				SpriteText = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string FontName = "4e7bac697bec55c5:Verdana",
+					uint FontSize = 30,
+					string Text = "50",
+					TextAlign Align = Left,
+					float PixelsPerUnit = 64,
+					bool Smoothing = true,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 15,
+				},
+				Named = 
+				{
+					string Name = "Game_TitaniumOre_Pickup_Animation",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0.0658984184, -0.233923793, 21],
+					Vec3 Scale = [0.0833333358, 0.333333343, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5a6ca9bdd19de39a:Game_TitaniumOre_Pickup_Animation",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 16,
+				},
+				Named = 
+				{
+					string Name = "SpriteText",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0.111274242, -0.164808154, 20.9990005],
+					Vec3 Scale = [0.0833333358, 0.333333343, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				SpriteText = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string FontName = "4e7bac697bec55c5:Verdana",
+					uint FontSize = 30,
+					string Text = "50",
+					TextAlign Align = Left,
+					float PixelsPerUnit = 64,
+					bool Smoothing = true,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 17,
+				},
+				Named = 
+				{
+					string Name = "SpriteText",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0.361241341, -0.164808154, 20.9990005],
+					Vec3 Scale = [0.0833333358, 0.333333343, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				SpriteText = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string FontName = "4e7bac697bec55c5:Verdana",
+					uint FontSize = 30,
+					string Text = "50",
+					TextAlign Align = Left,
+					float PixelsPerUnit = 64,
+					bool Smoothing = true,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 18,
+				},
+				Named = 
+				{
+>>>>>>> bd39619302a67f8d68837a426e99605d7c3cc026
+					string Name = "SpriteText",
+				},
+				Transform = 
+				{
+<<<<<<< HEAD
 					Vec3 Translation = [0, 0.25, 21],
+=======
+					Vec3 Translation = [0, 0.509696186, 21],
+>>>>>>> bd39619302a67f8d68837a426e99605d7c3cc026
 					Vec3 Scale = [0.0833333358, 0.333333343, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -670,7 +960,11 @@ Level =
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 					string FontName = "4e7bac697bec55c5:Verdana",
 					uint FontSize = 75,
+<<<<<<< HEAD
 					string Text = "Max Speed",
+=======
+					string Text = "Repair Ship",
+>>>>>>> bd39619302a67f8d68837a426e99605d7c3cc026
 					TextAlign Align = Center,
 					float PixelsPerUnit = 64,
 					bool Smoothing = true,
@@ -682,7 +976,11 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
 			uint Id = 13,
+=======
+			uint Id = 19,
+>>>>>>> bd39619302a67f8d68837a426e99605d7c3cc026
 		},
 		Named = 
 		{
@@ -766,7 +1064,11 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
 			uint Id = 14,
+=======
+			uint Id = 20,
+>>>>>>> bd39619302a67f8d68837a426e99605d7c3cc026
 		},
 		Named = 
 		{
@@ -850,7 +1152,11 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
 			uint Id = 15,
+=======
+			uint Id = 21,
+>>>>>>> bd39619302a67f8d68837a426e99605d7c3cc026
 		},
 		Named = 
 		{
@@ -885,7 +1191,11 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
 			uint Id = 16,
+=======
+			uint Id = 22,
+>>>>>>> bd39619302a67f8d68837a426e99605d7c3cc026
 		},
 		Named = 
 		{
@@ -920,7 +1230,11 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
 			uint Id = 17,
+=======
+			uint Id = 23,
+>>>>>>> bd39619302a67f8d68837a426e99605d7c3cc026
 		},
 		Named = 
 		{
@@ -1004,7 +1318,11 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
 			uint Id = 18,
+=======
+			uint Id = 24,
+>>>>>>> bd39619302a67f8d68837a426e99605d7c3cc026
 		},
 		Named = 
 		{
@@ -1088,11 +1406,20 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
 			uint Id = 19,
+=======
+			uint Id = 25,
+>>>>>>> bd39619302a67f8d68837a426e99605d7c3cc026
 		},
 		Named = 
 		{
 			string Name = "background",
+		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
 		},
 		Transform = 
 		{
@@ -1123,7 +1450,11 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
 			uint Id = 20,
+=======
+			uint Id = 26,
+>>>>>>> bd39619302a67f8d68837a426e99605d7c3cc026
 		},
 		Named = 
 		{
@@ -1158,7 +1489,11 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
 			uint Id = 21,
+=======
+			uint Id = 27,
+>>>>>>> bd39619302a67f8d68837a426e99605d7c3cc026
 		},
 		Named = 
 		{
@@ -1242,7 +1577,11 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
 			uint Id = 22,
+=======
+			uint Id = 28,
+>>>>>>> bd39619302a67f8d68837a426e99605d7c3cc026
 		},
 		Named = 
 		{
@@ -1277,6 +1616,7 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
 			uint Id = 23,
 		},
 		Named = 
@@ -1313,6 +1653,9 @@ Level =
 		LinkId = 
 		{
 			uint Id = 24,
+=======
+			uint Id = 29,
+>>>>>>> bd39619302a67f8d68837a426e99605d7c3cc026
 		},
 		Named = 
 		{
@@ -1346,6 +1689,7 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
 			uint Id = 25,
 		},
 		Named = 
@@ -1381,6 +1725,9 @@ Level =
 		LinkId = 
 		{
 			uint Id = 26,
+=======
+			uint Id = 30,
+>>>>>>> bd39619302a67f8d68837a426e99605d7c3cc026
 		},
 		Named = 
 		{
@@ -1414,6 +1761,7 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
 			uint Id = 27,
 		},
 		Named = 
@@ -1449,6 +1797,9 @@ Level =
 		LinkId = 
 		{
 			uint Id = 28,
+=======
+			uint Id = 31,
+>>>>>>> bd39619302a67f8d68837a426e99605d7c3cc026
 		},
 		Named = 
 		{
@@ -1482,7 +1833,11 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
 			uint Id = 29,
+=======
+			uint Id = 32,
+>>>>>>> bd39619302a67f8d68837a426e99605d7c3cc026
 		},
 		Named = 
 		{
@@ -1567,7 +1922,11 @@ Level =
 			{
 				LinkId = 
 				{
+<<<<<<< HEAD
 					uint Id = 30,
+=======
+					uint Id = 33,
+>>>>>>> bd39619302a67f8d68837a426e99605d7c3cc026
 				},
 				Named = 
 				{
@@ -1603,7 +1962,11 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
 			uint Id = 31,
+=======
+			uint Id = 34,
+>>>>>>> bd39619302a67f8d68837a426e99605d7c3cc026
 		},
 		Named = 
 		{
@@ -1688,7 +2051,11 @@ Level =
 			{
 				LinkId = 
 				{
+<<<<<<< HEAD
 					uint Id = 32,
+=======
+					uint Id = 35,
+>>>>>>> bd39619302a67f8d68837a426e99605d7c3cc026
 				},
 				Named = 
 				{
@@ -1724,6 +2091,7 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
 			uint Id = 33,
 		},
 		Named = 
@@ -1846,6 +2214,9 @@ Level =
 		LinkId = 
 		{
 			uint Id = 35,
+=======
+			uint Id = 36,
+>>>>>>> bd39619302a67f8d68837a426e99605d7c3cc026
 		},
 		Named = 
 		{
@@ -1879,7 +2250,11 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
 			uint Id = 36,
+=======
+			uint Id = 37,
+>>>>>>> bd39619302a67f8d68837a426e99605d7c3cc026
 		},
 		Named = 
 		{
@@ -1913,7 +2288,11 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
 			uint Id = 37,
+=======
+			uint Id = 38,
+>>>>>>> bd39619302a67f8d68837a426e99605d7c3cc026
 		},
 		Named = 
 		{
