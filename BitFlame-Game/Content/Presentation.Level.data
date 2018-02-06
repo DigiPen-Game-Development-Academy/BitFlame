@@ -124,7 +124,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [14.7812138, 1.209988, 50],
+			Vec3 Translation = [10.409318, -0.760052264, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -136,7 +136,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 22.1034279,
+			float Size = 22.3130493,
 		},
 		EditorCameraController = 
 		{
@@ -144,7 +144,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [14.7812138, 1.209988, 2.60591236e-07],
+			Vec3 LookTarget = [10.409318, -0.760052264, -4.68733703e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -227,11 +227,65 @@ Level =
 			string Name = "Player",
 		},
 	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a1c06ab2df03606:Player",
+		LinkId = 
+		{
+			uint Id = 5,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0.936956286, 0.030361671, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Player",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a1c06ab2df03606:Player",
+		LinkId = 
+		{
+			uint Id = 6,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [1.81607759, 0.030361671, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Player",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a1c06ab2df03606:Player",
+		LinkId = 
+		{
+			uint Id = 7,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [2.72267199, 0.030361671, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Player",
+		},
+	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 5,
+			uint Id = 8,
 		},
 		Named = 
 		{
@@ -265,7 +319,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 6,
+			uint Id = 9,
 		},
 		Named = 
 		{
@@ -294,6 +348,60 @@ Level =
 			string PaletteName = "5a916f950d549fdf:Asteroid_TileMap_Normal_Palette",
 			float UnitsPerTile = 1,
 			float MeshThickness = 1.20000005,
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a1c2405f45e8ddd:EnemyHive",
+		LinkId = 
+		{
+			uint Id = 10,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [15.0521793, -6.0347805, 0],
+			Vec3 Scale = [6, 6, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy Hive",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a1c2405f45e8ddd:EnemyHive",
+		LinkId = 
+		{
+			uint Id = 11,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [8.79962063, -6.0347805, 0],
+			Vec3 Scale = [6, 6, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy Hive",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a1c25102e8b8ff5:AlienEnemy",
+		LinkId = 
+		{
+			uint Id = 12,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [16.4258099, 0.6959939, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
 		},
 	},
 },
