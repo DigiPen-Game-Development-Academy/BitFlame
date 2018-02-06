@@ -11,11 +11,17 @@ class PlayerDeath : ZilchComponent
 {
     //make sure owner has a transform
     [Dependency] var Transform : Transform;
-
-    //this determines how much resources the player loses on death
-    [Property] var ResourcesToLose : Integer = 0;
+    
+    [Property] var ReturnSpeed : Real = 1.0;
+    
+    [Property] var IronResource : Archetype = null;
+    [Property] var CopperResource : Archetype = null;
+    [Property] var AluminiumResource : Archetype = null;
+    [Property] var TitaniumResource : Archetype = null;
     
     var T : Real = 0.0;
+    
+    var RandGen : Random = Random();
 
     //initilization
     function Initialize(init : CogInitializer)
@@ -32,27 +38,51 @@ class PlayerDeath : ZilchComponent
         //if the player has no health or oxygen then their dead, reset their health and oxygen and teleport them to world origin.
         if (gameVars.PlayerHealth <= 0 || gameVars.PlayerOxygen <= 0)
         {
-            //reset health and oxygen, take a few resources away too
-            gameVars.PlayerHealth = gameVars.StartingPlayerHealth;
-            gameVars.PlayerOxygen = gameVars.StartingPlayerOxygen;
             
-            //player resource clamp
-            if(gameVars.PlayerResources > 0)
+            for(var i = 0.0; i < gameVars.PlayerResources; ++i)
             {
-                gameVars.PlayerResources -= this.ResourcesToLose; 
+                var resource = this.Space.CreateAtPosition(this.IronResource, this.Owner.Transform.Translation);
+                resource.RigidBody.Velocity += Real3(this.RandGen.Range(-1.0, 1.0), this.RandGen.Range(-1.0, 1.0), 0.0);
             }
-           
-            //teleport player to world origin
-            this.Owner.Transform.Translation = Math.Lerp(this.Owner.Transform.Translation, Real3(0.0,0.0,0.0), this.T);
             
-            this.T += event.Dt;
+            for(var i = 0.0; i < gameVars.PlayerAluminium; ++i)
+            {
+                var resource = this.Space.CreateAtPosition(this.AluminiumResource, this.Owner.Transform.Translation);
+                resource.RigidBody.Velocity += Real3(this.RandGen.Range(-1.0, 1.0), this.RandGen.Range(-1.0, 1.0), 0.0);
+            }
+            
+            for(var i = 0.0; i < gameVars.PlayerCopper; ++i)
+            {
+                var resource = this.Space.CreateAtPosition(this.CopperResource, this.Owner.Transform.Translation);
+                resource.RigidBody.Velocity += Real3(this.RandGen.Range(-1.0, 1.0), this.RandGen.Range(-1.0, 1.0), 0.0);
+            }
+            
+            for(var i = 0.0; i < gameVars.PlayerTitanium; ++i)
+            {
+                var resource = this.Space.CreateAtPosition(this.TitaniumResource, this.Owner.Transform.Translation);
+                resource.RigidBody.Velocity += Real3(this.RandGen.Range(-1.0, 1.0), this.RandGen.Range(-1.0, 1.0), 0.0);
+            }
+            
+            gameVars.PlayerResources = 0;
+            gameVars.PlayerTitanium = 0;
+            gameVars.PlayerCopper = 0;
+            gameVars.PlayerAluminium = 0;
+            
+            //teleport player to world origin
+            this.Owner.Transform.Translation = Real3(Math.Lerp(this.Transform.Translation.X, 0.0, this.T), Math.Lerp(this.Transform.Translation.Y, 0.0, this.T), 0.0);
+            
+            this.T += event.Dt * this.ReturnSpeed;
+            
+            if(Math.ApproximatelyEqual(this.Transform.Translation.X, 0.0, 0.5) && Math.ApproximatelyEqual(this.Transform.Translation.Y, 0.0, 0.5))
+            {
+                gameVars.PlayerHealth = gameVars.StartingPlayerHealth;
+                gameVars.PlayerOxygen = gameVars.StartingPlayerOxygen;
+                
+                this.Owner.RigidBody.Velocity = Real3(0.0,0.0,0.0);
+            }
         }
         
         //kill cheat <For Testing ONLY>
-        if(Zero.Keyboard.KeyIsPressed(Keys.K))
-        {
-            gameVars.PlayerHealth = 0;
-            Console.WriteLine("You Died");
-        }
+        
     }
 }
