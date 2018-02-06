@@ -157,10 +157,14 @@ Level =
 			float NearPlane = 0.5,
 			float FarPlane = 500,
 <<<<<<< HEAD
+<<<<<<< HEAD
 			float Size = 14.9568863,
 =======
 			float Size = 10.0259066,
 >>>>>>> 9fb767c03c530228d994cb5256194f033f855a92
+=======
+			float Size = 8.20851803,
+>>>>>>> parent of 9bb3023... editted scripts and added a ship repair button
 		},
 		EditorCameraController = 
 		{
@@ -565,24 +569,6 @@ Level =
 					uint StartFrame = 0,
 				},
 			},
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5a86165eb2745571:Game_ResourceOre_Pickup",
-		LinkId = 
-		{
-			uint Id = 13,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [21.0416889, 0.633085012, 24.2286224],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Game_ResourceOre_Pickup",
 		},
 	},
 },

@@ -96,7 +96,11 @@ Level =
 		},
 		Transform = 
 		{
+<<<<<<< HEAD
 			Vec3 Translation = [17.5750732, 2.62030864, 50],
+=======
+			Vec3 Translation = [0.441419601, 18.7814903, 70.9990005],
+>>>>>>> parent of 9bb3023... editted scripts and added a ship repair button
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -108,7 +112,11 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
+<<<<<<< HEAD
 			float Size = 14.9569578,
+=======
+			float Size = 30.1195869,
+>>>>>>> parent of 9bb3023... editted scripts and added a ship repair button
 		},
 		EditorCameraController = 
 		{
@@ -116,7 +124,11 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
+<<<<<<< HEAD
 			Vec3 LookTarget = [17.5750732, 2.62030864, 7.68230905e-07],
+=======
+			Vec3 LookTarget = [0.441419601, 18.7814903, 20.9990005],
+>>>>>>> parent of 9bb3023... editted scripts and added a ship repair button
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -324,22 +336,7 @@ Level =
 			},
 			Vec3 NewCameraPosition = [30, 0, 0],
 			float MoveTime = 0.200000003,
-			CogPath Player = 
-			{
-				string Path = "",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 4294967293,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-			bool Reload = false,
+			string LevelToReload = "",
 			bool Quit = false,
 		},
 	},
@@ -408,22 +405,7 @@ Level =
 			},
 			Vec3 NewCameraPosition = [0, 30, 0],
 			float MoveTime = 0.200000003,
-			CogPath Player = 
-			{
-				string Path = "",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 4294967293,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-			bool Reload = false,
+			string LevelToReload = "",
 			bool Quit = false,
 		},
 		Hierarchy = 
@@ -476,6 +458,7 @@ Level =
 		},
 		Transform = 
 		{
+<<<<<<< HEAD
 			Vec3 Translation = [24, 3, 0],
 			Vec3 Scale = [8, 2, 1],
 			Quat Rotation = [0, 0, 0, 1],
@@ -564,6 +547,8 @@ Level =
 		},
 		Transform = 
 		{
+=======
+>>>>>>> parent of 9bb3023... editted scripts and added a ship repair button
 			Vec3 Translation = [55.5, 8.25, 1],
 			Vec3 Scale = [4, 1.5, 1],
 			Quat Rotation = [0, 0, 0, 1],
@@ -617,22 +602,7 @@ Level =
 			},
 			Vec3 NewCameraPosition = [30, 0, 0],
 			float MoveTime = 0.200000003,
-			CogPath Player = 
-			{
-				string Path = "",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 4294967293,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-			bool Reload = false,
+			string LevelToReload = "",
 			bool Quit = false,
 		},
 	},
@@ -640,7 +610,11 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
 			uint Id = 12,
+=======
+			uint Id = 10,
+>>>>>>> parent of 9bb3023... editted scripts and added a ship repair button
 		},
 		Named = 
 		{
@@ -701,22 +675,7 @@ Level =
 			},
 			Vec3 NewCameraPosition = [60, 0, 0],
 			float MoveTime = 0.200000003,
-			CogPath Player = 
-			{
-				string Path = "",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 4294967293,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-			bool Reload = false,
+			string LevelToReload = "",
 			bool Quit = false,
 		},
 	},
@@ -724,7 +683,11 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
 			uint Id = 13,
+=======
+			uint Id = 11,
+>>>>>>> parent of 9bb3023... editted scripts and added a ship repair button
 		},
 		Named = 
 		{
@@ -759,7 +722,11 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
 			uint Id = 14,
+=======
+			uint Id = 12,
+>>>>>>> parent of 9bb3023... editted scripts and added a ship repair button
 		},
 		Named = 
 		{
@@ -794,7 +761,11 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
 			uint Id = 15,
+=======
+			uint Id = 13,
+>>>>>>> parent of 9bb3023... editted scripts and added a ship repair button
 		},
 		Named = 
 		{
@@ -855,22 +826,7 @@ Level =
 			},
 			Vec3 NewCameraPosition = [0, 0, 0],
 			float MoveTime = 0.200000003,
-			CogPath Player = 
-			{
-				string Path = "",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 4294967293,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-			bool Reload = false,
+			string LevelToReload = "",
 			bool Quit = false,
 		},
 	},
@@ -878,7 +834,11 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
 			uint Id = 16,
+=======
+			uint Id = 14,
+>>>>>>> parent of 9bb3023... editted scripts and added a ship repair button
 		},
 		Named = 
 		{
@@ -939,22 +899,7 @@ Level =
 			},
 			Vec3 NewCameraPosition = [60, 0, 0],
 			float MoveTime = 0.200000003,
-			CogPath Player = 
-			{
-				string Path = "",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 4294967293,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-			bool Reload = false,
+			string LevelToReload = "",
 			bool Quit = false,
 		},
 	},
@@ -962,7 +907,11 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
 			uint Id = 17,
+=======
+			uint Id = 15,
+>>>>>>> parent of 9bb3023... editted scripts and added a ship repair button
 		},
 		Named = 
 		{
@@ -997,7 +946,11 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
 			uint Id = 18,
+=======
+			uint Id = 16,
+>>>>>>> parent of 9bb3023... editted scripts and added a ship repair button
 		},
 		Named = 
 		{
@@ -1032,7 +985,11 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
 			uint Id = 19,
+=======
+			uint Id = 17,
+>>>>>>> parent of 9bb3023... editted scripts and added a ship repair button
 		},
 		Named = 
 		{
@@ -1093,22 +1050,7 @@ Level =
 			},
 			Vec3 NewCameraPosition = [0, 0, 0],
 			float MoveTime = 0.200000003,
-			CogPath Player = 
-			{
-				string Path = "",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 4294967293,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-			bool Reload = false,
+			string LevelToReload = "",
 			bool Quit = false,
 		},
 	},
@@ -1116,7 +1058,11 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
 			uint Id = 20,
+=======
+			uint Id = 18,
+>>>>>>> parent of 9bb3023... editted scripts and added a ship repair button
 		},
 		Named = 
 		{
@@ -1151,7 +1097,11 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
 			uint Id = 21,
+=======
+			uint Id = 19,
+>>>>>>> parent of 9bb3023... editted scripts and added a ship repair button
 		},
 		Named = 
 		{
@@ -1185,7 +1135,11 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
 			uint Id = 22,
+=======
+			uint Id = 20,
+>>>>>>> parent of 9bb3023... editted scripts and added a ship repair button
 		},
 		Named = 
 		{
@@ -1219,7 +1173,11 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
 			uint Id = 23,
+=======
+			uint Id = 21,
+>>>>>>> parent of 9bb3023... editted scripts and added a ship repair button
 		},
 		Named = 
 		{
@@ -1253,7 +1211,11 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
 			uint Id = 24,
+=======
+			uint Id = 22,
+>>>>>>> parent of 9bb3023... editted scripts and added a ship repair button
 		},
 		Named = 
 		{
@@ -1314,22 +1276,7 @@ Level =
 			},
 			Vec3 NewCameraPosition = [0, 0, 0],
 			float MoveTime = 0.200000003,
-			CogPath Player = 
-			{
-				string Path = "",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 4294967293,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-			bool Reload = false,
+			string LevelToReload = "5a1c0e19b47d574e:WorldJakobsLevel",
 			bool Quit = false,
 		},
 		Hierarchy = 
@@ -1338,7 +1285,11 @@ Level =
 			{
 				LinkId = 
 				{
+<<<<<<< HEAD
 					uint Id = 25,
+=======
+					uint Id = 23,
+>>>>>>> parent of 9bb3023... editted scripts and added a ship repair button
 				},
 				Named = 
 				{
@@ -1374,7 +1325,11 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
 			uint Id = 26,
+=======
+			uint Id = 24,
+>>>>>>> parent of 9bb3023... editted scripts and added a ship repair button
 		},
 		Named = 
 		{
@@ -1435,22 +1390,7 @@ Level =
 			},
 			Vec3 NewCameraPosition = [0, 0, 0],
 			float MoveTime = 0.200000003,
-			CogPath Player = 
-			{
-				string Path = "",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 4294967293,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-			bool Reload = false,
+			string LevelToReload = "",
 			bool Quit = false,
 		},
 		Hierarchy = 
@@ -1459,7 +1399,11 @@ Level =
 			{
 				LinkId = 
 				{
+<<<<<<< HEAD
 					uint Id = 27,
+=======
+					uint Id = 25,
+>>>>>>> parent of 9bb3023... editted scripts and added a ship repair button
 				},
 				Named = 
 				{
@@ -1495,7 +1439,11 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
 			uint Id = 28,
+=======
+			uint Id = 26,
+>>>>>>> parent of 9bb3023... editted scripts and added a ship repair button
 		},
 		Named = 
 		{
@@ -1529,7 +1477,11 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
 			uint Id = 29,
+=======
+			uint Id = 27,
+>>>>>>> parent of 9bb3023... editted scripts and added a ship repair button
 		},
 		Named = 
 		{
@@ -1563,7 +1515,11 @@ Level =
 	{
 		LinkId = 
 		{
+<<<<<<< HEAD
 			uint Id = 30,
+=======
+			uint Id = 28,
+>>>>>>> parent of 9bb3023... editted scripts and added a ship repair button
 		},
 		Named = 
 		{
