@@ -1,0 +1,43 @@
+class Player_Upgrade_Script : ZilchComponent
+{
+    /***********************
+Player_Upgrade_Script.z
+by: Luke Taranowski
+Contributers: Null
+Date: 2/1/18
+Brief: Constantly checks if an upgrade variable is true in GameVars then runs some code
+***********************/
+
+    // Makes sure we only run the if statement once
+    var UpgradeOnlyOnce : Real = 1;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        // Checks if variable in GameVars is true
+        if(this.GameSession.GameVars.HasUpgrade_FirerateI == true && this.UpgradeOnlyOnce >= 1)
+        {
+            // INSERT UPGRADE CODE HERE 
+            Console.WriteLine("This means upgrade worked");
+            // INSERT UPGRADE CODE HERE
+            
+            // Subracts from variable so that the if statement above only runs once
+            this.UpgradeOnlyOnce -= 1;
+        }
+        
+        // Checks if variable in GameVars is true
+        if(this.GameSession.GameVars.HasUpgrade_Maxspeed == true && this.UpgradeOnlyOnce >= 1)
+        {
+            // INSERT UPGRADE CODE HERE 
+            Console.WriteLine("This means upgrade worked");
+            // INSERT UPGRADE CODE HERE
+            
+            // Subracts from variable so that the if statement above only runs once
+            this.UpgradeOnlyOnce -= 1;
+        }
+    }
+}
