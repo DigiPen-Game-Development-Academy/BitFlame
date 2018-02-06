@@ -59,7 +59,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = false,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -76,7 +76,7 @@ Cog =
 	Health = 
 	{
 		float Health = 2,
-		string ArchetypetoSpawnOnDeath = "5a86165eb2745571:Game_ResourceOre_Pickup",
+		string ArchetypetoSpawnOnDeath = "5a9159819b85330d:Game_Health_Pickup",
 	},
 	DamageOnCollide = 
 	{
