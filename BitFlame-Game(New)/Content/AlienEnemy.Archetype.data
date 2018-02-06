@@ -76,7 +76,7 @@ Cog =
 	Health = 
 	{
 		float Health = 2,
-		string ArchetypetoSpawnOnDeath = "5a9159819b85330d:Game_Health_Pickup",
+		string ArchetypetoSpawnOnDeath = "5a70715bb5c81bfe:Game_OxygenOre_Pickup",
 	},
 	DamageOnCollide = 
 	{

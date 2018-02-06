@@ -1,4 +1,4 @@
-enum DisplayType{Iron, Copper, Aluminium, Titanium}
+enum DisplayType{Iron, Copper, Aluminium, Titanium, UpgradePoints}
 
 class SetXToVariable : ZilchComponent
 {
@@ -32,5 +32,9 @@ class SetXToVariable : ZilchComponent
             this.Owner.SpriteText.Text = "`this.GameSession.GameVars.PlayerTitanium`";
         }
         
+        if(this.Type == DisplayType.UpgradePoints && this.Owner.SpriteText != null)
+        {
+            this.Owner.SpriteText.Text = "`this.GameSession.GameVars.PlayerUpgradePoints`";
+        }
     }
 }
