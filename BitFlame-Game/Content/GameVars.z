@@ -14,7 +14,7 @@ class GameVars : ZilchComponent
     [Property] var StartingCopper : Integer = 0;
     [Property] var StartingPlayerTitanium : Integer = 0;
     [Property] var StartingPlayerAluminium : Integer = 0;
-    [Property] var StartingPlayerOxygen : Integer = 0; 
+    [Property] var StartingPlayerOxygen : Real = 0; 
     [Property] var StartingUpgradePoints : Integer = 0; 
     
     //upgrade flags
@@ -44,7 +44,7 @@ class GameVars : ZilchComponent
     var PlayerCopper : Integer;
     var PlayerTitanium : Integer;
     var PlayerAluminium : Integer;
-    var PlayerOxygen: Integer;
+    var PlayerOxygen: Real;
     var PlayerUpgradePoints : Integer;
     
     var PlayerActive : Boolean = false;

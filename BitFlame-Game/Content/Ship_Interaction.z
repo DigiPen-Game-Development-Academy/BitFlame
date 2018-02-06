@@ -42,6 +42,8 @@ class Ship_Interaction : ZilchComponent
         if(player.Player_Movement_Script != null)
         {
             //put hover feed back here
+            this.GameSession.GameVars.PlayerOxygen = this.GameSession.GameVars.StartingPlayerOxygen;
+            
             
             if(this.HUDSpace != null && Zero.Keyboard.KeyIsPressed(this.ShipAccessKey))
             {

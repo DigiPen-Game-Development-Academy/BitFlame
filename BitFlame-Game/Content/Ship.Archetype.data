@@ -6,16 +6,16 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "Game_OxygenOre_Pickup",
+		string Name = "Ship",
 	},
 	Archetyped = 
 	{
-		string Name = "5a70715bb5c81bfe:Game_OxygenOre_Pickup",
+		string Name = "5a9842f78945b818:Ship",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-10, 2, 0],
-		Vec3 Scale = [1, 1, 1],
+		Vec3 Translation = [0, 0, -1],
+		Vec3 Scale = [10, 5, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -28,7 +28,7 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5a70768ba7400ede:Game_OxygenOre_Pickup_Animation",
+		string SpriteSource = "5275aa4d802dd6dc:Square",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -38,7 +38,7 @@ Cog =
 	},
 	RigidBody = 
 	{
-		bool Static = false,
+		bool Static = true,
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = false,
@@ -48,7 +48,7 @@ Cog =
 		Vec3 Velocity = [0, 0, 0],
 		Vec3 AngularVelocity = [0, 0, 0],
 	},
-	SphereCollider = 
+	BoxCollider = 
 	{
 		bool Ghost = true,
 		bool SendsMessages = true,
@@ -56,12 +56,27 @@ Cog =
 		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 		Vec3 Offset = [0, 0, 0],
-		float Radius = 0.375,
+		Vec3 Size = [0.5, 0.5, 0.5],
 	},
-	OxygenPickup = 
+	Ship_Interaction = 
 	{
-		int PickupValue = 25,
-		float PickupRange = 3,
-		float PickupSpeed = 10,
+		Enum ShipAccessKey = E,
+		string HUDLevel = "5a917ce258f29948:ShipMenuLevel",
+		string SpaceArchetype = "554cea0f94af6dc4:Space",
+		CogPath PlayerRef = 
+		{
+			string Path = ":/Player",
+			bool ErrorOnResolveToNull = false,
+			bool ErrorOnPathCantCompute = false,
+			bool ErrorOnDirectLinkFail = false,
+			bool UpdateCogOnPathChange = true,
+			bool UpdatePathOnCogChange = true,
+			bool UpdateCogOnInitialize = true,
+			bool ResolvedNullErrorOccurred = false,
+			uint ResolvedCog = 2,
+			CogPathPreference PathPreference0 = CogRelative,
+			CogPathPreference PathPreference1 = SpaceRelative,
+			CogPathPreference PathPreference2 = Absolute,
+		},
 	},
 },

@@ -110,9 +110,6 @@ Cog =
 	FlipXWhenMouseGreaterThan = 
 	{
 	},
-	Level_WorldRegeneration = 
-	{
-	},
 	Hierarchy = 
 	{
 		Cog = 
