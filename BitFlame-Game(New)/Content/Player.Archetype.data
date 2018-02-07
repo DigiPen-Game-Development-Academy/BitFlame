@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 1],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -114,11 +114,7 @@ Cog =
 	FlipXWhenMouseGreaterThan = 
 	{
 	},
-<<<<<<< HEAD
-	Player_Upgrade_Script = 
-=======
 	CheatSystem = 
->>>>>>> bd39619302a67f8d68837a426e99605d7c3cc026
 	{
 	},
 	Hierarchy = 

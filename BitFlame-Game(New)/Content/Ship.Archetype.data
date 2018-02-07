@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-6, 0, 0],
+		Vec3 Translation = [0, 0, -0.5],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -78,5 +78,6 @@ Cog =
 			CogPathPreference PathPreference1 = SpaceRelative,
 			CogPathPreference PathPreference2 = Absolute,
 		},
+		float OxygenRechargeTime = 0.5,
 	},
 },

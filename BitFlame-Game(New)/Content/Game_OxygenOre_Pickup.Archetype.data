@@ -60,7 +60,7 @@ Cog =
 	},
 	OxygenPickup = 
 	{
-		int PickupValue = 5,
+		int PickupValue = 2,
 		float PickupRange = 3,
 		float PickupSpeed = 10,
 	},

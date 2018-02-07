@@ -54,6 +54,8 @@ class GameVars : ZilchComponent
     
     var PlayerActive : Boolean = false;
     
+    var PlayerLosingOxygen : Boolean = true;
+    
     //initialization function, runs when the owner object is created
     function Initialize(init : CogInitializer)
     {

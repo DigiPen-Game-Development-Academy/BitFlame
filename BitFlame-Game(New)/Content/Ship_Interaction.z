@@ -27,8 +27,14 @@ class Ship_Interaction : ZilchComponent
     
     var HUDCreated : Boolean = false; 
     
+    var TimeKeeper : Real = 0;
+    
+    [Property] var OxygenRechargeRate : Real = 0.05;
+    
     function Initialize(init : CogInitializer)
     {
+        //init our timer var
+        this.TimeKeeper = this.Space.GameTimer.Timer;
         
         Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
         Zero.Connect(this.Owner, Events.CollisionPersisted, this.OnCollisionPersisted);
@@ -42,8 +48,19 @@ class Ship_Interaction : ZilchComponent
         if(player.Player_Movement_Script != null)
         {
             //put hover feed back here
-            this.GameSession.GameVars.PlayerOxygen = this.GameSession.GameVars.StartingPlayerOxygen;
             
+            //if the OxygenRechargeTime value is smaller than the timer passed since last reset
+            if(this.Space.GameTimer.Timer - this.TimeKeeper >= 0.01)
+            {
+                //debug
+                //Console.WriteLine("Beep");
+                //reset timer
+                this.TimeKeeper = this.Space.GameTimer.Timer;
+                //add one oxygen to the gamevar
+                this.GameSession.GameVars.PlayerOxygen += this.OxygenRechargeRate;
+            }
+            
+            this.GameSession.GameVars.PlayerOxygen = Math.Clamp(this.GameSession.GameVars.PlayerOxygen, 0, 10);
             
             if(this.HUDSpace != null && Zero.Keyboard.KeyIsPressed(this.ShipAccessKey))
             {
@@ -79,13 +96,10 @@ class Ship_Interaction : ZilchComponent
         var player = event.OtherObject;
            
         if(player.Player_Movement_Script != null)
-        {
-            if( player.Player_Movement_Script != null)
-            {
-                //put hover feed back here
-                
-                
-            }
+        {      
+            //put hover feed back here
+            
+            this.GameSession.GameVars.PlayerLosingOxygen = false;
         }
     }
     
@@ -95,15 +109,17 @@ class Ship_Interaction : ZilchComponent
         
         if(player.Player_Movement_Script != null)
         {
-            if( player.Player_Movement_Script != null)
-            {
-                //end hover feed back here       
-            }
+            //end hover feed back here       
+            
+            this.GameSession.GameVars.PlayerLosingOxygen = true;
             
             if(this.HUDSpace != null)
             {
                 var arm = player.FindChildByName("Arm");
-                arm.PlayerShooting.CanShoot = true;
+                if(arm != null)
+                {
+                    arm.PlayerShooting.CanShoot = true;
+                }
                 this.HUDSpace.Destroy();
             } 
         }

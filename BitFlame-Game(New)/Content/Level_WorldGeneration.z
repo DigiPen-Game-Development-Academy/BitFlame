@@ -55,7 +55,7 @@ class Level_WorldGeneration : ZilchComponent
         if(this.GameSession.GameVars.WorldRegen)
         {
             this.GameSession.GameVars.WorldRegen = false;
-             this.Space.ReloadLevel();
+            this.Space.ReloadLevel();
         }
     }
     
