@@ -156,7 +156,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 7.42737484,
+			float Size = 12.2456656,
 		},
 		EditorCameraController = 
 		{
@@ -392,7 +392,7 @@ Level =
 				},
 				SetXToVariable = 
 				{
-					Enum Type = Iron,
+					Enum Type = Aluminium,
 				},
 				SpriteText = 
 				{
@@ -485,7 +485,7 @@ Level =
 				},
 				SetXToVariable = 
 				{
-					Enum Type = Aluminium,
+					Enum Type = Iron,
 				},
 			},
 			Cog = 
