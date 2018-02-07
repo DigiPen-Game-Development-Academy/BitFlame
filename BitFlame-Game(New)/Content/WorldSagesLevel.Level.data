@@ -109,7 +109,7 @@ Level =
 			string Asteroid_02Archetype = "5afc18c082beb4a9:AsteroidConfig2",
 			string EnemyArchetype = "5a1c25102e8b8ff5:AlienEnemy",
 			string HiveArchetype = "5a1c2405f45e8ddd:EnemyHive",
-			string UpgradePickupArchetype = "",
+			string UpgradePickupArchetype = "5a08cc0da512394f:Game_Upgrade_Pickup",
 			float Asteroid_01Probability = 7.5,
 			float Asteroid_02Probability = 7.5,
 			float EmptySpaceProbability = 75.5,
@@ -135,7 +135,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.75380522, -0.366069704, 50],
+			Vec3 Translation = [-0.75380522, 1.00966001, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -147,7 +147,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 12.2456627,
+			float Size = 30.1194572,
 		},
 		EditorCameraController = 
 		{
@@ -155,7 +155,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.75380522, -0.366069704, -3.57911034e-07],
+			Vec3 LookTarget = [-0.75380522, 1.00966001, -3.57911034e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
