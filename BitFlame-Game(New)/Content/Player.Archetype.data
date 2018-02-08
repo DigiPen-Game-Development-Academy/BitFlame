@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [20.2155132, 17.3806477, 20.9990005],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -115,6 +115,9 @@ Cog =
 	{
 	},
 	CheatSystem = 
+	{
+	},
+	Player_Upgrade_Script = 
 	{
 	},
 	Hierarchy = 

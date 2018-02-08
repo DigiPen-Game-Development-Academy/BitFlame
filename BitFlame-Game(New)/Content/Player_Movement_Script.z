@@ -33,6 +33,20 @@ class Player_Movement_Script : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        if(this.GameSession.GameVars.HasUpgrade_Maxspeed == true)
+        {
+            // Insert upgrade code here
+            this.MaxPlayerSpeeds = Real2(50, 50);
+           
+            this.GameSession.GameVars.HasUpgrade_Maxspeed = false;
+        } 
+        if(this.GameSession.GameVars.HasUpgrade_Acceleration == true)
+            {
+            this.Speed += 5;
+            
+            this.GameSession.GameVars.HasUpgrade_Acceleration = false;
+            }
+        
         var newVelocity : Real3 = this.RigidBody.Velocity;
         
         var particle =  this.MovementParticleSystem.Cog;
