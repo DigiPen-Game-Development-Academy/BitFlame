@@ -1,0 +1,18 @@
+class Bullet_Trailing_Script : ZilchComponent
+{
+    /*************************************
+Filename: Bullet_Trailing_Script.z
+Author: Luke Taranowski
+Contributors: NULL
+Last modified: 2/1/18
+Brief: This script will spawn bullet sprites behind the bullet object
+******************************************/
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+    }
+}
