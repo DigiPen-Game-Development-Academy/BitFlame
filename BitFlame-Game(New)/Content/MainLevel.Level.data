@@ -130,9 +130,6 @@ Level =
 				CogPathPreference PathPreference2 = Absolute,
 			},
 		},
-		Level_ChangeLevel = 
-		{
-		},
 	},
 	Cog = 
 	{
