@@ -13,7 +13,9 @@ Destroys after a certain amount of time
 
 class TimedDestroy : ZilchComponent
 {
-    [Property] var Lifetime : Real = 10.0;
+    [Property] var Lifetime : Real = 0.5;
+    
+    [Property] var Fade : Boolean = false;
     
     var TimeAlive : Real = 0.0;
     
@@ -24,6 +26,11 @@ class TimedDestroy : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        if(this.Fade)
+        {
+            this.Owner.Sprite.Color += Real4(0.0,0.0,0.0,-1.0) * event.Dt;
+        }
+        
         if(this.TimeAlive >= this.Lifetime)
         {
             this.Owner.Destroy();

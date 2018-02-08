@@ -135,7 +135,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.75380522, 1.00966001, 50],
+			Vec3 Translation = [0.669812381, -3.52185726, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -147,7 +147,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 30.1194572,
+			float Size = 13.5335579,
 		},
 		EditorCameraController = 
 		{
@@ -155,7 +155,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.75380522, 1.00966001, -3.57911034e-07],
+			Vec3 LookTarget = [0.669812381, -3.52185726, -3.23651022e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -575,12 +575,12 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Sprite",
+			string Name = "Ship",
 		},
 		Transform = 
 		{
 			Vec3 Translation = [0, 0, -0.100000001],
-			Vec3 Scale = [5, 4, 1],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -593,7 +593,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
+			string SpriteSource = "5a018714cc9e515a:Ship_Sprite",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -609,7 +609,7 @@ Level =
 			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 			Vec3 Offset = [0, 0, 0],
-			Vec3 Size = [0.5, 0.5, 0.5],
+			Vec3 Size = [4.5, 2, 0.5],
 		},
 		Ship_Interaction = 
 		{
@@ -631,6 +631,7 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
+			float OxygenRechargeRate = 0.0500000007,
 		},
 	},
 },

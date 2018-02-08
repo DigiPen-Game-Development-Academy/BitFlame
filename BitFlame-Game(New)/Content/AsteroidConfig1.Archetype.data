@@ -8,14 +8,56 @@ Cog =
 	{
 		string Name = "AsteroidConfig1",
 	},
+	Archetyped = 
+	{
+		string Name = "5afc186063c49e3c:AsteroidConfig1",
+	},
 	Transform = 
 	{
-		Vec3 Translation = [8, 0, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
-	AsteroidGeneration = 
+	Sprite = 
 	{
+		bool Visible = false,
+		bool VisibilityCulling = true,
+		bool VisibilityEvents = true,
+		bool CastShadows = false,
+		Vec4 Color = [1, 1, 1, 1],
+		BlendMode BlendMode = Alpha,
+		SpriteGeometryMode GeometryMode = ZPlane,
+		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		string SpriteSource = "4e07948c35993095:DefaultSprite",
+		bool RenderMask = false,
+		bool FlipX = false,
+		bool FlipY = false,
+		bool AnimationActive = true,
+		float AnimationSpeed = 1,
+		uint StartFrame = 0,
+	},
+	Voxel = 
+	{
+		string Standalone = "",
+		string Topleft = "",
+		string TopCenter = "",
+		string TopRight = "",
+		string MiddleLeft = "",
+		string MiddleCenter = "",
+		string MiddleRight = "",
+		string BottomLeft = "",
+		string BottomCenter = "",
+		string BottomRight = "",
+		string OuterTopLeft = "",
+		string InnerTopLeft = "",
+		string OuterTopRight = "",
+		string InnerTopRight = "",
+		string OuterBottomLeft = "",
+		string InnerBottomLeft = "",
+		string OuterBottomRight = "",
+		string InnerBottomRight = "",
+		string Invalid = "",
+		string AltMiddleCenter = "",
 		string AsteroidChunk = "5a1180f76f978cdf:AssteroidChunk",
 	},
 	Hierarchy = 

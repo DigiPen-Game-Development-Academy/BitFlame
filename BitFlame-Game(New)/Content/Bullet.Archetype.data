@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [1.67321372, -3.83810401, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -42,7 +42,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = false,
-		bool Mode2D = false,
+		bool Mode2D = true,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -80,10 +80,6 @@ Cog =
 		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 		Vec3 Offset = [0, 0, 0],
 		Vec3 Size = [0.5, 0.5, 0.5],
-	},
-	TimedDestroy = 
-	{
-		float Lifetime = 5,
 	},
 	DamageOnHit = 
 	{
@@ -151,7 +147,8 @@ Cog =
 		float Dampening = 0,
 		Vec3 Twist = [0, 0, 0],
 	},
-	Laser_Trailing_Script = 
+	Bullet_Trailing_Script = 
 	{
+		float SpawnSpeed = 0.200000003,
 	},
 },
