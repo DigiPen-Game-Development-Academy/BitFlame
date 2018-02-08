@@ -115,8 +115,11 @@ class Ship_Menu_Button_Repair_Visual : ZilchComponent
 
         function OnLeftMouseUp(event : ViewportMouseEvent)
         {
+            Console.WriteLine("up");
+            
             if(this.GameSession.GameVars.PlayerResources >= this.IronCost && this.GameSession.GameVars.PlayerCopper >= this.CopperCost && this.GameSession.GameVars.PlayerTitanium >= this.TitaniumCost && this.GameSession.GameVars.PlayerAluminium >= this.AluminiumCost)
             { 
+                Console.WriteLine("func");
                 this.GameSession.GameVars.PlayerResources -= this.IronCost;
                 this.GameSession.GameVars.PlayerCopper -= this.CopperCost;
                 this.GameSession.GameVars.PlayerTitanium -= this.TitaniumCost;
