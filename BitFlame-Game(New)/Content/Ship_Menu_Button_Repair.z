@@ -126,6 +126,7 @@ class Ship_Menu_Button_Repair_Visual : ZilchComponent
                 this.GameSession.GameVars.PlayerAluminium -= this.AluminiumCost;
                 
                 this.GameSession.GameVars.ShipRepaired = true;
+                this.GameSession.GameVars.NewLevel = Level.WinLevel;
             }
         }
 }
