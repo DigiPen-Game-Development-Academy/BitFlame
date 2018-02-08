@@ -24,8 +24,8 @@ class GameVars : ZilchComponent
     [Property] var HasUpgrade_FirerateI : Boolean = false;
     [Property] var HasUpgrade_FirerateII : Boolean = false;
     [Property] var HasUpgrade_Doubleshot : Boolean = false;
-    [Property] var HasUpgrade_PenatrationI : Boolean = false;
-    [Property] var HasUpgrade_PenatrationII : Boolean = false;
+    [Property] var HasUpgrade_PenitrationI : Boolean = false;
+    [Property] var HasUpgrade_PenitrationII : Boolean = false;
     [Property] var HasUpgrade_KnockbackI : Boolean = false;
     [Property] var HasUpgrade_KnockbackII : Boolean = false;
     [Property] var HasUpgrade_Maxspeed : Boolean = false;

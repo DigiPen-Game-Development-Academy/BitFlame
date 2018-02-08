@@ -7,7 +7,6 @@ Contributers: Null
 Date: 2/1/18
 Brief: Constantly checks if an upgrade variable is true in GameVars then runs some code
 ***********************/
-
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -15,12 +14,6 @@ Brief: Constantly checks if an upgrade variable is true in GameVars then runs so
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        // MIGHT NOT NEED THIS SCRIPT...  
-        if(this.GameSession.GameVars.HasUpgrade_Vitals == true)
-        {
-            this.GameSession.GameVars.StartingPlayerHealth += 10;
-            
-            this.GameSession.GameVars.HasUpgrade_Vitals = false;
-        }
+        // MIGHT NOT NEED THIS SCRIPT...
     }
 }

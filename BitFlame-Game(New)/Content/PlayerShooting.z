@@ -33,10 +33,8 @@ class PlayerShooting : ZilchComponent
     {
         if(this.GameSession.GameVars.HasUpgrade_FirerateI == true)
         {
-            // Insert upgrade code here
-           this.FireRate -= 0.25;
-           
-           this.GameSession.GameVars.HasUpgrade_FirerateI = false;
+            this.FireRate -= 0.25;
+            this.GameSession.GameVars.HasUpgrade_FirerateI = false;
         }
         var screenPos = Zero.Mouse.ScreenPosition;
         var mousePos = this.LevelSettings.CameraViewport.ScreenToWorldZPlane(screenPos, 0.0);
