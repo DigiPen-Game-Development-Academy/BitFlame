@@ -1,0 +1,51 @@
+class CometMaker : ZilchComponent
+{
+    var Timer : Real = 0.0;
+    
+    [Property] var SpawnRate : Real = 0.0;
+    
+    [Property] var Comet : Archetype = null;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(this.Timer >= this.SpawnRate)
+        {
+            this.Timer = 0.0;
+            
+            var player = this.Space.FindObjectByName("Player");
+            
+            var position = player.Transform.Translation;
+            
+            if(Random().CoinFlip())
+            {
+                position.X += 10 + Random().Range(10, 15);
+            }
+            else
+            {
+                position.X -= 10 + Random().Range(10, 15);
+            }
+            
+            if(Random().CoinFlip())
+            {
+                position.Y += 5 + Random().Range(5, 10);
+            }
+            else
+            {
+                position.Y -= 5 + Random().Range(5, 10);
+            }
+            
+            var comet = this.Space.CreateAtPosition(this.Comet, position);
+            
+            comet.RigidBody.Velocity += player.Transform.Translation - comet.Transform.Translation * event.Dt * Random().Range(5, 10);
+        }
+        else
+        {
+            this.Timer += event.Dt;
+        }
+    }
+}

@@ -1,0 +1,94 @@
+/*************************************
+Filename: PlayerDeath.z
+Author: Jakob McFarland
+Contributors: NULL
+Last modified: 2/13/18
+Brief: This Component will cause the owner to teleport back to origin when their health or oxygen = 0
+******************************************/
+    
+
+class PlayerDeath : ZilchComponent
+{
+    //make sure owner has a transform
+    [Dependency] var Transform : Transform;
+    
+    [Property] var ReturnSpeed : Real = 1.0;
+    
+    [Property] var IronResource : Archetype = null;
+    [Property] var CopperResource : Archetype = null;
+    [Property] var AluminiumResource : Archetype = null;
+    [Property] var TitaniumResource : Archetype = null;
+    
+    var T : Real = 0.0;
+    
+    var RandGen : Random = Random();
+
+    //initilization
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+    }
+
+    //for stopping the player when they hit the ship
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        if((this.Space.GameSession.GameVars.PlayerHealth <= 0 || this.Space.GameSession.GameVars.PlayerOxygen <= 0) && event.OtherObject.Ship_Interaction != null)
+        {              
+            this.Space.GameSession.GameVars.PlayerHealth = this.Space.GameSession.GameVars.StartingPlayerHealth;
+            this.Space.GameSession.GameVars.PlayerOxygen = this.Space.GameSession.GameVars.StartingPlayerOxygen;
+            
+            this.Owner.RigidBody.Velocity = Real3(0.0,0.0,0.0);
+        }
+            
+    }
+
+    //every logic update
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        //setup quick var to save on repitition
+        var gameVars = this.GameSession.GameVars;
+        
+        //if the player has no health or oxygen then their dead, reset their health and oxygen and teleport them to world origin.
+        if (gameVars.PlayerHealth <= 0 || gameVars.PlayerOxygen <= 0)
+        {
+            
+            for(var i = 0.0; i < gameVars.PlayerResources; ++i)
+            {
+                var resource = this.Space.CreateAtPosition(this.IronResource, this.Owner.Transform.Translation);
+                resource.RigidBody.Velocity += Real3(this.RandGen.Range(-1.0, 1.0), this.RandGen.Range(-1.0, 1.0), 0.0);
+            }
+            
+            for(var i = 0.0; i < gameVars.PlayerAluminium; ++i)
+            {
+                var resource = this.Space.CreateAtPosition(this.AluminiumResource, this.Owner.Transform.Translation);
+                resource.RigidBody.Velocity += Real3(this.RandGen.Range(-1.0, 1.0), this.RandGen.Range(-1.0, 1.0), 0.0);
+            }
+            
+            for(var i = 0.0; i < gameVars.PlayerCopper; ++i)
+            {
+                var resource = this.Space.CreateAtPosition(this.CopperResource, this.Owner.Transform.Translation);
+                resource.RigidBody.Velocity += Real3(this.RandGen.Range(-1.0, 1.0), this.RandGen.Range(-1.0, 1.0), 0.0);
+            }
+            
+            for(var i = 0.0; i < gameVars.PlayerTitanium; ++i)
+            {
+                var resource = this.Space.CreateAtPosition(this.TitaniumResource, this.Owner.Transform.Translation);
+                resource.RigidBody.Velocity += Real3(this.RandGen.Range(-1.0, 1.0), this.RandGen.Range(-1.0, 1.0), 0.0);
+            }
+            
+            gameVars.PlayerResources = 0;
+            gameVars.PlayerTitanium = 0;
+            gameVars.PlayerCopper = 0;
+            gameVars.PlayerAluminium = 0;
+            
+            //teleport player to world origin
+            this.Owner.Transform.Translation = Real3(Math.Lerp(this.Transform.Translation.X, 0.0, this.T), Math.Lerp(this.Transform.Translation.Y, 0.0, this.T), 0.0);
+            
+            this.T += event.Dt * this.ReturnSpeed;
+        }
+        
+        //kill cheat <For Testing ONLY>
+        
+    }
+}

@@ -1,0 +1,34 @@
+class FlipXWhenMouseGreaterThan : ZilchComponent
+{
+    var MousePos : Real3;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.LevelSettings, Events.MouseUpdate, this.OnMouseUpdate);
+        
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnMouseUpdate(event : ViewportMouseEvent)
+    {
+        this.MousePos = event.ToWorldZPlane(0.0);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(this.MousePos.X >= this.Owner.Transform.Translation.X)
+        {
+            this.Owner.Sprite.FlipX = false;
+            
+            this.Owner.FindChildByName("Arm").Transform.Translation = Real3(-0.13, 
+                                                                            this.Owner.FindChildByName("Arm").Transform.Translation.Y, 0.0);
+        }
+        else
+        {
+            this.Owner.Sprite.FlipX = true;
+            
+            this.Owner.FindChildByName("Arm").Transform.Translation = Real3(0.13, 
+                                                                            this.Owner.FindChildByName("Arm").Transform.Translation.Y, 0.0);
+        }
+    }
+}
