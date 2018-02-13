@@ -1,0 +1,52 @@
+class OxygenPipe_Function : ZilchComponent
+{
+    [Dependency] var Transform : Transform = null;
+    
+    //enter as range squared
+    [Property] var ConnectingRange : Integer = 64;
+    
+    [Property] var Connected : Boolean = false;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(this.Connected == false)
+        {
+            foreach(var objects in this.Space.FindAllObjectsByName("OxygenPipe"))
+            {
+                var connectingVector = objects.Transform.Translation - this.Transform.Translation;
+                
+                var connectingLength = (connectingVector.X * connectingVector.X) + (connectingVector.Y + connectingVector.Y);
+                
+                if(connectingLength <= this.ConnectingRange && objects.OxygenPipe_Function.Connected == true)
+                {
+                    var ray = Ray();
+                    
+                    ray.Start = this.Transform.Translation;
+                    
+                    ray.Direction = connectingVector;
+                    
+                     var debugLine = DebugLine();
+
+                    //Sets parameters for the debug line
+                    debugLine.Start(this.Transform.Translation);
+                    debugLine.End(connectingVector);
+                    
+                    var castResult = this.Space.PhysicsSpace.CastRayFirst(ray);
+                    
+                    var objectHit = castResult.ObjectHit;
+                        
+                    
+                }
+                else
+                {
+                    
+                }
+            } 
+        }         
+    }
+}
