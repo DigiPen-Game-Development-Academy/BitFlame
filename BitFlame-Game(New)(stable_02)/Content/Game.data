@@ -1,0 +1,51 @@
+GameSession = 
+{
+	LinkId = 
+	{
+		uint Id = 1,
+	},
+	Archetyped = 
+	{
+		string Name = "554cea0f94af5fea:Game",
+	},
+	Viewports = 
+	{
+	},
+	DefaultGameSetup = 
+	{
+		string StartingSpaceName = "554cea0f94af6dc4:Space",
+		string StartingLevelName = "5a62869edf2bbb4a:StartMenu_Level",
+	},
+	CameraViewports = 
+	{
+	},
+	GameVars = 
+	{
+		int StartingPlayerHealth = 10,
+		int StartingPlayerResources = 0,
+		int StartingCopper = 0,
+		int StartingPlayerTitanium = 0,
+		int StartingPlayerAluminium = 0,
+		float StartingPlayerOxygen = 10,
+		int StartingUpgradePoints = 1,
+		bool HasUpgrade_SpreadI = false,
+		bool HasUpgrade_SpreadII = false,
+		bool HasUpgrade_Homing = false,
+		bool HasUpgrade_FirerateI = false,
+		bool HasUpgrade_FirerateII = false,
+		bool HasUpgrade_Doubleshot = false,
+		bool HasUpgrade_PenitrationI = false,
+		bool HasUpgrade_PenitrationII = false,
+		bool HasUpgrade_KnockbackI = false,
+		bool HasUpgrade_KnockbackII = false,
+		bool HasUpgrade_Maxspeed = false,
+		bool HasUpgrade_Acceleration = false,
+		bool HasUpgrade_InertiaDampeners = false,
+		bool HasUpgrade_Vitals = false,
+		bool HasUpgrade_Maxhealth = false,
+		bool HasUpgrade_Maxoxygen = false,
+		bool HasUpgrade_ShieldI = false,
+		bool HasUpgrade_Shieldregenspeed = false,
+		bool HasUpgrade_ShieldII = false,
+	},
+},
