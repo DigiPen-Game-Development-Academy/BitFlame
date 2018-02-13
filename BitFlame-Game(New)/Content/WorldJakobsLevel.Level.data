@@ -91,25 +91,6 @@ Level =
 			int HilightInterval = 10,
 			bool FollowEditorCamera = false,
 		},
-		Level_WorldGeneration = 
-		{
-			string Asteroid_01Archetype = "5afc186063c49e3c:AsteroidConfig1",
-			string Asteroid_02Archetype = "5afc18c082beb4a9:AsteroidConfig2",
-			string EnemyArchetype = "5a1c25102e8b8ff5:AlienEnemy",
-			string HiveArchetype = "5a1c2405f45e8ddd:EnemyHive",
-			string UpgradePickupArchetype = "5a08cc0da512394f:Game_Upgrade_Pickup",
-			float Asteroid_01Probability = 20,
-			float Asteroid_02Probability = 20,
-			float EmptySpaceProbability = 45,
-			float HiveProbability = 3,
-			float EnemyProbability = 7,
-			float UpgradePickupProbability = 5,
-			int MaxX = 96,
-			int MaxY = 96,
-			int SpawnCellwidth = 8,
-			int EmptyRange = 10,
-			int SafeRange = 20,
-		},
 		HudCreator = 
 		{
 			string HUDLevel = "5a11bb03ee000161:HUDLevel",
@@ -146,7 +127,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.36067033, 2.89606428, 50],
+			Vec3 Translation = [3.65767574, 1.74762273, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -158,7 +139,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 13.5335836,
+			float Size = 11.0803661,
 		},
 		EditorCameraController = 
 		{
@@ -166,7 +147,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [1.36067033, 2.89606428, 5.94767755e-08],
+			Vec3 LookTarget = [3.65767574, 1.74762273, 1.59882035e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -475,6 +456,78 @@ Level =
 		Named = 
 		{
 			string Name = "Ship",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 14,
+		},
+		Named = 
+		{
+			string Name = "OxygenPipe",
+		},
+		Archetyped = 
+		{
+			string Name = "5a62ce81be38d76e:OxygenPipe",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [3.5, 4.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0, 0.905450106, 0.995000005, 0.999899983],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+		OxygenPipe_Function = 
+		{
+			int ConnectingRange = 64,
+			bool Connected = true,
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a62ce81be38d76e:OxygenPipe",
+		LinkId = 
+		{
+			uint Id = 15,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [8.5, 4.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "OxygenPipe",
 		},
 	},
 },
