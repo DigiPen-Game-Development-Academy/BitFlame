@@ -1,0 +1,70 @@
+class UpgradePathLogic : ZilchComponent
+{
+    [Property] var Unlocked : Boolean = false;
+    
+    [Property] var Purchased : Boolean  = false;
+    
+    [Property] var PreviousUpgrade : CogPath = null;
+    
+    [Property] var Cost : Integer = 0;
+    
+    [Property] var UpgradeName : String = "Name";
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        
+        Zero.Connect(this.Owner, Events.MouseDown, this.OnMouseDown);
+        
+        Zero.Connect(this.Owner, Events.MouseEnter, this.OnMouseEnter);
+        
+        Zero.Connect(this.Owner, Events.MouseExit, this.OnMouseExit);
+    }
+
+    function OnMouseExit(event : ViewportMouseEvent)
+    {
+        this.Space.FindObjectByName("ToolTip").Sprite.Visible = false;
+        
+        this.Space.FindObjectByName("ToolTip").FindChildByName("Text").SpriteText.Visible = false;
+    }
+
+    function OnMouseEnter(event : ViewportMouseEvent)
+    {
+        this.Space.FindObjectByName("ToolTip").FindChildByName("Text").SpriteText.Text = this.UpgradeName;
+        
+        this.Space.FindObjectByName("ToolTip").Sprite.Visible = true;
+        
+        this.Space.FindObjectByName("ToolTip").FindChildByName("Text").SpriteText.Visible = true;
+    }
+
+    function OnMouseDown(event : ViewportMouseEvent)
+    {
+        if(this.GameSession.GameVars.PlayerUpgradePoints >= this.Cost && this.Unlocked)
+        {
+            this.Purchased = true;
+            
+            this.Owner.Sprite.Color = Real4(1,0,1,1);
+        }
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        
+        
+        if(this.PreviousUpgrade.Cog != null)
+        {
+            if(this.PreviousUpgrade.Cog.UpgradePathLogic.Purchased == true)
+            {
+                this.Unlocked = true;
+                
+                this.Owner.Area.Size = Real2(2.0,2.0);
+            }
+        }
+        else
+        {
+            this.Unlocked = true;
+            
+            this.Owner.Area.Size = Real2(2.0,2.0);
+        }
+    }
+}
