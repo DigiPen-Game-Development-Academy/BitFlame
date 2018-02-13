@@ -642,22 +642,4 @@ Level =
 			float OxygenRechargeRate = 0.0500000007,
 		},
 	},
-	ArchetypeInstance = 
-	{
-		string Name = "5a074e0c89fd18fe:Comet",
-		LinkId = 
-		{
-			uint Id = 10,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [3.24391174, -4.72856712, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Comet",
-		},
-	},
 },
