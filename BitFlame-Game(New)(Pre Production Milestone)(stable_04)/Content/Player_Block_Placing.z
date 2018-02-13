@@ -1,0 +1,75 @@
+/*************************************
+Filename: Player_Block_Placing.z
+Author: Jakob McFarland
+Contributors: NULL
+Last modified: 2/13/18
+Brief: This Component allows the polayer to place blocks
+******************************************/
+
+class Player_Block_Placing : ZilchComponent
+{
+    [Dependency] var Transform : Transform = null;
+    
+    [Property] var PlacingRange : Integer = 6;
+    
+    [Property] var IronBlockPlaceKey : Keys;
+    [Property] var IronBlockArchetype : Archetype = Archetype.IronBlock;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.MouseDown, this.OnMouseDown);
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        var arm = this.Owner.FindChildByName("Arm");  
+        
+        if(Zero.Keyboard.KeyIsDown(this.IronBlockPlaceKey))
+        {
+             arm.PlayerShooting.CanShoot = false;
+        }
+        else
+        {
+            arm.PlayerShooting.CanShoot = true;
+        }
+            
+    }
+
+    function OnMouseDown(event : ViewportMouseEvent)
+    {
+        var mousePosition = event.ToWorldZPlane(0.0);
+        var roundedMouse = Math.Round(mousePosition);
+        
+        if(roundedMouse.X >= mousePosition.X)
+        {
+            roundedMouse.X -= 0.5;
+        }
+        else if(roundedMouse.X < mousePosition.X)
+        {
+            roundedMouse.X += 0.5;
+        }
+        
+        if(roundedMouse.Y >= mousePosition.Y)
+        {
+            roundedMouse.Y -= 0.5;
+        }
+        else if(roundedMouse.Y < mousePosition.Y)
+        {
+            roundedMouse.Y += 0.5;
+        }
+        
+        if(Zero.Keyboard.KeyIsDown(this.IronBlockPlaceKey))
+        {
+            //probably not working
+            if(this.Transform.Translation.X - roundedMouse.X <= this.PlacingRange && this.Transform.Translation.Y - roundedMouse.Y <= this.PlacingRange)
+            {
+                if(this.Space.GameSession.GameVars.PlayerResources >= 1)
+                {
+                    this.Space.GameSession.GameVars.PlayerResources -= 1;
+                    this.Space.CreateAtPosition(this.IronBlockArchetype, roundedMouse);
+                }
+            }
+        }     
+    }
+}

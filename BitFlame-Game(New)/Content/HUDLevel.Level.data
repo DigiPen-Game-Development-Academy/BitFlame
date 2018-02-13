@@ -280,7 +280,7 @@ Level =
 				},
 				SetXToVariable = 
 				{
-					Enum Type = Iron,
+					Enum Type = Health,
 				},
 				Hierarchy = 
 				{
