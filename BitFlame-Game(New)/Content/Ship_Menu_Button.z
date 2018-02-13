@@ -88,7 +88,9 @@ class Ship_Menu_Button_Function : ZilchComponent
     [Property] var MoveTime : Real = 0.2; 
 
     [Property] var Reload : Boolean = false; 
-
+    
+    [Property] var LevelToChangeTo : Level = null;
+    
     [Property] var Quit : Boolean = false;  
   
     function Initialize(init : CogInitializer)
@@ -103,6 +105,11 @@ class Ship_Menu_Button_Function : ZilchComponent
         if(this.Quit)
         {
             this.GameSession.Quit();
+        }
+        
+        if(this.LevelToChangeTo != null)
+        {
+            this.GameSession.GameVars.NewLevel = this.LevelToChangeTo;
         }
         
         if(this.Reload)
@@ -128,6 +135,8 @@ class Ship_Menu_Button_Upgrade : ZilchComponent
 
     [Property] var MoveTime : Real = 0.2; 
     
+    var UpgradeOnlyOnce : Real = 1;
+    
     // Determines how many upgrade points player needs
     [Property] var UpgradePoints_Needed : Integer = 0;
     
@@ -150,37 +159,34 @@ class Ship_Menu_Button_Upgrade : ZilchComponent
     function OnLeftMouseDown(event : ViewportMouseEvent)
     {
         // Checks if player has enough points to purchase upgrade the amount of points needed is determined by a variable
-        if(this.GameSession.GameVars.PlayerUpgradePoints >= this.UpgradePoints_Needed)
+        if(this.GameSession.GameVars.PlayerUpgradePoints >= this.UpgradePoints_Needed) 
         {
-    
-            if(this.FireRateI_Upgrade == true)
+            if(this.FireRateI_Upgrade == true && this.UpgradeOnlyOnce >= 1)
             {
                 // Sets the corresponding variable in GameVars to true
                 this.GameSession.GameVars.HasUpgrade_FirerateI = true;
-                
+                this.UpgradeOnlyOnce -= 1;
                 this.GameSession.GameVars.PlayerUpgradePoints -= this.UpgradePoints_Needed;
             }
-            
-            if(this.MaxSpeed_Upgrade == true)
+            if(this.MaxSpeed_Upgrade == true && this.UpgradeOnlyOnce >= 1)
             {
                 // Sets the corresponding variable in GameVars to true
                 this.GameSession.GameVars.HasUpgrade_Maxspeed = true;
-                
+                this.UpgradeOnlyOnce -= 1;
                 this.GameSession.GameVars.PlayerUpgradePoints -= this.UpgradePoints_Needed;
             }
-            
-            if(this.Acceleration_Upgrade == true)
+            if(this.Acceleration_Upgrade == true && this.UpgradeOnlyOnce >= 1)
             {
                 // Sets the corresponding variable in GameVars to true
                 this.GameSession.GameVars.HasUpgrade_Acceleration = true;
-                
+                this.UpgradeOnlyOnce -= 1;
                 this.GameSession.GameVars.PlayerUpgradePoints -= this.UpgradePoints_Needed;
             }
-            if(this.Vitals_Upgrade == true)
+            if(this.Vitals_Upgrade == true && this.UpgradeOnlyOnce >= 1)
             {
                // Sets the corresponding variable in GameVars to true
                 this.GameSession.GameVars.HasUpgrade_Vitals = true;
-                
+                this.UpgradeOnlyOnce -= 1;
                 this.GameSession.GameVars.PlayerUpgradePoints -= this.UpgradePoints_Needed; 
             }
         }

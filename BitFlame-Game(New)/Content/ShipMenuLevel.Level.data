@@ -96,7 +96,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [32.5708046, 5.17824793, 70.9990005],
+			Vec3 Translation = [34.71035, 0.763383865, 70.9990005],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -108,7 +108,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 24.6597538,
+			float Size = 27.2532673,
 		},
 		EditorCameraController = 
 		{
@@ -116,7 +116,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [32.5708046, 5.17824793, 20.9990005],
+			Vec3 LookTarget = [34.71035, 0.763383865, 20.9990005],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -337,7 +337,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [-9, 8.25, 0],
-			Vec3 Scale = [4, 1.5, 1],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -350,13 +350,18 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
+			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
 			bool AnimationActive = true,
 			float AnimationSpeed = 1,
 			uint StartFrame = 0,
+		},
+		Area = 
+		{
+			Vec2 Size = [4, 1.5],
+			Location Origin = Center,
 		},
 	},
 	Cog = 
@@ -372,7 +377,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [-4.5, 8.25, 0],
-			Vec3 Scale = [4, 1.5, 1],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -385,7 +390,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
+			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -425,7 +430,13 @@ Level =
 			Vec3 NewCameraPosition = [30, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			string LevelToChangeTo = "",
 			bool Quit = false,
+		},
+		Area = 
+		{
+			Vec2 Size = [4, 1.5],
+			Location Origin = Center,
 		},
 	},
 	Cog = 
@@ -494,6 +505,7 @@ Level =
 			Vec3 NewCameraPosition = [0, 30, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			string LevelToChangeTo = "",
 			bool Quit = false,
 		},
 		Area = 
@@ -604,7 +616,7 @@ Level =
 			},
 			Vec3 NewCameraPosition = [30, 30, 0],
 			float MoveTime = 0.200000003,
-			int UpgradePoints_Needed = 0,
+			int UpgradePoints_Needed = 1,
 			bool FireRateI_Upgrade = false,
 			bool MaxSpeed_Upgrade = true,
 			bool DoubleShot_Upgrade = false,
@@ -820,7 +832,7 @@ Level =
 			},
 			Vec3 NewCameraPosition = [30, 30, 0],
 			float MoveTime = 0.200000003,
-			int UpgradePoints_Needed = 0,
+			int UpgradePoints_Needed = 1,
 			bool FireRateI_Upgrade = false,
 			bool MaxSpeed_Upgrade = false,
 			bool DoubleShot_Upgrade = false,
@@ -935,7 +947,7 @@ Level =
 			},
 			Vec3 NewCameraPosition = [30, 30, 0],
 			float MoveTime = 0.200000003,
-			int UpgradePoints_Needed = 0,
+			int UpgradePoints_Needed = 1,
 			bool FireRateI_Upgrade = true,
 			bool MaxSpeed_Upgrade = false,
 			bool DoubleShot_Upgrade = false,
@@ -998,7 +1010,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [55.5, 8.25, 1],
-			Vec3 Scale = [4, 1.5, 1],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -1011,7 +1023,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
+			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -1051,7 +1063,13 @@ Level =
 			Vec3 NewCameraPosition = [30, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			string LevelToChangeTo = "",
 			bool Quit = false,
+		},
+		Area = 
+		{
+			Vec2 Size = [4, 1.5],
+			Location Origin = Center,
 		},
 	},
 	Cog = 
@@ -1067,7 +1085,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [0, 8.25, 0],
-			Vec3 Scale = [4, 1.5, 1],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -1080,7 +1098,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
+			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -1120,7 +1138,13 @@ Level =
 			Vec3 NewCameraPosition = [60, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			string LevelToChangeTo = "",
 			bool Quit = false,
+		},
+		Area = 
+		{
+			Vec2 Size = [4, 1.5],
+			Location Origin = Center,
 		},
 	},
 	Cog = 
@@ -1136,7 +1160,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [25.5, 8.25, 0],
-			Vec3 Scale = [4, 1.5, 1],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -1149,13 +1173,18 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
+			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
 			bool AnimationActive = true,
 			float AnimationSpeed = 1,
 			uint StartFrame = 0,
+		},
+		Area = 
+		{
+			Vec2 Size = [4, 1.5],
+			Location Origin = Center,
 		},
 	},
 	Cog = 
@@ -1171,7 +1200,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [21, 8.25, 0],
-			Vec3 Scale = [4, 1.5, 1],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -1184,7 +1213,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
+			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -1224,7 +1253,13 @@ Level =
 			Vec3 NewCameraPosition = [0, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			string LevelToChangeTo = "",
 			bool Quit = false,
+		},
+		Area = 
+		{
+			Vec2 Size = [4, 1.5],
+			Location Origin = Center,
 		},
 	},
 	Cog = 
@@ -1240,7 +1275,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [30, 8.25, 0],
-			Vec3 Scale = [4, 1.5, 1],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -1253,7 +1288,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
+			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -1293,7 +1328,13 @@ Level =
 			Vec3 NewCameraPosition = [60, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			string LevelToChangeTo = "",
 			bool Quit = false,
+		},
+		Area = 
+		{
+			Vec2 Size = [4, 1.5],
+			Location Origin = Center,
 		},
 	},
 	Cog = 
@@ -1309,7 +1350,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [60, 8.25, 0],
-			Vec3 Scale = [4, 1.5, 1],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -1322,13 +1363,18 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
+			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
 			bool AnimationActive = true,
 			float AnimationSpeed = 1,
 			uint StartFrame = 0,
+		},
+		Area = 
+		{
+			Vec2 Size = [4, 1.5],
+			Location Origin = Center,
 		},
 	},
 	Cog = 
@@ -1344,7 +1390,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [51, 8.25, 0],
-			Vec3 Scale = [4, 1.5, 1],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -1357,7 +1403,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
+			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -1397,7 +1443,13 @@ Level =
 			Vec3 NewCameraPosition = [0, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			string LevelToChangeTo = "",
 			bool Quit = false,
+		},
+		Area = 
+		{
+			Vec2 Size = [4, 1.5],
+			Location Origin = Center,
 		},
 	},
 	Cog = 
@@ -1726,6 +1778,7 @@ Level =
 			Vec3 NewCameraPosition = [0, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = true,
+			string LevelToChangeTo = "",
 			bool Quit = false,
 		},
 		Area = 
@@ -1837,6 +1890,7 @@ Level =
 			Vec3 NewCameraPosition = [0, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			string LevelToChangeTo = "",
 			bool Quit = false,
 		},
 		Area = 
@@ -1948,6 +2002,7 @@ Level =
 			Vec3 NewCameraPosition = [30, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			string LevelToChangeTo = "",
 			bool Quit = false,
 		},
 		Area = 
