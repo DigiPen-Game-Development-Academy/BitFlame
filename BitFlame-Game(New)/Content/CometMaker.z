@@ -19,14 +19,29 @@ class CometMaker : ZilchComponent
             
             var player = this.Space.FindObjectByName("Player");
             
-            var comet = this.Space.CreateAtPosition(this.Comet, player.Transform.Translation);
+            var position = player.Transform.Translation;
             
-            if(Math.Distance(comet.Transform.Translation, player.Transform.Translation) <= 40)
+            if(Random().CoinFlip())
             {
-                this.Owner.Destroy();
+                position.X += 10 + Random().Range(10, 15);
+            }
+            else
+            {
+                position.X -= 10 + Random().Range(10, 15);
             }
             
-            comet.RigidBody.Velocity += Real3(Random().Range(-10.0, 10.0), Random().Range(-10.0,10.0), 0.0) * event.Dt * 10.0;
+            if(Random().CoinFlip())
+            {
+                position.Y += 5 + Random().Range(5, 10);
+            }
+            else
+            {
+                position.Y -= 5 + Random().Range(5, 10);
+            }
+            
+            var comet = this.Space.CreateAtPosition(this.Comet, position);
+            
+            comet.RigidBody.Velocity += player.Transform.Translation - comet.Transform.Translation * event.Dt * Random().Range(5, 10);
         }
         else
         {
