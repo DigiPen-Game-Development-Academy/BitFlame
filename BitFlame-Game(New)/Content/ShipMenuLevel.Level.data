@@ -96,7 +96,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [57.3823433, 9.60939503, 70.9990005],
+			Vec3 Translation = [34.71035, 0.763383865, 70.9990005],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -108,7 +108,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 81.8732529,
+			float Size = 27.2532673,
 		},
 		EditorCameraController = 
 		{
@@ -116,7 +116,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [57.3823433, 9.60939503, 20.9990005],
+			Vec3 LookTarget = [34.71035, 0.763383865, 20.9990005],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -430,6 +430,7 @@ Level =
 			Vec3 NewCameraPosition = [30, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			string LevelToChangeTo = "",
 			bool Quit = false,
 		},
 		Area = 
@@ -504,6 +505,7 @@ Level =
 			Vec3 NewCameraPosition = [0, 30, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			string LevelToChangeTo = "",
 			bool Quit = false,
 		},
 		Area = 
@@ -614,7 +616,7 @@ Level =
 			},
 			Vec3 NewCameraPosition = [30, 30, 0],
 			float MoveTime = 0.200000003,
-			int UpgradePoints_Needed = 0,
+			int UpgradePoints_Needed = 1,
 			bool FireRateI_Upgrade = false,
 			bool MaxSpeed_Upgrade = true,
 			bool DoubleShot_Upgrade = false,
@@ -830,7 +832,7 @@ Level =
 			},
 			Vec3 NewCameraPosition = [30, 30, 0],
 			float MoveTime = 0.200000003,
-			int UpgradePoints_Needed = 0,
+			int UpgradePoints_Needed = 1,
 			bool FireRateI_Upgrade = false,
 			bool MaxSpeed_Upgrade = false,
 			bool DoubleShot_Upgrade = false,
@@ -945,7 +947,7 @@ Level =
 			},
 			Vec3 NewCameraPosition = [30, 30, 0],
 			float MoveTime = 0.200000003,
-			int UpgradePoints_Needed = 0,
+			int UpgradePoints_Needed = 1,
 			bool FireRateI_Upgrade = true,
 			bool MaxSpeed_Upgrade = false,
 			bool DoubleShot_Upgrade = false,
@@ -1061,6 +1063,7 @@ Level =
 			Vec3 NewCameraPosition = [30, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			string LevelToChangeTo = "",
 			bool Quit = false,
 		},
 		Area = 
@@ -1135,6 +1138,7 @@ Level =
 			Vec3 NewCameraPosition = [60, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			string LevelToChangeTo = "",
 			bool Quit = false,
 		},
 		Area = 
@@ -1249,6 +1253,7 @@ Level =
 			Vec3 NewCameraPosition = [0, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			string LevelToChangeTo = "",
 			bool Quit = false,
 		},
 		Area = 
@@ -1323,6 +1328,7 @@ Level =
 			Vec3 NewCameraPosition = [60, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			string LevelToChangeTo = "",
 			bool Quit = false,
 		},
 		Area = 
@@ -1437,6 +1443,7 @@ Level =
 			Vec3 NewCameraPosition = [0, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			string LevelToChangeTo = "",
 			bool Quit = false,
 		},
 		Area = 
@@ -1771,6 +1778,7 @@ Level =
 			Vec3 NewCameraPosition = [0, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = true,
+			string LevelToChangeTo = "",
 			bool Quit = false,
 		},
 		Area = 
@@ -1882,6 +1890,7 @@ Level =
 			Vec3 NewCameraPosition = [0, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			string LevelToChangeTo = "",
 			bool Quit = false,
 		},
 		Area = 
@@ -1993,6 +2002,7 @@ Level =
 			Vec3 NewCameraPosition = [30, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			string LevelToChangeTo = "",
 			bool Quit = false,
 		},
 		Area = 

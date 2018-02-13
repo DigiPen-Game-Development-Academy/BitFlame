@@ -161,28 +161,28 @@ class Ship_Menu_Button_Upgrade : ZilchComponent
         // Checks if player has enough points to purchase upgrade the amount of points needed is determined by a variable
         if(this.GameSession.GameVars.PlayerUpgradePoints >= this.UpgradePoints_Needed) 
         {
-            if(this.FireRateI_Upgrade == true && this.UpgradeOnlyOnce > 0)
+            if(this.FireRateI_Upgrade == true && this.UpgradeOnlyOnce >= 1)
             {
                 // Sets the corresponding variable in GameVars to true
                 this.GameSession.GameVars.HasUpgrade_FirerateI = true;
                 this.UpgradeOnlyOnce -= 1;
                 this.GameSession.GameVars.PlayerUpgradePoints -= this.UpgradePoints_Needed;
             }
-            if(this.MaxSpeed_Upgrade == true && this.UpgradeOnlyOnce > 0)
+            if(this.MaxSpeed_Upgrade == true && this.UpgradeOnlyOnce >= 1)
             {
                 // Sets the corresponding variable in GameVars to true
                 this.GameSession.GameVars.HasUpgrade_Maxspeed = true;
                 this.UpgradeOnlyOnce -= 1;
                 this.GameSession.GameVars.PlayerUpgradePoints -= this.UpgradePoints_Needed;
             }
-            if(this.Acceleration_Upgrade == true && this.UpgradeOnlyOnce > 0)
+            if(this.Acceleration_Upgrade == true && this.UpgradeOnlyOnce >= 1)
             {
                 // Sets the corresponding variable in GameVars to true
                 this.GameSession.GameVars.HasUpgrade_Acceleration = true;
                 this.UpgradeOnlyOnce -= 1;
                 this.GameSession.GameVars.PlayerUpgradePoints -= this.UpgradePoints_Needed;
             }
-            if(this.Vitals_Upgrade == true && this.UpgradeOnlyOnce > 0)
+            if(this.Vitals_Upgrade == true && this.UpgradeOnlyOnce >= 1)
             {
                // Sets the corresponding variable in GameVars to true
                 this.GameSession.GameVars.HasUpgrade_Vitals = true;
