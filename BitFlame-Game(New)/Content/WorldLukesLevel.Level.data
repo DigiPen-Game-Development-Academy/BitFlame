@@ -116,7 +116,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.16729708, 0.557261229, 50],
+			Vec3 Translation = [0.265801489, 2.96202564, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -128,7 +128,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 12.2456684,
+			float Size = 14.9568901,
 		},
 		EditorCameraController = 
 		{
@@ -136,7 +136,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.16729708, 0.557261229, 7.31272953e-09],
+			Vec3 LookTarget = [0.265801489, 2.96202564, 1.16183578e-08],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -582,6 +582,24 @@ Level =
 		Named = 
 		{
 			string Name = "Ship",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a1c25102e8b8ff5:AlienEnemy",
+		LinkId = 
+		{
+			uint Id = 11,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [7.71480513, 4.81691551, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
 		},
 	},
 },
