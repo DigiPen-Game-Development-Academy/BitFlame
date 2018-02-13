@@ -135,6 +135,8 @@ class Ship_Menu_Button_Upgrade : ZilchComponent
 
     [Property] var MoveTime : Real = 0.2; 
     
+    var UpgradeOnlyOnce : Real = 1;
+    
     // Determines how many upgrade points player needs
     [Property] var UpgradePoints_Needed : Integer = 0;
     
@@ -159,47 +161,31 @@ class Ship_Menu_Button_Upgrade : ZilchComponent
         // Checks if player has enough points to purchase upgrade the amount of points needed is determined by a variable
         if(this.GameSession.GameVars.PlayerUpgradePoints >= this.UpgradePoints_Needed)
         {
-<<<<<<< HEAD
-    
-            if(this.FireRateI_Upgrade == true)
-=======
             if(this.FireRateI_Upgrade == true && this.UpgradeOnlyOnce >= 1)
->>>>>>> ab3b50c9f505a24056e66c22b145a14c9922710b
             {
                 // Sets the corresponding variable in GameVars to true
                 this.GameSession.GameVars.HasUpgrade_FirerateI = true;
                 
                 this.GameSession.GameVars.PlayerUpgradePoints -= this.UpgradePoints_Needed;
             }
-<<<<<<< HEAD
             
-            if(this.MaxSpeed_Upgrade == true)
-=======
             if(this.MaxSpeed_Upgrade == true && this.UpgradeOnlyOnce >= 1)
->>>>>>> ab3b50c9f505a24056e66c22b145a14c9922710b
             {
                 // Sets the corresponding variable in GameVars to true
                 this.GameSession.GameVars.HasUpgrade_Maxspeed = true;
                 
                 this.GameSession.GameVars.PlayerUpgradePoints -= this.UpgradePoints_Needed;
             }
-<<<<<<< HEAD
             
-            if(this.Acceleration_Upgrade == true)
-=======
             if(this.Acceleration_Upgrade == true && this.UpgradeOnlyOnce >= 1)
->>>>>>> ab3b50c9f505a24056e66c22b145a14c9922710b
             {
                 // Sets the corresponding variable in GameVars to true
                 this.GameSession.GameVars.HasUpgrade_Acceleration = true;
                 
                 this.GameSession.GameVars.PlayerUpgradePoints -= this.UpgradePoints_Needed;
             }
-<<<<<<< HEAD
-            if(this.Vitals_Upgrade == true)
-=======
+            
             if(this.Vitals_Upgrade == true && this.UpgradeOnlyOnce >= 1)
->>>>>>> ab3b50c9f505a24056e66c22b145a14c9922710b
             {
                // Sets the corresponding variable in GameVars to true
                 this.GameSession.GameVars.HasUpgrade_Vitals = true;
