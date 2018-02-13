@@ -14,8 +14,8 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
-		Vec3 Scale = [1, 1, 1],
+		Vec3 Translation = [-10.7058611, 0.27559039, 0],
+		Vec3 Scale = [2, 2, 2],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -36,29 +36,11 @@ Cog =
 		float AnimationSpeed = 1,
 		uint StartFrame = 0,
 	},
-	Voxel = 
+	Generator = 
 	{
-		string Standalone = "",
-		string Topleft = "",
-		string TopCenter = "",
-		string TopRight = "",
-		string MiddleLeft = "",
-		string MiddleCenter = "",
-		string MiddleRight = "",
-		string BottomLeft = "",
-		string BottomCenter = "",
-		string BottomRight = "",
-		string OuterTopLeft = "",
-		string InnerTopLeft = "",
-		string OuterTopRight = "",
-		string InnerTopRight = "",
-		string OuterBottomLeft = "",
-		string InnerBottomLeft = "",
-		string OuterBottomRight = "",
-		string InnerBottomRight = "",
-		string Invalid = "",
-		string AltMiddleCenter = "",
-		string AsteroidChunk = "5a1180f76f978cdf:AssteroidChunk",
+		string VoxelArchetype = "5a1180f76f978cdf:AssteroidChunk",
+		float VoxelSize = 1,
+		int QuadCount = 10,
 	},
 	Hierarchy = 
 	{
