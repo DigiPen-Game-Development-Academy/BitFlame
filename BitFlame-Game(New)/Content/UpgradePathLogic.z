@@ -65,7 +65,7 @@ class UpgradePathLogic : ZilchComponent
     {
         if(!this.Purchased)
         {
-            this.Owner.Area.Size = this.OriginalSize;
+            this.Owner.Area.Size += Real2(0.1,0.1);
         }
     }
 
@@ -81,6 +81,8 @@ class UpgradePathLogic : ZilchComponent
             this.Purchased = true;
             
             this.Owner.Sprite.Color = this.PurchasedColor;
+            
+            this.GameSession.GameVars.PlayerUpgradePoints -= this.Cost;
         }
     }
 
