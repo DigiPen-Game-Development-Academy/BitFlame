@@ -2,7 +2,7 @@ TextContent =
 {
 	ZilchScriptBuilder = 
 	{
-		string Name = "ShowWhenTouchingUpgradeButton",
+		string Name = "GoToCursor",
 		uint64 ResourceId = 5af8f1d321d75cc6,
 	},
 },

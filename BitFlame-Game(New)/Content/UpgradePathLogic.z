@@ -2,8 +2,6 @@ class UpgradePathLogic : ZilchComponent
 {
     [Property] var UpgradeName : String = "Name";
     
-    [Property] var SubText : String = "Subtext";
-    
     [Property] var Cost : Integer = 0;
     
     [Property] var Unlocked : Boolean = false;
@@ -17,6 +15,8 @@ class UpgradePathLogic : ZilchComponent
     [Property] var UnlockedColor : Real4  = Real4.Zero;
     
     [Property] var LockedColor : Real4  = Real4.Zero;
+    
+    var Shake : Boolean = false;
     
     function Initialize(init : CogInitializer)
     {
@@ -35,18 +35,22 @@ class UpgradePathLogic : ZilchComponent
         
         this.Space.FindObjectByName("ToolTip").FindChildByName("Text").SpriteText.Visible = false;
         
-        this.Space.FindObjectByName("ToolTip").FindChildByName("SubText").SpriteText.Visible = false;
+        this.Space.FindObjectByName("ToolTip").FindChildByName("Cost Shower").SpriteText.Visible = false;
+        
+        this.Space.FindObjectByName("ToolTip").FindChildByName("CostIndicator").SpriteText.Visible = false;
     }
 
     function OnMouseEnter(event : ViewportMouseEvent)
     {
         this.Space.FindObjectByName("ToolTip").FindChildByName("Text").SpriteText.Text = this.UpgradeName;
         
-        this.Space.FindObjectByName("ToolTip").FindChildByName("SubText").SpriteText.Text = this.SubText;
+        this.Space.FindObjectByName("ToolTip").FindChildByName("CostIndicator").SpriteText.Text = "`this.Cost`";
         
         this.Space.FindObjectByName("ToolTip").FindChildByName("Text").SpriteText.Visible = true;
         
-        this.Space.FindObjectByName("ToolTip").FindChildByName("SubText").SpriteText.Visible = true;
+        this.Space.FindObjectByName("ToolTip").FindChildByName("Cost Shower").SpriteText.Visible = true;
+        
+        this.Space.FindObjectByName("ToolTip").FindChildByName("CostIndicator").SpriteText.Visible = true;
         
         this.Space.FindObjectByName("ToolTip").Sprite.Visible = true;
     }
@@ -63,13 +67,15 @@ class UpgradePathLogic : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        
         if(this.PreviousUpgrade.Cog != null)
         {
             if(this.PreviousUpgrade.Cog.UpgradePathLogic.Purchased == true)
             {
                 this.Unlocked = true;
                 
-                this.Owner.Area.Size = Real2(2.0,2.0);
+                Action.Property(this.Owner.Actions, @this.Owner.Area.Size,
+                                Real2(2.0,2.0), 0.5, Ease.SinOut);
             }
         }
         else

@@ -1,4 +1,4 @@
-class ShowWhenTouchingUpgradeButton : ZilchComponent
+class GoToCursor : ZilchComponent
 {
     var MousePos : Real3 = Real3.Zero;
     
