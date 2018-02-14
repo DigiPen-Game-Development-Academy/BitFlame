@@ -16,6 +16,6 @@ class GoToCursor : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        this.Owner.Transform.Translation = this.MousePos;
+        this.Owner.Transform.Translation = Real3(this.MousePos.X, this.MousePos.Y, this.Owner.Transform.Translation.Z);
     }
 }

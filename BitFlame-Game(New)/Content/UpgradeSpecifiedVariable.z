@@ -1,0 +1,52 @@
+enum UpgradeType{FireRate, Health, Oxygen, OxygenRegen, HealthRegen, Speed, Acceleration, Generik}
+
+class UpgradeSpecifiedVariable : ZilchComponent
+{
+    [Property] var UpgradeType  : UpgradeType = UpgradeType.Generik;
+    
+    [Property] var UpgradeAmount : Real = 0.0;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Owner, Events.MouseDown, this.OnMouseDown);
+    }
+
+    function OnMouseDown(event : ViewportMouseEvent)
+    {
+        if(this.Owner.UpgradePathLogic.Unlocked && !this.Owner.UpgradePathLogic.Purchased)
+        {
+            if(this.UpgradeType == UpgradeType.FireRate)
+            {
+                
+            }
+            if(this.UpgradeType == UpgradeType.Health)
+            {
+                
+            }
+            if(this.UpgradeType == UpgradeType.Oxygen)
+            {
+                
+            }
+            if(this.UpgradeType == UpgradeType.OxygenRegen)
+            {
+                
+            }
+            if(this.UpgradeType == UpgradeType.HealthRegen)
+            {
+                
+            }
+            if(this.UpgradeType == UpgradeType.Speed)
+            {
+                
+            }
+            if(this.UpgradeType == UpgradeType.Acceleration)
+            {
+                
+            }
+            if(this.UpgradeType == UpgradeType.Generik)
+            {
+                
+            }
+        }
+    }
+}
