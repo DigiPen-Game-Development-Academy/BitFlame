@@ -1,14 +1,22 @@
 class UpgradePathLogic : ZilchComponent
 {
+    [Property] var UpgradeName : String = "Name";
+    
+    [Property] var SubText : String = "Subtext";
+    
+    [Property] var Cost : Integer = 0;
+    
     [Property] var Unlocked : Boolean = false;
     
     [Property] var Purchased : Boolean  = false;
     
     [Property] var PreviousUpgrade : CogPath = null;
     
-    [Property] var Cost : Integer = 0;
+    [Property] var PurchasedColor : Real4  = Real4.Zero;
     
-    [Property] var UpgradeName : String = "Name";
+    [Property] var UnlockedColor : Real4  = Real4.Zero;
+    
+    [Property] var LockedColor : Real4  = Real4.Zero;
     
     function Initialize(init : CogInitializer)
     {
@@ -26,15 +34,21 @@ class UpgradePathLogic : ZilchComponent
         this.Space.FindObjectByName("ToolTip").Sprite.Visible = false;
         
         this.Space.FindObjectByName("ToolTip").FindChildByName("Text").SpriteText.Visible = false;
+        
+        this.Space.FindObjectByName("ToolTip").FindChildByName("SubText").SpriteText.Visible = false;
     }
 
     function OnMouseEnter(event : ViewportMouseEvent)
     {
         this.Space.FindObjectByName("ToolTip").FindChildByName("Text").SpriteText.Text = this.UpgradeName;
         
-        this.Space.FindObjectByName("ToolTip").Sprite.Visible = true;
+        this.Space.FindObjectByName("ToolTip").FindChildByName("SubText").SpriteText.Text = this.SubText;
         
         this.Space.FindObjectByName("ToolTip").FindChildByName("Text").SpriteText.Visible = true;
+        
+        this.Space.FindObjectByName("ToolTip").FindChildByName("SubText").SpriteText.Visible = true;
+        
+        this.Space.FindObjectByName("ToolTip").Sprite.Visible = true;
     }
 
     function OnMouseDown(event : ViewportMouseEvent)
@@ -43,14 +57,12 @@ class UpgradePathLogic : ZilchComponent
         {
             this.Purchased = true;
             
-            this.Owner.Sprite.Color = Real4(1,0,1,1);
+            this.Owner.Sprite.Color = this.PurchasedColor;
         }
     }
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        
-        
         if(this.PreviousUpgrade.Cog != null)
         {
             if(this.PreviousUpgrade.Cog.UpgradePathLogic.Purchased == true)
@@ -65,6 +77,15 @@ class UpgradePathLogic : ZilchComponent
             this.Unlocked = true;
             
             this.Owner.Area.Size = Real2(2.0,2.0);
+        }
+        
+        if(this.Unlocked && !this.Purchased)
+        {
+            this.Owner.Sprite.Color = this.UnlockedColor;
+        }
+        else if(this.Unlocked == false && !this.Purchased)
+        {
+            this.Owner.Sprite.Color = this.LockedColor;
         }
     }
 }
