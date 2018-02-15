@@ -1,0 +1,12 @@
+class LookAtShip : ZilchComponent
+{
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        this.Owner.Orientation.LookAtDirection(Real3(0.0, 0.0, this.Owner.Transform.Translation.Z));
+    }
+}
