@@ -42,7 +42,7 @@ Cog =
 		bool SendsMessages = true,
 		bool Seamless = true,
 		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+		string SerializedGroupName = "5afe68729db9df55:PlayerCollisionGroup",
 		Vec3 Offset = [-0.100000001, 0, 0],
 		Vec3 Size = [0.25, 0.75, 0.5],
 	},
@@ -66,7 +66,6 @@ Cog =
 		},
 		Vec2 MaxPlayerSpeeds = [10, 10],
 		Vec2 MinPlayerSpeeds = [-10, -10],
-		bool ControlDampeners = false,
 	},
 	RigidBody = 
 	{
@@ -118,8 +117,16 @@ Cog =
 	CheatSystem = 
 	{
 	},
-	HealthRegen = 
+	Player_Block_Placing = 
 	{
+		int PlacingRange = 100,
+		Enum IronBlockPlaceKey = U,
+		int IronBlockIronCost = 1,
+		string IronBlockArchetype = "5a62997e9d4c62f2:IronBlock",
+		Enum PipePlaceKey = R,
+		int PipeIronCost = 0,
+		int PipeAluminiumCost = 0,
+		string PipeArchetype = "5a62ce81be38d76e:OxygenPipe",
 	},
 	Hierarchy = 
 	{

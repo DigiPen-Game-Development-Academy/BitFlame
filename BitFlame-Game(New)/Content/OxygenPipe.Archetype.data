@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [8.5, 4.5, 0],
+		Vec3 Translation = [16, 4.5, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -24,7 +24,7 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [0, 0.905450106, 0.995000005, 0.999899983],
+		Vec4 Color = [0, 0.905449688, 0.996078432, 0.999899983],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -48,7 +48,58 @@ Cog =
 	},
 	OxygenPipe_Function = 
 	{
-		int ConnectingRange = 64,
-		bool Connected = false,
+		int ConnectingRange = 100,
+		bool StayConnected = false,
+		CogPath Ship = 
+		{
+			string Path = ":/Ship",
+			bool ErrorOnResolveToNull = false,
+			bool ErrorOnPathCantCompute = false,
+			bool ErrorOnDirectLinkFail = false,
+			bool UpdateCogOnPathChange = true,
+			bool UpdatePathOnCogChange = true,
+			bool UpdateCogOnInitialize = true,
+			bool ResolvedNullErrorOccurred = false,
+			uint ResolvedCog = 2,
+			CogPathPreference PathPreference0 = CogRelative,
+			CogPathPreference PathPreference1 = SpaceRelative,
+			CogPathPreference PathPreference2 = Absolute,
+		},
+	},
+	Health = 
+	{
+		float Health = 5,
+		string ArchetypetoSpawnOnDeath = "",
+	},
+	Hierarchy = 
+	{
+		ArchetypeInstance = 
+		{
+			string Name = "5afe50e870042ebb:Oxygen_Field",
+			LinkId = 
+			{
+				uint Id = 3,
+			},
+			Transform = 
+			{
+				Vec3 Translation = [0, 0, 0],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Area = 
+			{
+				Vec2 Size = [10, 10],
+				Location Origin = Center,
+			},
+			Named = 
+			{
+				string Name = "Oxygen_Field",
+			},
+			EditorFlags = 
+			{
+				bool Locked = true,
+				bool Hidden = false,
+			},
+		},
 	},
 },
