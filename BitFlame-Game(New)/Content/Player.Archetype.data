@@ -66,6 +66,7 @@ Cog =
 		},
 		Vec2 MaxPlayerSpeeds = [10, 10],
 		Vec2 MinPlayerSpeeds = [-10, -10],
+		bool ControlDampeners = false,
 	},
 	RigidBody = 
 	{
@@ -117,10 +118,8 @@ Cog =
 	CheatSystem = 
 	{
 	},
-	Player_Block_Placing = 
+	HealthRegen = 
 	{
-		Enum IronBlockPlaceKey = U,
-		string IronBlockArchetype = "5a62997e9d4c62f2:IronBlock",
 	},
 	Hierarchy = 
 	{

@@ -25,8 +25,6 @@ class Ship_Interaction : ZilchComponent
     // Store the space where our HUD is so that we can access and destroy it
     var HUDSpace : Space = null;
     
-    var HUDCreated : Boolean = false; 
-    
     var TimeKeeper : Real = 0;
     
     [Property] var OxygenRechargeRate : Real = 0.05;
@@ -39,6 +37,15 @@ class Ship_Interaction : ZilchComponent
         Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
         Zero.Connect(this.Owner, Events.CollisionPersisted, this.OnCollisionPersisted);
         Zero.Connect(this.Owner, Events.CollisionEnded, this.OnCollisionEnded);
+        
+        // Create the HUD space and then load our HUD level into it
+        this.HUDSpace = this.GameSession.CreateNamedSpace("HUDSpace", this.SpaceArchetype);
+        
+        //Load the level specified in the HUDLevel Property above
+        this.HUDSpace.LoadLevel(Level.ShipMenuLevel);    
+        
+        
+        this.HUDSpace.LevelSettings.HUDSpaceReferences.MainSpaceRef = this.Space;
     }
 
     function OnCollisionPersisted(event : CollisionEvent)
@@ -60,33 +67,8 @@ class Ship_Interaction : ZilchComponent
                 this.GameSession.GameVars.PlayerOxygen += this.OxygenRechargeRate;
             }
             
-            this.GameSession.GameVars.PlayerOxygen = Math.Clamp(this.GameSession.GameVars.PlayerOxygen, 0, 10);
+            this.GameSession.GameVars.PlayerOxygen = Math.Clamp(this.GameSession.GameVars.PlayerOxygen, 0, this.GameSession.GameVars.PlayerMaxOxygen);
             
-            if(this.HUDSpace != null && Zero.Keyboard.KeyIsPressed(this.ShipAccessKey))
-            {
-                var arm = player.FindChildByName("Arm");
-                arm.PlayerShooting.CanShoot = true;
-                this.HUDSpace.Destroy();
-            }
-            
-            if(this.HUDSpace == null && Zero.Keyboard.KeyIsPressed(this.ShipAccessKey))
-            {
-                //call the ship menu
-                // Create the HUD space and then load our HUD level into it
-                this.HUDSpace = this.GameSession.CreateNamedSpace("HUDSpace", this.SpaceArchetype);
-                
-                //Load the level specified in the HUDLevel Property above
-                this.HUDSpace.LoadLevel(Level.ShipMenuLevel);    
-                
-                var arm = player.FindChildByName("Arm");
-                arm.PlayerShooting.CanShoot = false;
-                        
-                if(player.RigidBody != null)
-                {
-                    player.RigidBody.Velocity = Real3(0, 0, 0);
-                }
-                
-            }
             
         }
     }
@@ -120,7 +102,8 @@ class Ship_Interaction : ZilchComponent
                 {
                     arm.PlayerShooting.CanShoot = true;
                 }
-                this.HUDSpace.Destroy();
+                
+                this.GameSession.GameVars.SlideIn = false;
             } 
         }
     }

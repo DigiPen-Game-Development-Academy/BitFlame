@@ -102,7 +102,7 @@ Level =
 			},
 			CogPath OxygenBarRef = 
 			{
-				string Path = ":/OxygenBar",
+				string Path = ":/Camera/OxygenGauge",
 				bool ErrorOnResolveToNull = false,
 				bool ErrorOnPathCantCompute = false,
 				bool ErrorOnDirectLinkFail = false,
@@ -110,7 +110,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 4294967293,
+				uint ResolvedCog = 4,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -125,7 +125,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 4,
+				uint ResolvedCog = 5,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -136,7 +136,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 5,
+			uint Id = 6,
 		},
 		Named = 
 		{
@@ -144,7 +144,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [15.9400682, -4.3304882, 74.2286224],
+			Vec3 Translation = [11.0184002, -8.44693279, 74.2286224],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -156,7 +156,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 12.2456656,
+			float Size = 14.9568939,
 		},
 		EditorCameraController = 
 		{
@@ -164,7 +164,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [15.9400682, -4.3304882, 24.2286243],
+			Vec3 LookTarget = [11.0184002, -8.44693279, 24.2286243],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -288,7 +288,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 6,
+							uint Id = 7,
 						},
 						Named = 
 						{
@@ -323,7 +323,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 7,
+							uint Id = 8,
 						},
 						Named = 
 						{
@@ -361,7 +361,7 @@ Level =
 				string Name = "5ac104f6bc42814b:OxygenGauge",
 				LinkId = 
 				{
-					uint Id = 8,
+					uint Id = 4,
 				},
 				Transform = 
 				{
@@ -378,7 +378,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 4,
+					uint Id = 5,
 				},
 				Named = 
 				{

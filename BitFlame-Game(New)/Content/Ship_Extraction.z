@@ -1,0 +1,37 @@
+class Ship_Extraction : ZilchComponent
+{
+    [Property] var ShipExtractionButton : Keys = Keys.E;
+    
+    var There : Boolean = false;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(this.GameSession.GameVars.SlideIn)
+        {
+            if(Math.ApproximatelyEqual(this.Owner.Transform.Translation.Y, 0.0, 0.1))
+            {
+                this.There = true;
+            }
+            else if(!this.There)
+            {
+                Action.Property(this.Space.Actions, @this.Owner.Transform.Translation, Real3(this.Owner.Transform.Translation.X,0.0,40.0), 0.05, Ease.SinIn);
+            }
+        }
+        else
+        {
+            this.There = false;
+            
+            Action.Property(this.Space.Actions, @this.Owner.Transform.Translation, Real3(this.Owner.Transform.Translation.X,-20.0,40.0), 0.05, Ease.SinIn);
+        }
+        
+        if(Zero.Keyboard.KeyIsPressed(this.ShipExtractionButton))
+        {
+            this.GameSession.GameVars.SlideIn = !this.GameSession.GameVars.SlideIn;
+        }
+    }
+}

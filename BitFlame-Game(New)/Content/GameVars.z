@@ -10,11 +10,13 @@ class GameVars : ZilchComponent
 {
     //setable starting values for the player 
     [Property] var StartingPlayerHealth : Integer = 0; 
+    [Property] var PlayerMaxHealth : Integer = 0;
     [Property] var StartingPlayerResources : Integer = 0; 
     [Property] var StartingCopper : Integer = 0;
     [Property] var StartingPlayerTitanium : Integer = 0;
     [Property] var StartingPlayerAluminium : Integer = 0;
     [Property] var StartingPlayerOxygen : Real = 0; 
+    [Property] var PlayerMaxOxygen : Real = 0; 
     [Property] var StartingUpgradePoints : Integer = 0; 
     
     //upgrade flags
@@ -57,6 +59,8 @@ class GameVars : ZilchComponent
     var PlayerLosingOxygen : Boolean = true;
     
     var NewLevel : Level = null;
+    
+    var SlideIn : Boolean = false;
     
     //initialization function, runs when the owner object is created
     function Initialize(init : CogInitializer)
