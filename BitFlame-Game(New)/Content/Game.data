@@ -22,11 +22,13 @@ GameSession =
 	GameVars = 
 	{
 		int StartingPlayerHealth = 10,
+		int PlayerMaxHealth = 10,
 		int StartingPlayerResources = 0,
 		int StartingCopper = 0,
 		int StartingPlayerTitanium = 0,
 		int StartingPlayerAluminium = 0,
 		float StartingPlayerOxygen = 10,
+		float PlayerMaxOxygen = 10,
 		int StartingUpgradePoints = 1,
 		bool HasUpgrade_SpreadI = false,
 		bool HasUpgrade_SpreadII = false,

@@ -39,7 +39,7 @@ class SetXToVariable : ZilchComponent
         
         if(this.Type == DisplayType.Health)
         {
-            this.Owner.Area.Size = Real2(this.GameSession.GameVars.PlayerHealth, 1.0);
+            this.Owner.Area.Size = Real2((this.GameSession.GameVars.PlayerHealth * this.GameSession.GameVars.PlayerMaxHealth) / this.GameSession.GameVars.PlayerMaxHealth, 1.0);
         }
     }
 }

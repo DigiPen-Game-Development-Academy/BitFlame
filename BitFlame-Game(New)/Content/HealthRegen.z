@@ -1,0 +1,27 @@
+class HealthRegen : ZilchComponent
+{
+    var HealthRegenAmount : Integer = 1;
+    
+    var EventTimePasted : Real = 0.0;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        this.EventTimePasted += event.Dt;
+        
+        if(this.EventTimePasted >= 1.0)
+        {
+            if(this.GameSession.GameVars.PlayerHealth < this.GameSession.GameVars.PlayerMaxHealth)
+            {
+                this.GameSession.GameVars.PlayerHealth += this.HealthRegenAmount;
+            }
+            
+            this.EventTimePasted = 0.0;
+        }
+        
+    }
+}

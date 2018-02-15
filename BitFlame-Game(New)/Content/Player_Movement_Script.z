@@ -24,7 +24,8 @@ class Player_Movement_Script : ZilchComponent
     
     //dependency will guarantee the owner has a rigidbody, also allows you to reference it like this 'this.rigidBody' instead of 'this.Owner.RigidBody'
     [Dependency] var RigidBody : RigidBody = null;
-
+    
+    [Property] var ControlDampeners : Boolean = false;
     
     function Initialize(init : CogInitializer)
     {
@@ -48,6 +49,20 @@ class Player_Movement_Script : ZilchComponent
         var particle =  this.MovementParticleSystem.Cog;
         
         var moving : Boolean = false;
+        
+        if(Zero.Keyboard.KeyIsPressed(Keys.Z))
+        {
+            this.ControlDampeners = !this.ControlDampeners;
+        }
+        
+        if(this.ControlDampeners)
+        {
+            this.Owner.IgnoreSpaceEffects.IgnoreDrag = false;
+        }
+        else
+        {
+            this.Owner.IgnoreSpaceEffects.IgnoreDrag = true;
+        }
         
         // If player is pushing W move player up
         if(Zero.Keyboard.KeyIsDown(Keys.W))
