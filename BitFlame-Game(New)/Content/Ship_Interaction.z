@@ -25,11 +25,31 @@ class Ship_Interaction : ZilchComponent
     // Store the space where our HUD is so that we can access and destroy it
     var HUDSpace : Space = null;
     
+<<<<<<< HEAD
     var HUDCreated : Boolean = false; 
    
+=======
+    var TimeKeeper : Real = 0;
+    
+    [Property] var OxygenRechargeRate : Real = 0.05;
+    
+>>>>>>> 31551697b2f228a5f42f932f0197ab6790370477
     function Initialize(init : CogInitializer)
     {       
         Zero.Connect(this.Owner, Events.CollisionPersisted, this.OnCollisionPersisted);
+<<<<<<< HEAD
+=======
+        Zero.Connect(this.Owner, Events.CollisionEnded, this.OnCollisionEnded);
+        
+        // Create the HUD space and then load our HUD level into it
+        this.HUDSpace = this.GameSession.CreateNamedSpace("HUDSpace", this.SpaceArchetype);
+        
+        //Load the level specified in the HUDLevel Property above
+        this.HUDSpace.LoadLevel(Level.ShipMenuLevel);    
+        
+        
+        this.HUDSpace.LevelSettings.HUDSpaceReferences.MainSpaceRef = this.Space;
+>>>>>>> 31551697b2f228a5f42f932f0197ab6790370477
     }
 
     function OnCollisionPersisted(event : CollisionEvent)
@@ -39,6 +59,7 @@ class Ship_Interaction : ZilchComponent
         if(player.Player_Movement_Script != null)
         {
             //put hover feed back here
+<<<<<<< HEAD
             if(this.HUDSpace != null && Zero.Keyboard.KeyIsPressed(this.ShipAccessKey))
             {
                 var arm = player.FindChildByName("Arm");
@@ -63,6 +84,58 @@ class Ship_Interaction : ZilchComponent
                     player.RigidBody.Velocity = Real3(0, 0, 0);
                 }
             }
+=======
+            
+            //if the OxygenRechargeTime value is smaller than the timer passed since last reset
+            if(this.Space.GameTimer.Timer - this.TimeKeeper >= 0.01)
+            {
+                //debug
+                //Console.WriteLine("Beep");
+                //reset timer
+                this.TimeKeeper = this.Space.GameTimer.Timer;
+                //add one oxygen to the gamevar
+                this.GameSession.GameVars.PlayerOxygen += this.OxygenRechargeRate;
+            }
+            
+            this.GameSession.GameVars.PlayerOxygen = Math.Clamp(this.GameSession.GameVars.PlayerOxygen, 0, this.GameSession.GameVars.PlayerMaxOxygen);
+            
+            
+        }
+    }
+
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        var player = event.OtherObject;
+           
+        if(player.Player_Movement_Script != null)
+        {      
+            //put hover feed back here
+            
+            this.GameSession.GameVars.PlayerLosingOxygen = false;
+        }
+    }
+    
+    function OnCollisionEnded(event : CollisionEvent)
+    {
+        var player = event.OtherObject;
+        
+        if(player.Player_Movement_Script != null)
+        {
+            //end hover feed back here       
+            
+            this.GameSession.GameVars.PlayerLosingOxygen = true;
+            
+            if(this.HUDSpace != null)
+            {
+                var arm = player.FindChildByName("Arm");
+                if(arm != null)
+                {
+                    arm.PlayerShooting.CanShoot = true;
+                }
+                
+                this.GameSession.GameVars.SlideIn = false;
+            } 
+>>>>>>> 31551697b2f228a5f42f932f0197ab6790370477
         }
     }
     
