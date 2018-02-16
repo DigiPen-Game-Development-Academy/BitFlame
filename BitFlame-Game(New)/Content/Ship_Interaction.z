@@ -25,20 +25,16 @@ class Ship_Interaction : ZilchComponent
     // Store the space where our HUD is so that we can access and destroy it
     var HUDSpace : Space = null;
     
-<<<<<<< HEAD
     var HUDCreated : Boolean = false; 
    
-=======
     var TimeKeeper : Real = 0;
     
     [Property] var OxygenRechargeRate : Real = 0.05;
     
->>>>>>> 31551697b2f228a5f42f932f0197ab6790370477
     function Initialize(init : CogInitializer)
     {       
         Zero.Connect(this.Owner, Events.CollisionPersisted, this.OnCollisionPersisted);
-<<<<<<< HEAD
-=======
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
         Zero.Connect(this.Owner, Events.CollisionEnded, this.OnCollisionEnded);
         
         // Create the HUD space and then load our HUD level into it
@@ -49,7 +45,6 @@ class Ship_Interaction : ZilchComponent
         
         
         this.HUDSpace.LevelSettings.HUDSpaceReferences.MainSpaceRef = this.Space;
->>>>>>> 31551697b2f228a5f42f932f0197ab6790370477
     }
 
     function OnCollisionPersisted(event : CollisionEvent)
@@ -59,32 +54,16 @@ class Ship_Interaction : ZilchComponent
         if(player.Player_Movement_Script != null)
         {
             //put hover feed back here
-<<<<<<< HEAD
             if(this.HUDSpace != null && Zero.Keyboard.KeyIsPressed(this.ShipAccessKey))
             {
                 var arm = player.FindChildByName("Arm");
                 arm.PlayerShooting.CanShoot = true;
-                this.HUDSpace.Destroy();
-            }
-            
-            if(this.HUDSpace == null && Zero.Keyboard.KeyIsPressed(this.ShipAccessKey))
-            {
-                //call the ship menu
-                // Create the HUD space and then load our HUD level into it
-                this.HUDSpace = this.GameSession.CreateNamedSpace("HUDSpace", this.SpaceArchetype);
                 
-                //Load the level specified in the HUDLevel Property above
-                this.HUDSpace.LoadLevel(Level.ShipMenuLevel);    
-                
-                var arm = player.FindChildByName("Arm");
-                arm.PlayerShooting.CanShoot = false;
-                        
-                if(player.RigidBody != null)
+                 if(player.RigidBody != null)
                 {
                     player.RigidBody.Velocity = Real3(0, 0, 0);
                 }
             }
-=======
             
             //if the OxygenRechargeTime value is smaller than the timer passed since last reset
             if(this.Space.GameTimer.Timer - this.TimeKeeper >= 0.01)
@@ -135,7 +114,6 @@ class Ship_Interaction : ZilchComponent
                 
                 this.GameSession.GameVars.SlideIn = false;
             } 
->>>>>>> 31551697b2f228a5f42f932f0197ab6790370477
         }
     }
     
