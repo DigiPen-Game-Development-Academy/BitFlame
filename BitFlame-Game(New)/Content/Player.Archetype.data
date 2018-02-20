@@ -128,6 +128,7 @@ Cog =
 		int PipeIronCost = 0,
 		int PipeAluminiumCost = 0,
 		string PipeArchetype = "5a62ce81be38d76e:OxygenPipe",
+		string PrePipeArchetype = "5a6dd155563b46c8:OxygenPipe_Preview",
 	},
 	HealthRegen = 
 	{
@@ -346,6 +347,41 @@ Cog =
 			},
 			ChangeParticleEffects = 
 			{
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 6,
+			},
+			Named = 
+			{
+				string Name = "E Button",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [0, 1.5, 0],
+				Vec3 Scale = [0.699999988, 0.699999988, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5af7e8354f08a3dc:E button being pressed_Animation",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
 			},
 		},
 	},
