@@ -78,9 +78,21 @@ class Ship_Interaction : ZilchComponent
     function OnCollisionEnded(event : CollisionEvent)
     {
         
-        this.Space.FindObjectByName("Player").FindChildByName("E Button").Sprite.Visible = false;
+        var player = this.Space.FindObjectByName("Player");
         
-        var player = event.OtherObject;
+        if(player == null)
+        {
+            return;
+        }
+        
+        var playerButton = player.FindChildByName("E Button");
+        
+        if(playerButton == null)
+        {
+            return;
+        }
+        
+        playerButton.Sprite.Visible = false;
         
         if(player.Player_Movement_Script != null)
         {
