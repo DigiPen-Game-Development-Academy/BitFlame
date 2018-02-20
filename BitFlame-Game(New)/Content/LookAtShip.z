@@ -7,6 +7,6 @@ class LookAtShip : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        this.Owner.Orientation.LookAtDirection(Real3(0.0, 0.0, this.Owner.Transform.Translation.Z));
+        this.Owner.Orientation.LookAtPoint(Real3(0.0, 0.0, this.Owner.Transform.WorldTranslation.Z));
     }
 }
