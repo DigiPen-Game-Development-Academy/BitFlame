@@ -3,7 +3,7 @@ ImageContent =
 	TextureBuilder = 
 	{
 		string Name = "Oxygen_Pipe_Block",
-		uint64 ResourceId = 5a6dcca35a3e0648,
+		uint64 ResourceId = 5af7c0b69d5f0fb3,
 		BuilderTextureType TextureType = Texture2D,
 		RgbUsage RgbUsage = Color,
 		AlphaUsage AlphaUsage = Transparency,
