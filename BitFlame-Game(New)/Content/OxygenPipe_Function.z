@@ -15,13 +15,13 @@ class OxygenPipe_Function : ZilchComponent
     
     [Property] var Origin : Boolean = false;
     
-    var ConnectedToOrigin : Boolean = false;
-    
     var Connected : Boolean = false;
     
     [Property] var Ship : CogPath;
     
-    var ConnectedTo : Cog; 
+    var ConnectedTo : Cog;
+    
+    var ConnectionFound : Cog; 
     
     var HasConnected : Boolean = false;
     
@@ -38,36 +38,18 @@ class OxygenPipe_Function : ZilchComponent
         if(this.Origin)
         {
             this.Connected = true;
-        }    
-                        
-        if(this.Connected)
-        {  
-            //check all the oxygen pipes
-            foreach(var objects in this.Space.FindAllObjectsByName("OxygenPipe"))
-            {    
-                //try connecting them
-                this.PipeConnect(objects);
-            }
-             
+            return;
+        }          
+       
+        Console.WriteLine(this.Connected);
+        
+        if(!this.Connected)
+        {      
             if(field.Oxygen_Regen_Field != null)
             {
-                field.Oxygen_Regen_Field.Active = true;
+                field.Oxygen_Regen_Field.Active = false;
             }
             
-            if(this.ConnectedTo != null)
-            {   
-                var debugLine = DebugLine();
-                //Sets parameters for the debug line
-                debugLine.Start(this.Transform.Translation);
-                debugLine.End(this.ConnectedTo.Transform.Translation);
-                debugLine.Float4Color(Real4(0, 100,100, 10));
-                debugLine.Width(Real(4));
-                //draw it
-                debugLine.Draw();
-            }
-        }
-        else if(!this.Connected)
-        {      
             //check all the oxygen pipes
             foreach(var objects in this.Space.FindAllObjectsByName("OxygenPipe"))
             {    
@@ -75,27 +57,48 @@ class OxygenPipe_Function : ZilchComponent
                 this.PipeConnect(objects);
             }   
             //check if connection was found
-            if(this.HasConnected)
+            if(this.HasConnected && this.ConnectionFound.OxygenPipe_Function.ConnectedTo != this.Owner)
             {
                 this.Connected = true;
+                this.ConnectedTo = this.ConnectionFound;             
             }
-            
-            if(field.Oxygen_Regen_Field != null)
-            {
-                field.Oxygen_Regen_Field.Active = false;
-            }
+            this.HasConnected = false;
         }
         
-        if(this.ConnectedTo != null)
-        {
-            if(this.ConnectedTo.OxygenPipe_Function.Origin)
+        if(this.Connected)
+        {  
+            if(field.Oxygen_Regen_Field != null)
             {
-                this.ConnectedToOrigin = true;
+                field.Oxygen_Regen_Field.Active = true;
             }
-            else
+            
+            if(this.ConnectedTo != null)
+            {   
+                var end = this.ConnectedTo.Transform.Translation;
+                end.Y -= 1;
+                
+                var debugLine = DebugLine();
+                //Sets parameters for the debug line
+                debugLine.Start(this.Transform.Translation);
+                debugLine.End(end);
+                debugLine.Float4Color(Real4(0, 100,100, 10));
+                debugLine.Width(Real(4));
+                //draw it
+                debugLine.Draw();
+            }
+            
+            //check all the oxygen pipes
+            foreach(var objects in this.Space.FindAllObjectsByName("OxygenPipe"))
+            {    
+                //try connecting them
+                this.PipeConnect(objects);
+            }
+            //check if connection wasn't found
+            if(!this.HasConnected)
             {
-                this.ConnectedToOrigin = false;
+                this.Connected = false;
             }
+            this.HasConnected = false;
         }
     }
     
@@ -104,10 +107,12 @@ class OxygenPipe_Function : ZilchComponent
         var connectingVector = object.Transform.Translation - this.Transform.Translation;
         
         var connectingLength = (connectingVector.X * connectingVector.X) + (connectingVector.Y + connectingVector.Y);
-        
+       
+        Console.WriteLine("Test 4"); 
         //only connect to other pipes that are already connected
         if(object.OxygenPipe_Function.Connected == true)
         {   
+            Console.WriteLine("Test 3");
             //make sure the other pipe is in range
             if(connectingLength <= this.ConnectingRange)
             { 
@@ -130,12 +135,12 @@ class OxygenPipe_Function : ZilchComponent
         var castResult = this.Space.PhysicsSpace.CastRayFirstFiltered(ray, filter);
         
         var objectHit = castResult.ObjectHit;
-        
+        Console.WriteLine("Test 2");
         //make sure the object hit is the other pipe, if it's not then there's something in the way
         if(objectHit == object)
         {
             Console.WriteLine("Test 1");
-            this.ConnectedTo = object;
+            this.ConnectionFound = object;
             this.HasConnected = true;
         }
     }
