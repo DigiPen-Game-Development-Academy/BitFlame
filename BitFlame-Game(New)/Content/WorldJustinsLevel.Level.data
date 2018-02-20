@@ -192,6 +192,10 @@ Level =
 		{
 			string HUD = "5a206dc95390f17e:HUD",
 		},
+		CreateCompass = 
+		{
+			string Compass = "5a2062940655f3d6:Compass",
+		},
 	},
 	Cog = 
 	{

@@ -65,6 +65,7 @@ Cog =
 			CogPathPreference PathPreference1 = SpaceRelative,
 			CogPathPreference PathPreference2 = Absolute,
 		},
+		float SpriteWidth = 0.25,
 	},
 	Health = 
 	{
