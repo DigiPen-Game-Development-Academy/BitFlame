@@ -1,0 +1,73 @@
+enum UpgradeType{FireRate, BulletSpeed,  Health, Oxygen, OxygenRegen, HealthRegen, Speed, MaxSpeed, InercialDampeners, Generik}
+
+class UpgradeSpecifiedVariable : ZilchComponent
+{
+    [Property] var UpgradeType  : UpgradeType = UpgradeType.Generik;
+    
+    [Property] var UpgradeAmount : Real = 0.0;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Owner, Events.MouseDown, this.OnMouseDown);
+    }
+
+    function OnMouseDown(event : ViewportMouseEvent)
+    {
+        if(this.Owner.UpgradePathLogic.Unlocked)
+        {
+            if(this.UpgradeType == UpgradeType.FireRate)
+            {
+                this.LevelSettings.HUDSpaceReferences.MainSpaceRef.LevelSettings.HudCreator.PlayerRef.Cog.FindChildByName("Arm").PlayerShooting.FireRate -= this.UpgradeAmount;
+                Console.WriteLine("Firerate: `this.LevelSettings.HUDSpaceReferences.MainSpaceRef.LevelSettings.HudCreator.PlayerRef.Cog.Children.Current.PlayerShooting.FireRate`");
+            }
+            else if(this.UpgradeType == UpgradeType.Health)
+            {
+                this.GameSession.GameVars.PlayerMaxHealth = this.GameSession.GameVars.PlayerMaxHealth * this.UpgradeAmount as Integer;
+                Console.WriteLine("HealthMax: `this.GameSession.GameVars.PlayerMaxHealth`");
+            }
+            else if(this.UpgradeType == UpgradeType.Oxygen)
+            {
+                this.GameSession.GameVars.PlayerMaxOxygen = this.GameSession.GameVars.PlayerMaxOxygen * this.UpgradeAmount as Integer;
+                Console.WriteLine("OxygenMax: `this.GameSession.GameVars.PlayerMaxOxygen`");
+            }
+            else if(this.UpgradeType == UpgradeType.OxygenRegen)
+            {
+                this.LevelSettings.HUDSpaceReferences.MainSpaceRef.LevelSettings.HudCreator.HUDSpace.LevelSettings.HUDSpaceReferences.OxygenBarRef.Cog.OxygenGauge.DecaySpeed -= this.UpgradeAmount;
+                Console.WriteLine("OxygenDecay: `this.LevelSettings.HUDSpaceReferences.MainSpaceRef.LevelSettings.HudCreator.HUDSpace.LevelSettings.HUDSpaceReferences.OxygenBarRef.Cog.OxygenGauge.DecaySpeed`");
+            }
+            else if(this.UpgradeType == UpgradeType.HealthRegen)
+            {
+                this.LevelSettings.HUDSpaceReferences.MainSpaceRef.LevelSettings.HudCreator.PlayerRef.Cog.HealthRegen.HealthRegenAmount += this.UpgradeAmount as Integer;
+                Console.WriteLine("HealthRegen: `this.LevelSettings.HUDSpaceReferences.MainSpaceRef.LevelSettings.HudCreator.PlayerRef.Cog.HealthRegen.HealthRegenAmount`");
+            }
+            else if(this.UpgradeType == UpgradeType.Speed)
+            {
+                this.LevelSettings.HUDSpaceReferences.MainSpaceRef.LevelSettings.HudCreator.PlayerRef.Cog.Player_Movement_Script.Speed += this.UpgradeAmount;
+                Console.WriteLine("Speed: `this.LevelSettings.HUDSpaceReferences.MainSpaceRef.LevelSettings.HudCreator.PlayerRef.Cog.Player_Movement_Script.Speed`");
+            }
+            else if(this.UpgradeType == UpgradeType.MaxSpeed)
+            {
+                this.LevelSettings.HUDSpaceReferences.MainSpaceRef.LevelSettings.HudCreator.PlayerRef.Cog.Player_Movement_Script.MaxPlayerSpeeds.XY += Real2(this.UpgradeAmount, this.UpgradeAmount);
+                this.LevelSettings.HUDSpaceReferences.MainSpaceRef.LevelSettings.HudCreator.PlayerRef.Cog.Player_Movement_Script.MinPlayerSpeeds.XY -= Real2(this.UpgradeAmount, this.UpgradeAmount);
+                
+            }
+            else if(this.UpgradeType == UpgradeType.Generik)
+            {
+                this.LevelSettings.HUDSpaceReferences.MainSpaceRef.LevelSettings.HudCreator.PlayerRef.Cog.FindChildByName("Arm").PlayerShooting.FireRate -= this.UpgradeAmount;
+                Console.WriteLine("GenerikFirerate: `this.LevelSettings.HUDSpaceReferences.MainSpaceRef.LevelSettings.HudCreator.PlayerRef.Cog.Children.Current.PlayerShooting.FireRate`");
+            }
+            else if(this.UpgradeType == UpgradeType.BulletSpeed)
+            {
+                this.LevelSettings.HUDSpaceReferences.MainSpaceRef.LevelSettings.HudCreator.PlayerRef.Cog.FindChildByName("Arm").PlayerShooting.BulletSpeed += this.UpgradeAmount;
+                Console.WriteLine("BulletSpeed: `this.LevelSettings.HUDSpaceReferences.MainSpaceRef.LevelSettings.HudCreator.PlayerRef.Cog.Children.Current.PlayerShooting.BulletSpeed`");
+            }
+            else if(this.UpgradeType == UpgradeType.InercialDampeners)
+            {
+                this.LevelSettings.HUDSpaceReferences.MainSpaceRef.LevelSettings.HudCreator.PlayerRef.Cog.Player_Movement_Script.ControlDampeners = true;
+                Console.WriteLine("Dampeners: `this.LevelSettings.HUDSpaceReferences.MainSpaceRef.LevelSettings.HudCreator.PlayerRef.Cog.Player_Movement_Script.ControlDampeners`");
+            }
+            
+            this.Owner.RemoveComponentByName("UpgradeSpecifiedVariable");
+        }
+    }
+}
