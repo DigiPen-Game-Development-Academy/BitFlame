@@ -23,7 +23,7 @@ class CheatSystem : ZilchComponent
         
         if(this.PermHealth)
         {
-            this.GameSession.GameVars.PlayerHealth = 100;
+            this.GameSession.GameVars.PlayerHealth = 10;
         }
         
         if(this.PermOxygen)

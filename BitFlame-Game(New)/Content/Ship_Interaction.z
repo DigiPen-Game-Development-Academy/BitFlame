@@ -54,6 +54,8 @@ class Ship_Interaction : ZilchComponent
             //put hover feed back here
             if(this.HUDSpace != null && Zero.Keyboard.KeyIsPressed(this.ShipAccessKey))
             {
+                this.GameSession.GameVars.SlideIn = !this.GameSession.GameVars.SlideIn;
+                
                 var arm = player.FindChildByName("Arm");
                 arm.PlayerShooting.CanShoot = true;
                 
@@ -67,11 +69,17 @@ class Ship_Interaction : ZilchComponent
 
     function OnCollisionStarted(event : CollisionEvent)
     {
-        
+        if(event.OtherObject.Name == "Player")
+        {
+            event.OtherObject.FindChildByName("E Button").Sprite.Visible = true;
+        }
     }
     
     function OnCollisionEnded(event : CollisionEvent)
     {
+        
+        this.Space.FindObjectByName("Player").FindChildByName("E Button").Sprite.Visible = false;
+        
         var player = event.OtherObject;
         
         if(player.Player_Movement_Script != null)
