@@ -144,9 +144,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [5.99802685, -3.91755247, 74.6772842],
+			Vec3 Translation = [7.82959747, -5.22640753, 74.7279816],
 			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [-0.0130874757, -0.0183235109, -0.00023986958, 0.999746501],
+			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
 		Camera = 
 		{
@@ -156,14 +156,14 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 16.5299225,
+			float Size = 36.7879715,
 		},
 		EditorCameraController = 
 		{
 			ControlMode ControlMode = ZPlane,
 			float LookDistance = 50,
-			float VerticalAngle = 0.0261800922,
-			float HorizontalAngle = 0.0366521738,
+			float VerticalAngle = 0,
+			float HorizontalAngle = 0,
 			Vec3 LookTarget = [7.82959747, -5.22640753, 24.7279835],
 			float MoveSensitivity = 1,
 		},
@@ -277,57 +277,12 @@ Level =
 		},
 		Hierarchy = 
 		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 7,
-				},
-				Named = 
-				{
-					string Name = "Compass",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [12.5, -6, -6],
-					Vec3 Scale = [4, 4, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Sprite = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5a2053f868a1ab40:SmallCompass",
-					bool RenderMask = false,
-					bool FlipX = false,
-					bool FlipY = false,
-					bool AnimationActive = true,
-					float AnimationSpeed = 1,
-					uint StartFrame = 0,
-				},
-				Orientation = 
-				{
-					Vec3 GlobalUp = [0, 0, -1],
-					Vec3 UpVector = [0, 0, 1],
-					Vec3 ForwardVector = [0, 1, 0],
-					OrientationBases DefaultBases = ForwardYUpZ,
-				},
-				LookAtShip = 
-				{
-				},
-			},
 			ArchetypeInstance = 
 			{
 				string Name = "5ac104f6bc42814b:OxygenGauge",
 				LinkId = 
 				{
-					uint Id = 8,
+					uint Id = 7,
 				},
 				Transform = 
 				{
@@ -393,7 +348,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 9,
+							uint Id = 8,
 						},
 						Named = 
 						{
@@ -428,7 +383,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 10,
+							uint Id = 9,
 						},
 						Named = 
 						{
@@ -465,7 +420,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 11,
+					uint Id = 10,
 				},
 				Named = 
 				{
@@ -539,7 +494,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 12,
+							uint Id = 11,
 						},
 						Named = 
 						{
@@ -580,7 +535,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 13,
+							uint Id = 12,
 						},
 						Named = 
 						{
@@ -618,7 +573,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 14,
+							uint Id = 13,
 						},
 						Named = 
 						{
@@ -656,7 +611,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 15,
+							uint Id = 14,
 						},
 						Named = 
 						{

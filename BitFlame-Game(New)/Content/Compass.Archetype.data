@@ -8,9 +8,13 @@ Cog =
 	{
 		string Name = "Compass",
 	},
+	Archetyped = 
+	{
+		string Name = "5a2062940655f3d6:Compass",
+	},
 	Transform = 
 	{
-		Vec3 Translation = [-15.5, 7.5, 29.5],
+		Vec3 Translation = [12.5, -6, 31],
 		Vec3 Scale = [4, 4, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -24,7 +28,7 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5a2d317f56ad65ec:Compass",
+		string SpriteSource = "5a2053f868a1ab40:SmallCompass",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -35,9 +39,9 @@ Cog =
 	Orientation = 
 	{
 		Vec3 GlobalUp = [0, 0, 1],
-		Vec3 UpVector = [0, 1, 0],
-		Vec3 ForwardVector = [-0, -0, -1],
-		OrientationBases DefaultBases = ForwardNegativeZUpY,
+		Vec3 UpVector = [0, 0, 1],
+		Vec3 ForwardVector = [0, 1, 0],
+		OrientationBases DefaultBases = ForwardYUpZ,
 	},
 	LookAtShip = 
 	{

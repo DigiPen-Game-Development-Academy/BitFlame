@@ -28,10 +28,5 @@ class Ship_Extraction : ZilchComponent
             
             Action.Property(this.Space.Actions, @this.Owner.Transform.Translation, Real3(this.Owner.Transform.Translation.X,-20.0,40.0), 0.05, Ease.SinIn);
         }
-        
-        if(Zero.Keyboard.KeyIsPressed(this.ShipExtractionButton))
-        {
-            this.GameSession.GameVars.SlideIn = !this.GameSession.GameVars.SlideIn;
-        }
     }
 }
