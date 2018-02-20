@@ -66,6 +66,7 @@ Cog =
 		},
 		Vec2 MaxPlayerSpeeds = [10, 10],
 		Vec2 MinPlayerSpeeds = [-10, -10],
+		bool ControlDampeners = false,
 	},
 	RigidBody = 
 	{
@@ -127,6 +128,9 @@ Cog =
 		int PipeIronCost = 0,
 		int PipeAluminiumCost = 0,
 		string PipeArchetype = "5a62ce81be38d76e:OxygenPipe",
+	},
+	HealthRegen = 
+	{
 	},
 	Hierarchy = 
 	{
@@ -202,11 +206,6 @@ Cog =
 			{
 				string Name = "Space",
 			},
-			EditorFlags = 
-			{
-				bool Locked = true,
-				bool Hidden = false,
-			},
 			Transform = 
 			{
 				Vec3 Translation = [0, 0, -1],
@@ -244,11 +243,6 @@ Cog =
 			Named = 
 			{
 				string Name = "Space",
-			},
-			EditorFlags = 
-			{
-				bool Locked = true,
-				bool Hidden = false,
 			},
 			Transform = 
 			{

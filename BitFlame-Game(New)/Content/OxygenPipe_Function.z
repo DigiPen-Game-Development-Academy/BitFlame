@@ -2,7 +2,7 @@
 Filename:  OxygenPipe_Function.z
 Author: Jakob McFarland
 Contributors: NULL
-Last modified: 2/15/18
+Last modified: 2/20/18
 Brief: This Component connects the owner to other oxygen pipes and controls their visual effects
 ******************************************/
 
@@ -20,8 +20,6 @@ class OxygenPipe_Function : ZilchComponent
     
     [Property] var Ship : CogPath;
     
-    [Property] var SpriteWidth : Real = 0.25;
-    
     var ConnectedTo : Cog;
     
     var ConnectionFound : Cog; 
@@ -34,6 +32,12 @@ class OxygenPipe_Function : ZilchComponent
     {
         this.ConnectedTo = this.Owner;
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+    }
+
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        
     }
 
     function OnLogicUpdate(event : UpdateEvent)
@@ -98,11 +102,11 @@ class OxygenPipe_Function : ZilchComponent
                 if(pipe != null)
                 {
                              
-                    var length = this.ConnectionDistance;
+                    //var length = this.ConnectionDistance;
         
-                    var width = this.SpriteWidth;
+                    //var width = this.SpriteWidth;
 
-                    var size = Real2(length, width);
+                   // var size = Real2(length, width);
 
                     // We set the Area component's size based on these length and width values
                     //pipe.Area.Size = size;
@@ -140,7 +144,7 @@ class OxygenPipe_Function : ZilchComponent
     {
         var connectingVector = object.Transform.Translation - this.Transform.Translation;
         
-        var connectingLength = (connectingVector.X * connectingVector.X) + (connectingVector.Y + connectingVector.Y);
+        var connectingLength = (connectingVector.X * connectingVector.X) + (connectingVector.Y * connectingVector.Y);
        
         //Console.WriteLine("Test 4"); 
         //only connect to other pipes that are already connected

@@ -12,11 +12,6 @@ Cog =
 	{
 		string Name = "5afe50e870042ebb:Oxygen_Field",
 	},
-	EditorFlags = 
-	{
-		bool Locked = true,
-		bool Hidden = false,
-	},
 	Transform = 
 	{
 		Vec3 Translation = [0, 0, 0],
@@ -32,7 +27,7 @@ Cog =
 		Vec4 Color = [0, 0.670000076, 1, 0.400000006],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
-		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		string SpriteLayer = "5a9080fbe932ac90:OxygenPipe",
 		string SpriteSource = "5274db4c2e7c11f9:Circle",
 		bool RenderMask = false,
 		bool FlipX = false,
