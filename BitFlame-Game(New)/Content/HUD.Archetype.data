@@ -38,57 +38,12 @@ Cog =
 	},
 	Hierarchy = 
 	{
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 2,
-			},
-			Named = 
-			{
-				string Name = "Compass",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [12.5, -6, -6],
-				Vec3 Scale = [4, 4, 1],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			Sprite = 
-			{
-				bool Visible = true,
-				bool VisibilityCulling = true,
-				bool VisibilityEvents = true,
-				bool CastShadows = false,
-				Vec4 Color = [1, 1, 1, 1],
-				BlendMode BlendMode = Alpha,
-				SpriteGeometryMode GeometryMode = ZPlane,
-				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5a2053f868a1ab40:SmallCompass",
-				bool RenderMask = false,
-				bool FlipX = false,
-				bool FlipY = false,
-				bool AnimationActive = true,
-				float AnimationSpeed = 1,
-				uint StartFrame = 0,
-			},
-			Orientation = 
-			{
-				Vec3 GlobalUp = [0, 0, -1],
-				Vec3 UpVector = [0, 0, 1],
-				Vec3 ForwardVector = [0, 1, 0],
-				OrientationBases DefaultBases = ForwardYUpZ,
-			},
-			LookAtShip = 
-			{
-			},
-		},
 		ArchetypeInstance = 
 		{
 			string Name = "5ac104f6bc42814b:OxygenGauge",
 			LinkId = 
 			{
-				uint Id = 3,
+				uint Id = 2,
 			},
 			Transform = 
 			{
@@ -105,7 +60,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 4,
+				uint Id = 3,
 			},
 			Named = 
 			{
@@ -154,7 +109,7 @@ Cog =
 				{
 					LinkId = 
 					{
-						uint Id = 5,
+						uint Id = 4,
 					},
 					Named = 
 					{
@@ -189,7 +144,7 @@ Cog =
 				{
 					LinkId = 
 					{
-						uint Id = 6,
+						uint Id = 5,
 					},
 					Named = 
 					{
@@ -226,7 +181,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 7,
+				uint Id = 6,
 			},
 			Named = 
 			{
@@ -262,7 +217,7 @@ Cog =
 				{
 					LinkId = 
 					{
-						uint Id = 8,
+						uint Id = 7,
 					},
 					Named = 
 					{
@@ -300,7 +255,7 @@ Cog =
 				{
 					LinkId = 
 					{
-						uint Id = 9,
+						uint Id = 8,
 					},
 					Named = 
 					{
@@ -341,7 +296,7 @@ Cog =
 				{
 					LinkId = 
 					{
-						uint Id = 10,
+						uint Id = 9,
 					},
 					Named = 
 					{
@@ -379,7 +334,7 @@ Cog =
 				{
 					LinkId = 
 					{
-						uint Id = 11,
+						uint Id = 10,
 					},
 					Named = 
 					{
@@ -417,7 +372,7 @@ Cog =
 				{
 					LinkId = 
 					{
-						uint Id = 12,
+						uint Id = 11,
 					},
 					Named = 
 					{
