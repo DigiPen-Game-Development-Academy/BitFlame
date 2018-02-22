@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [3.83912849, -2.72691655, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [2, 2, 2],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -40,7 +40,7 @@ Cog =
 	{
 		string VoxelArchetype = "5a1180f76f978cdf:AssteroidChunk",
 		float VoxelSize = 1,
-		int QuadCount = 16,
+		int QuadCount = 18,
 	},
 	Hierarchy = 
 	{

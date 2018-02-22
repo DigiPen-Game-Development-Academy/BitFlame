@@ -133,6 +133,10 @@ Level =
 		Level_ChangeLevel = 
 		{
 		},
+		EscapeHandler = 
+		{
+			bool ApplyQuit = false,
+		},
 	},
 	Cog = 
 	{
