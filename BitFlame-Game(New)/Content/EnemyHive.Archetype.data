@@ -38,7 +38,7 @@ Cog =
 	},
 	Health = 
 	{
-		float Health = 30,
+		float Health = 10,
 		string ArchetypetoSpawnOnDeath = "5a08fb7240d5e7ed:ExplosionParticleEffect",
 	},
 	HiveSpawner = 
@@ -63,6 +63,10 @@ Cog =
 	{
 		float DropAmount = 0,
 		float ShrinkAmount = 200,
+		Vec4 AluminiumColor = [0, 0, 0, 1],
+		Vec4 CopperColor = [0, 0, 0, 1],
+		Vec4 IronColor = [0, 0, 0, 1],
+		Vec4 TitaniumColor = [0, 0, 0, 1],
 		string AluminiumArchetype = "5a6ca514b81d8e50:Game_AluminiumOre_Pickup",
 		string CopperArchetype = "5a6cae91a47b14d7:Game_CopperOre_Pickup",
 		string IronArchetype = "5a86165eb2745571:Game_ResourceOre_Pickup",

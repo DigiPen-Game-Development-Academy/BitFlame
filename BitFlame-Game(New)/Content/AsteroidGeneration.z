@@ -397,6 +397,8 @@ class Generator : ZilchComponent
                 currentVoxel.Sprite.SpriteSource = currentVoxel.InnerSpriteSources[diagonalIndex]();
                 currentVoxel.Owner.MeshCollider.PhysicsMesh = currentVoxel.InnerPhysicsMeshes[diagonalIndex]();
             }
+            
+            currentVoxel.Owner.Asteroid_Mining.Setup();
         }
     }
 }
