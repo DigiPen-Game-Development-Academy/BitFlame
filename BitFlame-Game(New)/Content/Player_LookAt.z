@@ -20,6 +20,11 @@ class Player_LookAt : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        this.Owner.Orientation.LookAtPointWithUp(this.Space.FindObjectByName("Player").Transform.Translation, Real3(0.0,0.0,1.0));
+        var player = this.Space.FindObjectByName("Player");
+        
+        if(player != null)
+        {
+            this.Owner.Orientation.LookAtPointWithUp(this.Space.FindObjectByName("Player").Transform.Translation, Real3(0.0,0.0,1.0));
+        }
     }
 }

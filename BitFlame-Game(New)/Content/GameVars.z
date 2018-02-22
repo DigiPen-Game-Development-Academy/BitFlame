@@ -49,6 +49,7 @@ class GameVars : ZilchComponent
     var PlayerOxygen: Real;
     var PlayerUpgradePoints : Integer;
     
+    
     //ship repair
     var ShipRepaired : Boolean = false;
     
@@ -59,6 +60,8 @@ class GameVars : ZilchComponent
     var PlayerLosingOxygen : Boolean = true;
     
     var NewLevel : Level = null;
+        
+    var DestroyRespawnMenu : Boolean = false;
     
     var SlideIn : Boolean = false;
     

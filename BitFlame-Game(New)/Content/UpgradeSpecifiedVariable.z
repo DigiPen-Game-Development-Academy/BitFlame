@@ -9,6 +9,47 @@ class UpgradeSpecifiedVariable : ZilchComponent
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Owner, Events.MouseDown, this.OnMouseDown);
+        
+        if(this.UpgradeType == UpgradeType.BulletSpeed)
+        {
+            
+        }
+        else if(this.UpgradeType == UpgradeType.FireRate)
+        {
+            
+        }
+        else if(this.UpgradeType == UpgradeType.Generik)
+        {
+            
+        }
+        else if(this.UpgradeType == UpgradeType.Health)
+        {
+            
+        }
+        else if(this.UpgradeType == UpgradeType.HealthRegen)
+        {
+            
+        }
+        else if(this.UpgradeType == UpgradeType.InercialDampeners)
+        {
+            
+        }
+        else if(this.UpgradeType == UpgradeType.MaxSpeed)
+        {
+            
+        }
+        else if(this.UpgradeType == UpgradeType.Oxygen)
+        {
+            
+        }
+        else if(this.UpgradeType == UpgradeType.OxygenRegen)
+        {
+            
+        }
+        else if(this.UpgradeType == UpgradeType.BulletSpeed)
+        {
+            
+        }
     }
 
     function OnMouseDown(event : ViewportMouseEvent)

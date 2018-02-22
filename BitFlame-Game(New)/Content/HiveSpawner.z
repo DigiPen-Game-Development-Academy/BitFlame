@@ -21,22 +21,27 @@ class HiveSpawner : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        if(Math.Distance(this.Owner.Transform.Translation, this.Space.FindObjectByName("Player").Transform.Translation) <= this.Range)
+        var player = this.Space.FindObjectByName("Player");
+        
+        if(player != null)
         {
-            if(this.Timer >= this.FireRate)
+            if(Math.Distance(this.Owner.Transform.Translation, this.Space.FindObjectByName("Player").Transform.Translation) <= this.Range)
             {
-                for(var i = 0.0; i < this.Amount; ++i)
+                if(this.Timer >= this.FireRate)
                 {
-                    var alien = this.Space.CreateAtPosition(this.Alien, this.Owner.Transform.Translation);
+                    for(var i = 0.0; i < this.Amount; ++i)
+                    {
+                        var alien = this.Space.CreateAtPosition(this.Alien, this.Owner.Transform.Translation);
+                        
+                        alien.RigidBody.Velocity += Real3(this.RandomGenerator.Range(-1,1), this.RandomGenerator.Range(-1,1), 0) * this.OutputSpeed;
+                    }
                     
-                    alien.RigidBody.Velocity += Real3(this.RandomGenerator.Range(-1,1), this.RandomGenerator.Range(-1,1), 0) * this.OutputSpeed;
+                    this.Timer = 0.0;
                 }
-                
-                this.Timer = 0.0;
-            }
-            else
-            {
-                this.Timer += event.Dt;
+                else
+                {
+                    this.Timer += event.Dt;
+                }
             }
         }
     }

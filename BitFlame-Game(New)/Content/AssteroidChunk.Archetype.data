@@ -40,14 +40,19 @@ Cog =
 	{
 		float DropAmount = 1,
 		float ShrinkAmount = 20,
+		Vec4 AluminiumColor = [0.674999952, 0.563624978, 0.563624978, 1],
+		Vec4 CopperColor = [0.715000033, 0.368939966, 0.0857999921, 1],
+		Vec4 IronColor = [0.944999993, 0.690700412, 0.392175019, 1],
+		Vec4 TitaniumColor = [0.485000014, 0.485000014, 0.485000014, 1],
 		string AluminiumArchetype = "5a6ca514b81d8e50:Game_AluminiumOre_Pickup",
 		string CopperArchetype = "5a6cae91a47b14d7:Game_CopperOre_Pickup",
 		string IronArchetype = "5a86165eb2745571:Game_ResourceOre_Pickup",
 		string TitaniumArchetype = "5a6ca525a5151ffd:Game_TitaniumOre_Pickup",
-		float AluminiumProbability = 35,
-		float CopperProbability = 30,
-		float IronProbability = 25,
+		float AluminiumProbability = 30,
+		float CopperProbability = 25,
+		float IronProbability = 15,
 		float TitaniumProbability = 10,
+		float EmptyProbability = 25,
 	},
 	Health = 
 	{
