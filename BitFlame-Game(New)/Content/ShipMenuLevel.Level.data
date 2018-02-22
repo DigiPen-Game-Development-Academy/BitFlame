@@ -144,7 +144,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [8.52694702, 4.12139225, 70.9990005],
+			Vec3 Translation = [-9.13657188, -17.2953033, 70.9990005],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -156,7 +156,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 44.9331169,
+			float Size = 44.9329643,
 		},
 		EditorCameraController = 
 		{
@@ -164,7 +164,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [8.52694702, 4.12139225, 20.9990005],
+			Vec3 LookTarget = [-9.13657188, -17.2953033, 20.9990005],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -188,7 +188,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, -19.9899101, 40],
+			Vec3 Translation = [0, -30, 40],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -246,14 +246,9 @@ Level =
 		{
 			string Name = "background",
 		},
-		EditorFlags = 
-		{
-			bool Locked = true,
-			bool Hidden = false,
-		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 0],
+			Vec3 Translation = [-30, 0, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -291,14 +286,9 @@ Level =
 		{
 			string Name = "backgroundUpgrade",
 		},
-		EditorFlags = 
-		{
-			bool Locked = true,
-			bool Hidden = false,
-		},
 		Transform = 
 		{
-			Vec3 Translation = [30, 0, 0],
+			Vec3 Translation = [0, 0, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -336,14 +326,9 @@ Level =
 		{
 			string Name = "background",
 		},
-		EditorFlags = 
-		{
-			bool Locked = true,
-			bool Hidden = false,
-		},
 		Transform = 
 		{
-			Vec3 Translation = [60, 0, 0],
+			Vec3 Translation = [30, 0, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -383,7 +368,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-9, 7.5, 0],
+			Vec3 Translation = [-39, 7.5, 0],
 			Vec3 Scale = [4, 1.5, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -423,7 +408,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-4.5, 7.5, 0],
+			Vec3 Translation = [-34.5, 7.5, 0],
 			Vec3 Scale = [4, 1.5, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -474,7 +459,7 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
-			Vec3 NewCameraPosition = [30, 0, 0],
+			Vec3 NewCameraPosition = [0, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
 			string LevelToChangeTo = "",
@@ -498,7 +483,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 3.5, 1],
+			Vec3 Translation = [-30, 3.5, 1],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -610,7 +595,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [60, 3.5, 1],
+			Vec3 Translation = [30, 3.5, 1],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -711,7 +696,82 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [55.5, 7.5, 1],
+			Vec3 Translation = [25.5, 7.5, 1],
+			Vec3 Scale = [4, 1.5, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.0360000134, 0.800000012, 0.341599911, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		Ship_Menu_Button_Visual = 
+		{
+			Vec4 HoverColor = [0.181450009, 0.954999983, 0.235598639, 1],
+			Vec4 ClickColor = [0.466666698, 0.776470661, 0.588235319, 1],
+			float HoverScale = 1.20000005,
+			float ClickScale = 1,
+		},
+		Ship_Menu_Button_Function = 
+		{
+			CogPath Camera = 
+			{
+				string Path = ":/Camera",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 2,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			Vec3 NewCameraPosition = [0, 0, 0],
+			float MoveTime = 0.200000003,
+			bool Reload = false,
+			string LevelToChangeTo = "",
+			bool Quit = false,
+		},
+		Area = 
+		{
+			Vec2 Size = [1, 1],
+			Location Origin = BottomCenter,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 14,
+		},
+		Named = 
+		{
+			string Name = "Button",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-30, 7.5, 0],
 			Vec3 Scale = [4, 1.5, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -778,7 +838,122 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 14,
+			uint Id = 15,
+		},
+		Named = 
+		{
+			string Name = "FakeButton",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-4.5, 7.5, 0],
+			Vec3 Scale = [4, 1.5, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.464999974, 0.774999976, 0.588999927, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Area = 
+		{
+			Vec2 Size = [1, 1],
+			Location Origin = BottomCenter,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 16,
+		},
+		Named = 
+		{
+			string Name = "Button",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-9, 7.5, 0],
+			Vec3 Scale = [4, 1.5, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.0360000134, 0.800000012, 0.341599911, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		Ship_Menu_Button_Visual = 
+		{
+			Vec4 HoverColor = [0.181450009, 0.954999983, 0.235598639, 1],
+			Vec4 ClickColor = [0.466666698, 0.776470661, 0.588235319, 1],
+			float HoverScale = 1.20000005,
+			float ClickScale = 1,
+		},
+		Ship_Menu_Button_Function = 
+		{
+			CogPath Camera = 
+			{
+				string Path = ":/Camera",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 2,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			Vec3 NewCameraPosition = [-30, 0, 0],
+			float MoveTime = 0.200000003,
+			bool Reload = false,
+			string LevelToChangeTo = "",
+			bool Quit = false,
+		},
+		Area = 
+		{
+			Vec2 Size = [1, 1],
+			Location Origin = BottomCenter,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 17,
 		},
 		Named = 
 		{
@@ -837,7 +1012,7 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
-			Vec3 NewCameraPosition = [60, 0, 0],
+			Vec3 NewCameraPosition = [30, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
 			string LevelToChangeTo = "",
@@ -853,7 +1028,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 15,
+			uint Id = 18,
 		},
 		Named = 
 		{
@@ -861,7 +1036,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [25.5, 7.5, 0],
+			Vec3 Translation = [30, 7.5, 0],
 			Vec3 Scale = [4, 1.5, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -893,7 +1068,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 16,
+			uint Id = 19,
 		},
 		Named = 
 		{
@@ -952,197 +1127,7 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
-			Vec3 NewCameraPosition = [0, 0, 0],
-			float MoveTime = 0.200000003,
-			bool Reload = false,
-			string LevelToChangeTo = "",
-			bool Quit = false,
-		},
-		Area = 
-		{
-			Vec2 Size = [1, 1],
-			Location Origin = BottomCenter,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 17,
-		},
-		Named = 
-		{
-			string Name = "Button",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [30, 7.5, 0],
-			Vec3 Scale = [4, 1.5, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.0360000134, 0.800000012, 0.341599911, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		Ship_Menu_Button_Visual = 
-		{
-			Vec4 HoverColor = [0.181450009, 0.954999983, 0.235598639, 1],
-			Vec4 ClickColor = [0.466666698, 0.776470661, 0.588235319, 1],
-			float HoverScale = 1.20000005,
-			float ClickScale = 1,
-		},
-		Ship_Menu_Button_Function = 
-		{
-			CogPath Camera = 
-			{
-				string Path = ":/Camera",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 2,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-			Vec3 NewCameraPosition = [60, 0, 0],
-			float MoveTime = 0.200000003,
-			bool Reload = false,
-			string LevelToChangeTo = "",
-			bool Quit = false,
-		},
-		Area = 
-		{
-			Vec2 Size = [1, 1],
-			Location Origin = BottomCenter,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 18,
-		},
-		Named = 
-		{
-			string Name = "FakeButton",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [60, 7.5, 0],
-			Vec3 Scale = [4, 1.5, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.464999974, 0.774999976, 0.588999927, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Area = 
-		{
-			Vec2 Size = [1, 1],
-			Location Origin = BottomCenter,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 19,
-		},
-		Named = 
-		{
-			string Name = "Button",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [51, 7.5, 0],
-			Vec3 Scale = [4, 1.5, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.0360000134, 0.800000012, 0.341599911, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		Ship_Menu_Button_Visual = 
-		{
-			Vec4 HoverColor = [0.181450009, 0.954999983, 0.235598639, 1],
-			Vec4 ClickColor = [0.466666698, 0.776470661, 0.588235319, 1],
-			float HoverScale = 1.20000005,
-			float ClickScale = 1,
-		},
-		Ship_Menu_Button_Function = 
-		{
-			CogPath Camera = 
-			{
-				string Path = ":/Camera",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 2,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-			Vec3 NewCameraPosition = [0, 0, 0],
+			Vec3 NewCameraPosition = [-30, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
 			string LevelToChangeTo = "",
@@ -1537,7 +1522,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 1.25, 21],
+			Vec3 Translation = [-30, 1.5, 21],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1571,7 +1556,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 21],
+			Vec3 Translation = [-30, 0, 21],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1605,7 +1590,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, -1, 21],
+			Vec3 Translation = [-30, -1, 21],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1639,7 +1624,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [60, 0, 0],
+			Vec3 Translation = [30, 0, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1958,7 +1943,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [24.5, -2.20000005, 2],
+			Vec3 Translation = [-5.5, -2, 2],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -2086,7 +2071,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [28.7000008, 2.20000005, 2],
+			Vec3 Translation = [-1.5, 2, 2],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -2214,7 +2199,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [24.5, -4.5999999, 2],
+			Vec3 Translation = [-5.5, -4.5, 2],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -2342,7 +2327,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [38, -2.20000005, 2],
+			Vec3 Translation = [8, -2, 2],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -2470,7 +2455,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [33.7000008, 4.57335901, 2],
+			Vec3 Translation = [3.5, 4.5, 2],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -2598,7 +2583,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [35.5, -2.20000005, 2],
+			Vec3 Translation = [5.5, -2, 2],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -2726,7 +2711,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [27.5, -0.400000006, 2],
+			Vec3 Translation = [-2.5, -0.5, 2],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -2854,7 +2839,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [26.2000008, 4.5999999, 2],
+			Vec3 Translation = [-4, 4.5, 2],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -2982,7 +2967,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [22, -4.5999999, 2],
+			Vec3 Translation = [-8, -4.5, 2],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -3110,7 +3095,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [26.2000008, 2.20000005, 2],
+			Vec3 Translation = [-4, 2, 2],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -3238,7 +3223,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [31.3000011, 4.5999999, 2],
+			Vec3 Translation = [1, 4.5, 2],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -3366,7 +3351,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [31.3000011, 2.20000005, 2],
+			Vec3 Translation = [1, 2, 2],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -3494,7 +3479,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [27, -3.4000001, 2],
+			Vec3 Translation = [-3, -3.5, 2],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -3622,7 +3607,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [35.5, -4.5999999, 2],
+			Vec3 Translation = [5.5, -4.5, 2],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -3750,7 +3735,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [30, -3.4000001, 2],
+			Vec3 Translation = [0, -3.5, 2],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -3878,7 +3863,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [38, -4.5999999, 2],
+			Vec3 Translation = [8, -4.5, 2],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -4006,7 +3991,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [22, -2.20000005, 2],
+			Vec3 Translation = [-8, -2, 2],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -4134,7 +4119,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [28.7000008, 4.5999999, 2],
+			Vec3 Translation = [-1.5, 4.5, 2],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -4262,7 +4247,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [32.5, -0.400000006, 2],
+			Vec3 Translation = [2.5, -0.5, 2],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -4390,7 +4375,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [33, -3.4000001, 2],
+			Vec3 Translation = [3, -3.5, 2],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -4518,7 +4503,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [33.7000008, 2.20000005, 2],
+			Vec3 Translation = [3.5, 2, 2],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -4646,7 +4631,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [30, 0.600000024, 2.5],
+			Vec3 Translation = [0, 0.5, 2.5],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
