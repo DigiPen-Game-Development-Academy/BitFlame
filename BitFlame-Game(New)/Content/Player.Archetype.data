@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [0, 0, 0.00100000005],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -42,7 +42,7 @@ Cog =
 		bool SendsMessages = true,
 		bool Seamless = true,
 		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-		string SerializedGroupName = "5afe68729db9df55:PlayerCollisionGroup",
+		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 		Vec3 Offset = [-0.100000001, 0, 0],
 		Vec3 Size = [0.25, 0.75, 0.5],
 	},
@@ -82,11 +82,11 @@ Cog =
 	},
 	PlayerDeath = 
 	{
-		string HUDLevel = "5af48bf3e7db0eda:RespawnLevel",
+		string HUDLevel = "",
 		string SpaceArchetype = "554cea0f94af6dc4:Space",
 		CogPath PlayerRef = 
 		{
-			string Path = ".",
+			string Path = "",
 			bool ErrorOnResolveToNull = false,
 			bool ErrorOnPathCantCompute = false,
 			bool ErrorOnDirectLinkFail = false,
@@ -94,12 +94,11 @@ Cog =
 			bool UpdatePathOnCogChange = true,
 			bool UpdateCogOnInitialize = true,
 			bool ResolvedNullErrorOccurred = false,
-			uint ResolvedCog = 1,
+			uint ResolvedCog = 4294967293,
 			CogPathPreference PathPreference0 = CogRelative,
 			CogPathPreference PathPreference1 = SpaceRelative,
 			CogPathPreference PathPreference2 = Absolute,
 		},
-		float ReturnSpeed = 0.5,
 		string IronResource = "5a86165eb2745571:Game_ResourceOre_Pickup",
 		string CopperResource = "5a6cae91a47b14d7:Game_CopperOre_Pickup",
 		string AluminiumResource = "5a6ca514b81d8e50:Game_AluminiumOre_Pickup",
@@ -133,21 +132,6 @@ Cog =
 	{
 	},
 	CheatSystem = 
-	{
-	},
-	Player_Block_Placing = 
-	{
-		int PlacingRange = 100,
-		Enum IronBlockPlaceKey = U,
-		int IronBlockIronCost = 1,
-		string IronBlockArchetype = "5a62997e9d4c62f2:IronBlock",
-		Enum PipePlaceKey = R,
-		int PipeIronCost = 0,
-		int PipeAluminiumCost = 0,
-		string PipeArchetype = "5a62ce81be38d76e:OxygenPipe",
-		string PrePipeArchetype = "5a6dd155563b46c8:OxygenPipe_Preview",
-	},
-	HealthRegen = 
 	{
 	},
 	Hierarchy = 
@@ -224,6 +208,11 @@ Cog =
 			{
 				string Name = "Space",
 			},
+			EditorFlags = 
+			{
+				bool Locked = true,
+				bool Hidden = false,
+			},
 			Transform = 
 			{
 				Vec3 Translation = [0, 0, -1],
@@ -261,6 +250,11 @@ Cog =
 			Named = 
 			{
 				string Name = "Space",
+			},
+			EditorFlags = 
+			{
+				bool Locked = true,
+				bool Hidden = false,
 			},
 			Transform = 
 			{
@@ -364,41 +358,6 @@ Cog =
 			},
 			ChangeParticleEffects = 
 			{
-			},
-		},
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 6,
-			},
-			Named = 
-			{
-				string Name = "E Button",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [0, 1.5, 0],
-				Vec3 Scale = [0.699999988, 0.699999988, 1],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			Sprite = 
-			{
-				bool Visible = true,
-				bool VisibilityCulling = true,
-				bool VisibilityEvents = true,
-				bool CastShadows = false,
-				Vec4 Color = [1, 1, 1, 1],
-				BlendMode BlendMode = Alpha,
-				SpriteGeometryMode GeometryMode = ZPlane,
-				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5af7e8354f08a3dc:E button being pressed_Animation",
-				bool RenderMask = false,
-				bool FlipX = false,
-				bool FlipY = false,
-				bool AnimationActive = true,
-				float AnimationSpeed = 1,
-				uint StartFrame = 0,
 			},
 		},
 	},

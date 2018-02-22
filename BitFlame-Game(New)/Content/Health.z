@@ -6,7 +6,8 @@ class Health : ZilchComponent
     [Property] var Health : Real = 0.0;
     
     //leave null to spawn nothing
-    [Property] var ArchetypetoSpawnOnDeath : Archetype = null;
+    [Property] var ArchetypetoSpawnOnDeath1 : Archetype = null;
+    [Property] var ArchetypetoSpawnOnDeath2 : Archetype = null;
     
     [Property] var Unbreakable : Boolean = false;
     
@@ -24,12 +25,16 @@ class Health : ZilchComponent
         
         if(this.Health <= 0.0)
         {
-            if(this.ArchetypetoSpawnOnDeath != null)
+            if(this.ArchetypetoSpawnOnDeath1 != null)
             {
-                this.Space.CreateAtPosition(this.ArchetypetoSpawnOnDeath, this.Owner.Transform.Translation);   
+                this.Space.CreateAtPosition(this.ArchetypetoSpawnOnDeath1, this.Owner.Transform.Translation);   
                 Console.WriteLine("boom"); 
             }
-                
+            if(this.ArchetypetoSpawnOnDeath2 != null)
+            {
+                this.Space.CreateAtPosition(this.ArchetypetoSpawnOnDeath2, this.Owner.Transform.Translation);
+                Console.WriteLine("boom");
+            }
             this.Owner.Destroy();
 
         }
