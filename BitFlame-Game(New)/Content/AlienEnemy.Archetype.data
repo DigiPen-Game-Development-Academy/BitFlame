@@ -28,7 +28,7 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5afef6f574f75256:Alien_Enemy_Sprite",
+		string SpriteSource = "5af4a2d0f81cb51c:Alien_Enemy_Animation",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -77,6 +77,7 @@ Cog =
 	{
 		float Health = 2,
 		string ArchetypetoSpawnOnDeath = "5a70715bb5c81bfe:Game_OxygenOre_Pickup",
+		bool Unbreakable = false,
 	},
 	DamageOnCollide = 
 	{
