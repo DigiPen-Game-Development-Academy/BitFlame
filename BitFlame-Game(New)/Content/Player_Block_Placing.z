@@ -2,7 +2,7 @@
 Filename: Player_Block_Placing.z
 Author: Jakob McFarland
 Contributors: NULL
-Last modified: 2/13/18
+Last modified: 2/22/18
 Brief: This Component allows the player to place blocks
 ******************************************/
 
@@ -26,102 +26,78 @@ class Player_Block_Placing : ZilchComponent
     
     var Preview : Cog;
     
+     var RoundedMouse : Real3;
+    
     function Initialize(init : CogInitializer)
     {
-        Zero.Connect(this.Space, Events.MouseDown, this.OnMouseDown);
+        Zero.Connect(this.Space, Events.RightMouseUp, this.OnRightMouseUp);
+        Zero.Connect(this.Space, Events.RightMouseDown, this.OnRightMouseDown);
         Zero.Connect(this.Space, Events.MouseUpdate, this.OnMouseUpdate);
-        this.Preview = this.Space.CreateAtPosition( this.PrePipeArchetype, Real3(10000, 10000, 0));
     }
 
     function OnMouseUpdate(event : ViewportMouseEvent)
     {
-        var arm = this.Owner.FindChildByName("Arm");  
-        
-        if(Zero.Keyboard.KeyIsDown(this.IronBlockPlaceKey) || Zero.Keyboard.KeyIsDown(this.PipePlaceKey))
-        {
-             arm.PlayerShooting.CanShoot = false;
-        }
-        else
-        {
-            arm.PlayerShooting.CanShoot = true;
-        }
-        
         var mousePosition = event.ToWorldZPlane(0.0);
-        var roundedMouse = Math.Round(mousePosition);
+        this.RoundedMouse = Math.Round(mousePosition);
         
-        if(roundedMouse.X >= mousePosition.X)
+        if(this.RoundedMouse.X >= mousePosition.X)
         {
-            roundedMouse.X -= 0.5;
+            this.RoundedMouse.X -= 0.5;
         }
-        else if(roundedMouse.X < mousePosition.X)
+        else if(this.RoundedMouse.X < mousePosition.X)
         {
-            roundedMouse.X += 0.5;
-        }
-        
-        if(roundedMouse.Y >= mousePosition.Y)
-        {
-            roundedMouse.Y -= 0.5;
-        }
-        else if(roundedMouse.Y < mousePosition.Y)
-        {
-            roundedMouse.Y += 0.5;
+            this.RoundedMouse.X += 0.5;
         }
         
-        if(Zero.Keyboard.KeyIsDown(this.PipePlaceKey))
+        if(this.RoundedMouse.Y >= mousePosition.Y)
         {
-            this.Preview.Transform.Translation = roundedMouse;
+            this.RoundedMouse.Y -= 0.5;
         }
-            
-        if(Zero.Keyboard.KeyIsReleased(this.PipePlaceKey))
+        else if(this.RoundedMouse.Y < mousePosition.Y)
         {
-            this.Preview.Transform.Translation = Real3(10000, 10000, 0);
+            this.RoundedMouse.Y += 0.5;
+        }  
+         
+        if(this.Preview != null)
+        {
+            this.Preview.Transform.Translation = this.RoundedMouse;
         }
     }
 
-    function OnMouseDown(event : ViewportMouseEvent)
+    function OnRightMouseDown(event : ViewportMouseEvent)
     {
-        var mousePosition = event.ToWorldZPlane(0.0);
-        var roundedMouse = Math.Round(mousePosition);
-        
-        if(roundedMouse.X >= mousePosition.X)
+        if(this.Preview == null)
         {
-            roundedMouse.X -= 0.5;
+            this.Preview = this.Space.CreateAtPosition( this.PrePipeArchetype, this.RoundedMouse);
         }
-        else if(roundedMouse.X < mousePosition.X)
+   
+    }
+
+    function OnRightMouseUp(event : ViewportMouseEvent)
+    {
+
+        //if(Zero.Keyboard.KeyIsDown(this.IronBlockPlaceKey))
+        //{
+            //if(this.Space.GameSession.GameVars.PlayerResources >= this.IronBlockIronCost)
+            //{
+                //this.Space.GameSession.GameVars.PlayerResources -= this.IronBlockIronCost;
+                // this.Space.CreateAtPosition(this.IronBlockArchetype, roundedMouse);
+            // }
+        //} 
+        if(this.Preview != null)
         {
-            roundedMouse.X += 0.5;
-        }
-        
-        if(roundedMouse.Y >= mousePosition.Y)
-        {
-            roundedMouse.Y -= 0.5;
-        }
-        else if(roundedMouse.Y < mousePosition.Y)
-        {
-            roundedMouse.Y += 0.5;
-        }
-        
-        if(this.Transform.Translation.X - roundedMouse.X <= this.PlacingRange && this.Transform.Translation.Y - roundedMouse.Y <= this.PlacingRange)
-        {
-            if(Zero.Keyboard.KeyIsDown(this.IronBlockPlaceKey))
-            {
-                if(this.Space.GameSession.GameVars.PlayerResources >= this.IronBlockIronCost)
-                {
-                    //this.Space.GameSession.GameVars.PlayerResources -= this.IronBlockIronCost;
-                   // this.Space.CreateAtPosition(this.IronBlockArchetype, roundedMouse);
-                }
-            } 
-                       
-            if(Zero.Keyboard.KeyIsDown(this.PipePlaceKey))
-            {
+            this.Preview.Destroy();
+            
+            if(this.Preview.Pipe_Preview_Collision != null && this.Preview.Pipe_Preview_Collision.PlacementInvalid == false) 
+            {   
                 if(this.Space.GameSession.GameVars.PlayerResources >= this.PipeIronCost 
                     && this.Space.GameSession.GameVars.PlayerAluminium >= this.PipeAluminiumCost)
                 {
                     this.Space.GameSession.GameVars.PlayerResources -= this.PipeIronCost;
                     this.Space.GameSession.GameVars.PlayerAluminium -= this.PipeAluminiumCost;
-                    this.Space.CreateAtPosition(this.PipeArchetype, roundedMouse);
-                }
-            } 
-        }        
+                    this.Space.CreateAtPosition(this.PipeArchetype, this.RoundedMouse);       
+                } 
+            }
+        }              
     }
 }

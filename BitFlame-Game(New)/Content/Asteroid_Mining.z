@@ -74,8 +74,6 @@ class Asteroid_Mining : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        
-        
         if(this.Owner.Health.Health <= 0.0)
         {
             for(var i = 0.0; i < this.DropAmount; ++i)

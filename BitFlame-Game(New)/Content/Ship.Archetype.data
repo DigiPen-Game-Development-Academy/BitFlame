@@ -127,7 +127,7 @@ Cog =
 			},
 			OxygenPipe_Function = 
 			{
-				int ConnectingRange = 100,
+				int ConnectingRange = 144,
 				bool Origin = true,
 				CogPath Ship = 
 				{
@@ -168,11 +168,6 @@ Cog =
 					Named = 
 					{
 						string Name = "Oxygen_Field",
-					},
-					EditorFlags = 
-					{
-						bool Locked = true,
-						bool Hidden = false,
 					},
 				},
 			},

@@ -20,14 +20,14 @@ class FlipXWhenMouseGreaterThan : ZilchComponent
         {
             this.Owner.Sprite.FlipX = false;
             
-            this.Owner.FindChildByName("Arm").Transform.Translation = Real3(-0.13, 
+            this.Owner.FindChildByName("Arm").Transform.Translation = Real3(0, 
                                                                             this.Owner.FindChildByName("Arm").Transform.Translation.Y, 0.1);
         }
         else
         {
             this.Owner.Sprite.FlipX = true;
             
-            this.Owner.FindChildByName("Arm").Transform.Translation = Real3(0.13, 
+            this.Owner.FindChildByName("Arm").Transform.Translation = Real3(0, 
                                                                             this.Owner.FindChildByName("Arm").Transform.Translation.Y, 0.1);
         }
     }
