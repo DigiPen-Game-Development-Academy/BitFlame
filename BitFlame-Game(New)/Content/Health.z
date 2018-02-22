@@ -8,6 +8,8 @@ class Health : ZilchComponent
     //leave null to spawn nothing
     [Property] var ArchetypetoSpawnOnDeath : Archetype = null;
     
+    [Property] var Unbreakable : Boolean = false;
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -15,6 +17,11 @@ class Health : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     { 
+        if(this.Unbreakable)
+        {
+            this.Health = 500; 
+        }
+        
         if(this.Health <= 0.0)
         {
             if(this.ArchetypetoSpawnOnDeath != null)
@@ -28,3 +35,4 @@ class Health : ZilchComponent
         }
     }
 }
+
