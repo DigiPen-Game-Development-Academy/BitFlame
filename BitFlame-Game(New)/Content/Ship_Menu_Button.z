@@ -25,6 +25,9 @@ class Ship_Menu_Button_Visual : ZilchComponent
   
   [Property] var ClickScale : Real = 1.0;
   
+
+  
+  
   function Initialize(init : CogInitializer)
   {
     this.OriginalColor = this.Sprite.Color;
@@ -91,6 +94,8 @@ class Ship_Menu_Button_Function : ZilchComponent
     
     [Property] var LevelToChangeTo : Level = null;
     
+    [Property] var Respawn : Boolean = false;
+    
     [Property] var Quit : Boolean = false;  
   
     function Initialize(init : CogInitializer)
@@ -115,6 +120,12 @@ class Ship_Menu_Button_Function : ZilchComponent
         if(this.Reload)
         {
             this.GameSession.GameVars.WorldRegen = true;
+        }
+        
+        if(this.Respawn)
+        {
+            this.GameSession.GameVars.DestroyRespawnMenu = true;
+            return;
         }
         
         if(this.Camera != null)
