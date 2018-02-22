@@ -22,9 +22,14 @@ class EnemyLogic : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        if(Math.Distance(this.Owner.Transform.Translation, this.Target.Transform.Translation) <= this.Range)
+        var player = this.Space.FindObjectByName("Player");
+        
+        if(player != null)
         {
-            this.Owner.RigidBody.Velocity += Math.Normalize(this.Target.Transform.Translation - this.Owner.Transform.Translation) * event.Dt * this.Speed;
+            if(Math.Distance(this.Owner.Transform.Translation, this.Target.Transform.Translation) <= this.Range)
+            {
+                this.Owner.RigidBody.Velocity += Math.Normalize(this.Target.Transform.Translation - this.Owner.Transform.Translation) * event.Dt * this.Speed;
+            }
         }
     }
 }

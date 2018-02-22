@@ -1,18 +1,36 @@
 /*************************************
 Filename: PlayerDeath.z
 Author: Jakob McFarland
-Contributors: NULL
-Last modified: 2/13/18
+Contributors: Luke Taranowski
+Last modified: 2/22/2018
 Brief: This Component will cause the owner to teleport back to origin when their health or oxygen = 0
 ******************************************/
     
 
 class PlayerDeath : ZilchComponent
 {
+
+    // The level that our HUD is contained within
+    [Property]
+    var HUDLevel : Level = null;
+    
+    //The space archetype from which to create the new HUD space
+    [Property]
+    var SpaceArchetype : Archetype = Archetype.Space;
+    
+    //Reference to the Player object
+    [Property]
+    var PlayerRef : CogPath = null;
+    
+    // Store the space where our HUD is so that we can access and destroy it
+    var HUDSpace : Space = null;
+    
+    var HUDCreated : Boolean = false; 
+   
+    var TimeKeeper : Real = 0;
+    
     //make sure owner has a transform
     [Dependency] var Transform : Transform;
-    
-    [Property] var ReturnSpeed : Real = 1.0;
     
     [Property] var IronResource : Archetype = null;
     [Property] var CopperResource : Archetype = null;
@@ -27,23 +45,8 @@ class PlayerDeath : ZilchComponent
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
     }
-
-    //for stopping the player when they hit the ship
-    function OnCollisionStarted(event : CollisionEvent)
-    {
-        if((this.Space.GameSession.GameVars.PlayerHealth <= 0 || this.Space.GameSession.GameVars.PlayerOxygen <= 0) && event.OtherObject.Ship_Interaction != null)
-        {              
-            this.Space.GameSession.GameVars.PlayerHealth = this.Space.GameSession.GameVars.StartingPlayerHealth;
-            this.Space.GameSession.GameVars.PlayerOxygen = this.Space.GameSession.GameVars.StartingPlayerOxygen;
-            
-            this.Owner.RigidBody.Velocity = Real3(0.0,0.0,0.0);
-        }
-            
-    }
-
-
+    
     //every logic update
     function OnLogicUpdate(event : UpdateEvent)
     {
@@ -53,6 +56,7 @@ class PlayerDeath : ZilchComponent
         //if the player has no health or oxygen then their dead, reset their health and oxygen and teleport them to world origin.
         if (gameVars.PlayerHealth <= 0 || gameVars.PlayerOxygen <= 0)
         {
+            
             
             for(var i = 0.0; i < gameVars.PlayerResources; ++i)
             {
@@ -83,10 +87,33 @@ class PlayerDeath : ZilchComponent
             gameVars.PlayerCopper = 0;
             gameVars.PlayerAluminium = 0;
             
-            //teleport player to world origin
-            this.Owner.Transform.Translation = Real3(Math.Lerp(this.Transform.Translation.X, 0.0, this.T), Math.Lerp(this.Transform.Translation.Y, 0.0, this.T), 0.0);
+            if(this.HUDSpace == null)
+            {
+                // Create the HUD space and then load our HUD level into it
+                this.HUDSpace = this.GameSession.CreateNamedSpace("HUDSpace", this.SpaceArchetype);
+                
+                //Load the level specified in the HUDLevel Property above
+                this.HUDSpace.LoadLevel(Level.RespawnLevel);    
+                
+                
+                this.HUDSpace.LevelSettings.HUDSpaceReferences.MainSpaceRef = this.Space;
+            }
             
-            this.T += event.Dt * this.ReturnSpeed;
+            if(this.GameSession.GameVars.DestroyRespawnMenu == true)
+            {
+                this.GameSession.GameVars.DestroyRespawnMenu = false;
+                
+                if(this.HUDSpace != null)
+                {
+                  this.HUDSpace.Destroy();  
+                }
+            
+            }
+            
+            this.GameSession.GameVars.PlayerHealth = this.GameSession.GameVars.StartingPlayerHealth;
+            this.GameSession.GameVars.PlayerOxygen = this.GameSession.GameVars.StartingPlayerOxygen;
+            
+            this.Owner.Transform.Translation = Real3(0.0, 0.0, 0.0);
         }
         
         //kill cheat <For Testing ONLY>
