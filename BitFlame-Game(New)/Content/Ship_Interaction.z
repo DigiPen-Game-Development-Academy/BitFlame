@@ -57,7 +57,7 @@ class Ship_Interaction : ZilchComponent
                 this.GameSession.GameVars.SlideIn = !this.GameSession.GameVars.SlideIn;
                 
                 var arm = player.FindChildByName("Arm");
-                arm.PlayerShooting.CanShoot = true;
+                arm.PlayerShooting.CanShoot = false;
                 
                 if(player.RigidBody != null)
                 {
@@ -104,8 +104,6 @@ class Ship_Interaction : ZilchComponent
                 {
                     arm.PlayerShooting.CanShoot = true;
                 }
-                
-                this.GameSession.GameVars.SlideIn = false;
             } 
         }
     }

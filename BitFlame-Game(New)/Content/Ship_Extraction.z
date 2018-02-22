@@ -11,22 +11,32 @@ class Ship_Extraction : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        
+        //if we should slide in
         if(this.GameSession.GameVars.SlideIn)
         {
-            if(Math.ApproximatelyEqual(this.Owner.Transform.Translation.Y, 0.0, 0.1))
+            
+            
+            //if almost there
+            if(Math.ApproximatelyEqual(this.Owner.Transform.Translation.Y, 0.0, 1.0))
             {
+                //set there to true
                 this.There = true;
             }
+            //if not there
             else if(!this.There)
             {
-                Action.Property(this.Space.Actions, @this.Owner.Transform.Translation, Real3(this.Owner.Transform.Translation.X,0.0,40.0), 0.05, Ease.SinIn);
+                //go there
+                Action.Property(this.Space.Actions, @this.Owner.Transform.Translation, Real3(0.0,0.0,40.0), 0.1, Ease.Linear);
             }
         }
         else
         {
+            //set there to false
             this.There = false;
             
-            Action.Property(this.Space.Actions, @this.Owner.Transform.Translation, Real3(this.Owner.Transform.Translation.X,-20.0,40.0), 0.05, Ease.SinIn);
+            //go back
+            Action.Property(this.Space.Actions, @this.Owner.Transform.Translation, Real3(0.0,-50.0,40.0), 0.25, Ease.Linear);
         }
     }
 }
