@@ -100,8 +100,6 @@ class Asteroid_Mining : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        
-        
         if(this.Owner.Health.Health <= 0.0)
         {
             if(this.ResourceArchetype != null)

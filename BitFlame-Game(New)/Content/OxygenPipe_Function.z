@@ -32,12 +32,6 @@ class OxygenPipe_Function : ZilchComponent
     {
         this.ConnectedTo = this.Owner;
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
-    }
-
-    function OnCollisionStarted(event : CollisionEvent)
-    {
-        
     }
 
     function OnLogicUpdate(event : UpdateEvent)
@@ -57,6 +51,7 @@ class OxygenPipe_Function : ZilchComponent
             if(field.Oxygen_Regen_Field != null)
             {
                 field.Oxygen_Regen_Field.Active = false;
+                field.Collider.SendsEvents = false;
             }
             
             //check all the oxygen pipes
@@ -78,7 +73,10 @@ class OxygenPipe_Function : ZilchComponent
         {  
             if(field.Oxygen_Regen_Field != null)
             {
+                
                 field.Oxygen_Regen_Field.Active = true;
+                field.Collider.SendsEvents = true;
+                
             }
             
             if(this.ConnectedTo != null)

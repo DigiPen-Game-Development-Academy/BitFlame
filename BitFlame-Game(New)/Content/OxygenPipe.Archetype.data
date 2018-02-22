@@ -36,6 +36,18 @@ Cog =
 		float AnimationSpeed = 1,
 		uint StartFrame = 0,
 	},
+	RigidBody = 
+	{
+		bool Static = true,
+		bool Asleep = false,
+		bool Kinematic = false,
+		bool RotationLocked = false,
+		bool Mode2D = true,
+		bool AllowSleep = true,
+		bool Inherit2DMode = true,
+		Vec3 Velocity = [0, 0, 0],
+		Vec3 AngularVelocity = [0, 0, 0],
+	},
 	SphereCollider = 
 	{
 		bool Ghost = false,
@@ -48,7 +60,7 @@ Cog =
 	},
 	OxygenPipe_Function = 
 	{
-		int ConnectingRange = 100,
+		int ConnectingRange = 144,
 		bool Origin = false,
 		CogPath Ship = 
 		{
@@ -70,6 +82,20 @@ Cog =
 	{
 		float Health = 5,
 		string ArchetypetoSpawnOnDeath = "",
+		bool Unbreakable = false,
+	},
+	Asteroid_Mining = 
+	{
+		float DropAmount = 0,
+		float ShrinkAmount = 100,
+		string AluminiumArchetype = "",
+		string CopperArchetype = "",
+		string IronArchetype = "",
+		string TitaniumArchetype = "",
+		float AluminiumProbability = 0,
+		float CopperProbability = 0,
+		float IronProbability = 0,
+		float TitaniumProbability = 0,
 	},
 	Hierarchy = 
 	{
