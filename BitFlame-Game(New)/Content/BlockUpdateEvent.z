@@ -1,0 +1,15 @@
+/**
+Filename: BlockUpdateEvent .z
+Author: Jakob McFarland
+Contributors: NULL
+Last modified: 2/24/2018
+Brief: This script is the definition of the block update event
+******************************************/
+ class BlockUpdate : ZilchEvent
+ {  
+    //block update event
+    sends BlockUpdate : ZilchEvent;
+    
+    //this var stores the location that the block update occured at, important for optomization
+    var Translation : Real3 = Real3(0, 0, 0);
+}

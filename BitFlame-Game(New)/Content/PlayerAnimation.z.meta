@@ -2,7 +2,7 @@ TextContent =
 {
 	ZilchScriptBuilder = 
 	{
-		string Name = "FlipXWhenMouseGreaterThan",
+		string Name = "PlayerAnimation",
 		uint64 ResourceId = 5a11ae72c5084726,
 	},
 },

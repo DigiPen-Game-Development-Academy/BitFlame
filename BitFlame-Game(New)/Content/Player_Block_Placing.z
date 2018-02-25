@@ -13,12 +13,11 @@ class Player_Block_Placing : ZilchComponent
     [Property] var PlacingRange : Integer = 6;
     
     //iron block
-    [Property] var IronBlockPlaceKey : Keys;
-    [Property] var IronBlockIronCost : Integer;
-    [Property] var IronBlockArchetype : Archetype = Archetype.IronBlock;
+    //[Property] var IronBlockPlaceKey : Keys;
+    //[Property] var IronBlockIronCost : Integer;
+    //[Property] var IronBlockArchetype : Archetype = Archetype.IronBlock;
     
     //oxygen pipe block
-    [Property] var PipePlaceKey : Keys;
     [Property] var PipeIronCost : Integer;
     [Property] var PipeAluminiumCost : Integer;
     [Property] var PipeArchetype : Archetype = Archetype.OxygenPipe;
@@ -26,8 +25,8 @@ class Player_Block_Placing : ZilchComponent
     
     var Preview : Cog;
     
-     var RoundedMouse : Real3;
-    
+    var RoundedMouse : Real3;
+
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.RightMouseUp, this.OnRightMouseUp);
@@ -95,7 +94,10 @@ class Player_Block_Placing : ZilchComponent
                 {
                     this.Space.GameSession.GameVars.PlayerResources -= this.PipeIronCost;
                     this.Space.GameSession.GameVars.PlayerAluminium -= this.PipeAluminiumCost;
-                    this.Space.CreateAtPosition(this.PipeArchetype, this.RoundedMouse);       
+                    this.Space.CreateAtPosition(this.PipeArchetype, this.RoundedMouse);      
+                    var blockUpdate = BlockUpdate();
+                    blockUpdate.Translation = this.RoundedMouse;
+                    this.Space.DispatchEvent(Events.BlockUpdate, blockUpdate);
                 } 
             }
         }              

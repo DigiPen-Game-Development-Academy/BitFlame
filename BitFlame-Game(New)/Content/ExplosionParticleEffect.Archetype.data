@@ -8,9 +8,13 @@ Cog =
 	{
 		string Name = "RubbleParticleEffect",
 	},
+	Archetyped = 
+	{
+		string Name = "5a08fb7240d5e7ed:ExplosionParticleEffect",
+	},
 	Transform = 
 	{
-		Vec3 Translation = [4, 7, 3],
+		Vec3 Translation = [22.0831985, 15.7356977, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -29,7 +33,7 @@ Cog =
 		ParticleRenderMode RenderMode = Blended,
 		ParticleSortMode SortMode = Youngest,
 		ParticleAnimation ParticleAnimation = Single,
-		string Texture = "5275aa4d802dd6dc:Square",
+		string Texture = "5a77f9c1854884f9:Player_Movement_Particle",
 		float VelocityScale = 1,
 		float LengthScale = 1,
 		float MaxParticleSize = 100,
@@ -106,7 +110,7 @@ Cog =
 				ParticleRenderMode RenderMode = Additive,
 				ParticleSortMode SortMode = Youngest,
 				ParticleAnimation ParticleAnimation = Single,
-				string Texture = "5275aa4d802dd6dc:Square",
+				string Texture = "5a77f9c1854884f9:Player_Movement_Particle",
 				float VelocityScale = 1,
 				float LengthScale = 1,
 				float MaxParticleSize = 100,
@@ -182,7 +186,7 @@ Cog =
 				ParticleRenderMode RenderMode = Blended,
 				ParticleSortMode SortMode = Youngest,
 				ParticleAnimation ParticleAnimation = Single,
-				string Texture = "5274db4c2e7c11f9:Circle",
+				string Texture = "5a77f9c1854884f9:Player_Movement_Particle",
 				float VelocityScale = 1,
 				float LengthScale = 1,
 				float MaxParticleSize = 100,

@@ -2,7 +2,7 @@
 Filename:  OxygenPipe_Function.z
 Author: Jakob McFarland
 Contributors: NULL
-Last modified: 2/20/18
+Last modified: 2/24/18
 Brief: This Component connects the owner to other oxygen pipes and controls their visual effects
 ******************************************/
 
@@ -28,14 +28,78 @@ class OxygenPipe_Function : ZilchComponent
     
     var ConnectionDistance : Real;
     
+    var ConnectionChanged : Boolean = false;
+    
+    var ConnectedToChanged : Cog = null;
+    
     function Initialize(init : CogInitializer)
     {
         this.ConnectedTo = this.Owner;
+        Zero.Connect(this.Space, Events.BlockUpdate, this.OnBlockUpdate);
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        if(this.ConnectedTo != null)
+        {   
+            var end = this.ConnectedTo.Transform.Translation;
+            end.Y -= 1;
+                
+            //Console.WriteLine("Test line");
+                
+            var debugLine = DebugLine();
+            //Sets parameters for the debug line
+            debugLine.Start(this.Transform.Translation);
+            debugLine.End(end);
+            debugLine.Float4Color(Real4(0.55, 0.92, 0.96, 1));
+            debugLine.Width(Real(4));
+            //draw it
+            debugLine.Draw();
+        }
+        
+        if(this.Connected != this.ConnectionChanged)
+        {
+            this.ConnectionChanged = this.Connected;
+            var blockUpdate = BlockUpdate();
+            blockUpdate.Translation = this.Transform.Translation;
+            this.Space.DispatchEvent(Events.BlockUpdate, blockUpdate);
+        }
+        
+        if(this.ConnectedTo != this.ConnectedToChanged)
+        {
+            this.ConnectedToChanged = this.ConnectedTo;
+            var blockUpdate = BlockUpdate();
+            blockUpdate.Translation = this.Transform.Translation;
+            this.Space.DispatchEvent(Events.BlockUpdate, blockUpdate);
+        }
+        
+        if(this.ConnectedTo == null) 
+        {
+            this.Connected = false;
+        }
+        else if(this.ConnectedTo != null && this.ConnectedTo.OxygenPipe_Function.Connected == false) 
+        {
+            this.Connected = false;
+        }
+        if(!this.Connected)
+        {
+            this.ConnectedTo = null;
+        }
+    }
+
+    function OnBlockUpdate(event : BlockUpdate)
+    {
+        var connectingVector = event.Translation - this.Transform.Translation;
+        
+        var connectingLength = (connectingVector.X * connectingVector.X) + (connectingVector.Y * connectingVector.Y);
+        
+        if(connectingLength > 196)
+        {
+            return;
+        }
+        
+        
         var field = this.Owner.FindChildByName("Oxygen_Field");
       
         if(this.Origin)
@@ -48,6 +112,8 @@ class OxygenPipe_Function : ZilchComponent
         
         if(!this.Connected)
         {      
+            //Console.WriteLine("test");
+            
             if(field.Oxygen_Regen_Field != null)
             {
                 field.Oxygen_Regen_Field.Active = false;
@@ -80,26 +146,11 @@ class OxygenPipe_Function : ZilchComponent
             }
             
             if(this.ConnectedTo != null)
-            {   
-                var end = this.ConnectedTo.Transform.Translation;
-                end.Y -= 0;
-                
-                //Console.WriteLine("Test line");
-                
-                var debugLine = DebugLine();
-                //Sets parameters for the debug line
-                debugLine.Start(this.Transform.Translation);
-                debugLine.End(end);
-                debugLine.Float4Color(Real4(0.55, 0.92, 0.96, 1));
-                debugLine.Width(Real(4));
-                //draw it
-                debugLine.Draw();
-                
+            {                  
                 var pipe = this.Owner.FindChildByName("PipeSprite");
                 
                 if(pipe != null)
-                {
-                             
+                {                    
                     //var length = this.ConnectionDistance;
         
                     //var width = this.SpriteWidth;
@@ -112,15 +163,6 @@ class OxygenPipe_Function : ZilchComponent
                     // The SetEulerAnglesXYZ function expects angles in radians
                     //pipe.Orientation.LookAtDirection(end);
                 }
-                
-                if(!this.ConnectedTo.OxygenPipe_Function.Connected)
-                {
-                    this.Connected = false;
-                }
-            }
-            else if(this.ConnectedTo == null) 
-            {
-                this.Connected = false;
             }
             
             //check all the oxygen pipes
@@ -182,3 +224,5 @@ class OxygenPipe_Function : ZilchComponent
         }
     }
 }
+
+    

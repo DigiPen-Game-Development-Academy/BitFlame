@@ -11,6 +11,8 @@ class Health : ZilchComponent
     
     [Property] var Unbreakable : Boolean = false;
     
+    [Dependency] var Transform : Transform;
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -35,8 +37,11 @@ class Health : ZilchComponent
                 this.Space.CreateAtPosition(this.ArchetypetoSpawnOnDeath2, this.Owner.Transform.Translation);
                 Console.WriteLine("boom");
             }
+            var blockUpdate = BlockUpdate();
+            blockUpdate.Translation = this.Transform.Translation;
+            this.Space.DispatchEvent(Events.BlockUpdate, blockUpdate);
+            
             this.Owner.Destroy();
-
         }
     }
 }

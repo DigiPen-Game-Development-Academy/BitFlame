@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0.00100000005],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -24,15 +24,15 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [0.63499999, 0.63499999, 0.63499999, 1],
+		Vec4 Color = [1, 1, 1, 1],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5a6e93f5d296aff8:PlayerBody_Sprite_Animated000",
+		string SpriteSource = "5a8ad6ac767bb5cd:PlayerBody_Sprite_Animated",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
-		bool AnimationActive = true,
+		bool AnimationActive = false,
 		float AnimationSpeed = 1,
 		uint StartFrame = 0,
 	},
@@ -42,13 +42,13 @@ Cog =
 		bool SendsMessages = true,
 		bool Seamless = true,
 		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+		string SerializedGroupName = "5afe68729db9df55:PlayerCollisionGroup",
 		Vec3 Offset = [-0.100000001, 0, 0],
 		Vec3 Size = [0.25, 0.75, 0.5],
 	},
 	Player_Movement_Script = 
 	{
-		float Speed = 10,
+		float Speed = 40,
 		CogPath MovementParticleSystem = 
 		{
 			string Path = "JetPackParticleEffect",
@@ -123,16 +123,31 @@ Cog =
 		bool Buoyancy = false,
 		bool Custom = false,
 	},
+	PlayerAnimation = 
+	{
+	},
 	FlashColor = 
 	{
 		float FlashTime = 0.200000003,
 		Vec4 FlashColor = [1, 0, 0, 1],
 	},
-	FlipXWhenMouseGreaterThan = 
-	{
-	},
 	CheatSystem = 
 	{
+	},
+	Player_Block_Placing = 
+	{
+		int PlacingRange = 100,
+		int PipeIronCost = 0,
+		int PipeAluminiumCost = 0,
+		string PipeArchetype = "5a62ce81be38d76e:OxygenPipe",
+		string PrePipeArchetype = "5a6dd155563b46c8:OxygenPipe_Preview",
+	},
+	DragEffect = 
+	{
+		bool Active = true,
+		bool WakeUpOnChange = true,
+		float Drag = 4,
+		float AngularDrag = 4,
 	},
 	Hierarchy = 
 	{
@@ -141,6 +156,41 @@ Cog =
 			LinkId = 
 			{
 				uint Id = 3,
+			},
+			Named = 
+			{
+				string Name = "E Button",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [-0.200000003, 1.70000005, 0],
+				Vec3 Scale = [0.699999988, 0.699999988, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5af7e8354f08a3dc:E button being pressed_Animation",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 4,
 			},
 			Named = 
 			{
@@ -202,16 +252,11 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 4,
+				uint Id = 5,
 			},
 			Named = 
 			{
 				string Name = "Space",
-			},
-			EditorFlags = 
-			{
-				bool Locked = true,
-				bool Hidden = false,
 			},
 			Transform = 
 			{
@@ -245,16 +290,11 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 5,
+				uint Id = 6,
 			},
 			Named = 
 			{
 				string Name = "Space",
-			},
-			EditorFlags = 
-			{
-				bool Locked = true,
-				bool Hidden = false,
 			},
 			Transform = 
 			{
@@ -293,7 +333,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-0.400000006, 0, -1],
+				Vec3 Translation = [0.25, 0, -1],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},

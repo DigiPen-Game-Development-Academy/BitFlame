@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [19.9884205, 15.0804644, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -33,7 +33,7 @@ Cog =
 		ParticleRenderMode RenderMode = Additive,
 		ParticleSortMode SortMode = Youngest,
 		ParticleAnimation ParticleAnimation = Single,
-		string Texture = "5274db4c2e7c11f9:Circle",
+		string Texture = "5a77f9c1854884f9:Player_Movement_Particle",
 		float VelocityScale = 1,
 		float LengthScale = 1,
 		float MaxParticleSize = 100,
@@ -191,7 +191,7 @@ Cog =
 				ParticleRenderMode RenderMode = Blended,
 				ParticleSortMode SortMode = Youngest,
 				ParticleAnimation ParticleAnimation = Single,
-				string Texture = "5274db4c2e7c11f9:Circle",
+				string Texture = "5a77f9c1854884f9:Player_Movement_Particle",
 				float VelocityScale = 1,
 				float LengthScale = 1,
 				float MaxParticleSize = 100,
