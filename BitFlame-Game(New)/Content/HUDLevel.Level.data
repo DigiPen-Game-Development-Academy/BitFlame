@@ -87,7 +87,7 @@ Level =
 		{
 			CogPath HealthBarRef = 
 			{
-				string Path = ":/Sprite",
+				string Path = ":/HUD/HealthBar",
 				bool ErrorOnResolveToNull = false,
 				bool ErrorOnPathCantCompute = false,
 				bool ErrorOnDirectLinkFail = false,
@@ -102,22 +102,7 @@ Level =
 			},
 			CogPath OxygenBarRef = 
 			{
-				string Path = ":/OxygenBar",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 4294967293,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-			CogPath MaterialIndicatorRef = 
-			{
-				string Path = ":/Material Indicator",
+				string Path = ":/HUD/OxygenGauge",
 				bool ErrorOnResolveToNull = false,
 				bool ErrorOnPathCantCompute = false,
 				bool ErrorOnDirectLinkFail = false,
@@ -130,13 +115,28 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
+			CogPath MaterialIndicatorRef = 
+			{
+				string Path = ":/HUD/ResourceDisplay",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 5,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
 		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 5,
+			uint Id = 6,
 		},
 		Named = 
 		{
@@ -241,7 +241,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 6,
+			uint Id = 7,
 		},
 		Named = 
 		{
@@ -282,7 +282,7 @@ Level =
 				string Name = "5ac104f6bc42814b:OxygenGauge",
 				LinkId = 
 				{
-					uint Id = 7,
+					uint Id = 4,
 				},
 				Transform = 
 				{
@@ -420,7 +420,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 10,
+					uint Id = 5,
 				},
 				Named = 
 				{
@@ -456,7 +456,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 4,
+							uint Id = 10,
 						},
 						Named = 
 						{
