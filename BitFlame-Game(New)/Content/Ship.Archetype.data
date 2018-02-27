@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, -0.5],
+		Vec3 Translation = [-6, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -78,6 +78,13 @@ Cog =
 			CogPathPreference PathPreference1 = SpaceRelative,
 			CogPathPreference PathPreference2 = Absolute,
 		},
+	},
+	Ship_ChangeSprite = 
+	{
+		string ShipRepairStage1Sprite = "5a018714cc9e515a:Ship_Sprite",
+		string ShipRepairStage2Sprite = "5a018714cc9e515a:Ship_Sprite",
+		string ShipRepairStage3Sprite = "5a018714cc9e515a:Ship_Sprite",
+		string ShipRepairStage4Sprite = "5a018714cc9e515a:Ship_Sprite",
 	},
 	Hierarchy = 
 	{
