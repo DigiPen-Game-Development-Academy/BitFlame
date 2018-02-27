@@ -2,6 +2,8 @@ class DamageOnHit : ZilchComponent
 {
     [Property] var Damage : Real = 10.0;
     
+    [Property] var Penatrating : Boolean = false;
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
@@ -13,7 +15,10 @@ class DamageOnHit : ZilchComponent
         {
             event.OtherObject.Health.Health -= this.Damage;
             
-            this.Owner.Destroy();
+            if(!this.Penatrating)
+            {
+                this.Owner.Destroy();
+            }       
         }
     }
 }
