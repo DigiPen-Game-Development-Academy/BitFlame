@@ -23,12 +23,17 @@ class OxygenGauge : ZilchComponent
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         
-        this.OxygenModifier = 100 / this.GameSession.GameVars.PlayerMaxOxygen;
-        
+        this.Update();
     }
-
+    
+    function Update()
+    {
+        this.OxygenModifier = 100 / this.GameSession.GameVars.PlayerMaxOxygen;
+    }
+    
     function OnLogicUpdate(event : UpdateEvent)
     {
+        this.Update();
         this.CurrentOxygen = this.GameSession.GameVars.PlayerOxygen * this.OxygenModifier;
         
         if(this.GameSession.GameVars.PlayerLosingOxygen == true)
