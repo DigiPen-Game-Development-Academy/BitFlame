@@ -144,7 +144,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-9.13657188, -17.2953033, 70.9990005],
+			Vec3 Translation = [15.9384031, 4.85931683, 70.9990005],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -156,7 +156,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 44.9329643,
+			float Size = 30.1194782,
 		},
 		EditorCameraController = 
 		{
@@ -164,7 +164,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-9.13657188, -17.2953033, 20.9990005],
+			Vec3 LookTarget = [15.9384031, 4.85931683, 20.9990005],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -463,6 +463,7 @@ Level =
 			float MoveTime = 0.200000003,
 			bool Reload = false,
 			string LevelToChangeTo = "",
+			bool Respawn = false,
 			bool Quit = false,
 		},
 		Area = 
@@ -538,6 +539,7 @@ Level =
 			float MoveTime = 0.200000003,
 			bool Reload = false,
 			string LevelToChangeTo = "",
+			bool Respawn = false,
 			bool Quit = false,
 		},
 		Area = 
@@ -624,10 +626,22 @@ Level =
 		},
 		Ship_Menu_Button_Repair_Function = 
 		{
-			int IronCost = 40,
-			int CopperCost = 40,
-			int TitaniumCost = 30,
-			int AluminiumCost = 50,
+			int Stage1IronCost = 1,
+			int Stage1CopperCost = 1,
+			int Stage1TitaniumCost = 1,
+			int Stage1AluminiumCost = 1,
+			int Stage2IronCost = 2,
+			int Stage2CopperCost = 2,
+			int Stage2TitaniumCost = 2,
+			int Stage2AluminiumCost = 2,
+			int Stage3IronCost = 3,
+			int Stage3CopperCost = 3,
+			int Stage3TitaniumCost = 3,
+			int Stage3AluminiumCost = 3,
+			int Stage4IronCost = 4,
+			int Stage4CopperCost = 4,
+			int Stage4TitaniumCost = 4,
+			int Stage4AluminiumCost = 4,
 		},
 		Ship_Menu_Button_Repair_Visual = 
 		{
@@ -751,6 +765,7 @@ Level =
 			float MoveTime = 0.200000003,
 			bool Reload = false,
 			string LevelToChangeTo = "",
+			bool Respawn = false,
 			bool Quit = false,
 		},
 		Area = 
@@ -826,6 +841,7 @@ Level =
 			float MoveTime = 0.200000003,
 			bool Reload = false,
 			string LevelToChangeTo = "",
+			bool Respawn = false,
 			bool Quit = false,
 		},
 		Area = 
@@ -941,6 +957,7 @@ Level =
 			float MoveTime = 0.200000003,
 			bool Reload = false,
 			string LevelToChangeTo = "",
+			bool Respawn = false,
 			bool Quit = false,
 		},
 		Area = 
@@ -1016,6 +1033,7 @@ Level =
 			float MoveTime = 0.200000003,
 			bool Reload = false,
 			string LevelToChangeTo = "",
+			bool Respawn = false,
 			bool Quit = false,
 		},
 		Area = 
@@ -1131,6 +1149,7 @@ Level =
 			float MoveTime = 0.200000003,
 			bool Reload = false,
 			string LevelToChangeTo = "",
+			bool Respawn = false,
 			bool Quit = false,
 		},
 		Area = 
@@ -1353,6 +1372,7 @@ Level =
 			float MoveTime = 0.200000003,
 			bool Reload = true,
 			string LevelToChangeTo = "",
+			bool Respawn = false,
 			bool Quit = false,
 		},
 		Area = 
@@ -1465,6 +1485,7 @@ Level =
 			float MoveTime = 0.200000003,
 			bool Reload = false,
 			string LevelToChangeTo = "",
+			bool Respawn = false,
 			bool Quit = false,
 		},
 		Area = 

@@ -2,15 +2,15 @@ ImageContent =
 {
 	SpriteSourceBuilder = 
 	{
-		string Name = "Crab Shooter_Animation",
-		uint64 ResourceId = 5af4a2fbe6ec69c6,
+		string Name = "Grapple Piece",
+		uint64 ResourceId = 5a74744dc93527b7,
 		uint64 AtlasId = 5274cf95e4a661fd,
-		uint FrameSizeX = 48,
-		uint FrameSizeY = 48,
-		uint FrameCount = 4,
+		uint FrameSizeX = 32,
+		uint FrameSizeY = 32,
+		uint FrameCount = 1,
 		float FrameDelay = 0.0833333358,
-		float OriginX = 24,
-		float OriginY = 24,
+		float OriginX = 16,
+		float OriginY = 16,
 		float PixelsPerUnit = 32,
 		bool Smoothing = false,
 		bool Looping = true,
