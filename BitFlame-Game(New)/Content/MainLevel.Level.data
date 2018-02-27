@@ -405,6 +405,9 @@ Level =
 			float Drag = 4,
 			float AngularDrag = 4,
 		},
+		HealthRegen = 
+		{
+		},
 		Hierarchy = 
 		{
 			Cog = 
