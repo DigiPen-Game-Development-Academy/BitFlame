@@ -28,7 +28,7 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5a8ad6ac767bb5cd:PlayerBody_Sprite_Animated",
+		string SpriteSource = "5a89015bc90c1ccb:PlayerBody_Sprite_Animated",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -99,6 +99,7 @@ Cog =
 			CogPathPreference PathPreference1 = SpaceRelative,
 			CogPathPreference PathPreference2 = Absolute,
 		},
+		float TimeInterval = 1,
 		string IronResource = "5a86165eb2745571:Game_ResourceOre_Pickup",
 		string CopperResource = "5a6cae91a47b14d7:Game_CopperOre_Pickup",
 		string AluminiumResource = "5a6ca514b81d8e50:Game_AluminiumOre_Pickup",
@@ -242,7 +243,7 @@ Cog =
 			},
 			PlayerShooting = 
 			{
-				float FireRate = 0.5,
+				float FireRate = 0.125,
 				float BulletSpeed = 25,
 				string Bullet = "5a1c3c0e55b6fbd1:Bullet",
 				bool CanShoot = true,

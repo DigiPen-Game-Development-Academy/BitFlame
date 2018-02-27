@@ -111,6 +111,12 @@ class Ship_Menu_Button_Function : ZilchComponent
         {
             this.GameSession.Quit();
         }
+                        
+        if(this.Respawn)
+        {
+            this.GameSession.GameVars.DestroyRespawnMenu = true;
+            return;
+        }
         
         if(this.LevelToChangeTo != null)
         {
@@ -120,12 +126,6 @@ class Ship_Menu_Button_Function : ZilchComponent
         if(this.Reload)
         {
             this.GameSession.GameVars.WorldRegen = true;
-        }
-        
-        if(this.Respawn)
-        {
-            this.GameSession.GameVars.DestroyRespawnMenu = true;
-            return;
         }
         
         if(this.Camera != null)

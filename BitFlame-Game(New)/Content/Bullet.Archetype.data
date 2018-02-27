@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [1.67321372, -3.83810401, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -83,7 +83,7 @@ Cog =
 	},
 	DamageOnHit = 
 	{
-		float Damage = 1,
+		float Damage = 0.25,
 	},
 	DestroyOffscreen = 
 	{

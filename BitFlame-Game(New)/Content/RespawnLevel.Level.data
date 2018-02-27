@@ -152,7 +152,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [4.05092573, -5.58603573, 50],
+			Vec3 Translation = [2.75631571, -1.27067149, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -172,7 +172,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [4.05092573, -5.58603573, 1.77071541e-07],
+			Vec3 LookTarget = [2.75631571, -1.27067149, 1.20482369e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -909,6 +909,11 @@ Level =
 			float AnimationSpeed = 1,
 			uint StartFrame = 0,
 		},
+		Area = 
+		{
+			Vec2 Size = [12, 3],
+			Location Origin = Center,
+		},
 		Reactive = 
 		{
 			bool Active = true,
@@ -920,11 +925,6 @@ Level =
 			Vec4 ClickColor = [0.466666698, 0.776470661, 0.588235319, 1],
 			float HoverScale = 1.20000005,
 			float ClickScale = 1,
-		},
-		Area = 
-		{
-			Vec2 Size = [12, 3],
-			Location Origin = Center,
 		},
 		Ship_Menu_Button_Function = 
 		{

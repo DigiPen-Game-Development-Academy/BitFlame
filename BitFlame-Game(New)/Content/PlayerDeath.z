@@ -22,6 +22,11 @@ class PlayerDeath : ZilchComponent
     [Property]
     var PlayerRef : CogPath = null;
     
+    //HealthDrainTimeInterval
+    [Property] var TimeInterval : Real = 1.0; 
+    
+    var Timer : Real;
+    
     // Store the space where our HUD is so that we can access and destroy it
     var HUDSpace : Space = null;
     
@@ -53,11 +58,20 @@ class PlayerDeath : ZilchComponent
         //setup quick var to save on repitition
         var gameVars = this.GameSession.GameVars;
         
-        //if the player has no health or oxygen then their dead, reset their health and oxygen and teleport them to world origin.
-        if (gameVars.PlayerHealth <= 0 || gameVars.PlayerOxygen <= 0)
+        //check if player oxygen is less than 0, if so, drain player health - jakob McFarland
+        if(this.GameSession.GameVars.PlayerOxygen <= 0.0)
         {
-            
-            
+            if(this.Timer >= this.TimeInterval)
+            {
+                this.Timer -= this.TimeInterval;
+                this.GameSession.GameVars.PlayerHealth -= 1;
+            }
+            this.Timer += event.Dt;
+        }
+        
+        //if the player has no health or oxygen then their dead, reset their health and oxygen and teleport them to world origin.
+        if (gameVars.PlayerHealth <= 0)
+        {  
             for(var i = 0.0; i < gameVars.PlayerResources; ++i)
             {
                 var resource = this.Space.CreateAtPosition(this.IronResource, this.Owner.Transform.Translation);
@@ -87,6 +101,10 @@ class PlayerDeath : ZilchComponent
             gameVars.PlayerCopper = 0;
             gameVars.PlayerAluminium = 0;
             
+            //teleport the player behind the camera where it can't be interacted with - jakob McFarland
+            this.Owner.Transform.Translation = Real3(0.0, 0.0, 1000.0);
+            this.GameSession.GameVars.PlayerLosingOxygen = false;
+            
             if(this.HUDSpace == null)
             {
                 // Create the HUD space and then load our HUD level into it
@@ -107,13 +125,14 @@ class PlayerDeath : ZilchComponent
                 {
                   this.HUDSpace.Destroy();  
                 }
+                
+                //respawn the player when the respawn button is pressed - jakob McFarland
+                this.GameSession.GameVars.PlayerHealth = this.GameSession.GameVars.StartingPlayerHealth;
+                this.GameSession.GameVars.PlayerOxygen = this.GameSession.GameVars.StartingPlayerOxygen;
             
+                this.GameSession.GameVars.PlayerLosingOxygen = true;
+                this.Owner.Transform.Translation = Real3(0.0, 0.0, 0.0);         
             }
-            
-            this.GameSession.GameVars.PlayerHealth = this.GameSession.GameVars.StartingPlayerHealth;
-            this.GameSession.GameVars.PlayerOxygen = this.GameSession.GameVars.StartingPlayerOxygen;
-            
-            this.Owner.Transform.Translation = Real3(0.0, 0.0, 0.0);
         }
         
         //kill cheat <For Testing ONLY>

@@ -150,7 +150,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [18.9478092, 16.316246, 50],
+			Vec3 Translation = [-2.10101318, 5.67178345, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -162,7 +162,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 12.2456713,
+			float Size = 20.189703,
 		},
 		EditorCameraController = 
 		{
@@ -170,7 +170,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [18.9478092, 16.316246, 2.74990839e-07],
+			Vec3 LookTarget = [-2.10101318, 5.67178345, -6.45082423e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -354,6 +354,7 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
+			float TimeInterval = 1,
 			string IronResource = "5a86165eb2745571:Game_ResourceOre_Pickup",
 			string CopperResource = "5a6cae91a47b14d7:Game_CopperOre_Pickup",
 			string AluminiumResource = "5a6ca514b81d8e50:Game_AluminiumOre_Pickup",
@@ -497,7 +498,7 @@ Level =
 				},
 				PlayerShooting = 
 				{
-					float FireRate = 0.5,
+					float FireRate = 0.125,
 					float BulletSpeed = 25,
 					string Bullet = "5a1c3c0e55b6fbd1:Bullet",
 					bool CanShoot = true,

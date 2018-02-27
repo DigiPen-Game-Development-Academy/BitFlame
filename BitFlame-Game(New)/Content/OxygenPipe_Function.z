@@ -44,7 +44,7 @@ class OxygenPipe_Function : ZilchComponent
         if(this.ConnectedTo != null)
         {   
             var end = this.ConnectedTo.Transform.Translation;
-            end.Y -= 1;
+            //end.Y -= 1;
                 
             //Console.WriteLine("Test line");
                 
