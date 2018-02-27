@@ -51,7 +51,13 @@ class GameVars : ZilchComponent
     
     
     //ship repair
-    var ShipRepaired : Boolean = false;
+    var ShipRepairStage0 : Boolean = true;
+    var ShipRepairStage1 : Boolean = false;
+    var ShipRepairStage2 : Boolean = false;
+    var ShipRepairStage3 : Boolean = false;
+    var ShipRepairStage4 : Boolean = false;
+    
+    
     
     var WorldRegen : Boolean = false;
     
