@@ -22,6 +22,13 @@ class PlayerShooting : ZilchComponent
     
     [Property] var CanShoot : Boolean = true;
     
+    //if the player has spread shot 
+    [Property] var SpreadShot : Boolean = false;
+    //Rotation between shots in degrees
+    [Property] var SpreadAmount : Real = 10;
+    
+    
+    
     var Timer : Real = 0.0; 
     
     function Initialize(init : CogInitializer)
@@ -48,6 +55,28 @@ class PlayerShooting : ZilchComponent
             bullet.RigidBody.Velocity += mouseDirection * this.BulletSpeed + this.Owner.Parent.RigidBody.Velocity;
             
             bullet.Orientation.LookAtDirectionWithUp(mouseDirection, Real3(0.0,0.0,1.0));
+            
+            if(this.SpreadShot) 
+            {
+                var right = Math.RotateVector(mouseDirection, Real3.ZAxis, Math.ToRadians(this.SpreadAmount));
+                
+                var bullet2 = this.Space.CreateAtPosition(this.Bullet,this.Owner.Transform.WorldTranslation);
+                
+                bullet2.RigidBody.Velocity += right * this.BulletSpeed + this.Owner.Parent.RigidBody.Velocity;
+                
+                bullet2.Orientation.LookAtDirectionWithUp(mouseDirection, Real3(0.0,0.0,1.0));
+                
+                
+                var left = Math.RotateVector(mouseDirection, Real3.ZAxis, Math.ToRadians(this.SpreadAmount));
+                
+                var bullet3 = this.Space.CreateAtPosition(this.Bullet,this.Owner.Transform.WorldTranslation);
+                
+                bullet3.RigidBody.Velocity += left * this.BulletSpeed + this.Owner.Parent.RigidBody.Velocity;
+                
+                bullet3.Orientation.LookAtDirectionWithUp(mouseDirection, Real3(0.0,0.0,1.0));
+                
+                
+            }
             
             this.Timer = 0.0;
         }
