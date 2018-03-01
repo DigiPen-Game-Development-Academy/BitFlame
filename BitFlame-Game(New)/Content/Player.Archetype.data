@@ -36,16 +36,6 @@ Cog =
 		float AnimationSpeed = 1,
 		uint StartFrame = 0,
 	},
-	BoxCollider = 
-	{
-		bool Ghost = false,
-		bool SendsMessages = true,
-		bool Seamless = true,
-		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-		string SerializedGroupName = "5afe68729db9df55:PlayerCollisionGroup",
-		Vec3 Offset = [-0.100000001, 0, 0],
-		Vec3 Size = [0.25, 0.75, 0.5],
-	},
 	Player_Movement_Script = 
 	{
 		float Speed = 40,
@@ -79,6 +69,16 @@ Cog =
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
 		Vec3 AngularVelocity = [0, 0, 0],
+	},
+	BoxCollider = 
+	{
+		bool Ghost = false,
+		bool SendsMessages = true,
+		bool Seamless = true,
+		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+		string SerializedGroupName = "5afe68729db9df55:PlayerCollisionGroup",
+		Vec3 Offset = [0, -0.0500000007, 0],
+		Vec3 Size = [0.25, 0.850000024, 0.5],
 	},
 	PlayerDeath = 
 	{
@@ -152,6 +152,8 @@ Cog =
 	},
 	HealthRegen = 
 	{
+		bool Active = true,
+		int HealthRegenAmount = 1,
 	},
 	Hierarchy = 
 	{
@@ -226,7 +228,7 @@ Cog =
 			},
 			BoxCollider = 
 			{
-				bool Ghost = false,
+				bool Ghost = true,
 				bool SendsMessages = true,
 				bool Seamless = true,
 				string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",

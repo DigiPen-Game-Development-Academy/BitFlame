@@ -150,7 +150,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [5.83788919, -1.01742721, 50],
+			Vec3 Translation = [3.19073606, -1.13639307, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -162,7 +162,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 16.5299072,
+			float Size = 14.9568863,
 		},
 		EditorCameraController = 
 		{
@@ -170,7 +170,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [5.83788919, -1.01742721, -2.69354842e-07],
+			Vec3 LookTarget = [3.19073606, -1.13639307, -3.85065647e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -604,19 +604,12 @@ Level =
 			},
 		},
 	},
-	Cog = 
+	ArchetypeInstance = 
 	{
+		string Name = "5a7411b441710034:ChargingEnemy",
 		LinkId = 
 		{
 			uint Id = 15,
-		},
-		Named = 
-		{
-			string Name = "ChargingEnemy",
-		},
-		Archetyped = 
-		{
-			string Name = "5a7411b441710034:ChargingEnemy",
 		},
 		Transform = 
 		{
@@ -624,81 +617,9 @@ Level =
 			Vec3 Scale = [1.5, 1.5, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Sprite = 
+		Named = 
 		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5af4a2d0f81cb51c:Alien_Enemy_Animation",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Orientation = 
-		{
-			Vec3 GlobalUp = [0, 1, 0],
-			Vec3 UpVector = [0, 0, 1],
-			Vec3 ForwardVector = [1, 0, 0],
-			OrientationBases DefaultBases = ForwardXUpZ,
-		},
-		BoxCollider = 
-		{
-			bool Ghost = false,
-			bool SendsMessages = true,
-			bool Seamless = true,
-			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [0, 0, 0],
-			Vec3 Size = [0.5, 0.5, 0.5],
-		},
-		RigidBody = 
-		{
-			bool Static = false,
-			bool Asleep = false,
-			bool Kinematic = false,
-			bool RotationLocked = false,
-			bool Mode2D = true,
-			bool AllowSleep = true,
-			bool Inherit2DMode = true,
-			Vec3 Velocity = [0, 0, 0],
-			Vec3 AngularVelocity = [0, 0, 0],
-		},
-		Player_LookAt = 
-		{
-		},
-		Health = 
-		{
-			float Health = 4,
-			string ArchetypetoSpawnOnDeath1 = "5a70715bb5c81bfe:Game_OxygenOre_Pickup",
-			string ArchetypetoSpawnOnDeath2 = "5af4a586aa6a35b5:lienEnemy_ExplosionEffect",
-			bool Unbreakable = false,
-		},
-		DamageOnCollide = 
-		{
-			int Damage = 1,
-		},
-		ChargingEnemyLogic = 
-		{
-			float Speed = 4,
-			float ChargeSpeed = 18,
-			float ChargeRange = 12,
-			float DetectionRange = 20,
-			float ChargeUpTime = 1,
-			Vec4 ChargeUpColor = [1, 0, 0, 1],
-			Vec3 ChargeUpScale = [2, 2, 1],
-		},
-		DamageOnHit = 
-		{
-			float Damage = 10,
-			bool Penatrating = true,
+			string Name = "ChargingEnemy",
 		},
 	},
 },

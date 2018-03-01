@@ -1,6 +1,8 @@
 class HealthRegen : ZilchComponent
 {
-    var HealthRegenAmount : Integer = 1;
+    [Property] var Active : Boolean = true;
+    
+    [Property] var HealthRegenAmount : Integer = 1;
     
     var EventTimePasted : Real = 0.0;
     
@@ -13,7 +15,7 @@ class HealthRegen : ZilchComponent
     {
         this.EventTimePasted += event.Dt;
         
-        if(this.EventTimePasted >= 1.0)
+        if(this.EventTimePasted >= 1.0 && this.Active)
         {
             if(this.GameSession.GameVars.PlayerHealth < this.GameSession.GameVars.PlayerMaxHealth)
             {

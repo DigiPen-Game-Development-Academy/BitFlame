@@ -38,7 +38,7 @@ Cog =
 	},
 	Health = 
 	{
-		float Health = 15,
+		float Health = 10,
 		string ArchetypetoSpawnOnDeath1 = "5a08fb7240d5e7ed:ExplosionParticleEffect",
 		string ArchetypetoSpawnOnDeath2 = "",
 		bool Unbreakable = false,

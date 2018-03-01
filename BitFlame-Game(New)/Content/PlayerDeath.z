@@ -61,12 +61,18 @@ class PlayerDeath : ZilchComponent
         //check if player oxygen is less than 0, if so, drain player health - jakob McFarland
         if(this.GameSession.GameVars.PlayerOxygen <= 0.0)
         {
+            this.Owner.HealthRegen.Active = false;
+            
             if(this.Timer >= this.TimeInterval)
             {
                 this.Timer -= this.TimeInterval;
                 this.GameSession.GameVars.PlayerHealth -= 1;
             }
             this.Timer += event.Dt;
+        }
+        else
+        {
+            this.Owner.HealthRegen.Active = true;    
         }
         
         //if the player has no health or oxygen then their dead, reset their health and oxygen and teleport them to world origin.
