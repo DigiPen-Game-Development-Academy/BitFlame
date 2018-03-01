@@ -34,7 +34,7 @@ class ShootingEnemyAI : ZilchComponent
         
         bullet.Orientation.LookAtPointWithUp(this.Space.FindObjectByName("Player").Transform.Translation, Real3(0.0,0.0,1.0));
         
-        bullet.RigidBody.Velocity = Math.Normalize(this.Owner.Transform.Translation - this.Space.FindObjectByName("Player").Transform.Translation) * dt * this.BulletSpeed;
+        bullet.RigidBody.Velocity = Math.Normalize(this.Space.FindObjectByName("Player").Transform.Translation - this.Owner.Transform.Translation) * dt * this.BulletSpeed;
     }
     
     function Initialize(init : CogInitializer)
