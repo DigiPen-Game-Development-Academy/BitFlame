@@ -91,6 +91,11 @@ Level =
 			int HilightInterval = 10,
 			bool FollowEditorCamera = false,
 		},
+		CometMaker = 
+		{
+			float SpawnRate = 5,
+			string Comet = "5a074e0c89fd18fe:Comet",
+		},
 		Level_WorldGeneration = 
 		{
 			string Asteroid_01Archetype = "5af8a0083b2d1bfe:AsteroidConfig3",

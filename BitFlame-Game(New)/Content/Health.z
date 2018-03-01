@@ -41,7 +41,7 @@ class Health : ZilchComponent
             }
             var blockUpdate = BlockUpdate();
             blockUpdate.Translation = this.Transform.Translation;
-            this.Space.DispatchEvent(Events.BlockUpdate, blockUpdate);
+            //this.Space.DispatchEvent(Events.BlockUpdate, blockUpdate);
             
             this.Space.SoundSpace.PlayCue(this.ExplosionSound);
             this.Owner.Destroy();

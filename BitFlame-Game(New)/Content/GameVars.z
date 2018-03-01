@@ -17,7 +17,8 @@ class GameVars : ZilchComponent
     [Property] var StartingPlayerAluminium : Integer = 0;
     [Property] var StartingPlayerOxygen : Real = 0; 
     [Property] var PlayerMaxOxygen : Real = 0; 
-    [Property] var StartingUpgradePoints : Integer = 0; 
+    [Property] var StartingUpgradePoints : Integer = 0;
+    [Property] var StartingPipes : Integer = 0;  
     
     //upgrade flags
     [Property] var HasUpgrade_SpreadI : Boolean = false;
@@ -48,17 +49,13 @@ class GameVars : ZilchComponent
     var PlayerAluminium : Integer;
     var PlayerOxygen: Real;
     var PlayerUpgradePoints : Integer;
+    var PlayerPipes : Integer;
     
     
-    //ship repair
-    var ShipRepairStage0 : Boolean = true;
-    var ShipRepairStage1 : Boolean = false;
-    var ShipRepairStage2 : Boolean = false;
-    var ShipRepairStage3 : Boolean = false;
-    var ShipRepairStage4 : Boolean = false;
-    
-    
-    
+    //ship repair stage counter
+    var ShipRepairStage : Integer = 0;
+
+
     var WorldRegen : Boolean = false;
     
     var PlayerActive : Boolean = false;

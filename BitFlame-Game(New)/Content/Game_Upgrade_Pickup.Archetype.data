@@ -14,7 +14,11 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+<<<<<<< HEAD
+		Vec3 Translation = [-10, 1, 0],
+=======
+		Vec3 Translation = [26.3481731, 8.1258297, 0],
+>>>>>>> 21a44e76d4c43ab8123f5fac716962d389613b51
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -42,7 +46,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = false,
-		bool Mode2D = false,
+		bool Mode2D = true,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -63,5 +67,7 @@ Cog =
 		int PickupValue = 1,
 		float PickupRange = 3,
 		float PickupSpeed = 10,
+		float PickupRange = 5,
+		float PickupSpeed = 1000,
 	},
 },

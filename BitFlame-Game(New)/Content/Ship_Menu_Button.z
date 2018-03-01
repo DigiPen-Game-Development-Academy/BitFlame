@@ -135,6 +135,8 @@ class Ship_Menu_Button_Function : ZilchComponent
     }
 }
 
+
+//unused
 class Ship_Menu_Button_Upgrade : ZilchComponent
 {
     [Property] var Camera : CogPath = null; 

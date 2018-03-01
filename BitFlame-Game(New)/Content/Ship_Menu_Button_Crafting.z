@@ -1,0 +1,22 @@
+class Ship_Menu_Button_Crafting : ZilchComponent
+{
+    //world regen function 
+    sends WorldRegen : ZilchEvent;
+    
+    [Dependency] var Reactive : Reactive = null;
+
+    [Dependency] var Transform : Transform = null;
+
+  
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Owner, Events.LeftMouseUp, this.OnLeftMouseUp);
+    }
+
+    function OnLeftMouseUp(event : ViewportMouseEvent)
+    {
+    
+        
+    }
+}
+

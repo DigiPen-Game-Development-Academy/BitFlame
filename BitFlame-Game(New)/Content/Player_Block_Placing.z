@@ -18,8 +18,7 @@ class Player_Block_Placing : ZilchComponent
     //[Property] var IronBlockArchetype : Archetype = Archetype.IronBlock;
     
     //oxygen pipe block
-    [Property] var PipeIronCost : Integer;
-    [Property] var PipeAluminiumCost : Integer;
+    [Property] var PipeCost : Integer = 1;
     [Property] var PipeArchetype : Archetype = Archetype.OxygenPipe;
     [Property] var PrePipeArchetype : Archetype = Archetype.OxygenPipe_Preview;
     
@@ -89,11 +88,9 @@ class Player_Block_Placing : ZilchComponent
             
             if(this.Preview.Pipe_Preview_Collision != null && this.Preview.Pipe_Preview_Collision.PlacementInvalid == false) 
             {   
-                if(this.Space.GameSession.GameVars.PlayerResources >= this.PipeIronCost 
-                    && this.Space.GameSession.GameVars.PlayerAluminium >= this.PipeAluminiumCost)
+                if(this.Space.GameSession.GameVars.PlayerPipes >= this.PipeCost)
                 {
-                    this.Space.GameSession.GameVars.PlayerResources -= this.PipeIronCost;
-                    this.Space.GameSession.GameVars.PlayerAluminium -= this.PipeAluminiumCost;
+                    this.Space.GameSession.GameVars.PlayerPipes -= this.PipeCost;
                     this.Space.CreateAtPosition(this.PipeArchetype, this.RoundedMouse);      
                     var blockUpdate = BlockUpdate();
                     blockUpdate.Translation = this.RoundedMouse;

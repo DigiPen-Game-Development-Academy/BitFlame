@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [7, -0.5, 0],
+		Vec3 Translation = [-0.361283183, 11.5678921, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -72,7 +72,7 @@ Cog =
 	{
 		float Health = 5,
 		string ArchetypetoSpawnOnDeath1 = "5a08fb7240d5e7ed:ExplosionParticleEffect",
-		string ArchetypetoSpawnOnDeath2 = "",
+		string ArchetypetoSpawnOnDeath2 = "5a70715bb5c81bfe:Game_OxygenOre_Pickup",
 		bool Unbreakable = false,
 	},
 	ShootingEnemyAI = 
@@ -80,8 +80,8 @@ Cog =
 		float Speed = 5,
 		float RotationSpeed = 50,
 		float GrappleSpeed = 20,
-		float FollowRange = 12,
-		float OrbitRange = 8,
+		float FollowRange = 20,
+		float OrbitRange = 10,
 		float FireRate = 0.75,
 		float BulletSpeed = 200,
 		string Bullet = "5a74701c5bd6bdc4:EnemyBullet",
