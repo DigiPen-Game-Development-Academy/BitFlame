@@ -30,6 +30,7 @@ GameSession =
 		float StartingPlayerOxygen = 10,
 		float PlayerMaxOxygen = 10,
 		int StartingUpgradePoints = 1,
+		int StartingPipes = 0,
 		bool HasUpgrade_SpreadI = false,
 		bool HasUpgrade_SpreadII = false,
 		bool HasUpgrade_Homing = false,

@@ -144,7 +144,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-60.5267754, -4.55863333, 70.9990005],
+			Vec3 Translation = [31.6198311, 7.44997931, 70.9990005],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -156,7 +156,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 13.5336161,
+			float Size = 14.7781439,
 		},
 		EditorCameraController = 
 		{
@@ -164,7 +164,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-60.5267754, -4.55863333, 20.9990005],
+			Vec3 LookTarget = [31.6198311, 7.44997931, 20.9990005],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -364,40 +364,6 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "TabText",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [34.5, 9, 2],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		SpriteText = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "4e7bac697bec55c5:Verdana",
-			uint FontSize = 80,
-			string Text = "Ship Repair ",
-			TextAlign Align = Center,
-			float PixelsPerUnit = 128,
-			bool Smoothing = true,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 8,
-		},
-		Named = 
-		{
 			string Name = "Button",
 		},
 		Transform = 
@@ -471,7 +437,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 9,
+					uint Id = 8,
 				},
 				Named = 
 				{
@@ -479,7 +445,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0, 0.75, 1],
+					Vec3 Translation = [0, 0.485014439, 1],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -493,8 +459,8 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
-					uint FontSize = 75,
+					string FontName = "5a075f32e7b83df0:GameFont",
+					uint FontSize = 65,
 					string Text = "Regenerate World",
 					TextAlign Align = Center,
 					float PixelsPerUnit = 64,
@@ -507,7 +473,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 10,
+			uint Id = 9,
 		},
 		Named = 
 		{
@@ -577,7 +543,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 11,
+					uint Id = 10,
 				},
 				Named = 
 				{
@@ -599,7 +565,7 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
+					string FontName = "5a075f32e7b83df0:GameFont",
 					uint FontSize = 75,
 					string Text = "Repair Ship",
 					TextAlign Align = Center,
@@ -613,7 +579,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 12,
+			uint Id = 11,
 		},
 		Named = 
 		{
@@ -673,7 +639,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 13,
+					uint Id = 12,
 				},
 				Named = 
 				{
@@ -695,7 +661,7 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
+					string FontName = "5a075f32e7b83df0:GameFont",
 					uint FontSize = 75,
 					string Text = "Craft Turret",
 					TextAlign Align = Center,
@@ -709,7 +675,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 14,
+			uint Id = 13,
 		},
 		Named = 
 		{
@@ -769,7 +735,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 15,
+					uint Id = 14,
 				},
 				Named = 
 				{
@@ -777,7 +743,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0, 0.75, 1],
+					Vec3 Translation = [0, 0.536810398, 1],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -791,8 +757,8 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
-					uint FontSize = 75,
+					string FontName = "5a075f32e7b83df0:GameFont",
+					uint FontSize = 59,
 					string Text = "Craft Oxygen Pipes",
 					TextAlign Align = Center,
 					float PixelsPerUnit = 64,
@@ -805,7 +771,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 16,
+			uint Id = 15,
 		},
 		Named = 
 		{
@@ -845,7 +811,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 17,
+			uint Id = 16,
 		},
 		Named = 
 		{
@@ -867,7 +833,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "4e7bac697bec55c5:Verdana",
+			string FontName = "5a075f32e7b83df0:GameFont",
 			uint FontSize = 115,
 			string Text = "Warning:",
 			TextAlign Align = Center,
@@ -879,7 +845,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 18,
+			uint Id = 17,
 		},
 		Named = 
 		{
@@ -901,8 +867,8 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "4e7bac697bec55c5:Verdana",
-			uint FontSize = 60,
+			string FontName = "5a075f32e7b83df0:GameFont",
+			uint FontSize = 51,
 			string Text = "This action can not be undone",
 			TextAlign Align = Center,
 			float PixelsPerUnit = 64,
@@ -913,7 +879,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 19,
+			uint Id = 18,
 		},
 		Named = 
 		{
@@ -947,7 +913,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 20,
+			uint Id = 19,
 		},
 		Named = 
 		{
@@ -1024,7 +990,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 21,
+					uint Id = 20,
 				},
 				Named = 
 				{
@@ -1046,7 +1012,7 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
+					string FontName = "5a075f32e7b83df0:GameFont",
 					uint FontSize = 75,
 					string Text = "Confirm",
 					TextAlign Align = Center,
@@ -1060,7 +1026,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 22,
+			uint Id = 21,
 		},
 		Named = 
 		{
@@ -1137,7 +1103,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 23,
+					uint Id = 22,
 				},
 				Named = 
 				{
@@ -1159,7 +1125,7 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
+					string FontName = "5a075f32e7b83df0:GameFont",
 					uint FontSize = 75,
 					string Text = "Back",
 					TextAlign Align = Center,
@@ -1173,7 +1139,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 24,
+			uint Id = 23,
 		},
 		Named = 
 		{
@@ -1224,7 +1190,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 25,
+				uint ResolvedCog = 24,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -1249,7 +1215,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 26,
+					uint Id = 25,
 				},
 				Named = 
 				{
@@ -1301,7 +1267,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 27,
+			uint Id = 26,
 		},
 		Named = 
 		{
@@ -1352,7 +1318,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 28,
+				uint ResolvedCog = 27,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -1377,7 +1343,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 29,
+					uint Id = 28,
 				},
 				Named = 
 				{
@@ -1429,7 +1395,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 30,
+			uint Id = 29,
 		},
 		Named = 
 		{
@@ -1480,7 +1446,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 25,
+				uint ResolvedCog = 24,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -1505,7 +1471,263 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 31,
+					uint Id = 30,
+				},
+				Named = 
+				{
+					string Name = "Arrow",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0, -1],
+					Vec3 Scale = [1, 0.100000001, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [0.664999962, 0.664999962, 0.664999962, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5af71675ae40d6a7:Button",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Orientation = 
+				{
+					Vec3 GlobalUp = [0, 1, 0],
+					Vec3 UpVector = [0, 0, 1],
+					Vec3 ForwardVector = [1, 0, 0],
+					OrientationBases DefaultBases = ForwardXUpZ,
+				},
+				PointTowardsAndSetLength = 
+				{
+				},
+				Area = 
+				{
+					Vec2 Size = [0.100000001, 1],
+					Location Origin = CenterLeft,
+				},
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 31,
+		},
+		Named = 
+		{
+			string Name = "UpgradeButton411",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [8, -2, 2],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		UpgradePathLogic = 
+		{
+			string UpgradeName = "Speed 2",
+			int Cost = 2,
+			bool Unlocked = false,
+			bool Purchased = false,
+			CogPath PreviousUpgrade = 
+			{
+				string Path = ":/UpgradeButton41",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 32,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			Vec4 PurchasedColor = [0.495000005, 0.495000005, 0.495000005, 1],
+			Vec4 UnlockedColor = [0.723999977, 0.699999988, 1, 1],
+			Vec4 LockedColor = [1, 0.730000019, 0.730000019, 1],
+		},
+		Area = 
+		{
+			Vec2 Size = [1, 1],
+			Location Origin = Center,
+		},
+		UpgradeSpecifiedVariable = 
+		{
+			Enum UpgradeType = Speed,
+			float UpgradeAmount = 5,
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 33,
+				},
+				Named = 
+				{
+					string Name = "Arrow",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0, -1],
+					Vec3 Scale = [1, 0.100000001, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [0.664999962, 0.664999962, 0.664999962, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5af71675ae40d6a7:Button",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Orientation = 
+				{
+					Vec3 GlobalUp = [0, 1, 0],
+					Vec3 UpVector = [0, 0, 1],
+					Vec3 ForwardVector = [1, 0, 0],
+					OrientationBases DefaultBases = ForwardXUpZ,
+				},
+				PointTowardsAndSetLength = 
+				{
+				},
+				Area = 
+				{
+					Vec2 Size = [0.100000001, 1],
+					Location Origin = CenterLeft,
+				},
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 34,
+		},
+		Named = 
+		{
+			string Name = "UpgradeButton321",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [3.5, 4.5, 2],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		UpgradePathLogic = 
+		{
+			string UpgradeName = "Regen 2",
+			int Cost = 2,
+			bool Unlocked = false,
+			bool Purchased = false,
+			CogPath PreviousUpgrade = 
+			{
+				string Path = ":/UpgradeButton221",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 35,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			Vec4 PurchasedColor = [0.495000005, 0.495000005, 0.495000005, 1],
+			Vec4 UnlockedColor = [0.723999977, 0.699999988, 1, 1],
+			Vec4 LockedColor = [1, 0.730000019, 0.730000019, 1],
+		},
+		Area = 
+		{
+			Vec2 Size = [1, 1],
+			Location Origin = Center,
+		},
+		UpgradeSpecifiedVariable = 
+		{
+			Enum UpgradeType = HealthRegen,
+			float UpgradeAmount = 1,
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 36,
 				},
 				Named = 
 				{
@@ -1561,262 +1783,6 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "UpgradeButton411",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [8, -2, 2],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		UpgradePathLogic = 
-		{
-			string UpgradeName = "Speed 2",
-			int Cost = 2,
-			bool Unlocked = false,
-			bool Purchased = false,
-			CogPath PreviousUpgrade = 
-			{
-				string Path = ":/UpgradeButton41",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 33,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-			Vec4 PurchasedColor = [0.495000005, 0.495000005, 0.495000005, 1],
-			Vec4 UnlockedColor = [0.723999977, 0.699999988, 1, 1],
-			Vec4 LockedColor = [1, 0.730000019, 0.730000019, 1],
-		},
-		Area = 
-		{
-			Vec2 Size = [1, 1],
-			Location Origin = Center,
-		},
-		UpgradeSpecifiedVariable = 
-		{
-			Enum UpgradeType = Speed,
-			float UpgradeAmount = 5,
-		},
-		Hierarchy = 
-		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 34,
-				},
-				Named = 
-				{
-					string Name = "Arrow",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 0, -1],
-					Vec3 Scale = [1, 0.100000001, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Sprite = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [0.664999962, 0.664999962, 0.664999962, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5af71675ae40d6a7:Button",
-					bool RenderMask = false,
-					bool FlipX = false,
-					bool FlipY = false,
-					bool AnimationActive = true,
-					float AnimationSpeed = 1,
-					uint StartFrame = 0,
-				},
-				Orientation = 
-				{
-					Vec3 GlobalUp = [0, 1, 0],
-					Vec3 UpVector = [0, 0, 1],
-					Vec3 ForwardVector = [1, 0, 0],
-					OrientationBases DefaultBases = ForwardXUpZ,
-				},
-				PointTowardsAndSetLength = 
-				{
-				},
-				Area = 
-				{
-					Vec2 Size = [0.100000001, 1],
-					Location Origin = CenterLeft,
-				},
-			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 35,
-		},
-		Named = 
-		{
-			string Name = "UpgradeButton321",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [3.5, 4.5, 2],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		UpgradePathLogic = 
-		{
-			string UpgradeName = "Regen 2",
-			int Cost = 2,
-			bool Unlocked = false,
-			bool Purchased = false,
-			CogPath PreviousUpgrade = 
-			{
-				string Path = ":/UpgradeButton221",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 36,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-			Vec4 PurchasedColor = [0.495000005, 0.495000005, 0.495000005, 1],
-			Vec4 UnlockedColor = [0.723999977, 0.699999988, 1, 1],
-			Vec4 LockedColor = [1, 0.730000019, 0.730000019, 1],
-		},
-		Area = 
-		{
-			Vec2 Size = [1, 1],
-			Location Origin = Center,
-		},
-		UpgradeSpecifiedVariable = 
-		{
-			Enum UpgradeType = HealthRegen,
-			float UpgradeAmount = 1,
-		},
-		Hierarchy = 
-		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 37,
-				},
-				Named = 
-				{
-					string Name = "Arrow",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 0, -1],
-					Vec3 Scale = [1, 0.100000001, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Sprite = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [0.664999962, 0.664999962, 0.664999962, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5af71675ae40d6a7:Button",
-					bool RenderMask = false,
-					bool FlipX = false,
-					bool FlipY = false,
-					bool AnimationActive = true,
-					float AnimationSpeed = 1,
-					uint StartFrame = 0,
-				},
-				Orientation = 
-				{
-					Vec3 GlobalUp = [0, 1, 0],
-					Vec3 UpVector = [0, 0, 1],
-					Vec3 ForwardVector = [1, 0, 0],
-					OrientationBases DefaultBases = ForwardXUpZ,
-				},
-				PointTowardsAndSetLength = 
-				{
-				},
-				Area = 
-				{
-					Vec2 Size = [0.100000001, 1],
-					Location Origin = CenterLeft,
-				},
-			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 33,
-		},
-		Named = 
-		{
 			string Name = "UpgradeButton41",
 		},
 		Transform = 
@@ -1864,7 +1830,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 38,
+				uint ResolvedCog = 37,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -1889,7 +1855,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 39,
+					uint Id = 38,
 				},
 				Named = 
 				{
@@ -1941,7 +1907,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 28,
+			uint Id = 27,
 		},
 		Named = 
 		{
@@ -1992,7 +1958,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 40,
+				uint ResolvedCog = 39,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -2017,7 +1983,263 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 41,
+					uint Id = 40,
+				},
+				Named = 
+				{
+					string Name = "Arrow",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0, -1],
+					Vec3 Scale = [1, 0.100000001, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [0.664999962, 0.664999962, 0.664999962, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5af71675ae40d6a7:Button",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Orientation = 
+				{
+					Vec3 GlobalUp = [0, 1, 0],
+					Vec3 UpVector = [0, 0, 1],
+					Vec3 ForwardVector = [1, 0, 0],
+					OrientationBases DefaultBases = ForwardXUpZ,
+				},
+				PointTowardsAndSetLength = 
+				{
+				},
+				Area = 
+				{
+					Vec2 Size = [0.100000001, 1],
+					Location Origin = CenterLeft,
+				},
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 41,
+		},
+		Named = 
+		{
+			string Name = "UpgradeButton211",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-4, 4.5, 2],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		UpgradePathLogic = 
+		{
+			string UpgradeName = "Oxygen 3",
+			int Cost = 2,
+			bool Unlocked = false,
+			bool Purchased = false,
+			CogPath PreviousUpgrade = 
+			{
+				string Path = ":/UpgradeButton21",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 42,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			Vec4 PurchasedColor = [0.495000005, 0.495000005, 0.495000005, 1],
+			Vec4 UnlockedColor = [0.723999977, 0.699999988, 1, 1],
+			Vec4 LockedColor = [1, 0.730000019, 0.730000019, 1],
+		},
+		Area = 
+		{
+			Vec2 Size = [1, 1],
+			Location Origin = Center,
+		},
+		UpgradeSpecifiedVariable = 
+		{
+			Enum UpgradeType = Oxygen,
+			float UpgradeAmount = 1,
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 43,
+				},
+				Named = 
+				{
+					string Name = "Arrow",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0, -1],
+					Vec3 Scale = [1, 0.100000001, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [0.664999962, 0.664999962, 0.664999962, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5af71675ae40d6a7:Button",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Orientation = 
+				{
+					Vec3 GlobalUp = [0, 1, 0],
+					Vec3 UpVector = [0, 0, 1],
+					Vec3 ForwardVector = [1, 0, 0],
+					OrientationBases DefaultBases = ForwardXUpZ,
+				},
+				PointTowardsAndSetLength = 
+				{
+				},
+				Area = 
+				{
+					Vec2 Size = [0.100000001, 1],
+					Location Origin = CenterLeft,
+				},
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 44,
+		},
+		Named = 
+		{
+			string Name = "UpgradeButton111",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-8, -4.5, 2],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		UpgradePathLogic = 
+		{
+			string UpgradeName = "Bullet Speed 2",
+			int Cost = 2,
+			bool Unlocked = false,
+			bool Purchased = false,
+			CogPath PreviousUpgrade = 
+			{
+				string Path = ":/UpgradeButton421",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 29,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			Vec4 PurchasedColor = [0.495000005, 0.495000005, 0.495000005, 1],
+			Vec4 UnlockedColor = [0.723999977, 0.699999988, 1, 1],
+			Vec4 LockedColor = [1, 0.730000019, 0.730000019, 1],
+		},
+		Area = 
+		{
+			Vec2 Size = [1, 1],
+			Location Origin = Center,
+		},
+		UpgradeSpecifiedVariable = 
+		{
+			Enum UpgradeType = BulletSpeed,
+			float UpgradeAmount = 5,
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 45,
 				},
 				Named = 
 				{
@@ -2073,11 +2295,11 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "UpgradeButton211",
+			string Name = "UpgradeButton21",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-4, 4.5, 2],
+			Vec3 Translation = [-4, 2, 2],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -2106,13 +2328,13 @@ Level =
 		},
 		UpgradePathLogic = 
 		{
-			string UpgradeName = "Oxygen 3",
-			int Cost = 2,
+			string UpgradeName = "Oxygen 2",
+			int Cost = 1,
 			bool Unlocked = false,
 			bool Purchased = false,
 			CogPath PreviousUpgrade = 
 			{
-				string Path = ":/UpgradeButton21",
+				string Path = ":/Sprite1",
 				bool ErrorOnResolveToNull = false,
 				bool ErrorOnPathCantCompute = false,
 				bool ErrorOnDirectLinkFail = false,
@@ -2120,7 +2342,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 43,
+				uint ResolvedCog = 27,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -2138,134 +2360,6 @@ Level =
 		{
 			Enum UpgradeType = Oxygen,
 			float UpgradeAmount = 1,
-		},
-		Hierarchy = 
-		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 44,
-				},
-				Named = 
-				{
-					string Name = "Arrow",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 0, -1],
-					Vec3 Scale = [1, 0.100000001, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Sprite = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [0.664999962, 0.664999962, 0.664999962, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5af71675ae40d6a7:Button",
-					bool RenderMask = false,
-					bool FlipX = false,
-					bool FlipY = false,
-					bool AnimationActive = true,
-					float AnimationSpeed = 1,
-					uint StartFrame = 0,
-				},
-				Orientation = 
-				{
-					Vec3 GlobalUp = [0, 1, 0],
-					Vec3 UpVector = [0, 0, 1],
-					Vec3 ForwardVector = [1, 0, 0],
-					OrientationBases DefaultBases = ForwardXUpZ,
-				},
-				PointTowardsAndSetLength = 
-				{
-				},
-				Area = 
-				{
-					Vec2 Size = [0.100000001, 1],
-					Location Origin = CenterLeft,
-				},
-			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 45,
-		},
-		Named = 
-		{
-			string Name = "UpgradeButton111",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-8, -4.5, 2],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		UpgradePathLogic = 
-		{
-			string UpgradeName = "Bullet Speed 2",
-			int Cost = 2,
-			bool Unlocked = false,
-			bool Purchased = false,
-			CogPath PreviousUpgrade = 
-			{
-				string Path = ":/UpgradeButton421",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 30,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-			Vec4 PurchasedColor = [0.495000005, 0.495000005, 0.495000005, 1],
-			Vec4 UnlockedColor = [0.723999977, 0.699999988, 1, 1],
-			Vec4 LockedColor = [1, 0.730000019, 0.730000019, 1],
-		},
-		Area = 
-		{
-			Vec2 Size = [1, 1],
-			Location Origin = Center,
-		},
-		UpgradeSpecifiedVariable = 
-		{
-			Enum UpgradeType = BulletSpeed,
-			float UpgradeAmount = 5,
 		},
 		Hierarchy = 
 		{
@@ -2325,15 +2419,15 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 43,
+			uint Id = 47,
 		},
 		Named = 
 		{
-			string Name = "UpgradeButton21",
+			string Name = "UpgradeButton311",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-4, 2, 2],
+			Vec3 Translation = [1, 4.5, 2],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -2362,13 +2456,13 @@ Level =
 		},
 		UpgradePathLogic = 
 		{
-			string UpgradeName = "Oxygen 2",
-			int Cost = 1,
+			string UpgradeName = "Health 3",
+			int Cost = 2,
 			bool Unlocked = false,
 			bool Purchased = false,
 			CogPath PreviousUpgrade = 
 			{
-				string Path = ":/Sprite1",
+				string Path = ":/UpgradeButton21",
 				bool ErrorOnResolveToNull = false,
 				bool ErrorOnPathCantCompute = false,
 				bool ErrorOnDirectLinkFail = false,
@@ -2376,7 +2470,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 28,
+				uint ResolvedCog = 48,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -2392,7 +2486,7 @@ Level =
 		},
 		UpgradeSpecifiedVariable = 
 		{
-			Enum UpgradeType = Oxygen,
+			Enum UpgradeType = Health,
 			float UpgradeAmount = 1,
 		},
 		Hierarchy = 
@@ -2401,7 +2495,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 47,
+					uint Id = 49,
 				},
 				Named = 
 				{
@@ -2457,11 +2551,11 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "UpgradeButton311",
+			string Name = "UpgradeButton31",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1, 4.5, 2],
+			Vec3 Translation = [1, 2, 2],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -2490,13 +2584,13 @@ Level =
 		},
 		UpgradePathLogic = 
 		{
-			string UpgradeName = "Health 3",
-			int Cost = 2,
+			string UpgradeName = "Health 2",
+			int Cost = 1,
 			bool Unlocked = false,
 			bool Purchased = false,
 			CogPath PreviousUpgrade = 
 			{
-				string Path = ":/UpgradeButton21",
+				string Path = ":/UpgradeButton3",
 				bool ErrorOnResolveToNull = false,
 				bool ErrorOnPathCantCompute = false,
 				bool ErrorOnDirectLinkFail = false,
@@ -2504,7 +2598,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 49,
+				uint ResolvedCog = 50,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -2529,7 +2623,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 50,
+					uint Id = 51,
 				},
 				Named = 
 				{
@@ -2581,15 +2675,15 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 49,
+			uint Id = 24,
 		},
 		Named = 
 		{
-			string Name = "UpgradeButton31",
+			string Name = "UpgradeButton1",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1, 2, 2],
+			Vec3 Translation = [-3, -3.5, 2],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -2618,13 +2712,13 @@ Level =
 		},
 		UpgradePathLogic = 
 		{
-			string UpgradeName = "Health 2",
+			string UpgradeName = "FireRate 1",
 			int Cost = 1,
 			bool Unlocked = false,
 			bool Purchased = false,
 			CogPath PreviousUpgrade = 
 			{
-				string Path = ":/UpgradeButton3",
+				string Path = ":/UpgradeButton",
 				bool ErrorOnResolveToNull = false,
 				bool ErrorOnPathCantCompute = false,
 				bool ErrorOnDirectLinkFail = false,
@@ -2632,7 +2726,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 51,
+				uint ResolvedCog = 39,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -2648,8 +2742,8 @@ Level =
 		},
 		UpgradeSpecifiedVariable = 
 		{
-			Enum UpgradeType = Health,
-			float UpgradeAmount = 1,
+			Enum UpgradeType = FireRate,
+			float UpgradeAmount = 0.100000001,
 		},
 		Hierarchy = 
 		{
@@ -2709,135 +2803,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 25,
-		},
-		Named = 
-		{
-			string Name = "UpgradeButton1",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-3, -3.5, 2],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		UpgradePathLogic = 
-		{
-			string UpgradeName = "FireRate 1",
-			int Cost = 1,
-			bool Unlocked = false,
-			bool Purchased = false,
-			CogPath PreviousUpgrade = 
-			{
-				string Path = ":/UpgradeButton",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 40,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-			Vec4 PurchasedColor = [0.495000005, 0.495000005, 0.495000005, 1],
-			Vec4 UnlockedColor = [0.723999977, 0.699999988, 1, 1],
-			Vec4 LockedColor = [1, 0.730000019, 0.730000019, 1],
-		},
-		Area = 
-		{
-			Vec2 Size = [1, 1],
-			Location Origin = Center,
-		},
-		UpgradeSpecifiedVariable = 
-		{
-			Enum UpgradeType = FireRate,
-			float UpgradeAmount = 0.100000001,
-		},
-		Hierarchy = 
-		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 53,
-				},
-				Named = 
-				{
-					string Name = "Arrow",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 0, -1],
-					Vec3 Scale = [1, 0.100000001, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Sprite = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [0.664999962, 0.664999962, 0.664999962, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5af71675ae40d6a7:Button",
-					bool RenderMask = false,
-					bool FlipX = false,
-					bool FlipY = false,
-					bool AnimationActive = true,
-					float AnimationSpeed = 1,
-					uint StartFrame = 0,
-				},
-				Orientation = 
-				{
-					Vec3 GlobalUp = [0, 1, 0],
-					Vec3 UpVector = [0, 0, 1],
-					Vec3 ForwardVector = [1, 0, 0],
-					OrientationBases DefaultBases = ForwardXUpZ,
-				},
-				PointTowardsAndSetLength = 
-				{
-				},
-				Area = 
-				{
-					Vec2 Size = [0.100000001, 1],
-					Location Origin = CenterLeft,
-				},
-			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 54,
+			uint Id = 53,
 		},
 		Named = 
 		{
@@ -2888,7 +2854,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 38,
+				uint ResolvedCog = 37,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -2913,7 +2879,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 55,
+					uint Id = 54,
 				},
 				Named = 
 				{
@@ -2965,7 +2931,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 40,
+			uint Id = 39,
 		},
 		Named = 
 		{
@@ -3041,7 +3007,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 56,
+					uint Id = 55,
 				},
 				Named = 
 				{
@@ -3093,7 +3059,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 57,
+			uint Id = 56,
 		},
 		Named = 
 		{
@@ -3144,7 +3110,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 54,
+				uint ResolvedCog = 53,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -3169,7 +3135,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 58,
+					uint Id = 57,
 				},
 				Named = 
 				{
@@ -3221,7 +3187,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 59,
+			uint Id = 58,
 		},
 		Named = 
 		{
@@ -3272,7 +3238,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 24,
+				uint ResolvedCog = 23,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -3297,7 +3263,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 60,
+					uint Id = 59,
 				},
 				Named = 
 				{
@@ -3349,7 +3315,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 61,
+			uint Id = 60,
 		},
 		Named = 
 		{
@@ -3400,7 +3366,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 27,
+				uint ResolvedCog = 26,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -3417,6 +3383,134 @@ Level =
 		UpgradeSpecifiedVariable = 
 		{
 			Enum UpgradeType = OxygenRegen,
+			float UpgradeAmount = 1,
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 61,
+				},
+				Named = 
+				{
+					string Name = "Arrow",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0, -1],
+					Vec3 Scale = [1, 0.100000001, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [0.664999962, 0.664999962, 0.664999962, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5af71675ae40d6a7:Button",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Orientation = 
+				{
+					Vec3 GlobalUp = [0, 1, 0],
+					Vec3 UpVector = [0, 0, 1],
+					Vec3 ForwardVector = [1, 0, 0],
+					OrientationBases DefaultBases = ForwardXUpZ,
+				},
+				PointTowardsAndSetLength = 
+				{
+				},
+				Area = 
+				{
+					Vec2 Size = [0.100000001, 1],
+					Location Origin = CenterLeft,
+				},
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 50,
+		},
+		Named = 
+		{
+			string Name = "UpgradeButton3",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [2.5, -0.5, 2],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		UpgradePathLogic = 
+		{
+			string UpgradeName = "Health 1",
+			int Cost = 1,
+			bool Unlocked = false,
+			bool Purchased = false,
+			CogPath PreviousUpgrade = 
+			{
+				string Path = ":/UpgradeButton",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 39,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			Vec4 PurchasedColor = [0.495000005, 0.495000005, 0.495000005, 1],
+			Vec4 UnlockedColor = [0.723999977, 0.699999988, 1, 1],
+			Vec4 LockedColor = [1, 0.730000019, 0.730000019, 1],
+		},
+		Area = 
+		{
+			Vec2 Size = [1, 1],
+			Location Origin = Center,
+		},
+		UpgradeSpecifiedVariable = 
+		{
+			Enum UpgradeType = Health,
 			float UpgradeAmount = 1,
 		},
 		Hierarchy = 
@@ -3477,15 +3571,15 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 51,
+			uint Id = 37,
 		},
 		Named = 
 		{
-			string Name = "UpgradeButton3",
+			string Name = "UpgradeButton4",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [2.5, -0.5, 2],
+			Vec3 Translation = [3, -3.5, 2],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -3514,7 +3608,7 @@ Level =
 		},
 		UpgradePathLogic = 
 		{
-			string UpgradeName = "Health 1",
+			string UpgradeName = "Inercial Dampeners",
 			int Cost = 1,
 			bool Unlocked = false,
 			bool Purchased = false,
@@ -3528,7 +3622,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 40,
+				uint ResolvedCog = 39,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -3544,7 +3638,7 @@ Level =
 		},
 		UpgradeSpecifiedVariable = 
 		{
-			Enum UpgradeType = Health,
+			Enum UpgradeType = InercialDampeners,
 			float UpgradeAmount = 1,
 		},
 		Hierarchy = 
@@ -3605,15 +3699,15 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 38,
+			uint Id = 35,
 		},
 		Named = 
 		{
-			string Name = "UpgradeButton4",
+			string Name = "UpgradeButton32",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [3, -3.5, 2],
+			Vec3 Translation = [3.5, 2, 2],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -3642,13 +3736,13 @@ Level =
 		},
 		UpgradePathLogic = 
 		{
-			string UpgradeName = "Inercial Dampeners",
+			string UpgradeName = "Regen 1",
 			int Cost = 1,
 			bool Unlocked = false,
 			bool Purchased = false,
 			CogPath PreviousUpgrade = 
 			{
-				string Path = ":/UpgradeButton",
+				string Path = ":/UpgradeButton3",
 				bool ErrorOnResolveToNull = false,
 				bool ErrorOnPathCantCompute = false,
 				bool ErrorOnDirectLinkFail = false,
@@ -3656,7 +3750,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 40,
+				uint ResolvedCog = 50,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -3672,7 +3766,7 @@ Level =
 		},
 		UpgradeSpecifiedVariable = 
 		{
-			Enum UpgradeType = InercialDampeners,
+			Enum UpgradeType = HealthRegen,
 			float UpgradeAmount = 1,
 		},
 		Hierarchy = 
@@ -3733,135 +3827,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 36,
-		},
-		Named = 
-		{
-			string Name = "UpgradeButton32",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [3.5, 2, 2],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		UpgradePathLogic = 
-		{
-			string UpgradeName = "Regen 1",
-			int Cost = 1,
-			bool Unlocked = false,
-			bool Purchased = false,
-			CogPath PreviousUpgrade = 
-			{
-				string Path = ":/UpgradeButton3",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 51,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-			Vec4 PurchasedColor = [0.495000005, 0.495000005, 0.495000005, 1],
-			Vec4 UnlockedColor = [0.723999977, 0.699999988, 1, 1],
-			Vec4 LockedColor = [1, 0.730000019, 0.730000019, 1],
-		},
-		Area = 
-		{
-			Vec2 Size = [1, 1],
-			Location Origin = Center,
-		},
-		UpgradeSpecifiedVariable = 
-		{
-			Enum UpgradeType = HealthRegen,
-			float UpgradeAmount = 1,
-		},
-		Hierarchy = 
-		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 65,
-				},
-				Named = 
-				{
-					string Name = "Arrow",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 0, -1],
-					Vec3 Scale = [1, 0.100000001, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Sprite = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [0.664999962, 0.664999962, 0.664999962, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5af71675ae40d6a7:Button",
-					bool RenderMask = false,
-					bool FlipX = false,
-					bool FlipY = false,
-					bool AnimationActive = true,
-					float AnimationSpeed = 1,
-					uint StartFrame = 0,
-				},
-				Orientation = 
-				{
-					Vec3 GlobalUp = [0, 1, 0],
-					Vec3 UpVector = [0, 0, 1],
-					Vec3 ForwardVector = [1, 0, 0],
-					OrientationBases DefaultBases = ForwardXUpZ,
-				},
-				PointTowardsAndSetLength = 
-				{
-				},
-				Area = 
-				{
-					Vec2 Size = [0.100000001, 1],
-					Location Origin = CenterLeft,
-				},
-			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 66,
+			uint Id = 65,
 		},
 		Named = 
 		{
@@ -3905,7 +3871,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 67,
+					uint Id = 66,
 				},
 				Named = 
 				{
@@ -3927,7 +3893,7 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
+					string FontName = "5a075f32e7b83df0:GameFont",
 					uint FontSize = 32,
 					string Text = "Sprite Text...",
 					TextAlign Align = Left,
@@ -3939,7 +3905,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 68,
+					uint Id = 67,
 				},
 				Named = 
 				{
@@ -3961,7 +3927,7 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
+					string FontName = "5a075f32e7b83df0:GameFont",
 					uint FontSize = 28,
 					string Text = "Cost:",
 					TextAlign Align = Left,
@@ -3973,7 +3939,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 69,
+					uint Id = 68,
 				},
 				Named = 
 				{
@@ -3995,7 +3961,7 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
+					string FontName = "5a075f32e7b83df0:GameFont",
 					uint FontSize = 28,
 					string Text = "0",
 					TextAlign Align = Left,
@@ -4007,7 +3973,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 70,
+					uint Id = 69,
 				},
 				Named = 
 				{
@@ -4044,7 +4010,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 71,
+			uint Id = 70,
 		},
 		Named = 
 		{
@@ -4088,7 +4054,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 72,
+					uint Id = 71,
 				},
 				Named = 
 				{
@@ -4110,7 +4076,7 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
+					string FontName = "5a075f32e7b83df0:GameFont",
 					uint FontSize = 64,
 					string Text = "Repair Cost:",
 					TextAlign Align = Left,
@@ -4122,7 +4088,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 73,
+					uint Id = 72,
 				},
 				Named = 
 				{
@@ -4144,7 +4110,7 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
+					string FontName = "5a075f32e7b83df0:GameFont",
 					uint FontSize = 64,
 					string Text = "0",
 					TextAlign Align = Left,
@@ -4156,7 +4122,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 74,
+					uint Id = 73,
 				},
 				Named = 
 				{
@@ -4191,7 +4157,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 75,
+					uint Id = 74,
 				},
 				Named = 
 				{
@@ -4226,7 +4192,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 76,
+					uint Id = 75,
 				},
 				Named = 
 				{
@@ -4261,7 +4227,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 77,
+					uint Id = 76,
 				},
 				Named = 
 				{
@@ -4296,7 +4262,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 78,
+					uint Id = 77,
 				},
 				Named = 
 				{
@@ -4318,7 +4284,7 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
+					string FontName = "5a075f32e7b83df0:GameFont",
 					uint FontSize = 64,
 					string Text = "0",
 					TextAlign Align = Left,
@@ -4330,7 +4296,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 79,
+					uint Id = 78,
 				},
 				Named = 
 				{
@@ -4352,7 +4318,7 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
+					string FontName = "5a075f32e7b83df0:GameFont",
 					uint FontSize = 64,
 					string Text = "0",
 					TextAlign Align = Left,
@@ -4364,7 +4330,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 80,
+					uint Id = 79,
 				},
 				Named = 
 				{
@@ -4386,7 +4352,7 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
+					string FontName = "5a075f32e7b83df0:GameFont",
 					uint FontSize = 64,
 					string Text = "0",
 					TextAlign Align = Left,
@@ -4400,7 +4366,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 81,
+			uint Id = 80,
 		},
 		Named = 
 		{
@@ -4444,7 +4410,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 82,
+					uint Id = 81,
 				},
 				Named = 
 				{
@@ -4466,7 +4432,7 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
+					string FontName = "5a075f32e7b83df0:GameFont",
 					uint FontSize = 64,
 					string Text = "Craft Cost:",
 					TextAlign Align = Left,
@@ -4478,7 +4444,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 83,
+					uint Id = 82,
 				},
 				Named = 
 				{
@@ -4500,7 +4466,7 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
+					string FontName = "5a075f32e7b83df0:GameFont",
 					uint FontSize = 64,
 					string Text = "0",
 					TextAlign Align = Left,
@@ -4512,7 +4478,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 84,
+					uint Id = 83,
 				},
 				Named = 
 				{
@@ -4547,7 +4513,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 85,
+					uint Id = 84,
 				},
 				Named = 
 				{
@@ -4582,7 +4548,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 86,
+					uint Id = 85,
 				},
 				Named = 
 				{
@@ -4617,7 +4583,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 87,
+					uint Id = 86,
 				},
 				Named = 
 				{
@@ -4652,7 +4618,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 88,
+					uint Id = 87,
 				},
 				Named = 
 				{
@@ -4674,7 +4640,7 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
+					string FontName = "5a075f32e7b83df0:GameFont",
 					uint FontSize = 64,
 					string Text = "0",
 					TextAlign Align = Left,
@@ -4686,7 +4652,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 89,
+					uint Id = 88,
 				},
 				Named = 
 				{
@@ -4708,7 +4674,7 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
+					string FontName = "5a075f32e7b83df0:GameFont",
 					uint FontSize = 64,
 					string Text = "0",
 					TextAlign Align = Left,
@@ -4720,7 +4686,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 90,
+					uint Id = 89,
 				},
 				Named = 
 				{
@@ -4742,7 +4708,7 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
+					string FontName = "5a075f32e7b83df0:GameFont",
 					uint FontSize = 64,
 					string Text = "0",
 					TextAlign Align = Left,
@@ -4756,41 +4722,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 91,
-		},
-		Named = 
-		{
-			string Name = "TabText",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, 9, 2],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		SpriteText = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "4e7bac697bec55c5:Verdana",
-			uint FontSize = 80,
-			string Text = "Upgrades",
-			TextAlign Align = Center,
-			float PixelsPerUnit = 128,
-			bool Smoothing = true,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 92,
+			uint Id = 90,
 		},
 		Named = 
 		{
@@ -4812,25 +4744,18 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
+			string SpriteSource = "5a79d6cb6878befe:Holographic display-Animation",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
 			bool AnimationActive = true,
-			float AnimationSpeed = 1,
+			float AnimationSpeed = 5,
 			uint StartFrame = 0,
 		},
 		Reactive = 
 		{
 			bool Active = true,
 			bool CaptureMouse = false,
-		},
-		Ship_Menu_Button_Visual = 
-		{
-			Vec4 HoverColor = [0.180392146, 0.376470655, 0.956862807, 1],
-			Vec4 ClickColor = [0.466666698, 0.627450943, 0.776470661, 1],
-			float HoverScale = 1.20000005,
-			float ClickScale = 1,
 		},
 		Ship_Menu_Button_Function = 
 		{
@@ -4858,8 +4783,11 @@ Level =
 		},
 		Area = 
 		{
-			Vec2 Size = [4, 1.5],
+			Vec2 Size = [2, 2],
 			Location Origin = BottomCenter,
+		},
+		MenuTabVisuals = 
+		{
 		},
 		Hierarchy = 
 		{
@@ -4867,7 +4795,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 93,
+					uint Id = 91,
 				},
 				Named = 
 				{
@@ -4875,7 +4803,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0, 1.5, 2],
+					Vec3 Translation = [0, 1.92405415, 2],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -4885,16 +4813,16 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 1],
+					Vec4 Color = [0.790000021, 0.943300068, 1, 1],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
+					string FontName = "5a075f32e7b83df0:GameFont",
 					uint FontSize = 80,
 					string Text = "Upgrades",
 					TextAlign Align = Center,
 					float PixelsPerUnit = 128,
-					bool Smoothing = true,
+					bool Smoothing = false,
 				},
 			},
 		},
@@ -4903,7 +4831,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 94,
+			uint Id = 92,
 		},
 		Named = 
 		{
@@ -4943,50 +4871,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 95,
-		},
-		Named = 
-		{
-			string Name = "FakeButton",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-69, 7.5, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.464999974, 0.626199901, 0.774999976, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Area = 
-		{
-			Vec2 Size = [4, 1.5],
-			Location Origin = BottomCenter,
-		},
-		Hierarchy = 
-		{
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 96,
+			uint Id = 93,
 		},
 		Named = 
 		{
@@ -5008,25 +4893,70 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
+			string SpriteSource = "5a79d6cb6878befe:Holographic display-Animation",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
-			bool AnimationActive = true,
+			bool AnimationActive = false,
 			float AnimationSpeed = 1,
-			uint StartFrame = 0,
+			uint StartFrame = 3,
 		},
 		Area = 
 		{
-			Vec2 Size = [4, 1.5],
+			Vec2 Size = [2, 2],
 			Location Origin = BottomCenter,
+		},
+		MenuTabVisualsAlreadyThere = 
+		{
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 94,
+				},
+				Named = 
+				{
+					string Name = "TabText",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 1.92405415, 2],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				SpriteText = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [0.790000021, 0.943300068, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string FontName = "5a075f32e7b83df0:GameFont",
+					uint FontSize = 72,
+					string Text = "Regeneration",
+					TextAlign Align = Center,
+					float PixelsPerUnit = 128,
+					bool Smoothing = false,
+				},
+			},
 		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 97,
+			uint Id = 95,
 		},
 		Named = 
 		{
@@ -5048,25 +4978,70 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
+			string SpriteSource = "5a79d6cb6878befe:Holographic display-Animation",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
-			bool AnimationActive = true,
+			bool AnimationActive = false,
 			float AnimationSpeed = 1,
-			uint StartFrame = 0,
+			uint StartFrame = 3,
 		},
 		Area = 
 		{
-			Vec2 Size = [4, 1.5],
+			Vec2 Size = [2, 2],
 			Location Origin = BottomCenter,
+		},
+		MenuTabVisualsAlreadyThere = 
+		{
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 96,
+				},
+				Named = 
+				{
+					string Name = "TabText",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 1.92405415, 2],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				SpriteText = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [0.790000021, 0.943300068, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string FontName = "5a075f32e7b83df0:GameFont",
+					uint FontSize = 80,
+					string Text = "Upgrades",
+					TextAlign Align = Center,
+					float PixelsPerUnit = 128,
+					bool Smoothing = false,
+				},
+			},
 		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 98,
+			uint Id = 97,
 		},
 		Named = 
 		{
@@ -5088,18 +5063,63 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
+			string SpriteSource = "5a79d6cb6878befe:Holographic display-Animation",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
-			bool AnimationActive = true,
+			bool AnimationActive = false,
 			float AnimationSpeed = 1,
-			uint StartFrame = 0,
+			uint StartFrame = 3,
 		},
 		Area = 
 		{
-			Vec2 Size = [4, 1.5],
+			Vec2 Size = [2, 2],
 			Location Origin = BottomCenter,
+		},
+		MenuTabVisualsAlreadyThere = 
+		{
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 98,
+				},
+				Named = 
+				{
+					string Name = "TabText",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 1.92405415, 2],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				SpriteText = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [0.790000021, 0.943300068, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string FontName = "5a075f32e7b83df0:GameFont",
+					uint FontSize = 80,
+					string Text = "Ship Repair ",
+					TextAlign Align = Center,
+					float PixelsPerUnit = 128,
+					bool Smoothing = false,
+				},
+			},
 		},
 	},
 	Cog = 
@@ -5128,25 +5148,18 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
+			string SpriteSource = "5a79d6cb6878befe:Holographic display-Animation",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
 			bool AnimationActive = true,
-			float AnimationSpeed = 1,
+			float AnimationSpeed = 5,
 			uint StartFrame = 0,
 		},
 		Reactive = 
 		{
 			bool Active = true,
 			bool CaptureMouse = false,
-		},
-		Ship_Menu_Button_Visual = 
-		{
-			Vec4 HoverColor = [0.180392146, 0.376470655, 0.956862807, 1],
-			Vec4 ClickColor = [0.466666698, 0.627450943, 0.776470661, 1],
-			float HoverScale = 1.20000005,
-			float ClickScale = 1,
 		},
 		Ship_Menu_Button_Function = 
 		{
@@ -5174,8 +5187,11 @@ Level =
 		},
 		Area = 
 		{
-			Vec2 Size = [4, 1.5],
+			Vec2 Size = [2, 2],
 			Location Origin = BottomCenter,
+		},
+		MenuTabVisuals = 
+		{
 		},
 		Hierarchy = 
 		{
@@ -5191,7 +5207,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0, 1.5, 2],
+					Vec3 Translation = [0, 1.92405415, 2],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -5201,16 +5217,16 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 1],
+					Vec4 Color = [0.790000021, 0.943300068, 1, 1],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
+					string FontName = "5a075f32e7b83df0:GameFont",
 					uint FontSize = 80,
 					string Text = "Ship Repair ",
 					TextAlign Align = Center,
 					float PixelsPerUnit = 128,
-					bool Smoothing = true,
+					bool Smoothing = false,
 				},
 			},
 		},
@@ -5241,25 +5257,18 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
+			string SpriteSource = "5a79d6cb6878befe:Holographic display-Animation",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
 			bool AnimationActive = true,
-			float AnimationSpeed = 1,
+			float AnimationSpeed = 5,
 			uint StartFrame = 0,
 		},
 		Reactive = 
 		{
 			bool Active = true,
 			bool CaptureMouse = false,
-		},
-		Ship_Menu_Button_Visual = 
-		{
-			Vec4 HoverColor = [0.180392146, 0.376470655, 0.956862807, 1],
-			Vec4 ClickColor = [0.466666698, 0.627450943, 0.776470661, 1],
-			float HoverScale = 1.20000005,
-			float ClickScale = 1,
 		},
 		Ship_Menu_Button_Function = 
 		{
@@ -5287,8 +5296,11 @@ Level =
 		},
 		Area = 
 		{
-			Vec2 Size = [4, 1.5],
+			Vec2 Size = [2, 2],
 			Location Origin = BottomCenter,
+		},
+		MenuTabVisuals = 
+		{
 		},
 		Hierarchy = 
 		{
@@ -5304,7 +5316,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0, 1.5, 2],
+					Vec3 Translation = [0, 1.92405415, 2],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -5314,16 +5326,16 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 1],
+					Vec4 Color = [0.790000021, 0.943300068, 1, 1],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
+					string FontName = "5a075f32e7b83df0:GameFont",
 					uint FontSize = 80,
 					string Text = "Ship Repair ",
 					TextAlign Align = Center,
 					float PixelsPerUnit = 128,
-					bool Smoothing = true,
+					bool Smoothing = false,
 				},
 			},
 		},
@@ -5354,25 +5366,18 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
+			string SpriteSource = "5a79d6cb6878befe:Holographic display-Animation",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
 			bool AnimationActive = true,
-			float AnimationSpeed = 1,
+			float AnimationSpeed = 5,
 			uint StartFrame = 0,
 		},
 		Reactive = 
 		{
 			bool Active = true,
 			bool CaptureMouse = false,
-		},
-		Ship_Menu_Button_Visual = 
-		{
-			Vec4 HoverColor = [0.180392146, 0.376470655, 0.956862807, 1],
-			Vec4 ClickColor = [0.466666698, 0.627450943, 0.776470661, 1],
-			float HoverScale = 1.20000005,
-			float ClickScale = 1,
 		},
 		Ship_Menu_Button_Function = 
 		{
@@ -5400,8 +5405,11 @@ Level =
 		},
 		Area = 
 		{
-			Vec2 Size = [4, 1.5],
+			Vec2 Size = [2, 2],
 			Location Origin = BottomCenter,
+		},
+		MenuTabVisuals = 
+		{
 		},
 		Hierarchy = 
 		{
@@ -5417,7 +5425,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0, 1.5, 2],
+					Vec3 Translation = [0, 1.92405415, 2],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -5427,16 +5435,16 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 1],
+					Vec4 Color = [0.790000021, 0.943300068, 1, 1],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
+					string FontName = "5a075f32e7b83df0:GameFont",
 					uint FontSize = 80,
 					string Text = "Crafting",
 					TextAlign Align = Center,
 					float PixelsPerUnit = 128,
-					bool Smoothing = true,
+					bool Smoothing = false,
 				},
 			},
 		},
@@ -5467,25 +5475,18 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
+			string SpriteSource = "5a79d6cb6878befe:Holographic display-Animation",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
 			bool AnimationActive = true,
-			float AnimationSpeed = 1,
+			float AnimationSpeed = 5,
 			uint StartFrame = 0,
 		},
 		Reactive = 
 		{
 			bool Active = true,
 			bool CaptureMouse = false,
-		},
-		Ship_Menu_Button_Visual = 
-		{
-			Vec4 HoverColor = [0.180392146, 0.376470655, 0.956862807, 1],
-			Vec4 ClickColor = [0.466666698, 0.627450943, 0.776470661, 1],
-			float HoverScale = 1.20000005,
-			float ClickScale = 1,
 		},
 		Ship_Menu_Button_Function = 
 		{
@@ -5513,8 +5514,11 @@ Level =
 		},
 		Area = 
 		{
-			Vec2 Size = [4, 1.5],
+			Vec2 Size = [2, 2],
 			Location Origin = BottomCenter,
+		},
+		MenuTabVisuals = 
+		{
 		},
 		Hierarchy = 
 		{
@@ -5530,7 +5534,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0, 1.5, 2],
+					Vec3 Translation = [0, 1.92405415, 2],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -5540,16 +5544,16 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 1],
+					Vec4 Color = [0.790000021, 0.943300068, 1, 1],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
+					string FontName = "5a075f32e7b83df0:GameFont",
 					uint FontSize = 72,
 					string Text = "Regeneration",
 					TextAlign Align = Center,
 					float PixelsPerUnit = 128,
-					bool Smoothing = true,
+					bool Smoothing = false,
 				},
 			},
 		},
@@ -5559,40 +5563,6 @@ Level =
 		LinkId = 
 		{
 			uint Id = 107,
-		},
-		Named = 
-		{
-			string Name = "TabText",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-34.5, 9, 2],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		SpriteText = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "4e7bac697bec55c5:Verdana",
-			uint FontSize = 72,
-			string Text = "Regeneration",
-			TextAlign Align = Center,
-			float PixelsPerUnit = 128,
-			bool Smoothing = true,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 108,
 		},
 		Named = 
 		{
@@ -5614,25 +5584,18 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
+			string SpriteSource = "5a79d6cb6878befe:Holographic display-Animation",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
 			bool AnimationActive = true,
-			float AnimationSpeed = 1,
+			float AnimationSpeed = 5,
 			uint StartFrame = 0,
 		},
 		Reactive = 
 		{
 			bool Active = true,
 			bool CaptureMouse = false,
-		},
-		Ship_Menu_Button_Visual = 
-		{
-			Vec4 HoverColor = [0.180392146, 0.376470655, 0.956862807, 1],
-			Vec4 ClickColor = [0.466666698, 0.627450943, 0.776470661, 1],
-			float HoverScale = 1.20000005,
-			float ClickScale = 1,
 		},
 		Ship_Menu_Button_Function = 
 		{
@@ -5660,8 +5623,11 @@ Level =
 		},
 		Area = 
 		{
-			Vec2 Size = [4, 1.5],
+			Vec2 Size = [2, 2],
 			Location Origin = BottomCenter,
+		},
+		MenuTabVisuals = 
+		{
 		},
 		Hierarchy = 
 		{
@@ -5669,7 +5635,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 109,
+					uint Id = 108,
 				},
 				Named = 
 				{
@@ -5677,7 +5643,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0, 1.5, 2],
+					Vec3 Translation = [0, 1.92405415, 2],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -5687,16 +5653,16 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 1],
+					Vec4 Color = [0.790000021, 0.943300068, 1, 1],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
+					string FontName = "5a075f32e7b83df0:GameFont",
 					uint FontSize = 72,
 					string Text = "Regeneration",
 					TextAlign Align = Center,
 					float PixelsPerUnit = 128,
-					bool Smoothing = true,
+					bool Smoothing = false,
 				},
 			},
 		},
@@ -5705,7 +5671,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 110,
+			uint Id = 109,
 		},
 		Named = 
 		{
@@ -5727,25 +5693,18 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
+			string SpriteSource = "5a79d6cb6878befe:Holographic display-Animation",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
 			bool AnimationActive = true,
-			float AnimationSpeed = 1,
+			float AnimationSpeed = 5,
 			uint StartFrame = 0,
 		},
 		Reactive = 
 		{
 			bool Active = true,
 			bool CaptureMouse = false,
-		},
-		Ship_Menu_Button_Visual = 
-		{
-			Vec4 HoverColor = [0.180392146, 0.376470655, 0.956862807, 1],
-			Vec4 ClickColor = [0.466666698, 0.627450943, 0.776470661, 1],
-			float HoverScale = 1.20000005,
-			float ClickScale = 1,
 		},
 		Ship_Menu_Button_Function = 
 		{
@@ -5773,8 +5732,11 @@ Level =
 		},
 		Area = 
 		{
-			Vec2 Size = [4, 1.5],
+			Vec2 Size = [2, 2],
 			Location Origin = BottomCenter,
+		},
+		MenuTabVisuals = 
+		{
 		},
 		Hierarchy = 
 		{
@@ -5782,7 +5744,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 111,
+					uint Id = 110,
 				},
 				Named = 
 				{
@@ -5790,7 +5752,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0, 1.5, 2],
+					Vec3 Translation = [0, 1.92405415, 2],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -5800,16 +5762,16 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 1],
+					Vec4 Color = [0.790000021, 0.943300068, 1, 1],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
+					string FontName = "5a075f32e7b83df0:GameFont",
 					uint FontSize = 72,
 					string Text = "Regeneration",
 					TextAlign Align = Center,
 					float PixelsPerUnit = 128,
-					bool Smoothing = true,
+					bool Smoothing = false,
 				},
 			},
 		},
@@ -5818,34 +5780,88 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 112,
+			uint Id = 111,
 		},
 		Named = 
 		{
-			string Name = "TabText",
+			string Name = "FakeButton",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-69, 9, 2],
+			Vec3 Translation = [-69, 7.5, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		SpriteText = 
+		Sprite = 
 		{
 			bool Visible = true,
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
+			Vec4 Color = [0.464999974, 0.626199901, 0.774999976, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "4e7bac697bec55c5:Verdana",
-			uint FontSize = 80,
-			string Text = "Crafting",
-			TextAlign Align = Center,
-			float PixelsPerUnit = 128,
-			bool Smoothing = true,
+			string SpriteSource = "5a79d6cb6878befe:Holographic display-Animation",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = false,
+			float AnimationSpeed = 5,
+			uint StartFrame = 3,
+		},
+		Area = 
+		{
+			Vec2 Size = [2, 2],
+			Location Origin = BottomCenter,
+		},
+		MenuTabVisualsAlreadyThere = 
+		{
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 112,
+				},
+				Named = 
+				{
+					string Name = "TabText",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 1.92405415, 2],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				SpriteText = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [0.790000021, 0.943300068, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string FontName = "5a075f32e7b83df0:GameFont",
+					uint FontSize = 80,
+					string Text = "Crafting",
+					TextAlign Align = Center,
+					float PixelsPerUnit = 128,
+					bool Smoothing = false,
+				},
+				Hierarchy = 
+				{
+				},
+			},
 		},
 	},
 	Cog = 
@@ -5874,25 +5890,18 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
+			string SpriteSource = "5a79d6cb6878befe:Holographic display-Animation",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
 			bool AnimationActive = true,
-			float AnimationSpeed = 1,
+			float AnimationSpeed = 5,
 			uint StartFrame = 0,
 		},
 		Reactive = 
 		{
 			bool Active = true,
 			bool CaptureMouse = false,
-		},
-		Ship_Menu_Button_Visual = 
-		{
-			Vec4 HoverColor = [0.180392146, 0.376470655, 0.956862807, 1],
-			Vec4 ClickColor = [0.466666698, 0.627450943, 0.776470661, 1],
-			float HoverScale = 1.20000005,
-			float ClickScale = 1,
 		},
 		Ship_Menu_Button_Function = 
 		{
@@ -5920,8 +5929,11 @@ Level =
 		},
 		Area = 
 		{
-			Vec2 Size = [4, 1.5],
+			Vec2 Size = [2, 2],
 			Location Origin = BottomCenter,
+		},
+		MenuTabVisuals = 
+		{
 		},
 		Hierarchy = 
 		{
@@ -5937,7 +5949,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0, 1.5, 2],
+					Vec3 Translation = [0, 1.92405415, 2],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -5947,16 +5959,16 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 1],
+					Vec4 Color = [0.790000021, 0.943300068, 1, 1],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
+					string FontName = "5a075f32e7b83df0:GameFont",
 					uint FontSize = 80,
 					string Text = "Crafting",
 					TextAlign Align = Center,
 					float PixelsPerUnit = 128,
-					bool Smoothing = true,
+					bool Smoothing = false,
 				},
 			},
 		},
@@ -5987,25 +5999,18 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
+			string SpriteSource = "5a79d6cb6878befe:Holographic display-Animation",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
 			bool AnimationActive = true,
-			float AnimationSpeed = 1,
+			float AnimationSpeed = 5,
 			uint StartFrame = 0,
 		},
 		Reactive = 
 		{
 			bool Active = true,
 			bool CaptureMouse = false,
-		},
-		Ship_Menu_Button_Visual = 
-		{
-			Vec4 HoverColor = [0.180392146, 0.376470655, 0.956862807, 1],
-			Vec4 ClickColor = [0.466666698, 0.627450943, 0.776470661, 1],
-			float HoverScale = 1.20000005,
-			float ClickScale = 1,
 		},
 		Ship_Menu_Button_Function = 
 		{
@@ -6033,8 +6038,11 @@ Level =
 		},
 		Area = 
 		{
-			Vec2 Size = [4, 1.5],
+			Vec2 Size = [2, 2],
 			Location Origin = BottomCenter,
+		},
+		MenuTabVisuals = 
+		{
 		},
 		Hierarchy = 
 		{
@@ -6050,7 +6058,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0, 1.5, 2],
+					Vec3 Translation = [0, 1.92405415, 2],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -6060,16 +6068,16 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 1],
+					Vec4 Color = [0.790000021, 0.943300068, 1, 1],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
+					string FontName = "5a075f32e7b83df0:GameFont",
 					uint FontSize = 80,
 					string Text = "Crafting",
 					TextAlign Align = Center,
 					float PixelsPerUnit = 128,
-					bool Smoothing = true,
+					bool Smoothing = false,
 				},
 			},
 		},
@@ -6100,25 +6108,18 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
+			string SpriteSource = "5a79d6cb6878befe:Holographic display-Animation",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
 			bool AnimationActive = true,
-			float AnimationSpeed = 1,
+			float AnimationSpeed = 5,
 			uint StartFrame = 0,
 		},
 		Reactive = 
 		{
 			bool Active = true,
 			bool CaptureMouse = false,
-		},
-		Ship_Menu_Button_Visual = 
-		{
-			Vec4 HoverColor = [0.180392146, 0.376470655, 0.956862807, 1],
-			Vec4 ClickColor = [0.466666698, 0.627450943, 0.776470661, 1],
-			float HoverScale = 1.20000005,
-			float ClickScale = 1,
 		},
 		Ship_Menu_Button_Function = 
 		{
@@ -6146,8 +6147,11 @@ Level =
 		},
 		Area = 
 		{
-			Vec2 Size = [4, 1.5],
+			Vec2 Size = [2, 2],
 			Location Origin = BottomCenter,
+		},
+		MenuTabVisuals = 
+		{
 		},
 		Hierarchy = 
 		{
@@ -6163,7 +6167,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0, 1.5, 2],
+					Vec3 Translation = [0, 1.92405415, 2],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -6173,16 +6177,16 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 1],
+					Vec4 Color = [0.790000021, 0.943300068, 1, 1],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
+					string FontName = "5a075f32e7b83df0:GameFont",
 					uint FontSize = 80,
 					string Text = "Upgrades",
 					TextAlign Align = Center,
 					float PixelsPerUnit = 128,
-					bool Smoothing = true,
+					bool Smoothing = false,
 				},
 			},
 		},
@@ -6213,25 +6217,18 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
+			string SpriteSource = "5a79d6cb6878befe:Holographic display-Animation",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
 			bool AnimationActive = true,
-			float AnimationSpeed = 1,
+			float AnimationSpeed = 5,
 			uint StartFrame = 0,
 		},
 		Reactive = 
 		{
 			bool Active = true,
 			bool CaptureMouse = false,
-		},
-		Ship_Menu_Button_Visual = 
-		{
-			Vec4 HoverColor = [0.180392146, 0.376470655, 0.956862807, 1],
-			Vec4 ClickColor = [0.466666698, 0.627450943, 0.776470661, 1],
-			float HoverScale = 1.20000005,
-			float ClickScale = 1,
 		},
 		Ship_Menu_Button_Function = 
 		{
@@ -6259,8 +6256,11 @@ Level =
 		},
 		Area = 
 		{
-			Vec2 Size = [4, 1.5],
+			Vec2 Size = [2, 2],
 			Location Origin = BottomCenter,
+		},
+		MenuTabVisuals = 
+		{
 		},
 		Hierarchy = 
 		{
@@ -6276,7 +6276,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0, 1.5, 2],
+					Vec3 Translation = [0, 1.92405415, 2],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -6286,16 +6286,16 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 1],
+					Vec4 Color = [0.790000021, 0.943300068, 1, 1],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
+					string FontName = "5a075f32e7b83df0:GameFont",
 					uint FontSize = 80,
 					string Text = "Upgrades",
 					TextAlign Align = Center,
 					float PixelsPerUnit = 128,
-					bool Smoothing = true,
+					bool Smoothing = false,
 				},
 			},
 		},
@@ -6326,25 +6326,18 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
+			string SpriteSource = "5a79d6cb6878befe:Holographic display-Animation",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
 			bool AnimationActive = true,
-			float AnimationSpeed = 1,
+			float AnimationSpeed = 5,
 			uint StartFrame = 0,
 		},
 		Reactive = 
 		{
 			bool Active = true,
 			bool CaptureMouse = false,
-		},
-		Ship_Menu_Button_Visual = 
-		{
-			Vec4 HoverColor = [0.180392146, 0.376470655, 0.956862807, 1],
-			Vec4 ClickColor = [0.466666698, 0.627450943, 0.776470661, 1],
-			float HoverScale = 1.20000005,
-			float ClickScale = 1,
 		},
 		Ship_Menu_Button_Function = 
 		{
@@ -6372,8 +6365,11 @@ Level =
 		},
 		Area = 
 		{
-			Vec2 Size = [4, 1.5],
+			Vec2 Size = [2, 2],
 			Location Origin = BottomCenter,
+		},
+		MenuTabVisuals = 
+		{
 		},
 		Hierarchy = 
 		{
@@ -6389,7 +6385,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0, 1.5, 2],
+					Vec3 Translation = [0, 1.92405415, 2],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -6399,16 +6395,16 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 1],
+					Vec4 Color = [0.790000021, 0.943300068, 1, 1],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
+					string FontName = "5a075f32e7b83df0:GameFont",
 					uint FontSize = 80,
 					string Text = "Ship Repair ",
 					TextAlign Align = Center,
 					float PixelsPerUnit = 128,
-					bool Smoothing = true,
+					bool Smoothing = false,
 				},
 			},
 		},
