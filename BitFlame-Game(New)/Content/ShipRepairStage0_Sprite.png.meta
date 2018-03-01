@@ -2,8 +2,8 @@ ImageContent =
 {
 	SpriteSourceBuilder = 
 	{
-		string Name = "Ship_Sprite",
-		uint64 ResourceId = 5a018714cc9e515a,
+		string Name = "ShipRepairStage0_Sprite",
+		uint64 ResourceId = 5ae31e091e2a9d06,
 		uint64 AtlasId = 5274cf95e4a661fd,
 		uint FrameSizeX = 320,
 		uint FrameSizeY = 160,
