@@ -22,6 +22,8 @@ class PlayerShooting : ZilchComponent
     
     [Property] var CanShoot : Boolean = true;
     
+    [Property] var ShootingSound : SoundCue;
+    
     //if the player has spread shot 
     [Property] var SpreadShot : Boolean = false;
     //Rotation between shots in degrees
@@ -50,6 +52,11 @@ class PlayerShooting : ZilchComponent
         
         if(Zero.Mouse.IsButtonDown(MouseButtons.Left) && this.Timer >= this.FireRate && this.CanShoot)
         {
+            if(this.ShootingSound != null)
+            {
+                this.Space.SoundSpace.PlayCue(this.ShootingSound);
+            }
+            
             var bullet = this.Space.CreateAtPosition(this.Bullet,this.Owner.Transform.WorldTranslation);
             
             bullet.RigidBody.Velocity += mouseDirection * this.BulletSpeed + this.Owner.Parent.RigidBody.Velocity;

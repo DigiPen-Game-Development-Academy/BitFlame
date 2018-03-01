@@ -155,6 +155,13 @@ Cog =
 		bool Active = true,
 		int HealthRegenAmount = 1,
 	},
+	PlaySound = 
+	{
+		string SelectSound = "",
+		string CantSelectSound = "",
+		string LowOxygenSound = "5ae3cf4fa12580cf:Oxygen_Low",
+		float OxygenLowSoundCooldown = 100,
+	},
 	Hierarchy = 
 	{
 		Cog = 
@@ -252,6 +259,9 @@ Cog =
 				float BulletSpeed = 25,
 				string Bullet = "5a1c3c0e55b6fbd1:Bullet",
 				bool CanShoot = true,
+				string ShootingSound = "5ae3cf4fa124fd46:Laser_Shoot",
+				bool SpreadShot = false,
+				float SpreadAmount = 10,
 			},
 		},
 		Cog = 

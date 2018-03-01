@@ -24,10 +24,7 @@ class Ship_Menu_Button_Visual : ZilchComponent
   [Property] var HoverScale : Real = 1.2;
   
   [Property] var ClickScale : Real = 1.0;
-  
 
-  
-  
   function Initialize(init : CogInitializer)
   {
     this.OriginalColor = this.Sprite.Color;

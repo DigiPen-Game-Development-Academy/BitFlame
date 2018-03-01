@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [26.4189148, 5.70019627, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -68,11 +68,13 @@ Cog =
 		float Health = 2,
 		string ArchetypetoSpawnOnDeath1 = "5a70715bb5c81bfe:Game_OxygenOre_Pickup",
 		string ArchetypetoSpawnOnDeath2 = "5af4a586aa6a35b5:lienEnemy_ExplosionEffect",
+		string ExplosionSound = "5ae3cf4fa1248b1b:Enemy_Explosion",
 		bool Unbreakable = false,
 	},
 	DamageOnCollide = 
 	{
 		int Damage = 1,
+		string PlayerDamagedSound = "5ae3cf4fa125c756:Player-Damaged",
 	},
 	MultiConvexMeshCollider = 
 	{
