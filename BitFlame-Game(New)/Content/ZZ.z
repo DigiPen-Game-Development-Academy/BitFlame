@@ -101,11 +101,14 @@ class ZZ : ZilchComponent
             {
                 this.ResourceArchetype = this.ChargingEnemySource;
             }
-            else if(randnum < this.AlienCrabEnemy + this.AlienEnemy + this.AsteroidChunk + this.AsteroidConfig + this.ChargingEnemy + this.EnemyHive)
+            else if(randNum < this.AlienCrabEnemy + this.AlienEnemy + this.AsteroidChunk + this.AsteroidConfig + this.ChargingEnemy + this.EnemyHive)
             {
                 this.ResourceArchetype = this.EnemyHiveSource;
             }
-            else if(randnum < this.AlienCrabEnemy + this.AlienEnemy + this.AsteroidChunk + this.AsteroidConfig + this.ChargingEnemy + this.EnemyHive + this.Aluminum)
+            else if(randNum < this.AlienCrabEnemy + this.AlienEnemy + this.AsteroidChunk + this.AsteroidConfig + this.ChargingEnemy + this.EnemyHive + this.Aluminum)
+            {
+                this.ResourceArchetype = this.AluminumSource;
+            }
             
             
             
