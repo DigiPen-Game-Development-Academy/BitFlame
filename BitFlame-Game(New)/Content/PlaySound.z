@@ -1,0 +1,31 @@
+class PlaySound : ZilchComponent
+{
+    [Property] var SelectSound : SoundCue;
+    [Property] var CantSelectSound : SoundCue;
+    [Property] var LowOxygenSound : SoundCue;
+    
+    var CanSelect : Boolean = true;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.LeftMouseDown, this.OnLeftMouseDown);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+      
+    }
+    function OnLeftMouseDown(event : ViewportMouseEvent)
+    {
+        if(this.CanSelect)
+      {
+          this.Space.SoundSpace.PlayCue(this.SelectSound);
+      }
+      else
+      {
+          this.Space.SoundSpace.PlayCue(this.CantSelectSound);
+      } 
+        
+    }
+}

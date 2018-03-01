@@ -144,7 +144,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [10.9015007, -0.2583884, 74.7279816],
+			Vec3 Translation = [-8.54502296, -6.7815218, 74.7279816],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -156,7 +156,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 18.2683926,
+			float Size = 10.0259018,
 		},
 		EditorCameraController = 
 		{
@@ -164,7 +164,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [10.9015007, -0.2583884, 24.7279835],
+			Vec3 LookTarget = [-8.54502296, -6.7815218, 24.7279835],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -502,44 +502,6 @@ Level =
 						},
 						Transform = 
 						{
-							Vec3 Translation = [0.5, 1.5, 0.5],
-							Vec3 Scale = [0.25, 0.25, 0.25],
-							Quat Rotation = [0, 0, 0, 1],
-						},
-						SetXToVariable = 
-						{
-							Enum Type = Pipes,
-						},
-						SpriteText = 
-						{
-							bool Visible = true,
-							bool VisibilityCulling = true,
-							bool VisibilityEvents = true,
-							bool CastShadows = false,
-							Vec4 Color = [1, 1, 1, 1],
-							BlendMode BlendMode = Alpha,
-							SpriteGeometryMode GeometryMode = ZPlane,
-							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string FontName = "57343753bb4eaaec:NotoSans-Regular",
-							uint FontSize = 101,
-							string Text = "0",
-							TextAlign Align = Right,
-							float PixelsPerUnit = 64,
-							bool Smoothing = true,
-						},
-					},
-					Cog = 
-					{
-						LinkId = 
-						{
-							uint Id = 12,
-						},
-						Named = 
-						{
-							string Name = "Material Indicator",
-						},
-						Transform = 
-						{
 							Vec3 Translation = [0.464764357, -0.582702041, 0.297020912],
 							Vec3 Scale = [0.224999994, 0.224999994, 0.375896096],
 							Quat Rotation = [0, 0, 0, 1],
@@ -573,7 +535,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 13,
+							uint Id = 12,
 						},
 						Named = 
 						{
@@ -611,7 +573,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 14,
+							uint Id = 13,
 						},
 						Named = 
 						{
@@ -649,7 +611,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 15,
+							uint Id = 14,
 						},
 						Named = 
 						{

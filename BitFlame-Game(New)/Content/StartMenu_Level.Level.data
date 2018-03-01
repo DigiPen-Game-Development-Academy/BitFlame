@@ -107,7 +107,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [3.69746852, -33.0539207, 50],
+			Vec3 Translation = [10.2465353, -10.339572, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -119,7 +119,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 6.6402359,
+			float Size = 66.2308426,
 		},
 		EditorCameraController = 
 		{
@@ -127,7 +127,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [3.69746852, -33.0539207, 1.83409554e-07],
+			Vec3 LookTarget = [10.2465353, -10.339572, 4.69678326e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -246,6 +246,11 @@ Level =
 			bool Respawn = false,
 			bool Quit = false,
 		},
+		Button_PlaySound = 
+		{
+			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
+			string CantSelectSound = "5ae3cf4fa1244713:Blip_CantSelect",
+		},
 		Hierarchy = 
 		{
 			Cog = 
@@ -359,6 +364,11 @@ Level =
 			bool Respawn = false,
 			bool Quit = false,
 		},
+		Button_PlaySound = 
+		{
+			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
+			string CantSelectSound = "5ae3cf4fa1244713:Blip_CantSelect",
+		},
 		Hierarchy = 
 		{
 			Cog = 
@@ -471,6 +481,11 @@ Level =
 		{
 			Vec2 Size = [12, 3],
 			Location Origin = Center,
+		},
+		Button_PlaySound = 
+		{
+			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
+			string CantSelectSound = "5ae3cf4fa1244713:Blip_CantSelect",
 		},
 		Hierarchy = 
 		{
@@ -655,6 +670,11 @@ Level =
 			Vec2 Size = [5, 3],
 			Location Origin = Center,
 		},
+		Button_PlaySound = 
+		{
+			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
+			string CantSelectSound = "5ae3cf4fa1244713:Blip_CantSelect",
+		},
 		Hierarchy = 
 		{
 			Cog = 
@@ -767,6 +787,11 @@ Level =
 		{
 			Vec2 Size = [5, 3],
 			Location Origin = Center,
+		},
+		Button_PlaySound = 
+		{
+			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
+			string CantSelectSound = "5ae3cf4fa1244713:Blip_CantSelect",
 		},
 		Hierarchy = 
 		{
@@ -982,6 +1007,11 @@ Level =
 		{
 			Vec2 Size = [7, 3],
 			Location Origin = Center,
+		},
+		Button_PlaySound = 
+		{
+			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
+			string CantSelectSound = "5ae3cf4fa1244713:Blip_CantSelect",
 		},
 		Hierarchy = 
 		{

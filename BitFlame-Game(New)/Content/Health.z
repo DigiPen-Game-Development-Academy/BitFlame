@@ -9,6 +9,8 @@ class Health : ZilchComponent
     [Property] var ArchetypetoSpawnOnDeath1 : Archetype = null;
     [Property] var ArchetypetoSpawnOnDeath2 : Archetype = null;
     
+    [Property] var ExplosionSound : SoundCue;
+    
     [Property] var Unbreakable : Boolean = false;
     
     [Dependency] var Transform : Transform;
@@ -41,6 +43,7 @@ class Health : ZilchComponent
             blockUpdate.Translation = this.Transform.Translation;
             //this.Space.DispatchEvent(Events.BlockUpdate, blockUpdate);
             
+            this.Space.SoundSpace.PlayCue(this.ExplosionSound);
             this.Owner.Destroy();
         }
     }
