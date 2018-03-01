@@ -44,10 +44,13 @@ class UpgradePathLogic : ZilchComponent
         this.Space.FindObjectByName("ToolTip").FindChildByName("Cost Shower").SpriteText.Visible = false;
         
         this.Space.FindObjectByName("ToolTip").FindChildByName("CostIndicator").SpriteText.Visible = false;
+        
+        this.Space.FindObjectByName("ToolTip").FindChildByName("Sprite").Sprite.Visible = false;
     }
 
     function OnMouseEnter(event : ViewportMouseEvent)
     {
+        
         this.Space.FindObjectByName("ToolTip").FindChildByName("Text").SpriteText.Text = this.UpgradeName;
         
         this.Space.FindObjectByName("ToolTip").FindChildByName("CostIndicator").SpriteText.Text = "`this.Cost`";
@@ -57,6 +60,8 @@ class UpgradePathLogic : ZilchComponent
         this.Space.FindObjectByName("ToolTip").FindChildByName("Cost Shower").SpriteText.Visible = true;
         
         this.Space.FindObjectByName("ToolTip").FindChildByName("CostIndicator").SpriteText.Visible = true;
+        
+        this.Space.FindObjectByName("ToolTip").FindChildByName("Sprite").Sprite.Visible = true;
         
         this.Space.FindObjectByName("ToolTip").Sprite.Visible = true;
     }

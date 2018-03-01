@@ -20,7 +20,20 @@ class Pipe_Preview_Collision : ZilchComponent
     {
         this.OriginalColor = this.Sprite.Color;
         Zero.Connect(this.Owner, Events.CollisionPersisted, this.OnCollisionPersisted);
-        Zero.Connect(this.Owner, Events.CollisionEnded, this.OnCollisionEnded);      
+        Zero.Connect(this.Owner, Events.CollisionEnded, this.OnCollisionEnded);   
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);   
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(this.GameSession.GameVars.PlayerPipes <= 0)
+        {
+            this.Sprite.Color = this.InvalidColor;          
+        }
+        else
+        {
+            this.Sprite.Color = this.OriginalColor;
+        }
     }
 
     function OnCollisionPersisted(event : CollisionEvent)
@@ -28,7 +41,7 @@ class Pipe_Preview_Collision : ZilchComponent
         if(event.OtherObject.Name != "Oxygen_Field")
         {
             this.PlacementInvalid = true;
-            Console.WriteLine("`this.PlacementInvalid`");
+            //Console.WriteLine("`this.PlacementInvalid`");
             this.Sprite.Color = this.InvalidColor;
         }
     }
@@ -38,7 +51,7 @@ class Pipe_Preview_Collision : ZilchComponent
         if(event.OtherObject.Name != "Oxygen_Field")
         {
             this.PlacementInvalid = false;
-            Console.WriteLine("`this.PlacementInvalid`");
+            //Console.WriteLine("`this.PlacementInvalid`");
             this.Sprite.Color = this.OriginalColor;
         }
     }

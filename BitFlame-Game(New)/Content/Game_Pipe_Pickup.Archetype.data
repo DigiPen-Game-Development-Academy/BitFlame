@@ -6,16 +6,16 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "Game_Upgrade_Pickup",
+		string Name = "Game_Pipe_Pickup",
 	},
 	Archetyped = 
 	{
-		string Name = "5a08cc0da512394f:Game_Upgrade_Pickup",
+		string Name = "5ae3d8a67e1466bb:Game_Pipe_Pickup",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-10, 1, 0],
-		Vec3 Scale = [1, 1, 1],
+		Vec3 Translation = [-7, 1, 0],
+		Vec3 Scale = [0.5, 0.5, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -28,7 +28,7 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5a0819a0df68bca3:Game_UpgradeChip",
+		string SpriteSource = "5a908111afce96ff:Oxygen_Pipe_Block_Animation",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -48,7 +48,7 @@ Cog =
 		Vec3 Velocity = [0, 0, 0],
 		Vec3 AngularVelocity = [0, 0, 0],
 	},
-	BoxCollider = 
+	SphereCollider = 
 	{
 		bool Ghost = true,
 		bool SendsMessages = true,
@@ -56,9 +56,9 @@ Cog =
 		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 		Vec3 Offset = [0, 0, 0],
-		Vec3 Size = [0.5, 0.5, 0.5],
+		float Radius = 0.5,
 	},
-	UpgradePickup = 
+	PipePickup = 
 	{
 		int PickupValue = 1,
 		float PickupRange = 3,

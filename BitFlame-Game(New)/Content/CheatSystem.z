@@ -34,7 +34,7 @@ class CheatSystem : ZilchComponent
         if(Zero.Keyboard.KeyIsPressed(Keys.Back))
         {
             this.GameSession.GameVars.PlayerHealth = 0;
-            Console.WriteLine("You Committed Suicide...");
+            Console.WriteLine("You Cheated Life...");
         }
         
         if(Zero.Keyboard.KeyIsDown(Keys.Shift) && Zero.Keyboard.KeyIsDown(Keys.Control) && Zero.Keyboard.KeyIsPressed(Keys.H))

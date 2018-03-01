@@ -1,4 +1,4 @@
-enum DisplayType{Iron, Copper, Aluminium, Titanium, UpgradePoints, Health}
+enum DisplayType{Iron, Copper, Aluminium, Titanium, UpgradePoints, Health, Pipes}
 
 class SetXToVariable : ZilchComponent
 {
@@ -40,6 +40,11 @@ class SetXToVariable : ZilchComponent
         if(this.Type == DisplayType.Health)
         {
             this.Owner.Area.Size = Real2((this.GameSession.GameVars.PlayerHealth * this.GameSession.GameVars.PlayerMaxHealth) / this.GameSession.GameVars.PlayerMaxHealth, 1.0);
+        }
+        
+        if(this.Type == DisplayType.Pipes)
+        {
+            this.Owner.SpriteText.Text = "`this.GameSession.GameVars.PlayerPipes`";
         }
     }
 }
