@@ -8,6 +8,7 @@ Brief: Changes the ships sprite based on the repair stage its in
 
 class Ship_ChangeSprite : ZilchComponent
 {
+    // Added dependency to access the ships sprite easier
     [Dependency] var Sprite : Sprite;
     
     // Sprites of the different stages of ship repair
