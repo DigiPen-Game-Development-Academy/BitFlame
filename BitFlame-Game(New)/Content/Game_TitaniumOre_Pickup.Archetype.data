@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-10, -2, 0],
+		Vec3 Translation = [29.6880932, 5.55110931, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -61,7 +61,7 @@ Cog =
 	TitaniumPickup = 
 	{
 		int PickupValue = 1,
-		float PickupRange = 3,
-		float PickupSpeed = 10,
+		float PickupRange = 5,
+		float PickupSpeed = 1000,
 	},
 },

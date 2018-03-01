@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-10, -3, 0],
+		Vec3 Translation = [26.4324703, 9.79997349, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -50,7 +50,7 @@ Cog =
 	},
 	SphereCollider = 
 	{
-		bool Ghost = true,
+		bool Ghost = false,
 		bool SendsMessages = true,
 		bool Seamless = true,
 		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
@@ -60,8 +60,8 @@ Cog =
 	},
 	AluminiumPickup = 
 	{
-		int PickupValue = 1,
-		float PickupRange = 3,
+		int PickupValue = 5,
+		float PickupRange = 1000,
 		float PickupSpeed = 10,
 	},
 },
