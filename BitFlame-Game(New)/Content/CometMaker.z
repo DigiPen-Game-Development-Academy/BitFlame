@@ -17,31 +17,64 @@ class CometMaker : ZilchComponent
         {
             this.Timer = 0.0;
             
+            this.SpawnRate = Random().Range(7.0, 10.0);
+            
             var player = this.Space.FindObjectByName("Player");
             
             var position = player.Transform.Translation;
             
-            if(Random().CoinFlip())
-            {
-                position.X += 10 + Random().Range(10, 15);
-            }
-            else
-            {
-                position.X -= 10 + Random().Range(10, 15);
-            }
+            var horOrVert = Random().CoinFlip();
             
-            if(Random().CoinFlip())
+            var upOrDown = Random().CoinFlip();
+            
+            var leftOrRight = Random().CoinFlip();
+            
+            if(horOrVert)
             {
-                position.Y += 5 + Random().Range(5, 10);
+                //horizontal
+                
+                if(leftOrRight)
+                {
+                    //left
+                    
+                    position.X -= Random().Range(50,60);
+                    
+                    position.Y = Random().Range(-25, 25);
+                }
+                else
+                {
+                    //right
+                    
+                    position.X += Random().Range(50,60);
+                    
+                    position.Y = Random().Range(-25, 25);
+                }
             }
             else
             {
-                position.Y -= 5 + Random().Range(5, 10);
+                //vertical
+                
+                if(upOrDown)
+                {
+                    //up
+                    
+                    position.Y += Random().Range(50,60);
+                    
+                    position.X = Random().Range(-25, 25);
+                }
+                else
+                {
+                    //down
+                    
+                    position.Y -= Random().Range(50,60);
+                    
+                    position.X = Random().Range(-25, 25);
+                }
             }
             
             var comet = this.Space.CreateAtPosition(this.Comet, position);
             
-            comet.RigidBody.Velocity += player.Transform.Translation - comet.Transform.Translation * event.Dt * Random().Range(5, 10);
+            comet.RigidBody.Velocity += Math.Normalize((player.Transform.Translation + Real3(Random().Range(-2.5,2.5), Random().Range(-2.5,2.5), -5.0)) - comet.Transform.Translation) * event.Dt * Random().Range(100, 300);
         }
         else
         {
