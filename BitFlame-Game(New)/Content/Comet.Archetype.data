@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [3.24391174, -4.72856712, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -64,9 +64,8 @@ Cog =
 		bool Buoyancy = false,
 		bool Custom = false,
 	},
-	TimedDestroy = 
+	DestroyAwayFromPlayer = 
 	{
-		float Lifetime = 20,
-		bool Fade = false,
+		float DistanceToDespawn = 61,
 	},
 },
