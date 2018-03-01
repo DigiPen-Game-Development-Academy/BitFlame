@@ -150,7 +150,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [3.19073606, -1.13639307, 50],
+			Vec3 Translation = [-6.66961956, -0.402983934, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -162,7 +162,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 14.9568863,
+			float Size = 13.5335579,
 		},
 		EditorCameraController = 
 		{
@@ -170,7 +170,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [3.19073606, -1.13639307, -3.85065647e-07],
+			Vec3 LookTarget = [-6.66961956, -0.402983934, -8.16075556e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -361,24 +361,42 @@ Level =
 			string Name = "Game_Health_Pickup",
 		},
 	},
-	Cog = 
+	ArchetypeInstance = 
 	{
+		string Name = "5a08cc0da512394f:Game_Upgrade_Pickup",
 		LinkId = 
 		{
 			uint Id = 11,
-		},
-		Named = 
-		{
-			string Name = "Game_Upgrade_Pickup",
-		},
-		Archetyped = 
-		{
-			string Name = "5a08cc0da512394f:Game_Upgrade_Pickup",
 		},
 		Transform = 
 		{
 			Vec3 Translation = [-10, 1, 0],
 			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Game_Upgrade_Pickup",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 12,
+		},
+		Named = 
+		{
+			string Name = "Game_Pipe_Pickup",
+		},
+		Archetyped = 
+		{
+			string Name = "5ae3d8a67e1466bb:Game_Pipe_Pickup",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-7, 1, 0],
+			Vec3 Scale = [0.5, 0.5, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -391,7 +409,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a0819a0df68bca3:Game_UpgradeChip",
+			string SpriteSource = "5a908111afce96ff:Oxygen_Pipe_Block_Animation",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -411,7 +429,7 @@ Level =
 			Vec3 Velocity = [0, 0, 0],
 			Vec3 AngularVelocity = [0, 0, 0],
 		},
-		BoxCollider = 
+		SphereCollider = 
 		{
 			bool Ghost = true,
 			bool SendsMessages = true,
@@ -419,9 +437,9 @@ Level =
 			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 			Vec3 Offset = [0, 0, 0],
-			Vec3 Size = [0.5, 0.5, 0.5],
+			float Radius = 0.5,
 		},
-		UpgradePickup = 
+		PipePickup = 
 		{
 			int PickupValue = 1,
 			float PickupRange = 3,
@@ -432,7 +450,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 12,
+			uint Id = 13,
 		},
 		Named = 
 		{
@@ -515,7 +533,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 13,
+					uint Id = 14,
 				},
 				Named = 
 				{
@@ -569,7 +587,7 @@ Level =
 						bool UpdatePathOnCogChange = true,
 						bool UpdateCogOnInitialize = true,
 						bool ResolvedNullErrorOccurred = false,
-						uint ResolvedCog = 12,
+						uint ResolvedCog = 13,
 						CogPathPreference PathPreference0 = CogRelative,
 						CogPathPreference PathPreference1 = SpaceRelative,
 						CogPathPreference PathPreference2 = Absolute,
@@ -582,7 +600,7 @@ Level =
 						string Name = "5afe50e870042ebb:Oxygen_Field",
 						LinkId = 
 						{
-							uint Id = 14,
+							uint Id = 15,
 						},
 						Transform = 
 						{
@@ -602,24 +620,6 @@ Level =
 					},
 				},
 			},
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5a7411b441710034:ChargingEnemy",
-		LinkId = 
-		{
-			uint Id = 15,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [13, 0, 0],
-			Vec3 Scale = [1.5, 1.5, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "ChargingEnemy",
 		},
 	},
 },

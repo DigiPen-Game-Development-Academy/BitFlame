@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [12, 2, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -42,7 +42,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = false,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -72,7 +72,7 @@ Cog =
 			bool UpdatePathOnCogChange = true,
 			bool UpdateCogOnInitialize = true,
 			bool ResolvedNullErrorOccurred = false,
-			uint ResolvedCog = 2,
+			uint ResolvedCog = 4294967293,
 			CogPathPreference PathPreference0 = CogRelative,
 			CogPathPreference PathPreference1 = SpaceRelative,
 			CogPathPreference PathPreference2 = Absolute,
@@ -81,13 +81,18 @@ Cog =
 	Health = 
 	{
 		float Health = 5,
-		string ArchetypetoSpawnOnDeath = "",
+		string ArchetypetoSpawnOnDeath1 = "5ae3d8a67e1466bb:Game_Pipe_Pickup",
+		string ArchetypetoSpawnOnDeath2 = "",
 		bool Unbreakable = false,
 	},
 	Asteroid_Mining = 
 	{
 		float DropAmount = 0,
-		float ShrinkAmount = 100,
+		float ShrinkAmount = 200,
+		Vec4 AluminiumColor = [0, 0, 0, 1],
+		Vec4 CopperColor = [0, 0, 0, 1],
+		Vec4 IronColor = [0, 0, 0, 1],
+		Vec4 TitaniumColor = [0, 0, 0, 1],
 		string AluminiumArchetype = "",
 		string CopperArchetype = "",
 		string IronArchetype = "",
@@ -96,6 +101,7 @@ Cog =
 		float CopperProbability = 0,
 		float IronProbability = 0,
 		float TitaniumProbability = 0,
+		float EmptyProbability = 0,
 	},
 	Hierarchy = 
 	{
@@ -104,7 +110,7 @@ Cog =
 			string Name = "5afe50e870042ebb:Oxygen_Field",
 			LinkId = 
 			{
-				uint Id = 3,
+				uint Id = 2,
 			},
 			Transform = 
 			{

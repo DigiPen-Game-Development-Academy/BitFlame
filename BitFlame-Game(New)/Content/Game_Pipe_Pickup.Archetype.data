@@ -6,16 +6,16 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "Enemy",
+		string Name = "Game_Pipe_Pickup",
 	},
 	Archetyped = 
 	{
-		string Name = "5a1c25102e8b8ff5:AlienEnemy",
+		string Name = "5ae3d8a67e1466bb:Game_Pipe_Pickup",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [26.4189148, 5.70019627, 0],
-		Vec3 Scale = [1, 1, 1],
+		Vec3 Translation = [-7, 1, 0],
+		Vec3 Scale = [0.5, 0.5, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -28,20 +28,13 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5af4a2d0f81cb51c:Alien_Enemy_Animation",
+		string SpriteSource = "5a908111afce96ff:Oxygen_Pipe_Block_Animation",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
 		bool AnimationActive = true,
 		float AnimationSpeed = 1,
 		uint StartFrame = 0,
-	},
-	Orientation = 
-	{
-		Vec3 GlobalUp = [0, 1, 0],
-		Vec3 UpVector = [0, 0, 1],
-		Vec3 ForwardVector = [1, 0, 0],
-		OrientationBases DefaultBases = ForwardXUpZ,
 	},
 	RigidBody = 
 	{
@@ -55,35 +48,20 @@ Cog =
 		Vec3 Velocity = [0, 0, 0],
 		Vec3 AngularVelocity = [0, 0, 0],
 	},
-	EnemyLogic = 
+	SphereCollider = 
 	{
-		float Speed = 7.5,
-		float Range = 18,
-	},
-	Player_LookAt = 
-	{
-	},
-	Health = 
-	{
-		float Health = 2,
-		string ArchetypetoSpawnOnDeath1 = "5a70715bb5c81bfe:Game_OxygenOre_Pickup",
-		string ArchetypetoSpawnOnDeath2 = "5af4a586aa6a35b5:lienEnemy_ExplosionEffect",
-		string ExplosionSound = "5ae3cf4fa1248b1b:Enemy_Explosion",
-		bool Unbreakable = false,
-	},
-	DamageOnCollide = 
-	{
-		int Damage = 1,
-		string PlayerDamagedSound = "5ae3cf4fa125c756:Player-Damaged",
-	},
-	MultiConvexMeshCollider = 
-	{
-		bool Ghost = false,
+		bool Ghost = true,
 		bool SendsMessages = true,
 		bool Seamless = true,
 		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 		Vec3 Offset = [0, 0, 0],
-		string MeshName = "5a8c76816167eab4:ChargingEnemy",
+		float Radius = 0.5,
+	},
+	PipePickup = 
+	{
+		int PickupValue = 1,
+		float PickupRange = 3,
+		float PickupSpeed = 10,
 	},
 },

@@ -40,7 +40,7 @@ Cog =
 	{
 		float Health = 10,
 		string ArchetypetoSpawnOnDeath1 = "5a08fb7240d5e7ed:ExplosionParticleEffect",
-		string ArchetypetoSpawnOnDeath2 = "",
+		string ArchetypetoSpawnOnDeath2 = "5a08cc0da512394f:Game_Upgrade_Pickup",
 		bool Unbreakable = false,
 	},
 	HiveSpawner = 
@@ -78,9 +78,5 @@ Cog =
 		float IronProbability = 0,
 		float TitaniumProbability = 0,
 		float EmptyProbability = 0,
-	},
-	DropOnDestroy = 
-	{
-		string Drop = "5a08cc0da512394f:Game_Upgrade_Pickup",
 	},
 },
