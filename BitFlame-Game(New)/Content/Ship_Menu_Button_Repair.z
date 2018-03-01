@@ -101,6 +101,8 @@ class Ship_Menu_Button_Repair_Visual : ZilchComponent
 
     class Ship_Menu_Button_Repair_Function : ZilchComponent
     {
+        // This could be more efficient
+        
         // Stage 1 ship repair costs
         [Property] var Stage1IronCost : Integer = 0;
         [Property] var Stage1CopperCost : Integer = 0; 
@@ -137,61 +139,79 @@ class Ship_Menu_Button_Repair_Visual : ZilchComponent
         function OnLeftMouseUp(event : ViewportMouseEvent)
         {
             Console.WriteLine("up");
+            
+            // Checks for the ships repair stage
             if(this.GameSession.GameVars.ShipRepairStage0)
             {
+                // Checks if the player has enough resources
                 if(this.GameSession.GameVars.PlayerResources >= this.Stage1IronCost && this.GameSession.GameVars.PlayerCopper >= this.Stage1CopperCost && this.GameSession.GameVars.PlayerTitanium >= this.Stage1TitaniumCost && this.GameSession.GameVars.PlayerAluminium >= this.Stage1AluminiumCost)
                 { 
                     Console.WriteLine("func");
+                    // Subtract the cost of resources from player
                     this.GameSession.GameVars.PlayerResources -= this.Stage1IronCost;
                     this.GameSession.GameVars.PlayerCopper -= this.Stage1CopperCost;
                     this.GameSession.GameVars.PlayerTitanium -= this.Stage1TitaniumCost;
                     this.GameSession.GameVars.PlayerAluminium -= this.Stage1AluminiumCost;
                     
+                    // Sets the ships repair stage to the next one and set the old one to false
                     this.GameSession.GameVars.ShipRepairStage0 = false;
                     this.GameSession.GameVars.ShipRepairStage1 = true;
                     
                 }
             }
+            // Checks for the ships repair stage
             else if(this.GameSession.GameVars.ShipRepairStage1)
             {
+                // Checks if the player has enough resources
                 if(this.GameSession.GameVars.PlayerResources >= this.Stage2IronCost && this.GameSession.GameVars.PlayerCopper >= this.Stage2CopperCost && this.GameSession.GameVars.PlayerTitanium >= this.Stage2TitaniumCost && this.GameSession.GameVars.PlayerAluminium >= this.Stage2AluminiumCost)
                 { 
                     Console.WriteLine("func");
+                    // Subtract the cost of resources from player
                     this.GameSession.GameVars.PlayerResources -= this.Stage2IronCost;
                     this.GameSession.GameVars.PlayerCopper -= this.Stage2CopperCost;
                     this.GameSession.GameVars.PlayerTitanium -= this.Stage2TitaniumCost;
                     this.GameSession.GameVars.PlayerAluminium -= this.Stage2AluminiumCost;
                     
+                    // Sets the ships repair stage to the next one and set the old one to false
                     this.GameSession.GameVars.ShipRepairStage1 = false;
                     this.GameSession.GameVars.ShipRepairStage2 = true;
                     
                 }
             }
+            // Checks for the ships repair stage
             else if(this.GameSession.GameVars.ShipRepairStage2)
             {
+                // Checks if the player has enough resources
                 if(this.GameSession.GameVars.PlayerResources >= this.Stage3IronCost && this.GameSession.GameVars.PlayerCopper >= this.Stage3CopperCost && this.GameSession.GameVars.PlayerTitanium >= this.Stage3TitaniumCost && this.GameSession.GameVars.PlayerAluminium >= this.Stage3AluminiumCost)
                 { 
                     Console.WriteLine("func");
+                    // Subtract the cost of resources from player
                     this.GameSession.GameVars.PlayerResources -= this.Stage3IronCost;
                     this.GameSession.GameVars.PlayerCopper -= this.Stage3CopperCost;
                     this.GameSession.GameVars.PlayerTitanium -= this.Stage3TitaniumCost;
                     this.GameSession.GameVars.PlayerAluminium -= this.Stage3AluminiumCost;
                     
+                    // Sets the ships repair stage to the next one and set the old one to false
                     this.GameSession.GameVars.ShipRepairStage2 = false;
                     this.GameSession.GameVars.ShipRepairStage3 = true;
                     
                 }
             }
+            // Checks for the ships repair stage
             else if(this.GameSession.GameVars.ShipRepairStage3)
             {
+                // Checks if the player has enough resources
                 if(this.GameSession.GameVars.PlayerResources >= this.Stage4IronCost && this.GameSession.GameVars.PlayerCopper >= this.Stage4CopperCost && this.GameSession.GameVars.PlayerTitanium >= this.Stage4TitaniumCost && this.GameSession.GameVars.PlayerAluminium >= this.Stage4AluminiumCost)
                 { 
+                    
                     Console.WriteLine("func");
+                    // Subtract the cost of resources from player
                     this.GameSession.GameVars.PlayerResources -= this.Stage4IronCost;
                     this.GameSession.GameVars.PlayerCopper -= this.Stage4CopperCost;
                     this.GameSession.GameVars.PlayerTitanium -= this.Stage4TitaniumCost;
                     this.GameSession.GameVars.PlayerAluminium -= this.Stage4AluminiumCost;
                     
+                    // Sets the ships repair stage to the next one, set the old one to false and change the level to the win level
                     this.GameSession.GameVars.ShipRepairStage3 = false;
                     this.GameSession.GameVars.ShipRepairStage4 = true;
                     this.GameSession.GameVars.NewLevel= Level.WinLevel;

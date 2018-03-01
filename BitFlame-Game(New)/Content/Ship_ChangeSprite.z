@@ -8,6 +8,7 @@ Brief: Changes the ships sprite based on the repair stage its in
 
 class Ship_ChangeSprite : ZilchComponent
 {
+    // Added dependency to access the ships sprite easier
     [Dependency] var Sprite : Sprite;
     
     // Sprites of the different stages of ship repair
@@ -26,27 +27,26 @@ class Ship_ChangeSprite : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {  
+        // Checks what the ShipRepairStage is and checks the IfStatmentCounter variable to make sure it will only run the if statement once
         if(this.GameSession.GameVars.ShipRepairStage1 && this.IfStatementCounter == 1)
         {
             // changes the sprite
             this.Sprite.SpriteSource = this.ShipRepairStage1Sprite;
+            // Adds to the IfStatmentCounter variable
             this.IfStatementCounter += 1;
         }
         else if(this.GameSession.GameVars.ShipRepairStage2 && this.IfStatementCounter == 2)
         {
-            // changes the sprite
             this.Sprite.SpriteSource = this.ShipRepairStage2Sprite;
             this.IfStatementCounter += 1;
         }
         else if(this.GameSession.GameVars.ShipRepairStage3 && this.IfStatementCounter == 3)
         {
-            // changes the sprite
             this.Sprite.SpriteSource = this.ShipRepairStage3Sprite;
             this.IfStatementCounter += 1;
         }
         else if(this.GameSession.GameVars.ShipRepairStage4 && this.IfStatementCounter == 4)
         {
-            // changes the sprite
             this.Sprite.SpriteSource = this.ShipRepairStage4Sprite;
             this.IfStatementCounter += 1;
         }
