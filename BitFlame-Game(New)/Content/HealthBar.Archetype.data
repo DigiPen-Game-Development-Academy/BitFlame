@@ -8,9 +8,13 @@ Cog =
 	{
 		string Name = "HealthBar",
 	},
+	Archetyped = 
+	{
+		string Name = "5adbf3bea2c454d3:HealthBar",
+	},
 	Transform = 
 	{
-		Vec3 Translation = [17.5769653, -8.90438271, 0],
+		Vec3 Translation = [17.5, -9, -5.5],
 		Vec3 Scale = [0.756973147, 1.93317103, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -55,7 +59,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-5.01683283, 0.0125937462, 1],
+				Vec3 Translation = [-5.01683283, 0.0125937462, 0.100000001],
 				Vec3 Scale = [5.39161444, 1.14504874, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -90,7 +94,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-5.64205742, 0.52976799, -41],
+				Vec3 Translation = [-5.64205742, 0.123585537, -0.70457077],
 				Vec3 Scale = [6.01317358, 2.17973948, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -104,7 +108,7 @@ Cog =
 				BlendMode BlendMode = Alpha,
 				SpriteGeometryMode GeometryMode = ZPlane,
 				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5adbfd28e3ddec00:HealthBar_Background",
+				string SpriteSource = "5ad8908bbb2ba5ec:HealthBar_Background",
 				bool RenderMask = false,
 				bool FlipX = false,
 				bool FlipY = false,

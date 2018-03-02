@@ -10,11 +10,11 @@ Cog =
 	},
 	Archetyped = 
 	{
-		string Name = "5a1c3c0e55b6fbd1:Bullet",
+		string Name = "5a33c8a060f2dcc9:TurretBullet",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-2.36121941, 3.44728398, 24.7279816],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -83,7 +83,7 @@ Cog =
 	},
 	DamageOnHit = 
 	{
-		float Damage = 0.25,
+		float Damage = 0.5,
 		bool Penatrating = false,
 		bool EnemyBullet = false,
 	},

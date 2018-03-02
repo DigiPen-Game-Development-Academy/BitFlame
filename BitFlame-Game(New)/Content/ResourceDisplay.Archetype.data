@@ -8,9 +8,13 @@ Cog =
 	{
 		string Name = "ResourceDisplay",
 	},
+	Archetyped = 
+	{
+		string Name = "5a2062830437e850:ResourceDisplay",
+	},
 	Transform = 
 	{
-		Vec3 Translation = [15.8409443, -3.43771243, 29.2888508],
+		Vec3 Translation = [15.8046341, -3.5, -6.19540405],
 		Vec3 Scale = [4, 4, 2.39427853],
 		Quat Rotation = [0, 0, 0, 1],
 	},

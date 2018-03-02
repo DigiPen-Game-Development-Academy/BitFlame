@@ -39,7 +39,6 @@ Cog =
 	OxygenGauge = 
 	{
 		float DecaySpeed = 5,
-		string OxygenLow = "5ae3cf4fa12580cf:Oxygen_Low",
 	},
 	Hierarchy = 
 	{
@@ -55,7 +54,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0, 0, 0],
+				Vec3 Translation = [0, 0, 0.141056061],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0.707106829, 0.707106829],
 			},
