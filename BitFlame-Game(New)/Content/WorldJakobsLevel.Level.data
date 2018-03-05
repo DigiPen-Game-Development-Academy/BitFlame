@@ -150,7 +150,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-6.66961956, -0.402983934, 50],
+			Vec3 Translation = [-1.18088555, 3.34703493, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -162,7 +162,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 13.5335579,
+			float Size = 22.313055,
 		},
 		EditorCameraController = 
 		{
@@ -170,7 +170,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-6.66961956, -0.402983934, -8.16075556e-07],
+			Vec3 LookTarget = [-1.18088555, 3.34703493, -5.76155117e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -363,102 +363,10 @@ Level =
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5a08cc0da512394f:Game_Upgrade_Pickup",
+		string Name = "5a9842f78945b818:Ship",
 		LinkId = 
 		{
 			uint Id = 11,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-10, 1, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Game_Upgrade_Pickup",
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 12,
-		},
-		Named = 
-		{
-			string Name = "Game_Pipe_Pickup",
-		},
-		Archetyped = 
-		{
-			string Name = "5ae3d8a67e1466bb:Game_Pipe_Pickup",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-7, 1, 0],
-			Vec3 Scale = [0.5, 0.5, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a908111afce96ff:Oxygen_Pipe_Block_Animation",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		RigidBody = 
-		{
-			bool Static = false,
-			bool Asleep = false,
-			bool Kinematic = false,
-			bool RotationLocked = false,
-			bool Mode2D = true,
-			bool AllowSleep = true,
-			bool Inherit2DMode = true,
-			Vec3 Velocity = [0, 0, 0],
-			Vec3 AngularVelocity = [0, 0, 0],
-		},
-		SphereCollider = 
-		{
-			bool Ghost = true,
-			bool SendsMessages = true,
-			bool Seamless = true,
-			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [0, 0, 0],
-			float Radius = 0.5,
-		},
-		PipePickup = 
-		{
-			int PickupValue = 1,
-			float PickupRange = 3,
-			float PickupSpeed = 10,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 13,
-		},
-		Named = 
-		{
-			string Name = "Ship",
-		},
-		Archetyped = 
-		{
-			string Name = "5a9842f78945b818:Ship",
 		},
 		Transform = 
 		{
@@ -466,160 +374,27 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Sprite = 
+		Named = 
 		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a018714cc9e515a:Ship_Sprite",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
+			string Name = "Ship",
 		},
-		RigidBody = 
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a7411b441710034:ChargingEnemy",
+		LinkId = 
 		{
-			bool Static = true,
-			bool Asleep = false,
-			bool Kinematic = false,
-			bool RotationLocked = false,
-			bool Mode2D = true,
-			bool AllowSleep = true,
-			bool Inherit2DMode = true,
-			Vec3 Velocity = [0, 0, 0],
-			Vec3 AngularVelocity = [0, 0, 0],
+			uint Id = 12,
 		},
-		BoxCollider = 
+		Transform = 
 		{
-			bool Ghost = true,
-			bool SendsMessages = true,
-			bool Seamless = true,
-			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [0, 0, 0],
-			Vec3 Size = [5, 2.5, 0.5],
+			Vec3 Translation = [0, 10, 0],
+			Vec3 Scale = [1.5, 1.5, 1],
+			Quat Rotation = [0, 0, 0, 1],
 		},
-		Ship_Interaction = 
+		Named = 
 		{
-			Enum ShipAccessKey = E,
-			string HUDLevel = "5a917ce258f29948:ShipMenuLevel",
-			string SpaceArchetype = "554cea0f94af6dc4:Space",
-			CogPath PlayerRef = 
-			{
-				string Path = ":/Player",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 3,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-		},
-		Hierarchy = 
-		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 14,
-				},
-				Named = 
-				{
-					string Name = "OxygenPipe",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 0, -0.5],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Sprite = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [0, 0.905450106, 0.995000005, 0.999899983],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5275aa4d802dd6dc:Square",
-					bool RenderMask = false,
-					bool FlipX = false,
-					bool FlipY = false,
-					bool AnimationActive = true,
-					float AnimationSpeed = 1,
-					uint StartFrame = 0,
-				},
-				BoxCollider = 
-				{
-					bool Ghost = false,
-					bool SendsMessages = true,
-					bool Seamless = true,
-					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-					Vec3 Offset = [0, 0, 0],
-					Vec3 Size = [0.5, 0.5, 0.5],
-				},
-				OxygenPipe_Function = 
-				{
-					int ConnectingRange = 144,
-					bool Origin = true,
-					CogPath Ship = 
-					{
-						string Path = ":/Ship",
-						bool ErrorOnResolveToNull = false,
-						bool ErrorOnPathCantCompute = false,
-						bool ErrorOnDirectLinkFail = false,
-						bool UpdateCogOnPathChange = true,
-						bool UpdatePathOnCogChange = true,
-						bool UpdateCogOnInitialize = true,
-						bool ResolvedNullErrorOccurred = false,
-						uint ResolvedCog = 13,
-						CogPathPreference PathPreference0 = CogRelative,
-						CogPathPreference PathPreference1 = SpaceRelative,
-						CogPathPreference PathPreference2 = Absolute,
-					},
-				},
-				Hierarchy = 
-				{
-					ArchetypeInstance = 
-					{
-						string Name = "5afe50e870042ebb:Oxygen_Field",
-						LinkId = 
-						{
-							uint Id = 15,
-						},
-						Transform = 
-						{
-							Vec3 Translation = [0, 0, 0],
-							Vec3 Scale = [1, 1, 1],
-							Quat Rotation = [0, 0, 0, 1],
-						},
-						Area = 
-						{
-							Vec2 Size = [10, 10],
-							Location Origin = Center,
-						},
-						Named = 
-						{
-							string Name = "Oxygen_Field",
-						},
-					},
-				},
-			},
+			string Name = "ChargingEnemy",
 		},
 	},
 },

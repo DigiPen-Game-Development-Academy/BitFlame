@@ -1,7 +1,11 @@
+//modified by jakob mcfarland
+
 enum UpgradeType{FireRate, BulletSpeed,  Health, Oxygen, OxygenRegen, HealthRegen, Speed, MaxSpeed, InercialDampeners, Generik}
 
 class UpgradeSpecifiedVariable : ZilchComponent
 {
+    [Dependency] var UpgradePathLogic : UpgradePathLogic;
+    
     [Property] var UpgradeType  : UpgradeType = UpgradeType.Generik;
     
     [Property] var UpgradeAmount : Real = 0.0;
@@ -9,63 +13,129 @@ class UpgradeSpecifiedVariable : ZilchComponent
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Owner, Events.MouseDown, this.OnMouseDown);
+        
+        var gVars = this.GameSession.GameVars;
+        if(this.UpgradeType == UpgradeType.FireRate && gVars.HasUpgrade_FirerateI == true)
+        {
+           this.UpgradePathLogic.Purchased = true;
+           this.Owner.Sprite.Color = this.UpgradePathLogic.PurchasedColor;
+           this.Owner.RemoveComponentByName("UpgradeSpecifiedVariable");
+        }
+        else if(this.UpgradeType == UpgradeType.Health && gVars.HasUpgrade_Maxhealth == true)
+        {
+            this.UpgradePathLogic.Purchased = true;
+            this.Owner.Sprite.Color = this.UpgradePathLogic.PurchasedColor;
+            this.Owner.RemoveComponentByName("UpgradeSpecifiedVariable");
+        }
+        else if(this.UpgradeType == UpgradeType.Oxygen && gVars.HasUpgrade_Maxoxygen == true)
+        {
+            this.UpgradePathLogic.Purchased = true;
+            this.Owner.Sprite.Color = this.UpgradePathLogic.PurchasedColor;
+            this.Owner.RemoveComponentByName("UpgradeSpecifiedVariable");
+        }
+        else if(this.UpgradeType == UpgradeType.OxygenRegen && gVars.HasUpgrade_OxygenRegen == true)
+        {
+            this.UpgradePathLogic.Purchased = true;
+            this.Owner.Sprite.Color = this.UpgradePathLogic.PurchasedColor;
+            this.Owner.RemoveComponentByName("UpgradeSpecifiedVariable");
+        }
+        else if(this.UpgradeType == UpgradeType.HealthRegen && gVars.HasUpgrade_HealthRegen == true)
+        {
+            this.UpgradePathLogic.Purchased = true;
+            this.Owner.Sprite.Color = this.UpgradePathLogic.PurchasedColor;
+            this.Owner.RemoveComponentByName("UpgradeSpecifiedVariable");
+        }
+        else if(this.UpgradeType == UpgradeType.Speed &&   gVars.HasUpgrade_Acceleration == true)
+        {
+            this.UpgradePathLogic.Purchased = true;
+            this.Owner.Sprite.Color = this.UpgradePathLogic.PurchasedColor;
+            this.Owner.RemoveComponentByName("UpgradeSpecifiedVariable");
+        }
+        else if(this.UpgradeType == UpgradeType.MaxSpeed &&  gVars.HasUpgrade_Maxspeed == true)
+        {
+            this.UpgradePathLogic.Purchased = true;
+            this.Owner.Sprite.Color = this.UpgradePathLogic.PurchasedColor;
+            this.Owner.RemoveComponentByName("UpgradeSpecifiedVariable");
+        }
+        else if(this.UpgradeType == UpgradeType.Generik &&  gVars.HasUpgrade_Vitals == true)
+        {
+            this.UpgradePathLogic.Purchased = true;
+            this.Owner.Sprite.Color = this.UpgradePathLogic.PurchasedColor;
+            this.Owner.RemoveComponentByName("UpgradeSpecifiedVariable");
+        }
+        else if(this.UpgradeType == UpgradeType.BulletSpeed &&  gVars.HasUpgrade_BulletSpeed == true)
+        {
+            this.UpgradePathLogic.Purchased = true;
+            this.Owner.Sprite.Color = this.UpgradePathLogic.PurchasedColor;
+            this.Owner.RemoveComponentByName("UpgradeSpecifiedVariable");
+        }
+        else if(this.UpgradeType == UpgradeType.InercialDampeners && gVars.HasUpgrade_InertiaDampeners == true)
+        {
+            this.UpgradePathLogic.Purchased = true;
+            this.Owner.Sprite.Color = this.UpgradePathLogic.PurchasedColor;
+            this.Owner.RemoveComponentByName("UpgradeSpecifiedVariable");
+        }
     }
 
     function OnMouseDown(event : ViewportMouseEvent)
     {
         if(this.Owner.UpgradePathLogic.Unlocked)
         {
+            var gVars = this.GameSession.GameVars;
+            
             if(this.UpgradeType == UpgradeType.FireRate)
             {
-                this.LevelSettings.HUDSpaceReferences.MainSpaceRef.LevelSettings.HudCreator.PlayerRef.Cog.FindChildByName("Arm").PlayerShooting.FireRate -= this.UpgradeAmount;
-                Console.WriteLine("Firerate: `this.LevelSettings.HUDSpaceReferences.MainSpaceRef.LevelSettings.HudCreator.PlayerRef.Cog.FindChildByName("Arm").PlayerShooting.FireRate`");
+                gVars.HasUpgrade_FirerateI = true;
+                //Console.WriteLine("Firerate: `this.LevelSettings.HUDSpaceReferences.MainSpaceRef.LevelSettings.HudCreator.PlayerRef.Cog.FindChildByName("Arm").PlayerShooting.FireRate`");
             }
             else if(this.UpgradeType == UpgradeType.Health)
             {
-                this.GameSession.GameVars.PlayerMaxHealth = this.GameSession.GameVars.PlayerMaxHealth * this.UpgradeAmount as Integer;
-                Console.WriteLine("HealthMax: `this.GameSession.GameVars.PlayerMaxHealth`");
+                gVars.HasUpgrade_Maxhealth = true;
+                //Console.WriteLine("HealthMax: `this.GameSession.GameVars.PlayerMaxHealth`");
             }
             else if(this.UpgradeType == UpgradeType.Oxygen)
             {
-                this.GameSession.GameVars.PlayerMaxOxygen = this.GameSession.GameVars.PlayerMaxOxygen * this.UpgradeAmount as Integer;
-                Console.WriteLine("OxygenMax: `this.GameSession.GameVars.PlayerMaxOxygen`");
+                gVars.HasUpgrade_Maxoxygen = true;
+                //Console.WriteLine("OxygenMax: `this.GameSession.GameVars.PlayerMaxOxygen`");
             }
             else if(this.UpgradeType == UpgradeType.OxygenRegen)
             {
-                this.LevelSettings.HUDSpaceReferences.MainSpaceRef.LevelSettings.HudCreator.HUDSpace.LevelSettings.HUDSpaceReferences.OxygenBarRef.Cog.OxygenGauge.DecaySpeed -= this.UpgradeAmount;
-                Console.WriteLine("OxygenDecay: `this.LevelSettings.HUDSpaceReferences.MainSpaceRef.LevelSettings.HudCreator.HUDSpace.LevelSettings.HUDSpaceReferences.OxygenBarRef.Cog.OxygenGauge.DecaySpeed`");
+                gVars.HasUpgrade_OxygenRegen = true;
+                //Console.WriteLine("OxygenDecay: `this.LevelSettings.HUDSpaceReferences.MainSpaceRef.LevelSettings.HudCreator.HUDSpace.LevelSettings.HUDSpaceReferences.OxygenBarRef.Cog.OxygenGauge.DecaySpeed`");
             }
             else if(this.UpgradeType == UpgradeType.HealthRegen)
             {
-                this.LevelSettings.HUDSpaceReferences.MainSpaceRef.LevelSettings.HudCreator.PlayerRef.Cog.HealthRegen.HealthRegenAmount += this.UpgradeAmount as Integer;
-                Console.WriteLine("HealthRegen: `this.LevelSettings.HUDSpaceReferences.MainSpaceRef.LevelSettings.HudCreator.PlayerRef.Cog.HealthRegen.HealthRegenAmount`");
+                gVars.HasUpgrade_HealthRegen = true;
+                //Console.WriteLine("HealthRegen: `this.LevelSettings.HUDSpaceReferences.MainSpaceRef.LevelSettings.HudCreator.PlayerRef.Cog.HealthRegen.HealthRegenAmount`");
             }
             else if(this.UpgradeType == UpgradeType.Speed)
             {
-                this.LevelSettings.HUDSpaceReferences.MainSpaceRef.LevelSettings.HudCreator.PlayerRef.Cog.Player_Movement_Script.Speed += this.UpgradeAmount;
-                Console.WriteLine("Speed: `this.LevelSettings.HUDSpaceReferences.MainSpaceRef.LevelSettings.HudCreator.PlayerRef.Cog.Player_Movement_Script.Speed`");
+                gVars.HasUpgrade_Acceleration = true;
+                //Console.WriteLine("Speed: `this.LevelSettings.HUDSpaceReferences.MainSpaceRef.LevelSettings.HudCreator.PlayerRef.Cog.Player_Movement_Script.Speed`");
             }
             else if(this.UpgradeType == UpgradeType.MaxSpeed)
             {
-                this.LevelSettings.HUDSpaceReferences.MainSpaceRef.LevelSettings.HudCreator.PlayerRef.Cog.Player_Movement_Script.MaxPlayerSpeeds.XY += Real2(this.UpgradeAmount, this.UpgradeAmount);
-                this.LevelSettings.HUDSpaceReferences.MainSpaceRef.LevelSettings.HudCreator.PlayerRef.Cog.Player_Movement_Script.MinPlayerSpeeds.XY -= Real2(this.UpgradeAmount, this.UpgradeAmount);
-                
+                gVars.HasUpgrade_Maxspeed = true;      
             }
             else if(this.UpgradeType == UpgradeType.Generik)
             {
-                this.LevelSettings.HUDSpaceReferences.MainSpaceRef.LevelSettings.HudCreator.PlayerRef.Cog.FindChildByName("Arm").PlayerShooting.FireRate -= this.UpgradeAmount;
-                Console.WriteLine("GenerikFirerate: `this.LevelSettings.HUDSpaceReferences.MainSpaceRef.LevelSettings.HudCreator.PlayerRef.Cog.FindChildByName("Arm").PlayerShooting.FireRate`");
+                gVars.HasUpgrade_Vitals = true;
+                //Console.WriteLine("GenerikFirerate: `this.LevelSettings.HUDSpaceReferences.MainSpaceRef.LevelSettings.HudCreator.PlayerRef.Cog.FindChildByName("Arm").PlayerShooting.FireRate`");
             }
             else if(this.UpgradeType == UpgradeType.BulletSpeed)
             {
-                this.LevelSettings.HUDSpaceReferences.MainSpaceRef.LevelSettings.HudCreator.PlayerRef.Cog.FindChildByName("Arm").PlayerShooting.BulletSpeed += this.UpgradeAmount;
-                Console.WriteLine("BulletSpeed: `this.LevelSettings.HUDSpaceReferences.MainSpaceRef.LevelSettings.HudCreator.PlayerRef.Cog.FindChildByName("Arm").PlayerShooting.BulletSpeed`");
+                gVars.HasUpgrade_BulletSpeed = true;
+                //Console.WriteLine("BulletSpeed: `this.LevelSettings.HUDSpaceReferences.MainSpaceRef.LevelSettings.HudCreator.PlayerRef.Cog.FindChildByName("Arm").PlayerShooting.BulletSpeed`");
             }
-            else if(this.UpgradeType == UpgradeType.InercialDampeners)
+            else if(this.UpgradeType == UpgradeType.InercialDampeners && gVars.HasUpgrade_InertiaDampeners == true)
             {
-                this.LevelSettings.HUDSpaceReferences.MainSpaceRef.LevelSettings.HudCreator.PlayerRef.Cog.Player_Movement_Script.ControlDampeners = true;
-                Console.WriteLine("Dampeners: `this.LevelSettings.HUDSpaceReferences.MainSpaceRef.LevelSettings.HudCreator.PlayerRef.Cog.Player_Movement_Script.ControlDampeners`");
+                gVars.HasUpgrade_InertiaDampeners = true;
+                //Console.WriteLine("Dampeners: `this.LevelSettings.HUDSpaceReferences.MainSpaceRef.LevelSettings.HudCreator.PlayerRef.Cog.Player_Movement_Script.ControlDampeners`");
             }
+            
+            var upgradeEvent = PlayerUpgradeEvent();
+            upgradeEvent.UpgradeAmount = this.UpgradeAmount;
+            this.Space.DispatchEvent(Events.PlayerUpgradeEvent, upgradeEvent);
             
             this.Owner.RemoveComponentByName("UpgradeSpecifiedVariable");
         }

@@ -155,7 +155,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.0341919623, 0.410862684, 50.0649452],
+			Vec3 Translation = [0, 3, 150.498993],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -167,7 +167,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 89.4022141,
+			float Size = 8.96337795,
 		},
 		EditorCameraController = 
 		{
@@ -175,7 +175,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.0341919623, 0.410862684, 0.0649463311],
+			Vec3 LookTarget = [0, 3, 100.499001],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -567,9 +567,13 @@ Level =
 		Player_Block_Placing = 
 		{
 			int PlacingRange = 100,
+			int TurretCost = 1,
+			string TurretArchetype = "5a33cbf6af34b493:Turret",
+			string PreTurretArchetype = "5a87d3ab11ce27cf:Pre_Turret",
 			int PipeCost = 1,
 			string PipeArchetype = "5a62ce81be38d76e:OxygenPipe",
 			string PrePipeArchetype = "5a6dd155563b46c8:OxygenPipe_Preview",
+			Enum Type = Turret,
 		},
 		DragEffect = 
 		{
@@ -588,6 +592,9 @@ Level =
 			string SelectSound = "",
 			string CantSelectSound = "",
 			string LowOxygenSound = "5ae3cf4fa12580cf:Oxygen_Low",
+		},
+		Player_Upgrade_Logic = 
+		{
 		},
 		Hierarchy = 
 		{
@@ -695,79 +702,6 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 11,
-				},
-				Named = 
-				{
-					string Name = "Space",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 0, -1],
-					Vec3 Scale = [2, 2, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Sprite = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5a11cfb166989dc8:Space",
-					bool RenderMask = false,
-					bool FlipX = false,
-					bool FlipY = false,
-					bool AnimationActive = true,
-					float AnimationSpeed = 1,
-					uint StartFrame = 0,
-				},
-				GoOppositeWayThatKeyGoes = 
-				{
-				},
-			},
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 12,
-				},
-				Named = 
-				{
-					string Name = "Space",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 0, -10],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [-0, 0, 1, -4.37113883e-08],
-				},
-				Sprite = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5a11cfb166989dc8:Space",
-					bool RenderMask = false,
-					bool FlipX = false,
-					bool FlipY = false,
-					bool AnimationActive = true,
-					float AnimationSpeed = 1,
-					uint StartFrame = 0,
-				},
-			},
-			Cog = 
-			{
-				LinkId = 
-				{
 					uint Id = 8,
 				},
 				Named = 
@@ -843,24 +777,307 @@ Level =
 				{
 				},
 			},
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5a33cbf6af34b493:Turret",
-		LinkId = 
-		{
-			uint Id = 13,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [6.77107382, -3.86559272, 0.0649452209],
-			Vec3 Scale = [2, 2, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "LaserTurret",
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 11,
+				},
+				Named = 
+				{
+					string Name = "BlockPlacingSelector",
+				},
+				Archetyped = 
+				{
+					string Name = "5a87e74dcbd970ec:BlockPlacingSelector",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 3, 100],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BlockType_Selector_Logic = 
+				{
+					Enum Type = Pipe,
+					bool Hub = true,
+					Vec4 HoverColor = [0, 0.278431416, 1, 0.200000003],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [0, 0.278431416, 1, 0.200000003],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Area = 
+				{
+					Vec2 Size = [11, 5],
+					Location Origin = Center,
+				},
+				Hierarchy = 
+				{
+					Cog = 
+					{
+						LinkId = 
+						{
+							uint Id = 12,
+						},
+						Named = 
+						{
+							string Name = "PipeArea",
+						},
+						Transform = 
+						{
+							Vec3 Translation = [-3, 0, 0],
+							Vec3 Scale = [1, 1, 1],
+							Quat Rotation = [0, 0, 0, 1],
+						},
+						Sprite = 
+						{
+							bool Visible = true,
+							bool VisibilityCulling = true,
+							bool VisibilityEvents = true,
+							bool CastShadows = false,
+							Vec4 Color = [0, 0.279999971, 1, 0.200000003],
+							BlendMode BlendMode = Alpha,
+							SpriteGeometryMode GeometryMode = ZPlane,
+							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+							string SpriteSource = "5275aa4d802dd6dc:Square",
+							bool RenderMask = false,
+							bool FlipX = false,
+							bool FlipY = false,
+							bool AnimationActive = true,
+							float AnimationSpeed = 1,
+							uint StartFrame = 0,
+						},
+						Area = 
+						{
+							Vec2 Size = [4, 4],
+							Location Origin = Center,
+						},
+						Reactive = 
+						{
+							bool Active = true,
+							bool CaptureMouse = false,
+						},
+						BlockType_Selector_Logic = 
+						{
+							Enum Type = Pipe,
+							bool Hub = false,
+							Vec4 HoverColor = [0, 0.278431416, 1, 0.400000006],
+						},
+						Hierarchy = 
+						{
+							Cog = 
+							{
+								LinkId = 
+								{
+									uint Id = 13,
+								},
+								Named = 
+								{
+									string Name = "PipeSprite",
+								},
+								Transform = 
+								{
+									Vec3 Translation = [0, 0, 0],
+									Vec3 Scale = [1, 1, 1],
+									Quat Rotation = [0, 0, 0, 1],
+								},
+								Sprite = 
+								{
+									bool Visible = true,
+									bool VisibilityCulling = true,
+									bool VisibilityEvents = true,
+									bool CastShadows = false,
+									Vec4 Color = [1, 1, 1, 0.75],
+									BlendMode BlendMode = Alpha,
+									SpriteGeometryMode GeometryMode = ZPlane,
+									string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+									string SpriteSource = "5a908111afce96ff:Oxygen_Pipe_Block_Animation",
+									bool RenderMask = false,
+									bool FlipX = false,
+									bool FlipY = false,
+									bool AnimationActive = true,
+									float AnimationSpeed = 1,
+									uint StartFrame = 0,
+								},
+							},
+						},
+					},
+					Cog = 
+					{
+						LinkId = 
+						{
+							uint Id = 14,
+						},
+						Named = 
+						{
+							string Name = "TurretArea",
+						},
+						Transform = 
+						{
+							Vec3 Translation = [3, 0, 0],
+							Vec3 Scale = [1, 1, 1],
+							Quat Rotation = [0, 0, 0, 1],
+						},
+						Sprite = 
+						{
+							bool Visible = true,
+							bool VisibilityCulling = true,
+							bool VisibilityEvents = true,
+							bool CastShadows = false,
+							Vec4 Color = [0, 0.279999971, 1, 0.200000003],
+							BlendMode BlendMode = Alpha,
+							SpriteGeometryMode GeometryMode = ZPlane,
+							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+							string SpriteSource = "5275aa4d802dd6dc:Square",
+							bool RenderMask = false,
+							bool FlipX = false,
+							bool FlipY = false,
+							bool AnimationActive = true,
+							float AnimationSpeed = 1,
+							uint StartFrame = 0,
+						},
+						Area = 
+						{
+							Vec2 Size = [4, 4],
+							Location Origin = Center,
+						},
+						Reactive = 
+						{
+							bool Active = true,
+							bool CaptureMouse = false,
+						},
+						BlockType_Selector_Logic = 
+						{
+							Enum Type = Turret,
+							bool Hub = false,
+							Vec4 HoverColor = [0, 0.278431416, 1, 0.400000006],
+						},
+						Hierarchy = 
+						{
+							Cog = 
+							{
+								LinkId = 
+								{
+									uint Id = 15,
+								},
+								Named = 
+								{
+									string Name = "TurretSprite",
+								},
+								Transform = 
+								{
+									Vec3 Translation = [0, 0, 0],
+									Vec3 Scale = [2, 2, 1],
+									Quat Rotation = [0, 0, 0, 1],
+								},
+								Sprite = 
+								{
+									bool Visible = true,
+									bool VisibilityCulling = true,
+									bool VisibilityEvents = true,
+									bool CastShadows = false,
+									Vec4 Color = [1, 1, 1, 0.75],
+									BlendMode BlendMode = Alpha,
+									SpriteGeometryMode GeometryMode = ZPlane,
+									string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+									string SpriteSource = "5a33d19f8d752ba6:Turret_Base",
+									bool RenderMask = false,
+									bool FlipX = false,
+									bool FlipY = false,
+									bool AnimationActive = true,
+									float AnimationSpeed = 1,
+									uint StartFrame = 0,
+								},
+							},
+							Cog = 
+							{
+								LinkId = 
+								{
+									uint Id = 16,
+								},
+								Named = 
+								{
+									string Name = "TurretSprite",
+								},
+								Transform = 
+								{
+									Vec3 Translation = [0, 0, 1],
+									Vec3 Scale = [2, 2, 1],
+									Quat Rotation = [0, 0, 0, 1],
+								},
+								Sprite = 
+								{
+									bool Visible = true,
+									bool VisibilityCulling = true,
+									bool VisibilityEvents = true,
+									bool CastShadows = false,
+									Vec4 Color = [1, 1, 1, 0.75],
+									BlendMode BlendMode = Alpha,
+									SpriteGeometryMode GeometryMode = ZPlane,
+									string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+									string SpriteSource = "5a33d1678e29284e:Turret_Top",
+									bool RenderMask = false,
+									bool FlipX = false,
+									bool FlipY = false,
+									bool AnimationActive = true,
+									float AnimationSpeed = 1,
+									uint StartFrame = 0,
+								},
+							},
+							Cog = 
+							{
+								LinkId = 
+								{
+									uint Id = 17,
+								},
+								Named = 
+								{
+									string Name = "TurretSprite",
+								},
+								Transform = 
+								{
+									Vec3 Translation = [0, 0.75, 0],
+									Vec3 Scale = [2, 2, 1],
+									Quat Rotation = [0, 0, 0, 1],
+								},
+								Sprite = 
+								{
+									bool Visible = true,
+									bool VisibilityCulling = true,
+									bool VisibilityEvents = true,
+									bool CastShadows = false,
+									Vec4 Color = [1, 1, 1, 0.75],
+									BlendMode BlendMode = Alpha,
+									SpriteGeometryMode GeometryMode = ZPlane,
+									string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+									string SpriteSource = "5a33d17591ef6d53:Turret_Barrel",
+									bool RenderMask = false,
+									bool FlipX = false,
+									bool FlipY = false,
+									bool AnimationActive = true,
+									float AnimationSpeed = 1,
+									uint StartFrame = 0,
+								},
+							},
+						},
+					},
+				},
+			},
 		},
 	},
 },

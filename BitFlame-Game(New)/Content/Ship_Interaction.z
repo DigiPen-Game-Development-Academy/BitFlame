@@ -57,7 +57,10 @@ class Ship_Interaction : ZilchComponent
                 this.GameSession.GameVars.SlideIn = !this.GameSession.GameVars.SlideIn;
                 
                 var arm = player.FindChildByName("Arm");
-                arm.PlayerShooting.CanShoot = false;
+                if(arm != null)
+                {
+                    arm.PlayerShooting.CanShoot = !arm.PlayerShooting.CanShoot; 
+                }
                 
                 if(player.RigidBody != null)
                 {
@@ -99,6 +102,8 @@ class Ship_Interaction : ZilchComponent
             //end hover feed back here              
             if(this.HUDSpace != null)
             {
+                this.GameSession.GameVars.SlideIn = false;
+                
                 var arm = player.FindChildByName("Arm");
                 if(arm != null)
                 {

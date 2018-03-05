@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [13, 0, 0],
+		Vec3 Translation = [0, 10, 0],
 		Vec3 Scale = [1.5, 1.5, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -24,11 +24,11 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [0.800000191, 0, 1, 1],
+		Vec4 Color = [1, 1, 1, 1],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5af4a2d0f81cb51c:Alien_Enemy_Animation",
+		string SpriteSource = "5a87a15f5d0ed996:ChargingEnemy_Sprite_Animated",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -63,11 +63,13 @@ Cog =
 		float Health = 5,
 		string ArchetypetoSpawnOnDeath1 = "5a70715bb5c81bfe:Game_OxygenOre_Pickup",
 		string ArchetypetoSpawnOnDeath2 = "5af4a586aa6a35b5:lienEnemy_ExplosionEffect",
+		string ExplosionSound = "",
 		bool Unbreakable = false,
 	},
 	DamageOnCollide = 
 	{
 		int Damage = 1,
+		string PlayerDamagedSound = "",
 	},
 	ChargingEnemyLogic = 
 	{
@@ -83,6 +85,7 @@ Cog =
 	{
 		float Damage = 10,
 		bool Penatrating = true,
+		bool EnemyBullet = false,
 	},
 	MultiConvexMeshCollider = 
 	{
@@ -92,6 +95,6 @@ Cog =
 		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 		string SerializedGroupName = "5a8c76cb6cde040f:ChargingEnemyCollider",
 		Vec3 Offset = [0, 0, 0],
-		string MeshName = "5a8c76816167eab4:ChargingEnemy",
+		string MeshName = "5a87a1f867e1df0a:ChargingEnemyCollisionMesh",
 	},
 },

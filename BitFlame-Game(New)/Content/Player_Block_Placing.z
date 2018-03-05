@@ -6,6 +6,8 @@ Last modified: 2/22/18
 Brief: This Component allows the player to place blocks
 ******************************************/
 
+enum BlockType {Pipe, Turret}
+
 class Player_Block_Placing : ZilchComponent
 {
     [Dependency] var Transform : Transform = null;
@@ -17,10 +19,17 @@ class Player_Block_Placing : ZilchComponent
     //[Property] var IronBlockIronCost : Integer;
     //[Property] var IronBlockArchetype : Archetype = Archetype.IronBlock;
     
+    //turret block
+    [Property] var TurretCost : Integer = 1;
+    [Property] var TurretArchetype : Archetype = Archetype.Turret;
+    [Property] var PreTurretArchetype : Archetype = Archetype.Pre_Turret;
+    
     //oxygen pipe block
     [Property] var PipeCost : Integer = 1;
     [Property] var PipeArchetype : Archetype = Archetype.OxygenPipe;
     [Property] var PrePipeArchetype : Archetype = Archetype.OxygenPipe_Preview;
+        
+    [Property] var Type : BlockType;
     
     var Preview : Cog;
     
@@ -64,11 +73,22 @@ class Player_Block_Placing : ZilchComponent
 
     function OnRightMouseDown(event : ViewportMouseEvent)
     {
-        if(this.Preview == null)
+        if(this.Type == 0)
         {
-            this.Preview = this.Space.CreateAtPosition( this.PrePipeArchetype, this.RoundedMouse);
+            if(this.Preview == null)
+            {
+                this.Preview = this.Space.CreateAtPosition( this.PrePipeArchetype, this.RoundedMouse);
+            }
         }
-   
+        else if(this.Type == 1)
+        {
+            if(this.Preview == null)
+            {
+                this.Preview = this.Space.CreateAtPosition( this.PreTurretArchetype, this.RoundedMouse);
+            }
+        }
+        
+       
     }
 
     function OnRightMouseUp(event : ViewportMouseEvent)
@@ -82,21 +102,42 @@ class Player_Block_Placing : ZilchComponent
                 // this.Space.CreateAtPosition(this.IronBlockArchetype, roundedMouse);
             // }
         //} 
+        
         if(this.Preview != null)
         {
-            this.Preview.Destroy();
-            
-            if(this.Preview.Pipe_Preview_Collision != null && this.Preview.Pipe_Preview_Collision.PlacementInvalid == false) 
-            {   
-                if(this.Space.GameSession.GameVars.PlayerPipes >= this.PipeCost)
-                {
-                    this.Space.GameSession.GameVars.PlayerPipes -= this.PipeCost;
-                    this.Space.CreateAtPosition(this.PipeArchetype, this.RoundedMouse);      
-                    var blockUpdate = BlockUpdate();
-                    blockUpdate.Translation = this.RoundedMouse;
-                    this.Space.DispatchEvent(Events.BlockUpdate, blockUpdate);
-                } 
+            if(this.Type == 0)
+            {
+                if(this.Preview.Pipe_Preview_Collision != null && this.Preview.Pipe_Preview_Collision.PlacementInvalid == false) 
+                {   
+                    if(this.Space.GameSession.GameVars.PlayerPipes >= this.PipeCost)
+                    {
+                        this.Space.GameSession.GameVars.PlayerPipes -= this.PipeCost;
+                        this.Space.CreateAtPosition(this.PipeArchetype, this.RoundedMouse);      
+                        var blockUpdate = BlockUpdate();
+                        blockUpdate.Translation = this.RoundedMouse;
+                        this.Space.DispatchEvent(Events.BlockUpdate, blockUpdate);
+                    } 
+                }
             }
+            else if(this.Type == 1)
+            {
+                if(this.Preview.Pipe_Preview_Collision != null && this.Preview.Pipe_Preview_Collision.PlacementInvalid == false) 
+                {   
+                    //Console.WriteLine("test");
+                    if(this.Space.GameSession.GameVars.PlayerTurrets >= this.TurretCost)
+                    {
+                        
+                        //Console.WriteLine("test");
+                        this.Space.GameSession.GameVars.PlayerTurrets -= this.TurretCost;
+                        this.Space.CreateAtPosition(this.TurretArchetype, this.RoundedMouse);      
+                        var blockUpdate = BlockUpdate();
+                        blockUpdate.Translation = this.RoundedMouse;
+                        this.Space.DispatchEvent(Events.BlockUpdate, blockUpdate);
+                    } 
+                }
+            } 
+            
+            this.Preview.Destroy();
         }              
     }
 }

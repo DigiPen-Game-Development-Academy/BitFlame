@@ -169,12 +169,11 @@ class Ship_Menu_Button_Crafting : ZilchComponent
         if(this.GameSession.GameVars.PlayerResources >= this.IronCost && this.GameSession.GameVars.PlayerCopper >= this.CopperCost && 
             this.GameSession.GameVars.PlayerTitanium >= this.TitaniumCost && this.GameSession.GameVars.PlayerAluminium >= this.AluminiumCost)
         { 
-            Console.WriteLine(this.GameSession.GameVars.ShipRepairStage);
+            //Console.WriteLine(this.GameSession.GameVars.ShipRepairStage);
             this.GameSession.GameVars.PlayerResources -= this.IronCost;
             this.GameSession.GameVars.PlayerCopper -= this.CopperCost;
             this.GameSession.GameVars.PlayerTitanium -= this.TitaniumCost;
-            this.GameSession.GameVars.PlayerAluminium -= this.AluminiumCost;
-    
+            this.GameSession.GameVars.PlayerAluminium -= this.AluminiumCost;   
                 
             if(this.ResultType == 0)
             { 
@@ -198,10 +197,8 @@ class Ship_Menu_Button_Crafting : ZilchComponent
             }  
             else if(this.ResultType == 5)
             {
-
-            }  
-                   
+                this.GameSession.GameVars.PlayerTurrets += this.ResultNumber;
+            }                 
         }     
     }
 }
-

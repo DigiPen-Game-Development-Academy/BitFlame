@@ -33,6 +33,7 @@ class UpgradePathLogic : ZilchComponent
         Zero.Connect(this.Owner, Events.MouseExit, this.OnMouseExit);
         
         this.OriginalSize = this.Owner.Area.Size;
+        
     }
 
     function OnMouseExit(event : ViewportMouseEvent)
@@ -79,16 +80,17 @@ class UpgradePathLogic : ZilchComponent
         if(!this.Purchased)
         {
             this.Owner.Area.Size -= Real2(0.1,0.1);
-        }
-        
-        if(this.GameSession.GameVars.PlayerUpgradePoints >= this.Cost && this.Unlocked)
-        {
-            this.Purchased = true;
             
-            this.Owner.Sprite.Color = this.PurchasedColor;
-            
-            this.GameSession.GameVars.PlayerUpgradePoints -= this.Cost;
+            if(this.GameSession.GameVars.PlayerUpgradePoints >= this.Cost && this.Unlocked)
+            {
+                this.Purchased = true;
+                
+                this.Owner.Sprite.Color = this.PurchasedColor;
+                
+                this.GameSession.GameVars.PlayerUpgradePoints -= this.Cost;
+            }
         }
+
     }
 
     function OnLogicUpdate(event : UpdateEvent)

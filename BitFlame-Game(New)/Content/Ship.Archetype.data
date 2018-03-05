@@ -84,7 +84,7 @@ Cog =
 		string ShipRepairStage1Sprite = "5ae31e091e2a9d06:ShipRepairStage0_Sprite",
 		string ShipRepairStage2Sprite = "5ae31e091e2a7917:ShipRepairStage1_Sprite",
 		string ShipRepairStage3Sprite = "5ae31e091e2a8c60:ShipRepairStage2_Sprite",
-		string ShipRepairStage4Sprite = "5a018714cc9e515a:Ship_Sprite",
+		string ShipRepairStage4Sprite = "5ae31e091e2a8c60:ShipRepairStage2_Sprite",
 	},
 	Hierarchy = 
 	{

@@ -144,7 +144,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [31.6198311, 7.44997931, 70.9990005],
+			Vec3 Translation = [-26.7575798, 32.9492455, 70.9990005],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -156,7 +156,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 14.7781439,
+			float Size = 22.3130341,
 		},
 		EditorCameraController = 
 		{
@@ -164,7 +164,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [31.6198311, 7.44997931, 20.9990005],
+			Vec3 LookTarget = [-26.7575798, 32.9492455, 20.9990005],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -510,22 +510,22 @@ Level =
 		},
 		Ship_Menu_Button_Repair_Function = 
 		{
-			int Stage0IronCost = 0,
-			int Stage0CopperCost = 0,
-			int Stage0TitaniumCost = 0,
-			int Stage0AluminiumCost = 0,
-			int Stage1IronCost = 1,
-			int Stage1CopperCost = 1,
-			int Stage1TitaniumCost = 1,
-			int Stage1AluminiumCost = 1,
-			int Stage2IronCost = 2,
-			int Stage2CopperCost = 2,
-			int Stage2TitaniumCost = 2,
-			int Stage2AluminiumCost = 2,
-			int Stage3IronCost = 3,
-			int Stage3CopperCost = 3,
-			int Stage3TitaniumCost = 3,
-			int Stage3AluminiumCost = 3,
+			int Stage0IronCost = 15,
+			int Stage0CopperCost = 15,
+			int Stage0TitaniumCost = 10,
+			int Stage0AluminiumCost = 20,
+			int Stage1IronCost = 30,
+			int Stage1CopperCost = 20,
+			int Stage1TitaniumCost = 10,
+			int Stage1AluminiumCost = 30,
+			int Stage2IronCost = 30,
+			int Stage2CopperCost = 40,
+			int Stage2TitaniumCost = 15,
+			int Stage2AluminiumCost = 40,
+			int Stage3IronCost = 40,
+			int Stage3CopperCost = 40,
+			int Stage3TitaniumCost = 30,
+			int Stage3AluminiumCost = 50,
 			Vec4 HoverColor = [0.180392146, 0.374509811, 0.956862807, 1],
 			Vec4 ClickColor = [0.466666698, 0.627450943, 0.776470661, 1],
 			Vec4 DisabledColor = [0.466666698, 0.627450943, 0.776470661, 1],
@@ -621,9 +621,9 @@ Level =
 		},
 		Ship_Menu_Button_Crafting = 
 		{
-			int IronCost = 5,
-			int CopperCost = 0,
-			int TitaniumCost = 1,
+			int IronCost = 0,
+			int CopperCost = 6,
+			int TitaniumCost = 2,
 			int AluminiumCost = 8,
 			Enum ResultType = Turret,
 			int ResultNumber = 1,
@@ -717,10 +717,10 @@ Level =
 		},
 		Ship_Menu_Button_Crafting = 
 		{
-			int IronCost = 0,
-			int CopperCost = 6,
+			int IronCost = 4,
+			int CopperCost = 0,
 			int TitaniumCost = 0,
-			int AluminiumCost = 10,
+			int AluminiumCost = 8,
 			Enum ResultType = Pipe,
 			int ResultNumber = 1,
 			Vec4 HoverColor = [0.180392146, 0.376470655, 0.956862807, 1],
@@ -789,7 +789,7 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0.352349967, 0.404999971, 0.378148466, 0.800000012],
+			Vec4 Color = [0.352349967, 0.404999971, 0.378148496, 0.800000012],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -2999,7 +2999,7 @@ Level =
 		UpgradeSpecifiedVariable = 
 		{
 			Enum UpgradeType = Generik,
-			float UpgradeAmount = 0.100000001,
+			float UpgradeAmount = 1,
 		},
 		Hierarchy = 
 		{

@@ -10,6 +10,8 @@ class Pipe_Preview_Collision : ZilchComponent
 {
     [Dependency] var Sprite : Sprite;
     
+    [Property] var Type : BlockType;
+    
     var InvalidColor : Real4 = Real4(1, 0, 0, 100);
     
     var OriginalColor : Real4;
@@ -26,14 +28,29 @@ class Pipe_Preview_Collision : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        if(this.GameSession.GameVars.PlayerPipes <= 0)
+        if(this.Type == 0)
         {
-            this.Sprite.Color = this.InvalidColor;          
+            if(this.GameSession.GameVars.PlayerPipes <= 0)
+            {
+                this.Sprite.Color = this.InvalidColor;          
+            }
+            else
+            {
+                this.Sprite.Color = this.OriginalColor;
+            }
         }
-        else
+        else if(this.Type == 1)
         {
-            this.Sprite.Color = this.OriginalColor;
+            if(this.GameSession.GameVars.PlayerTurrets <= 0)
+            {
+                this.Sprite.Color = this.InvalidColor;          
+            }
+            else
+            {
+                this.Sprite.Color = this.OriginalColor;
+            }
         }
+        
     }
 
     function OnCollisionPersisted(event : CollisionEvent)

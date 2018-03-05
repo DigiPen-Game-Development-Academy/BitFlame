@@ -47,7 +47,7 @@ class TurretLogic : ZilchComponent
                     }
                     
                     lastObj = obj;
-                    Console.WriteLine(bestObj.Name);
+                    //Console.WriteLine(bestObj.Name);
                 }
             }
         }
