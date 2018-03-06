@@ -1,8 +1,0 @@
-TextContent = 
-{
-	ZilchScriptBuilder = 
-	{
-		string Name = "Ship_Menu_Repair_Button2",
-		uint64 ResourceId = 5a9b8481e6e28019,
-	},
-},

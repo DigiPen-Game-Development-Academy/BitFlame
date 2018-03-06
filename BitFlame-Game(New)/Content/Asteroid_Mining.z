@@ -96,7 +96,7 @@ class Asteroid_Mining : ZilchComponent
 
     function OnCollisionStarted(event : CollisionEvent)
     {
-        if(event.OtherObject.Name == "Bullet")
+        if(event.OtherObject.DamageOnHit != null || event.OtherObject.BlastExplosion_Logic != null)
         {
             this.Owner.Transform.Scale -= this.Owner.Transform.Scale / this.ShrinkAmount;
         }
@@ -116,7 +116,8 @@ class Asteroid_Mining : ZilchComponent
                 }
             }
             
-            this.Player.SoundThing.PlayBlockBreak();
+            //this.Player.SoundThing.PlayBlockBreak();
+            this.Space.SoundSpace.PlayCue(SoundCue.BlockBreak);
             this.Owner.Destroy();
         }
     }
