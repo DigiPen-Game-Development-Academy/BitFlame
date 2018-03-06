@@ -177,6 +177,11 @@ Level =
 			int EmptyRange = 10,
 			int SafeRange = 10,
 		},
+		CometMaker = 
+		{
+			float SpawnRate = 1,
+			string Comet = "5a074e0c89fd18fe:Comet",
+		},
 	},
 	Cog = 
 	{
@@ -190,7 +195,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [13.2701883, 0.954919219, 50],
+			Vec3 Translation = [8.0147562, 3.625283, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -202,7 +207,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 22.3130436,
+			float Size = 14.7781019,
 		},
 		EditorCameraController = 
 		{
@@ -210,7 +215,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [13.2701883, 0.954919219, 5.59116245e-07],
+			Vec3 LookTarget = [8.0147562, 3.625283, 3.29393885e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -302,7 +307,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-6, 0, 0],
+			Vec3 Translation = [0, 0, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -399,6 +404,24 @@ Level =
 		Named = 
 		{
 			string Name = "Enemy",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a7f4db494e9d95c:Cursor",
+		LinkId = 
+		{
+			uint Id = 11,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Cursor",
 		},
 	},
 },
