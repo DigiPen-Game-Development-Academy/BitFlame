@@ -74,7 +74,7 @@ Cog =
 	ChargingEnemyLogic = 
 	{
 		float Speed = 4,
-		float ChargeSpeed = 18,
+		float ChargeSpeed = 20,
 		float ChargeRange = 12,
 		float DetectionRange = 20,
 		float ChargeUpTime = 1,

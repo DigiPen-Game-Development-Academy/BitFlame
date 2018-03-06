@@ -144,7 +144,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-26.7575798, 32.9492455, 70.9990005],
+			Vec3 Translation = [-0.634461582, -2.20488715, 70.9990005],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -156,7 +156,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 22.3130341,
+			float Size = 13.5335388,
 		},
 		EditorCameraController = 
 		{
@@ -164,7 +164,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-26.7575798, 32.9492455, 20.9990005],
+			Vec3 LookTarget = [-0.634461582, -2.20488715, 20.9990005],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1207,7 +1207,7 @@ Level =
 		UpgradeSpecifiedVariable = 
 		{
 			Enum UpgradeType = FireRate,
-			float UpgradeAmount = 0.100000001,
+			float UpgradeAmount = 0.00499999989,
 		},
 		Hierarchy = 
 		{
@@ -1335,7 +1335,7 @@ Level =
 		UpgradeSpecifiedVariable = 
 		{
 			Enum UpgradeType = OxygenRegen,
-			float UpgradeAmount = 1,
+			float UpgradeAmount = 4,
 		},
 		Hierarchy = 
 		{
@@ -1463,7 +1463,7 @@ Level =
 		UpgradeSpecifiedVariable = 
 		{
 			Enum UpgradeType = BulletSpeed,
-			float UpgradeAmount = 5,
+			float UpgradeAmount = 2,
 		},
 		Hierarchy = 
 		{
@@ -1591,7 +1591,7 @@ Level =
 		UpgradeSpecifiedVariable = 
 		{
 			Enum UpgradeType = Speed,
-			float UpgradeAmount = 5,
+			float UpgradeAmount = 8,
 		},
 		Hierarchy = 
 		{
@@ -1719,7 +1719,7 @@ Level =
 		UpgradeSpecifiedVariable = 
 		{
 			Enum UpgradeType = HealthRegen,
-			float UpgradeAmount = 1,
+			float UpgradeAmount = 4,
 		},
 		Hierarchy = 
 		{
@@ -1847,7 +1847,7 @@ Level =
 		UpgradeSpecifiedVariable = 
 		{
 			Enum UpgradeType = Speed,
-			float UpgradeAmount = 1,
+			float UpgradeAmount = 4,
 		},
 		Hierarchy = 
 		{
@@ -1975,7 +1975,7 @@ Level =
 		UpgradeSpecifiedVariable = 
 		{
 			Enum UpgradeType = Oxygen,
-			float UpgradeAmount = 1,
+			float UpgradeAmount = 10,
 		},
 		Hierarchy = 
 		{
@@ -2103,7 +2103,7 @@ Level =
 		UpgradeSpecifiedVariable = 
 		{
 			Enum UpgradeType = Oxygen,
-			float UpgradeAmount = 1,
+			float UpgradeAmount = 30,
 		},
 		Hierarchy = 
 		{
@@ -2231,7 +2231,7 @@ Level =
 		UpgradeSpecifiedVariable = 
 		{
 			Enum UpgradeType = BulletSpeed,
-			float UpgradeAmount = 5,
+			float UpgradeAmount = 4,
 		},
 		Hierarchy = 
 		{
@@ -2359,7 +2359,7 @@ Level =
 		UpgradeSpecifiedVariable = 
 		{
 			Enum UpgradeType = Oxygen,
-			float UpgradeAmount = 1,
+			float UpgradeAmount = 20,
 		},
 		Hierarchy = 
 		{
@@ -2487,7 +2487,7 @@ Level =
 		UpgradeSpecifiedVariable = 
 		{
 			Enum UpgradeType = Health,
-			float UpgradeAmount = 1,
+			float UpgradeAmount = 15,
 		},
 		Hierarchy = 
 		{
@@ -2615,7 +2615,7 @@ Level =
 		UpgradeSpecifiedVariable = 
 		{
 			Enum UpgradeType = Health,
-			float UpgradeAmount = 1,
+			float UpgradeAmount = 10,
 		},
 		Hierarchy = 
 		{
@@ -2743,7 +2743,7 @@ Level =
 		UpgradeSpecifiedVariable = 
 		{
 			Enum UpgradeType = FireRate,
-			float UpgradeAmount = 0.100000001,
+			float UpgradeAmount = 0.00249999994,
 		},
 		Hierarchy = 
 		{
@@ -2999,7 +2999,7 @@ Level =
 		UpgradeSpecifiedVariable = 
 		{
 			Enum UpgradeType = Generik,
-			float UpgradeAmount = 1,
+			float UpgradeAmount = 2,
 		},
 		Hierarchy = 
 		{
@@ -3255,7 +3255,7 @@ Level =
 		UpgradeSpecifiedVariable = 
 		{
 			Enum UpgradeType = FireRate,
-			float UpgradeAmount = 0.200000003,
+			float UpgradeAmount = 0.00999999978,
 		},
 		Hierarchy = 
 		{
@@ -3383,7 +3383,7 @@ Level =
 		UpgradeSpecifiedVariable = 
 		{
 			Enum UpgradeType = OxygenRegen,
-			float UpgradeAmount = 1,
+			float UpgradeAmount = 8,
 		},
 		Hierarchy = 
 		{
@@ -3511,7 +3511,7 @@ Level =
 		UpgradeSpecifiedVariable = 
 		{
 			Enum UpgradeType = Health,
-			float UpgradeAmount = 1,
+			float UpgradeAmount = 5,
 		},
 		Hierarchy = 
 		{
@@ -3767,7 +3767,7 @@ Level =
 		UpgradeSpecifiedVariable = 
 		{
 			Enum UpgradeType = HealthRegen,
-			float UpgradeAmount = 1,
+			float UpgradeAmount = 2,
 		},
 		Hierarchy = 
 		{

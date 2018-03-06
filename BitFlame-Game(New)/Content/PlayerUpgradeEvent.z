@@ -7,9 +7,6 @@ Brief: This script is the definition of the block update event
 ******************************************/
 class PlayerUpgradeEvent : ZilchEvent
 {  
-    //block update event
-    sends PlayerUpgradeEvent : ZilchEvent;
-    
-    var UpgradeAmount : Real = 0.0;
-    
+    //player upgrade event
+    sends PlayerUpgradeEvent : ZilchEvent;   
 }

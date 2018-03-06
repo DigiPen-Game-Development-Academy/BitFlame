@@ -34,16 +34,6 @@ class Player_Movement_Script : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        if(this.GameSession.GameVars.HasUpgrade_Acceleration == true)
-        {
-            this.Speed += 5;
-            this.GameSession.GameVars.HasUpgrade_Acceleration = false;
-        }
-        if(this.GameSession.GameVars.HasUpgrade_Maxspeed == true)
-        {
-            this.MaxPlayerSpeeds = Real2(20, 20);
-            this.GameSession.GameVars.HasUpgrade_Maxspeed = false;
-        }
         var newVelocity : Real3 = this.RigidBody.Velocity;
         
         var particle =  this.MovementParticleSystem.Cog;
@@ -64,35 +54,39 @@ class Player_Movement_Script : ZilchComponent
             this.Owner.IgnoreSpaceEffects.IgnoreDrag = true;
         }
         
+        var speed = this.Speed + this.GameSession.GameVars.HasUpgrade_Acceleration;
+        
         // If player is pushing W move player up
         if(Zero.Keyboard.KeyIsDown(Keys.W))
         {
-            newVelocity += Real3(0, 1, 0) * this.Speed * event.Dt;
+            newVelocity += Real3(0, 1, 0) * speed * event.Dt;
             moving = true;
         }
         
         // If player is pushing A move player left
         if(Zero.Keyboard.KeyIsDown(Keys.A))
         {
-            newVelocity -= Real3(1, 0, 0) * this.Speed * event.Dt;
+            newVelocity -= Real3(1, 0, 0) * speed * event.Dt;
             moving = true;
         }
         // If player is pushing S move player down
         if(Zero.Keyboard.KeyIsDown(Keys.S))
         {
-            newVelocity -= Real3(0, 1, 0) * this.Speed * event.Dt;
+            newVelocity -= Real3(0, 1, 0) * speed * event.Dt;
 
             moving = true;
         }
         // If player is pushing D move player right
         if(Zero.Keyboard.KeyIsDown(Keys.D))
         {
-            newVelocity += Real3(1, 0, 0) * this.Speed * event.Dt;
+            newVelocity += Real3(1, 0, 0) * speed * event.Dt;
             moving = true;
         }
         
+        var upgrade = Real2(this.GameSession.GameVars.HasUpgrade_Maxspeed, this.GameSession.GameVars.HasUpgrade_Maxspeed);
+        
         //Velocity Clamps, so the player has a min and max speed, without these the player will accelerate forever
-        newVelocity.XY = Math.Clamp(newVelocity.XY, this.MinPlayerSpeeds, this.MaxPlayerSpeeds);
+        newVelocity.XY = Math.Clamp(newVelocity.XY, this.MinPlayerSpeeds - upgrade, this.MaxPlayerSpeeds + upgrade);
         
         /*//Debug Prints
         Console.WriteLine("\n");

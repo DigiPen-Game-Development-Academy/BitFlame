@@ -19,7 +19,7 @@ class HealthRegen : ZilchComponent
         {
             if(this.GameSession.GameVars.PlayerHealth < this.GameSession.GameVars.PlayerMaxHealth)
             {
-                this.GameSession.GameVars.PlayerHealth += this.HealthRegenAmount;
+                this.GameSession.GameVars.PlayerHealth += this.HealthRegenAmount + this.GameSession.GameVars.HasUpgrade_HealthRegen as Integer;
             }
             
             this.EventTimePasted = 0.0;

@@ -144,7 +144,7 @@ Cog =
 		int PipeCost = 1,
 		string PipeArchetype = "5a62ce81be38d76e:OxygenPipe",
 		string PrePipeArchetype = "5a6dd155563b46c8:OxygenPipe_Preview",
-		Enum Type = Turret,
+		Enum Type = Pipe,
 	},
 	DragEffect = 
 	{

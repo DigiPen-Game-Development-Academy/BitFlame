@@ -136,17 +136,60 @@ Cog =
 						uint StartFrame = 0,
 					},
 				},
+				Cog = 
+				{
+					LinkId = 
+					{
+						uint Id = 4,
+					},
+					Named = 
+					{
+						string Name = "PipeText",
+					},
+					Transform = 
+					{
+						Vec3 Translation = [0.5, 2, 0],
+						Vec3 Scale = [1, 1, 1],
+						Quat Rotation = [0, 0, 0, 1],
+					},
+					SpriteText = 
+					{
+						bool Visible = true,
+						bool VisibilityCulling = true,
+						bool VisibilityEvents = true,
+						bool CastShadows = false,
+						Vec4 Color = [1, 1, 1, 1],
+						BlendMode BlendMode = Alpha,
+						SpriteGeometryMode GeometryMode = ZPlane,
+						string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+						string FontName = "57343753bb4eaaec:NotoSans-Regular",
+						uint FontSize = 128,
+						string Text = "pipe",
+						TextAlign Align = Left,
+						float PixelsPerUnit = 128,
+						bool Smoothing = true,
+					},
+					Display_Inventory_Block_Count = 
+					{
+						Enum BlockType = Pipe,
+					},
+				},
 			},
 		},
 		Cog = 
 		{
 			LinkId = 
 			{
-				uint Id = 4,
+				uint Id = 5,
 			},
 			Named = 
 			{
 				string Name = "TurretArea",
+			},
+			EditorFlags = 
+			{
+				bool Locked = true,
+				bool Hidden = false,
 			},
 			Transform = 
 			{
@@ -194,7 +237,7 @@ Cog =
 				{
 					LinkId = 
 					{
-						uint Id = 5,
+						uint Id = 6,
 					},
 					Named = 
 					{
@@ -229,7 +272,7 @@ Cog =
 				{
 					LinkId = 
 					{
-						uint Id = 6,
+						uint Id = 7,
 					},
 					Named = 
 					{
@@ -264,7 +307,7 @@ Cog =
 				{
 					LinkId = 
 					{
-						uint Id = 7,
+						uint Id = 8,
 					},
 					Named = 
 					{
@@ -293,6 +336,44 @@ Cog =
 						bool AnimationActive = true,
 						float AnimationSpeed = 1,
 						uint StartFrame = 0,
+					},
+				},
+				Cog = 
+				{
+					LinkId = 
+					{
+						uint Id = 9,
+					},
+					Named = 
+					{
+						string Name = "TurretText",
+					},
+					Transform = 
+					{
+						Vec3 Translation = [0.5, 2, 0],
+						Vec3 Scale = [1, 1, 1],
+						Quat Rotation = [0, 0, 0, 1],
+					},
+					SpriteText = 
+					{
+						bool Visible = true,
+						bool VisibilityCulling = true,
+						bool VisibilityEvents = true,
+						bool CastShadows = false,
+						Vec4 Color = [1, 1, 1, 1],
+						BlendMode BlendMode = Alpha,
+						SpriteGeometryMode GeometryMode = ZPlane,
+						string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+						string FontName = "57343753bb4eaaec:NotoSans-Regular",
+						uint FontSize = 128,
+						string Text = "Turret",
+						TextAlign Align = Left,
+						float PixelsPerUnit = 128,
+						bool Smoothing = true,
+					},
+					Display_Inventory_Block_Count = 
+					{
+						Enum BlockType = Turret,
 					},
 				},
 			},

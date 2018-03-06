@@ -28,9 +28,7 @@ class PlayerShooting : ZilchComponent
     [Property] var SpreadShot : Boolean = false;
     //Rotation between shots in degrees
     [Property] var SpreadAmount : Real = 10;
-    
-    
-    
+      
     var Timer : Real = 0.0; 
     
     function Initialize(init : CogInitializer)
@@ -40,17 +38,12 @@ class PlayerShooting : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        if(this.GameSession.GameVars.HasUpgrade_FirerateI == true)
-        {
-            this.FireRate -= 0.25;
-            this.GameSession.GameVars.HasUpgrade_FirerateI = false;
-        }
         var screenPos = Zero.Mouse.ScreenPosition;
         var mousePos = this.LevelSettings.CameraViewport.ScreenToWorldZPlane(screenPos, 0.0);
         var mouseDirection = mousePos - this.Owner.Transform.WorldTranslation;
         mouseDirection = Math.Normalize(mouseDirection);
         
-        if(Zero.Mouse.IsButtonDown(MouseButtons.Left) && this.Timer >= this.FireRate && this.CanShoot)
+        if(Zero.Mouse.IsButtonDown(MouseButtons.Left) && this.Timer >= this.FireRate - this.GameSession.GameVars.HasUpgrade_FirerateI && this.CanShoot)
         {
             if(this.ShootingSound != null)
             {
@@ -59,7 +52,7 @@ class PlayerShooting : ZilchComponent
             
             var bullet = this.Space.CreateAtPosition(this.Bullet,this.Owner.Transform.WorldTranslation);
             
-            bullet.RigidBody.Velocity += mouseDirection * this.BulletSpeed + this.Owner.Parent.RigidBody.Velocity;
+            bullet.RigidBody.Velocity += mouseDirection * this.BulletSpeed * this.GameSession.GameVars.HasUpgrade_BulletSpeed + this.Owner.Parent.RigidBody.Velocity;
             
             bullet.Orientation.LookAtDirectionWithUp(mouseDirection, Real3(0.0,0.0,1.0));
             
@@ -69,7 +62,7 @@ class PlayerShooting : ZilchComponent
                 
                 var bullet2 = this.Space.CreateAtPosition(this.Bullet,this.Owner.Transform.WorldTranslation);
                 
-                bullet2.RigidBody.Velocity += right * this.BulletSpeed + this.Owner.Parent.RigidBody.Velocity;
+                bullet2.RigidBody.Velocity += right * this.BulletSpeed * this.GameSession.GameVars.HasUpgrade_BulletSpeed + this.Owner.Parent.RigidBody.Velocity;
                 
                 bullet2.Orientation.LookAtDirectionWithUp(mouseDirection, Real3(0.0,0.0,1.0));
                 
@@ -78,7 +71,7 @@ class PlayerShooting : ZilchComponent
                 
                 var bullet3 = this.Space.CreateAtPosition(this.Bullet,this.Owner.Transform.WorldTranslation);
                 
-                bullet3.RigidBody.Velocity += left * this.BulletSpeed + this.Owner.Parent.RigidBody.Velocity;
+                bullet3.RigidBody.Velocity += left * this.BulletSpeed * this.GameSession.GameVars.HasUpgrade_BulletSpeed + this.Owner.Parent.RigidBody.Velocity;
                 
                 bullet3.Orientation.LookAtDirectionWithUp(mouseDirection, Real3(0.0,0.0,1.0));
                 

@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [26.4324703, 9.79997349, 0],
+		Vec3 Translation = [9.94961071, 3.49699545, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -60,7 +60,7 @@ Cog =
 	},
 	AluminiumPickup = 
 	{
-		int PickupValue = 5,
+		int PickupValue = 1,
 		float PickupRange = 1000,
 		float PickupSpeed = 10,
 	},

@@ -11,6 +11,7 @@ class OxygenGauge : ZilchComponent
     
     //control the speed that oxygen decays (will be removed once oxygen decays by itself);
     [Property] var DecaySpeed : Real = 10;
+    [Static] var DecaySpeed : Real;
     
     //i made this in case the max amount of oxygen does not = 100
     var OxygenModifier : Real = 1;
@@ -25,6 +26,7 @@ class OxygenGauge : ZilchComponent
         
         this.OxygenModifier = 100 / this.GameSession.GameVars.PlayerMaxOxygen;
         
+        OxygenGauge.DecaySpeed = this.DecaySpeed;
     }
 
     function OnLogicUpdate(event : UpdateEvent)
@@ -35,8 +37,7 @@ class OxygenGauge : ZilchComponent
         {
             if (this.CurrentOxygen > 0 )
             {
-                this.GameSession.GameVars.PlayerOxygen -= (this.DecaySpeed * event.Dt)/this.OxygenModifier;
-                //this.CurrentOxygen -= this.DecaySpeed * event.Dt;
+                this.GameSession.GameVars.PlayerOxygen -= ((OxygenGauge.DecaySpeed - this.GameSession.GameVars.HasUpgrade_OxygenRegen) * event.Dt)/this.OxygenModifier;                //this.CurrentOxygen -= this.DecaySpeed * event.Dt;
             }
             else
             {

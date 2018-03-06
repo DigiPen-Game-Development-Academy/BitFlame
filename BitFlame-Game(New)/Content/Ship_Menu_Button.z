@@ -174,33 +174,33 @@ class Ship_Menu_Button_Upgrade : ZilchComponent
             if(this.FireRateI_Upgrade == true && this.UpgradeOnlyOnce >= 1)
             {
                 // Sets the corresponding variable in GameVars to true
-                this.GameSession.GameVars.HasUpgrade_FirerateI = true;
+                //this.GameSession.GameVars.HasUpgrade_FirerateI = this.Upgra;
                 
-                this.GameSession.GameVars.PlayerUpgradePoints -= this.UpgradePoints_Needed;
+                //this.GameSession.GameVars.PlayerUpgradePoints -= this.UpgradePoints_Needed;
             }
             
             if(this.MaxSpeed_Upgrade == true && this.UpgradeOnlyOnce >= 1)
             {
                 // Sets the corresponding variable in GameVars to true
-                this.GameSession.GameVars.HasUpgrade_Maxspeed = true;
+                //this.GameSession.GameVars.HasUpgrade_Maxspeed = true;
                 
-                this.GameSession.GameVars.PlayerUpgradePoints -= this.UpgradePoints_Needed;
+                //this.GameSession.GameVars.PlayerUpgradePoints -= this.UpgradePoints_Needed;
             }
             
             if(this.Acceleration_Upgrade == true && this.UpgradeOnlyOnce >= 1)
             {
                 // Sets the corresponding variable in GameVars to true
-                this.GameSession.GameVars.HasUpgrade_Acceleration = true;
+                //this.GameSession.GameVars.HasUpgrade_Acceleration = true;
                 
-                this.GameSession.GameVars.PlayerUpgradePoints -= this.UpgradePoints_Needed;
+                //this.GameSession.GameVars.PlayerUpgradePoints -= this.UpgradePoints_Needed;
             }
             
             if(this.Vitals_Upgrade == true && this.UpgradeOnlyOnce >= 1)
             {
                // Sets the corresponding variable in GameVars to true
-                this.GameSession.GameVars.HasUpgrade_Vitals = true;
+                //this.GameSession.GameVars.HasUpgrade_Vitals = true;
                 
-                this.GameSession.GameVars.PlayerUpgradePoints -= this.UpgradePoints_Needed; 
+                //this.GameSession.GameVars.PlayerUpgradePoints -= this.UpgradePoints_Needed; 
             }
         }
         else
