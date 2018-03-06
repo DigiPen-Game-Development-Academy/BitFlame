@@ -116,7 +116,8 @@ class Asteroid_Mining : ZilchComponent
                 }
             }
             
-            this.Player.SoundThing.PlayBlockBreak();
+            //this.Player.SoundThing.PlayBlockBreak();
+            this.Space.SoundSpace.PlayCue(SoundCue.BlockBreak);
             this.Owner.Destroy();
         }
     }

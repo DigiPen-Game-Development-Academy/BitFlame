@@ -268,6 +268,20 @@ Cog =
 				bool SpreadShot = false,
 				float SpreadAmount = 10,
 			},
+			SoundEmitter = 
+			{
+				float Volume = 1,
+				float Pitch = 0,
+				float PitchSemitones = 0,
+				bool UsePitchSemitones = false,
+				bool Positional = true,
+				int Version = 1,
+			},
+			SoundThing = 
+			{
+				string BlockBreak = "5a3431fd23e382c8:BlockBreak",
+				string PickupSound = "5a34364fe25bb00b:PickupNoise",
+			},
 		},
 		Cog = 
 		{
