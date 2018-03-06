@@ -1,8 +1,0 @@
-TextContent = 
-{
-	ZilchScriptBuilder = 
-	{
-		string Name = "Level_WorldGeneration",
-		uint64 ResourceId = 5a11de456e86bb24,
-	},
-},

@@ -1,8 +1,0 @@
-TextContent = 
-{
-	ZilchScriptBuilder = 
-	{
-		string Name = "EnemyLogic",
-		uint64 ResourceId = 5accaa31d0f6193c,
-	},
-},

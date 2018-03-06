@@ -1,8 +1,0 @@
-TextContent = 
-{
-	ZilchScriptBuilder = 
-	{
-		string Name = "FlashColor",
-		uint64 ResourceId = 5a118376a9c1bf21,
-	},
-},
