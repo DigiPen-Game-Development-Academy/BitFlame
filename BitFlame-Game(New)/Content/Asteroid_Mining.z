@@ -35,6 +35,8 @@ class Asteroid_Mining : ZilchComponent
     
     var RandomGen : Random = Random();
     
+    var Player : Cog;
+    
     var ResourceArchetype : Archetype = null;
     
     function Setup()
@@ -85,6 +87,8 @@ class Asteroid_Mining : ZilchComponent
     
     function Initialize(init : CogInitializer)
     {
+        this.Player = this.Space.FindObjectByName("Arm");
+        
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         
         Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
@@ -112,6 +116,7 @@ class Asteroid_Mining : ZilchComponent
                 }
             }
             
+            this.Player.SoundThing.PlayBlockBreak();
             this.Owner.Destroy();
         }
     }

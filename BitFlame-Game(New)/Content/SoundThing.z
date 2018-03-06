@@ -1,0 +1,25 @@
+class SoundThing : ZilchComponent
+{
+    [Property] var BlockBreak : SoundCue = null;
+    [Property] var PickupSound : SoundCue = null;
+    
+    function PlayBlockBreak() : Boolean
+    {
+        if (this.BlockBreak == null) return false;
+        else 
+        {
+            this.Owner.SoundEmitter.PlayCue(this.BlockBreak);
+            return true;
+        }
+    }
+    
+    function PlayPickup() : Boolean
+    {
+        if (this.PickupSound == null) return false;
+        else 
+        {
+            this.Owner.SoundEmitter.PlayCue(this.PickupSound);
+            return true;
+        }
+    }
+}
