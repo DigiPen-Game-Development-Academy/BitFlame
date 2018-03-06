@@ -55,7 +55,7 @@ class Ship_Interaction : ZilchComponent
             if(this.HUDSpace != null && Zero.Keyboard.KeyIsPressed(this.ShipAccessKey))
             {
                 this.GameSession.GameVars.SlideIn = !this.GameSession.GameVars.SlideIn;
-                
+                Zero.Mouse.Cursor = Cursor.Arrow;
                 var arm = player.FindChildByName("Arm");
                 if(arm != null)
                 {
@@ -103,6 +103,8 @@ class Ship_Interaction : ZilchComponent
             if(this.HUDSpace != null)
             {
                 this.GameSession.GameVars.SlideIn = false;
+                
+                Zero.Mouse.Cursor = Cursor.Invisible;
                 
                 var arm = player.FindChildByName("Arm");
                 if(arm != null)

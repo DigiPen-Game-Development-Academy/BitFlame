@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [39.8412247, 22.767292, 0],
+		Vec3 Translation = [-6.80315638, 15.9379816, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -73,6 +73,7 @@ Cog =
 		float Health = 5,
 		string ArchetypetoSpawnOnDeath1 = "5a08fb7240d5e7ed:ExplosionParticleEffect",
 		string ArchetypetoSpawnOnDeath2 = "5a70715bb5c81bfe:Game_OxygenOre_Pickup",
+		string ExplosionSound = "",
 		bool Unbreakable = false,
 	},
 	ShootingEnemyAI = 
@@ -89,6 +90,7 @@ Cog =
 	DamageOnCollide = 
 	{
 		int Damage = 1,
+		string PlayerDamagedSound = "",
 	},
 	Hierarchy = 
 	{

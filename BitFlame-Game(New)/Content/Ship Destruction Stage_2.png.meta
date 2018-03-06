@@ -2,15 +2,15 @@ ImageContent =
 {
 	SpriteSourceBuilder = 
 	{
-		string Name = "Cursor_Sprite",
-		uint64 ResourceId = 5af4aa398e8f6815,
+		string Name = "Ship Destruction Stage_2",
+		uint64 ResourceId = 5a7f7704a12023db,
 		uint64 AtlasId = 5274cf95e4a661fd,
-		uint FrameSizeX = 32,
-		uint FrameSizeY = 32,
+		uint FrameSizeX = 320,
+		uint FrameSizeY = 160,
 		uint FrameCount = 1,
 		float FrameDelay = 0.0833333358,
-		float OriginX = 16,
-		float OriginY = 16,
+		float OriginX = 160,
+		float OriginY = 80,
 		float PixelsPerUnit = 32,
 		bool Smoothing = false,
 		bool Looping = true,

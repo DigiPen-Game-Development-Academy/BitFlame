@@ -1,0 +1,37 @@
+//Creator: Justin 
+//dont attach this to anything that uses a sound emitter for anything else
+
+class MoveSound : ZilchComponent
+{
+    [Property] var MoveNoise : SoundCue;
+    var IsMove : Boolean = false;
+    
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+    
+    function IsPlayerMove() : Boolean
+    {
+        if (Zero.Keyboard.KeyIsDown(Keys.W) || Zero.Keyboard.KeyIsDown(Keys.A)
+        || Zero.Keyboard.KeyIsDown(Keys.S) || Zero.Keyboard.KeyIsDown(Keys.D))
+        {
+            return true;
+        }
+        else return false;
+    }
+    
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if (this.IsPlayerMove() && !this.Owner.SimpleSound.IsPlaying())
+        {
+            this.Owner.SimpleSound.Cue = this.MoveNoise;
+            this.Owner.SimpleSound.Play();
+        }
+        else if (!this.IsPlayerMove())
+        {
+            this.Owner.SimpleSound.Stop();
+        }
+    }
+}
