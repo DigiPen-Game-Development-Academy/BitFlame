@@ -70,16 +70,6 @@ Cog =
 		Vec3 Velocity = [0, 0, 0],
 		Vec3 AngularVelocity = [0, 0, 0],
 	},
-	BoxCollider = 
-	{
-		bool Ghost = false,
-		bool SendsMessages = true,
-		bool Seamless = true,
-		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-		string SerializedGroupName = "5afe68729db9df55:PlayerCollisionGroup",
-		Vec3 Offset = [0, -0.0500000007, 0],
-		Vec3 Size = [0.25, 0.850000024, 0.5],
-	},
 	PlayerDeath = 
 	{
 		string HUDLevel = "",
@@ -158,14 +148,21 @@ Cog =
 		bool Active = true,
 		int HealthRegenAmount = 1,
 	},
-	PlaySound = 
-	{
-		string SelectSound = "",
-		string CantSelectSound = "",
-		string LowOxygenSound = "5ae3cf4fa12580cf:Oxygen_Low",
-	},
 	Player_Upgrade_Logic = 
 	{
+	},
+	CapsuleCollider = 
+	{
+		bool Ghost = false,
+		bool SendsMessages = true,
+		bool Seamless = true,
+		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+		string SerializedGroupName = "5afe68729db9df55:PlayerCollisionGroup",
+		Vec3 Offset = [0, -0.0500000007, 0],
+		float Radius = 0.5,
+		float Height = 0.75,
+		AxisDirection Direction = Y,
+		CapsuleScalingMode ScalingMode = PreserveScale,
 	},
 	Hierarchy = 
 	{
