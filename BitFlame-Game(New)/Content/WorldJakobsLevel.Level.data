@@ -150,7 +150,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-1.18088555, 3.34703493, 50],
+			Vec3 Translation = [8.9333868, 3.79629159, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -162,7 +162,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 40.6570244,
+			float Size = 5.50234985,
 		},
 		EditorCameraController = 
 		{
@@ -170,7 +170,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-1.18088555, 3.34703493, -5.76155117e-07],
+			Vec3 LookTarget = [8.9333868, 3.79629159, -1.34046616e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -291,10 +291,28 @@ Level =
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5a6ca525a5151ffd:Game_TitaniumOre_Pickup",
+		string Name = "5a7f4db494e9d95c:Cursor",
 		LinkId = 
 		{
 			uint Id = 7,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, 5],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Cursor",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a6ca525a5151ffd:Game_TitaniumOre_Pickup",
+		LinkId = 
+		{
+			uint Id = 8,
 		},
 		Transform = 
 		{
@@ -312,7 +330,7 @@ Level =
 		string Name = "5a6ca514b81d8e50:Game_AluminiumOre_Pickup",
 		LinkId = 
 		{
-			uint Id = 8,
+			uint Id = 9,
 		},
 		Transform = 
 		{
@@ -330,7 +348,7 @@ Level =
 		string Name = "5a70715bb5c81bfe:Game_OxygenOre_Pickup",
 		LinkId = 
 		{
-			uint Id = 9,
+			uint Id = 10,
 		},
 		Transform = 
 		{
@@ -348,7 +366,7 @@ Level =
 		string Name = "5a9159819b85330d:Game_Health_Pickup",
 		LinkId = 
 		{
-			uint Id = 10,
+			uint Id = 11,
 		},
 		Transform = 
 		{
@@ -366,7 +384,7 @@ Level =
 		string Name = "5a9842f78945b818:Ship",
 		LinkId = 
 		{
-			uint Id = 11,
+			uint Id = 12,
 		},
 		Transform = 
 		{
@@ -384,7 +402,7 @@ Level =
 		string Name = "5a7411b441710034:ChargingEnemy",
 		LinkId = 
 		{
-			uint Id = 12,
+			uint Id = 13,
 		},
 		Transform = 
 		{
@@ -395,6 +413,77 @@ Level =
 		Named = 
 		{
 			string Name = "ChargingEnemy",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 14,
+		},
+		Named = 
+		{
+			string Name = "Explosive",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [9.5, 5.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.710000038, 0.134900033, 0.134900033, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5586f1922250b073:CircleBordered",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		SphereCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			float Radius = 0.5,
+		},
+		Health = 
+		{
+			float Health = 1,
+			string ArchetypetoSpawnOnDeath1 = "5ae4980edfc88ddd:BlastExplosion",
+			string ArchetypetoSpawnOnDeath2 = "",
+			string ExplosionSound = "",
+			bool Unbreakable = false,
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5ae4980edfc88ddd:BlastExplosion",
+		LinkId = 
+		{
+			uint Id = 15,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [17, 13, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "BasicParticleEffect",
 		},
 	},
 },
