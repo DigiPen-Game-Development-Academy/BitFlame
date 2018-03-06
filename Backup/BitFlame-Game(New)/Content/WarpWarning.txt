@@ -1,3 +1,0 @@
-Navigation is non functional. 
-Any warp is blind and you will not be 
-able to return to your current location.

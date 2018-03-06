@@ -1,8 +1,0 @@
-TextContent = 
-{
-	ZilchScriptBuilder = 
-	{
-		string Name = "Asteroid_Mining",
-		uint64 ResourceId = 5ae4558dfe65899c,
-	},
-},
