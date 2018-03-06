@@ -157,7 +157,7 @@ Level =
 		{
 			Vec3 Translation = [-0.690579176, 3.39559364, 50],
 			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
+			Quat Rotation = [-0.0130895395, -5.57505508e-09, -2.86080964e-10, 0.999914408],
 		},
 		Camera = 
 		{
@@ -167,6 +167,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
+
 			float Size = 18.0500107,
 		},
 		EditorCameraController = 
@@ -176,6 +177,7 @@ Level =
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
 			Vec3 LookTarget = [-0.690579176, 3.39559364, -3.01861682e-08],
+
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -243,6 +245,24 @@ Level =
 		{
 			string Compass = "5a2062940655f3d6:Compass",
 		},
+		SoundEmitter = 
+		{
+			float Volume = 0.5,
+			float Pitch = 0,
+			float PitchSemitones = 0,
+			bool UsePitchSemitones = false,
+			bool Positional = true,
+			int Version = 1,
+		},
+		SimpleSound = 
+		{
+			bool StartPlaying = false,
+			string CueName = "5a35def55bb06440:MoveSound",
+		},
+		MoveSound = 
+		{
+			string MoveNoise = "5a35def55bb06440:MoveSound",
+		},
 	},
 	ArchetypeInstance = 
 	{
@@ -257,7 +277,76 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Named = 
+
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a7f7704a122849c:Ship Destruction Stage_0",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		RigidBody = 
+		{
+			bool Static = true,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = false,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
+		Ship_Interaction = 
+		{
+			Enum ShipAccessKey = E,
+			string HUDLevel = "5a917ce258f29948:ShipMenuLevel",
+			string SpaceArchetype = "554cea0f94af6dc4:Space",
+			CogPath PlayerRef = 
+			{
+				string Path = ":/Player",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 3,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+		},
+		Ship_ChangeSprite = 
+		{
+			string ShipRepairStage1Sprite = "5a7f7704a1203bab:Ship Destruction Stage_1",
+			string ShipRepairStage2Sprite = "5a7f7704a12023db:Ship Destruction Stage_2",
+			string ShipRepairStage3Sprite = "5a7f7704a121fdff:Ship Destruction Stage_3",
+			string ShipRepairStage4Sprite = "5a7f7704a121e43d:Ship Destruction Stage_4",
+		},
+		SphereCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			float Radius = 5,
+		},
+		Hierarchy = 
 		{
 			string Name = "Ship",
 		},
@@ -278,6 +367,48 @@ Level =
 		Named = 
 		{
 			string Name = "Player",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 18,
+		},
+		Named = 
+		{
+			string Name = "Cursor",
+		},
+		Archetyped = 
+		{
+			string Name = "5a7f4db494e9d95c:Cursor",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, 5],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "5a7f4c2dbc30f7ff:CursorSpriteLayer",
+			string SpriteSource = "5af4aa398e8f6815:Cursor_Sprite",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		CustomCursorScript = 
+		{
 		},
 	},
 },
