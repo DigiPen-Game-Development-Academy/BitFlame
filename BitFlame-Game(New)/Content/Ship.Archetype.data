@@ -28,7 +28,7 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5ae31e091e2a9d06:ShipRepairStage0_Sprite",
+		string SpriteSource = "5a7f7704a122849c:Ship Destruction Stage_0",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -81,10 +81,10 @@ Cog =
 	},
 	Ship_ChangeSprite = 
 	{
-		string ShipRepairStage1Sprite = "5ae31e091e2a9d06:ShipRepairStage0_Sprite",
-		string ShipRepairStage2Sprite = "5ae31e091e2a7917:ShipRepairStage1_Sprite",
-		string ShipRepairStage3Sprite = "5ae31e091e2a8c60:ShipRepairStage2_Sprite",
-		string ShipRepairStage4Sprite = "5ae31e091e2a8c60:ShipRepairStage2_Sprite",
+		string ShipRepairStage1Sprite = "5a7f7704a1203bab:Ship Destruction Stage_1",
+		string ShipRepairStage2Sprite = "5a7f7704a12023db:Ship Destruction Stage_2",
+		string ShipRepairStage3Sprite = "5a7f7704a121fdff:Ship Destruction Stage_3",
+		string ShipRepairStage4Sprite = "5a7f7704a121e43d:Ship Destruction Stage_4",
 	},
 	Hierarchy = 
 	{

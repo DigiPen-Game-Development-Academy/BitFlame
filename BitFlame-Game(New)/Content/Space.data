@@ -19,7 +19,7 @@ Space =
 	GraphicsSpace = 
 	{
 		TransparentSort TransparentSort = ViewDepth,
-		string SpriteLayerOrder = "5a9080a3fead807e:SpriteLayerOrder",
+		string SpriteLayerOrder = "5a7f4c01b325f687:GameSpriteLayerOrder",
 		bool UseRandomSeed = false,
 		uint RandomSeed = 0,
 	},
