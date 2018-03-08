@@ -110,6 +110,7 @@ class PlayerDeath : ZilchComponent
             //teleport the player behind the camera where it can't be interacted with - jakob McFarland
             this.Owner.Transform.Translation = Real3(0.0, 0.0, 1000.0);
             this.GameSession.GameVars.PlayerLosingOxygen = false;
+            Zero.Mouse.Cursor = Cursor.Arrow;
             
             if(this.HUDSpace == null)
             {
