@@ -164,6 +164,14 @@ Cog =
 		AxisDirection Direction = Y,
 		CapsuleScalingMode ScalingMode = PreserveScale,
 	},
+	PlaySound = 
+	{
+		string CanSelectSound = "",
+		string CantSelectSound = "",
+		string LowOxygenSound = "5ae3cf4fa12580cf:Oxygen_Low",
+		bool CanSelect = false,
+		bool HudButton = false,
+	},
 	Hierarchy = 
 	{
 		Cog = 
