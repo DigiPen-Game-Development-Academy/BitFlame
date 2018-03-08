@@ -34,6 +34,9 @@ class Player_Movement_Script : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+     
+        Console.WriteLine(this.GameSession.GameVars.PlayerOxygen);
+
         var newVelocity : Real3 = this.RigidBody.Velocity;
         
         var particle =  this.MovementParticleSystem.Cog;
