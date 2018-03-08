@@ -144,7 +144,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [85.3651581, -3.19688988, 70.9990005],
+			Vec3 Translation = [61.6422005, -0.775554478, 70.9990005],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -164,7 +164,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [85.3651581, -3.19688988, 20.9990005],
+			Vec3 LookTarget = [61.6422005, -0.775554478, 20.9990005],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -6539,7 +6539,7 @@ Level =
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "4e7bac697bec55c5:Verdana",
 			uint FontSize = 30,
-			string Text = "upgrades include health, oxygen, speed, and shooting",
+			string Text = "Upgrades include health, oxygen, speed, and shooting",
 			TextAlign Align = Center,
 			float PixelsPerUnit = 64,
 			bool Smoothing = true,
