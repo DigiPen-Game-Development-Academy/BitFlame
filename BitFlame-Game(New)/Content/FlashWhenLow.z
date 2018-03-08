@@ -43,5 +43,9 @@ class FlashWhenLow : ZilchComponent
                 this.Owner.Sprite.Color = this.FlashColor;
             }
         }
+        else
+        {
+            this.Owner.Sprite.Color = this.DefaultColor;
+        }
     }
 }
