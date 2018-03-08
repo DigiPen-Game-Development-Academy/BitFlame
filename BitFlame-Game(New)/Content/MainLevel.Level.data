@@ -100,15 +100,15 @@ Level =
 		{
 			string Asteroid_01Archetype = "5af8a0083b2d1bfe:AsteroidConfig3",
 			string Asteroid_02Archetype = "5af8dc36cf41e70a:AsteroidConfig4",
-			string EnemyArchetype = "5a1c25102e8b8ff5:AlienEnemy",
+			string EnemyArchetype = "5a74699494525886:AlienCrabEnemy",
 			string HiveArchetype = "5a1c2405f45e8ddd:EnemyHive",
-			string UpgradePickupArchetype = "5a08cc0da512394f:Game_Upgrade_Pickup",
+			string UpgradePickupArchetype = "5a7411b441710034:ChargingEnemy",
 			float Asteroid_01Probability = 30,
 			float Asteroid_02Probability = 30,
 			float EmptySpaceProbability = 20,
 			float HiveProbability = 20,
-			float EnemyProbability = 0,
-			float UpgradePickupProbability = 0,
+			float EnemyProbability = 20,
+			float UpgradePickupProbability = 20,
 			int MaxX = 45,
 			int MaxY = 45,
 			int SpawnCellwidth = 10,
@@ -155,8 +155,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.0919630378, 0.0359244943, 50],
-
+			Vec3 Translation = [0, 0, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -168,8 +167,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-
-			float Size = 24.3649654,
+			float Size = 16.3323307,
 		},
 		EditorCameraController = 
 		{
@@ -287,7 +285,7 @@ Level =
 		string Name = "5a1c06ab2df03606:Player",
 		LinkId = 
 		{
-			uint Id = 6,
+			uint Id = 3,
 		},
 		Transform = 
 		{
@@ -304,7 +302,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 7,
+			uint Id = 6,
 		},
 		Named = 
 		{
