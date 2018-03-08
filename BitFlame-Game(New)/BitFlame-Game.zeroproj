@@ -6,9 +6,9 @@ Cog =
 		string ProjectOwner = "",
 		string DefaultLevel = "Level",
 		string ProjectSpace = "Space",
-		string ProjectFolder = "C:\Users\projectfun_user\Documents\GitHub\BitFlame\BitFlame-Game(New)",
 		uint ProjectEngineRevision = 16386,
 		bool AutoTakeProjectScreenshot = true,
+		uint64 Guid = 5adae5bf659655b1,
 	},
 	EditorSettings = 
 	{
