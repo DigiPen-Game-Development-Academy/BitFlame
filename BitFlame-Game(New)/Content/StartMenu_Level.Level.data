@@ -107,7 +107,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [18.8113327, 37.1793747, 50],
+			Vec3 Translation = [-2.686028, -0.69282794, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -119,7 +119,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 36.7879829,
+			float Size = 33.2871437,
 		},
 		EditorCameraController = 
 		{
@@ -127,7 +127,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [18.8113327, 37.1793747, 8.4405724e-07],
+			Vec3 LookTarget = [-2.686028, -0.69282794, -9.56225676e-08],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -357,7 +357,7 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
-			Vec3 NewCameraPosition = [30, 0, 0],
+			Vec3 NewCameraPosition = [-30, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
 			string LevelToChangeTo = "",

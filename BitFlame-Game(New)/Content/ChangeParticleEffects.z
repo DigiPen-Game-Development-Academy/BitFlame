@@ -12,6 +12,15 @@ class ChangeParticleEffects : ZilchComponent
             this.Owner.SphericalParticleEmitter.Active = true;
             this.Owner.SphericalParticleEmitter.StartVelocity = Real3(0.0,-1.0,0.0) + this.Owner.Parent.RigidBody.Velocity;
             this.Owner.SphericalParticleEmitter.RandomVelocity = Real3(0.1,0.0,0.0);
+            
+            if(this.Owner.Parent.Sprite.FlipX == true)
+            {
+                this.Owner.Transform.Translation = Real3(0.4, 0.0, -1.0);
+            }
+            else
+            {
+                this.Owner.Transform.Translation = Real3(-0.4, 0.0, -1.0);
+            }
         }
         else if(Zero.Keyboard.KeyIsDown(Keys.D) && this.Owner.Parent.Sprite.FlipX == false)
         {
@@ -32,6 +41,15 @@ class ChangeParticleEffects : ZilchComponent
             this.Owner.SphericalParticleEmitter.Active = true;
             this.Owner.SphericalParticleEmitter.StartVelocity = Real3(0.0,1.0,0.0) + this.Owner.Parent.RigidBody.Velocity;
             this.Owner.SphericalParticleEmitter.RandomVelocity = Real3(0.1,0.0,0.0);
+            
+            if(this.Owner.Parent.Sprite.FlipX == true)
+            {
+                this.Owner.Transform.Translation = Real3(0.4, 0.0, -1.0);
+            }
+            else
+            {
+                this.Owner.Transform.Translation = Real3(-0.4, 0.0, -1.0);
+            }
         }
         else
         {
