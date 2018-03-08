@@ -17,7 +17,7 @@ class OxygenGauge : ZilchComponent
     var OxygenModifier : Real = 1;
     
     var CurrentOxygen : Real = 100;
-    
+    var UpdateTimer : Real = 5;
     var Direction : Real3 = Real3(0.0, 0.0, 0.0);
     
     function Initialize(init : CogInitializer)
@@ -29,8 +29,20 @@ class OxygenGauge : ZilchComponent
         OxygenGauge.DecaySpeed = this.DecaySpeed;
     }
 
+    function UpdateMax()
+    {
+        this.OxygenModifier = 100 / this.GameSession.GameVars.PlayerMaxOxygen;
+    }
+
     function OnLogicUpdate(event : UpdateEvent)
     {
+        this.UpdateTimer -= event.Dt;
+        if(this.UpdateTimer < 0)
+        {
+            this.UpdateMax();
+            this.UpdateTimer = 5;
+        }
+        
         this.CurrentOxygen = this.GameSession.GameVars.PlayerOxygen * this.OxygenModifier;
         
         if(this.GameSession.GameVars.PlayerLosingOxygen == true)

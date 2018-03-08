@@ -2,8 +2,8 @@ DataContent =
 {
 	DataBuilder = 
 	{
-		string Name = "AsteroidMining",
-		uint64 ResourceId = 5a79c0f1e2d29daa,
+		string Name = "Player_WithMusic",
+		uint64 ResourceId = 5a0a9fe6028d2021,
 		string LoaderType = "Cog",
 		uint Version = 0,
 		bool ShowInEditor = true,

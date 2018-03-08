@@ -90,7 +90,7 @@ class Oxygen_Regen_Field : ZilchComponent
                 this.GameSession.GameVars.PlayerOxygen += this.OxygenRechargeRate;
             }
             
-            this.GameSession.GameVars.PlayerOxygen = Math.Clamp(this.GameSession.GameVars.PlayerOxygen, 0, 10);
+            this.GameSession.GameVars.PlayerOxygen = Math.Clamp(this.GameSession.GameVars.PlayerOxygen, 0, this.GameSession.GameVars.PlayerMaxOxygen);
         }
     }
 }
