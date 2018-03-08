@@ -86,6 +86,7 @@ Cog =
 		float Damage = 1,
 		bool Penatrating = false,
 		bool EnemyBullet = true,
+		string PlayerDamagedSound = "5ae3cf4fa125c756:Player-Damaged",
 	},
 	DestroyOffscreen = 
 	{
