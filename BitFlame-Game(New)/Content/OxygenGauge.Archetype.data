@@ -40,12 +40,6 @@ Cog =
 	{
 		float DecaySpeed = 5,
 	},
-	FlashWhenLow = 
-	{
-		float FlashNumber = 25,
-		Vec4 FlashColor = [1, 0, 0, 1],
-		float FlashTime = 0.200000003,
-	},
 	Hierarchy = 
 	{
 		Cog = 
