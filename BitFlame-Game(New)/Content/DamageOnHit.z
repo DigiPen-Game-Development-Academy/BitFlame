@@ -6,6 +6,8 @@ class DamageOnHit : ZilchComponent
     
     [Property] var EnemyBullet : Boolean = false;
     
+    [Property] var PlayerDamagedSound : SoundCue;
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
@@ -27,6 +29,8 @@ class DamageOnHit : ZilchComponent
             this.GameSession.GameVars.PlayerHealth -= this.Damage as Integer;
             
             this.Owner.Destroy();
+            
+            this.Space.SoundSpace.PlayCue(this.PlayerDamagedSound);
         }
     }
 }

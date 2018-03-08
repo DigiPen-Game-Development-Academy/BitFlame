@@ -1,0 +1,11 @@
+AudioContent = 
+{
+	SoundBuilder = 
+	{
+		string Name = "BackgroundMusic_Loop",
+		uint64 ResourceId = 5a0a918c0415caa2,
+		bool Compressed = false,
+		bool Streamed = false,
+		SoundLoadType LoadType = Decompress,
+	},
+},

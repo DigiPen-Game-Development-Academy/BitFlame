@@ -54,7 +54,7 @@ class Player_Pickup_Collection : ZilchComponent
         {
             this.GameSession.GameVars.PlayerOxygen += otherObject.OxygenPickup.PickupValue;
             
-            this.GameSession.GameVars.PlayerOxygen = Math.Clamp(this.GameSession.GameVars.PlayerOxygen, 0, 10);
+            this.GameSession.GameVars.PlayerOxygen = Math.Clamp(this.GameSession.GameVars.PlayerOxygen, 0, this.GameSession.GameVars.PlayerMaxOxygen);
             
             this.Player.SoundThing.PlayPickup();
             otherObject.Destroy();
