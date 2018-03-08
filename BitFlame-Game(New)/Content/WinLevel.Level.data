@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-11.4098272, -7.69196987, 50.1187096],
+			Vec3 Translation = [-8.19671726, -1.61718416, 50.1187096],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 9.90607548,
+			float Size = 36.3483047,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-11.4098272, -7.69196987, 0.118710309],
+			Vec3 LookTarget = [-8.19671726, -1.61718416, 0.118710451],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -2447,6 +2447,22 @@ Level =
 		{
 			Vec2 Size = [6, 2.5],
 			Location Origin = Center,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		LoadSpecifiedLevel = 
+		{
+			string LevelToLoad = "554cea0f94af672f:MainLevel",
+		},
+		Ship_Menu_Button_Visual = 
+		{
+			Vec4 HoverColor = [1, 1, 1, 1],
+			Vec4 ClickColor = [1, 1, 1, 1],
+			float HoverScale = 1.20000005,
+			float ClickScale = 1,
 		},
 		Hierarchy = 
 		{
