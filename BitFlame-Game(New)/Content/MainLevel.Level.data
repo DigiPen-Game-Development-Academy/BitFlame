@@ -167,7 +167,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 20.1897087,
+			float Size = 40.6570816,
 		},
 		EditorCameraController = 
 		{
@@ -712,6 +712,24 @@ Level =
 					uint StartFrame = 0,
 				},
 			},
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a7f4db494e9d95c:Cursor",
+		LinkId = 
+		{
+			uint Id = 11,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [2.75361586, 3.85469341, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Cursor",
 		},
 	},
 },
