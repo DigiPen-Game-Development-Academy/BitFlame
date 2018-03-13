@@ -97,7 +97,7 @@ class Ship_Interaction : ZilchComponent
         
         playerButton.Sprite.Visible = false;
         
-        if(player.Player_Movement_Script != null)
+        if(player.Player_Movement_Script != null && event.OtherObject == player)
         {
             //end hover feed back here              
             if(this.HUDSpace != null)
