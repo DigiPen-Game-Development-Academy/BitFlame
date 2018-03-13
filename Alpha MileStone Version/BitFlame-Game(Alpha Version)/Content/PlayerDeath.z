@@ -1,0 +1,148 @@
+/*************************************
+Filename: PlayerDeath.z
+Author: Jakob McFarland
+Contributors: Luke Taranowski
+Last modified: 2/22/2018
+Brief: This Component will cause the owner to teleport back to origin when their health or oxygen = 0
+******************************************/
+    
+
+class PlayerDeath : ZilchComponent
+{
+
+    // The level that our HUD is contained within
+    [Property]
+    var HUDLevel : Level = null;
+    
+    //The space archetype from which to create the new HUD space
+    [Property]
+    var SpaceArchetype : Archetype = Archetype.Space;
+    
+    //Reference to the Player object
+    [Property]
+    var PlayerRef : CogPath = null;
+    
+    //HealthDrainTimeInterval
+    [Property] var TimeInterval : Real = 1.0; 
+    
+    var Timer : Real;
+    
+    // Store the space where our HUD is so that we can access and destroy it
+    var HUDSpace : Space = null;
+    
+    var HUDCreated : Boolean = false; 
+   
+    var TimeKeeper : Real = 0;
+    
+    //make sure owner has a transform
+    [Dependency] var Transform : Transform;
+    
+    [Property] var IronResource : Archetype = null;
+    [Property] var CopperResource : Archetype = null;
+    [Property] var AluminiumResource : Archetype = null;
+    [Property] var TitaniumResource : Archetype = null;
+    
+    var T : Real = 0.0;
+    
+    var RandGen : Random = Random();
+
+    //initilization
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+    
+    //every logic update
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        //setup quick var to save on repitition
+        var gameVars = this.GameSession.GameVars;
+        
+        //check if player oxygen is less than 0, if so, drain player health - jakob McFarland
+        if(this.GameSession.GameVars.PlayerOxygen <= 0.0)
+        {
+            this.Owner.HealthRegen.Active = false;
+            
+            if(this.Timer >= this.TimeInterval)
+            {
+                this.Timer -= this.TimeInterval;
+                this.GameSession.GameVars.PlayerHealth -= 1;
+            }
+            this.Timer += event.Dt;
+        }
+        else
+        {
+            this.Owner.HealthRegen.Active = true;    
+        }
+        
+        //if the player has no health or oxygen then their dead, reset their health and oxygen and teleport them to world origin.
+        if (gameVars.PlayerHealth <= 0)
+        {  
+            for(var i = 0.0; i < gameVars.PlayerResources; ++i)
+            {
+                var resource = this.Space.CreateAtPosition(this.IronResource, this.Owner.Transform.Translation);
+                resource.RigidBody.Velocity += Real3(this.RandGen.Range(-1.0, 1.0), this.RandGen.Range(-1.0, 1.0), 0.0);
+            }
+            
+            for(var i = 0.0; i < gameVars.PlayerAluminium; ++i)
+            {
+                var resource = this.Space.CreateAtPosition(this.AluminiumResource, this.Owner.Transform.Translation);
+                resource.RigidBody.Velocity += Real3(this.RandGen.Range(-1.0, 1.0), this.RandGen.Range(-1.0, 1.0), 0.0);
+            }
+            
+            for(var i = 0.0; i < gameVars.PlayerCopper; ++i)
+            {
+                var resource = this.Space.CreateAtPosition(this.CopperResource, this.Owner.Transform.Translation);
+                resource.RigidBody.Velocity += Real3(this.RandGen.Range(-1.0, 1.0), this.RandGen.Range(-1.0, 1.0), 0.0);
+            }
+            
+            for(var i = 0.0; i < gameVars.PlayerTitanium; ++i)
+            {
+                var resource = this.Space.CreateAtPosition(this.TitaniumResource, this.Owner.Transform.Translation);
+                resource.RigidBody.Velocity += Real3(this.RandGen.Range(-1.0, 1.0), this.RandGen.Range(-1.0, 1.0), 0.0);
+            }
+            
+            gameVars.PlayerResources = 0;
+            gameVars.PlayerTitanium = 0;
+            gameVars.PlayerCopper = 0;
+            gameVars.PlayerAluminium = 0;
+            
+            //teleport the player behind the camera where it can't be interacted with - jakob McFarland
+            this.Owner.Transform.Translation = Real3(0.0, 0.0, 1000.0);
+            this.GameSession.GameVars.PlayerLosingOxygen = false;
+            Zero.Mouse.Cursor = Cursor.Arrow;
+            
+            if(this.HUDSpace == null)
+            {
+                // Create the HUD space and then load our HUD level into it
+                this.HUDSpace = this.GameSession.CreateNamedSpace("HUDSpace", this.SpaceArchetype);
+                
+                //Load the level specified in the HUDLevel Property above
+                this.HUDSpace.LoadLevel(Level.RespawnLevel);    
+                
+                
+                this.HUDSpace.LevelSettings.HUDSpaceReferences.MainSpaceRef = this.Space;
+            }
+            
+            if(this.GameSession.GameVars.DestroyRespawnMenu == true)
+            {
+                this.GameSession.GameVars.DestroyRespawnMenu = false;
+                
+                if(this.HUDSpace != null)
+                {
+                  this.HUDSpace.Destroy();  
+                }
+                
+                //respawn the player when the respawn button is pressed - jakob McFarland
+                this.GameSession.GameVars.PlayerHealth = this.GameSession.GameVars.StartingPlayerHealth;
+                this.GameSession.GameVars.PlayerOxygen = this.GameSession.GameVars.StartingPlayerOxygen;
+            
+                this.GameSession.GameVars.PlayerLosingOxygen = true;
+                this.Owner.Transform.Translation = Real3(0.0, 0.0, 0.0);         
+            }
+        }
+        
+        //kill cheat <For Testing ONLY>
+        
+    }
+}

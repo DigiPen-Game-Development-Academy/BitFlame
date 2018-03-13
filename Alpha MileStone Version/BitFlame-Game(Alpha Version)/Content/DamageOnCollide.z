@@ -1,0 +1,23 @@
+class DamageOnCollide : ZilchComponent
+{
+    [Property] var Damage : Integer = 0;
+    
+    [Property] var PlayerDamagedSound : SoundCue;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+    }
+
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        if(event.OtherObject.Name == "Player")
+        {
+            
+            this.GameSession.GameVars.PlayerHealth -= this.Damage;
+            this.Owner.Transform.Translation += Math.Normalize(this.Owner.Transform.Translation - event.OtherObject.Transform.Translation) * 0.1;
+            event.OtherObject.FlashColor.Flash = true;
+            this.Space.SoundSpace.PlayCue(this.PlayerDamagedSound);
+        }
+    }
+}

@@ -1,0 +1,130 @@
+Cog = 
+{
+	LinkId = 
+	{
+		uint Id = 1,
+	},
+	Named = 
+	{
+		string Name = "Comet",
+	},
+	Archetyped = 
+	{
+		string Name = "5a074e0c89fd18fe:Comet",
+	},
+	Transform = 
+	{
+		Vec3 Translation = [0, 0, 0],
+		Vec3 Scale = [0.75, 0.75, 0.75],
+		Quat Rotation = [0, 0, 0, 1],
+	},
+	Sprite = 
+	{
+		bool Visible = true,
+		bool VisibilityCulling = true,
+		bool VisibilityEvents = true,
+		bool CastShadows = false,
+		Vec4 Color = [1, 1, 1, 1],
+		BlendMode BlendMode = Alpha,
+		SpriteGeometryMode GeometryMode = ZPlane,
+		string SpriteLayer = "5a40329065a80374:Comet_SpriteLayer",
+		string SpriteSource = "5a7ebe15485eb5a2:Comet_Sprite",
+		bool RenderMask = false,
+		bool FlipX = false,
+		bool FlipY = false,
+		bool AnimationActive = true,
+		float AnimationSpeed = 1,
+		uint StartFrame = 0,
+	},
+	RigidBody = 
+	{
+		bool Static = false,
+		bool Asleep = false,
+		bool Kinematic = false,
+		bool RotationLocked = false,
+		bool Mode2D = false,
+		bool AllowSleep = true,
+		bool Inherit2DMode = true,
+		Vec3 Velocity = [0, 0, 0],
+		Vec3 AngularVelocity = [0, 0, 0],
+	},
+	IgnoreSpaceEffects = 
+	{
+		bool Drag = true,
+		bool Flow = false,
+		bool Force = false,
+		bool Gravity = true,
+		bool Thrust = false,
+		bool Vortex = false,
+		bool Wind = false,
+		bool Invalid = false,
+		bool Torque = false,
+		bool PointGravity = false,
+		bool PointForce = false,
+		bool Buoyancy = false,
+		bool Custom = false,
+	},
+	DestroyAwayFromPlayer = 
+	{
+		float DistanceToDespawn = 61,
+	},
+	SpriteParticleSystem = 
+	{
+		bool Visible = true,
+		bool VisibilityCulling = true,
+		bool VisibilityEvents = true,
+		bool CastShadows = false,
+		SystemChildMode ChildMode = Independent,
+		SystemSpace SystemSpace = WorldSpace,
+		uint DrawOrder = 0,
+		Vec4 Tint = [1, 1, 1, 1],
+		float WarmUpTime = 0,
+		ParticleGeometry GeometryMode = Billboarded,
+		ParticleRenderMode RenderMode = Additive,
+		ParticleSortMode SortMode = Youngest,
+		ParticleAnimation ParticleAnimation = Single,
+		string Texture = "4fab71e8bcb7a8ce:DefaultTexture",
+		float VelocityScale = 1,
+		float LengthScale = 1,
+		float MaxParticleSize = 100,
+		Vec3 SystemSize = [4, 4, 4],
+	},
+	SphericalParticleEmitter = 
+	{
+		bool Active = true,
+		uint EmitCount = 0,
+		float EmitRate = 100,
+		float EmitVariance = 10,
+		float Size = 0.100000001,
+		float SizeVariance = 0.0500000007,
+		float Lifetime = 7,
+		float LifetimeVariance = 3,
+		float Spin = 0,
+		float SpinVariance = 50,
+		bool RandomSpin = true,
+		float Fill = 1,
+		float EmitterVelocityPercent = 2,
+		Vec3 StartVelocity = [0, 0, 0],
+		Vec3 RandomVelocity = [0.5, 0.5, 0.5],
+		Vec3 TangentVelocity = [0, 0, 0],
+		Vec3 EmitterSize = [0.150000006, 0.150000006, 0],
+		bool FastMovingEmitter = false,
+	},
+	LinearParticleAnimator = 
+	{
+		Vec3 Force = [0, 0, 0],
+		Vec3 RandomForce = [0, 0, 0],
+		float Torque = 0,
+		float Growth = 0,
+		float Dampening = 0.25,
+		Vec3 Twist = [0, 0, 0],
+	},
+	ParticleColorAnimator = 
+	{
+		Vec4 Color0 = [0, 0.610000134, 1, 1],
+		Vec4 Color1 = [0.144999981, 0.668058991, 1, 0.75],
+		Vec4 Color2 = [0.420000017, 0.774823666, 1, 0.5],
+		Vec4 Color3 = [0.595000029, 0.842764795, 1, 0.25],
+		Vec4 Color4 = [0.82585001, 0.929330051, 0.995000005, 0],
+	},
+},

@@ -1,0 +1,150 @@
+enum MusicState {NotPlaying, PlayingBattle, PlayingBackground, PlayingBoss, PlayingLowHP}
+
+class MusicController : ZilchComponent
+{
+    [Dependency] var SoundEmitter : SoundEmitter;
+    
+    [Property] var BackgroundSong : SoundCue;
+    [Property] var BattleSong : SoundCue;
+    //[Property] var BossSong : SoundCue;
+    //[Property] var LowHPSong : SoundCue;
+    [Property] var HitboxName : String;
+    //[Property] var HealthName : String; this was a testing thing for a thing that doesnt exist now
+    
+    var HealthBar : Cog;
+    var Oxygen : Cog;
+    var Hitbox : Cog;
+    var State : MusicState;
+    var NewState : MusicState;
+    var EnemiesNear : Integer = 0;
+    var BossNear : Integer = 0;
+    var Fade : Boolean = false;
+    var HealthLow : Boolean = false;
+
+    function PlayMusic()
+    {
+        //if (this.State == MusicState.PlayingLowHP)
+        //{
+        //    this.SoundEmitter.Stop();
+        //    this.SoundEmitter.Volume = 2;
+        //    this.SoundEmitter.PlayCue(this.LowHPSong);
+        //}
+        //if (this.State == MusicState.PlayingBoss)
+        //{
+        //    this.SoundEmitter.Stop();
+        //    this.SoundEmitter.PlayCue(this.BossSong);
+        //}
+        if (this.State == MusicState.PlayingBattle)
+        {
+            this.SoundEmitter.Stop();
+            this.SoundEmitter.PlayCue(this.BattleSong);
+        }
+        else if (this.State == MusicState.PlayingBackground)
+        {
+            this.SoundEmitter.Stop();
+            this.SoundEmitter.PlayCue(this.BackgroundSong);
+        }
+    }
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        
+        this.Hitbox = this.Space.FindObjectByName(this.HitboxName);
+        //this.HealthBar = this.Space.FindObjectByName(this.HealthName);
+        this.Oxygen = this.Space.FindObjectByName("OxygenGauge");
+        this.NewState = MusicState.PlayingBackground;
+        this.State = MusicState.NotPlaying;
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        this.EnemiesNear = this.Hitbox.MusicController_Hitbox.EnemiesNear;
+        this.BossNear = this.Hitbox.MusicController_Hitbox.BossNear;
+        
+        //if (this.HealthBar.HealthBar.Health <= 2)
+        //{
+        //    
+        //    if (this.State != MusicState.PlayingLowHP)
+        //    {
+        //        this.HealthLow = true;
+        //        this.State = MusicState.PlayingLowHP;
+        //        this.PlayMusic();
+        //    }
+        //}
+        //else 
+        //{
+        //    this.HealthLow = false;
+        //}
+        //if (this.BossNear != 0 && !this.HealthLow)
+        //{
+        //    if (this.State != MusicState.PlayingBoss)
+        //    {
+        //        this.State = MusicState.PlayingBoss;
+        //        this.PlayMusic();
+        //    }
+        //}
+        if (this.EnemiesNear != 0)
+        {
+            if (this.State != MusicState.PlayingBattle)
+            {
+                this.State = MusicState.PlayingBattle;
+                this.PlayMusic();
+            }
+        }
+        else if (this.EnemiesNear == 0 && this.BossNear == 0)
+        {
+            if (this.State != MusicState.PlayingBackground)
+            {
+                this.State = MusicState.PlayingBackground;
+                this.PlayMusic();
+            }
+        }
+
+        if(Zero.Keyboard.KeyIsPressed(Keys.X))
+        {
+            Console.WriteLine(this.State);
+        }  
+    }
+}
+
+class MusicController_Hitbox : ZilchComponent
+{
+    var EnemiesNear : Integer = 0;
+    var BossNear : Integer = 0;
+    
+    [Property] var Collision : CollisionGroup;
+    //[Property] var BossCollision : CollisionGroup;
+    
+    function Initialize (init : CogInitializer)
+    {
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+        Zero.Connect(this.Owner, Events.CollisionEnded, this.OnCollisionEnded);
+    }
+
+    function OnCollisionEnded(event : CollisionEvent)
+    {
+        var otherObject = event.OtherObject;
+        //if (otherObject.Collider.CollisionGroup == this.BossCollision)
+        //{
+        //    this.BossNear -= 1;
+        //}
+        if (otherObject.Collider.CollisionGroup == this.Collision)
+        {
+            this.EnemiesNear -= 1;
+        }
+    }
+
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        var otherObject = event.OtherObject;
+        //if (otherObject.Collider.CollisionGroup == this.BossCollision)
+        //{
+        //    this.BossNear += 1;
+        //} 
+        if (otherObject.Collider.CollisionGroup == this.Collision)
+        {
+            this.EnemiesNear += 1;
+        }
+    }
+}

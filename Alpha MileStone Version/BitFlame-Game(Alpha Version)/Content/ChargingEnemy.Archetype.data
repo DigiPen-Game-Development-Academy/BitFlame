@@ -1,0 +1,101 @@
+Cog = 
+{
+	LinkId = 
+	{
+		uint Id = 1,
+	},
+	Named = 
+	{
+		string Name = "ChargingEnemy",
+	},
+	Archetyped = 
+	{
+		string Name = "5a7411b441710034:ChargingEnemy",
+	},
+	Transform = 
+	{
+		Vec3 Translation = [0, 0, 0],
+		Vec3 Scale = [1.5, 1.5, 1],
+		Quat Rotation = [0, 0, 0, 1],
+	},
+	Sprite = 
+	{
+		bool Visible = true,
+		bool VisibilityCulling = true,
+		bool VisibilityEvents = true,
+		bool CastShadows = false,
+		Vec4 Color = [1, 1, 1, 1],
+		BlendMode BlendMode = Alpha,
+		SpriteGeometryMode GeometryMode = ZPlane,
+		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		string SpriteSource = "5a87a15f5d0ed996:ChargingEnemy_Sprite_Animated",
+		bool RenderMask = false,
+		bool FlipX = false,
+		bool FlipY = false,
+		bool AnimationActive = true,
+		float AnimationSpeed = 1,
+		uint StartFrame = 0,
+	},
+	Orientation = 
+	{
+		Vec3 GlobalUp = [0, 1, 0],
+		Vec3 UpVector = [0, 0, 1],
+		Vec3 ForwardVector = [1, 0, 0],
+		OrientationBases DefaultBases = ForwardXUpZ,
+	},
+	RigidBody = 
+	{
+		bool Static = false,
+		bool Asleep = false,
+		bool Kinematic = false,
+		bool RotationLocked = false,
+		bool Mode2D = false,
+		bool AllowSleep = true,
+		bool Inherit2DMode = true,
+		Vec3 Velocity = [0, 0, 0],
+		Vec3 AngularVelocity = [0, 0, 0],
+	},
+	Player_LookAt = 
+	{
+	},
+	Health = 
+	{
+		float Health = 5,
+		string ArchetypetoSpawnOnDeath1 = "5a70715bb5c81bfe:Game_OxygenOre_Pickup",
+		string ArchetypetoSpawnOnDeath2 = "5af4a586aa6a35b5:lienEnemy_ExplosionEffect",
+		string ExplosionSound = "",
+		bool Unbreakable = false,
+	},
+	DamageOnCollide = 
+	{
+		int Damage = 1,
+		string PlayerDamagedSound = "5ae3cf4fa125c756:Player-Damaged",
+	},
+	ChargingEnemyLogic = 
+	{
+		float Speed = 4,
+		float ChargeSpeed = 20,
+		float ChargeRange = 12,
+		float DetectionRange = 20,
+		float ChargeUpTime = 1,
+		Vec4 ChargeUpColor = [1, 0, 0, 1],
+		Vec3 ChargeUpScale = [2, 2, 1],
+	},
+	DamageOnHit = 
+	{
+		float Damage = 10,
+		bool Penatrating = true,
+		bool EnemyBullet = false,
+		string PlayerDamagedSound = "",
+	},
+	MultiConvexMeshCollider = 
+	{
+		bool Ghost = false,
+		bool SendsMessages = true,
+		bool Seamless = true,
+		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+		string SerializedGroupName = "5a33def0a21d9c42:Enemies",
+		Vec3 Offset = [0, 0, 0],
+		string MeshName = "5a87a1f867e1df0a:ChargingEnemyCollisionMesh",
+	},
+},
