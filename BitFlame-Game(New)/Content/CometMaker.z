@@ -74,7 +74,7 @@ class CometMaker : ZilchComponent
             
             var comet = this.Space.CreateAtPosition(this.Comet, position);
             
-            comet.RigidBody.Velocity += Math.Normalize((player.Transform.Translation + Real3(Random().Range(-2.5,2.5), Random().Range(-2.5,2.5), -5.0)) - comet.Transform.Translation) * event.Dt * Random().Range(100, 300);
+            comet.RigidBody.Velocity += Math.Normalize((player.Transform.Translation + Real3(Random().Range(-2.5,2.5), Random().Range(-2.5,2.5), -5.0)) - comet.Transform.Translation) * event.Dt * Random().Range(600, 900);
         }
         else
         {
