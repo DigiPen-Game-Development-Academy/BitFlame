@@ -89,6 +89,8 @@ class Ship_Menu_Button_Function : ZilchComponent
 
     [Property] var Reload : Boolean = false; 
     
+    [Property] var ChangeLevel : Boolean = false;
+    
     [Property] var LevelToChangeTo : Level = null;
     
     [Property] var Respawn : Boolean = false;
@@ -112,12 +114,16 @@ class Ship_Menu_Button_Function : ZilchComponent
         if(this.Respawn)
         {
             this.GameSession.GameVars.DestroyRespawnMenu = true;
-            return;
+            //return;
+            Console.WriteLine("SETS VAR TO DESTROY MENU");
         }
         
-        if(this.LevelToChangeTo != null)
+        if(this.ChangeLevel == true)
         {
-            this.GameSession.GameVars.NewLevel = this.LevelToChangeTo;
+            if(this.LevelToChangeTo != null)
+            {
+                this.GameSession.GameVars.NewLevel = this.LevelToChangeTo;
+            }
         }
         
         if(this.Reload)
