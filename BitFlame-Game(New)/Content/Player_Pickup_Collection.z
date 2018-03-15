@@ -85,7 +85,12 @@ class Player_Pickup_Collection : ZilchComponent
             this.Player.SoundThing.PlayPickup();
             otherObject.Destroy();
         }
-        
+        if(otherObject.TurretPickup != null)
+        {
+            this.GameSession.GameVars.PlayerTurrets += otherObject.TurretPickup.PickupValue;
+            this.Player.SoundThing.PlayPickup();
+            otherObject.Destroy();
+        }
         
     }
 }
@@ -268,6 +273,30 @@ class UpgradePickup : ZilchComponent
 
 // allows owner to collect this up as a copper pickup
 class PipePickup : ZilchComponent
+{
+    [Property] var PickupValue : Integer = 0;
+    
+    [Property] var PickupRange : Real = 0.0;
+    
+    [Property] var PickupSpeed : Real = 0.0;
+    
+    function Initialize(init : CogInitializer)
+    {
+       Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        var player = this.Space.FindObjectByName("Player");
+        
+        if(Math.Distance(this.Owner.Transform.Translation, player.Transform.Translation) <= this.PickupRange)
+        {
+            this.Owner.RigidBody.Velocity += Math.Normalize(player.Transform.Translation - this.Owner.Transform.Translation) * event.Dt * this.PickupSpeed;
+        }
+    }
+}
+
+class TurretPickup : ZilchComponent
 {
     [Property] var PickupValue : Integer = 0;
     
