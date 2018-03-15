@@ -152,7 +152,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [21.6828613, 8.86386013, 50],
+			Vec3 Translation = [15.6124058, -3.30503726, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -164,7 +164,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 100,
+			float Size = 33.2871361,
 		},
 		EditorCameraController = 
 		{
@@ -172,7 +172,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [21.6828613, 8.86386013, 9.47787839e-07],
+			Vec3 LookTarget = [15.6124058, -3.30503726, 6.82439691e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -196,7 +196,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 0],
+			Vec3 Translation = [0, 0, -2],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -236,7 +236,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [30, 0, 0],
+			Vec3 Translation = [30, 0, -2],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -342,7 +342,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, -30, -0.00100000005],
+			Vec3 Translation = [0, -30, -2],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -382,7 +382,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 1],
+			Vec3 Translation = [0, 0, -1],
 			Vec3 Scale = [0.75, 0.75, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -495,7 +495,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-3, -33, 0],
+			Vec3 Translation = [-3, -33, -1],
 			Vec3 Scale = [0.75, 0.75, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -608,7 +608,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [4, -33, 0],
+			Vec3 Translation = [4, -33, -1],
 			Vec3 Scale = [0.75, 0.75, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -721,7 +721,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [30, -3, 1],
+			Vec3 Translation = [30, -3, -1],
 			Vec3 Scale = [0.75, 0.75, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -902,7 +902,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 2.5, 1],
+			Vec3 Translation = [0, 2.5, -1],
 			Vec3 Scale = [0.75, 0.75, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1015,7 +1015,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, -2.5, 1],
+			Vec3 Translation = [0, -2.5, -1],
 			Vec3 Scale = [0.75, 0.75, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1114,6 +1114,24 @@ Level =
 					bool Smoothing = true,
 				},
 			},
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a7f4db494e9d95c:Cursor",
+		LinkId = 
+		{
+			uint Id = 22,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [9.25675869, 3.87364507, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Cursor",
 		},
 	},
 },
