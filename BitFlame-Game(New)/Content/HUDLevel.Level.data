@@ -144,7 +144,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-21.543438, -2.59301019, 74.1472321],
+			Vec3 Translation = [-12.5023298, -0.108790874, 75.2629089],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0.0339424238, -0.0705855936, -0.00240323599, 0.996925175],
 		},
@@ -156,7 +156,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 9.07181644,
+			float Size = 33.2871704,
 		},
 		EditorCameraController = 
 		{
@@ -164,7 +164,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0.0680679306,
 			float HorizontalAngle = 0.141370669,
-			Vec3 LookTarget = [-14.51474, -5.99377918, 24.7606716],
+			Vec3 LookTarget = [-5.47363186, -3.50955987, 25.8763485],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -318,6 +318,20 @@ Level =
 				OxygenGauge = 
 				{
 					float DecaySpeed = 5,
+				},
+				FlashWhenLow = 
+				{
+					float FlashNumber = 25,
+					Vec4 FlashColor = [1, 0, 0, 1],
+					float FlashTime = 0.100000001,
+				},
+				PopUpTextController = 
+				{
+					Enum PopUpType = Beep,
+					string ExplosionText = "5a4b19e75b1fc931:ExplosionText",
+					string BumpText1 = "5a4b19d058d6c4cc:BumpText1",
+					string BumpText2 = "",
+					string BeepText = "5a4b19fe5a609760:BeepText",
 				},
 				Hierarchy = 
 				{

@@ -38,10 +38,10 @@ class BlockType_Selector_Logic : ZilchComponent
     {
         if(this.Hub)
         {
-            Console.WriteLine(this.Transform.Translation.Z);
+            //Console.WriteLine(this.Transform.Translation.Z);
             //this is really ineficiant but it was the only thinng that worked for some weird reason
             this.Transform.Translation = Real3( this.Transform.Translation.X,  this.Transform.Translation.Y, 100);
-            Console.WriteLine(this.Transform.Translation.Z);
+            //Console.WriteLine(this.Transform.Translation.Z);
         }
     }
 
@@ -59,10 +59,10 @@ class BlockType_Selector_Logic : ZilchComponent
     {
         if(this.Hub)
         {
-            Console.WriteLine(this.Transform.Translation.Z);
+            //Console.WriteLine(this.Transform.Translation.Z);
             //this is really ineficiant but it was the only thinng that worked for some weird reason
             this.Transform.Translation = Real3( this.Transform.Translation.X,  this.Transform.Translation.Y, 5);
-            Console.WriteLine(this.Transform.Translation.Z);
+            //Console.WriteLine(this.Transform.Translation.Z);
         }
     }
 }

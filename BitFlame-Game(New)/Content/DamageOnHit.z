@@ -1,5 +1,7 @@
 class DamageOnHit : ZilchComponent
 {
+    [Property] var ArchetypetoSpawnOnDamage : Archetype;
+    
     [Property] var Damage : Real = 10.0;
     
     [Property] var Penatrating : Boolean = false;

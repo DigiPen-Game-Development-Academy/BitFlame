@@ -3,6 +3,8 @@
 
 class Asteroid_Mining : ZilchComponent
 {
+    [Property] var ArchetypetoSpawnOnDamage : Archetype;
+    
     [Property] var DropAmount : Real = 0.0;
     
     [Property] var ShrinkAmount : Real = 0.0;

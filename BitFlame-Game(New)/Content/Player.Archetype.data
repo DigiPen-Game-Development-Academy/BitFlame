@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0.100000001],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -172,6 +172,14 @@ Cog =
 		bool CanSelect = false,
 		bool HudButton = false,
 	},
+	PopUpTextController = 
+	{
+		Enum PopUpType = Bump,
+		string ExplosionText = "",
+		string BumpText1 = "5a4b19d058d6c4cc:BumpText1",
+		string BumpText2 = "",
+		string BeepText = "",
+	},
 	Hierarchy = 
 	{
 		Cog = 
@@ -269,6 +277,7 @@ Cog =
 				float BulletSpeed = 25,
 				string Bullet = "5a1c3c0e55b6fbd1:Bullet",
 				bool CanShoot = true,
+				string ShotText = "5a4b1c8cd3edf0e1:ShotText",
 				string ShootingSound = "5ae3cf4fa124fd46:Laser_Shoot",
 				bool SpreadShot = false,
 				float SpreadAmount = 10,
