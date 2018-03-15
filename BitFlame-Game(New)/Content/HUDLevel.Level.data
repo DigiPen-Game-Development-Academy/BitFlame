@@ -267,7 +267,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 40],
+			Vec3 Translation = [0, 0, 38],
 			Vec3 Scale = [36, 20, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -286,8 +286,11 @@ Level =
 			bool FlipX = false,
 			bool FlipY = false,
 			bool AnimationActive = false,
-			float AnimationSpeed = 1,
+			float AnimationSpeed = 2,
 			uint StartFrame = 0,
+		},
+		Player_Hurt_Visual = 
+		{
 		},
 	},
 },
