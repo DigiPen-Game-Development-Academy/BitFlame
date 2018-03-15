@@ -64,8 +64,7 @@ class OxygenGauge : ZilchComponent
             posY = 10 * Math.Sin((this.CurrentOxygen + 22) * 2.2 * 0.0174533);
             
             this.Direction = Real3(posX, posY, 0.0);
-            
-            //Console.WriteLine("GameVars.PlayerOxygen = `this.GameSession.GameVars.PlayerOxygen`");     
+                 
     }
 }
 

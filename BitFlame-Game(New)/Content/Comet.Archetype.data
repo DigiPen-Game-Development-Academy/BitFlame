@@ -42,7 +42,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = false,
-		bool Mode2D = false,
+		bool Mode2D = true,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -66,12 +66,12 @@ Cog =
 	},
 	DestroyAwayFromPlayer = 
 	{
-		float DistanceToDespawn = 61,
+		float DistanceToDespawn = 100,
 	},
 	SpriteParticleSystem = 
 	{
 		bool Visible = true,
-		bool VisibilityCulling = true,
+		bool VisibilityCulling = false,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
 		SystemChildMode ChildMode = Independent,

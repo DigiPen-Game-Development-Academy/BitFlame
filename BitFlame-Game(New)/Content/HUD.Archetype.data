@@ -80,6 +80,20 @@ Cog =
 			{
 				float DecaySpeed = 5,
 			},
+			FlashWhenLow = 
+			{
+				float FlashNumber = 25,
+				Vec4 FlashColor = [1, 0, 0, 1],
+				float FlashTime = 0.100000001,
+			},
+			PopUpTextController = 
+			{
+				Enum PopUpType = Beep,
+				string ExplosionText = "5a4b19e75b1fc931:ExplosionText",
+				string BumpText1 = "5a4b19d058d6c4cc:BumpText1",
+				string BumpText2 = "",
+				string BeepText = "5a4b19fe5a609760:BeepText",
+			},
 			Hierarchy = 
 			{
 				Cog = 

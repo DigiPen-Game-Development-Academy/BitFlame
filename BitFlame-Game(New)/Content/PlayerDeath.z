@@ -55,6 +55,26 @@ class PlayerDeath : ZilchComponent
     //every logic update
     function OnLogicUpdate(event : UpdateEvent)
     {
+        if(this.GameSession.GameVars.DestroyRespawnMenu == true)
+            {
+                
+                if(this.HUDSpace != null)
+                {
+                    this.HUDSpace.Destroy();  
+                }
+                
+                
+                this.GameSession.GameVars.DestroyRespawnMenu = false;
+                Console.WriteLine(this.GameSession.GameVars.DestroyRespawnMenu);
+                
+                //respawn the player when the respawn button is pressed - jakob McFarland
+                this.GameSession.GameVars.PlayerHealth = this.GameSession.GameVars.StartingPlayerHealth;
+                this.GameSession.GameVars.PlayerOxygen = this.GameSession.GameVars.StartingPlayerOxygen;
+            
+                this.GameSession.GameVars.PlayerLosingOxygen = true;
+                this.Owner.Transform.Translation = Real3(0.0, 0.0, 0.0);         
+            }
+            
         //setup quick var to save on repitition
         var gameVars = this.GameSession.GameVars;
         
@@ -124,14 +144,17 @@ class PlayerDeath : ZilchComponent
                 this.HUDSpace.LevelSettings.HUDSpaceReferences.MainSpaceRef = this.Space;
             }
             
-            if(this.GameSession.GameVars.DestroyRespawnMenu == true)
+            /*if(this.GameSession.GameVars.DestroyRespawnMenu == true)
             {
-                this.GameSession.GameVars.DestroyRespawnMenu = false;
                 
                 if(this.HUDSpace != null)
                 {
-                  this.HUDSpace.Destroy();  
+                    this.HUDSpace.Destroy();  
                 }
+                
+                
+                this.GameSession.GameVars.DestroyRespawnMenu = false;
+                Console.WriteLine(this.GameSession.GameVars.DestroyRespawnMenu);
                 
                 //respawn the player when the respawn button is pressed - jakob McFarland
                 this.GameSession.GameVars.PlayerHealth = this.GameSession.GameVars.StartingPlayerHealth;
@@ -139,7 +162,7 @@ class PlayerDeath : ZilchComponent
             
                 this.GameSession.GameVars.PlayerLosingOxygen = true;
                 this.Owner.Transform.Translation = Real3(0.0, 0.0, 0.0);         
-            }
+            }*/
         }
         
         //kill cheat <For Testing ONLY>

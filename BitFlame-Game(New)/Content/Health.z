@@ -31,12 +31,12 @@ class Health : ZilchComponent
         {
             if(this.ArchetypetoSpawnOnDeath1 != null)
             {
-                this.Space.CreateAtPosition(this.ArchetypetoSpawnOnDeath1, this.Owner.Transform.Translation);   
+                this.Space.CreateAtPosition(this.ArchetypetoSpawnOnDeath1, this.Owner.Transform.WorldTranslation);   
                 Console.WriteLine("boom"); 
             }
             if(this.ArchetypetoSpawnOnDeath2 != null)
             {
-                this.Space.CreateAtPosition(this.ArchetypetoSpawnOnDeath2, this.Owner.Transform.Translation);
+                this.Space.CreateAtPosition(this.ArchetypetoSpawnOnDeath2, this.Owner.Transform.WorldTranslation);
                 Console.WriteLine("boom");
             }
             var blockUpdate = BlockUpdate();
@@ -44,7 +44,7 @@ class Health : ZilchComponent
             //this.Space.DispatchEvent(Events.BlockUpdate, blockUpdate);
             
             this.Space.SoundSpace.PlayCue(this.ExplosionSound);
-            this.Owner.DispatchEvent(Events.PreDestroy, ZilchEvent());
+            //this.Owner.DispatchEvent(Events.PreDestroy, ZilchEvent());
             this.Owner.Destroy();
         }
     }

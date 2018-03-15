@@ -38,6 +38,7 @@ Cog =
 	},
 	Asteroid_Mining = 
 	{
+		string ArchetypetoSpawnOnDamage = "5a4b6d019e1ee9c5:AsteroidDamagedEffect",
 		float DropAmount = 1,
 		float ShrinkAmount = 20,
 		Vec4 AluminiumColor = [0.674999952, 0.563624978, 0.563624978, 1],
@@ -56,8 +57,12 @@ Cog =
 	},
 	Health = 
 	{
+		string ArchetypetoSpawnOnDamage = "5a4b6d019e1ee9c5:AsteroidDamagedEffect",
 		float Health = 5,
-		string ArchetypetoSpawnOnDeath = "",
+		string ArchetypetoSpawnOnDeath1 = "5a4b107e0133e97f:AsteroidDestroyedEffect",
+		string ArchetypetoSpawnOnDeath2 = "",
+		string ExplosionSound = "",
+		bool Unbreakable = false,
 	},
 	Voxel = 
 	{
