@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [2.53232145, 7.92620564, -1],
+		Vec3 Translation = [5.08731556, 0.312702656, 0],
 		Vec3 Scale = [2, 2, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -65,6 +65,32 @@ Cog =
 		float CoolDown = 1,
 		float Range = 20,
 		string EnemyCollide = "5a33def0a21d9c42:Enemies",
+	},
+	Health = 
+	{
+		float Health = 5,
+		string ArchetypetoSpawnOnDeath1 = "5a0191ae833f27e5:Game_Turret_Pickup",
+		string ArchetypetoSpawnOnDeath2 = "",
+		string ExplosionSound = "",
+		bool Unbreakable = false,
+	},
+	Asteroid_Mining = 
+	{
+		float DropAmount = 0,
+		float ShrinkAmount = 200,
+		Vec4 AluminiumColor = [0, 0, 0, 1],
+		Vec4 CopperColor = [0, 0, 0, 1],
+		Vec4 IronColor = [0, 0, 0, 1],
+		Vec4 TitaniumColor = [0, 0, 0, 1],
+		string AluminiumArchetype = "",
+		string CopperArchetype = "",
+		string IronArchetype = "",
+		string TitaniumArchetype = "",
+		float AluminiumProbability = 0,
+		float CopperProbability = 0,
+		float IronProbability = 0,
+		float TitaniumProbability = 0,
+		float EmptyProbability = 0,
 	},
 	Hierarchy = 
 	{
@@ -126,7 +152,7 @@ Cog =
 					},
 					Transform = 
 					{
-						Vec3 Translation = [-0.00716352463, 0.389570951, 0],
+						Vec3 Translation = [-0.00716352463, 0.389570951, -0.0324611664],
 						Vec3 Scale = [1.13, 0.899999976, 1],
 						Quat Rotation = [0, 0, 0, 1],
 					},

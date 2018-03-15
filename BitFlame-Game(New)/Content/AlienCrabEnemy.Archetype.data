@@ -71,7 +71,7 @@ Cog =
 	Health = 
 	{
 		float Health = 5,
-		string ArchetypetoSpawnOnDeath1 = "5a08fb7240d5e7ed:ExplosionParticleEffect",
+		string ArchetypetoSpawnOnDeath1 = "5af4a586aa6a35b5:lienEnemy_ExplosionEffect",
 		string ArchetypetoSpawnOnDeath2 = "5a70715bb5c81bfe:Game_OxygenOre_Pickup",
 		string ExplosionSound = "",
 		bool Unbreakable = false,
