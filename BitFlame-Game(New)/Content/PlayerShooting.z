@@ -22,6 +22,8 @@ class PlayerShooting : ZilchComponent
     
     [Property] var CanShoot : Boolean = true;
     
+    [Property] var ShotText : Archetype = null;
+    
     [Property] var ShootingSound : SoundCue;
     
     //if the player has spread shot 
@@ -51,6 +53,59 @@ class PlayerShooting : ZilchComponent
             }
             
             var bullet = this.Space.CreateAtPosition(this.Bullet,this.Owner.Transform.WorldTranslation);
+            
+            var position = this.Owner.Transform.Translation;
+            
+            var horOrVert = Random().CoinFlip();
+            
+            var upOrDown = Random().CoinFlip();
+            
+            var leftOrRight = Random().CoinFlip();
+            
+            if(horOrVert)
+            {
+                //horizontal
+                
+                if(leftOrRight)
+                {
+                    //left
+                    
+                    position.X -= Random().Range(3,4);
+                    
+                    position.Y = Random().Range(-2.5, 2.5);
+                }
+                else
+                {
+                    //right
+                    
+                    position.X += Random().Range(3,4);
+                    
+                    position.Y = Random().Range(-2.5, 2.5);
+                }
+            }
+            else
+            {
+                //vertical
+                
+                if(upOrDown)
+                {
+                    //up
+                    
+                    position.Y += Random().Range(3,4);
+                    
+                    position.X = Random().Range(-2.5, 2.5);
+                }
+                else
+                {
+                    //down
+                    
+                    position.Y -= Random().Range(3,4);
+                    
+                    position.X = Random().Range(-2.5, 2.5);
+                }
+            }
+            
+            this.Space.CreateAtPosition(this.ShotText, Real3(this.Owner.Transform.WorldTranslation.X + position.X, this.Owner.Transform.WorldTranslation.Y + position.Y, 5.0));
             
             bullet.RigidBody.Velocity += mouseDirection * this.BulletSpeed * this.GameSession.GameVars.HasUpgrade_BulletSpeed + this.Owner.Parent.RigidBody.Velocity;
             

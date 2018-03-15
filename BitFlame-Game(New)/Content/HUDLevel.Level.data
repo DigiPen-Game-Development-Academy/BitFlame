@@ -145,9 +145,8 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [5.3383131, -0.326684088, 76.6641922],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
-		},
+
+			Vec3 Translation = [-12.5023298, -0.108790874, 75.2629089],
 		Camera = 
 		{
 			ProjectionMode ProjectionMode = Orthographic,
@@ -157,6 +156,7 @@ Level =
 			float NearPlane = 0.5,
 			float FarPlane = 500,
 			float Size = 30.1194859,
+
 		},
 		EditorCameraController = 
 		{
@@ -318,6 +318,20 @@ Level =
 				OxygenGauge = 
 				{
 					float DecaySpeed = 5,
+				},
+				FlashWhenLow = 
+				{
+					float FlashNumber = 25,
+					Vec4 FlashColor = [1, 0, 0, 1],
+					float FlashTime = 0.100000001,
+				},
+				PopUpTextController = 
+				{
+					Enum PopUpType = Beep,
+					string ExplosionText = "5a4b19e75b1fc931:ExplosionText",
+					string BumpText1 = "5a4b19d058d6c4cc:BumpText1",
+					string BumpText2 = "",
+					string BeepText = "5a4b19fe5a609760:BeepText",
 				},
 				Hierarchy = 
 				{

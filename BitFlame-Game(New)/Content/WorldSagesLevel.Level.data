@@ -147,7 +147,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-1.62098694, 33.0012321, 51.1452789],
+			Vec3 Translation = [-1.20815718, -0.316332161, 51.1452789],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -159,7 +159,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 100,
+			float Size = 14.9568968,
 		},
 		EditorCameraController = 
 		{
@@ -167,7 +167,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-1.62098694, 33.0012321, 1.14527774],
+			Vec3 LookTarget = [-1.20815718, -0.316332161, 1.14527786],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -280,7 +280,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a018714cc9e515a:Ship_Sprite",
+			string SpriteSource = "5a7f7704a122849c:Ship Destruction Stage_0",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -331,6 +331,13 @@ Level =
 				CogPathPreference PathPreference2 = Absolute,
 			},
 		},
+		Ship_ChangeSprite = 
+		{
+			string ShipRepairStage1Sprite = "5a7f7704a1203bab:Ship Destruction Stage_1",
+			string ShipRepairStage2Sprite = "5a7f7704a12023db:Ship Destruction Stage_2",
+			string ShipRepairStage3Sprite = "5a7f7704a121fdff:Ship Destruction Stage_3",
+			string ShipRepairStage4Sprite = "5a7f7704a121e43d:Ship Destruction Stage_4",
+		},
 		Hierarchy = 
 		{
 			Cog = 
@@ -341,7 +348,7 @@ Level =
 				},
 				Named = 
 				{
-					string Name = "OxygenPipe",
+					string Name = "OxygenPipestart",
 				},
 				Transform = 
 				{
@@ -373,13 +380,13 @@ Level =
 					bool SendsMessages = true,
 					bool Seamless = true,
 					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-					string SerializedGroupName = "5afe7246baab9a7b:OxygenOriginCollisionGroup",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 					Vec3 Offset = [0, 0, 0],
 					Vec3 Size = [0.5, 0.5, 0.5],
 				},
 				OxygenPipe_Function = 
 				{
-					int ConnectingRange = 100,
+					int ConnectingRange = 144,
 					bool Origin = true,
 					CogPath Ship = 
 					{
@@ -421,11 +428,6 @@ Level =
 						{
 							string Name = "Oxygen_Field",
 						},
-						EditorFlags = 
-						{
-							bool Locked = true,
-							bool Hidden = false,
-						},
 					},
 				},
 			},
@@ -433,56 +435,20 @@ Level =
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5a7411b441710034:ChargingEnemy",
+		string Name = "5a7f4db494e9d95c:Cursor",
 		LinkId = 
 		{
 			uint Id = 8,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-30.9517002, 39.890995, 1.14527893],
-			Vec3 Scale = [1.5, 1.5, 1],
+			Vec3 Translation = [3.67933464, 1.4502306, 1.14527893],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
 		{
-			string Name = "ChargingEnemy",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5a7411b441710034:ChargingEnemy",
-		LinkId = 
-		{
-			uint Id = 9,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [35.7805901, 44.4185562, 1.14527893],
-			Vec3 Scale = [1.5, 1.5, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "ChargingEnemy",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5a7411b441710034:ChargingEnemy",
-		LinkId = 
-		{
-			uint Id = 10,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [40.7018547, -1.64444351, 1.14527893],
-			Vec3 Scale = [1.5, 1.5, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "ChargingEnemy",
+			string Name = "Cursor",
 		},
 	},
 },
