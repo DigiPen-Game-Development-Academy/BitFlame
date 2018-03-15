@@ -144,7 +144,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-12.5023298, -0.108790874, 75.2629089],
+			Vec3 Translation = [-7.66474628, -0.697041273, 75.9918976],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0.0339424238, -0.0705855936, -0.00240323599, 0.996925175],
 		},
@@ -156,7 +156,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 33.2871704,
+			float Size = 22.0463333,
 		},
 		EditorCameraController = 
 		{
@@ -164,7 +164,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0.0680679306,
 			float HorizontalAngle = 0.141370669,
-			Vec3 LookTarget = [-5.47363186, -3.50955987, 25.8763485],
+			Vec3 LookTarget = [-0.636048079, -4.09781027, 26.6053352],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -586,7 +586,7 @@ Level =
 						},
 						Transform = 
 						{
-							Vec3 Translation = [0.465848207, 0.981614709, 0.309148788],
+							Vec3 Translation = [0.111410379, 0.98906976, 0.309148788],
 							Vec3 Scale = [0.224999994, 0.224999994, 0.375896096],
 							Quat Rotation = [0, 0, 0, 1],
 						},
@@ -604,12 +604,12 @@ Level =
 							BlendMode BlendMode = Alpha,
 							SpriteGeometryMode GeometryMode = ZPlane,
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string FontName = "57343753bb4eaaec:NotoSans-Regular",
-							uint FontSize = 101,
+							string FontName = "5a075f32e7b83df0:GameFont",
+							uint FontSize = 150,
 							string Text = "0",
-							TextAlign Align = Right,
-							float PixelsPerUnit = 64,
-							bool Smoothing = true,
+							TextAlign Align = Center,
+							float PixelsPerUnit = 100,
+							bool Smoothing = false,
 						},
 					},
 					Cog = 
@@ -624,7 +624,7 @@ Level =
 						},
 						Transform = 
 						{
-							Vec3 Translation = [0.464764357, -0.582702041, 0.297020912],
+							Vec3 Translation = [0.1165483, -0.582702041, 0.297020912],
 							Vec3 Scale = [0.224999994, 0.224999994, 0.375896096],
 							Quat Rotation = [0, 0, 0, 1],
 						},
@@ -638,12 +638,12 @@ Level =
 							BlendMode BlendMode = Alpha,
 							SpriteGeometryMode GeometryMode = ZPlane,
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string FontName = "4e7bac697bec55c5:Verdana",
-							uint FontSize = 100,
+							string FontName = "5a075f32e7b83df0:GameFont",
+							uint FontSize = 150,
 							string Text = "0",
-							TextAlign Align = Right,
-							float PixelsPerUnit = 64,
-							bool Smoothing = true,
+							TextAlign Align = Center,
+							float PixelsPerUnit = 100,
+							bool Smoothing = false,
 						},
 						SetXToVariable = 
 						{
@@ -665,7 +665,7 @@ Level =
 						},
 						Transform = 
 						{
-							Vec3 Translation = [0.464764357, 0.588594437, 0.297020912],
+							Vec3 Translation = [0.111410379, 0.602182627, 0.309148788],
 							Vec3 Scale = [0.224999994, 0.224999994, 0.375896096],
 							Quat Rotation = [0, 0, 0, 1],
 						},
@@ -679,12 +679,12 @@ Level =
 							BlendMode BlendMode = Alpha,
 							SpriteGeometryMode GeometryMode = ZPlane,
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string FontName = "4e7bac697bec55c5:Verdana",
-							uint FontSize = 100,
+							string FontName = "5a075f32e7b83df0:GameFont",
+							uint FontSize = 150,
 							string Text = "0",
-							TextAlign Align = Right,
-							float PixelsPerUnit = 64,
-							bool Smoothing = true,
+							TextAlign Align = Center,
+							float PixelsPerUnit = 100,
+							bool Smoothing = false,
 						},
 						SetXToVariable = 
 						{
@@ -703,7 +703,7 @@ Level =
 						},
 						Transform = 
 						{
-							Vec3 Translation = [0.464764357, -0.195250392, 0.297020912],
+							Vec3 Translation = [0.1165483, -0.195250392, 0.297020912],
 							Vec3 Scale = [0.224999994, 0.224999994, 0.375896096],
 							Quat Rotation = [0, 0, 0, 1],
 						},
@@ -717,12 +717,12 @@ Level =
 							BlendMode BlendMode = Alpha,
 							SpriteGeometryMode GeometryMode = ZPlane,
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string FontName = "4e7bac697bec55c5:Verdana",
-							uint FontSize = 100,
+							string FontName = "5a075f32e7b83df0:GameFont",
+							uint FontSize = 150,
 							string Text = "0",
-							TextAlign Align = Right,
-							float PixelsPerUnit = 64,
-							bool Smoothing = true,
+							TextAlign Align = Center,
+							float PixelsPerUnit = 100,
+							bool Smoothing = false,
 						},
 						SetXToVariable = 
 						{
@@ -741,7 +741,7 @@ Level =
 						},
 						Transform = 
 						{
-							Vec3 Translation = [0.464764357, 0.201094449, 0.297020912],
+							Vec3 Translation = [0.1165483, 0.201094449, 0.297020912],
 							Vec3 Scale = [0.224999994, 0.224999994, 0.375896096],
 							Quat Rotation = [0, 0, 0, 1],
 						},
@@ -755,12 +755,12 @@ Level =
 							BlendMode BlendMode = Alpha,
 							SpriteGeometryMode GeometryMode = ZPlane,
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string FontName = "4e7bac697bec55c5:Verdana",
-							uint FontSize = 100,
+							string FontName = "5a075f32e7b83df0:GameFont",
+							uint FontSize = 150,
 							string Text = "0",
-							TextAlign Align = Right,
-							float PixelsPerUnit = 64,
-							bool Smoothing = true,
+							TextAlign Align = Center,
+							float PixelsPerUnit = 100,
+							bool Smoothing = false,
 						},
 						SetXToVariable = 
 						{
