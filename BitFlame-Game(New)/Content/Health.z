@@ -44,7 +44,7 @@ class Health : ZilchComponent
             //this.Space.DispatchEvent(Events.BlockUpdate, blockUpdate);
             
             this.Space.SoundSpace.PlayCue(this.ExplosionSound);
-            this.Owner.DispatchEvent(Events.PreDestroy, ZilchEvent());
+            //this.Owner.DispatchEvent(Events.PreDestroy, ZilchEvent());
             this.Owner.Destroy();
         }
     }
