@@ -6,7 +6,7 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "Crab Enemy",
+		string Name = "Enemy",
 	},
 	Archetyped = 
 	{
@@ -91,6 +91,14 @@ Cog =
 	{
 		int Damage = 1,
 		string PlayerDamagedSound = "5ae3cf4fa125c756:Player-Damaged",
+	},
+	PopUpTextController = 
+	{
+		Enum PopUpType = Explosion,
+		string ExplosionText = "5a4b19e75b1fc931:ExplosionText",
+		string BumpText1 = "",
+		string BumpText2 = "",
+		string BeepText = "",
 	},
 	Hierarchy = 
 	{

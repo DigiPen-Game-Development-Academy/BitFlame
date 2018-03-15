@@ -98,4 +98,12 @@ Cog =
 		Vec3 Offset = [0, 0, 0],
 		string MeshName = "5a87a1f867e1df0a:ChargingEnemyCollisionMesh",
 	},
+	PopUpTextController = 
+	{
+		Enum PopUpType = Explosion,
+		string ExplosionText = "5a4b19e75b1fc931:ExplosionText",
+		string BumpText1 = "",
+		string BumpText2 = "",
+		string BeepText = "",
+	},
 },
