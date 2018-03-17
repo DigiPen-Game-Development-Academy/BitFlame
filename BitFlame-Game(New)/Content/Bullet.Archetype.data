@@ -89,13 +89,10 @@ Cog =
 		bool EnemyBullet = false,
 		string PlayerDamagedSound = "",
 	},
-	DestroyOffscreen = 
-	{
-	},
 	SpriteParticleSystem = 
 	{
 		bool Visible = true,
-		bool VisibilityCulling = true,
+		bool VisibilityCulling = false,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
 		SystemChildMode ChildMode = Independent,
@@ -154,5 +151,9 @@ Cog =
 	Bullet_Trailing_Script = 
 	{
 		float SpawnSpeed = 0.200000003,
+	},
+	DestroyAwayFromPlayer = 
+	{
+		float DistanceToDespawn = 60,
 	},
 },

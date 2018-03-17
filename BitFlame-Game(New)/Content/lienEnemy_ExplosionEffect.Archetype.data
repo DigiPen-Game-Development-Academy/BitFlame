@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [19.9884205, 15.0804644, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -47,8 +47,8 @@ Cog =
 		float EmitVariance = 0,
 		float Size = 1,
 		float SizeVariance = 0,
-		float Lifetime = 0.5,
-		float LifetimeVariance = 0.200000003,
+		float Lifetime = 0.400000006,
+		float LifetimeVariance = 0.100000001,
 		float Spin = 0,
 		float SpinVariance = 50,
 		bool RandomSpin = true,
@@ -58,7 +58,7 @@ Cog =
 		Vec3 RandomVelocity = [0.25, 0.25, 0.25],
 		Vec3 TangentVelocity = [0, 0, 0],
 		Vec3 EmitterSize = [0, 0, 0],
-		bool FastMovingEmitter = false,
+		bool FastMovingEmitter = true,
 	},
 	LinearParticleAnimator = 
 	{
@@ -96,7 +96,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0, 0, -1.25],
+				Vec3 Translation = [0, 0, 0],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -172,7 +172,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0, 0, -1.25],
+				Vec3 Translation = [0, 0, 0],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
