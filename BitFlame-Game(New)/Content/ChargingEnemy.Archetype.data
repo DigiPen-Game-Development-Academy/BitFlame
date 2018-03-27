@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [29.8381748, 12.3980999, 0],
 		Vec3 Scale = [1.5, 1.5, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -49,7 +49,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = false,
-		bool Mode2D = false,
+		bool Mode2D = true,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -106,5 +106,26 @@ Cog =
 		string BumpText1 = "",
 		string BumpText2 = "",
 		string BeepText = "",
+	},
+	Hierarchy = 
+	{
+		ArchetypeInstance = 
+		{
+			string Name = "5a5b3e55522cefba:ChargingEnemyJetpack",
+			LinkId = 
+			{
+				uint Id = 2,
+			},
+			Transform = 
+			{
+				Vec3 Translation = [0, 0, -1],
+				Vec3 Scale = [0.666666687, 0.666666687, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Named = 
+			{
+				string Name = "ChargingEnemyJetpack",
+			},
+		},
 	},
 },
