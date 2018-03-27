@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0.100000001],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -409,11 +409,6 @@ Cog =
 			{
 				string Name = "Space",
 			},
-			EditorFlags = 
-			{
-				bool Locked = true,
-				bool Hidden = false,
-			},
 			Transform = 
 			{
 				Vec3 Translation = [0, 0, -10],
@@ -437,6 +432,10 @@ Cog =
 				bool AnimationActive = true,
 				float AnimationSpeed = 1,
 				uint StartFrame = 0,
+			},
+			GoOppositeWayThatKeyGoes = 
+			{
+				float Offset = 0.00499999989,
 			},
 		},
 		Cog = 
@@ -514,6 +513,10 @@ Cog =
 				Vec4 Color3 = [1, 1, 1, 1],
 				Vec4 Color4 = [1, 1, 1, 0],
 			},
+			GoOppositeWayThatKeyGoes = 
+			{
+				float Offset = 1,
+			},
 		},
 		Cog = 
 		{
@@ -589,6 +592,10 @@ Cog =
 				Vec4 Color2 = [1, 0.979699969, 0.710000038, 1],
 				Vec4 Color3 = [1, 0.979699969, 0.710000038, 1],
 				Vec4 Color4 = [1, 0.979699969, 0.710000038, 1],
+			},
+			GoOppositeWayThatKeyGoes = 
+			{
+				float Offset = 1,
 			},
 		},
 	},

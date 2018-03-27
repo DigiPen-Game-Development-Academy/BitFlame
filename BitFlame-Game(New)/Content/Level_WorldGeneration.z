@@ -9,6 +9,8 @@ Brief: This Component will generate a random world when initialized.
 
 class Level_WorldGeneration : ZilchComponent
 {
+    [Property] var Enabled : Boolean = true;
+    
     [Property] var Asteroid_01Archetype : Archetype = null;
     
     [Property] var Asteroid_02Archetype : Archetype = null;
@@ -47,7 +49,8 @@ class Level_WorldGeneration : ZilchComponent
     function Initialize(init : CogInitializer)
     {
       Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-      this.BuildWorld();
+      if(this.Enabled)
+        this.BuildWorld();
     }
 
     function OnLogicUpdate(event : UpdateEvent)
@@ -70,12 +73,12 @@ class Level_WorldGeneration : ZilchComponent
             for(currentX = -this.MaxX; currentX <= this.MaxX; currentX += this.SpawnCellwidth)
             {  
                 //if within empty range, skip this iteration
-                if((currentX <= this.EmptyRange && currentX >= -this.EmptyRange) && (currentY <= this.EmptyRange && currentY >= -this.EmptyRange))
+                if((-this.EmptyRange < currentX && currentX < this.EmptyRange) && (-this.EmptyRange < currentY && currentY < this.EmptyRange))
                 {
                     continue;
                 } 
                 //if within safe range, set safe bool to true
-                if((currentX <= this.SafeRange && currentX >= -this.SafeRange) && (currentY <= this.SafeRange && currentY >= -this.SafeRange))
+                if((-this.SafeRange < currentX && currentX < this.SafeRange) && (-this.SafeRange < currentY && currentY < this.SafeRange))
                 {
                     safe = true;
                 } 
@@ -136,7 +139,6 @@ class Level_WorldGeneration : ZilchComponent
             }
         }
     }
-    
 }
 
 //this class contains the level regenerate function, put it on the player.

@@ -1,9 +1,9 @@
 /**
-Filename: BlockUpdateEvent .z
+Filename: customUpdateEvents.z
 Author: Jakob McFarland
 Contributors: NULL
-Last modified: 2/24/2018
-Brief: This script is the definition of the block update event
+Last modified: 3/27/2018
+Brief: This script stores the definitions of some custom events
 ******************************************/
  class BlockUpdate : ZilchEvent
  {  
@@ -13,3 +13,10 @@ Brief: This script is the definition of the block update event
     //this var stores the location that the block update occured at, important for optomization
     var Translation : Real3 = Real3(0, 0, 0);
 }
+
+class PlayerHurtUpdate : ZilchEvent
+{  
+    //player hurt update event
+    sends PlayerHurtUpdate : ZilchEvent;
+}
+
