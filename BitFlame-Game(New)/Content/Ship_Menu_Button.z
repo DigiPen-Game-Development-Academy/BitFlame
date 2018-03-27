@@ -115,7 +115,6 @@ class Ship_Menu_Button_Function : ZilchComponent
         {
             this.GameSession.GameVars.DestroyRespawnMenu = true;
             //return;
-            Console.WriteLine("SETS VAR TO DESTROY MENU");
         }
         
         if(this.ChangeLevel == true)
