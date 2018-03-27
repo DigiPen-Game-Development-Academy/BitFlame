@@ -6,11 +6,11 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "AlienEnemy_ExplosionEffect",
+		string Name = "ChargingEnemy_ExplosionEffect",
 	},
 	Archetyped = 
 	{
-		string Name = "5af4a586aa6a35b5:lienEnemy_ExplosionEffect",
+		string Name = "5a5b01f486549f9d:ChargingEnemy_ExplosionEffect",
 	},
 	Transform = 
 	{
@@ -42,10 +42,10 @@ Cog =
 	SphericalParticleEmitter = 
 	{
 		bool Active = true,
-		uint EmitCount = 5,
+		uint EmitCount = 10,
 		float EmitRate = 50000,
 		float EmitVariance = 0,
-		float Size = 1,
+		float Size = 2,
 		float SizeVariance = 0,
 		float Lifetime = 0.400000006,
 		float LifetimeVariance = 0.100000001,
@@ -55,7 +55,7 @@ Cog =
 		float Fill = 1,
 		float EmitterVelocityPercent = 0,
 		Vec3 StartVelocity = [0, 0, 0],
-		Vec3 RandomVelocity = [0.25, 0.25, 0.25],
+		Vec3 RandomVelocity = [0.5, 0.5, 0.5],
 		Vec3 TangentVelocity = [0, 0, 0],
 		Vec3 EmitterSize = [0, 0, 0],
 		bool FastMovingEmitter = true,
@@ -124,10 +124,10 @@ Cog =
 			SphericalParticleEmitter = 
 			{
 				bool Active = true,
-				uint EmitCount = 1,
+				uint EmitCount = 2,
 				float EmitRate = 50000,
 				float EmitVariance = 0,
-				float Size = 1,
+				float Size = 2,
 				float SizeVariance = 0,
 				float Lifetime = 1.5,
 				float LifetimeVariance = 0.5,
@@ -172,7 +172,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0, 0, -1],
+				Vec3 Translation = [0, 0, 1],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -200,10 +200,10 @@ Cog =
 			SphericalParticleEmitter = 
 			{
 				bool Active = true,
-				uint EmitCount = 3,
+				uint EmitCount = 4,
 				float EmitRate = 50000,
 				float EmitVariance = 0,
-				float Size = 1.25,
+				float Size = 2,
 				float SizeVariance = 0,
 				float Lifetime = 1.5,
 				float LifetimeVariance = 0.5,
@@ -248,7 +248,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0, 0, -1],
+				Vec3 Translation = [0, 0, 1],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -276,10 +276,10 @@ Cog =
 			SphericalParticleEmitter = 
 			{
 				bool Active = true,
-				uint EmitCount = 1,
+				uint EmitCount = 2,
 				float EmitRate = 50000,
 				float EmitVariance = 0,
-				float Size = 1.5,
+				float Size = 2,
 				float SizeVariance = 0,
 				float Lifetime = 1.5,
 				float LifetimeVariance = 0.5,
@@ -324,7 +324,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0, 0, 1],
+				Vec3 Translation = [0, 0, -1],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -352,10 +352,10 @@ Cog =
 			SphericalParticleEmitter = 
 			{
 				bool Active = true,
-				uint EmitCount = 2,
+				uint EmitCount = 1,
 				float EmitRate = 50000,
 				float EmitVariance = 0,
-				float Size = 1,
+				float Size = 2,
 				float SizeVariance = 0,
 				float Lifetime = 1.5,
 				float LifetimeVariance = 0.5,
@@ -428,10 +428,10 @@ Cog =
 			SphericalParticleEmitter = 
 			{
 				bool Active = true,
-				uint EmitCount = 2,
+				uint EmitCount = 1,
 				float EmitRate = 50000,
 				float EmitVariance = 0,
-				float Size = 1,
+				float Size = 2,
 				float SizeVariance = 0,
 				float Lifetime = 1.5,
 				float LifetimeVariance = 0.5,
@@ -441,7 +441,7 @@ Cog =
 				float Fill = 1,
 				float EmitterVelocityPercent = 0,
 				Vec3 StartVelocity = [0, 0, 0],
-				Vec3 RandomVelocity = [10, 10, 0],
+				Vec3 RandomVelocity = [10, 12, 0],
 				Vec3 TangentVelocity = [5, 5, 5],
 				Vec3 EmitterSize = [0, 0, 0],
 				bool FastMovingEmitter = false,
@@ -504,10 +504,10 @@ Cog =
 			SphericalParticleEmitter = 
 			{
 				bool Active = true,
-				uint EmitCount = 15,
+				uint EmitCount = 20,
 				float EmitRate = 10000,
 				float EmitVariance = 0,
-				float Size = 1,
+				float Size = 2,
 				float SizeVariance = 0.25,
 				float Lifetime = 2,
 				float LifetimeVariance = 0.5,

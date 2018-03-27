@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [29.8381748, 12.3980999, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1.5, 1.5, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -49,7 +49,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = false,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -62,7 +62,7 @@ Cog =
 	{
 		float Health = 5,
 		string ArchetypetoSpawnOnDeath1 = "5a70715bb5c81bfe:Game_OxygenOre_Pickup",
-		string ArchetypetoSpawnOnDeath2 = "5af4a586aa6a35b5:lienEnemy_ExplosionEffect",
+		string ArchetypetoSpawnOnDeath2 = "5a5b01f486549f9d:ChargingEnemy_ExplosionEffect",
 		string ExplosionSound = "5ae3cf4fa1248b1b:Enemy_Explosion",
 		bool Unbreakable = false,
 	},
