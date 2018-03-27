@@ -1,8 +1,0 @@
-TextContent = 
-{
-	ZilchScriptBuilder = 
-	{
-		string Name = "SliderController",
-		uint64 ResourceId = 5ac11524edfb9475,
-	},
-},

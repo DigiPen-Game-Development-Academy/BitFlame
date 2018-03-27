@@ -1,8 +1,0 @@
-TextContent = 
-{
-	ZilchScriptBuilder = 
-	{
-		string Name = "SoundModulator",
-		uint64 ResourceId = 5ac103e6b87d7108,
-	},
-},
