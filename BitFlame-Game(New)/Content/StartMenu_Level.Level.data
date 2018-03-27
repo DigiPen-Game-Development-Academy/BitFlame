@@ -107,7 +107,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-1.45451784, 7.6993475, 50],
+			Vec3 Translation = [-1.73280752, -1.15874124, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -119,7 +119,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 16.529911,
+			float Size = 22.7447987,
 		},
 		EditorCameraController = 
 		{
@@ -127,7 +127,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-1.45451784, 7.6993475, -4.17912958e-08],
+			Vec3 LookTarget = [-1.73280752, -1.15874124, -5.39556488e-08],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -242,6 +242,7 @@ Level =
 			Vec3 NewCameraPosition = [0, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			bool ChangeLevel = true,
 			string LevelToChangeTo = "554cea0f94af672f:MainLevel",
 			bool Respawn = false,
 			bool Quit = false,
@@ -357,9 +358,10 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
-			Vec3 NewCameraPosition = [30, 0, 0],
+			Vec3 NewCameraPosition = [-30, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			bool ChangeLevel = false,
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
@@ -478,6 +480,7 @@ Level =
 			Vec3 NewCameraPosition = [30, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			bool ChangeLevel = false,
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
@@ -591,6 +594,7 @@ Level =
 			Vec3 NewCameraPosition = [0, -30, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			bool ChangeLevel = false,
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
@@ -844,6 +848,7 @@ Level =
 			Vec3 NewCameraPosition = [0, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			bool ChangeLevel = false,
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
@@ -962,6 +967,7 @@ Level =
 			Vec3 NewCameraPosition = [0, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			bool ChangeLevel = false,
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
@@ -1182,6 +1188,7 @@ Level =
 			Vec3 NewCameraPosition = [0, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = true,
+			bool ChangeLevel = false,
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = true,
@@ -1340,6 +1347,7 @@ Level =
 			Vec3 NewCameraPosition = [0, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			bool ChangeLevel = false,
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
@@ -1453,7 +1461,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 8.5, 0],
+			Vec3 Translation = [0, 6.71506405, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1487,7 +1495,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.100000001, 8.40000057, 0],
+			Vec3 Translation = [-0.100000001, 6.61506462, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1521,7 +1529,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.200000003, 8.30000019, 0],
+			Vec3 Translation = [-0.200000003, 6.51506424, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
