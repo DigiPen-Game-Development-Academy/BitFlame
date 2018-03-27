@@ -4,6 +4,8 @@ class SetXToVariable : ZilchComponent
 {
     [Property] var Type : DisplayType;
     
+     var PrevIron : Integer;
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -15,6 +17,14 @@ class SetXToVariable : ZilchComponent
         {
             this.Owner.SpriteText.Text = "`this.GameSession.GameVars.PlayerResources`";
             
+            if(this.GameSession.GameVars.PlayerResources > this.PrevIron)
+            {
+            
+                //TODO add action animation for resource collection
+            
+            }
+        
+            this.PrevIron = this.GameSession.GameVars.PlayerResources;
         }
         
         if(this.Type == DisplayType.Copper && this.Owner.SpriteText != null)

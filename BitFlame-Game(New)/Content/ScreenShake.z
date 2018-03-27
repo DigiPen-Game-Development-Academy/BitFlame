@@ -1,0 +1,37 @@
+class ScreenShake : ZilchComponent
+{
+    [Dependency] var Transform : Transform;
+    
+    var Active : Boolean = false;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.PlayerHurtUpdate, this.OnPlayerHurtUpdate);
+    }
+
+    function OnPlayerHurtUpdate(event : ZilchEvent)
+    {
+        if(this.Active)
+        {
+            this.Active = true;
+            this.StartScreenShake();
+        }
+    }
+
+    function StartScreenShake()
+    {
+        var seq = Action.Sequence(this.Owner.Actions);
+        
+        var translation = this.Transform.Translation;
+        
+        var random : Random = Random();
+
+        Action.Property(seq, @this.Owner.Transform.Translation, translation + Real3(random.Range(-1, 0.5), random.Range(-0.5, 0.5), random.Range(-0.5, 0.5)), 0.1, Ease.Linear);
+        
+        Action.Property(seq, @this.Owner.Transform.Translation, translation + Real3(random.Range(-0.5, 0.5), random.Range(-0.5, 0.5), random.Range(-0.5, 0.5)), 0.1, Ease.Linear);
+        
+        Action.Property(seq, @this.Owner.Transform.Translation, translation, 0.1, Ease.Linear);
+        
+        Action.Property(seq, @this.Active, false, 0, Ease.Linear);
+    }
+}
