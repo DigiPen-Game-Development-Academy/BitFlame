@@ -195,7 +195,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [8.0147562, 3.625283, 50],
+			Vec3 Translation = [4.3529191, 9.2820425, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -207,7 +207,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 14.7781019,
+			float Size = 4.45108271,
 		},
 		EditorCameraController = 
 		{
@@ -215,7 +215,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [8.0147562, 3.625283, 3.29393885e-07],
+			Vec3 LookTarget = [4.3529191, 9.2820425, 2.0608806e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -422,6 +422,183 @@ Level =
 		Named = 
 		{
 			string Name = "Cursor",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a74699494525886:AlienCrabEnemy",
+		LinkId = 
+		{
+			uint Id = 12,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [11.0817556, 7.93896437, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 13,
+		},
+		Named = 
+		{
+			string Name = "Bullet",
+		},
+		Archetyped = 
+		{
+			string Name = "5a1c3c0e55b6fbd1:Bullet",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [4.25721169, 9.46351528, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.53725493, 1, 0.968627512, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a5b2803b94a337c:Grayscale Laser (1)",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		RigidBody = 
+		{
+			bool Static = false,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = false,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
+		IgnoreSpaceEffects = 
+		{
+			bool Drag = true,
+			bool Flow = false,
+			bool Force = false,
+			bool Gravity = true,
+			bool Thrust = false,
+			bool Vortex = false,
+			bool Wind = false,
+			bool Invalid = false,
+			bool Torque = false,
+			bool PointGravity = false,
+			bool PointForce = false,
+			bool Buoyancy = false,
+			bool Custom = false,
+		},
+		Orientation = 
+		{
+			Vec3 GlobalUp = [0, 0, 1],
+			Vec3 UpVector = [0, 0, 1],
+			Vec3 ForwardVector = [1, 0, 0],
+			OrientationBases DefaultBases = ForwardXUpZ,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+		DamageOnHit = 
+		{
+			string ArchetypetoSpawnOnDamage = "",
+			float Damage = 0.25,
+			bool Penatrating = false,
+			bool EnemyBullet = false,
+			string PlayerDamagedSound = "",
+		},
+		SpriteParticleSystem = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = false,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			SystemChildMode ChildMode = Independent,
+			SystemSpace SystemSpace = WorldSpace,
+			uint DrawOrder = 0,
+			Vec4 Tint = [0.533333361, 0.623529434, 1, 1],
+			float WarmUpTime = 0,
+			ParticleGeometry GeometryMode = Billboarded,
+			ParticleRenderMode RenderMode = Additive,
+			ParticleSortMode SortMode = Youngest,
+			ParticleAnimation ParticleAnimation = Single,
+			string Texture = "5275aa4d802dd6dc:Square",
+			float VelocityScale = 1,
+			float LengthScale = 1,
+			float MaxParticleSize = 100,
+			Vec3 SystemSize = [4, 4, 4],
+		},
+		BoxParticleEmitter = 
+		{
+			bool Active = true,
+			uint EmitCount = 0,
+			float EmitRate = 50,
+			float EmitVariance = 10,
+			float Size = 0.100000001,
+			float SizeVariance = 0.100000001,
+			float Lifetime = 0.5,
+			float LifetimeVariance = 0.100000001,
+			float Spin = 150,
+			float SpinVariance = 50,
+			bool RandomSpin = true,
+			float Fill = 1,
+			float EmitterVelocityPercent = 5,
+			Vec3 StartVelocity = [0, 0, 0],
+			Vec3 RandomVelocity = [1, 1, 0],
+			Vec3 TangentVelocity = [0, 0, 0],
+			Vec3 EmitterSize = [0, 0, 0],
+			bool FastMovingEmitter = true,
+		},
+		ParticleColorAnimator = 
+		{
+			Vec4 Color0 = [0.635294139, 0.749019504, 1, 1],
+			Vec4 Color1 = [0.635294139, 0.749019444, 1, 1],
+			Vec4 Color2 = [0.635294139, 0.749019444, 1, 1],
+			Vec4 Color3 = [0.635294139, 0.749019444, 1, 1],
+			Vec4 Color4 = [0.635294139, 0.749019444, 1, 1],
+		},
+		LinearParticleAnimator = 
+		{
+			Vec3 Force = [0, 0, 0],
+			Vec3 RandomForce = [0, 0, 0],
+			float Torque = 0,
+			float Growth = 0,
+			float Dampening = 0,
+			Vec3 Twist = [0, 0, 0],
+		},
+		Bullet_Trailing_Script = 
+		{
+			float SpawnSpeed = 0.200000003,
+		},
+		DestroyAwayFromPlayer = 
+		{
+			float DistanceToDespawn = 60,
 		},
 	},
 },

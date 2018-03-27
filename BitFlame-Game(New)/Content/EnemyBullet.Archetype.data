@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [12.727458, 7.66889763, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -24,11 +24,11 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [0.375, 0.375, 0.375, 1],
+		Vec4 Color = [1, 0, 0, 1],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5ae45e224cd3009f:Laser_Sprite2",
+		string SpriteSource = "5a5b2803b94a337c:Grayscale Laser (1)",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -42,7 +42,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = false,
-		bool Mode2D = false,
+		bool Mode2D = true,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -83,6 +83,7 @@ Cog =
 	},
 	DamageOnHit = 
 	{
+		string ArchetypetoSpawnOnDamage = "",
 		float Damage = 1,
 		bool Penatrating = false,
 		bool EnemyBullet = true,
@@ -106,7 +107,7 @@ Cog =
 		ParticleRenderMode RenderMode = Additive,
 		ParticleSortMode SortMode = Youngest,
 		ParticleAnimation ParticleAnimation = Single,
-		string Texture = "5586f579ca73ecc2:SquareBordered",
+		string Texture = "5275aa4d802dd6dc:Square",
 		float VelocityScale = 1,
 		float LengthScale = 1,
 		float MaxParticleSize = 100,
