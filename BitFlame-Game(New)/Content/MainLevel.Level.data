@@ -98,6 +98,7 @@ Level =
 		},
 		Level_WorldGeneration = 
 		{
+			bool Enabled = true,
 			string Asteroid_01Archetype = "5af8a0083b2d1bfe:AsteroidConfig3",
 			string Asteroid_02Archetype = "5af8dc36cf41e70a:AsteroidConfig4",
 			string EnemyArchetype = "5a74699494525886:AlienCrabEnemy",
@@ -155,7 +156,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.429727107, 1.82194805, 94.0999985],
+			Vec3 Translation = [-3.71931934, -1.63485873, 94.0999985],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -167,7 +168,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 74.08181,
+			float Size = 24.9131775,
 		},
 		EditorCameraController = 
 		{
@@ -175,7 +176,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.429727107, 1.82194805, 44.0999985],
+			Vec3 LookTarget = [-3.71931934, -1.63485873, 44.0999985],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -285,7 +286,11 @@ Level =
 		string Name = "5a1c06ab2df03606:Player",
 		LinkId = 
 		{
+<<<<<<< HEAD
 			uint Id = 3,
+=======
+			uint Id = 6,
+>>>>>>> 6a840478864ee4a1bb4232a7f1f29792c8ed7b20
 		},
 		Transform = 
 		{
@@ -303,7 +308,11 @@ Level =
 		string Name = "5a7f4db494e9d95c:Cursor",
 		LinkId = 
 		{
+<<<<<<< HEAD
 			uint Id = 6,
+=======
+			uint Id = 7,
+>>>>>>> 6a840478864ee4a1bb4232a7f1f29792c8ed7b20
 		},
 		Transform = 
 		{

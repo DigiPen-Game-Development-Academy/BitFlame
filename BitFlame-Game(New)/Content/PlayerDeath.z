@@ -2,7 +2,7 @@
 Filename: PlayerDeath.z
 Author: Jakob McFarland
 Contributors: Luke Taranowski
-Last modified: 2/22/2018
+Last modified: 3/27/2018
 Brief: This Component will cause the owner to teleport back to origin when their health or oxygen = 0
 ******************************************/
     
@@ -65,7 +65,6 @@ class PlayerDeath : ZilchComponent
                 
                 
                 this.GameSession.GameVars.DestroyRespawnMenu = false;
-                Console.WriteLine(this.GameSession.GameVars.DestroyRespawnMenu);
                 
                 //respawn the player when the respawn button is pressed - jakob McFarland
                 this.GameSession.GameVars.PlayerHealth = this.GameSession.GameVars.StartingPlayerHealth;
@@ -87,6 +86,9 @@ class PlayerDeath : ZilchComponent
             {
                 this.Timer -= this.TimeInterval;
                 this.GameSession.GameVars.PlayerHealth -= 1;
+                
+                var playerHurtUpdate = PlayerHurtUpdate();
+                this.GameSession.DispatchEvent(Events.PlayerHurtUpdate, playerHurtUpdate);
             }
             this.Timer += event.Dt;
         }
@@ -95,31 +97,65 @@ class PlayerDeath : ZilchComponent
             this.Owner.HealthRegen.Active = true;    
         }
         
-        //if the player has no health or oxygen then their dead, reset their health and oxygen and teleport them to world origin.
+        //if the player has no health or oxygen then they're dead, reset their health and oxygen and teleport them to world origin.
         if (gameVars.PlayerHealth <= 0)
         {  
-            for(var i = 0.0; i < gameVars.PlayerResources; ++i)
+            if(gameVars.PlayerResources > 0)
             {
-                var resource = this.Space.CreateAtPosition(this.IronResource, this.Owner.Transform.Translation);
-                resource.RigidBody.Velocity += Real3(this.RandGen.Range(-1.0, 1.0), this.RandGen.Range(-1.0, 1.0), 0.0);
+                for(var i = 0; i < 2; ++i)
+                {
+                    var resource = this.Space.CreateAtPosition(this.IronResource, this.Owner.Transform.Translation);
+                    resource.RigidBody.Velocity += Real3(this.RandGen.Range(-1.0, 1.0), this.RandGen.Range(-1.0, 1.0), 0.0);
+                    resource.ResourcePickup.PickupValue = gameVars.PlayerResources / 2;
+                    
+                    if(gameVars.PlayerResources % 2 == 1)
+                    {
+                        resource.ResourcePickup.PickupValue += i;
+                    }
+                }
             }
             
-            for(var i = 0.0; i < gameVars.PlayerAluminium; ++i)
-            {
-                var resource = this.Space.CreateAtPosition(this.AluminiumResource, this.Owner.Transform.Translation);
-                resource.RigidBody.Velocity += Real3(this.RandGen.Range(-1.0, 1.0), this.RandGen.Range(-1.0, 1.0), 0.0);
+            if(gameVars.PlayerAluminium > 0)
+            {    
+                for(var i = 0; i < 2; ++i)
+                {
+                    var resource = this.Space.CreateAtPosition(this.AluminiumResource, this.Owner.Transform.Translation);
+                    resource.RigidBody.Velocity += Real3(this.RandGen.Range(-1.0, 1.0), this.RandGen.Range(-1.0, 1.0), 0.0);
+                    resource.AluminiumPickup.PickupValue = gameVars.PlayerAluminium / 2;
+                    
+                    if(gameVars.PlayerAluminium % 2 == 1)
+                    {
+                        resource.AluminiumPickup.PickupValue += i;
+                    }
+                }
             }
-            
-            for(var i = 0.0; i < gameVars.PlayerCopper; ++i)
-            {
-                var resource = this.Space.CreateAtPosition(this.CopperResource, this.Owner.Transform.Translation);
-                resource.RigidBody.Velocity += Real3(this.RandGen.Range(-1.0, 1.0), this.RandGen.Range(-1.0, 1.0), 0.0);
+            if(gameVars.PlayerCopper > 0)
+            {    
+                for(var i = 0; i < 2; ++i)
+                {
+                    var resource = this.Space.CreateAtPosition(this.CopperResource, this.Owner.Transform.Translation);
+                    resource.RigidBody.Velocity += Real3(this.RandGen.Range(-1.0, 1.0), this.RandGen.Range(-1.0, 1.0), 0.0);
+                    resource.CopperPickup.PickupValue = gameVars.PlayerCopper / 2;
+                    
+                    if(gameVars.PlayerCopper % 2 == 1)
+                    {
+                        resource.CopperPickup.PickupValue += i;
+                    }
+                }
             }
-            
-            for(var i = 0.0; i < gameVars.PlayerTitanium; ++i)
-            {
-                var resource = this.Space.CreateAtPosition(this.TitaniumResource, this.Owner.Transform.Translation);
-                resource.RigidBody.Velocity += Real3(this.RandGen.Range(-1.0, 1.0), this.RandGen.Range(-1.0, 1.0), 0.0);
+            if(gameVars.PlayerTitanium > 0)
+            {        
+                for(var i = 0; i < 2; ++i)
+                {
+                    var resource = this.Space.CreateAtPosition(this.TitaniumResource, this.Owner.Transform.Translation);
+                    resource.RigidBody.Velocity += Real3(this.RandGen.Range(-1.0, 1.0), this.RandGen.Range(-1.0, 1.0), 0.0);
+                    resource.TitaniumPickup.PickupValue = gameVars.PlayerTitanium / 2;
+                    
+                    if(gameVars.PlayerTitanium % 2 == 1)
+                    {
+                        resource.TitaniumPickup.PickupValue += i;
+                    }
+                }
             }
             
             gameVars.PlayerResources = 0;
