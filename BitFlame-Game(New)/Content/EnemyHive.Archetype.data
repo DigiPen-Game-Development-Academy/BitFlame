@@ -41,7 +41,7 @@ Cog =
 		float Health = 10,
 		string ArchetypetoSpawnOnDeath1 = "5a08fb7240d5e7ed:ExplosionParticleEffect",
 		string ArchetypetoSpawnOnDeath2 = "5a08cc0da512394f:Game_Upgrade_Pickup",
-		string ExplosionSound = "",
+		string ExplosionSound = "5ae3cf4fa1248b1b:Enemy_Explosion",
 		bool Unbreakable = false,
 	},
 	HiveSpawner = 
@@ -64,6 +64,7 @@ Cog =
 	},
 	Asteroid_Mining = 
 	{
+		string ArchetypetoSpawnOnDamage = "",
 		float DropAmount = 0,
 		float ShrinkAmount = 200,
 		Vec4 AluminiumColor = [0, 0, 0, 1],
