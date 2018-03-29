@@ -71,6 +71,7 @@ class CometMaker : ZilchComponent
                     position.X = Random().Range(-25, 25);
                 }
             }
+            position.Z = -9;
             
             var comet = this.Space.CreateAtPosition(this.Comet, position);
             
