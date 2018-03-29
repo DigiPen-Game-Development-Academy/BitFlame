@@ -6,7 +6,7 @@ Last modified: 2/22/18
 Brief: This Component allows the player to place blocks
 ******************************************/
 
-enum BlockType {Pipe, Turret}
+enum BlockType { Pipe, Turret }
 
 class Player_Block_Placing : ZilchComponent
 {

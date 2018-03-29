@@ -28,7 +28,7 @@ class Player_Hurt_Visual : ZilchComponent
 
     function OnPlayerHurtUpdate(event : ZilchEvent)
     {
-        Console.WriteLine("test");
+        //Console.WriteLine("test");
         
         if(this.Active)
         {

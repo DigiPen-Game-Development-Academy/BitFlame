@@ -28,11 +28,10 @@ class BlockType_Selector_Logic : ZilchComponent
             this.Sprite.Color = this.OrigColor;
     }
 
-    function OnMouseEnter(event : ViewportMouseEvent)
-    {
+    function OnMouseEnter(event : ViewportMouseEvent)                                                           {                                                                                                            
         if(!this.Hub)
             this.Sprite.Color = this.HoverColor;
-    }
+                                                                                                                }
 
     function OnMiddleMouseUpSpace(event : ViewportMouseEvent)
     {

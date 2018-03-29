@@ -10,6 +10,7 @@ Brief: This Component will cause the owner to collect the set amount of resource
 class Player_Pickup_Collection : ZilchComponent
 {
     var Player : Cog;
+    
     //on initialize
     function Initialize(init : CogInitializer)
     {
@@ -51,17 +52,17 @@ class Player_Pickup_Collection : ZilchComponent
         }
         
         if(otherObject.OxygenPickup != null)
-        {
+        {            
             this.GameSession.GameVars.PlayerOxygen += otherObject.OxygenPickup.PickupValue;
             
             this.GameSession.GameVars.PlayerOxygen = Math.Clamp(this.GameSession.GameVars.PlayerOxygen, 0, this.GameSession.GameVars.PlayerMaxOxygen);
             
             this.Player.SoundThing.PlayPickup();
-            otherObject.Destroy();
+            otherObject.Destroy();            
         }
         
         if(otherObject.HealthPickup != null)
-        {
+        {        
             this.GameSession.GameVars.PlayerHealth += otherObject.HealthPickup.PickupValue;
             
             if(this.GameSession.GameVars.PlayerHealth > this.GameSession.GameVars.StartingPlayerHealth)
@@ -96,12 +97,11 @@ class Player_Pickup_Collection : ZilchComponent
 }
 
 // allows owner to collect this up as a resource pickup
-class ResourcePickup : ZilchComponent
+class ResourcePickup : ZilchComponent 
 {
     [Property] var PickupValue : Integer = 0;
     
     [Property] var PickupRange : Real = 0.0;
-    
     [Property] var PickupSpeed : Real = 0.0;
     
     function Initialize(init : CogInitializer)
@@ -115,7 +115,8 @@ class ResourcePickup : ZilchComponent
         
         if(Math.Distance(this.Owner.Transform.Translation, player.Transform.Translation) <= this.PickupRange)
         {
-            this.Owner.RigidBody.Velocity += Math.Normalize(player.Transform.Translation - this.Owner.Transform.Translation) * event.Dt * this.PickupSpeed;
+            this.Owner.RigidBody.Velocity += Math.Normalize(player.Transform.Translation 
+                - this.Owner.Transform.Translation) * event.Dt * this.PickupSpeed;
         }
     }
 }
@@ -126,7 +127,6 @@ class CopperPickup : ZilchComponent
     [Property] var PickupValue : Integer = 0;
     
     [Property] var PickupRange : Real = 0.0;
-    
     [Property] var PickupSpeed : Real = 0.0;
     
     function Initialize(init : CogInitializer)
@@ -140,7 +140,8 @@ class CopperPickup : ZilchComponent
         
         if(Math.Distance(this.Owner.Transform.Translation, player.Transform.Translation) <= this.PickupRange)
         {
-            this.Owner.RigidBody.Velocity += Math.Normalize(player.Transform.Translation - this.Owner.Transform.Translation) * event.Dt * this.PickupSpeed;
+            this.Owner.RigidBody.Velocity += Math.Normalize(player.Transform.Translation 
+                - this.Owner.Transform.Translation) * event.Dt * this.PickupSpeed;
         }
     }
 }
@@ -151,7 +152,6 @@ class TitaniumPickup : ZilchComponent
     [Property] var PickupValue : Integer = 0;
     
     [Property] var PickupRange : Real = 0.0;
-    
     [Property] var PickupSpeed : Real = 0.0;
     
     function Initialize(init : CogInitializer)
@@ -165,7 +165,8 @@ class TitaniumPickup : ZilchComponent
         
         if(Math.Distance(this.Owner.Transform.Translation, player.Transform.Translation) <= this.PickupRange)
         {
-            this.Owner.RigidBody.Velocity += Math.Normalize(player.Transform.Translation - this.Owner.Transform.Translation) * event.Dt * this.PickupSpeed;
+            this.Owner.RigidBody.Velocity += Math.Normalize(player.Transform.Translation 
+                - this.Owner.Transform.Translation) * event.Dt * this.PickupSpeed;
         }
     }
 }
@@ -176,7 +177,6 @@ class AluminiumPickup : ZilchComponent
     [Property] var PickupValue : Integer = 0;
     
     [Property] var PickupRange : Real = 0.0;
-    
     [Property] var PickupSpeed : Real = 0.0;
     
     function Initialize(init : CogInitializer)
@@ -201,7 +201,6 @@ class OxygenPickup : ZilchComponent
     [Property] var PickupValue : Integer = 0;
     
     [Property] var PickupRange : Real = 0.0;
-    
     [Property] var PickupSpeed : Real = 0.0;
     
     function Initialize(init : CogInitializer)
@@ -215,7 +214,8 @@ class OxygenPickup : ZilchComponent
         
         if(Math.Distance(this.Owner.Transform.Translation, player.Transform.Translation) <= this.PickupRange)
         {
-            this.Owner.RigidBody.Velocity += Math.Normalize(player.Transform.Translation - this.Owner.Transform.Translation) * event.Dt * this.PickupSpeed;
+            this.Owner.RigidBody.Velocity += Math.Normalize(player.Transform.Translation 
+                - this.Owner.Transform.Translation) * event.Dt * this.PickupSpeed;
         }
     }
 }
@@ -225,7 +225,6 @@ class HealthPickup : ZilchComponent
     [Property] var PickupValue : Integer = 0;
     
     [Property] var PickupRange : Real = 0.0;
-    
     [Property] var PickupSpeed : Real = 0.0;
     
     function Initialize(init : CogInitializer)
@@ -239,7 +238,8 @@ class HealthPickup : ZilchComponent
         
         if(Math.Distance(this.Owner.Transform.Translation, player.Transform.Translation) <= this.PickupRange)
         {
-            this.Owner.RigidBody.Velocity += Math.Normalize(player.Transform.Translation - this.Owner.Transform.Translation) * event.Dt * this.PickupSpeed;
+            this.Owner.RigidBody.Velocity += Math.Normalize(player.Transform.Translation 
+                - this.Owner.Transform.Translation) * event.Dt * this.PickupSpeed;
         }
     }
 }
