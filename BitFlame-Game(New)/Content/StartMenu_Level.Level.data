@@ -107,7 +107,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-28.9332428, 0.800837517, 50],
+			Vec3 Translation = [-29.3264732, -0.167486966, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -119,7 +119,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 18.050024,
+			float Size = 18.0500278,
 		},
 		EditorCameraController = 
 		{
@@ -127,7 +127,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-28.9332428, 0.800837517, -1.18421292e-06],
+			Vec3 LookTarget = [-29.3264732, -0.167486966, -1.20140214e-06],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -2215,11 +2215,11 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "NameDisplay",
+			string Name = "Produce",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-35, 4.5, 0],
+			Vec3 Translation = [-30, 0.5, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -2229,13 +2229,13 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0, 0, 0, 1],
+			Vec4 Color = [1, 1, 1, 0],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "4e7bac697bec55c5:Verdana",
-			uint FontSize = 32,
-			string Text = "Sage",
+			string FontName = "5a075f32e7b83df0:GameFont",
+			uint FontSize = 25,
+			string Text = "Producer",
 			TextAlign Align = Center,
 			float PixelsPerUnit = 21.8303375,
 			bool Smoothing = true,
@@ -2254,11 +2254,11 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "NameDisplay",
+			string Name = "Sage",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-25, 3, 0],
+			Vec3 Translation = [-30, 4.0999999, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -2268,13 +2268,13 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0, 0, 0, 1],
+			Vec4 Color = [1, 1, 1, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "4e7bac697bec55c5:Verdana",
+			string FontName = "5a075f32e7b83df0:GameFont",
 			uint FontSize = 32,
-			string Text = "Evan",
+			string Text = "Sage",
 			TextAlign Align = Center,
 			float PixelsPerUnit = 21.8303375,
 			bool Smoothing = true,
@@ -2283,6 +2283,30 @@ Level =
 		{
 			bool Active = true,
 			bool CaptureMouse = false,
+		},
+		MoveOnMouseOver = 
+		{
+			float Speed = 0.5,
+			Vec4 EndColor = [1, 1, 1, 1],
+			Vec4 SelectedColor = [0.560000002, 0.560000002, 0.560000002, 1],
+			CogPath Child = 
+			{
+				string Path = "Produce",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 47,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+		},
+		Hierarchy = 
+		{
 		},
 	},
 	Cog = 
@@ -2293,11 +2317,11 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "NameDisplay",
+			string Name = "Design",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-35, 1.5, 0],
+			Vec3 Translation = [-30, 0.5, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -2307,13 +2331,13 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0, 0, 0, 1],
+			Vec4 Color = [1, 1, 1, 0],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "4e7bac697bec55c5:Verdana",
-			uint FontSize = 32,
-			string Text = "Jakob",
+			string FontName = "5a075f32e7b83df0:GameFont",
+			uint FontSize = 25,
+			string Text = "Design Director",
 			TextAlign Align = Center,
 			float PixelsPerUnit = 21.8303375,
 			bool Smoothing = true,
@@ -2332,11 +2356,11 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "NameDisplay",
+			string Name = "Evan",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-25, 0, 0],
+			Vec3 Translation = [-20, 2, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -2346,13 +2370,76 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0, 0, 0, 1],
+			Vec4 Color = [1, 1, 1, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "4e7bac697bec55c5:Verdana",
+			string FontName = "5a075f32e7b83df0:GameFont",
 			uint FontSize = 32,
-			string Text = "Luke",
+			string Text = "Evan",
+			TextAlign Align = Right,
+			float PixelsPerUnit = 21.8303375,
+			bool Smoothing = true,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		MoveOnMouseOver = 
+		{
+			float Speed = 0.5,
+			Vec4 EndColor = [1, 1, 1, 1],
+			Vec4 SelectedColor = [0.560000002, 0.560000002, 0.560000002, 1],
+			CogPath Child = 
+			{
+				string Path = "Design",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 49,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+		},
+		Hierarchy = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 51,
+		},
+		Named = 
+		{
+			string Name = "Tech",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-30, 0.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 0],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "5a075f32e7b83df0:GameFont",
+			uint FontSize = 25,
+			string Text = "Tech Director",
 			TextAlign Align = Center,
 			float PixelsPerUnit = 21.8303375,
 			bool Smoothing = true,
@@ -2367,15 +2454,15 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 51,
+			uint Id = 52,
 		},
 		Named = 
 		{
-			string Name = "NameDisplay",
+			string Name = "Jakob",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-35, -1.5, 0],
+			Vec3 Translation = [-40, 2, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -2385,13 +2472,76 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0, 0, 0, 1],
+			Vec4 Color = [1, 1, 1, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "4e7bac697bec55c5:Verdana",
+			string FontName = "5a075f32e7b83df0:GameFont",
 			uint FontSize = 32,
-			string Text = "Justin",
+			string Text = "Jakob",
+			TextAlign Align = Left,
+			float PixelsPerUnit = 21.8303375,
+			bool Smoothing = true,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		MoveOnMouseOver = 
+		{
+			float Speed = 0.5,
+			Vec4 EndColor = [1, 1, 1, 1],
+			Vec4 SelectedColor = [0.560000002, 0.560000002, 0.560000002, 1],
+			CogPath Child = 
+			{
+				string Path = "Tech",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 51,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+		},
+		Hierarchy = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 53,
+		},
+		Named = 
+		{
+			string Name = "Art",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-30, 0.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 0],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "5a075f32e7b83df0:GameFont",
+			uint FontSize = 25,
+			string Text = "Art Director",
 			TextAlign Align = Center,
 			float PixelsPerUnit = 21.8303375,
 			bool Smoothing = true,
@@ -2400,6 +2550,171 @@ Level =
 		{
 			bool Active = true,
 			bool CaptureMouse = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 54,
+		},
+		Named = 
+		{
+			string Name = "Luke",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-24, -2.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "5a075f32e7b83df0:GameFont",
+			uint FontSize = 32,
+			string Text = "Luke",
+			TextAlign Align = Right,
+			float PixelsPerUnit = 21.8303375,
+			bool Smoothing = true,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		MoveOnMouseOver = 
+		{
+			float Speed = 0.5,
+			Vec4 EndColor = [1, 1, 1, 1],
+			Vec4 SelectedColor = [0.560000002, 0.560000002, 0.560000002, 1],
+			CogPath Child = 
+			{
+				string Path = "Art",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 53,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+		},
+		Hierarchy = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 55,
+		},
+		Named = 
+		{
+			string Name = "Sound",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-30, 0.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 0],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "5a075f32e7b83df0:GameFont",
+			uint FontSize = 25,
+			string Text = "Sound Director",
+			TextAlign Align = Center,
+			float PixelsPerUnit = 21.8303375,
+			bool Smoothing = true,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 56,
+		},
+		Named = 
+		{
+			string Name = "Justin",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-36, -2.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "5a075f32e7b83df0:GameFont",
+			uint FontSize = 32,
+			string Text = "Justin",
+			TextAlign Align = Left,
+			float PixelsPerUnit = 21.8303375,
+			bool Smoothing = true,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		MoveOnMouseOver = 
+		{
+			float Speed = 0.5,
+			Vec4 EndColor = [1, 1, 1, 1],
+			Vec4 SelectedColor = [0.560000002, 0.560000002, 0.560000002, 1],
+			CogPath Child = 
+			{
+				string Path = "Sound",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 55,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+		},
+		Hierarchy = 
+		{
 		},
 	},
 },
