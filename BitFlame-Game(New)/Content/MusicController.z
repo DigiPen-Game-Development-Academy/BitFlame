@@ -4,13 +4,14 @@ class MusicController : ZilchComponent
 {
     [Dependency] var SoundEmitter : SoundEmitter;
     
-    [Property] var BackgroundSong : SoundCue;
-    [Property] var BattleSong : SoundCue;
+    [Property] var BackgroundSong : SoundCue = SoundCue.Background;
+    [Property] var BattleSong : SoundCue = SoundCue.Battle;
     //[Property] var BossSong : SoundCue;
     //[Property] var LowHPSong : SoundCue;
-    [Property] var HitboxName : String;
+    [Property] var HitboxName : String = "MusicHitbox";
     //[Property] var HealthName : String; this was a testing thing for a thing that doesnt exist now
-    
+    [Property] var HitboxArche : Archetype = Archetype.MusicHitbox;
+	
     var HealthBar : Cog;
     var Oxygen : Cog;
     var Hitbox : Cog;
@@ -50,7 +51,7 @@ class MusicController : ZilchComponent
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         
-        this.Hitbox = this.Space.FindObjectByName(this.HitboxName);
+        this.Hitbox = this.Space.CreateAtPosition(this.HitboxArche, this.Owner.Transform.Translation);
         //this.HealthBar = this.Space.FindObjectByName(this.HealthName);
         this.Oxygen = this.Space.FindObjectByName("OxygenGauge");
         this.NewState = MusicState.PlayingBackground;
