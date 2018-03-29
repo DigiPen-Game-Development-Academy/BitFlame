@@ -163,7 +163,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 18.0500488,
+			float Size = 40.171093,
 		},
 		EditorCameraController = 
 		{
@@ -214,9 +214,6 @@ Level =
 			bool Active = true,
 			float Volume = 1,
 		},
-		ScreenShake = 
-		{
-		},
 		CameraFollow = 
 		{
 			CogPath Target = 
@@ -237,6 +234,14 @@ Level =
 			Vec2 Min = [-1000, -1000],
 			Vec2 Max = [1000, 1000],
 			float LerpValue = 0.899999976,
+		},
+		ScreenShake = 
+		{
+			float ShakeAmount = 0.200000003,
+			float ShakeRate = 0,
+		},
+		Hierarchy = 
+		{
 		},
 	},
 	Cog = 
@@ -648,45 +653,6 @@ Level =
 				},
 				Named = 
 				{
-					string Name = "Space",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 0, -10],
-					Vec3 Scale = [1.29999995, 1.29999995, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Sprite = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5a4018b73151485d:BitFlame_background_art",
-					bool RenderMask = false,
-					bool FlipX = false,
-					bool FlipY = false,
-					bool AnimationActive = true,
-					float AnimationSpeed = 1,
-					uint StartFrame = 0,
-				},
-				GoOppositeWayThatKeyGoes = 
-				{
-					float Offset = 0.00100000005,
-				},
-			},
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 10,
-				},
-				Named = 
-				{
 					string Name = "TwinklingStars",
 				},
 				Transform = 
@@ -757,6 +723,75 @@ Level =
 				GoOppositeWayThatKeyGoes = 
 				{
 					float Offset = 0.00999999978,
+					CogPath Player = 
+					{
+						string Path = "..",
+						bool ErrorOnResolveToNull = false,
+						bool ErrorOnPathCantCompute = false,
+						bool ErrorOnDirectLinkFail = false,
+						bool UpdateCogOnPathChange = true,
+						bool UpdatePathOnCogChange = true,
+						bool UpdateCogOnInitialize = true,
+						bool ResolvedNullErrorOccurred = false,
+						uint ResolvedCog = 3,
+						CogPathPreference PathPreference0 = CogRelative,
+						CogPathPreference PathPreference1 = SpaceRelative,
+						CogPathPreference PathPreference2 = Absolute,
+					},
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 10,
+				},
+				Named = 
+				{
+					string Name = "Space",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0, -10],
+					Vec3 Scale = [1.5, 1.5, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5a4018b73151485d:BitFlame_background_art",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				GoOppositeWayThatKeyGoes = 
+				{
+					float Offset = 0.00100000005,
+					CogPath Player = 
+					{
+						string Path = "..",
+						bool ErrorOnResolveToNull = false,
+						bool ErrorOnPathCantCompute = false,
+						bool ErrorOnDirectLinkFail = false,
+						bool UpdateCogOnPathChange = true,
+						bool UpdatePathOnCogChange = true,
+						bool UpdateCogOnInitialize = true,
+						bool ResolvedNullErrorOccurred = false,
+						uint ResolvedCog = 3,
+						CogPathPreference PathPreference0 = CogRelative,
+						CogPathPreference PathPreference1 = SpaceRelative,
+						CogPathPreference PathPreference2 = Absolute,
+					},
 				},
 			},
 			Cog = 
@@ -837,6 +872,21 @@ Level =
 				GoOppositeWayThatKeyGoes = 
 				{
 					float Offset = 0.00999999978,
+					CogPath Player = 
+					{
+						string Path = "..",
+						bool ErrorOnResolveToNull = false,
+						bool ErrorOnPathCantCompute = false,
+						bool ErrorOnDirectLinkFail = false,
+						bool UpdateCogOnPathChange = true,
+						bool UpdatePathOnCogChange = true,
+						bool UpdateCogOnInitialize = true,
+						bool ResolvedNullErrorOccurred = false,
+						uint ResolvedCog = 3,
+						CogPathPreference PathPreference0 = CogRelative,
+						CogPathPreference PathPreference1 = SpaceRelative,
+						CogPathPreference PathPreference2 = Absolute,
+					},
 				},
 			},
 		},
@@ -992,28 +1042,10 @@ Level =
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5ae4980edfc88ddd:BlastExplosion",
-		LinkId = 
-		{
-			uint Id = 20,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [17, 13, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "BasicParticleEffect",
-		},
-	},
-	ArchetypeInstance = 
-	{
 		string Name = "5a1c25102e8b8ff5:AlienEnemy",
 		LinkId = 
 		{
-			uint Id = 21,
+			uint Id = 20,
 		},
 		Transform = 
 		{

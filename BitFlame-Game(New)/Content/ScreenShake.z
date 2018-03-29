@@ -2,17 +2,24 @@ class ScreenShake : ZilchComponent
 {
     [Dependency] var Transform : Transform;
     
+    [Property] var ShakeAmount : Real = 0.3;
+    
+    [Property] var ShakeRate : Real = 0.1;
+    
     var Active : Boolean = false;
     
     function Initialize(init : CogInitializer)
     {
-        Zero.Connect(this.Space, Events.PlayerHurtUpdate, this.OnPlayerHurtUpdate);
+        Zero.Connect(this.GameSession, Events.PlayerHurtUpdate, this.OnPlayerHurtUpdate);
     }
 
     function OnPlayerHurtUpdate(event : ZilchEvent)
     {
-        if(this.Active)
+        //Console.WriteLine("recieved");
+        
+        if(!this.Active)
         {
+            //Console.WriteLine("active");
             this.Active = true;
             this.StartScreenShake();
         }
@@ -20,17 +27,23 @@ class ScreenShake : ZilchComponent
 
     function StartScreenShake()
     {
+        //Console.WriteLine("started");
+        
         var seq = Action.Sequence(this.Owner.Actions);
         
         var translation = this.Transform.Translation;
         
         var random : Random = Random();
+        
+        var shake = this.ShakeAmount;
+        
+        var rate = this.ShakeRate;
 
-        Action.Property(seq, @this.Owner.Transform.Translation, translation + Real3(random.Range(-1, 0.5), random.Range(-0.5, 0.5), random.Range(-0.5, 0.5)), 0.1, Ease.Linear);
+        Action.Property(seq, @this.Owner.Transform.Translation, translation + Real3(random.Range(-shake, shake), random.Range(-shake, shake), random.Range(-shake, shake)), rate, Ease.Linear);
+        Action.Property(seq, @this.Owner.Transform.Translation, translation, rate, Ease.Linear);
         
-        Action.Property(seq, @this.Owner.Transform.Translation, translation + Real3(random.Range(-0.5, 0.5), random.Range(-0.5, 0.5), random.Range(-0.5, 0.5)), 0.1, Ease.Linear);
-        
-        Action.Property(seq, @this.Owner.Transform.Translation, translation, 0.1, Ease.Linear);
+        Action.Property(seq, @this.Owner.Transform.Translation, translation + Real3(random.Range(-shake, shake), random.Range(-shake, shake), random.Range(-shake, shake)), rate, Ease.Linear);
+        Action.Property(seq, @this.Owner.Transform.Translation, translation, rate, Ease.Linear);
         
         Action.Property(seq, @this.Active, false, 0, Ease.Linear);
     }
