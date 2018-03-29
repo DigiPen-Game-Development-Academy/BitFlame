@@ -60,7 +60,7 @@ Cog =
 	},
 	Health = 
 	{
-		float Health = 5,
+		float Health = 10,
 		string ArchetypetoSpawnOnDeath1 = "5a70715bb5c81bfe:Game_OxygenOre_Pickup",
 		string ArchetypetoSpawnOnDeath2 = "5a5b01f486549f9d:ChargingEnemy_ExplosionEffect",
 		string ExplosionSound = "5ae3cf4fa1248b1b:Enemy_Explosion",
