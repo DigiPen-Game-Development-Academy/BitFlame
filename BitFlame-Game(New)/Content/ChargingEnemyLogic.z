@@ -1,8 +1,8 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Filename: ChargingEnemyLogic.z                                                                              
 //Created by: Jakob McFarland                                                                                  
-//Contributors:                                                                                         
-//Last Modified: 2/27/18                                                                             
+//Contributors:   Luke                                                                                      
+//Last Modified: 3/30/18                                                                             
 //Brief: Controls the charging enemy's AI                                                                      
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -47,11 +47,18 @@ class ChargingEnemyLogic : ZilchComponent
         this.OriginalColor = this.Sprite.Color;
         
         this.Target = this.Space.FindObjectByName("Player");
+        
+        // If this enemy is spawned during a wave set there detection range to a large number
+        if(this.GameSession.GameVars.ActiveWave == true)
+        {
+            this.DetectionRange += 1000;
+        }
     }
 
     function OnLogicUpdate(event : UpdateEvent)
     {
         var player = this.Space.FindObjectByName("Player");
+        
         if(player != null)
         {
             

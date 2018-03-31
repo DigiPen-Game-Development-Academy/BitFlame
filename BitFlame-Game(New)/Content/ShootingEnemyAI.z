@@ -44,6 +44,12 @@ class ShootingEnemyAI : ZilchComponent
         Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
         
         this.Target = this.Space.FindObjectByName("Player");
+        
+        // If this enemy is spawned during a wave set there FollowRange to a large number
+        if(this.GameSession.GameVars.ActiveWave == true)
+        {
+            this.FollowRange += 1000;
+        }
     }
 
     function OnCollisionStarted(event : CollisionEvent)

@@ -1,8 +1,8 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Filename: EnemyLogic                                                                                   //
 //Created by: Justin                                                                                     //
-//Contributors:                                                                                          //
-//Last Modified:                                                                                         //
+//Contributors: Luke                                                                                //
+//Last Modified: 3/30/2018                                                                                 //
 //Brief: Controls the enemy's AI                                                                         //
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -18,6 +18,12 @@ class EnemyLogic : ZilchComponent
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         
         this.Target = this.Space.FindObjectByName("Player");
+        
+        // If this enemy is spawned during a wave set there Range to a large number
+        if(this.GameSession.GameVars.ActiveWave == true)
+        {
+            this.Range += 1000;
+        }
     }
 
     function OnLogicUpdate(event : UpdateEvent)
