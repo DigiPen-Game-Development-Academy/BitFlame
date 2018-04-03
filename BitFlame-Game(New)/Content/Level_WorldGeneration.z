@@ -98,10 +98,7 @@ class Level_WorldGeneration : ZilchComponent
     {
         var selector = this.RandomGenerator.Range(0, 100) + this.RandomGenerator.Range(0, 100);
         
-        while(selector > 100)
-        {
-            selector -= 100;
-        }
+        selector = Math.Min(selector, 100);
         
         //Console.WriteLine(selector);
         

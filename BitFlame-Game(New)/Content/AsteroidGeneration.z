@@ -253,6 +253,13 @@ class Generator : ZilchComponent
     // How many quads we want to spawn
     [Property] var QuadCount : Integer = 10;
     
+    [Static] var Turn : Integer;
+    var MyTurn : Integer;
+    
+    [Property] var DelayBetweenTurns : Real = 0.1;
+    
+    
+    
     // Used to randomly select stub objects for turning into quads
     var Rand : Random = new Random();
     // All the voxels we've spawned
@@ -262,14 +269,24 @@ class Generator : ZilchComponent
     // objects need to finish initializing before we collect and replace them
     function Initialize(init : CogInitializer)
     {
+        ++Generator.Turn;
+        this.MyTurn = Generator.Turn;
+        
         Zero.Connect(init, Events.AllObjectsInitialized, this.OnAllObjectsInitialized);
+        
+        Zero.Connect(this.Space, Events.LevelStarted, this.OnLevelStarted);
+    }
+
+    function OnLevelStarted(event : GameEvent)
+    {
+        Generator.Turn = 0;
     }
     function OnAllObjectsInitialized(event : CogInitializerEvent)
     {
-        // First create the quads
-        this.Generate();
-        // Then swap their sprites based on their neighbors
-        this.SetSprites();
+        var squence = Action.Sequence(this.Owner.Actions);
+        Action.Delay(squence, this.MyTurn * this.DelayBetweenTurns);
+        Action.Call(squence, this.Generate);
+        Action.Call(squence, this.SetSprites);
     }
     function Generate()
     {

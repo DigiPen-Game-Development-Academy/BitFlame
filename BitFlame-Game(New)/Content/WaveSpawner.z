@@ -8,6 +8,9 @@
 
 class WaveSpawner : ZilchComponent
 {
+    // CogPath to player
+    [Property] var Player : CogPath = null;
+    
     // Timer for time inbetween waves.
     [Property] var TimeUntilNextWave : Real;
 
@@ -24,13 +27,15 @@ class WaveSpawner : ZilchComponent
     var EnemyType2AmountToSpawn : Real;
     var EnemyType3AmountToSpawn : Real;
     
-    // How much to increase enemy spawns each wave.
-    [Property] var EnemyType1Increase : Real;
-    [Property] var EnemyType2Increase : Real;
-    [Property] var EnemyType3Increase : Real;
+    // How much to initialy spawn
+    [Property] var InitialSpawn1 : Real;
+    [Property] var InitialSpawn2: Real;
+    [Property] var InitialSpawn3 : Real;
     
-    // Keeps track of time inbetween waves
-    var WaveTimer : Real;
+    // How much to increase enemy spawns each wave.
+    [Property] var SpawnIncrease1 : Real;
+    [Property] var SpawnIncrease2 : Real;
+    [Property] var SpawnIncrease3 : Real;
     
     // Keeps track of how many waves have passed
     var WaveTracker : Real = 0;
@@ -48,12 +53,12 @@ class WaveSpawner : ZilchComponent
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         
         // Sets WaveTimer to set amount for first wave.
-        this.WaveTimer = this.TimeUntilNextWave;
+        this.GameSession.GameVars.WaveTimer = this.TimeUntilNextWave;
         
         // Sets amount of enemies to spawn for first wave.
-        this.EnemyType1AmountToSpawn = this.EnemyType1Increase;
-        this.EnemyType2AmountToSpawn = this.EnemyType2Increase;
-        this.EnemyType3AmountToSpawn = this.EnemyType3Increase;
+        this.EnemyType1AmountToSpawn = this.InitialSpawn1;
+        this.EnemyType2AmountToSpawn = this.InitialSpawn2;
+        this.EnemyType3AmountToSpawn = this.InitialSpawn3;
     }
 
     function OnLogicUpdate(event : UpdateEvent)
@@ -62,7 +67,7 @@ class WaveSpawner : ZilchComponent
         if(this.GameSession.GameVars.WaveGamemode == true)
         {
             // Checks if the wave timer has run out.
-            if(this.WaveTimer <= 0)
+            if(this.GameSession.GameVars.WaveTimer <= 0)
             {
                 // Sets the ActiveWave varible in game vars to true.
                 this.GameSession.GameVars.ActiveWave = true;
@@ -71,8 +76,8 @@ class WaveSpawner : ZilchComponent
                 if(this.EnemyType1AmountToSpawn > 0)
                 {
                     // Generates random X&Y
-                    this.RandomSpawnX = this.RandomGenerator.Range(this.Owner.Transform.WorldTranslation.X - 26, this.Owner.Transform.WorldTranslation.X + 26);
-                    this.RandomSpawnY = this.RandomGenerator.Range(this.Owner.Transform.WorldTranslation.Y - 26, this.Owner.Transform.WorldTranslation.Y + 26);
+                    this.RandomSpawnX = this.RandomGenerator.Range(this.Player.Cog.Transform.WorldTranslation.X - 26, this.Player.Cog.Transform.WorldTranslation.X + 26);
+                    this.RandomSpawnY = this.RandomGenerator.Range(this.Player.Cog.Transform.WorldTranslation.Y - 26, this.Player.Cog.Transform.WorldTranslation.Y + 26);
                             
                     // Converts random X&Y into a spawnpoint for our enemy.
                     var randomSpawn = Real3(this.RandomSpawnX, this.RandomSpawnY, 0);
@@ -91,8 +96,8 @@ class WaveSpawner : ZilchComponent
                 else if(this.EnemyType2AmountToSpawn > 0)
                 {
                     // Generates random X&Y
-                    this.RandomSpawnX = this.RandomGenerator.Range(this.Owner.Transform.WorldTranslation.X - 26, this.Owner.Transform.WorldTranslation.X + 26);
-                    this.RandomSpawnY = this.RandomGenerator.Range(this.Owner.Transform.WorldTranslation.Y - 26, this.Owner.Transform.WorldTranslation.Y + 26);
+                    this.RandomSpawnX = this.RandomGenerator.Range(this.Player.Cog.Transform.WorldTranslation.X - 26, this.Player.Cog.Transform.WorldTranslation.X + 26);
+                    this.RandomSpawnY = this.RandomGenerator.Range(this.Player.Cog.Transform.WorldTranslation.Y - 26, this.Player.Cog.Transform.WorldTranslation.Y + 26);
                             
                     // Converts random X&Y into a spawnpoint for our enemy.
                     var randomSpawn = Real3(this.RandomSpawnX, this.RandomSpawnY, 0);
@@ -111,8 +116,8 @@ class WaveSpawner : ZilchComponent
                 else if(this.EnemyType3AmountToSpawn > 0)
                 {
                     // Generates random X&Y
-                    this.RandomSpawnX = this.RandomGenerator.Range(this.Owner.Transform.WorldTranslation.X - 26, this.Owner.Transform.WorldTranslation.X + 26);
-                    this.RandomSpawnY = this.RandomGenerator.Range(this.Owner.Transform.WorldTranslation.Y - 26, this.Owner.Transform.WorldTranslation.Y + 26);
+                    this.RandomSpawnX = this.RandomGenerator.Range(this.Player.Cog.Transform.WorldTranslation.X - 26, this.Player.Cog.Transform.WorldTranslation.X + 26);
+                    this.RandomSpawnY = this.RandomGenerator.Range(this.Player.Cog.Transform.WorldTranslation.Y - 26, this.Player.Cog.Transform.WorldTranslation.Y + 26);
                             
                     // Converts random X&Y into a spawnpoint for our enemy.
                     var randomSpawn = Real3(this.RandomSpawnX, this.RandomSpawnY, 0);
@@ -122,8 +127,8 @@ class WaveSpawner : ZilchComponent
                     {
                         // Creates correct enemy type and subtracts from how many need to be spawned.
                         this.Space.CreateAtPosition(this.EnemyType3, randomSpawn);     
-                        this.EnemyType3AmountToSpawn -= 1;    
-                        Console.WriteLine("3");      
+                        this.EnemyType3AmountToSpawn -= 1;     
+                        Console.WriteLine("3");     
                     }
                     
                 }
@@ -133,26 +138,24 @@ class WaveSpawner : ZilchComponent
                     this.WaveTracker += 1;
                     
                     // Sets the wave timer back to default and adds more time based on the WaveTracker.
-                    this.WaveTimer += this.TimeUntilNextWave + (this.WaveTracker * 10);
-                    
-                    
-
+                    this.GameSession.GameVars.WaveTimer += this.TimeUntilNextWave + (this.WaveTracker * 10);
                     
                     // Increase amount of enemys that can spawn during a wave.
-                    this.EnemyType1AmountToSpawn += (this.EnemyType1Increase * this.WaveTracker);
-                    this.EnemyType2AmountToSpawn += (this.EnemyType2Increase * this.WaveTracker);
-                    this.EnemyType3AmountToSpawn += (this.EnemyType3Increase * this.WaveTracker);
+                    this.EnemyType1AmountToSpawn += (this.SpawnIncrease1 * this.WaveTracker + this.InitialSpawn1);
+                    this.EnemyType2AmountToSpawn += (this.SpawnIncrease2 * this.WaveTracker + this.InitialSpawn2);
+                    this.EnemyType3AmountToSpawn += (this.SpawnIncrease3 * this.WaveTracker + this.InitialSpawn3);
                 }   
             }
             else
             {
                 // Subtracts from timer till it hits zero.
-                this.WaveTimer -= 0.01;
-                Console.WriteLine("Wave Incoming", this.WaveTimer);
+                this.GameSession.GameVars.WaveTimer -= 0.01;
+                Console.WriteLine("Wave Incoming", this.GameSession.GameVars.WaveTimer);
                 
                 // Sets varible in game vars to false when a wave is not active.
                 this.GameSession.GameVars.ActiveWave = false;
             }
+            //math.round
         }
     }       
 }

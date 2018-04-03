@@ -41,6 +41,7 @@ Cog =
 		string VoxelArchetype = "5a1180f76f978cdf:AssteroidChunk",
 		float VoxelSize = 1,
 		int QuadCount = 10,
+		float DelayBetweenTurns = 0.0250000004,
 	},
 	Hierarchy = 
 	{
