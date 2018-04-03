@@ -5,6 +5,7 @@ class TurretLogic : ZilchComponent
     [Property] var CoolDown : Real;
     [Property] var Range : Real;
     [Property] var EnemyCollide : CollisionGroup;
+    [Property] var ChargingCollide : CollisionGroup;
     var Timer : Real = 1;
     var CheckTimer : Real = 1;
     var Target : Cog;
@@ -20,38 +21,59 @@ class TurretLogic : ZilchComponent
         //and within the set range.
         var lastObj : Cog = null;
         var bestObj : Cog = null;
-        var bestDist : Real3 = Real3(0.0,0.0,0.0);
-        var bestDist2 : Real = 0;
+        var bestDist : Real = 0;
         foreach(var obj in this.Space.AllObjects())
         {
-            if (obj.Collider != null)
-            {
-                if (obj.Collider.CollisionGroup == this.EnemyCollide)
-                {
-                    var distance = obj.Transform.WorldTranslation - this.Owner.Transform.WorldTranslation;
-                    if (distance.X < 0) distance.X *= -1;
-                    if (distance.Y < 0) distance.Y *= -1;
-                    var distance2 : Real = distance.X + distance.Y;
-                    
-                    if(lastObj == null)
-                    {
-                        bestObj = obj;
-                        bestDist = distance;
-                        bestDist2 = distance2;
-                    }
-                    else if (distance2 < bestDist2 && distance2 < this.Range)
-                    {
-                        bestObj = obj;
-                        bestDist = distance;
-                        bestDist2 = distance2;
-                    }
-                    
-                    lastObj = obj;
-                    //Console.WriteLine(bestObj.Name);
-                }
-            }
+          //new target finding
+          if (obj.Collider != null)
+          {
+             if (obj.Collider.CollisionGroup == this.EnemyCollide || obj.Collider.CollisionGroup == this.ChargingCollide)
+             {
+               var distance : Real = Math.Distance(obj.Transform.WorldTranslation, this.Owner.Transform.WorldTranslation);
+               
+               if (lastObj == null)
+               {
+                 bestObj = obj;
+                 bestDist = distance;
+               }
+               else if (distance < bestDist || distance < this.Range)
+               {
+                 bestObj = obj;
+                 bestDist = distance;
+               }
+               
+               lastObj = obj;
+             }
+           }
+          //old target finding
+            //if (obj.Collider != null)
+            //{
+            //    if (obj.Collider.CollisionGroup == this.EnemyCollide || obj.Collider.CollisionGroup == this.ChargingCollide)
+            //    {
+            //        var distance = obj.Transform.WorldTranslation - this.Owner.Transform.WorldTranslation;
+            //        if (distance.X < 0) distance.X *= -1;
+            //        if (distance.Y < 0) distance.Y *= -1;
+            //        var distance2 : Real = distance.X + distance.Y;
+            //        
+            //        if(lastObj == null)
+            //        {
+            //            bestObj = obj;
+            //            bestDist = distance;
+            //            bestDist2 = distance2;
+            //        }
+            //        else if (distance2 < bestDist2 && distance2 < this.Range)
+            //        {
+            //            bestObj = obj;
+            //            bestDist = distance;
+            //            bestDist2 = distance2;
+            //        }
+            //        
+            //        lastObj = obj;
+            //        //Console.WriteLine(bestObj.Name);
+            //    }
+            //}
         }
-        if (bestDist2 < this.Range)
+        if (bestDist < this.Range)
         {
             this.Target = bestObj;
         }
