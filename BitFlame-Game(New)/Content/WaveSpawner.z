@@ -76,8 +76,8 @@ class WaveSpawner : ZilchComponent
                 if(this.EnemyType1AmountToSpawn > 0)
                 {
                     // Generates random X&Y
-                    this.RandomSpawnX = this.RandomGenerator.Range(this.Player.Cog.Transform.WorldTranslation.X - 26, this.Player.Cog.Transform.WorldTranslation.X + 26);
-                    this.RandomSpawnY = this.RandomGenerator.Range(this.Player.Cog.Transform.WorldTranslation.Y - 26, this.Player.Cog.Transform.WorldTranslation.Y + 26);
+                    this.RandomSpawnX = this.RandomGenerator.Range(this.Player.Cog.Transform.WorldTranslation.X - 40, this.Player.Cog.Transform.WorldTranslation.X + 40);
+                    this.RandomSpawnY = this.RandomGenerator.Range(this.Player.Cog.Transform.WorldTranslation.Y - 40, this.Player.Cog.Transform.WorldTranslation.Y + 40);
                             
                     // Converts random X&Y into a spawnpoint for our enemy.
                     var randomSpawn = Real3(this.RandomSpawnX, this.RandomSpawnY, 0);
@@ -96,8 +96,8 @@ class WaveSpawner : ZilchComponent
                 else if(this.EnemyType2AmountToSpawn > 0)
                 {
                     // Generates random X&Y
-                    this.RandomSpawnX = this.RandomGenerator.Range(this.Player.Cog.Transform.WorldTranslation.X - 26, this.Player.Cog.Transform.WorldTranslation.X + 26);
-                    this.RandomSpawnY = this.RandomGenerator.Range(this.Player.Cog.Transform.WorldTranslation.Y - 26, this.Player.Cog.Transform.WorldTranslation.Y + 26);
+                    this.RandomSpawnX = this.RandomGenerator.Range(this.Player.Cog.Transform.WorldTranslation.X - 40, this.Player.Cog.Transform.WorldTranslation.X + 40);
+                    this.RandomSpawnY = this.RandomGenerator.Range(this.Player.Cog.Transform.WorldTranslation.Y - 40, this.Player.Cog.Transform.WorldTranslation.Y + 40);
                             
                     // Converts random X&Y into a spawnpoint for our enemy.
                     var randomSpawn = Real3(this.RandomSpawnX, this.RandomSpawnY, 0);
@@ -116,8 +116,8 @@ class WaveSpawner : ZilchComponent
                 else if(this.EnemyType3AmountToSpawn > 0)
                 {
                     // Generates random X&Y
-                    this.RandomSpawnX = this.RandomGenerator.Range(this.Player.Cog.Transform.WorldTranslation.X - 26, this.Player.Cog.Transform.WorldTranslation.X + 26);
-                    this.RandomSpawnY = this.RandomGenerator.Range(this.Player.Cog.Transform.WorldTranslation.Y - 26, this.Player.Cog.Transform.WorldTranslation.Y + 26);
+                    this.RandomSpawnX = this.RandomGenerator.Range(this.Player.Cog.Transform.WorldTranslation.X - 40, this.Player.Cog.Transform.WorldTranslation.X + 40);
+                    this.RandomSpawnY = this.RandomGenerator.Range(this.Player.Cog.Transform.WorldTranslation.Y - 40, this.Player.Cog.Transform.WorldTranslation.Y + 40);
                             
                     // Converts random X&Y into a spawnpoint for our enemy.
                     var randomSpawn = Real3(this.RandomSpawnX, this.RandomSpawnY, 0);
