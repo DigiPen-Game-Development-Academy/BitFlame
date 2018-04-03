@@ -2,7 +2,7 @@
 Filename: PlayerShooting
 Author: Sage Dupuy
 Contributors: 
-- Jakob McFarland (Shooting speed is normal + Player Velocity)
+- Jakob McFarland (Shooting speed is normal + Player Velocity + if around shooting popup text)
 -
 -
 -
@@ -105,8 +105,10 @@ class PlayerShooting : ZilchComponent
                 }
             }
             
-            this.Space.CreateAtPosition(this.ShotText, Real3(this.Owner.Transform.WorldTranslation.X + position.X, this.Owner.Transform.WorldTranslation.Y + position.Y, 5.0));
-            
+            if(this.GameSession.GameVars.EnablePopupSoundText)
+            {
+                this.Space.CreateAtPosition(this.ShotText, Real3(this.Owner.Transform.WorldTranslation.X + position.X, this.Owner.Transform.WorldTranslation.Y + position.Y, 5.0));
+            }
             bullet.RigidBody.Velocity += mouseDirection * this.BulletSpeed * this.GameSession.GameVars.HasUpgrade_BulletSpeed + this.Owner.Parent.RigidBody.Velocity;
             
             bullet.Orientation.LookAtDirectionWithUp(mouseDirection, Real3(0.0,0.0,1.0));
@@ -120,7 +122,7 @@ class PlayerShooting : ZilchComponent
                 bullet2.RigidBody.Velocity += right * this.BulletSpeed * this.GameSession.GameVars.HasUpgrade_BulletSpeed + this.Owner.Parent.RigidBody.Velocity;
                 
                 bullet2.Orientation.LookAtDirectionWithUp(mouseDirection, Real3(0.0,0.0,1.0));
-                
+                                
                 
                 var left = Math.RotateVector(mouseDirection, Real3.ZAxis, Math.ToRadians(this.SpreadAmount));
                 

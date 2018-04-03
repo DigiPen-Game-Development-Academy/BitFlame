@@ -56,6 +56,8 @@ class GameVars : ZilchComponent
     var PlayerPipes : Integer;
     var PlayerTurrets : Integer;
     
+    //popup text for sounds
+    var EnablePopupSoundText : Boolean = false;   
     
     //ship repair stage counter
     var ShipRepairStage : Integer = 0;

@@ -20,13 +20,16 @@ class PopUpTextController : ZilchComponent
     
     function Initialize(init : CogInitializer)
     {
-        Zero.Connect(this.Owner, Events.PreDestroy, this.OnPreDestroy);
-        
-        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-        
-        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
-        
-        Zero.Connect(this.Owner, Events.CollisionEnded, this.OnCollisionEnded);
+        if(this.GameSession.GameVars.EnablePopupSoundText)
+        {
+            Zero.Connect(this.Owner, Events.PreDestroy, this.OnPreDestroy);
+            
+            Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+            
+            Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+            
+            Zero.Connect(this.Owner, Events.CollisionEnded, this.OnCollisionEnded);
+        }
     }
 
     function OnCollisionEnded(event : CollisionEvent)
