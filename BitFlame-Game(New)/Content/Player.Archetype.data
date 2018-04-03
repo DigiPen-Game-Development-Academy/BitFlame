@@ -180,17 +180,6 @@ Cog =
 		string BumpText2 = "",
 		string BeepText = "",
 	},
-	WaveSpawner = 
-	{
-		float TimeUntilNextWave = 20,
-		float SafeDistanceToSpawnFromPlayer = 25,
-		string EnemyType1 = "5a7411b441710034:ChargingEnemy",
-		string EnemyType2 = "5a74699494525886:AlienCrabEnemy",
-		string EnemyType3 = "5a1c25102e8b8ff5:AlienEnemy",
-		float EnemyType1Increase = 3,
-		float EnemyType2Increase = 6,
-		float EnemyType3Increase = 9,
-	},
 	Hierarchy = 
 	{
 		Cog = 

@@ -1,0 +1,22 @@
+class WaveCountdownScript : ZilchComponent
+{
+    
+    function Initialize(init : CogInitializer)
+    {
+        if(this.GameSession.GameVars.WaveGamemode == true)
+        {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        }
+        else
+        {
+            this.Owner.SpriteText.Text = ("");
+        }
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        var timer = Math.Round(this.GameSession.GameVars.WaveTimer, 0);
+        
+        this.Owner.SpriteText.Text = ("Enemy Wave Incoming: `timer` 's");
+    }
+}
