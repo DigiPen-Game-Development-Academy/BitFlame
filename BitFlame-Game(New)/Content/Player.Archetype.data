@@ -172,14 +172,6 @@ Cog =
 		bool CanSelect = false,
 		bool HudButton = false,
 	},
-	PopUpTextController = 
-	{
-		Enum PopUpType = Bump,
-		string ExplosionText = "",
-		string BumpText1 = "5a4b19d058d6c4cc:BumpText1",
-		string BumpText2 = "",
-		string BeepText = "",
-	},
 	Hierarchy = 
 	{
 		Cog = 
