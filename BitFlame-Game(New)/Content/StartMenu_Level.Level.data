@@ -107,7 +107,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-20.9929295, 7.81588554, 50],
+			Vec3 Translation = [1.07802153, 2.12450385, 50.1951332],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -119,7 +119,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 36.7879639,
+			float Size = 18.268383,
 		},
 		EditorCameraController = 
 		{
@@ -127,7 +127,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-20.9929295, 7.81588554, -8.37131608e-07],
+			Vec3 LookTarget = [1.07802153, 2.12450385, 0.195132688],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1830,8 +1830,8 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [50, -1, 0],
-					Vec3 Scale = [10, 1, 1],
+					Vec3 Translation = [-50, -1, 0.0576934814],
+					Vec3 Scale = [9, 0.899999976, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
 				Sprite = 
@@ -1844,7 +1844,7 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5275aa4d802dd6dc:Square",
+					string SpriteSource = "5a69d20ddc4fca4a:OptionsSnap1",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
@@ -1869,6 +1869,13 @@ Level =
 				},
 				OnClickChangeSliderBar = 
 				{
+				},
+				Ship_Menu_Button_Visual = 
+				{
+					Vec4 HoverColor = [1, 1, 1, 1],
+					Vec4 ClickColor = [1, 1, 1, 1],
+					float HoverScale = 1.20000005,
+					float ClickScale = 1,
 				},
 			},
 			Cog = 
@@ -1883,8 +1890,8 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-50, -1, 0],
-					Vec3 Scale = [10, 1, 1],
+					Vec3 Translation = [-25, -0.896879017, 0.0576934814],
+					Vec3 Scale = [8, 0.800000012, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
 				Sprite = 
@@ -1897,7 +1904,7 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5275aa4d802dd6dc:Square",
+					string SpriteSource = "5a69d20ddc4fca4a:OptionsSnap1",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
@@ -1922,6 +1929,13 @@ Level =
 				},
 				OnClickChangeSliderBar = 
 				{
+				},
+				Ship_Menu_Button_Visual = 
+				{
+					Vec4 HoverColor = [1, 1, 1, 1],
+					Vec4 ClickColor = [1, 1, 1, 1],
+					float HoverScale = 1.20000005,
+					float ClickScale = 1,
 				},
 			},
 			Cog = 
@@ -1936,8 +1950,8 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0, -1, 0],
-					Vec3 Scale = [10, 1, 1],
+					Vec3 Translation = [0, -1, 0.0576934814],
+					Vec3 Scale = [9, 0.899999976, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
 				Sprite = 
@@ -1950,7 +1964,7 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5275aa4d802dd6dc:Square",
+					string SpriteSource = "5a69d20ddc4fca4a:OptionsSnap1",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
@@ -1975,6 +1989,13 @@ Level =
 				},
 				OnClickChangeSliderBar = 
 				{
+				},
+				Ship_Menu_Button_Visual = 
+				{
+					Vec4 HoverColor = [1, 1, 1, 1],
+					Vec4 ClickColor = [1, 1, 1, 1],
+					float HoverScale = 1.20000005,
+					float ClickScale = 1,
 				},
 			},
 			Cog = 
@@ -1989,8 +2010,8 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-25, -0.800000012, 0],
-					Vec3 Scale = [6, 0.600000024, 1],
+					Vec3 Translation = [25, -0.896879017, 0.0576934814],
+					Vec3 Scale = [8, 0.800000012, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
 				Sprite = 
@@ -2003,7 +2024,7 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5275aa4d802dd6dc:Square",
+					string SpriteSource = "5a69d20ddc4fca4a:OptionsSnap1",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
@@ -2028,6 +2049,13 @@ Level =
 				},
 				OnClickChangeSliderBar = 
 				{
+				},
+				Ship_Menu_Button_Visual = 
+				{
+					Vec4 HoverColor = [1, 1, 1, 1],
+					Vec4 ClickColor = [1, 1, 1, 1],
+					float HoverScale = 1.20000005,
+					float ClickScale = 1,
 				},
 			},
 			Cog = 
@@ -2042,8 +2070,8 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [25, -0.800000012, 0],
-					Vec3 Scale = [6, 0.600000024, 1],
+					Vec3 Translation = [50, -1, 0.0576934814],
+					Vec3 Scale = [9, 0.899999976, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
 				Sprite = 
@@ -2056,7 +2084,7 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5275aa4d802dd6dc:Square",
+					string SpriteSource = "5a69d20ddc4fca4a:OptionsSnap1",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
@@ -2080,6 +2108,16 @@ Level =
 					Vec3 Size = [0.5, 0.5, 0.5],
 				},
 				OnClickChangeSliderBar = 
+				{
+				},
+				Ship_Menu_Button_Visual = 
+				{
+					Vec4 HoverColor = [1, 1, 1, 1],
+					Vec4 ClickColor = [1, 1, 1, 1],
+					float HoverScale = 1.20000005,
+					float ClickScale = 1,
+				},
+				Hierarchy = 
 				{
 				},
 			},
@@ -2213,13 +2251,48 @@ Level =
 					},
 				},
 			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 47,
+				},
+				Named = 
+				{
+					string Name = "SoundSlider_Overlay",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, -0.300000072, 0.0267410278],
+					Vec3 Scale = [8.39999962, 0.899999976, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5a69d210debd2035:Sound Overlay1",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+			},
 		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 47,
+			uint Id = 48,
 		},
 		Named = 
 		{
@@ -2258,7 +2331,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 48,
+			uint Id = 49,
 		},
 		Named = 
 		{
@@ -2307,7 +2380,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 47,
+				uint ResolvedCog = 48,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -2321,7 +2394,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 49,
+			uint Id = 50,
 		},
 		Named = 
 		{
@@ -2360,7 +2433,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 50,
+			uint Id = 51,
 		},
 		Named = 
 		{
@@ -2409,7 +2482,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 49,
+				uint ResolvedCog = 50,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -2423,7 +2496,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 51,
+			uint Id = 52,
 		},
 		Named = 
 		{
@@ -2462,7 +2535,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 52,
+			uint Id = 53,
 		},
 		Named = 
 		{
@@ -2511,7 +2584,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 51,
+				uint ResolvedCog = 52,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -2525,7 +2598,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 53,
+			uint Id = 54,
 		},
 		Named = 
 		{
@@ -2564,7 +2637,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 54,
+			uint Id = 55,
 		},
 		Named = 
 		{
@@ -2613,7 +2686,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 53,
+				uint ResolvedCog = 54,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -2627,7 +2700,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 55,
+			uint Id = 56,
 		},
 		Named = 
 		{
@@ -2666,7 +2739,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 56,
+			uint Id = 57,
 		},
 		Named = 
 		{
@@ -2715,7 +2788,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 55,
+				uint ResolvedCog = 56,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -2729,7 +2802,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 57,
+			uint Id = 58,
 		},
 		Named = 
 		{
@@ -2813,7 +2886,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 58,
+					uint Id = 59,
 				},
 				Named = 
 				{
