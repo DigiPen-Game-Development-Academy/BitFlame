@@ -146,16 +146,16 @@ class Ship_Menu_Button_Repair_Function : ZilchComponent
     
     function OnMouseEnter(event : ViewportMouseEvent)
     {
-            if(this.GameSession.GameVars.PlayerResources >= this.CurrentIronCost && this.GameSession.GameVars.PlayerCopper >= this.CurrentCopperCost && this.GameSession.GameVars.PlayerTitanium >= this.CurrentTitaniumCost && this.GameSession.GameVars.PlayerAluminium >= this.CurrentAluminiumCost)
-            {   
-                this.Transform.Translation.Z += 10;
+        if(this.GameSession.GameVars.PlayerResources >= this.CurrentIronCost && this.GameSession.GameVars.PlayerCopper >= this.CurrentCopperCost && this.GameSession.GameVars.PlayerTitanium >= this.CurrentTitaniumCost && this.GameSession.GameVars.PlayerAluminium >= this.CurrentAluminiumCost)
+        {   
+            this.Transform.Translation.Z += 10;
                     
-                this.Owner.Actions.Cancel();
-                var seq = Action.Sequence(this.Owner.Actions);
-                var grp = Action.Group(seq);
+            this.Owner.Actions.Cancel();
+            var seq = Action.Sequence(this.Owner.Actions);
+            var grp = Action.Group(seq);
                 
-                Action.Property(grp, @this.Sprite.Color, this.HoverColor, 0.03, Ease.QuadInOut);
-                Action.Property(grp, @this.Transform.Scale, this.OriginalScale * this.HoverScale, 0.3, Ease.QuadInOut);
+            Action.Property(grp, @this.Sprite.Color, this.HoverColor, 0.03, Ease.QuadInOut);
+            Action.Property(grp, @this.Transform.Scale, this.OriginalScale * this.HoverScale, 0.3, Ease.QuadInOut);
         }
     
         this.Space.FindObjectByName("RepairToolTip").Sprite.Visible = true;
@@ -176,14 +176,13 @@ class Ship_Menu_Button_Repair_Function : ZilchComponent
         
     function OnMouseExit(event : ViewportMouseEvent)
     {
-        var color = this.OriginalColor;
+        var color = this.DisabledColor;
         
-        if(!(this.GameSession.GameVars.PlayerResources >= this.CurrentIronCost) && !(this.GameSession.GameVars.PlayerCopper >= this.CurrentCopperCost) && !(this.GameSession.GameVars.PlayerTitanium >= this.CurrentTitaniumCost) && !(this.GameSession.GameVars.PlayerAluminium >= this.CurrentAluminiumCost))
+        if(this.GameSession.GameVars.PlayerResources >= this.CurrentIronCost && this.GameSession.GameVars.PlayerCopper >= this.CurrentCopperCost && this.GameSession.GameVars.PlayerTitanium >= this.CurrentTitaniumCost && this.GameSession.GameVars.PlayerAluminium >= this.CurrentAluminiumCost)
         { 
-            color = this.DisabledColor;
+            color = this.OriginalColor;
         }
 
-        this.Transform.Translation.Z -= 10;
         this.Owner.Actions.Cancel();
         var seq = Action.Sequence(this.Owner.Actions);
         var grp = Action.Group(seq);

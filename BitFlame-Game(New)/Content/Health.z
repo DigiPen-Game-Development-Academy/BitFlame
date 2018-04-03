@@ -8,6 +8,7 @@ class Health : ZilchComponent
     //leave null to spawn nothing
     [Property] var ArchetypetoSpawnOnDeath1 : Archetype = null;
     [Property] var ArchetypetoSpawnOnDeath2 : Archetype = null;
+    [Property] var ArchetypetoSpawnOnDeath3 : Archetype = null;
     
     [Property] var ExplosionSound : SoundCue;
     
@@ -36,6 +37,10 @@ class Health : ZilchComponent
             if(this.ArchetypetoSpawnOnDeath2 != null)
             {
                 this.Space.CreateAtPosition(this.ArchetypetoSpawnOnDeath2, this.Owner.Transform.WorldTranslation);
+            }
+            if(this.ArchetypetoSpawnOnDeath3 != null)
+            {
+                this.Space.CreateAtPosition(this.ArchetypetoSpawnOnDeath3, this.Owner.Transform.WorldTranslation);
             }
             var blockUpdate = BlockUpdate();
             blockUpdate.Translation = this.Transform.Translation;

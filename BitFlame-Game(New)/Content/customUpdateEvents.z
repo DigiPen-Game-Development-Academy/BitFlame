@@ -5,6 +5,7 @@ Contributors: NULL
 Last modified: 3/27/2018
 Brief: This script stores the definitions of some custom events
 ******************************************/
+
  class BlockUpdate : ZilchEvent
  {  
     //block update event
@@ -19,4 +20,3 @@ class PlayerHurtUpdate : ZilchEvent
     //player hurt update event
     sends PlayerHurtUpdate : ZilchEvent;
 }
-

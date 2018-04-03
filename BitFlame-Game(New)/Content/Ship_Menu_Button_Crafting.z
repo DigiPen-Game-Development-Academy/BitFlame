@@ -2,7 +2,7 @@
 Ship_Menu_Button_Crafting.Z
 by: Jakob McFarland
 Contributers: 
-Date: 2/1/18
+Date: 4/3/18
 Brief: these components will make a button look good and be functional
 ***********************/
 
@@ -10,7 +10,7 @@ enum ItemType {Aluminium, Copper, Iron, Titanium, Pipe, Turret}
 
 class Ship_Menu_Button_Crafting : ZilchComponent
 {
-    // Stage 1 ship repair costs
+    // crafting cost costs
     [Property] var IronCost : Integer = 0;
     [Property] var CopperCost : Integer = 0; 
     [Property] var TitaniumCost : Integer = 0;
@@ -63,6 +63,10 @@ class Ship_Menu_Button_Crafting : ZilchComponent
         {
             this.Sprite.Color = this.DisabledColor;
         }
+        else
+        {
+            this.Sprite.Color = this.OriginalColor;
+        }
     }
 
     function OnLeftMouseDown(event : ViewportMouseEvent)
@@ -97,18 +101,17 @@ class Ship_Menu_Button_Crafting : ZilchComponent
         
     function OnMouseExit(event : ViewportMouseEvent)
     {
-        var color = this.OriginalColor;
+         var color = this.DisabledColor;
         
-        if(!(this.GameSession.GameVars.PlayerResources > this.IronCost) && !(this.GameSession.GameVars.PlayerCopper > this.CopperCost) && !(this.GameSession.GameVars.PlayerTitanium > this.TitaniumCost) && !(this.GameSession.GameVars.PlayerAluminium > this.AluminiumCost))
+        if(this.GameSession.GameVars.PlayerResources >= this.IronCost && this.GameSession.GameVars.PlayerCopper >= this.CopperCost && this.GameSession.GameVars.PlayerTitanium >= this.TitaniumCost && this.GameSession.GameVars.PlayerAluminium >= this.AluminiumCost)
         { 
-            color = this.DisabledColor;
+            color = this.OriginalColor;
         }
 
-        this.Transform.Translation.Z -= 10;
         this.Owner.Actions.Cancel();
         var seq = Action.Sequence(this.Owner.Actions);
         var grp = Action.Group(seq);
-        
+            
         Action.Property(grp, @this.Sprite.Color, color, 0.03, Ease.QuadInOut);
         Action.Property(grp, @this.Transform.Scale, this.OriginalScale, 0.3, Ease.QuadInOut);
     }

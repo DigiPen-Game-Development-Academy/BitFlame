@@ -9,13 +9,13 @@ class Asteroid_Mining : ZilchComponent
     
     [Property] var ShrinkAmount : Real = 0.0;
     
-    [Property] var AluminiumColor : Real4 = Real4(0.0,0.0,0.0,1.0);
+    [Property] var AluminiumSprite : SpriteSource = SpriteSource.Asteroid_TileMap_Ores000;
     
-    [Property] var CopperColor : Real4 = Real4(0.0,0.0,0.0,1.0);
+    [Property] var CopperSprite : SpriteSource = SpriteSource.Asteroid_TileMap_Ores002;
     
-    [Property] var IronColor : Real4 = Real4(0.0,0.0,0.0,1.0);
+    [Property] var IronSprite : SpriteSource = SpriteSource.Asteroid_TileMap_Ores004;
     
-    [Property] var TitaniumColor : Real4 = Real4(0.0,0.0,0.0,1.0);
+    [Property] var TitaniumSprite : SpriteSource = SpriteSource.Asteroid_TileMap_Ores005;
     
     [Property] var AluminiumArchetype : Archetype = null;
     
@@ -56,7 +56,7 @@ class Asteroid_Mining : ZilchComponent
             {
                 this.ResourceArchetype = this.AluminiumArchetype;
                 
-                this.Owner.Sprite.Color = this.AluminiumColor;
+                this.Owner.Sprite.SpriteSource = this.AluminiumSprite;
                 
                 this.Owner.Health.Health = this.RandomGen.Range(1,2);
             }
@@ -64,7 +64,7 @@ class Asteroid_Mining : ZilchComponent
             {
                 this.ResourceArchetype = this.CopperArchetype;
                 
-                this.Owner.Sprite.Color = this.CopperColor;
+                this.Owner.Sprite.SpriteSource = this.CopperSprite;
                 
                 this.Owner.Health.Health = this.RandomGen.Range(1,3);
             }
@@ -72,7 +72,7 @@ class Asteroid_Mining : ZilchComponent
             {
                 this.ResourceArchetype = this.IronArchetype;
                 
-                this.Owner.Sprite.Color = this.IronColor;
+                this.Owner.Sprite.SpriteSource = this.IronSprite;
                 
                 this.Owner.Health.Health = this.RandomGen.Range(2,4);
             }
@@ -80,7 +80,7 @@ class Asteroid_Mining : ZilchComponent
             {
                 this.ResourceArchetype = this.TitaniumArchetype;
                 
-                this.Owner.Sprite.Color = this.TitaniumColor;
+                this.Owner.Sprite.SpriteSource = this.TitaniumSprite;
                 
                 this.Owner.Health.Health = this.RandomGen.Range(3,5);
             }

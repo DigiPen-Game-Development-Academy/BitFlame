@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [26.5955715, 6.93678951, 0],
+		Vec3 Translation = [17.2082291, 14.1425724, 44.0999985],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -78,6 +78,7 @@ Cog =
 		float Health = 2,
 		string ArchetypetoSpawnOnDeath1 = "5a70715bb5c81bfe:Game_OxygenOre_Pickup",
 		string ArchetypetoSpawnOnDeath2 = "5af4a586aa6a35b5:lienEnemy_ExplosionEffect",
+		string ArchetypetoSpawnOnDeath3 = "5a6ca525a5151ffd:Game_TitaniumOre_Pickup",
 		string ExplosionSound = "5ae3cf4fa1248b1b:Enemy_Explosion",
 		bool Unbreakable = false,
 	},

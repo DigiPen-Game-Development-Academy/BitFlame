@@ -156,7 +156,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.25916553, 1.98808444, 94.0999985],
+			Vec3 Translation = [1.00180554, -0.841371, 94.0999985],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -168,7 +168,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 10.0258875,
+			float Size = 30.119421,
 		},
 		EditorCameraController = 
 		{
@@ -176,7 +176,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [1.25916553, 1.98808444, 44.0999985],
+			Vec3 LookTarget = [1.00180554, -0.841371, 44.0999985],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -261,6 +261,11 @@ Level =
 		MoveSound = 
 		{
 			string MoveNoise = "5a35def55bb06440:MoveSound",
+		},
+		ScreenShake = 
+		{
+			float ShakeAmount = 0.200000003,
+			float ShakeRate = 0.00100000005,
 		},
 	},
 	ArchetypeInstance = 

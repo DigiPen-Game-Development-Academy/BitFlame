@@ -115,7 +115,7 @@ class ResourcePickup : ZilchComponent
         
         if(Math.Distance(this.Owner.Transform.Translation, player.Transform.Translation) <= this.PickupRange)
         {
-            this.Owner.RigidBody.Velocity += Math.Normalize(player.Transform.Translation 
+            this.Owner.RigidBody.Velocity = Math.Normalize(player.Transform.Translation 
                 - this.Owner.Transform.Translation) * event.Dt * this.PickupSpeed;
         }
     }
@@ -140,7 +140,7 @@ class CopperPickup : ZilchComponent
         
         if(Math.Distance(this.Owner.Transform.Translation, player.Transform.Translation) <= this.PickupRange)
         {
-            this.Owner.RigidBody.Velocity += Math.Normalize(player.Transform.Translation 
+            this.Owner.RigidBody.Velocity = Math.Normalize(player.Transform.Translation 
                 - this.Owner.Transform.Translation) * event.Dt * this.PickupSpeed;
         }
     }
@@ -165,7 +165,7 @@ class TitaniumPickup : ZilchComponent
         
         if(Math.Distance(this.Owner.Transform.Translation, player.Transform.Translation) <= this.PickupRange)
         {
-            this.Owner.RigidBody.Velocity += Math.Normalize(player.Transform.Translation 
+            this.Owner.RigidBody.Velocity = Math.Normalize(player.Transform.Translation 
                 - this.Owner.Transform.Translation) * event.Dt * this.PickupSpeed;
         }
     }
@@ -190,7 +190,8 @@ class AluminiumPickup : ZilchComponent
         
         if(Math.Distance(this.Owner.Transform.Translation, player.Transform.Translation) <= this.PickupRange)
         {
-            this.Owner.RigidBody.Velocity += Math.Normalize(player.Transform.Translation - this.Owner.Transform.Translation) * event.Dt * this.PickupSpeed;
+            this.Owner.RigidBody.Velocity = Math.Normalize(player.Transform.Translation
+                - this.Owner.Transform.Translation) * event.Dt * this.PickupSpeed;
         }
     }
 }
@@ -214,7 +215,7 @@ class OxygenPickup : ZilchComponent
         
         if(Math.Distance(this.Owner.Transform.Translation, player.Transform.Translation) <= this.PickupRange)
         {
-            this.Owner.RigidBody.Velocity += Math.Normalize(player.Transform.Translation 
+            this.Owner.RigidBody.Velocity = Math.Normalize(player.Transform.Translation 
                 - this.Owner.Transform.Translation) * event.Dt * this.PickupSpeed;
         }
     }
@@ -238,7 +239,7 @@ class HealthPickup : ZilchComponent
         
         if(Math.Distance(this.Owner.Transform.Translation, player.Transform.Translation) <= this.PickupRange)
         {
-            this.Owner.RigidBody.Velocity += Math.Normalize(player.Transform.Translation 
+            this.Owner.RigidBody.Velocity = Math.Normalize(player.Transform.Translation 
                 - this.Owner.Transform.Translation) * event.Dt * this.PickupSpeed;
         }
     }
@@ -265,7 +266,8 @@ class UpgradePickup : ZilchComponent
         {
             if(Math.Distance(this.Owner.Transform.Translation, player.Transform.Translation) <= this.PickupRange)
             {
-                this.Owner.RigidBody.Velocity += Math.Normalize(player.Transform.Translation - this.Owner.Transform.Translation) * event.Dt * this.PickupSpeed;
+                this.Owner.RigidBody.Velocity = Math.Normalize(player.Transform.Translation 
+                    - this.Owner.Transform.Translation) * event.Dt * this.PickupSpeed;
             }
         }
     }
@@ -291,7 +293,8 @@ class PipePickup : ZilchComponent
         
         if(Math.Distance(this.Owner.Transform.Translation, player.Transform.Translation) <= this.PickupRange)
         {
-            this.Owner.RigidBody.Velocity += Math.Normalize(player.Transform.Translation - this.Owner.Transform.Translation) * event.Dt * this.PickupSpeed;
+            this.Owner.RigidBody.Velocity = Math.Normalize(player.Transform.Translation 
+                - this.Owner.Transform.Translation) * event.Dt * this.PickupSpeed;
         }
     }
 }
@@ -315,7 +318,8 @@ class TurretPickup : ZilchComponent
         
         if(Math.Distance(this.Owner.Transform.Translation, player.Transform.Translation) <= this.PickupRange)
         {
-            this.Owner.RigidBody.Velocity += Math.Normalize(player.Transform.Translation - this.Owner.Transform.Translation) * event.Dt * this.PickupSpeed;
+            this.Owner.RigidBody.Velocity = Math.Normalize(player.Transform.Translation 
+                - this.Owner.Transform.Translation) * event.Dt * this.PickupSpeed;
         }
     }
 }

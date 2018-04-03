@@ -144,7 +144,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [7.01450634, 19.9958496, 60.9997482],
+			Vec3 Translation = [3.6790657, 49.0914879, 60.9997482],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -156,7 +156,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 49.6586151,
+			float Size = 24.6597729,
 		},
 		EditorCameraController = 
 		{
@@ -164,7 +164,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [7.01450634, 19.9958496, 10.9997501],
+			Vec3 LookTarget = [3.6790657, 49.0914879, 10.9997501],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -422,9 +422,11 @@ Level =
 			Vec3 NewCameraPosition = [0, 60, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			bool ChangeLevel = false,
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
+			bool Gamemode = false,
 		},
 		Ship_Menu_Button_Crafting_CostDisplay = 
 		{
@@ -452,7 +454,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0, 0, 20],
+					Vec3 Translation = [0, 0, 2],
 					Vec3 Scale = [2, 2, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -581,9 +583,11 @@ Level =
 			Vec3 NewCameraPosition = [0, 60, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			bool ChangeLevel = false,
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
+			bool Gamemode = false,
 		},
 		Ship_Menu_Button_Crafting_CostDisplay = 
 		{
@@ -611,7 +615,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0, 0, 20],
+					Vec3 Translation = [0, 0, 2],
 					Vec3 Scale = [2, 2, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -740,9 +744,11 @@ Level =
 			Vec3 NewCameraPosition = [0, 60, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			bool ChangeLevel = false,
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
+			bool Gamemode = false,
 		},
 		Area = 
 		{
@@ -892,9 +898,11 @@ Level =
 			Vec3 NewCameraPosition = [0, 60, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			bool ChangeLevel = false,
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
+			bool Gamemode = false,
 		},
 		Area = 
 		{
@@ -1051,9 +1059,11 @@ Level =
 			Vec3 NewCameraPosition = [0, 30, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			bool ChangeLevel = false,
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
+			bool Gamemode = false,
 		},
 		Area = 
 		{
@@ -1074,7 +1084,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0, 0, 20],
+					Vec3 Translation = [0, 0, 2],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1165,9 +1175,11 @@ Level =
 			Vec3 NewCameraPosition = [0, 30, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			bool ChangeLevel = false,
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
+			bool Gamemode = false,
 		},
 		Ship_Menu_Button_Crafting_CostDisplay = 
 		{
@@ -1195,7 +1207,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0, 0, 20],
+					Vec3 Translation = [0, 0, 2],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1286,9 +1298,11 @@ Level =
 			Vec3 NewCameraPosition = [0, 30, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			bool ChangeLevel = false,
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
+			bool Gamemode = false,
 		},
 		Area = 
 		{
@@ -1400,9 +1414,11 @@ Level =
 			Vec3 NewCameraPosition = [0, 30, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			bool ChangeLevel = false,
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
+			bool Gamemode = false,
 		},
 		Area = 
 		{
@@ -1460,7 +1476,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-8, 34.5, 21],
+			Vec3 Translation = [-8, 34.5, 2],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1495,7 +1511,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.5, 34.5, 21],
+			Vec3 Translation = [1.5, 34.5, 2],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1530,7 +1546,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [2, 64.5, 21],
+			Vec3 Translation = [2, 64.5, 2],
 			Vec3 Scale = [2, 2, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1603,7 +1619,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-3.5, 64.5, 21],
+			Vec3 Translation = [-3.5, 64.5, 2],
 			Vec3 Scale = [2, 2, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1773,9 +1789,11 @@ Level =
 			Vec3 NewCameraPosition = [30, 30, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			bool ChangeLevel = false,
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
+			bool Gamemode = false,
 		},
 		Area = 
 		{
@@ -2392,9 +2410,11 @@ Level =
 			Vec3 NewCameraPosition = [0, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = true,
+			bool ChangeLevel = false,
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
+			bool Gamemode = false,
 		},
 		Area = 
 		{
@@ -2505,9 +2525,11 @@ Level =
 			Vec3 NewCameraPosition = [30, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			bool ChangeLevel = false,
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
+			bool Gamemode = false,
 		},
 		Area = 
 		{
@@ -5791,7 +5813,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 2.5],
+			Vec3 Translation = [0, 0, 5],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -6194,9 +6216,11 @@ Level =
 			Vec3 NewCameraPosition = [60, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			bool ChangeLevel = false,
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
+			bool Gamemode = false,
 		},
 		Area = 
 		{
@@ -6598,9 +6622,11 @@ Level =
 			Vec3 NewCameraPosition = [90, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			bool ChangeLevel = false,
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
+			bool Gamemode = false,
 		},
 		Area = 
 		{
@@ -6707,9 +6733,11 @@ Level =
 			Vec3 NewCameraPosition = [90, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			bool ChangeLevel = false,
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
+			bool Gamemode = false,
 		},
 		Area = 
 		{
@@ -6816,9 +6844,11 @@ Level =
 			Vec3 NewCameraPosition = [0, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			bool ChangeLevel = false,
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
+			bool Gamemode = false,
 		},
 		Area = 
 		{
@@ -6925,9 +6955,11 @@ Level =
 			Vec3 NewCameraPosition = [30, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			bool ChangeLevel = false,
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
+			bool Gamemode = false,
 		},
 		Area = 
 		{
@@ -7034,9 +7066,11 @@ Level =
 			Vec3 NewCameraPosition = [30, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			bool ChangeLevel = false,
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
+			bool Gamemode = false,
 		},
 		Area = 
 		{
@@ -7143,9 +7177,11 @@ Level =
 			Vec3 NewCameraPosition = [30, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			bool ChangeLevel = false,
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
+			bool Gamemode = false,
 		},
 		Area = 
 		{
@@ -7340,9 +7376,11 @@ Level =
 			Vec3 NewCameraPosition = [0, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			bool ChangeLevel = false,
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
+			bool Gamemode = false,
 		},
 		Area = 
 		{
@@ -7449,9 +7487,11 @@ Level =
 			Vec3 NewCameraPosition = [0, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			bool ChangeLevel = false,
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
+			bool Gamemode = false,
 		},
 		Area = 
 		{
@@ -7558,9 +7598,11 @@ Level =
 			Vec3 NewCameraPosition = [60, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			bool ChangeLevel = false,
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
+			bool Gamemode = false,
 		},
 		Area = 
 		{
@@ -7667,9 +7709,11 @@ Level =
 			Vec3 NewCameraPosition = [60, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			bool ChangeLevel = false,
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
+			bool Gamemode = false,
 		},
 		Area = 
 		{
@@ -7776,9 +7820,11 @@ Level =
 			Vec3 NewCameraPosition = [90, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			bool ChangeLevel = false,
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
+			bool Gamemode = false,
 		},
 		Area = 
 		{
@@ -8361,9 +8407,11 @@ Level =
 			Vec3 NewCameraPosition = [60, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			bool ChangeLevel = false,
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
+			bool Gamemode = false,
 		},
 		Area = 
 		{
@@ -8558,9 +8606,11 @@ Level =
 			Vec3 NewCameraPosition = [30, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			bool ChangeLevel = false,
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
+			bool Gamemode = false,
 		},
 		Area = 
 		{
@@ -8667,9 +8717,11 @@ Level =
 			Vec3 NewCameraPosition = [90, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			bool ChangeLevel = false,
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
+			bool Gamemode = false,
 		},
 		Area = 
 		{
@@ -8947,9 +8999,11 @@ Level =
 			Vec3 NewCameraPosition = [90, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			bool ChangeLevel = false,
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
+			bool Gamemode = false,
 		},
 		Area = 
 		{
@@ -9063,9 +9117,11 @@ Level =
 			Vec3 NewCameraPosition = [0, 90, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			bool ChangeLevel = false,
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
+			bool Gamemode = false,
 		},
 		Area = 
 		{
@@ -9367,9 +9423,11 @@ Level =
 			Vec3 NewCameraPosition = [60, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			bool ChangeLevel = false,
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
+			bool Gamemode = false,
 		},
 		Area = 
 		{
@@ -9526,9 +9584,11 @@ Level =
 			Vec3 NewCameraPosition = [0, 120, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			bool ChangeLevel = false,
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
+			bool Gamemode = false,
 		},
 		Area = 
 		{
@@ -9598,9 +9658,11 @@ Level =
 			Vec3 NewCameraPosition = [30, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			bool ChangeLevel = false,
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
+			bool Gamemode = false,
 		},
 		Area = 
 		{
@@ -9750,9 +9812,11 @@ Level =
 			Vec3 NewCameraPosition = [90, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			bool ChangeLevel = false,
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
+			bool Gamemode = false,
 		},
 		Area = 
 		{
@@ -9947,9 +10011,11 @@ Level =
 			Vec3 NewCameraPosition = [60, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			bool ChangeLevel = false,
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
+			bool Gamemode = false,
 		},
 		Area = 
 		{
@@ -10056,9 +10122,11 @@ Level =
 			Vec3 NewCameraPosition = [30, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			bool ChangeLevel = false,
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
+			bool Gamemode = false,
 		},
 		Area = 
 		{
@@ -10165,9 +10233,11 @@ Level =
 			Vec3 NewCameraPosition = [30, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			bool ChangeLevel = false,
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
+			bool Gamemode = false,
 		},
 		Area = 
 		{
@@ -10274,9 +10344,11 @@ Level =
 			Vec3 NewCameraPosition = [90, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			bool ChangeLevel = false,
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
+			bool Gamemode = false,
 		},
 		Area = 
 		{
@@ -10383,9 +10455,11 @@ Level =
 			Vec3 NewCameraPosition = [60, 0, 0],
 			float MoveTime = 0.200000003,
 			bool Reload = false,
+			bool ChangeLevel = false,
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
+			bool Gamemode = false,
 		},
 		Area = 
 		{
@@ -11261,6 +11335,376 @@ Level =
 		},
 		Hierarchy = 
 		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 225,
+		},
+		Named = 
+		{
+			string Name = "CraftingCostIndicator",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [1.5, 29.5, 11],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.250980407, 0.250980407, 0.250980407, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "4e7bac697bec55c5:Verdana",
+			uint FontSize = 64,
+			string Text = "0/0",
+			TextAlign Align = Center,
+			float PixelsPerUnit = 64,
+			bool Smoothing = false,
+		},
+		CostIndicator = 
+		{
+			Enum ItemType = Aluminium,
+			int Cost = 8,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 226,
+		},
+		Named = 
+		{
+			string Name = "CraftingCostIndicator",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [6, 29.5, 11],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.250980407, 0.250980407, 0.250980407, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "4e7bac697bec55c5:Verdana",
+			uint FontSize = 64,
+			string Text = "0/0",
+			TextAlign Align = Center,
+			float PixelsPerUnit = 64,
+			bool Smoothing = false,
+		},
+		CostIndicator = 
+		{
+			Enum ItemType = Iron,
+			int Cost = 4,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 227,
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [1.5, 30, 11],
+			Vec3 Scale = [3, 3, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a6ca865e6dcd3d6:Game_AluminiumOre_Pickup_Animation ",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 228,
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [6, 30, 11],
+			Vec3 Scale = [3, 3, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a861677b874ddb8:Game_ResourceOre_Pickup_Animation",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 229,
+		},
+		Named = 
+		{
+			string Name = "CraftingCostIndicator",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [6.5, 59.5, 11],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.250980407, 0.250980407, 0.250980407, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "4e7bac697bec55c5:Verdana",
+			uint FontSize = 64,
+			string Text = "0/0",
+			TextAlign Align = Center,
+			float PixelsPerUnit = 64,
+			bool Smoothing = false,
+		},
+		CostIndicator = 
+		{
+			Enum ItemType = Copper,
+			int Cost = 6,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 230,
+		},
+		Named = 
+		{
+			string Name = "CraftingCostIndicator",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [2, 55, 11],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.250980407, 0.250980407, 0.250980407, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "4e7bac697bec55c5:Verdana",
+			uint FontSize = 64,
+			string Text = "0/0",
+			TextAlign Align = Center,
+			float PixelsPerUnit = 64,
+			bool Smoothing = false,
+		},
+		CostIndicator = 
+		{
+			Enum ItemType = Titanium,
+			int Cost = 2,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 231,
+		},
+		Named = 
+		{
+			string Name = "CraftingCostIndicator",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [2, 59.5, 11],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.250980407, 0.250980407, 0.250980407, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "4e7bac697bec55c5:Verdana",
+			uint FontSize = 64,
+			string Text = "0/0",
+			TextAlign Align = Center,
+			float PixelsPerUnit = 64,
+			bool Smoothing = false,
+		},
+		CostIndicator = 
+		{
+			Enum ItemType = Aluminium,
+			int Cost = 8,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 232,
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [6.5, 60, 11],
+			Vec3 Scale = [3, 3, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a6ca9e2c229190c:Game_CopperOre_Pickup_Animation",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 233,
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [2, 55.5, 11],
+			Vec3 Scale = [3, 3, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a6ca9bdd19de39a:Game_TitaniumOre_Pickup_Animation",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 234,
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [2, 60, 11],
+			Vec3 Scale = [3, 3, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a6ca865e6dcd3d6:Game_AluminiumOre_Pickup_Animation ",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
 		},
 	},
 },

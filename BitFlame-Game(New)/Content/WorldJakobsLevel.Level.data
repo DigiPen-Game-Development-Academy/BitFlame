@@ -151,7 +151,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.915524542, -1.31714416, 50],
+			Vec3 Translation = [-8.05366421, -0.0855937898, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -163,7 +163,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 40.171093,
+			float Size = 9.90608025,
 		},
 		EditorCameraController = 
 		{
@@ -171,7 +171,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.915524542, -1.31714416, 4.00185662e-08],
+			Vec3 LookTarget = [-8.05366421, -0.0855937898, -3.52037205e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1006,28 +1006,10 @@ Level =
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5a9159819b85330d:Game_Health_Pickup",
-		LinkId = 
-		{
-			uint Id = 18,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-10, 3, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Game_Health_Pickup",
-		},
-	},
-	ArchetypeInstance = 
-	{
 		string Name = "5a9842f78945b818:Ship",
 		LinkId = 
 		{
-			uint Id = 19,
+			uint Id = 18,
 		},
 		Transform = 
 		{
@@ -1045,7 +1027,7 @@ Level =
 		string Name = "5a1c25102e8b8ff5:AlienEnemy",
 		LinkId = 
 		{
-			uint Id = 20,
+			uint Id = 19,
 		},
 		Transform = 
 		{

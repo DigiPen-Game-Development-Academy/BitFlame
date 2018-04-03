@@ -1,0 +1,37 @@
+class CostIndicator : ZilchComponent
+{
+    [Dependency] var SpriteText : SpriteText = null;
+    
+    [Property] var ItemType : ItemType; 
+    [Property] var Cost : Integer = 0;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        //aluminium
+        if(this.ItemType == 0)
+        {
+            this.SpriteText.Text = "`this.GameSession.GameVars.PlayerAluminium`/`this.Cost`";
+        }
+        //copper
+        else if(this.ItemType == 1)
+        {
+            this.SpriteText.Text = "`this.GameSession.GameVars.PlayerCopper`/`this.Cost`";
+        }
+        //iron
+        else if(this.ItemType == 2)
+        {
+            this.SpriteText.Text = "`this.GameSession.GameVars.PlayerResources`/`this.Cost`";
+        }
+        //titanium
+        else if(this.ItemType == 3)
+        {
+            this.SpriteText.Text = "`this.GameSession.GameVars.PlayerTitanium`/`this.Cost`";
+        }
+            
+    }
+}
