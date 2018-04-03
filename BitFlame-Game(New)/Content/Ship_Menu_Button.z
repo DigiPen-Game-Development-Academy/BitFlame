@@ -12,6 +12,9 @@ class Ship_Menu_Button_Visual : ZilchComponent
   [Dependency] var Sprite : Sprite = null;
   [Dependency] var Transform : Transform = null;
   
+  [Property] var SelectSound : SoundCue = SoundCue.Find("Blip_Select");
+  [Property] var CantSelect : SoundCue = SoundCue.Find("Blip_CantSelect");
+  
   //colors for sits
   var OriginalColor :Real4 = Real4();
   
@@ -41,6 +44,8 @@ class Ship_Menu_Button_Visual : ZilchComponent
     this.Owner.Actions.Cancel();
     var seq = Action.Sequence(this.Owner.Actions);
     var grp = Action.Group(seq);
+    
+    this.Space.SoundSpace.PlayCue(this.SelectSound);
     
     Action.Property(grp, @this.Sprite.Color, this.ClickColor, 0.03, Ease.QuadInOut);
     Action.Property(grp, @this.Transform.Scale, this.OriginalScale * this.ClickScale, 0.3, Ease.QuadInOut);

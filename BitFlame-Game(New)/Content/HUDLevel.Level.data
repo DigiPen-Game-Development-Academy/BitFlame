@@ -144,7 +144,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [15.8525562, -0.977637291, 76.9073792],
+			Vec3 Translation = [0.124985695, 8.60956573, 76.9073792],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -156,7 +156,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 5.50233555,
+			float Size = 14.367219,
 		},
 		EditorCameraController = 
 		{
@@ -164,7 +164,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [15.8525562, -0.977637291, 26.907383],
+			Vec3 LookTarget = [0.124985695, 8.60956573, 26.907383],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -805,6 +805,43 @@ Level =
 		Player_Hurt_Visual = 
 		{
 			bool Enabled = true,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 18,
+		},
+		Named = 
+		{
+			string Name = "IncomingWaveText",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-1.25, 10, 27],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0, 0, 0.5],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "5a075f32e7b83df0:GameFont",
+			uint FontSize = 75,
+			string Text = "Enemy Wave Incoming: 5's",
+			TextAlign Align = Center,
+			float PixelsPerUnit = 64,
+			bool Smoothing = false,
+		},
+		WaveCountdownScript = 
+		{
 		},
 	},
 },
