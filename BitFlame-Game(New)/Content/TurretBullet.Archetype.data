@@ -42,7 +42,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = false,
-		bool Mode2D = false,
+		bool Mode2D = true,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -84,13 +84,10 @@ Cog =
 	DamageOnHit = 
 	{
 		string ArchetypetoSpawnOnDamage = "",
-		float Damage = 0.25,
-		bool Penatrating = false,
+		float Damage = 1,
+		bool Penatrating = true,
 		bool EnemyBullet = false,
 		string PlayerDamagedSound = "",
-	},
-	DestroyOffscreen = 
-	{
 	},
 	SpriteParticleSystem = 
 	{
@@ -154,5 +151,9 @@ Cog =
 	Bullet_Trailing_Script = 
 	{
 		float SpawnSpeed = 0.200000003,
+	},
+	DestroyAwayFromPlayer = 
+	{
+		float DistanceToDespawn = 40,
 	},
 },

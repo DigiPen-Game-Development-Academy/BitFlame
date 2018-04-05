@@ -6,8 +6,8 @@ class TurretLogic : ZilchComponent
     [Property] var Range : Real;
     [Property] var EnemyCollide : CollisionGroup;
     [Property] var ChargingCollide : CollisionGroup;
-    var Timer : Real = 1;
-    var CheckTimer : Real = 1;
+    var Timer : Real = 0.5;
+    var CheckTimer : Real = 0.5;
     var Target : Cog;
     
     function Initialize(init : CogInitializer)
