@@ -52,7 +52,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = false,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -61,7 +61,7 @@ Cog =
 	TurretLogic = 
 	{
 		string Projectile = "5a33c8a060f2dcc9:TurretBullet",
-		float Speed = 50,
+		float Speed = 15,
 		float CoolDown = 0.25,
 		float Range = 25,
 		string EnemyCollide = "5a33def0a21d9c42:Enemies",

@@ -160,24 +160,40 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
-			float TimeUntilNextWave = 20,
-			float SafeDistanceToSpawnFromPlayer = 20,
+			float TimeUntilNextWave = 40,
+			float SafeDistanceToSpawnFromPlayer = 50,
+			float FurthestToSpawnFromPlayer = 150,
 			string EnemyType1 = "5a7411b441710034:ChargingEnemy",
 			string EnemyType2 = "5a74699494525886:AlienCrabEnemy",
 			string EnemyType3 = "5a1c25102e8b8ff5:AlienEnemy",
-			float InitialSpawn1 = 2,
-			float InitialSpawn2 = 4,
-			float InitialSpawn3 = 5,
+			float InitialSpawn1 = 0,
+			float InitialSpawn2 = 6,
+			float InitialSpawn3 = 8,
 			float SpawnIncrease1 = 1,
-			float SpawnIncrease2 = 2,
-			float SpawnIncrease3 = 4,
+			float SpawnIncrease2 = 6,
+			float SpawnIncrease3 = 8,
+			CogPath SpawnChecker = 
+			{
+				string Path = ":/SpawnChecker",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 4,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
 		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 4,
+			uint Id = 5,
 		},
 		Named = 
 		{
@@ -185,7 +201,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-5.63416481, -1.90090799, 94.0999985],
+			Vec3 Translation = [-0.195264935, -6.22599936, 94.0999985],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -197,7 +213,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 24.6596832,
+			float Size = 18.2683449,
 		},
 		EditorCameraController = 
 		{
@@ -205,7 +221,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-5.63416481, -1.90090799, 44.0999985],
+			Vec3 LookTarget = [-0.195264935, -6.22599936, 44.0999985],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -302,7 +318,7 @@ Level =
 		string Name = "5a9842f78945b818:Ship",
 		LinkId = 
 		{
-			uint Id = 5,
+			uint Id = 6,
 		},
 		Transform = 
 		{
@@ -338,7 +354,7 @@ Level =
 		string Name = "5a7f4db494e9d95c:Cursor",
 		LinkId = 
 		{
-			uint Id = 6,
+			uint Id = 7,
 		},
 		Transform = 
 		{
@@ -349,6 +365,24 @@ Level =
 		Named = 
 		{
 			string Name = "Cursor",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5abde067e6fea990:SpawnChecker",
+		LinkId = 
+		{
+			uint Id = 4,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, -6, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "SpawnChecker",
 		},
 	},
 },

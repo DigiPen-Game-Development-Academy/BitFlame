@@ -28,7 +28,7 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5ac100772e10037a:OxygenGauge",
+		string SpriteSource = "5abd0aeccedd117a:OxygenGauge",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -43,7 +43,7 @@ Cog =
 	FlashWhenLow = 
 	{
 		float FlashNumber = 25,
-		Vec4 FlashColor = [1, 0, 0, 1],
+		Vec4 FlashColor = [1, 0, 0, 0.999899983],
 		float FlashTime = 0.100000001,
 	},
 	Hierarchy = 
@@ -119,7 +119,7 @@ Cog =
 				BlendMode BlendMode = Alpha,
 				SpriteGeometryMode GeometryMode = ZPlane,
 				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5ac1603b08d0b032:OxygenTank",
+				string SpriteSource = "5abd179bf397c488:OxygenTank ",
 				bool RenderMask = false,
 				bool FlipX = false,
 				bool FlipY = false,

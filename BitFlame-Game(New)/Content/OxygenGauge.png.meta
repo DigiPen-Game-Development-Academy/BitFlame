@@ -3,7 +3,7 @@ ImageContent =
 	SpriteSourceBuilder = 
 	{
 		string Name = "OxygenGauge",
-		uint64 ResourceId = 5ac100772e10037a,
+		uint64 ResourceId = 5abd0aeccedd117a,
 		uint64 AtlasId = 5274cf95e4a661fd,
 		uint FrameSizeX = 64,
 		uint FrameSizeY = 64,

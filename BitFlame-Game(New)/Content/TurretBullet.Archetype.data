@@ -42,7 +42,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = false,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -84,8 +84,8 @@ Cog =
 	DamageOnHit = 
 	{
 		string ArchetypetoSpawnOnDamage = "",
-		float Damage = 1,
-		bool Penatrating = true,
+		float Damage = 0.5,
+		bool Penatrating = false,
 		bool EnemyBullet = false,
 		string PlayerDamagedSound = "",
 	},

@@ -2,8 +2,8 @@ ImageContent =
 {
 	SpriteSourceBuilder = 
 	{
-		string Name = "OxygenTank",
-		uint64 ResourceId = 5ac1603b08d0b032,
+		string Name = "OxygenTank ",
+		uint64 ResourceId = 5abd179bf397c488,
 		uint64 AtlasId = 5274cf95e4a661fd,
 		uint FrameSizeX = 76,
 		uint FrameSizeY = 141,

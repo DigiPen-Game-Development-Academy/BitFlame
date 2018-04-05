@@ -144,7 +144,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.124985695, 8.60956573, 76.9073792],
+			Vec3 Translation = [3.38945508, -1.92782331, 76.9073792],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -156,7 +156,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 14.367219,
+			float Size = 28.9320145,
 		},
 		EditorCameraController = 
 		{
@@ -164,7 +164,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.124985695, 8.60956573, 26.907383],
+			Vec3 LookTarget = [3.38945508, -1.92782331, 26.907383],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -307,7 +307,7 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5ac100772e10037a:OxygenGauge",
+					string SpriteSource = "5abd0aeccedd117a:OxygenGauge",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
@@ -398,7 +398,7 @@ Level =
 							BlendMode BlendMode = Alpha,
 							SpriteGeometryMode GeometryMode = ZPlane,
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string SpriteSource = "5ac1603b08d0b032:OxygenTank",
+							string SpriteSource = "5abd179bf397c488:OxygenTank ",
 							bool RenderMask = false,
 							bool FlipX = false,
 							bool FlipY = false,
@@ -842,6 +842,12 @@ Level =
 		},
 		WaveCountdownScript = 
 		{
+			float TimeBetweenFlash = 0.200000003,
+		},
+		SpriteTextFlashColor = 
+		{
+			float FlashTime = 0.200000003,
+			Vec4 FlashColor = [1, 0, 0.000599861145, 1],
 		},
 	},
 },

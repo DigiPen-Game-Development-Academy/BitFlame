@@ -16,6 +16,9 @@ class WaveSpawner : ZilchComponent
 
     // How close can enemys spawn from player.
     [Property] var SafeDistanceToSpawnFromPlayer : Real;
+    
+    // How far away enemys can spawn
+    [Property] var FurthestToSpawnFromPlayer : Real;
 
     // Set enemy archetypes to spawn.
     [Property] var EnemyType1 : Archetype;
@@ -47,6 +50,9 @@ class WaveSpawner : ZilchComponent
     var RandomSpawnX : Real;
     var RandomSpawnY : Real;
     
+    // Checks the spawn location for collision
+    [Property] var SpawnChecker : CogPath = null;
+    
     
     function Initialize(init : CogInitializer)
     {
@@ -76,19 +82,20 @@ class WaveSpawner : ZilchComponent
                 if(this.EnemyType1AmountToSpawn > 0)
                 {
                     // Generates random X&Y
-                    this.RandomSpawnX = this.RandomGenerator.Range(this.Player.Cog.Transform.WorldTranslation.X - 40, this.Player.Cog.Transform.WorldTranslation.X + 40);
-                    this.RandomSpawnY = this.RandomGenerator.Range(this.Player.Cog.Transform.WorldTranslation.Y - 40, this.Player.Cog.Transform.WorldTranslation.Y + 40);
+                    this.RandomSpawnX = this.RandomGenerator.Range(this.Player.Cog.Transform.WorldTranslation.X - this.FurthestToSpawnFromPlayer, this.Player.Cog.Transform.WorldTranslation.X + this.FurthestToSpawnFromPlayer);
+                    this.RandomSpawnY = this.RandomGenerator.Range(this.Player.Cog.Transform.WorldTranslation.Y - this.FurthestToSpawnFromPlayer, this.Player.Cog.Transform.WorldTranslation.Y + this.FurthestToSpawnFromPlayer);
                             
                     // Converts random X&Y into a spawnpoint for our enemy.
                     var randomSpawn = Real3(this.RandomSpawnX, this.RandomSpawnY, 0);
                     
+                    this.SpawnChecker.Cog.Transform.Translation = randomSpawn;
+                    
                     // Checks if the spawnpoint is too close to the player.        
-                    if(Math.Distance(randomSpawn, this.Space.FindObjectByName("Player").Transform.Translation) > this.SafeDistanceToSpawnFromPlayer)
+                    if(Math.Distance(randomSpawn, this.Space.FindObjectByName("Player").Transform.Translation) > this.SafeDistanceToSpawnFromPlayer && this.GameSession.GameVars.SafeToSpawn == true)
                     {
                         // Creates correct enemy type and subtracts from how many need to be spawned.
                         this.Space.CreateAtPosition(this.EnemyType1, randomSpawn);     
-                        this.EnemyType1AmountToSpawn -= 1;   
-                        Console.WriteLine("1");       
+                        this.EnemyType1AmountToSpawn -= 1;        
                     }
                     
                 }
@@ -96,19 +103,20 @@ class WaveSpawner : ZilchComponent
                 else if(this.EnemyType2AmountToSpawn > 0)
                 {
                     // Generates random X&Y
-                    this.RandomSpawnX = this.RandomGenerator.Range(this.Player.Cog.Transform.WorldTranslation.X - 40, this.Player.Cog.Transform.WorldTranslation.X + 40);
-                    this.RandomSpawnY = this.RandomGenerator.Range(this.Player.Cog.Transform.WorldTranslation.Y - 40, this.Player.Cog.Transform.WorldTranslation.Y + 40);
+                    this.RandomSpawnX = this.RandomGenerator.Range(this.Player.Cog.Transform.WorldTranslation.X - this.FurthestToSpawnFromPlayer, this.Player.Cog.Transform.WorldTranslation.X + this.FurthestToSpawnFromPlayer);
+                    this.RandomSpawnY = this.RandomGenerator.Range(this.Player.Cog.Transform.WorldTranslation.Y - this.FurthestToSpawnFromPlayer, this.Player.Cog.Transform.WorldTranslation.Y + this.FurthestToSpawnFromPlayer);
                             
                     // Converts random X&Y into a spawnpoint for our enemy.
                     var randomSpawn = Real3(this.RandomSpawnX, this.RandomSpawnY, 0);
                     
+                    this.SpawnChecker.Cog.Transform.Translation = randomSpawn;
+                    
                     // Checks if the spawnpoint is too close to the player.           
-                    if(Math.Distance(randomSpawn, this.Space.FindObjectByName("Player").Transform.Translation) > this.SafeDistanceToSpawnFromPlayer)
+                    if(Math.Distance(randomSpawn, this.Space.FindObjectByName("Player").Transform.Translation) > this.SafeDistanceToSpawnFromPlayer && this.GameSession.GameVars.SafeToSpawn == true)
                     {
                         // Creates correct enemy type and subtracts from how many need to be spawned.
                         this.Space.CreateAtPosition(this.EnemyType2, randomSpawn);     
-                        this.EnemyType2AmountToSpawn -= 1;
-                        Console.WriteLine("2");     
+                        this.EnemyType2AmountToSpawn -= 1;    
                     }
                     
                 }
@@ -116,19 +124,20 @@ class WaveSpawner : ZilchComponent
                 else if(this.EnemyType3AmountToSpawn > 0)
                 {
                     // Generates random X&Y
-                    this.RandomSpawnX = this.RandomGenerator.Range(this.Player.Cog.Transform.WorldTranslation.X - 40, this.Player.Cog.Transform.WorldTranslation.X + 40);
-                    this.RandomSpawnY = this.RandomGenerator.Range(this.Player.Cog.Transform.WorldTranslation.Y - 40, this.Player.Cog.Transform.WorldTranslation.Y + 40);
+                    this.RandomSpawnX = this.RandomGenerator.Range(this.Player.Cog.Transform.WorldTranslation.X - this.FurthestToSpawnFromPlayer, this.Player.Cog.Transform.WorldTranslation.X + this.FurthestToSpawnFromPlayer);
+                    this.RandomSpawnY = this.RandomGenerator.Range(this.Player.Cog.Transform.WorldTranslation.Y - this.FurthestToSpawnFromPlayer, this.Player.Cog.Transform.WorldTranslation.Y + this.FurthestToSpawnFromPlayer);
                             
                     // Converts random X&Y into a spawnpoint for our enemy.
                     var randomSpawn = Real3(this.RandomSpawnX, this.RandomSpawnY, 0);
                     
+                    this.SpawnChecker.Cog.Transform.Translation = randomSpawn;
+                    
                     // Checks if the spawnpoint is too close to the player.           
-                    if(Math.Distance(randomSpawn, this.Space.FindObjectByName("Player").Transform.Translation) > this.SafeDistanceToSpawnFromPlayer)
+                    if(Math.Distance(randomSpawn, this.Space.FindObjectByName("Player").Transform.Translation) > this.SafeDistanceToSpawnFromPlayer && this.GameSession.GameVars.SafeToSpawn == true)
                     {
                         // Creates correct enemy type and subtracts from how many need to be spawned.
                         this.Space.CreateAtPosition(this.EnemyType3, randomSpawn);     
-                        this.EnemyType3AmountToSpawn -= 1;     
-                        Console.WriteLine("3");     
+                        this.EnemyType3AmountToSpawn -= 1;        
                     }
                     
                 }
@@ -150,12 +159,10 @@ class WaveSpawner : ZilchComponent
             {
                 // Subtracts from timer till it hits zero.
                 this.GameSession.GameVars.WaveTimer -= 0.01;
-                Console.WriteLine("Wave Incoming", this.GameSession.GameVars.WaveTimer);
                 
                 // Sets varible in game vars to false when a wave is not active.
                 this.GameSession.GameVars.ActiveWave = false;
             }
-            //math.round
         }
     }       
 }
