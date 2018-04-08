@@ -19,6 +19,8 @@ class WaveSpawner : ZilchComponent
     
     // How far away enemys can spawn
     [Property] var FurthestToSpawnFromPlayer : Real;
+    
+    [Property] var IncreaseEnemySpawnDistance : Real;
 
     // Set enemy archetypes to spawn.
     [Property] var EnemyType1 : Archetype;
@@ -143,11 +145,15 @@ class WaveSpawner : ZilchComponent
                 }
                 else
                 {
+                    this.FurthestToSpawnFromPlayer += this.IncreaseEnemySpawnDistance;
+                    
                     // Adds to the WaveTracker variable.
                     this.WaveTracker += 1;
                     
                     // Sets the wave timer back to default and adds more time based on the WaveTracker.
                     this.GameSession.GameVars.WaveTimer += this.TimeUntilNextWave + (this.WaveTracker * 10);
+                    
+                    
                     
                     // Increase amount of enemys that can spawn during a wave.
                     this.EnemyType1AmountToSpawn += (this.SpawnIncrease1 * this.WaveTracker + this.InitialSpawn1);

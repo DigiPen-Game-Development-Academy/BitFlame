@@ -22,11 +22,14 @@ class WaveCountdownScript : ZilchComponent
         
         this.Owner.SpriteText.Text = ("Enemy Wave Incoming: `timer` 's");
         
-        if(this.GameSession.GameVars.WaveTimer < 3 && this.Timer <= 0)
+        if(this.Timer <= 0)
         {
-            this.Owner.SpriteTextFlashColor.Flash = true;
-            
-            this.Timer += this.TimeBetweenFlash;
+            if(this.GameSession.GameVars.WaveTimer < 3)
+            {
+                this.Owner.SpriteTextFlashColor.Flash = true;
+                
+                this.Timer += this.TimeBetweenFlash;
+            }
         }
         else
         {
