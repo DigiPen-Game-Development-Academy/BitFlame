@@ -221,6 +221,9 @@ class Ship_Menu_Button_Repair_Function : ZilchComponent
         
             if(this.GameSession.GameVars.ShipRepairStage == 4)
             {
+                var buildingRecall = BuildingRecall();
+                this.GameSession.DispatchEvent(Events.BuildingRecall, buildingRecall);
+                
                 this.GameSession.GameVars.NewLevel = Level.WinLevel;
             }
         }     

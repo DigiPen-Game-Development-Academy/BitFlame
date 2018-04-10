@@ -127,6 +127,9 @@ class Ship_Menu_Button_Function : ZilchComponent
         
         if(this.ChangeLevel == true)
         {
+            var buildingRecall = BuildingRecall();
+            this.GameSession.DispatchEvent(Events.BuildingRecall, buildingRecall);
+            
             if(this.LevelToChangeTo != null)
             {
                 this.GameSession.GameVars.NewLevel = this.LevelToChangeTo;
@@ -135,6 +138,9 @@ class Ship_Menu_Button_Function : ZilchComponent
         
         if(this.Reload)
         {
+            var buildingRecall = BuildingRecall();
+            this.GameSession.DispatchEvent(Events.BuildingRecall, buildingRecall);
+            
             this.GameSession.GameVars.WorldRegen = true;
         }
         

@@ -20,3 +20,9 @@ class PlayerHurtUpdate : ZilchEvent
     //player hurt update event
     sends PlayerHurtUpdate : ZilchEvent;
 }
+
+class BuildingRecall : ZilchEvent
+{  
+    //send Building recall event
+    sends BuildingRecall : ZilchEvent;
+}

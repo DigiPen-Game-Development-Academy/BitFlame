@@ -39,6 +39,16 @@ class OxygenPipe_Function : ZilchComponent
         this.ConnectedTo = this.Owner;
         Zero.Connect(this.Space, Events.BlockUpdate, this.OnBlockUpdate);
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.GameSession, Events.BuildingRecall, this.OnBuildingRecall);
+    }
+
+    function OnBuildingRecall(event : ZilchEvent)
+    {
+        if(!this.Origin)
+        {
+            this.GameSession.GameVars.PlayerPipes += 1;
+            this.Owner.Destroy();
+        }
     }
 
     function OnLogicUpdate(event : UpdateEvent)

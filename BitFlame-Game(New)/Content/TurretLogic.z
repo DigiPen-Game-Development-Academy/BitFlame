@@ -13,6 +13,13 @@ class TurretLogic : ZilchComponent
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.GameSession, Events.BuildingRecall, this.OnBuildingRecall);
+    }
+    
+    function OnBuildingRecall(event : ZilchEvent)
+    {
+        this.GameSession.GameVars.PlayerTurrets += 1;
+        this.Owner.Destroy();
     }
     
     function FindTarget()
