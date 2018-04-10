@@ -14,6 +14,8 @@ class Health : ZilchComponent
     
     [Property] var Unbreakable : Boolean = false;
     
+    [Property] var Random3Drop : Boolean = false;
+    
     [Dependency] var Transform : Transform;
     
     function Initialize(init : CogInitializer)
@@ -32,15 +34,29 @@ class Health : ZilchComponent
         {
             if(this.ArchetypetoSpawnOnDeath1 != null)
             {
-                this.Space.CreateAtPosition(this.ArchetypetoSpawnOnDeath1, this.Owner.Transform.WorldTranslation);   
+                this.Space.CreateAtPosition(this.ArchetypetoSpawnOnDeath1, this.Owner.Transform.WorldTranslation
+                    + Real3( Random().Range(-0.5, 0.5), Random().Range(-0.5, 0.5), 0) );    
             }
             if(this.ArchetypetoSpawnOnDeath2 != null)
             {
-                this.Space.CreateAtPosition(this.ArchetypetoSpawnOnDeath2, this.Owner.Transform.WorldTranslation);
+                this.Space.CreateAtPosition(this.ArchetypetoSpawnOnDeath2, this.Owner.Transform.WorldTranslation
+                    + Real3( Random().Range(-0.5, 0.5), Random().Range(-0.5, 0.5), 0) );          
             }
             if(this.ArchetypetoSpawnOnDeath3 != null)
             {
-                this.Space.CreateAtPosition(this.ArchetypetoSpawnOnDeath3, this.Owner.Transform.WorldTranslation);
+                if(this.Random3Drop)
+                {
+                   if(!Random().Range(0, 2) as Integer as Boolean)
+                   {
+                        this.Space.CreateAtPosition(this.ArchetypetoSpawnOnDeath3, this.Owner.Transform.WorldTranslation 
+                            + Real3( Random().Range(-0.5, 0.5), Random().Range(-0.5, 0.5), 0) );                                                                   
+                   }
+                }
+                else
+                {
+                    this.Space.CreateAtPosition(this.ArchetypetoSpawnOnDeath3, this.Owner.Transform.WorldTranslation
+                        + Real3( Random().Range(-0.5, 0.5), Random().Range(-0.5, 0.5), 0) );          
+                }
             }
             var blockUpdate = BlockUpdate();
             blockUpdate.Translation = this.Transform.Translation;

@@ -21,6 +21,8 @@ class GameVars : ZilchComponent
     [Property] var StartingPipes : Integer = 0;  
     [Property] var StartingTurrets : Integer = 0;  
     
+    [Property] var ShowFrameRate :Boolean = false;  
+    
     //upgrade flags
     [Property] var HasUpgrade_SpreadI : Real = 0;
     [Property] var HasUpgrade_SpreadII : Real = 0;

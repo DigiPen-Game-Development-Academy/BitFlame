@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [6.58297634, 1.53549004, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -59,7 +59,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = false,
-		bool Mode2D = false,
+		bool Mode2D = true,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -81,6 +81,7 @@ Cog =
 		string ArchetypetoSpawnOnDeath3 = "5a6ca525a5151ffd:Game_TitaniumOre_Pickup",
 		string ExplosionSound = "5ae3cf4fa1248b1b:Enemy_Explosion",
 		bool Unbreakable = false,
+		bool Random3Drop = true,
 	},
 	DamageOnCollide = 
 	{

@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0.100000001],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -342,10 +342,10 @@ Cog =
 				float Fill = 1,
 				float EmitterVelocityPercent = -25,
 				Vec3 StartVelocity = [0, -1, 0],
-				Vec3 RandomVelocity = [0.100000001, 0.100000001, 0],
+				Vec3 RandomVelocity = [2, 2, 0],
 				Vec3 TangentVelocity = [0, 0, 0],
-				Vec3 EmitterSize = [0, 0, 0],
-				bool FastMovingEmitter = true,
+				Vec3 EmitterSize = [0.0500000007, 0.0500000007, 0],
+				bool FastMovingEmitter = false,
 			},
 			LinearParticleAnimator = 
 			{

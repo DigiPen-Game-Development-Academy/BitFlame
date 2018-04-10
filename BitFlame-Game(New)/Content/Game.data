@@ -32,6 +32,7 @@ GameSession =
 		int StartingUpgradePoints = 1,
 		int StartingPipes = 0,
 		int StartingTurrets = 0,
+		bool ShowFrameRate = true,
 		float HasUpgrade_SpreadI = 0,
 		float HasUpgrade_SpreadII = 0,
 		float HasUpgrade_Homing = 0,
