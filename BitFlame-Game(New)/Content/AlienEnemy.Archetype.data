@@ -59,7 +59,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = false,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -85,7 +85,7 @@ Cog =
 	DamageOnCollide = 
 	{
 		int Damage = 1,
-		float DamageCooldown = 1,
+		float DamageCooldown = 0.5,
 		string PlayerDamagedSound = "5ae3cf4fa125c756:Player-Damaged",
 	},
 	PopUpTextController = 

@@ -1,7 +1,7 @@
 class DamageOnCollide : ZilchComponent
 {
     [Property] var Damage : Integer = 0;
-    [Property] var DamageCooldown : Real = 1;
+    [Property] var DamageCooldown : Real = 0.5;
     [Property] var PlayerDamagedSound : SoundCue;
     
     var TimeTillDamage : Real = 0;
@@ -14,7 +14,6 @@ class DamageOnCollide : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-      //Console.WriteLine(this.TimeTillDamage);
       if (this.TimeTillDamage > 0)
       {
         this.TimeTillDamage -= event.Dt;
@@ -37,10 +36,6 @@ class DamageOnCollide : ZilchComponent
             var playerHurtUpdate = PlayerHurtUpdate();
             //Console.WriteLine("test2");
             this.GameSession.DispatchEvent(Events.PlayerHurtUpdate, playerHurtUpdate);
-          }
-          else 
-          {
-            Console.WriteLine("no oofs");
           }
         }
     }
