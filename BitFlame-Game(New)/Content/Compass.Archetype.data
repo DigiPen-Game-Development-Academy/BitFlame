@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [12.5, -6, 31],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [4, 4, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -28,7 +28,7 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5a2053f868a1ab40:SmallCompass",
+		string SpriteSource = "5a66387efb0bfd15:ShipPointer",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -44,6 +44,9 @@ Cog =
 		OrientationBases DefaultBases = ForwardYUpZ,
 	},
 	LookAtShip = 
+	{
+	},
+	Hierarchy = 
 	{
 	},
 },

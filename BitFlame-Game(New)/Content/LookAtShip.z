@@ -1,10 +1,11 @@
 class LookAtShip : ZilchComponent
 {
+    var Player : Cog;
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
-
+    
     function OnLogicUpdate(event : UpdateEvent)
     {
         this.Owner.Orientation.LookAtPoint(Real3(0.0, 0.0, this.Owner.Transform.WorldTranslation.Z));

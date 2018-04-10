@@ -151,6 +151,21 @@ Cog =
 					CogPathPreference PathPreference1 = SpaceRelative,
 					CogPathPreference PathPreference2 = Absolute,
 				},
+				CogPath SafetyShield = 
+				{
+					string Path = "",
+					bool ErrorOnResolveToNull = false,
+					bool ErrorOnPathCantCompute = false,
+					bool ErrorOnDirectLinkFail = false,
+					bool UpdateCogOnPathChange = true,
+					bool UpdatePathOnCogChange = true,
+					bool UpdateCogOnInitialize = true,
+					bool ResolvedNullErrorOccurred = false,
+					uint ResolvedCog = 4294967293,
+					CogPathPreference PathPreference0 = CogRelative,
+					CogPathPreference PathPreference1 = SpaceRelative,
+					CogPathPreference PathPreference2 = Absolute,
+				},
 			},
 			Hierarchy = 
 			{
@@ -196,7 +211,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0, 0, 0.5],
+				Vec3 Translation = [0, 0, 1],
 				Vec3 Scale = [4, 4, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -206,11 +221,11 @@ Cog =
 				bool VisibilityCulling = true,
 				bool VisibilityEvents = true,
 				bool CastShadows = false,
-				Vec4 Color = [0, 0.519999743, 1, 0.5],
+				Vec4 Color = [0.480000019, 0.750399888, 1, 1],
 				BlendMode BlendMode = Alpha,
 				SpriteGeometryMode GeometryMode = ZPlane,
 				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5274db4c2e7c11f9:Circle",
+				string SpriteSource = "5a2ca2e2bd7ee365:SafetyShield_Sprite001",
 				bool RenderMask = false,
 				bool FlipX = false,
 				bool FlipY = false,
@@ -227,6 +242,41 @@ Cog =
 				string SerializedGroupName = "5a2d55bb3a0519a8:SafetyShield",
 				Vec3 Offset = [0, 0, 0],
 				float Radius = 0.5,
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 5,
+			},
+			Named = 
+			{
+				string Name = "RespawnSafeShieldBack",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [0, 0, 0],
+				Vec3 Scale = [4, 4, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [0.478431404, 0.749019504, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5a2ca2e2bd7ee365:SafetyShield_Sprite001",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
 			},
 		},
 	},
