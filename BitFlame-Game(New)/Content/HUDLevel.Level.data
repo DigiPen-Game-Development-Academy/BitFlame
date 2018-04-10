@@ -144,7 +144,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [3.38945508, -1.92782331, 76.9073792],
+			Vec3 Translation = [14.4909391, -7.58057404, 76.9073792],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -156,7 +156,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 28.9320145,
+			float Size = 14.9568863,
 		},
 		EditorCameraController = 
 		{
@@ -164,7 +164,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [3.38945508, -1.92782331, 26.907383],
+			Vec3 LookTarget = [14.4909391, -7.58057404, 26.907383],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -501,12 +501,12 @@ Level =
 						},
 						Named = 
 						{
-							string Name = "HealthBar_Background",
+							string Name = "Health_Bar_Bakcground",
 						},
 						Transform = 
 						{
-							Vec3 Translation = [-5.64205742, 0.123585537, -0.70457077],
-							Vec3 Scale = [6.01317358, 2.17973948, 1],
+							Vec3 Translation = [-10.9482088, 0.753612518, -81.5],
+							Vec3 Scale = [0.769601345, 0.274298877, 0.475900173],
 							Quat Rotation = [0, 0, 0, 1],
 						},
 						Sprite = 
@@ -519,7 +519,7 @@ Level =
 							BlendMode BlendMode = Alpha,
 							SpriteGeometryMode GeometryMode = ZPlane,
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string SpriteSource = "5ad8908bbb2ba5ec:HealthBar_Background",
+							string SpriteSource = "5ab6889ec7c7c80e:Health_Bar_Background",
 							bool RenderMask = false,
 							bool FlipX = false,
 							bool FlipY = false,
