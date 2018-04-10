@@ -202,7 +202,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [3.13909054, -0.215916872, 50],
+			Vec3 Translation = [1.80662477, -1.41176033, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -214,7 +214,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 8.96338272,
+			float Size = 7.3385973,
 		},
 		EditorCameraController = 
 		{
@@ -222,7 +222,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [3.13909054, -0.215916872, 1.37214016e-07],
+			Vec3 LookTarget = [1.80662477, -1.41176033, 7.8970082e-08],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -537,11 +537,11 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0, 0.519999743, 1, 0.5],
+					Vec4 Color = [0.480000019, 0.750399888, 1, 1],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5274db4c2e7c11f9:Circle",
+					string SpriteSource = "5a2ca2e2bd7ee365:SafetyShield_Sprite001",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
@@ -560,6 +560,41 @@ Level =
 					float Radius = 0.5,
 				},
 			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 10,
+				},
+				Named = 
+				{
+					string Name = "RespawnSafeShieldBack",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0, 0],
+					Vec3 Scale = [4, 4, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [0.478431404, 0.749019504, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5a2ca2e2bd7ee365:SafetyShield_Sprite001",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+			},
 		},
 	},
 	ArchetypeInstance = 
@@ -567,7 +602,7 @@ Level =
 		string Name = "5a7f4db494e9d95c:Cursor",
 		LinkId = 
 		{
-			uint Id = 10,
+			uint Id = 11,
 		},
 		Transform = 
 		{
@@ -602,7 +637,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 11,
+			uint Id = 12,
 		},
 		Named = 
 		{
