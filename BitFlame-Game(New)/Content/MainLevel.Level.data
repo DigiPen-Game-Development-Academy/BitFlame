@@ -214,7 +214,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 8.96338272,
+			float Size = 36.3482857,
 		},
 		EditorCameraController = 
 		{
@@ -289,6 +289,7 @@ Level =
 		CreateCompass = 
 		{
 			string Compass = "5a2062940655f3d6:Compass",
+			string Ship = "5a6633fcc2d1e995:ShipPointer",
 		},
 		SoundEmitter = 
 		{
