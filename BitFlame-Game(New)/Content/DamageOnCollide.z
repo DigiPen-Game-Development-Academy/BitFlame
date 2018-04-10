@@ -1,18 +1,34 @@
 class DamageOnCollide : ZilchComponent
 {
     [Property] var Damage : Integer = 0;
-    
+    [Property] var DamageCooldown : Real = 1;
     [Property] var PlayerDamagedSound : SoundCue;
+    
+    var TimeTillDamage : Real = 0;
     
     function Initialize(init : CogInitializer)
     {
-        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.CollisionPersisted, this.OnCollisionPersisted);
     }
 
-    function OnCollisionStarted(event : CollisionEvent)
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+      //Console.WriteLine(this.TimeTillDamage);
+      if (this.TimeTillDamage > 0)
+      {
+        this.TimeTillDamage -= event.Dt;
+      }
+    }
+
+    function OnCollisionPersisted(event : CollisionEvent)
     {
         if(event.OtherObject.Name == "Player")
         {
+          if (this.TimeTillDamage <= 0)
+          {
+            this.TimeTillDamage = this.DamageCooldown;
+            
             this.GameSession.GameVars.PlayerHealth -= this.Damage;
             this.Owner.Transform.Translation += Math.Normalize(this.Owner.Transform.Translation - event.OtherObject.Transform.Translation) * 0.1;
             event.OtherObject.FlashColor.Flash = true;
@@ -21,6 +37,11 @@ class DamageOnCollide : ZilchComponent
             var playerHurtUpdate = PlayerHurtUpdate();
             //Console.WriteLine("test2");
             this.GameSession.DispatchEvent(Events.PlayerHurtUpdate, playerHurtUpdate);
+          }
+          else 
+          {
+            Console.WriteLine("no oofs");
+          }
         }
     }
 }
