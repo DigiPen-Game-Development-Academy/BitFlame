@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [8.67945004, 2.51897359, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -42,7 +42,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = false,
-		bool Mode2D = false,
+		bool Mode2D = true,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -72,7 +72,22 @@ Cog =
 			bool UpdatePathOnCogChange = true,
 			bool UpdateCogOnInitialize = true,
 			bool ResolvedNullErrorOccurred = false,
-			uint ResolvedCog = 4294967293,
+			uint ResolvedCog = 2,
+			CogPathPreference PathPreference0 = CogRelative,
+			CogPathPreference PathPreference1 = SpaceRelative,
+			CogPathPreference PathPreference2 = Absolute,
+		},
+		CogPath SafetyShield = 
+		{
+			string Path = ":/Ship/RespawnSafeShield",
+			bool ErrorOnResolveToNull = false,
+			bool ErrorOnPathCantCompute = false,
+			bool ErrorOnDirectLinkFail = false,
+			bool UpdateCogOnPathChange = true,
+			bool UpdatePathOnCogChange = true,
+			bool UpdateCogOnInitialize = true,
+			bool ResolvedNullErrorOccurred = false,
+			uint ResolvedCog = 3,
 			CogPathPreference PathPreference0 = CogRelative,
 			CogPathPreference PathPreference1 = SpaceRelative,
 			CogPathPreference PathPreference2 = Absolute,
@@ -83,16 +98,19 @@ Cog =
 		float Health = 5,
 		string ArchetypetoSpawnOnDeath1 = "5ae3d8a67e1466bb:Game_Pipe_Pickup",
 		string ArchetypetoSpawnOnDeath2 = "",
+		string ArchetypetoSpawnOnDeath3 = "",
+		string ExplosionSound = "",
 		bool Unbreakable = false,
 	},
 	Asteroid_Mining = 
 	{
+		string ArchetypetoSpawnOnDamage = "",
 		float DropAmount = 0,
 		float ShrinkAmount = 200,
-		Vec4 AluminiumColor = [0, 0, 0, 1],
-		Vec4 CopperColor = [0, 0, 0, 1],
-		Vec4 IronColor = [0, 0, 0, 1],
-		Vec4 TitaniumColor = [0, 0, 0, 1],
+		string AluminiumSprite = "5ab82aff8f3ef818:Asteroid_TileMap_Ores000",
+		string CopperSprite = "5ab82aff8f353da5:Asteroid_TileMap_Ores002",
+		string IronSprite = "5ab82aff8f317c0c:Asteroid_TileMap_Ores004",
+		string TitaniumSprite = "5ab82aff8f33a0ea:Asteroid_TileMap_Ores005",
 		string AluminiumArchetype = "",
 		string CopperArchetype = "",
 		string IronArchetype = "",
@@ -110,7 +128,7 @@ Cog =
 			string Name = "5afe50e870042ebb:Oxygen_Field",
 			LinkId = 
 			{
-				uint Id = 2,
+				uint Id = 4,
 			},
 			Transform = 
 			{

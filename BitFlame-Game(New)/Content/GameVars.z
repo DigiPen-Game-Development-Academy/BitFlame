@@ -75,7 +75,7 @@ class GameVars : ZilchComponent
     var SlideIn : Boolean = false;
     
     //Gamemode
-    var WaveGamemode : Boolean = true;
+    var WaveGamemode : Boolean = false;
     
     // Tracks if a wave is active then runs code in the EnemyLogic, ChargingEnemyLogic, and ShootingEnemyAI scripts to make them chase the player from wherever they spawned during the wave.
     var ActiveWave : Boolean = false;

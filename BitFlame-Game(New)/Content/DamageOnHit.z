@@ -32,6 +32,9 @@ class DamageOnHit : ZilchComponent
             
             this.Owner.Destroy();
             
+            var playerHurtUpdate = PlayerHurtUpdate();
+            this.GameSession.DispatchEvent(Events.PlayerHurtUpdate, playerHurtUpdate);
+            
             this.Space.SoundSpace.PlayCue(this.PlayerDamagedSound);
         }
     }

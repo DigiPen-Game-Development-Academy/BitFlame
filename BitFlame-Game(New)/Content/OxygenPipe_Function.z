@@ -20,6 +20,8 @@ class OxygenPipe_Function : ZilchComponent
     
     [Property] var Ship : CogPath;
     
+    [Property] var SafetyShield : CogPath;
+    
     var ConnectedTo : Cog;
     
     var ConnectionFound : Cog; 
@@ -208,7 +210,8 @@ class OxygenPipe_Function : ZilchComponent
         
         var filter = CastFilter();  
         filter.IgnoreDynamic = true;  
-        filter.IgnoreCog = this.Ship.Cog;         
+        filter.IgnoreCog = this.Ship.Cog;  
+        filter.IgnoreCog = this.SafetyShield.Cog;        
                         
         var castResult = this.Space.PhysicsSpace.CastRayFirstFiltered(ray, filter);
         

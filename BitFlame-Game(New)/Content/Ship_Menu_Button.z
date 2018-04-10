@@ -102,7 +102,7 @@ class Ship_Menu_Button_Function : ZilchComponent
     
     [Property] var Quit : Boolean = false;  
     
-    [Property] var Gamemode : Boolean = false;
+    [Property] var WaveGamemode : Boolean = false;
   
     function Initialize(init : CogInitializer)
     {
@@ -112,10 +112,7 @@ class Ship_Menu_Button_Function : ZilchComponent
 
     function OnLeftMouseUp(event : ViewportMouseEvent)
     {
-        if(this.Gamemode == true)
-        {
-            this.GameSession.GameVars.WaveGamemode = true;
-        }
+        this.GameSession.GameVars.WaveGamemode = this.WaveGamemode;
     
         if(this.Quit)
         {

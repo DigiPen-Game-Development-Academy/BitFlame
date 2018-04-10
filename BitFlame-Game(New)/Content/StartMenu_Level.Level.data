@@ -107,7 +107,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.985112071, 32.040493, 50.1951332],
+			Vec3 Translation = [-3.34882522, -1.97780001, 50.1951332],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -119,7 +119,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 16.5299377,
+			float Size = 14.9569111,
 		},
 		EditorCameraController = 
 		{
@@ -127,7 +127,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.985112071, 32.040493, 0.195132494],
+			Vec3 LookTarget = [-3.34882522, -1.97780001, 0.19513236],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -248,7 +248,7 @@ Level =
 			string LevelToChangeTo = "554cea0f94af672f:MainLevel",
 			bool Respawn = false,
 			bool Quit = false,
-			bool Gamemode = false,
+			bool WaveGamemode = false,
 		},
 		Button_PlaySound = 
 		{
@@ -370,7 +370,7 @@ Level =
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
-			bool Gamemode = false,
+			bool WaveGamemode = false,
 		},
 		Button_PlaySound = 
 		{
@@ -492,7 +492,7 @@ Level =
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
-			bool Gamemode = false,
+			bool WaveGamemode = false,
 		},
 		Button_PlaySound = 
 		{
@@ -614,7 +614,7 @@ Level =
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
-			bool Gamemode = false,
+			bool WaveGamemode = false,
 		},
 		Button_PlaySound = 
 		{
@@ -731,7 +731,7 @@ Level =
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
-			bool Gamemode = false,
+			bool WaveGamemode = false,
 		},
 		Area = 
 		{
@@ -1078,7 +1078,7 @@ Level =
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
-			bool Gamemode = false,
+			bool WaveGamemode = false,
 		},
 		Area = 
 		{
@@ -1200,7 +1200,7 @@ Level =
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
-			bool Gamemode = false,
+			bool WaveGamemode = false,
 		},
 		Area = 
 		{
@@ -1424,7 +1424,7 @@ Level =
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = true,
-			bool Gamemode = false,
+			bool WaveGamemode = false,
 		},
 		Area = 
 		{
@@ -1546,7 +1546,7 @@ Level =
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
-			bool Gamemode = false,
+			bool WaveGamemode = false,
 		},
 		Area = 
 		{
@@ -1668,7 +1668,7 @@ Level =
 			string LevelToChangeTo = "",
 			bool Respawn = false,
 			bool Quit = false,
-			bool Gamemode = false,
+			bool WaveGamemode = false,
 		},
 		Area = 
 		{
@@ -3195,7 +3195,7 @@ Level =
 			string LevelToChangeTo = "554cea0f94af672f:MainLevel",
 			bool Respawn = false,
 			bool Quit = false,
-			bool Gamemode = true,
+			bool WaveGamemode = true,
 		},
 		Button_PlaySound = 
 		{
@@ -3370,8 +3370,14 @@ Level =
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "5a075f32e7b83df0:GameFont",
 			uint FontSize = 50,
-			string Text = "asdkfhgjadsf
-asdjjfjaksdf",
+			string Text = "Use W, A, S, and D to move your player
+Shoot your gun with the left mouse button
+Shoot enemies to gather a special resource
+Repair your ship using resources you gather
+Destroy asteroids to gather resources and craft things
+Press E over your ship to open your ships menu
+Press Q to select which crated item you'd like to place
+Exist by using your brain",
 			TextAlign Align = Center,
 			float PixelsPerUnit = 64,
 			bool Smoothing = false,
