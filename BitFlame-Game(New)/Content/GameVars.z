@@ -1,7 +1,7 @@
 /*************************************
 Filename: GameVars.z
 Author: Jakob McFarland
-Contributors: NULL
+Contributors: Everyone
 Last modified: 3/6/18
 Brief: This Component stores the vars that are constant the whole game, include Player Health, Player Resources, and Player Oxygen
 ******************************************/
