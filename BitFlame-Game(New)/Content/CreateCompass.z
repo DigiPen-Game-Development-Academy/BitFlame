@@ -12,7 +12,7 @@ class CreateCompass : ZilchComponent
         
         this.CreatedComp.AttachTo(this.Owner);
         
-        this.CreatedShip = this.Space.CreateAtPosition(this.Ship, Real3(12.5, -6, -6.5));
+        this.CreatedShip = this.Space.CreateAtPosition(this.Ship, Real3(12.5, -6, -5.5));
         
         this.CreatedShip.AttachTo(this.Owner);
     }

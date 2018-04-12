@@ -12,7 +12,7 @@ class CustomCursorScript : ZilchComponent
     }
     function OnMouseUpdate(event : ViewportMouseEvent)
     {
-        var mousePosition = event.ToWorldZPlane(0);
+        var mousePosition = event.ToWorldZPlane(10);
         
         this.Transform.Translation = mousePosition;
     }

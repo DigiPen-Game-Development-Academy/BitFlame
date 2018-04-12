@@ -1,15 +1,15 @@
 SoundCue = 
 {
 	SoundPlayMode PlayMode = Single,
-	float Volume = 0.379999995,
-	float VolumeVariation = 0.199999988,
-	float VolumeDB = -8.40432835,
+	float Volume = 3,
+	float VolumeVariation = 0,
+	float VolumeDB = 9.54242516,
 	bool UseVolumeDB = false,
 	float VolumeDBVariation = 0,
 	float Pitch = 0,
 	float PitchSemitones = 0,
 	bool UsePitchSemitones = false,
-	float PitchVariation = 0.300000012,
+	float PitchVariation = 0,
 	float PitchSTVariation = 0,
 	float MinDistance = 1,
 	float MaxDistance = 70,
@@ -18,8 +18,8 @@ SoundCue =
 	Array Sounds = 
 	[
 		{
-			string SoundName = "5ae3cf4fa13b0ebc:Enemy_Explosion",
-			string GeneratedSoundName = "55017c595ef88bf0:DefaultGeneratedSound",
+			string SoundName = "5a6492d462e2e836:Bitflame_Comet",
+			string GeneratedSoundName = "",
 			WhichSoundType WhichToUse = FromFile,
 			float Weight = 1,
 			float LoopEndTime = 0,
@@ -34,5 +34,5 @@ SoundCue =
 	],
 	string RolloffCurveName = "",
 	int Version = 1,
-	RolloffCurveType RolloffCurveType = Linear,
+	RolloffCurveType RolloffCurveType = Error,
 },
