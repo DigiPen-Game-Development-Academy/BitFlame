@@ -22,38 +22,38 @@ class Player_Pickup_Collection : ZilchComponent
 
     //on collision started
     function OnCollisionStarted(event : CollisionEvent)
-	{
+    {
         if(this.Active)
         {
-			var otherObject = event.OtherObject;
-			
-			if(otherObject.ResourcePickup != null)
-			{
-				this.GameSession.GameVars.PlayerResources += otherObject.ResourcePickup.PickupValue;
-				this.Space.SoundSpace.PlayCue(SoundCue.PickupNoise);
-				otherObject.Destroy();
-			}
-			
-			if(otherObject.TitaniumPickup != null)
-			{
-				this.GameSession.GameVars.PlayerTitanium += otherObject.TitaniumPickup.PickupValue;
-				this.Space.SoundSpace.PlayCue(SoundCue.PickupNoise);
-				otherObject.Destroy();
-			}
-			
-			if(otherObject.AluminiumPickup != null)
-			{
-				this.GameSession.GameVars.PlayerAluminium += otherObject.AluminiumPickup.PickupValue;
-				this.Space.SoundSpace.PlayCue(SoundCue.PickupNoise);
-				otherObject.Destroy();
-			}
+            var otherObject = event.OtherObject;
+            
+            if(otherObject.ResourcePickup != null)
+            {
+                this.GameSession.GameVars.PlayerResources += otherObject.ResourcePickup.PickupValue;
+                this.Space.SoundSpace.PlayCue(SoundCue.PickupNoise);
+                otherObject.Destroy();
+            }
+            
+            if(otherObject.TitaniumPickup != null)
+            {
+                this.GameSession.GameVars.PlayerTitanium += otherObject.TitaniumPickup.PickupValue;
+                this.Space.SoundSpace.PlayCue(SoundCue.PickupNoise);
+                otherObject.Destroy();
+            }
+            
+            if(otherObject.AluminiumPickup != null)
+            {
+                this.GameSession.GameVars.PlayerAluminium += otherObject.AluminiumPickup.PickupValue;
+                this.Space.SoundSpace.PlayCue(SoundCue.PickupNoise);
+                otherObject.Destroy();
+            }
             
             if(otherObject.CopperPickup != null)
             {
                 this.GameSession.GameVars.PlayerCopper += otherObject.CopperPickup.PickupValue;
-				this.Space.SoundSpace.PlayCue(SoundCue.PickupNoise);
-				otherObject.Destroy();            
-			}
+                this.Space.SoundSpace.PlayCue(SoundCue.PickupNoise);
+                otherObject.Destroy();            
+            }
 
             if(otherObject.OxygenPickup != null)
             {            
@@ -61,7 +61,7 @@ class Player_Pickup_Collection : ZilchComponent
                 
                 this.GameSession.GameVars.PlayerOxygen = Math.Clamp(this.GameSession.GameVars.PlayerOxygen, 0, this.GameSession.GameVars.PlayerMaxOxygen);
                 
-				this.Space.SoundSpace.PlayCue(SoundCue.PickupNoise);
+                this.Space.SoundSpace.PlayCue(SoundCue.PickupNoise);
                 otherObject.Destroy();            
             }
             
@@ -81,25 +81,25 @@ class Player_Pickup_Collection : ZilchComponent
             {
                 this.GameSession.GameVars.PlayerTurrets += otherObject.TurretPickup.PickupValue;
 
-				this.Space.SoundSpace.PlayCue(SoundCue.PickupNoise);
-				otherObject.Destroy();
-			}
+                this.Space.SoundSpace.PlayCue(SoundCue.PickupNoise);
+                otherObject.Destroy();
+            }
         
-			if(otherObject.UpgradePickup != null)
-			{
-				this.GameSession.GameVars.PlayerUpgradePoints += otherObject.UpgradePickup.PickupValue;
+            if(otherObject.UpgradePickup != null)
+            {
+                this.GameSession.GameVars.PlayerUpgradePoints += otherObject.UpgradePickup.PickupValue;
 
-				this.Space.SoundSpace.PlayCue(SoundCue.PickupNoise);
-				otherObject.Destroy();
-			}
+                this.Space.SoundSpace.PlayCue(SoundCue.PickupNoise);
+                otherObject.Destroy();
+            }
         
-        if(otherObject.PipePickup != null)
-        {
-            this.GameSession.GameVars.PlayerPipes += otherObject.PipePickup.PickupValue;
-            this.Space.SoundSpace.PlayCue(SoundCue.PickupNoise);
-            otherObject.Destroy();
+            if(otherObject.PipePickup != null)
+            {
+                this.GameSession.GameVars.PlayerPipes += otherObject.PipePickup.PickupValue;
+                this.Space.SoundSpace.PlayCue(SoundCue.PickupNoise);
+                otherObject.Destroy();
+            }
         }
-
     }
 }
 
