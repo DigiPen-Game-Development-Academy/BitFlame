@@ -8,13 +8,10 @@ Brief: This Component will cause the owner to collect the set amount of resource
 
 
 class Player_Pickup_Collection : ZilchComponent
-{
-    var Player : Cog;
-    
+{    
     //on initialize
     function Initialize(init : CogInitializer)
     {
-        this.Player = this.Space.FindObjectByName("Arm");
         Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
     }
 
@@ -26,28 +23,28 @@ class Player_Pickup_Collection : ZilchComponent
         if(otherObject.ResourcePickup != null)
         {
             this.GameSession.GameVars.PlayerResources += otherObject.ResourcePickup.PickupValue;
-            this.Player.SoundThing.PlayPickup();
+            this.Space.SoundSpace.PlayCue(SoundCue.PickupNoise);
             otherObject.Destroy();
         }
         
         if(otherObject.CopperPickup != null)
         {
             this.GameSession.GameVars.PlayerCopper += otherObject.CopperPickup.PickupValue;
-            this.Player.SoundThing.PlayPickup();
+            this.Space.SoundSpace.PlayCue(SoundCue.PickupNoise);
             otherObject.Destroy();
         }
         
         if(otherObject.TitaniumPickup != null)
         {
             this.GameSession.GameVars.PlayerTitanium += otherObject.TitaniumPickup.PickupValue;
-            this.Player.SoundThing.PlayPickup();
+            this.Space.SoundSpace.PlayCue(SoundCue.PickupNoise);
             otherObject.Destroy();
         }
         
         if(otherObject.AluminiumPickup != null)
         {
             this.GameSession.GameVars.PlayerAluminium += otherObject.AluminiumPickup.PickupValue;
-            this.Player.SoundThing.PlayPickup();
+            this.Space.SoundSpace.PlayCue(SoundCue.PickupNoise);
             otherObject.Destroy();
         }
         
@@ -57,7 +54,7 @@ class Player_Pickup_Collection : ZilchComponent
             
             this.GameSession.GameVars.PlayerOxygen = Math.Clamp(this.GameSession.GameVars.PlayerOxygen, 0, this.GameSession.GameVars.PlayerMaxOxygen);
             
-            this.Player.SoundThing.PlayPickup();
+            this.Space.SoundSpace.PlayCue(SoundCue.PickupNoise);
             otherObject.Destroy();            
         }
         
@@ -69,27 +66,27 @@ class Player_Pickup_Collection : ZilchComponent
             {
                 this.GameSession.GameVars.PlayerHealth = this.GameSession.GameVars.StartingPlayerHealth;
             }
-            this.Player.SoundThing.PlayPickup();
+            this.Space.SoundSpace.PlayCue(SoundCue.PickupNoise);
             otherObject.Destroy();
         }
         
         if(otherObject.UpgradePickup != null)
         {
             this.GameSession.GameVars.PlayerUpgradePoints += otherObject.UpgradePickup.PickupValue;
-            this.Player.SoundThing.PlayPickup();
+            this.Space.SoundSpace.PlayCue(SoundCue.PickupNoise);
             otherObject.Destroy();
         }
         
         if(otherObject.PipePickup != null)
         {
             this.GameSession.GameVars.PlayerPipes += otherObject.PipePickup.PickupValue;
-            this.Player.SoundThing.PlayPickup();
+            this.Space.SoundSpace.PlayCue(SoundCue.PickupNoise);
             otherObject.Destroy();
         }
         if(otherObject.TurretPickup != null)
         {
             this.GameSession.GameVars.PlayerTurrets += otherObject.TurretPickup.PickupValue;
-            this.Player.SoundThing.PlayPickup();
+            this.Space.SoundSpace.PlayCue(SoundCue.PickupNoise);
             otherObject.Destroy();
         }
         

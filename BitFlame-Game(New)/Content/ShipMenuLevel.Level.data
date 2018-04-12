@@ -144,7 +144,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [7.2495904, 25.7878857, 60.9997482],
+			Vec3 Translation = [11.0155363, -3.46464729, 60.9997482],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -156,7 +156,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 20.1896992,
+			float Size = 30.1194572,
 		},
 		EditorCameraController = 
 		{
@@ -164,7 +164,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [7.2495904, 25.7878857, 10.9997473],
+			Vec3 LookTarget = [11.0155363, -3.46464729, 10.9997473],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -2244,6 +2244,15 @@ Level =
 			Vec2 Size = [12, 3],
 			Location Origin = Center,
 		},
+		Ship_Menu_Button_Visual = 
+		{
+			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
+			string CantSelect = "5ae3cf4fa1244713:Blip_CantSelect",
+			Vec4 HoverColor = [0.203921586, 0.411764741, 0.521568656, 1],
+			Vec4 ClickColor = [0.211764723, 0.431372583, 0.545098066, 1],
+			float HoverScale = 1.20000005,
+			float ClickScale = 1,
+		},
 		Hierarchy = 
 		{
 			Cog = 
@@ -2463,15 +2472,6 @@ Level =
 			bool Active = true,
 			bool CaptureMouse = false,
 		},
-		Ship_Menu_Button_Visual = 
-		{
-			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
-			string CantSelect = "5ae3cf4fa1244713:Blip_CantSelect",
-			Vec4 HoverColor = [0.954999983, 0.92405808, 0.181450009, 1],
-			Vec4 ClickColor = [0.466666698, 0.776470661, 0.588235319, 1],
-			float HoverScale = 1.20000005,
-			float ClickScale = 1,
-		},
 		Ship_Menu_Button_Function = 
 		{
 			CogPath Camera = 
@@ -2497,6 +2497,15 @@ Level =
 			bool Respawn = false,
 			bool Quit = false,
 			bool WaveGamemode = false,
+		},
+		Ship_Menu_Button_Visual = 
+		{
+			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
+			string CantSelect = "5ae3cf4fa1244713:Blip_CantSelect",
+			Vec4 HoverColor = [0.954999983, 0.92405808, 0.181450009, 1],
+			Vec4 ClickColor = [0.466666698, 0.776470661, 0.588235319, 1],
+			float HoverScale = 1.20000005,
+			float ClickScale = 1,
 		},
 		Area = 
 		{
@@ -2580,15 +2589,6 @@ Level =
 			bool Active = true,
 			bool CaptureMouse = false,
 		},
-		Ship_Menu_Button_Visual = 
-		{
-			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
-			string CantSelect = "5ae3cf4fa1244713:Blip_CantSelect",
-			Vec4 HoverColor = [0.180392146, 0.376470655, 0.956862807, 1],
-			Vec4 ClickColor = [0.466666698, 0.627450943, 0.776470661, 1],
-			float HoverScale = 1.20000005,
-			float ClickScale = 1,
-		},
 		Ship_Menu_Button_Function = 
 		{
 			CogPath Camera = 
@@ -2614,6 +2614,15 @@ Level =
 			bool Respawn = false,
 			bool Quit = false,
 			bool WaveGamemode = false,
+		},
+		Ship_Menu_Button_Visual = 
+		{
+			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
+			string CantSelect = "5ae3cf4fa1244713:Blip_CantSelect",
+			Vec4 HoverColor = [0.180392146, 0.376470655, 0.956862807, 1],
+			Vec4 ClickColor = [0.466666698, 0.627450943, 0.776470661, 1],
+			float HoverScale = 1.20000005,
+			float ClickScale = 1,
 		},
 		Area = 
 		{
@@ -4440,6 +4449,15 @@ escape space. Repair it here.",
 			float HoverScale = 1.20000005,
 			float ClickScale = 1,
 		},
+		Ship_Menu_Button_Visual = 
+		{
+			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
+			string CantSelect = "5ae3cf4fa1244713:Blip_CantSelect",
+			Vec4 HoverColor = [0.211764723, 0.431372583, 0.545098066, 1],
+			Vec4 ClickColor = [0.266666681, 0.443137288, 0.53725493, 1],
+			float HoverScale = 1.20000005,
+			float ClickScale = 1,
+		},
 		Hierarchy = 
 		{
 			Cog = 
@@ -4533,6 +4551,15 @@ escape space. Repair it here.",
 			Vec4 HoverColor = [0.180392146, 0.376470655, 0.956862807, 1],
 			Vec4 ClickColor = [0.466666698, 0.627450943, 0.776470661, 1],
 			Vec4 DisabledColor = [0.466666698, 0.627450943, 0.776470661, 1],
+			float HoverScale = 1.20000005,
+			float ClickScale = 1,
+		},
+		Ship_Menu_Button_Visual = 
+		{
+			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
+			string CantSelect = "5ae3cf4fa1244713:Blip_CantSelect",
+			Vec4 HoverColor = [0.211764723, 0.431372583, 0.545098066, 1],
+			Vec4 ClickColor = [0.337254912, 0.450980425, 0.56078434, 1],
 			float HoverScale = 1.20000005,
 			float ClickScale = 1,
 		},
@@ -5307,6 +5334,15 @@ escape space. Repair it here.",
 			float HoverScale = 1.20000005,
 			float ClickScale = 1,
 		},
+		Ship_Menu_Button_Visual = 
+		{
+			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
+			string CantSelect = "5ae3cf4fa1244713:Blip_CantSelect",
+			Vec4 HoverColor = [0.192156881, 0.396078467, 0.494117677, 1],
+			Vec4 ClickColor = [0.207843155, 0.403921604, 0.494117677, 1],
+			float HoverScale = 1.20000005,
+			float ClickScale = 1,
+		},
 		Hierarchy = 
 		{
 			Cog = 
@@ -5400,6 +5436,15 @@ escape space. Repair it here.",
 			Vec4 HoverColor = [0.180392146, 0.376470655, 0.956862807, 1],
 			Vec4 ClickColor = [0.466666698, 0.627450943, 0.776470661, 1],
 			Vec4 DisabledColor = [0.466666698, 0.627450943, 0.776470661, 1],
+			float HoverScale = 1.20000005,
+			float ClickScale = 1,
+		},
+		Ship_Menu_Button_Visual = 
+		{
+			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
+			string CantSelect = "5ae3cf4fa1244713:Blip_CantSelect",
+			Vec4 HoverColor = [0.0274509825, 0.388235331, 0.588235319, 1],
+			Vec4 ClickColor = [0.0274509825, 0.384313762, 0.580392182, 1],
 			float HoverScale = 1.20000005,
 			float ClickScale = 1,
 		},
