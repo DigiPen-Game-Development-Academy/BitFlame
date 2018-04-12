@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [4.25721169, 9.46351528, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -88,6 +88,7 @@ Cog =
 		bool Penatrating = false,
 		bool EnemyBullet = false,
 		string PlayerDamagedSound = "",
+		string SoundOnHit = "5a64f85451c756ae:Bullet Hit",
 	},
 	SpriteParticleSystem = 
 	{
