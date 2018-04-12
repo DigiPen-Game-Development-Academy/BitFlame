@@ -10,6 +10,8 @@ class DamageOnHit : ZilchComponent
     
     [Property] var PlayerDamagedSound : SoundCue;
     
+    [Property] var SoundOnHit : SoundCue;
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
@@ -21,6 +23,8 @@ class DamageOnHit : ZilchComponent
         {
             event.OtherObject.Health.Health -= this.Damage;
             
+            this.Space.SoundSpace.PlayCue(this.SoundOnHit);
+            
             if(!this.Penatrating)
             {
                 this.Owner.Destroy();
@@ -30,12 +34,12 @@ class DamageOnHit : ZilchComponent
         {
             this.GameSession.GameVars.PlayerHealth -= this.Damage as Integer;
             
-            this.Owner.Destroy();
-            
             var playerHurtUpdate = PlayerHurtUpdate();
             this.GameSession.DispatchEvent(Events.PlayerHurtUpdate, playerHurtUpdate);
             
             this.Space.SoundSpace.PlayCue(this.PlayerDamagedSound);
+            
+            this.Owner.Destroy();
         }
     }
 }

@@ -1,9 +1,9 @@
 SoundCue = 
 {
 	SoundPlayMode PlayMode = Looping,
-	float Volume = 1.5,
+	float Volume = 3,
 	float VolumeVariation = 0,
-	float VolumeDB = 3.52182508,
+	float VolumeDB = 9.54242516,
 	bool UseVolumeDB = false,
 	float VolumeDBVariation = 0,
 	float Pitch = 0,
@@ -19,9 +19,9 @@ SoundCue =
 	[
 		{
 			string SoundName = "5a0a94bdbb9c2990:AlienEncounter",
-			string GeneratedSoundName = "",
+			string GeneratedSoundName = "55017c595ef88bf0:DefaultGeneratedSound",
 			WhichSoundType WhichToUse = FromFile,
-			float Weight = 1,
+			float Weight = 10,
 			float LoopEndTime = 0,
 			float LoopStartTime = 0,
 		},
@@ -34,5 +34,5 @@ SoundCue =
 	],
 	string RolloffCurveName = "",
 	int Version = 1,
-	RolloffCurveType RolloffCurveType = Error,
+	RolloffCurveType RolloffCurveType = Linear,
 },

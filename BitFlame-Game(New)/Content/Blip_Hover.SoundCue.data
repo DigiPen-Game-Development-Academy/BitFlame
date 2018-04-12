@@ -1,15 +1,15 @@
 SoundCue = 
 {
 	SoundPlayMode PlayMode = Single,
-	float Volume = 0.149999991,
+	float Volume = 0.800000012,
 	float VolumeVariation = 0,
-	float VolumeDB = -16.4781742,
+	float VolumeDB = -6,
 	bool UseVolumeDB = false,
 	float VolumeDBVariation = 0,
-	float Pitch = -0.800000012,
-	float PitchSemitones = -9.59000015,
+	float Pitch = 0,
+	float PitchSemitones = 0,
 	bool UsePitchSemitones = false,
-	float PitchVariation = 0.100000001,
+	float PitchVariation = 0,
 	float PitchSTVariation = 0,
 	float MinDistance = 1,
 	float MaxDistance = 70,
@@ -18,8 +18,8 @@ SoundCue =
 	Array Sounds = 
 	[
 		{
-			string SoundName = "5a34325482d8ae1b:LaserSound",
-			string GeneratedSoundName = "55017c595ef88bf0:DefaultGeneratedSound",
+			string SoundName = "5a64f189f122ea9d:Blip_Hover",
+			string GeneratedSoundName = "",
 			WhichSoundType WhichToUse = FromFile,
 			float Weight = 1,
 			float LoopEndTime = 0,
@@ -34,5 +34,5 @@ SoundCue =
 	],
 	string RolloffCurveName = "",
 	int Version = 1,
-	RolloffCurveType RolloffCurveType = Linear,
+	RolloffCurveType RolloffCurveType = Error,
 },

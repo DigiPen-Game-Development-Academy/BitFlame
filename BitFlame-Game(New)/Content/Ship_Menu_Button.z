@@ -14,6 +14,7 @@ class Ship_Menu_Button_Visual : ZilchComponent
   
   [Property] var SelectSound : SoundCue = SoundCue.Find("Blip_Select");
   [Property] var CantSelect : SoundCue = SoundCue.Find("Blip_CantSelect");
+  [Property] var HoverSound : SoundCue = SoundCue.Find("Blip_Hover");
   
   //colors for sits
   var OriginalColor :Real4 = Real4();
@@ -74,6 +75,8 @@ class Ship_Menu_Button_Visual : ZilchComponent
   {
     this.Transform.Translation.Z += 10;
         
+    this.Space.SoundSpace.PlayCue(this.HoverSound);
+        
     this.Owner.Actions.Cancel();
     var seq = Action.Sequence(this.Owner.Actions);
     var grp = Action.Group(seq);
@@ -127,6 +130,7 @@ class Ship_Menu_Button_Function : ZilchComponent
 
     function OnLeftMouseUp(event : ViewportMouseEvent)
     {
+        if (this.WaveGamemode)
         this.GameSession.GameVars.WaveGamemode = this.WaveGamemode;
     
         if(this.Quit)
