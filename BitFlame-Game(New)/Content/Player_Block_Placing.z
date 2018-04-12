@@ -12,6 +12,9 @@ class Player_Block_Placing : ZilchComponent
 {
     [Dependency] var Transform : Transform = null;
     
+     //does player have control?
+    [Property] var Active : Boolean = true;
+    
     [Property] var PlacingRange : Integer = 6;
     
     //iron block
@@ -73,22 +76,23 @@ class Player_Block_Placing : ZilchComponent
 
     function OnRightMouseDown(event : ViewportMouseEvent)
     {
-        if(this.Type == 0)
+        if(this.Active)
         {
-            if(this.Preview == null)
+            if(this.Type == 0)
             {
-                this.Preview = this.Space.CreateAtPosition( this.PrePipeArchetype, this.RoundedMouse);
+                if(this.Preview == null)
+                {
+                    this.Preview = this.Space.CreateAtPosition( this.PrePipeArchetype, this.RoundedMouse);
+                }
             }
-        }
-        else if(this.Type == 1)
-        {
-            if(this.Preview == null)
+            else if(this.Type == 1)
             {
-                this.Preview = this.Space.CreateAtPosition( this.PreTurretArchetype, this.RoundedMouse);
+                if(this.Preview == null)
+                {
+                    this.Preview = this.Space.CreateAtPosition( this.PreTurretArchetype, this.RoundedMouse);
+                }
             }
-        }
-        
-       
+        }    
     }
 
     function OnRightMouseUp(event : ViewportMouseEvent)
@@ -103,7 +107,7 @@ class Player_Block_Placing : ZilchComponent
             // }
         //} 
         
-        if(this.Preview != null)
+        if(this.Preview != null && this.Active)
         {
             if(this.Type == 0)
             {

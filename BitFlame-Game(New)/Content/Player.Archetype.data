@@ -38,6 +38,7 @@ Cog =
 	},
 	Player_Movement_Script = 
 	{
+		bool Active = true,
 		float Speed = 40,
 		CogPath MovementParticleSystem = 
 		{
@@ -90,6 +91,36 @@ Cog =
 			CogPathPreference PathPreference2 = Absolute,
 		},
 		float TimeInterval = 1,
+		CogPath Space1 = 
+		{
+			string Path = "Space",
+			bool ErrorOnResolveToNull = false,
+			bool ErrorOnPathCantCompute = false,
+			bool ErrorOnDirectLinkFail = false,
+			bool UpdateCogOnPathChange = true,
+			bool UpdatePathOnCogChange = true,
+			bool UpdateCogOnInitialize = true,
+			bool ResolvedNullErrorOccurred = false,
+			uint ResolvedCog = 3,
+			CogPathPreference PathPreference0 = CogRelative,
+			CogPathPreference PathPreference1 = SpaceRelative,
+			CogPathPreference PathPreference2 = Absolute,
+		},
+		CogPath Space2 = 
+		{
+			string Path = "TwinklingStars",
+			bool ErrorOnResolveToNull = false,
+			bool ErrorOnPathCantCompute = false,
+			bool ErrorOnDirectLinkFail = false,
+			bool UpdateCogOnPathChange = true,
+			bool UpdatePathOnCogChange = true,
+			bool UpdateCogOnInitialize = true,
+			bool ResolvedNullErrorOccurred = false,
+			uint ResolvedCog = 4,
+			CogPathPreference PathPreference0 = CogRelative,
+			CogPathPreference PathPreference1 = SpaceRelative,
+			CogPathPreference PathPreference2 = Absolute,
+		},
 		string IronResource = "5a86165eb2745571:Game_ResourceOre_Pickup",
 		string CopperResource = "5a6cae91a47b14d7:Game_CopperOre_Pickup",
 		string AluminiumResource = "5a6ca514b81d8e50:Game_AluminiumOre_Pickup",
@@ -97,6 +128,7 @@ Cog =
 	},
 	Player_Pickup_Collection = 
 	{
+		bool Active = true,
 	},
 	IgnoreSpaceEffects = 
 	{
@@ -127,6 +159,7 @@ Cog =
 	},
 	Player_Block_Placing = 
 	{
+		bool Active = true,
 		int PlacingRange = 100,
 		int TurretCost = 1,
 		string TurretArchetype = "5a33cbf6af34b493:Turret",
@@ -172,13 +205,20 @@ Cog =
 		bool CanSelect = false,
 		bool HudButton = false,
 	},
+	Orientation = 
+	{
+		Vec3 GlobalUp = [0, 1, 0],
+		Vec3 UpVector = [0, 1, 0],
+		Vec3 ForwardVector = [1, 0, 0],
+		OrientationBases DefaultBases = ForwardXUpY,
+	},
 	Hierarchy = 
 	{
 		Cog = 
 		{
 			LinkId = 
 			{
-				uint Id = 3,
+				uint Id = 5,
 			},
 			Named = 
 			{
@@ -213,7 +253,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 4,
+				uint Id = 6,
 			},
 			Named = 
 			{
@@ -373,7 +413,7 @@ Cog =
 			string Name = "5a87e74dcbd970ec:BlockPlacingSelector",
 			LinkId = 
 			{
-				uint Id = 5,
+				uint Id = 7,
 			},
 			Transform = 
 			{
@@ -395,7 +435,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 6,
+				uint Id = 4,
 			},
 			Named = 
 			{
@@ -490,7 +530,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 7,
+				uint Id = 3,
 			},
 			Named = 
 			{
@@ -538,6 +578,18 @@ Cog =
 					CogPathPreference PathPreference1 = SpaceRelative,
 					CogPathPreference PathPreference2 = Absolute,
 				},
+			},
+			RigidBody = 
+			{
+				bool Static = true,
+				bool Asleep = false,
+				bool Kinematic = false,
+				bool RotationLocked = true,
+				bool Mode2D = true,
+				bool AllowSleep = true,
+				bool Inherit2DMode = true,
+				Vec3 Velocity = [0, 0, 0],
+				Vec3 AngularVelocity = [0, 0, 0],
 			},
 		},
 		Cog = 

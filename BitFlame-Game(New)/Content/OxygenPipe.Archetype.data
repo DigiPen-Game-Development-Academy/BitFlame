@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [8.67945004, 2.51897359, 0],
+		Vec3 Translation = [10.3937092, 3.81507707, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -60,7 +60,7 @@ Cog =
 	},
 	OxygenPipe_Function = 
 	{
-		int ConnectingRange = 144,
+		int ConnectingRange = 400,
 		bool Origin = false,
 		CogPath Ship = 
 		{
@@ -101,6 +101,7 @@ Cog =
 		string ArchetypetoSpawnOnDeath3 = "",
 		string ExplosionSound = "",
 		bool Unbreakable = false,
+		bool Random3Drop = false,
 	},
 	Asteroid_Mining = 
 	{

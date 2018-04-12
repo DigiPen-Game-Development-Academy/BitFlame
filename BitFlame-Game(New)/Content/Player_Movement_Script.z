@@ -3,10 +3,13 @@ class Player_Movement_Script : ZilchComponent
     //******
     // Player_Movement_Script
     // Luke Taranowski
-    // Contributors: Jakob McFarland (Movement Clamps, Particle Effects)
+    // Contributors: Jakob McFarland (Movement Clamps, Particle Effects, active property)
     // 1/23/2018
     // This script controls the players movement
     //******
+    
+    //does player have control?
+    [Property] var Active : Boolean = true;
     
     // Controls the players speed
     [Property]
@@ -57,70 +60,74 @@ class Player_Movement_Script : ZilchComponent
             this.Owner.IgnoreSpaceEffects.IgnoreDrag = true;
         }
         
-        var speed = this.Speed + this.GameSession.GameVars.HasUpgrade_Acceleration;
-        
-        // If player is pushing W move player up
-        if(Zero.Keyboard.KeyIsDown(Keys.W))
+        if(this.Active)
         {
-            newVelocity += Real3(0, 1, 0) * speed * event.Dt;
-            moving = true;
-        }
-        
-        // If player is pushing A move player left
-        if(Zero.Keyboard.KeyIsDown(Keys.A))
-        {
-            newVelocity -= Real3(1, 0, 0) * speed * event.Dt;
-            moving = true;
-        }
-        // If player is pushing S move player down
-        if(Zero.Keyboard.KeyIsDown(Keys.S))
-        {
-            newVelocity -= Real3(0, 1, 0) * speed * event.Dt;
+            var speed = this.Speed + this.GameSession.GameVars.HasUpgrade_Acceleration;
+            
+            // If player is pushing W move player up
+            if(Zero.Keyboard.KeyIsDown(Keys.W))
+            {
+                newVelocity += Real3(0, 1, 0) * speed * event.Dt;
+                moving = true;
+            }
+            
+            // If player is pushing A move player left
+            if(Zero.Keyboard.KeyIsDown(Keys.A))
+            {
+                newVelocity -= Real3(1, 0, 0) * speed * event.Dt;
+                moving = true;
+            }
+            // If player is pushing S move player down
+            if(Zero.Keyboard.KeyIsDown(Keys.S))
+            {
+                newVelocity -= Real3(0, 1, 0) * speed * event.Dt;
 
-            moving = true;
+                moving = true;
+            }
+            // If player is pushing D move player right
+            if(Zero.Keyboard.KeyIsDown(Keys.D))
+            {
+                newVelocity += Real3(1, 0, 0) * speed * event.Dt;
+                moving = true;
+            }
+            
+            /*
+            ---------------
+            Building Recall
+            ---------------
+            */
+        
+            if(Zero.Keyboard.KeyIsDown(Keys.R))
+            {
+                var buildingRecall = BuildingRecall();
+                this.GameSession.DispatchEvent(Events.BuildingRecall, buildingRecall);
+            }
+             
+             var upgrade = Real2(this.GameSession.GameVars.HasUpgrade_Maxspeed, this.GameSession.GameVars.HasUpgrade_Maxspeed);
+        
+            //Velocity Clamps, so the player has a min and max speed, without these the player will accelerate forever
+            newVelocity.XY = Math.Clamp(newVelocity.XY, this.MinPlayerSpeeds - upgrade, this.MaxPlayerSpeeds + upgrade);
+            
+            /*//Debug Prints
+            Console.WriteLine("\n");
+            Console.WriteLine(newVelocity);
+            Console.WriteLine(this.RigidBody.Velocity);
+            */
+            if(moving)
+            {
+               particle.SphericalParticleEmitter.Active = true;
+               this.GameSession.GameVars.PlayerActive = true;
+            }
+            else
+            {
+                particle.SphericalParticleEmitter.Active = false;
+                this.GameSession.GameVars.PlayerActive = false;
+            }
+            
+            
+            this.RigidBody.Velocity = newVelocity;
+            //Jakob ~ Modified
         }
-        // If player is pushing D move player right
-        if(Zero.Keyboard.KeyIsDown(Keys.D))
-        {
-            newVelocity += Real3(1, 0, 0) * speed * event.Dt;
-            moving = true;
-        }
-        
-        /*
-        ---------------
-        Building Recall
-        ---------------
-        */
-        
-        if(Zero.Keyboard.KeyIsDown(Keys.R))
-        {
-            var buildingRecall = BuildingRecall();
-            this.GameSession.DispatchEvent(Events.BuildingRecall, buildingRecall);
-        }
-        
-        var upgrade = Real2(this.GameSession.GameVars.HasUpgrade_Maxspeed, this.GameSession.GameVars.HasUpgrade_Maxspeed);
-        
-        //Velocity Clamps, so the player has a min and max speed, without these the player will accelerate forever
-        newVelocity.XY = Math.Clamp(newVelocity.XY, this.MinPlayerSpeeds - upgrade, this.MaxPlayerSpeeds + upgrade);
-        
-        /*//Debug Prints
-        Console.WriteLine("\n");
-        Console.WriteLine(newVelocity);
-        Console.WriteLine(this.RigidBody.Velocity);
-        */
-        if(moving)
-        {
-           particle.SphericalParticleEmitter.Active = true;
-           this.GameSession.GameVars.PlayerActive = true;
-        }
-        else
-        {
-            particle.SphericalParticleEmitter.Active = false;
-            this.GameSession.GameVars.PlayerActive = false;
-        }
-        
-        
-        this.RigidBody.Velocity = newVelocity;
-        //Jakob ~ Modified
+       
     }
 }
