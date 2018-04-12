@@ -115,6 +115,7 @@ class Ship_Menu_Button_Function : ZilchComponent
 
     function OnLeftMouseUp(event : ViewportMouseEvent)
     {
+        if (this.WaveGamemode)
         this.GameSession.GameVars.WaveGamemode = this.WaveGamemode;
     
         if(this.Quit)
