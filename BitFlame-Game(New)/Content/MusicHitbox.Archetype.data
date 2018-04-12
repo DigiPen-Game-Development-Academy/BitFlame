@@ -8,6 +8,10 @@ Cog =
 	{
 		string Name = "MusicHitbox",
 	},
+	Archetyped = 
+	{
+		string Name = "5a167c6ffe7cd5f9:MusicHitbox",
+	},
 	Transform = 
 	{
 		Vec3 Translation = [0, 0, 0],
@@ -38,12 +42,13 @@ Cog =
 		bool SendsMessages = true,
 		bool Seamless = true,
 		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+		string SerializedGroupName = "5a648669587659fb:MusicHitbox",
 		Vec3 Offset = [0, 0, 0],
-		float Radius = 10,
+		float Radius = 20,
 	},
 	MusicController_Hitbox = 
 	{
 		string Collision = "5a33def0a21d9c42:Enemies",
+		string OtherCollision = "5a8c76cb6cde040f:ChargingEnemyCollider",
 	},
 },

@@ -43,7 +43,7 @@ class TurretLogic : ZilchComponent
                  bestObj = obj;
                  bestDist = distance;
                }
-               else if (distance < bestDist || distance < this.Range)
+               else if (distance < bestDist && distance < this.Range)
                {
                  bestObj = obj;
                  bestDist = distance;
