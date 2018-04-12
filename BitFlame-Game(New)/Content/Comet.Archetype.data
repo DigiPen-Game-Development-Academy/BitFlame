@@ -127,4 +127,20 @@ Cog =
 		Vec4 Color3 = [0.595000029, 0.842764795, 1, 0.25],
 		Vec4 Color4 = [0.82585001, 0.929330051, 0.995000005, 0],
 	},
+	SoundEmitter = 
+	{
+		float Volume = 2,
+		float Pitch = 0,
+		float PitchSemitones = 0,
+		bool UsePitchSemitones = false,
+		bool Positional = true,
+		int Version = 1,
+	},
+	PlayWhenXFromPlayer = 
+	{
+		float Distance = 30,
+		string SoundToPlay = "5a6492d462eca7fb:CometSound",
+		bool PlayMultipleTimes = false,
+		float TimeTillReplay = 10,
+	},
 },

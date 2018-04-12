@@ -15,6 +15,6 @@ class DistanceFromShip : ZilchComponent
   {
     this.Distance = Math.Distance(this.Space.FindObjectByName("Player").Transform.WorldTranslation, this.Ship.Transform.WorldTranslation);
     
-    this.Owner.SpriteText.Text = "`Math.Round(this.Distance)` m.";
+    this.Owner.SpriteText.Text = "`Math.Round(this.Distance) - 1` m.";
   }
 }
