@@ -212,6 +212,10 @@ Cog =
 		Vec3 ForwardVector = [1, 0, 0],
 		OrientationBases DefaultBases = ForwardXUpY,
 	},
+	PlayerCollsions = 
+	{
+		float Interval = 1,
+	},
 	Hierarchy = 
 	{
 		Cog = 

@@ -88,6 +88,7 @@ class PlayerDeath : ZilchComponent
             {
                 this.Timer -= this.TimeInterval;
                 this.GameSession.GameVars.PlayerHealth -= 1;
+                this.Space.SoundSpace.PlayCue(SoundCue.Player_Damaged);
                 
                 var playerHurtUpdate = PlayerHurtUpdate();
                 this.GameSession.DispatchEvent(Events.PlayerHurtUpdate, playerHurtUpdate);

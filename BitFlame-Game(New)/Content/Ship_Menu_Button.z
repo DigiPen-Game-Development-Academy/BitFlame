@@ -60,6 +60,14 @@ class Ship_Menu_Button_Visual : ZilchComponent
     
     Action.Property(grp, @this.Sprite.Color, this.OriginalColor, 0.03, Ease.QuadInOut);
     Action.Property(grp, @this.Transform.Scale, this.OriginalScale, 0.3, Ease.QuadInOut);
+    
+    foreach(var child in this.Owner.FindAllChildrenByName("Icon"))
+    {
+        if(child != null)
+        {
+            Action.Property(grp, @child.Transform.EulerAngles, Real3(0, 0, 0), 0.3, Ease.QuadOut);
+        }
+    }
   }
 
   function OnMouseEnter(event : ViewportMouseEvent)
@@ -72,7 +80,14 @@ class Ship_Menu_Button_Visual : ZilchComponent
     
     Action.Property(grp, @this.Sprite.Color, this.HoverColor, 0.03, Ease.QuadInOut);
     Action.Property(grp, @this.Transform.Scale, this.OriginalScale * this.HoverScale, 0.3, Ease.QuadInOut);
-
+    
+    foreach(var child in this.Owner.FindAllChildrenByName("Icon"))
+    {
+        if(child != null)
+        {
+            Action.Property(grp, @child.Transform.EulerAngles, Real3(0, 0, Math.Pi / 4), 0.3, Ease.QuadOut);
+        }
+    }
   }
 
 }
