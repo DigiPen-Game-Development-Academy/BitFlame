@@ -4,12 +4,25 @@
 class MoveSound : ZilchComponent
 {
     [Property] var MoveNoise : SoundCue;
+    [Property] var RandomPitch : Boolean = true;
+    [Property] var TimeTillRandomPitch : Real = 5;
     var IsMove : Boolean = false;
     
+    var Timer : Real;
+    
+    var Rand : Random = Random();
     
     function Initialize(init : CogInitializer)
     {
+        this.Timer = this.TimeTillRandomPitch;
+        
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+    
+    function RandomizePitch()
+    {
+        this.Owner.SoundEmitter.Pitch = this.Rand.Real() / 1;
+        //Console.WriteLine(this.Owner.SoundEmitter.Pitch);
     }
     
     function IsPlayerMove() : Boolean
@@ -24,14 +37,28 @@ class MoveSound : ZilchComponent
     
     function OnLogicUpdate(event : UpdateEvent)
     {
-        if (this.IsPlayerMove() && !this.Owner.SimpleSound.IsPlaying())
+        //Console.WriteLine(this.Timer);
+        
+        if (this.RandomPitch)
         {
-            this.Owner.SimpleSound.Cue = this.MoveNoise;
-            this.Owner.SimpleSound.Play();
+            if (this.Timer >= 0)
+            {
+                this.Timer -= event.Dt;
+            }
+            else
+            {
+                this.RandomizePitch();
+                this.Timer = this.TimeTillRandomPitch;
+            }
+        }
+        
+        if (this.IsPlayerMove() && !this.Owner.SoundEmitter.IsPlaying())
+        {
+            this.Owner.SoundEmitter.PlayCue(this.MoveNoise);
         }
         else if (!this.IsPlayerMove())
         {
-            this.Owner.SimpleSound.Stop();
+            this.Owner.SoundEmitter.Stop();
         }
     }
 }
