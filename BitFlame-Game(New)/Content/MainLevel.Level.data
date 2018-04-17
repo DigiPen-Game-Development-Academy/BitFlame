@@ -670,10 +670,6 @@ Level =
 				{
 					float Interval = 0.5,
 				},
-				Dont_Move_In_Z_Axis = 
-				{
-					int Z_Position = 100,
-				},
 				Hierarchy = 
 				{
 					Cog = 
