@@ -56,4 +56,7 @@ GameSession =
 		float HasUpgrade_Shieldregenspeed = 0,
 		float HasUpgrade_ShieldII = 0,
 	},
+	MenuMusic = 
+	{
+	},
 },

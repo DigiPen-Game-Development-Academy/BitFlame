@@ -31,8 +31,6 @@ class IntroLevel_Logic : ZilchComponent
     {
        // Console.WriteLine();
         
-        //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-        
         //catch unregistered references
         if(this.Blackout != null && this.Blackout.Cog != null)
         {
@@ -45,6 +43,8 @@ class IntroLevel_Logic : ZilchComponent
         else if(this.DigipenLogo != null && this.DigipenLogo.Cog != null && this.TeamLogo
             != null && this.TeamLogo.Cog != null && this.GameLogo != null && this.GameLogo.Cog != null)
         {
+            this.GameSession.MenuMusic.Music = this.Space.SoundSpace.PlayCue(SoundCue.Background);
+            
             var digiLogoColor = this.DigipenLogo.Cog.Sprite.Color;
             //var newDigiLogoColor = digiLogoColor;
             //newDigiLogoColor.W += 255.0;
