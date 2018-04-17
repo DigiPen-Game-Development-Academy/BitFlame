@@ -107,7 +107,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-1.89901268, 24.7793293, 50],
+			Vec3 Translation = [2.2199831, -21.461544, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -119,7 +119,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 18.2683792,
+			float Size = 40.6570244,
 		},
 		EditorCameraController = 
 		{
@@ -127,7 +127,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-1.89901268, 24.7793293, -7.42673478e-08],
+			Vec3 LookTarget = [2.2199831, -21.461544, 1.05779947e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -214,6 +214,7 @@ Level =
 		{
 			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
 			string CantSelect = "5ae3cf4fa1244713:Blip_CantSelect",
+			string HoverSound = "5a64f05e1529e84d:Blip_Hover",
 			Vec4 HoverColor = [0.180392146, 0.376470655, 0.956862807, 0],
 			Vec4 ClickColor = [0.466666698, 0.627450943, 0.776470661, 0],
 			float HoverScale = 1.20000005,
@@ -371,6 +372,7 @@ Level =
 		{
 			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
 			string CantSelect = "5ae3cf4fa1244713:Blip_CantSelect",
+			string HoverSound = "5a64f05e1529e84d:Blip_Hover",
 			Vec4 HoverColor = [0.180392146, 0.376470655, 0.956862807, 0],
 			Vec4 ClickColor = [0.466666698, 0.627450943, 0.776470661, 0],
 			float HoverScale = 1.20000005,
@@ -528,6 +530,7 @@ Level =
 		{
 			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
 			string CantSelect = "5ae3cf4fa1244713:Blip_CantSelect",
+			string HoverSound = "5a64f05e1529e84d:Blip_Hover",
 			Vec4 HoverColor = [0.180392146, 0.376470655, 0.956862807, 0],
 			Vec4 ClickColor = [0.466666698, 0.627450943, 0.776470661, 0],
 			float HoverScale = 1.20000005,
@@ -685,6 +688,7 @@ Level =
 		{
 			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
 			string CantSelect = "5ae3cf4fa1244713:Blip_CantSelect",
+			string HoverSound = "5a64f05e1529e84d:Blip_Hover",
 			Vec4 HoverColor = [0.180392146, 0.376470655, 0.956862807, 0],
 			Vec4 ClickColor = [0.466666698, 0.627450943, 0.776470661, 0],
 			float HoverScale = 1.20000005,
@@ -842,6 +846,7 @@ Level =
 		{
 			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
 			string CantSelect = "5ae3cf4fa1244713:Blip_CantSelect",
+			string HoverSound = "5a64f05e1529e84d:Blip_Hover",
 			Vec4 HoverColor = [0.180392146, 0.376470655, 0.956862807, 0],
 			Vec4 ClickColor = [0.466666698, 0.627450943, 0.776470661, 0],
 			float HoverScale = 1.20000005,
@@ -999,6 +1004,7 @@ Level =
 		{
 			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
 			string CantSelect = "5ae3cf4fa1244713:Blip_CantSelect",
+			string HoverSound = "5a64f05e1529e84d:Blip_Hover",
 			Vec4 HoverColor = [0.180392146, 0.376470655, 0.956862807, 0],
 			Vec4 ClickColor = [0.466666698, 0.627450943, 0.776470661, 0],
 			float HoverScale = 1.20000005,
@@ -1165,7 +1171,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, -30, 0],
+			Vec3 Translation = [0, 30, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1205,7 +1211,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 30, 0],
+			Vec3 Translation = [-34, 0, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1245,46 +1251,6 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-34, 0, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a4018b73151485d:BitFlame_background_art",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Area = 
-		{
-			Vec2 Size = [34, 17],
-			Location Origin = Center,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 26,
-		},
-		Named = 
-		{
-			string Name = "background",
-		},
-		Transform = 
-		{
 			Vec3 Translation = [34, 0, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
@@ -1317,231 +1283,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 27,
-		},
-		Named = 
-		{
-			string Name = "Button",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [3, -33, 0],
-			Vec3 Scale = [0.75, 0.75, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.0352941155, 0.525489986, 0.800000072, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		Ship_Menu_Button_Visual = 
-		{
-			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
-			string CantSelect = "5ae3cf4fa1244713:Blip_CantSelect",
-			Vec4 HoverColor = [0.180392146, 0.376470655, 0.956862807, 1],
-			Vec4 ClickColor = [0.466666698, 0.627450943, 0.776470661, 1],
-			float HoverScale = 1.20000005,
-			float ClickScale = 1,
-		},
-		Ship_Menu_Button_Function = 
-		{
-			CogPath Camera = 
-			{
-				string Path = ":/Camera",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 2,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-			Vec3 NewCameraPosition = [0, 0, 0],
-			float MoveTime = 0.200000003,
-			bool Reload = false,
-			bool ChangeLevel = false,
-			string LevelToChangeTo = "",
-			bool Respawn = false,
-			bool Quit = false,
-			bool WaveGamemode = false,
-		},
-		Area = 
-		{
-			Vec2 Size = [5, 3],
-			Location Origin = Center,
-		},
-		Button_PlaySound = 
-		{
-			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
-			string CantSelectSound = "5ae3cf4fa1244713:Blip_CantSelect",
-		},
-		Hierarchy = 
-		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 28,
-				},
-				Named = 
-				{
-					string Name = "SpriteText",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 0.75, 21],
-					Vec3 Scale = [1, 1, 0.99999994],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				SpriteText = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "5a075f32e7b83df0:GameFont",
-					uint FontSize = 75,
-					string Text = "Back",
-					TextAlign Align = Center,
-					float PixelsPerUnit = 64,
-					bool Smoothing = false,
-				},
-			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 29,
-		},
-		Named = 
-		{
-			string Name = "WarningText",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, -28, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		SpriteText = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "57343753bb4eaaec:NotoSans-Regular",
-			uint FontSize = 10,
-			string Text = "",
-			TextAlign Align = Center,
-			float PixelsPerUnit = 64,
-			bool Smoothing = true,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 30,
-		},
-		Named = 
-		{
-			string Name = "SpriteText",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, -28.5, 0],
-			Vec3 Scale = [0.899999976, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		SpriteText = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "5a075f32e7b83df0:GameFont",
-			uint FontSize = 60,
-			string Text = "Are you sure you want to quit?",
-			TextAlign Align = Center,
-			float PixelsPerUnit = 64,
-			bool Smoothing = false,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 31,
-		},
-		Named = 
-		{
-			string Name = "SpriteText",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, -26, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		SpriteText = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "5a075f32e7b83df0:GameFont",
-			uint FontSize = 115,
-			string Text = "Warning:",
-			TextAlign Align = Center,
-			float PixelsPerUnit = 64,
-			bool Smoothing = false,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 32,
+			uint Id = 26,
 		},
 		Named = 
 		{
@@ -1580,6 +1322,7 @@ Level =
 		{
 			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
 			string CantSelect = "5ae3cf4fa1244713:Blip_CantSelect",
+			string HoverSound = "5a64f05e1529e84d:Blip_Hover",
 			Vec4 HoverColor = [0.180392146, 0.376470655, 0.956862807, 0],
 			Vec4 ClickColor = [0.466666698, 0.627450943, 0.776470661, 0],
 			float HoverScale = 1.20000005,
@@ -1627,7 +1370,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 33,
+					uint Id = 27,
 				},
 				Named = 
 				{
@@ -1661,7 +1404,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 34,
+					uint Id = 28,
 				},
 				Named = 
 				{
@@ -1696,7 +1439,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 35,
+					uint Id = 29,
 				},
 				Named = 
 				{
@@ -1733,7 +1476,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 36,
+			uint Id = 30,
 		},
 		Named = 
 		{
@@ -1772,6 +1515,7 @@ Level =
 		{
 			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
 			string CantSelect = "5ae3cf4fa1244713:Blip_CantSelect",
+			string HoverSound = "5a64f05e1529e84d:Blip_Hover",
 			Vec4 HoverColor = [0.180392146, 0.376470655, 0.956862807, 0],
 			Vec4 ClickColor = [0.466666698, 0.627450943, 0.776470661, 0],
 			float HoverScale = 1.20000005,
@@ -1819,7 +1563,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 37,
+					uint Id = 31,
 				},
 				Named = 
 				{
@@ -1853,7 +1597,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 38,
+					uint Id = 32,
 				},
 				Named = 
 				{
@@ -1888,7 +1632,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 39,
+					uint Id = 33,
 				},
 				Named = 
 				{
@@ -1925,7 +1669,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 40,
+			uint Id = 34,
 		},
 		Named = 
 		{
@@ -1964,6 +1708,7 @@ Level =
 		{
 			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
 			string CantSelect = "5ae3cf4fa1244713:Blip_CantSelect",
+			string HoverSound = "5a64f05e1529e84d:Blip_Hover",
 			Vec4 HoverColor = [0.180392146, 0.376470655, 0.956862807, 0],
 			Vec4 ClickColor = [0.466666698, 0.627450943, 0.776470661, 0],
 			float HoverScale = 1.20000005,
@@ -2011,7 +1756,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 41,
+					uint Id = 35,
 				},
 				Named = 
 				{
@@ -2045,7 +1790,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 42,
+					uint Id = 36,
 				},
 				Named = 
 				{
@@ -2080,7 +1825,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 43,
+					uint Id = 37,
 				},
 				Named = 
 				{
@@ -2117,129 +1862,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 44,
-		},
-		Named = 
-		{
-			string Name = "Button",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-3, -33, 0],
-			Vec3 Scale = [0.75, 0.75, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.761799932, 0.800000012, 0.0360000134, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		Ship_Menu_Button_Visual = 
-		{
-			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
-			string CantSelect = "5ae3cf4fa1244713:Blip_CantSelect",
-			Vec4 HoverColor = [0.954999983, 0.92405808, 0.181450009, 1],
-			Vec4 ClickColor = [0.466666698, 0.776470661, 0.588235319, 1],
-			float HoverScale = 1.20000005,
-			float ClickScale = 1,
-		},
-		Ship_Menu_Button_Function = 
-		{
-			CogPath Camera = 
-			{
-				string Path = ":/Camera",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 2,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-			Vec3 NewCameraPosition = [0, 0, 0],
-			float MoveTime = 0.200000003,
-			bool Reload = true,
-			bool ChangeLevel = false,
-			string LevelToChangeTo = "",
-			bool Respawn = false,
-			bool Quit = true,
-			bool WaveGamemode = false,
-		},
-		Area = 
-		{
-			Vec2 Size = [7, 3],
-			Location Origin = Center,
-		},
-		Button_PlaySound = 
-		{
-			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
-			string CantSelectSound = "5ae3cf4fa1244713:Blip_CantSelect",
-		},
-		Hierarchy = 
-		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 45,
-				},
-				Named = 
-				{
-					string Name = "SpriteText",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 0.75, 21],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				SpriteText = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "5a075f32e7b83df0:GameFont",
-					uint FontSize = 75,
-					string Text = "Confirm",
-					TextAlign Align = Center,
-					float PixelsPerUnit = 64,
-					bool Smoothing = false,
-				},
-			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 46,
+			uint Id = 38,
 		},
 		Named = 
 		{
@@ -2288,7 +1911,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 47,
+			uint Id = 39,
 		},
 		Named = 
 		{
@@ -2323,7 +1946,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 48,
+					uint Id = 40,
 				},
 				Named = 
 				{
@@ -2360,7 +1983,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 49,
+					uint Id = 41,
 				},
 				Named = 
 				{
@@ -2396,7 +2019,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 50,
+			uint Id = 42,
 		},
 		Named = 
 		{
@@ -2430,7 +2053,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 51,
+			uint Id = 43,
 		},
 		Named = 
 		{
@@ -2464,7 +2087,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 52,
+			uint Id = 44,
 		},
 		Named = 
 		{
@@ -2498,7 +2121,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 53,
+			uint Id = 45,
 		},
 		Named = 
 		{
@@ -2533,7 +2156,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 54,
+					uint Id = 46,
 				},
 				Named = 
 				{
@@ -2572,7 +2195,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 55,
+					uint Id = 47,
 				},
 				Named = 
 				{
@@ -2613,7 +2236,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 56,
+			uint Id = 48,
 		},
 		Named = 
 		{
@@ -2650,7 +2273,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 57,
+			uint Id = 49,
 		},
 		Named = 
 		{
@@ -2668,7 +2291,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 58,
+					uint Id = 50,
 				},
 				Named = 
 				{
@@ -2720,6 +2343,7 @@ Level =
 				{
 					string SelectSound = "5ae3cf4fa1253749:Blip_Select",
 					string CantSelect = "5ae3cf4fa1244713:Blip_CantSelect",
+					string HoverSound = "5a64f05e1529e84d:Blip_Hover",
 					Vec4 HoverColor = [1, 1, 1, 1],
 					Vec4 ClickColor = [1, 1, 1, 1],
 					float HoverScale = 1.20000005,
@@ -2730,7 +2354,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 59,
+					uint Id = 51,
 				},
 				Named = 
 				{
@@ -2782,6 +2406,7 @@ Level =
 				{
 					string SelectSound = "5ae3cf4fa1253749:Blip_Select",
 					string CantSelect = "5ae3cf4fa1244713:Blip_CantSelect",
+					string HoverSound = "5a64f05e1529e84d:Blip_Hover",
 					Vec4 HoverColor = [1, 1, 1, 1],
 					Vec4 ClickColor = [1, 1, 1, 1],
 					float HoverScale = 1.20000005,
@@ -2792,7 +2417,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 60,
+					uint Id = 52,
 				},
 				Named = 
 				{
@@ -2844,6 +2469,7 @@ Level =
 				{
 					string SelectSound = "5ae3cf4fa1253749:Blip_Select",
 					string CantSelect = "5ae3cf4fa1244713:Blip_CantSelect",
+					string HoverSound = "5a64f05e1529e84d:Blip_Hover",
 					Vec4 HoverColor = [1, 1, 1, 1],
 					Vec4 ClickColor = [1, 1, 1, 1],
 					float HoverScale = 1.20000005,
@@ -2854,7 +2480,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 61,
+					uint Id = 53,
 				},
 				Named = 
 				{
@@ -2906,6 +2532,7 @@ Level =
 				{
 					string SelectSound = "5ae3cf4fa1253749:Blip_Select",
 					string CantSelect = "5ae3cf4fa1244713:Blip_CantSelect",
+					string HoverSound = "5a64f05e1529e84d:Blip_Hover",
 					Vec4 HoverColor = [1, 1, 1, 1],
 					Vec4 ClickColor = [1, 1, 1, 1],
 					float HoverScale = 1.20000005,
@@ -2916,7 +2543,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 62,
+					uint Id = 54,
 				},
 				Named = 
 				{
@@ -2968,6 +2595,7 @@ Level =
 				{
 					string SelectSound = "5ae3cf4fa1253749:Blip_Select",
 					string CantSelect = "5ae3cf4fa1244713:Blip_CantSelect",
+					string HoverSound = "5a64f05e1529e84d:Blip_Hover",
 					Vec4 HoverColor = [1, 1, 1, 1],
 					Vec4 ClickColor = [1, 1, 1, 1],
 					float HoverScale = 1.20000005,
@@ -2981,7 +2609,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 63,
+					uint Id = 55,
 				},
 				Named = 
 				{
@@ -3035,7 +2663,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 64,
+							uint Id = 56,
 						},
 						Named = 
 						{
@@ -3075,7 +2703,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 65,
+							uint Id = 57,
 						},
 						Named = 
 						{
@@ -3111,7 +2739,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 66,
+					uint Id = 58,
 				},
 				Named = 
 				{
@@ -3148,7 +2776,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 67,
+			uint Id = 59,
 		},
 		Named = 
 		{
@@ -3187,7 +2815,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 68,
+			uint Id = 60,
 		},
 		Named = 
 		{
@@ -3236,7 +2864,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 67,
+				uint ResolvedCog = 59,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -3250,7 +2878,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 69,
+			uint Id = 61,
 		},
 		Named = 
 		{
@@ -3289,7 +2917,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 70,
+			uint Id = 62,
 		},
 		Named = 
 		{
@@ -3338,7 +2966,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 69,
+				uint ResolvedCog = 61,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -3352,7 +2980,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 71,
+			uint Id = 63,
 		},
 		Named = 
 		{
@@ -3391,7 +3019,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 72,
+			uint Id = 64,
 		},
 		Named = 
 		{
@@ -3440,7 +3068,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 71,
+				uint ResolvedCog = 63,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -3454,7 +3082,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 73,
+			uint Id = 65,
 		},
 		Named = 
 		{
@@ -3493,7 +3121,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 74,
+			uint Id = 66,
 		},
 		Named = 
 		{
@@ -3542,7 +3170,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 73,
+				uint ResolvedCog = 65,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -3556,7 +3184,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 75,
+			uint Id = 67,
 		},
 		Named = 
 		{
@@ -3595,7 +3223,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 76,
+			uint Id = 68,
 		},
 		Named = 
 		{
@@ -3644,7 +3272,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 75,
+				uint ResolvedCog = 67,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -3658,7 +3286,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 77,
+			uint Id = 69,
 		},
 		Named = 
 		{
@@ -3692,7 +3320,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 78,
+			uint Id = 70,
 		},
 		Named = 
 		{
@@ -3726,7 +3354,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 79,
+			uint Id = 71,
 		},
 		Named = 
 		{
@@ -3760,7 +3388,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 80,
+			uint Id = 72,
 		},
 		Named = 
 		{
@@ -3805,7 +3433,7 @@ Exist by using your brain",
 	{
 		LinkId = 
 		{
-			uint Id = 81,
+			uint Id = 73,
 		},
 		Named = 
 		{
@@ -3834,6 +3462,568 @@ Exist by using your brain",
 			bool AnimationActive = true,
 			float AnimationSpeed = 1,
 			uint StartFrame = 0,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 74,
+		},
+		Named = 
+		{
+			string Name = "SpriteText",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, -26, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "5a075f32e7b83df0:GameFont",
+			uint FontSize = 115,
+			string Text = "Warning:",
+			TextAlign Align = Center,
+			float PixelsPerUnit = 64,
+			bool Smoothing = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 75,
+		},
+		Named = 
+		{
+			string Name = "WarningText",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, -28, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "57343753bb4eaaec:NotoSans-Regular",
+			uint FontSize = 10,
+			string Text = "",
+			TextAlign Align = Center,
+			float PixelsPerUnit = 64,
+			bool Smoothing = true,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 76,
+		},
+		Named = 
+		{
+			string Name = "SpriteText",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, -29.5, 0],
+			Vec3 Scale = [0.899999976, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "5a075f32e7b83df0:GameFont",
+			uint FontSize = 60,
+			string Text = "quit?",
+			TextAlign Align = Center,
+			float PixelsPerUnit = 64,
+			bool Smoothing = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 77,
+		},
+		Named = 
+		{
+			string Name = "background",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, -30, -9],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a4018b73151485d:BitFlame_background_art",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Area = 
+		{
+			Vec2 Size = [34, 17],
+			Location Origin = Center,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 78,
+		},
+		Named = 
+		{
+			string Name = "Button",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, -35, 1],
+			Vec3 Scale = [0.75, 0.75, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.0352941155, 0.525489986, 0.800000072, 0],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		Ship_Menu_Button_Visual = 
+		{
+			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
+			string CantSelect = "5ae3cf4fa1244713:Blip_CantSelect",
+			string HoverSound = "5a64f05e1529e84d:Blip_Hover",
+			Vec4 HoverColor = [0.180392146, 0.376470655, 0.956862807, 0],
+			Vec4 ClickColor = [0.466666698, 0.627450943, 0.776470661, 0],
+			float HoverScale = 1.20000005,
+			float ClickScale = 1,
+		},
+		Ship_Menu_Button_Function = 
+		{
+			CogPath Camera = 
+			{
+				string Path = ":/Camera",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 2,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			Vec3 NewCameraPosition = [0, 0, 0],
+			float MoveTime = 0.200000003,
+			bool Reload = false,
+			bool ChangeLevel = false,
+			string LevelToChangeTo = "",
+			bool Respawn = false,
+			bool Quit = false,
+			bool WaveGamemode = false,
+		},
+		Area = 
+		{
+			Vec2 Size = [5.5, 2],
+			Location Origin = Center,
+		},
+		Button_PlaySound = 
+		{
+			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
+			string CantSelectSound = "5ae3cf4fa1244713:Blip_CantSelect",
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 79,
+				},
+				Named = 
+				{
+					string Name = "SpriteText",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0.75, 20],
+					Vec3 Scale = [1, 1, 0.99999994],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				SpriteText = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string FontName = "5a075f32e7b83df0:GameFont",
+					uint FontSize = 75,
+					string Text = "Back",
+					TextAlign Align = Center,
+					float PixelsPerUnit = 64,
+					bool Smoothing = true,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 80,
+				},
+				Named = 
+				{
+					string Name = "Icon",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-2.5, 0, 1],
+					Vec3 Scale = [0.75, 0.75, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 81,
+				},
+				Named = 
+				{
+					string Name = "Icon",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [2.5, 0, 1],
+					Vec3 Scale = [0.75, 0.75, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 82,
+		},
+		Named = 
+		{
+			string Name = "SpriteText",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, -28.5, 0],
+			Vec3 Scale = [0.899999976, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "5a075f32e7b83df0:GameFont",
+			uint FontSize = 60,
+			string Text = "Are you sure you want to",
+			TextAlign Align = Center,
+			float PixelsPerUnit = 64,
+			bool Smoothing = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 83,
+		},
+		Named = 
+		{
+			string Name = "Button",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, -33, 1],
+			Vec3 Scale = [0.75, 0.75, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.0352941155, 0.525489986, 0.800000072, 0],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		Ship_Menu_Button_Visual = 
+		{
+			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
+			string CantSelect = "5ae3cf4fa1244713:Blip_CantSelect",
+			string HoverSound = "5a64f05e1529e84d:Blip_Hover",
+			Vec4 HoverColor = [0.180392146, 0.376470655, 0.956862807, 0],
+			Vec4 ClickColor = [0.466666698, 0.627450943, 0.776470661, 0],
+			float HoverScale = 1.20000005,
+			float ClickScale = 1,
+		},
+		Ship_Menu_Button_Function = 
+		{
+			CogPath Camera = 
+			{
+				string Path = ":/Camera",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 2,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			Vec3 NewCameraPosition = [0, 0, 0],
+			float MoveTime = 0.200000003,
+			bool Reload = false,
+			bool ChangeLevel = false,
+			string LevelToChangeTo = "5a62869edf2bbb4a:StartMenu_Level",
+			bool Respawn = false,
+			bool Quit = true,
+			bool WaveGamemode = false,
+		},
+		Area = 
+		{
+			Vec2 Size = [7.5, 2],
+			Location Origin = Center,
+		},
+		Button_PlaySound = 
+		{
+			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
+			string CantSelectSound = "5ae3cf4fa1244713:Blip_CantSelect",
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 84,
+				},
+				Named = 
+				{
+					string Name = "SpriteText",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0.75, 20],
+					Vec3 Scale = [1, 1, 0.99999994],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				SpriteText = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string FontName = "5a075f32e7b83df0:GameFont",
+					uint FontSize = 75,
+					string Text = "Confirm",
+					TextAlign Align = Center,
+					float PixelsPerUnit = 64,
+					bool Smoothing = true,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 85,
+				},
+				Named = 
+				{
+					string Name = "Icon",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-3.5, 0, 1],
+					Vec3 Scale = [0.75, 0.75, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 86,
+				},
+				Named = 
+				{
+					string Name = "Icon",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [3.5, 0, 1],
+					Vec3 Scale = [0.75, 0.75, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+			},
 		},
 	},
 },
