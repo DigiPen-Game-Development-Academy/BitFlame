@@ -68,7 +68,7 @@ Cog =
 				BlendMode BlendMode = Alpha,
 				SpriteGeometryMode GeometryMode = ZPlane,
 				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5ac100772e10037a:OxygenGauge",
+				string SpriteSource = "5abd0aeccedd117a:OxygenGauge",
 				bool RenderMask = false,
 				bool FlipX = false,
 				bool FlipY = false,
@@ -114,7 +114,7 @@ Cog =
 						BlendMode BlendMode = Alpha,
 						SpriteGeometryMode GeometryMode = ZPlane,
 						string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-						string SpriteSource = "5ac1007830412424:OxygenGauge_Pin",
+						string SpriteSource = "5ab681dbc3841df3:Oxygen_Gauge_Pin",
 						bool RenderMask = false,
 						bool FlipX = false,
 						bool FlipY = false,
@@ -159,7 +159,7 @@ Cog =
 						BlendMode BlendMode = Alpha,
 						SpriteGeometryMode GeometryMode = ZPlane,
 						string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-						string SpriteSource = "5ac1603b08d0b032:OxygenTank",
+						string SpriteSource = "5abd179bf397c488:OxygenTank ",
 						bool RenderMask = false,
 						bool FlipX = false,
 						bool FlipY = false,
@@ -245,7 +245,7 @@ Cog =
 						BlendMode BlendMode = Alpha,
 						SpriteGeometryMode GeometryMode = ZPlane,
 						string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-						string SpriteSource = "5adbf2caf26c60b8:HealthBar_Overlay",
+						string SpriteSource = "5ab6875e0a1f1a45:Health_Bar_Overlay",
 						bool RenderMask = false,
 						bool FlipX = false,
 						bool FlipY = false,
@@ -262,12 +262,12 @@ Cog =
 					},
 					Named = 
 					{
-						string Name = "HealthBar_Background",
+						string Name = "Health_Bar_Bakcground",
 					},
 					Transform = 
 					{
-						Vec3 Translation = [-5.64205742, 0.123585537, -0.70457077],
-						Vec3 Scale = [6.01317358, 2.17973948, 1],
+						Vec3 Translation = [-10.9482088, 0.753612518, -81.5],
+						Vec3 Scale = [0.769601345, 0.274298877, 0.475900173],
 						Quat Rotation = [0, 0, 0, 1],
 					},
 					Sprite = 
@@ -280,7 +280,7 @@ Cog =
 						BlendMode BlendMode = Alpha,
 						SpriteGeometryMode GeometryMode = ZPlane,
 						string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-						string SpriteSource = "5ad8908bbb2ba5ec:HealthBar_Background",
+						string SpriteSource = "5ab6889ec7c7c80e:Health_Bar_Background",
 						bool RenderMask = false,
 						bool FlipX = false,
 						bool FlipY = false,
@@ -303,7 +303,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [15.8046341, -3.5, -6.19540405],
+				Vec3 Translation = [15.8046341, -5.01230574, -100],
 				Vec3 Scale = [4, 4, 2.39427853],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -317,7 +317,7 @@ Cog =
 				BlendMode BlendMode = Alpha,
 				SpriteGeometryMode GeometryMode = ZPlane,
 				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5ad12250ddfc9775:HUD_ResourceDisplay_0",
+				string SpriteSource = "5ab776916a3b5609:Resource_Display",
 				bool RenderMask = false,
 				bool FlipX = false,
 				bool FlipY = false,
@@ -339,7 +339,7 @@ Cog =
 					},
 					Transform = 
 					{
-						Vec3 Translation = [0.465848207, 0.981614709, 0.309148788],
+						Vec3 Translation = [0.451308697, 0.981614709, 0.299149007],
 						Vec3 Scale = [0.224999994, 0.224999994, 0.375896096],
 						Quat Rotation = [0, 0, 0, 1],
 					},
@@ -418,7 +418,7 @@ Cog =
 					},
 					Transform = 
 					{
-						Vec3 Translation = [0.464764357, 0.588594437, 0.297020912],
+						Vec3 Translation = [0.464863986, 0.588594437, 0.297020912],
 						Vec3 Scale = [0.224999994, 0.224999994, 0.375896096],
 						Quat Rotation = [0, 0, 0, 1],
 					},
