@@ -11,8 +11,6 @@ class CustomCursorScript : ZilchComponent
     }
     function OnMouseUpdate(event : ViewportMouseEvent)
     {
-        Zero.Mouse.Cursor = Cursor.Invisible;
-        
         var mousePosition = event.ToWorldZPlane(10);
         
         this.Transform.Translation = mousePosition;
