@@ -112,7 +112,7 @@ Level =
 			float UpgradePickupProbability = 0,
 			int MaxX = 45,
 			int MaxY = 45,
-			int SpawnCellwidth = 10,
+			int SpawnCellwidth = 12,
 			int EmptyRange = 10,
 			int SafeRange = 20,
 		},

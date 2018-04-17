@@ -9,10 +9,11 @@ class DisplayFrameRate : ZilchComponent
     
     function Initialize(init : CogInitializer)
     {
-        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         this.Old = 60;
         this.Interval = 0.25;
         this.Timer = 0;
+        
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
 
     function OnLogicUpdate(event : UpdateEvent)
@@ -22,7 +23,7 @@ class DisplayFrameRate : ZilchComponent
         if(this.Timer > this.Interval)
         {
             this.Timer = 0;
-            this.SpriteText.Text = "`Math.Round(1 / event.Dt, -1)`";
+            this.SpriteText.Text = "`Math.Round(1 / event.Dt, -1)` fps";
         }
         
         if(this.GameSession.GameVars.ShowFrameRate)

@@ -1,0 +1,102 @@
+class TutorialLogic : ZilchComponent
+{
+    var TutorialStage : Real = 0.0;
+    
+    var WPressed : Boolean = false;
+    
+    var SPressed : Boolean = false;
+    
+    var DPressed : Boolean = false;
+    
+    var APressed : Boolean = false;
+    
+    var HasClicked : Boolean = false;
+    
+    var DidMine : Boolean = false;
+    
+    var GotTitanium : Boolean = false;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        
+        
+        
+        if(this.TutorialStage == 0) //Movement intro
+        {
+            this.Owner.SpriteText.Text = "W, A, S, D To move your character around";
+        }
+        else if(this.TutorialStage == 1) //Shooting intro
+        {
+            this.Owner.SpriteText.Text = "Shoot at asteroids  by clicking the mouse";
+        }
+        else if(this.TutorialStage == 2) //Resource Gathering intro
+        {
+            this.Owner.SpriteText.Text = "Go ahead and mine asteroids by shooting them";
+        }
+        else if(this.TutorialStage == 3) //Resource Gathering intro
+        {
+            this.Owner.SpriteText.Text = "Kill Enemies to get titanium";
+        }
+        else if(this.TutorialStage == 4) //Crafting intro
+        {
+            this.Owner.SpriteText.Text = "Press E over your ship and explore each window";
+        }
+        else if(this.TutorialStage == 5) //Winning the game intro
+        {
+            this.Owner.SpriteText.Text = "Repairing your ship is how you win the game";
+        }
+        
+        if(Zero.Keyboard.KeyIsDown(Keys.W) && this.WPressed == false)
+        {
+            this.WPressed = true;
+            
+            this.TutorialStage += 0.25;
+        }
+        if(Zero.Keyboard.KeyIsDown(Keys.S) && this.SPressed == false)
+        {
+            this.SPressed = true;
+            
+            this.TutorialStage += 0.25;
+        }
+        if(Zero.Keyboard.KeyIsDown(Keys.D) && this.DPressed == false)
+        {
+            this.DPressed = true;
+            
+            this.TutorialStage += 0.25;
+        }
+        if(Zero.Keyboard.KeyIsDown(Keys.A) && this.APressed == false)
+        {
+            this.APressed = true;
+            
+            this.TutorialStage += 0.25;
+        }
+        
+        if(Zero.Mouse.IsButtonDown(MouseButtons.Left) && this.HasClicked == false && this.TutorialStage >= 1.0)
+        {
+            this.HasClicked = true;
+            
+            this.TutorialStage += 1.0;
+        }
+        
+        if(this.GameSession.GameVars.PlayerCopper >= 1.0 && this.GameSession.GameVars.PlayerResources >= 1.0 && this.GameSession.GameVars.PlayerAluminium >= 1.0 && this.HasClicked && this.DidMine == false)
+        {
+            this.DidMine = true;
+            
+            this.TutorialStage += 1.0;
+        }
+        
+        if(this.GameSession.GameVars.PlayerTitanium >= 1.0 && this.DidMine && this.GotTitanium == false)
+        {
+            this.GotTitanium = true;
+            
+            this.TutorialStage += 1.0;
+        }
+        
+        
+    }
+}
