@@ -178,7 +178,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-29.9379749, -2.28705812, 50],
+			Vec3 Translation = [0.087995559, -6.76861763, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -190,7 +190,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 16.5299416,
+			float Size = 49.658577,
 		},
 		EditorCameraController = 
 		{
@@ -198,7 +198,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-29.9379749, -2.28705812, -1.30863089e-06],
+			Vec3 LookTarget = [0.087995559, -6.76861763, 3.84598398e-09],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -365,8 +365,9 @@ Level =
 		},
 		Button_PlaySound = 
 		{
-			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
+			string ClickSound = "",
 			string CantSelectSound = "5ae3cf4fa1244713:Blip_CantSelect",
+			string HoverSound = "",
 		},
 		Hierarchy = 
 		{
@@ -524,8 +525,9 @@ Level =
 		},
 		Button_PlaySound = 
 		{
-			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
+			string ClickSound = "",
 			string CantSelectSound = "5ae3cf4fa1244713:Blip_CantSelect",
+			string HoverSound = "",
 		},
 		Hierarchy = 
 		{
@@ -683,8 +685,9 @@ Level =
 		},
 		Button_PlaySound = 
 		{
-			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
+			string ClickSound = "",
 			string CantSelectSound = "5ae3cf4fa1244713:Blip_CantSelect",
+			string HoverSound = "",
 		},
 		Hierarchy = 
 		{
@@ -842,8 +845,9 @@ Level =
 		},
 		Button_PlaySound = 
 		{
-			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
+			string ClickSound = "",
 			string CantSelectSound = "5ae3cf4fa1244713:Blip_CantSelect",
+			string HoverSound = "",
 		},
 		Hierarchy = 
 		{
@@ -1001,8 +1005,9 @@ Level =
 		},
 		Button_PlaySound = 
 		{
-			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
+			string ClickSound = "",
 			string CantSelectSound = "5ae3cf4fa1244713:Blip_CantSelect",
+			string HoverSound = "",
 		},
 		Hierarchy = 
 		{
@@ -1160,8 +1165,9 @@ Level =
 		},
 		Button_PlaySound = 
 		{
-			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
+			string ClickSound = "",
 			string CantSelectSound = "5ae3cf4fa1244713:Blip_CantSelect",
+			string HoverSound = "",
 		},
 		Hierarchy = 
 		{
@@ -1519,8 +1525,9 @@ Level =
 		},
 		Button_PlaySound = 
 		{
-			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
+			string ClickSound = "",
 			string CantSelectSound = "5ae3cf4fa1244713:Blip_CantSelect",
+			string HoverSound = "",
 		},
 		Hierarchy = 
 		{
@@ -1815,8 +1822,9 @@ Level =
 		},
 		Button_PlaySound = 
 		{
-			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
+			string ClickSound = "",
 			string CantSelectSound = "5ae3cf4fa1244713:Blip_CantSelect",
+			string HoverSound = "",
 		},
 		Hierarchy = 
 		{
@@ -2009,8 +2017,9 @@ Level =
 		},
 		Button_PlaySound = 
 		{
-			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
+			string ClickSound = "",
 			string CantSelectSound = "5ae3cf4fa1244713:Blip_CantSelect",
+			string HoverSound = "",
 		},
 		Hierarchy = 
 		{
@@ -4073,8 +4082,9 @@ Exist by using your brain",
 		},
 		Button_PlaySound = 
 		{
-			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
+			string ClickSound = "",
 			string CantSelectSound = "5ae3cf4fa1244713:Blip_CantSelect",
+			string HoverSound = "",
 		},
 		Hierarchy = 
 		{
@@ -4267,8 +4277,9 @@ Exist by using your brain",
 		},
 		Button_PlaySound = 
 		{
-			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
+			string ClickSound = "",
 			string CantSelectSound = "5ae3cf4fa1244713:Blip_CantSelect",
+			string HoverSound = "",
 		},
 		Hierarchy = 
 		{
@@ -4376,6 +4387,158 @@ Exist by using your brain",
 					uint StartFrame = 0,
 				},
 			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 94,
+		},
+		Named = 
+		{
+			string Name = "TwinklingStars",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0.16116333, 0, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteParticleSystem = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			SystemChildMode ChildMode = Independent,
+			SystemSpace SystemSpace = WorldSpace,
+			uint DrawOrder = 0,
+			Vec4 Tint = [1, 0.952800035, 0.705000043, 1],
+			float WarmUpTime = 0,
+			ParticleGeometry GeometryMode = Billboarded,
+			ParticleRenderMode RenderMode = Additive,
+			ParticleSortMode SortMode = Youngest,
+			ParticleAnimation ParticleAnimation = Single,
+			string Texture = "4fab71e8bcb7a8ce:DefaultTexture",
+			float VelocityScale = 1,
+			float LengthScale = 1,
+			float MaxParticleSize = 100,
+			Vec3 SystemSize = [50, 50, 4],
+		},
+		LinearParticleAnimator = 
+		{
+			Vec3 Force = [0, 0, 0],
+			Vec3 RandomForce = [0, 0, 0],
+			float Torque = 0,
+			float Growth = 0.075000003,
+			float Dampening = 0,
+			Vec3 Twist = [0, 0, 0],
+		},
+		ParticleColorAnimator = 
+		{
+			Vec4 Color0 = [1, 1, 1, 0],
+			Vec4 Color1 = [1, 1, 1, 1],
+			Vec4 Color2 = [1, 1, 1, 1],
+			Vec4 Color3 = [1, 1, 1, 1],
+			Vec4 Color4 = [1, 1, 1, 0],
+		},
+		BoxParticleEmitter = 
+		{
+			bool Active = true,
+			uint EmitCount = 0,
+			float EmitRate = 100,
+			float EmitVariance = 0,
+			float Size = 0.100000001,
+			float SizeVariance = 0.100000001,
+			float Lifetime = 1,
+			float LifetimeVariance = 0.200000003,
+			float Spin = 0,
+			float SpinVariance = 50,
+			bool RandomSpin = true,
+			float Fill = 0,
+			float EmitterVelocityPercent = 0,
+			Vec3 StartVelocity = [0, 0, 0],
+			Vec3 RandomVelocity = [0, 0, 0],
+			Vec3 TangentVelocity = [0, 0, 0],
+			Vec3 EmitterSize = [100, 100, 0],
+			bool FastMovingEmitter = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 95,
+		},
+		Named = 
+		{
+			string Name = "ShootingStars",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0.16116333, 0, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteParticleSystem = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			SystemChildMode ChildMode = Independent,
+			SystemSpace SystemSpace = WorldSpace,
+			uint DrawOrder = 0,
+			Vec4 Tint = [0.995000005, 0.899480045, 0.398000002, 1],
+			float WarmUpTime = 0,
+			ParticleGeometry GeometryMode = Beam,
+			ParticleRenderMode RenderMode = Additive,
+			ParticleSortMode SortMode = Youngest,
+			ParticleAnimation ParticleAnimation = Single,
+			string Texture = "4fab71e8bcb7a8ce:DefaultTexture",
+			float VelocityScale = 1,
+			float LengthScale = 1,
+			float MaxParticleSize = 100,
+			Vec3 SystemSize = [50, 50, 4],
+		},
+		LinearParticleAnimator = 
+		{
+			Vec3 Force = [0, 0, 0],
+			Vec3 RandomForce = [0, 0, 0],
+			float Torque = 0,
+			float Growth = -0.075000003,
+			float Dampening = 0,
+			Vec3 Twist = [0, 0, 0],
+		},
+		ParticleColorAnimator = 
+		{
+			Vec4 Color0 = [1, 1, 1, 0],
+			Vec4 Color1 = [1, 1, 1, 1],
+			Vec4 Color2 = [1, 1, 1, 1],
+			Vec4 Color3 = [1, 1, 1, 1],
+			Vec4 Color4 = [1, 1, 1, 0],
+		},
+		BoxParticleEmitter = 
+		{
+			bool Active = true,
+			uint EmitCount = 0,
+			float EmitRate = 15,
+			float EmitVariance = 0,
+			float Size = 0.075000003,
+			float SizeVariance = 0.00499999989,
+			float Lifetime = 1,
+			float LifetimeVariance = 0.200000003,
+			float Spin = 0,
+			float SpinVariance = 50,
+			bool RandomSpin = true,
+			float Fill = 0,
+			float EmitterVelocityPercent = 0,
+			Vec3 StartVelocity = [0, 0, 0],
+			Vec3 RandomVelocity = [20, 20, 0],
+			Vec3 TangentVelocity = [0, 0, 0],
+			Vec3 EmitterSize = [100, 100, 0],
+			bool FastMovingEmitter = false,
 		},
 	},
 },
