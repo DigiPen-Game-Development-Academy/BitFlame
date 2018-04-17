@@ -8,6 +8,8 @@ Brief: This Component allows the owner to be interacted with it
 
 class Ship_Interaction : ZilchComponent
 {
+    [Property] var BigCursor : Archetype;
+    
     [Property] var ShipAccessKey : Keys = Keys.E;
     
     // The level that our HUD is contained within
