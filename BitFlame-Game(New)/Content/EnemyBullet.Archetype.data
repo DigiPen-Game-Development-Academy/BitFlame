@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [12.727458, 7.66889763, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -42,7 +42,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = false,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -87,7 +87,8 @@ Cog =
 		float Damage = 1,
 		bool Penatrating = false,
 		bool EnemyBullet = true,
-		string PlayerDamagedSound = "5ae3cf4fa125c756:Player-Damaged",
+		string PlayerDamagedSound = "5ae3cf4fa125c756:Player_Damaged",
+		string SoundOnHit = "",
 	},
 	DestroyOffscreen = 
 	{
@@ -117,8 +118,8 @@ Cog =
 	{
 		bool Active = true,
 		uint EmitCount = 0,
-		float EmitRate = 5,
-		float EmitVariance = 10,
+		float EmitRate = 12,
+		float EmitVariance = 0,
 		float Size = 0.100000001,
 		float SizeVariance = 0.100000001,
 		float Lifetime = 2,

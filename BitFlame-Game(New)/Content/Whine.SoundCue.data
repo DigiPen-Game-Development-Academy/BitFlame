@@ -1,9 +1,9 @@
 SoundCue = 
 {
 	SoundPlayMode PlayMode = Single,
-	float Volume = 0.399999976,
+	float Volume = 0.199999988,
 	float VolumeVariation = 0,
-	float VolumeDB = -7.95880079,
+	float VolumeDB = -13.9794006,
 	bool UseVolumeDB = false,
 	float VolumeDBVariation = 0,
 	float Pitch = 0.5,
@@ -19,7 +19,7 @@ SoundCue =
 	[
 		{
 			string SoundName = "5a2e1b080268fa98:Whine",
-			string GeneratedSoundName = "",
+			string GeneratedSoundName = "55017c595ef88bf0:DefaultGeneratedSound",
 			WhichSoundType WhichToUse = FromFile,
 			float Weight = 1,
 			float LoopEndTime = 0,
