@@ -399,8 +399,9 @@ Level =
 		},
 		Button_PlaySound = 
 		{
-			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
+			string ClickSound = "",
 			string CantSelectSound = "5ae3cf4fa1244713:Blip_CantSelect",
+			string HoverSound = "",
 		},
 		Hierarchy = 
 		{
@@ -4146,6 +4147,12 @@ Level =
 		{
 			bool Active = true,
 			bool CaptureMouse = false,
+		},
+		Button_PlaySound = 
+		{
+			string ClickSound = "5ae3cf4fa1253749:Blip_Select",
+			string CantSelectSound = "5ae3cf4fa1244713:Blip_CantSelect",
+			string HoverSound = "5a64f05e1529e84d:Blip_Hover",
 		},
 		Hierarchy = 
 		{
