@@ -40,9 +40,11 @@ Cog =
 	{
 		float Health = 10,
 		string ArchetypetoSpawnOnDeath1 = "5a08fb7240d5e7ed:ExplosionParticleEffect",
-		string ArchetypetoSpawnOnDeath2 = "5a08cc0da512394f:Game_Upgrade_Pickup",
+		string ArchetypetoSpawnOnDeath2 = "5a6ca525a5151ffd:Game_TitaniumOre_Pickup",
+		string ArchetypetoSpawnOnDeath3 = "",
 		string ExplosionSound = "5ae3cf4fa1248b1b:Enemy_Explosion",
 		bool Unbreakable = false,
+		bool Random3Drop = false,
 	},
 	HiveSpawner = 
 	{
@@ -67,10 +69,10 @@ Cog =
 		string ArchetypetoSpawnOnDamage = "",
 		float DropAmount = 0,
 		float ShrinkAmount = 200,
-		Vec4 AluminiumColor = [0, 0, 0, 1],
-		Vec4 CopperColor = [0, 0, 0, 1],
-		Vec4 IronColor = [0, 0, 0, 1],
-		Vec4 TitaniumColor = [0, 0, 0, 1],
+		string AluminiumSprite = "5ab82aff8f3ef818:Asteroid_TileMap_Ores000",
+		string CopperSprite = "5ab82aff8f353da5:Asteroid_TileMap_Ores002",
+		string IronSprite = "5ab82aff8f317c0c:Asteroid_TileMap_Ores004",
+		string TitaniumSprite = "5ab82aff8f33a0ea:Asteroid_TileMap_Ores005",
 		string AluminiumArchetype = "5a6ca514b81d8e50:Game_AluminiumOre_Pickup",
 		string CopperArchetype = "5a6cae91a47b14d7:Game_CopperOre_Pickup",
 		string IronArchetype = "5a86165eb2745571:Game_ResourceOre_Pickup",
@@ -80,5 +82,9 @@ Cog =
 		float IronProbability = 0,
 		float TitaniumProbability = 0,
 		float EmptyProbability = 0,
+	},
+	Dont_Move_In_Z_Axis = 
+	{
+		int Z_Position = 0,
 	},
 },

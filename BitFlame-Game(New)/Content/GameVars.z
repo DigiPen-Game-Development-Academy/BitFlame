@@ -83,6 +83,9 @@ class GameVars : ZilchComponent
     var ActiveWave : Boolean = false;
     var WaveTimer : Real;
     
+    // Keeps track of how many waves have passed
+    var WaveTracker : Real = 0;
+    
     var SafeToSpawn : Boolean = false;
     
     //initialization function, runs when the owner object is created

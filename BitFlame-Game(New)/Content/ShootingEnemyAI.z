@@ -86,12 +86,12 @@ class ShootingEnemyAI : ZilchComponent
                         
                         this.Owner.Transform.RotateAround(this.Target.Transform.WorldTranslation, rotation);
                         
-                        if(this.Collision)
+                        /*if(this.Collision)
                         {
                             this.Collision = false;
                             
                             this.Timer = 0.0;
-                        }
+                        }*/
                         
                         
                         grapple.Transform.Scale = Real3(0.1,Math.Distance(this.Owner.Transform.Translation, this.Target.Transform.Translation),0.0);

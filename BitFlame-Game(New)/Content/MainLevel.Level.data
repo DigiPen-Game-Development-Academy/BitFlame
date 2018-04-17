@@ -160,19 +160,19 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
-			float TimeUntilNextWave = 1,
+			float TimeUntilNextWave = 10,
 			float SafeDistanceToSpawnFromPlayer = 50,
 			float FurthestToSpawnFromPlayer = 130,
 			float IncreaseEnemySpawnDistance = 20,
 			string EnemyType1 = "5a7411b441710034:ChargingEnemy",
 			string EnemyType2 = "5a74699494525886:AlienCrabEnemy",
 			string EnemyType3 = "5a1c25102e8b8ff5:AlienEnemy",
-			float InitialSpawn1 = 1,
-			float InitialSpawn2 = 5,
+			float InitialSpawn1 = 0,
+			float InitialSpawn2 = 4,
 			float InitialSpawn3 = 8,
 			float SpawnIncrease1 = 1,
-			float SpawnIncrease2 = 5,
-			float SpawnIncrease3 = 8,
+			float SpawnIncrease2 = 4,
+			float SpawnIncrease3 = 7,
 			CogPath SpawnChecker = 
 			{
 				string Path = ":/SpawnChecker",
@@ -191,15 +191,33 @@ Level =
 		},
 		EnviromentSounds = 
 		{
-			float Interval1 = 20,
-			float Interval3 = 20,
+			float Interval1 = 30,
+			float Interval3 = 30,
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a08cc0da512394f:Game_Upgrade_Pickup",
+		LinkId = 
+		{
+			uint Id = 5,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Game_Upgrade_Pickup",
 		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 5,
+			uint Id = 6,
 		},
 		Named = 
 		{
@@ -207,7 +225,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 50],
+			Vec3 Translation = [2.64577413, -2.63105702, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -219,7 +237,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 32.8893394,
+			float Size = 26.927454,
 		},
 		EditorCameraController = 
 		{
@@ -227,7 +245,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0, 0, 0],
+			Vec3 LookTarget = [2.64577413, -2.63105702, 1.15650245e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -327,7 +345,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 6,
+					uint Id = 7,
 				},
 				Named = 
 				{
@@ -367,7 +385,7 @@ Level =
 		string Name = "5a9842f78945b818:Ship",
 		LinkId = 
 		{
-			uint Id = 7,
+			uint Id = 8,
 		},
 		Transform = 
 		{
@@ -385,7 +403,7 @@ Level =
 		string Name = "5a7f4db494e9d95c:Cursor",
 		LinkId = 
 		{
-			uint Id = 8,
+			uint Id = 9,
 		},
 		Transform = 
 		{
@@ -420,7 +438,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 9,
+			uint Id = 10,
 		},
 		Named = 
 		{
@@ -486,7 +504,7 @@ Level =
 						bool UpdatePathOnCogChange = true,
 						bool UpdateCogOnInitialize = true,
 						bool ResolvedNullErrorOccurred = false,
-						uint ResolvedCog = 10,
+						uint ResolvedCog = 11,
 						CogPathPreference PathPreference0 = CogRelative,
 						CogPathPreference PathPreference1 = SpaceRelative,
 						CogPathPreference PathPreference2 = Absolute,
@@ -537,7 +555,7 @@ Level =
 						bool UpdatePathOnCogChange = true,
 						bool UpdateCogOnInitialize = true,
 						bool ResolvedNullErrorOccurred = false,
-						uint ResolvedCog = 11,
+						uint ResolvedCog = 12,
 						CogPathPreference PathPreference0 = CogRelative,
 						CogPathPreference PathPreference1 = SpaceRelative,
 						CogPathPreference PathPreference2 = Absolute,
@@ -552,7 +570,7 @@ Level =
 						bool UpdatePathOnCogChange = true,
 						bool UpdateCogOnInitialize = true,
 						bool ResolvedNullErrorOccurred = false,
-						uint ResolvedCog = 12,
+						uint ResolvedCog = 13,
 						CogPathPreference PathPreference0 = CogRelative,
 						CogPathPreference PathPreference1 = SpaceRelative,
 						CogPathPreference PathPreference2 = Absolute,
@@ -652,13 +670,28 @@ Level =
 				{
 					float Interval = 0.5,
 				},
+				SoundEmitter = 
+				{
+					float Volume = 1,
+					float Pitch = 0,
+					float PitchSemitones = 0,
+					bool UsePitchSemitones = false,
+					bool Positional = true,
+					int Version = 1,
+				},
+				MusicController = 
+				{
+					string BackgroundSong = "5a0a91af3f1bee14:Background",
+					string BattleSong = "5a0a933c4570ee75:Battle",
+					string HitboxArche = "5a167c6ffe7cd5f9:MusicHitbox",
+				},
 				Hierarchy = 
 				{
 					Cog = 
 					{
 						LinkId = 
 						{
-							uint Id = 13,
+							uint Id = 14,
 						},
 						Named = 
 						{
@@ -693,7 +726,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 14,
+							uint Id = 15,
 						},
 						Named = 
 						{
@@ -773,7 +806,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 10,
+							uint Id = 11,
 						},
 						Named = 
 						{
@@ -820,7 +853,7 @@ Level =
 							float SpinVariance = 10,
 							bool RandomSpin = true,
 							float Fill = 1,
-							float EmitterVelocityPercent = -25,
+							float EmitterVelocityPercent = 0,
 							Vec3 StartVelocity = [0, -1, 0],
 							Vec3 RandomVelocity = [2, 2, 0],
 							Vec3 TangentVelocity = [0, 0, 0],
@@ -853,7 +886,7 @@ Level =
 						string Name = "5a87e74dcbd970ec:BlockPlacingSelector",
 						LinkId = 
 						{
-							uint Id = 15,
+							uint Id = 16,
 						},
 						Transform = 
 						{
@@ -875,7 +908,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 12,
+							uint Id = 13,
 						},
 						Named = 
 						{
@@ -970,7 +1003,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 11,
+							uint Id = 12,
 						},
 						Named = 
 						{
@@ -1036,7 +1069,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 16,
+							uint Id = 17,
 						},
 						Named = 
 						{

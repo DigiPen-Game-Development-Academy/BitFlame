@@ -42,9 +42,6 @@ class WaveSpawner : ZilchComponent
     [Property] var SpawnIncrease2 : Real;
     [Property] var SpawnIncrease3 : Real;
     
-    // Keeps track of how many waves have passed
-    var WaveTracker : Real = 0;
-    
     // Lets me generate random numbers.
     var RandomGenerator : Random = Random();
     
@@ -60,13 +57,13 @@ class WaveSpawner : ZilchComponent
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         
-        // Sets WaveTimer to set amount for first wave.
-        this.GameSession.GameVars.WaveTimer = this.TimeUntilNextWave;
-        
-        // Sets amount of enemies to spawn for first wave.
-        this.EnemyType1AmountToSpawn = this.InitialSpawn1;
-        this.EnemyType2AmountToSpawn = this.InitialSpawn2;
-        this.EnemyType3AmountToSpawn = this.InitialSpawn3;
+        this.GameSession.GameVars.WaveTimer = this.TimeUntilNextWave + (this.GameSession.GameVars.WaveTracker * 10);                 
+                    
+        // Increase amount of enemys that can spawn during a wave.
+        this.EnemyType1AmountToSpawn += (this.SpawnIncrease1 * this.GameSession.GameVars.WaveTracker + this.InitialSpawn1);
+        this.EnemyType2AmountToSpawn += (this.SpawnIncrease2 * this.GameSession.GameVars.WaveTracker + this.InitialSpawn2);
+        this.EnemyType3AmountToSpawn += (this.SpawnIncrease3 * this.GameSession.GameVars.WaveTracker + this.InitialSpawn3);
+                    
     }
 
     function OnLogicUpdate(event : UpdateEvent)
@@ -148,17 +145,17 @@ class WaveSpawner : ZilchComponent
                     this.FurthestToSpawnFromPlayer += this.IncreaseEnemySpawnDistance;
                     
                     // Adds to the WaveTracker variable.
-                    this.WaveTracker += 1;
+                    this.GameSession.GameVars.WaveTracker += 1;
                     
                     // Sets the wave timer back to default and adds more time based on the WaveTracker.
-                    this.GameSession.GameVars.WaveTimer += this.TimeUntilNextWave + (this.WaveTracker * 10);
+                    this.GameSession.GameVars.WaveTimer += this.TimeUntilNextWave + (this.GameSession.GameVars.WaveTracker * 10);
                     
                     
                     
                     // Increase amount of enemys that can spawn during a wave.
-                    this.EnemyType1AmountToSpawn += (this.SpawnIncrease1 * this.WaveTracker + this.InitialSpawn1);
-                    this.EnemyType2AmountToSpawn += (this.SpawnIncrease2 * this.WaveTracker + this.InitialSpawn2);
-                    this.EnemyType3AmountToSpawn += (this.SpawnIncrease3 * this.WaveTracker + this.InitialSpawn3);
+                    this.EnemyType1AmountToSpawn += (this.SpawnIncrease1 * this.GameSession.GameVars.WaveTracker + this.InitialSpawn1);
+                    this.EnemyType2AmountToSpawn += (this.SpawnIncrease2 * this.GameSession.GameVars.WaveTracker + this.InitialSpawn2);
+                    this.EnemyType3AmountToSpawn += (this.SpawnIncrease3 * this.GameSession.GameVars.WaveTracker + this.InitialSpawn3);
                 }   
             }
             else
