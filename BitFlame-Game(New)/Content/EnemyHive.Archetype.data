@@ -83,4 +83,8 @@ Cog =
 		float TitaniumProbability = 0,
 		float EmptyProbability = 0,
 	},
+	Dont_Move_In_Z_Axis = 
+	{
+		int Z_Position = 0,
+	},
 },

@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [30.3058567, 13.2418861, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -59,7 +59,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = false,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -97,6 +97,10 @@ Cog =
 		string BumpText2 = "",
 		string BeepText = "",
 	},
+	Dont_Move_In_Z_Axis = 
+	{
+		int Z_Position = 0,
+	},
 	Hierarchy = 
 	{
 		ArchetypeInstance = 
@@ -115,184 +119,6 @@ Cog =
 			Named = 
 			{
 				string Name = "EnemyJetpack",
-			},
-		},
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 3,
-			},
-			Named = 
-			{
-				string Name = "GlowEffect",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [0.47325325, 0, -1],
-				Vec3 Scale = [0.75, 0.75, 1],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			Sprite = 
-			{
-				bool Visible = true,
-				bool VisibilityCulling = true,
-				bool VisibilityEvents = true,
-				bool CastShadows = false,
-				Vec4 Color = [1, 0, 0, 0.150000006],
-				BlendMode BlendMode = Alpha,
-				SpriteGeometryMode GeometryMode = ZPlane,
-				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5274db4c2e7c11f9:Circle",
-				bool RenderMask = false,
-				bool FlipX = false,
-				bool FlipY = false,
-				bool AnimationActive = true,
-				float AnimationSpeed = 1,
-				uint StartFrame = 0,
-			},
-			Hierarchy = 
-			{
-				Cog = 
-				{
-					LinkId = 
-					{
-						uint Id = 4,
-					},
-					Named = 
-					{
-						string Name = "Sprite",
-					},
-					Transform = 
-					{
-						Vec3 Translation = [9.53674316e-07, 1.1920929e-07, 0],
-						Vec3 Scale = [1.16666675, 1.16666675, 1],
-						Quat Rotation = [0, 0, 0, 1],
-					},
-					Sprite = 
-					{
-						bool Visible = true,
-						bool VisibilityCulling = true,
-						bool VisibilityEvents = true,
-						bool CastShadows = false,
-						Vec4 Color = [1, 0, 0, 0.119999997],
-						BlendMode BlendMode = Alpha,
-						SpriteGeometryMode GeometryMode = ZPlane,
-						string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-						string SpriteSource = "5274db4c2e7c11f9:Circle",
-						bool RenderMask = false,
-						bool FlipX = false,
-						bool FlipY = false,
-						bool AnimationActive = true,
-						float AnimationSpeed = 1,
-						uint StartFrame = 0,
-					},
-				},
-				Cog = 
-				{
-					LinkId = 
-					{
-						uint Id = 5,
-					},
-					Named = 
-					{
-						string Name = "Sprite",
-					},
-					Transform = 
-					{
-						Vec3 Translation = [9.53674316e-07, 1.1920929e-07, 0],
-						Vec3 Scale = [1.33333337, 1.33333337, 1],
-						Quat Rotation = [0, 0, 0, 1],
-					},
-					Sprite = 
-					{
-						bool Visible = true,
-						bool VisibilityCulling = true,
-						bool VisibilityEvents = true,
-						bool CastShadows = false,
-						Vec4 Color = [1, 0, 0, 0.0900000036],
-						BlendMode BlendMode = Alpha,
-						SpriteGeometryMode GeometryMode = ZPlane,
-						string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-						string SpriteSource = "5274db4c2e7c11f9:Circle",
-						bool RenderMask = false,
-						bool FlipX = false,
-						bool FlipY = false,
-						bool AnimationActive = true,
-						float AnimationSpeed = 1,
-						uint StartFrame = 0,
-					},
-				},
-				Cog = 
-				{
-					LinkId = 
-					{
-						uint Id = 6,
-					},
-					Named = 
-					{
-						string Name = "Sprite",
-					},
-					Transform = 
-					{
-						Vec3 Translation = [9.53674316e-07, 1.1920929e-07, 0],
-						Vec3 Scale = [1.5, 1.5, 1],
-						Quat Rotation = [0, 0, 0, 1],
-					},
-					Sprite = 
-					{
-						bool Visible = true,
-						bool VisibilityCulling = true,
-						bool VisibilityEvents = true,
-						bool CastShadows = false,
-						Vec4 Color = [1, 0, 0, 0.0599999987],
-						BlendMode BlendMode = Alpha,
-						SpriteGeometryMode GeometryMode = ZPlane,
-						string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-						string SpriteSource = "5274db4c2e7c11f9:Circle",
-						bool RenderMask = false,
-						bool FlipX = false,
-						bool FlipY = false,
-						bool AnimationActive = true,
-						float AnimationSpeed = 1,
-						uint StartFrame = 0,
-					},
-				},
-				Cog = 
-				{
-					LinkId = 
-					{
-						uint Id = 7,
-					},
-					Named = 
-					{
-						string Name = "Sprite",
-					},
-					Transform = 
-					{
-						Vec3 Translation = [9.53674316e-07, 1.1920929e-07, 0],
-						Vec3 Scale = [1.66666675, 1.66666675, 1],
-						Quat Rotation = [0, 0, 0, 1],
-					},
-					Sprite = 
-					{
-						bool Visible = true,
-						bool VisibilityCulling = true,
-						bool VisibilityEvents = true,
-						bool CastShadows = false,
-						Vec4 Color = [1, 0, 0, 0.0299999993],
-						BlendMode BlendMode = Alpha,
-						SpriteGeometryMode GeometryMode = ZPlane,
-						string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-						string SpriteSource = "5274db4c2e7c11f9:Circle",
-						bool RenderMask = false,
-						bool FlipX = false,
-						bool FlipY = false,
-						bool AnimationActive = true,
-						float AnimationSpeed = 1,
-						uint StartFrame = 0,
-					},
-				},
 			},
 		},
 	},
