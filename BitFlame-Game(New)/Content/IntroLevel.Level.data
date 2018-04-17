@@ -160,7 +160,7 @@ Level =
 			},
 			float GameLogo_FadeinTime = 1,
 			float Interval_02_Time = 5,
-			float GameLogo_FadeoutTime = 2,
+			float GameLogo_FadeoutTime = 1,
 		},
 	},
 	Cog = 
@@ -175,7 +175,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-3.86979127, -12.1973982, 50],
+			Vec3 Translation = [1.62915778, -2.47645164, 50.0020561],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -187,7 +187,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 20.1896896,
+			float Size = 40.6571007,
 		},
 		EditorCameraController = 
 		{
@@ -195,7 +195,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-3.86979127, -12.1973982, -1.69153964e-07],
+			Vec3 LookTarget = [1.62915778, -2.47645164, 0.00205783523],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -252,7 +252,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [0, 0, 0],
-			Vec3 Scale = [5, 5, 1],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -261,11 +261,11 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0.0782999992, 0.870000005, 0.228723049, 0],
+			Vec4 Color = [1, 1, 1, 0],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
+			string SpriteSource = "5a37ce25473420ed:DigiPen_Logo",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -287,7 +287,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [0, 0, 0],
-			Vec3 Scale = [5, 5, 1],
+			Vec3 Scale = [9, 9, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -296,11 +296,11 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0.88499999, 0.461527437, 0.115050018, 0],
+			Vec4 Color = [1, 1, 1, 0],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
+			string SpriteSource = "5a37ce2f58b78a7e:BitFlame Logo V2",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -331,7 +331,7 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0.778446078, 0.123899996, 0.88499999, 0],
+			Vec4 Color = [1, 1, 1, 0],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -342,6 +342,153 @@ Level =
 			bool AnimationActive = true,
 			float AnimationSpeed = 1,
 			uint StartFrame = 0,
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 7,
+				},
+				Named = 
+				{
+					string Name = "SpriteText",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-0.035797745, 0.331182897, -0.000393147755],
+					Vec3 Scale = [0.199999988, 0.199999988, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				SpriteText = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 0],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string FontName = "5a075f32e7b83df0:GameFont",
+					uint FontSize = 128,
+					string Text = "Escape Velocity",
+					TextAlign Align = Center,
+					float PixelsPerUnit = 64,
+					bool Smoothing = false,
+				},
+				AnimationGraph = 
+				{
+					bool Active = true,
+					AnimPlayMode PlayMode = PlayOnce,
+					float TimeScale = 1,
+					string AnimationName = "4f8ebbde619389d0:DefaultAnimation",
+					uint64 DebugPreviewId = 5a37cabff43c81c5,
+				},
+				SimpleAnimation = 
+				{
+					string AnimationName = "5a37caf20be5950b:TitleAnimation",
+					AnimPlayMode PlayMode = Loop,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 8,
+				},
+				Named = 
+				{
+					string Name = "SpriteText",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-0.117744133, 0.142262891, 0],
+					Vec3 Scale = [0.199999973, 0.199999973, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				SpriteText = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 0],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string FontName = "5a075f32e7b83df0:GameFont",
+					uint FontSize = 128,
+					string Text = "Escape Velocity",
+					TextAlign Align = Center,
+					float PixelsPerUnit = 64,
+					bool Smoothing = false,
+				},
+				AnimationGraph = 
+				{
+					bool Active = true,
+					AnimPlayMode PlayMode = PlayOnce,
+					float TimeScale = 1,
+					string AnimationName = "4f8ebbde619389d0:DefaultAnimation",
+					uint64 DebugPreviewId = 3efeff003c7b8700,
+				},
+				SimpleAnimation = 
+				{
+					string AnimationName = "5a37c53f07648a62:TitleAnimation_01",
+					AnimPlayMode PlayMode = Pingpong,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 9,
+				},
+				Named = 
+				{
+					string Name = "SpriteText",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-0.496315569, 0.232559711, -0.0110978195],
+					Vec3 Scale = [0.199999973, 0.199999973, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				SpriteText = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 0],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string FontName = "5a075f32e7b83df0:GameFont",
+					uint FontSize = 128,
+					string Text = "Escape Velocity",
+					TextAlign Align = Center,
+					float PixelsPerUnit = 64,
+					bool Smoothing = false,
+				},
+				AnimationGraph = 
+				{
+					bool Active = true,
+					AnimPlayMode PlayMode = PlayOnce,
+					float TimeScale = 1,
+					string AnimationName = "4f8ebbde619389d0:DefaultAnimation",
+					uint64 DebugPreviewId = 3fbbbf883f000000,
+				},
+				SimpleAnimation = 
+				{
+					string AnimationName = "5a37c1f7cdbe4802:TitleAnimation_02",
+					AnimPlayMode PlayMode = Loop,
+				},
+			},
 		},
 	},
 },
