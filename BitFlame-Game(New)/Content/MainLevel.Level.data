@@ -225,7 +225,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.290630519, 0.0864068121, 50],
+			Vec3 Translation = [2.64577413, -2.63105702, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -237,7 +237,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 26.9275188,
+			float Size = 26.927454,
 		},
 		EditorCameraController = 
 		{
@@ -245,7 +245,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.290630519, 0.0864068121, -1.27038096e-08],
+			Vec3 LookTarget = [2.64577413, -2.63105702, 1.15650245e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -669,6 +669,21 @@ Level =
 				PlayerCollsions = 
 				{
 					float Interval = 0.5,
+				},
+				SoundEmitter = 
+				{
+					float Volume = 1,
+					float Pitch = 0,
+					float PitchSemitones = 0,
+					bool UsePitchSemitones = false,
+					bool Positional = true,
+					int Version = 1,
+				},
+				MusicController = 
+				{
+					string BackgroundSong = "5a0a91af3f1bee14:Background",
+					string BattleSong = "5a0a933c4570ee75:Battle",
+					string HitboxArche = "5a167c6ffe7cd5f9:MusicHitbox",
 				},
 				Hierarchy = 
 				{
