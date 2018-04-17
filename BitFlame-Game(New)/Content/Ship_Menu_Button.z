@@ -121,17 +121,29 @@ class Ship_Menu_Button_Function : ZilchComponent
     [Property] var Quit : Boolean = false;  
     
     [Property] var WaveGamemode : Boolean = false;
+    
+    [Property] var GamemodeButton : Boolean = false;
   
     function Initialize(init : CogInitializer)
     {
         this.NewCameraPosition.Z =  this.Camera.Cog.Transform.Translation.Z;
-        Zero.Connect(this.Owner, Events.LeftMouseUp, this.OnLeftMouseUp);
+        Zero.Connect(this.Owner, Events.LeftMouseUp, this.OnLeftMouseUp);     
     }
 
     function OnLeftMouseUp(event : ViewportMouseEvent)
     {
-        if (this.WaveGamemode)
-        this.GameSession.GameVars.WaveGamemode = this.WaveGamemode;
+        if(this.GamemodeButton)
+        {
+            if (this.WaveGamemode)
+            {
+                this.GameSession.GameVars.WaveGamemode = true;
+                this.GameSession.GameVars.WaveTracker = 0;
+            }
+            else
+            {
+                this.GameSession.GameVars.WaveGamemode = false;
+            }
+        }
     
         if(this.Quit)
         {

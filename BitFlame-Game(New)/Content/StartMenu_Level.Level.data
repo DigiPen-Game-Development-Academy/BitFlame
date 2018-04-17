@@ -107,7 +107,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [2.2199831, -21.461544, 50],
+			Vec3 Translation = [4.37117004, -0.289644122, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -119,7 +119,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 40.6570244,
+			float Size = 27.2532272,
 		},
 		EditorCameraController = 
 		{
@@ -127,7 +127,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [2.2199831, -21.461544, 1.05779947e-07],
+			Vec3 LookTarget = [4.37117004, -0.289644122, 1.99811325e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -250,6 +250,7 @@ Level =
 			bool Respawn = false,
 			bool Quit = false,
 			bool WaveGamemode = false,
+			bool GamemodeButton = true,
 		},
 		Button_PlaySound = 
 		{
@@ -408,6 +409,7 @@ Level =
 			bool Respawn = false,
 			bool Quit = false,
 			bool WaveGamemode = true,
+			bool GamemodeButton = true,
 		},
 		Button_PlaySound = 
 		{
@@ -566,6 +568,7 @@ Level =
 			bool Respawn = false,
 			bool Quit = false,
 			bool WaveGamemode = false,
+			bool GamemodeButton = false,
 		},
 		Button_PlaySound = 
 		{
@@ -724,6 +727,7 @@ Level =
 			bool Respawn = false,
 			bool Quit = false,
 			bool WaveGamemode = false,
+			bool GamemodeButton = false,
 		},
 		Button_PlaySound = 
 		{
@@ -877,6 +881,7 @@ Level =
 			bool Respawn = false,
 			bool Quit = false,
 			bool WaveGamemode = false,
+			bool GamemodeButton = false,
 		},
 		Area = 
 		{
@@ -1040,6 +1045,7 @@ Level =
 			bool Respawn = false,
 			bool Quit = false,
 			bool WaveGamemode = false,
+			bool GamemodeButton = false,
 		},
 		Button_PlaySound = 
 		{
@@ -1353,6 +1359,7 @@ Level =
 			bool Respawn = false,
 			bool Quit = false,
 			bool WaveGamemode = false,
+			bool GamemodeButton = false,
 		},
 		Area = 
 		{
@@ -1546,6 +1553,7 @@ Level =
 			bool Respawn = false,
 			bool Quit = false,
 			bool WaveGamemode = false,
+			bool GamemodeButton = false,
 		},
 		Area = 
 		{
@@ -1739,6 +1747,7 @@ Level =
 			bool Respawn = false,
 			bool Quit = false,
 			bool WaveGamemode = false,
+			bool GamemodeButton = false,
 		},
 		Area = 
 		{
@@ -3680,6 +3689,7 @@ Exist by using your brain",
 			bool Respawn = false,
 			bool Quit = false,
 			bool WaveGamemode = false,
+			bool GamemodeButton = false,
 		},
 		Area = 
 		{
@@ -3907,6 +3917,7 @@ Exist by using your brain",
 			bool Respawn = false,
 			bool Quit = true,
 			bool WaveGamemode = false,
+			bool GamemodeButton = false,
 		},
 		Area = 
 		{
