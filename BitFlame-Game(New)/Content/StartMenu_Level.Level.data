@@ -107,7 +107,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [4.37117004, -0.289644122, 50],
+			Vec3 Translation = [-16.7905006, 0.720803976, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -127,7 +127,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [4.37117004, -0.289644122, 1.99811325e-07],
+			Vec3 LookTarget = [-16.7905006, 0.720803976, -7.25194639e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
