@@ -143,9 +143,9 @@ Level =
 			},
 			float TeamLogo_FadeinTime = 5,
 			float TeamLogo_FadeoutTime = 5,
-			CogPath GameLogo = 
+			CogPath GameLogo1 = 
 			{
-				string Path = ":/GameLogo",
+				string Path = ":/GameLogo1",
 				bool ErrorOnResolveToNull = false,
 				bool ErrorOnPathCantCompute = false,
 				bool ErrorOnDirectLinkFail = false,
@@ -154,6 +154,36 @@ Level =
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
 				uint ResolvedCog = 5,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			CogPath GameLogo2 = 
+			{
+				string Path = ":/GameLogo2",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 6,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			CogPath GameLogo3 = 
+			{
+				string Path = ":/GameLogo3",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 7,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -167,7 +197,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 6,
+			uint Id = 8,
 		},
 		Named = 
 		{
@@ -175,7 +205,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.62915778, -2.47645164, 50.0020561],
+			Vec3 Translation = [1.27286816, -1.76387239, 50.0020561],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -187,7 +217,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 40.6571007,
+			float Size = 18.2684269,
 		},
 		EditorCameraController = 
 		{
@@ -195,7 +225,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [1.62915778, -2.47645164, 0.00205783523],
+			Vec3 LookTarget = [1.27286816, -1.76387239, 0.00205782056],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -317,6 +347,150 @@ Level =
 		},
 		Named = 
 		{
+			string Name = "GameLogo1",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-0.100000009, 0.221208021, 0],
+			Vec3 Scale = [0.999999881, 0.999999881, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 0],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "5a075f32e7b83df0:GameFont",
+			uint FontSize = 128,
+			string Text = "Escape Velocity",
+			TextAlign Align = Center,
+			float PixelsPerUnit = 64,
+			bool Smoothing = false,
+		},
+		AnimationGraph = 
+		{
+			bool Active = true,
+			AnimPlayMode PlayMode = PlayOnce,
+			float TimeScale = 1,
+			string AnimationName = "4f8ebbde619389d0:DefaultAnimation",
+			uint64 DebugPreviewId = 3fbbbf883f000000,
+		},
+		SimpleAnimation = 
+		{
+			string AnimationName = "5a37c1f7cdbe4802:TitleAnimation_02",
+			AnimPlayMode PlayMode = Loop,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 6,
+		},
+		Named = 
+		{
+			string Name = "GameLogo2",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0.0946838558, 0.21368432, -0.0175082274],
+			Vec3 Scale = [0.999999881, 0.999999881, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 0],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "5a075f32e7b83df0:GameFont",
+			uint FontSize = 128,
+			string Text = "Escape Velocity",
+			TextAlign Align = Center,
+			float PixelsPerUnit = 64,
+			bool Smoothing = false,
+		},
+		AnimationGraph = 
+		{
+			bool Active = true,
+			AnimPlayMode PlayMode = PlayOnce,
+			float TimeScale = 1,
+			string AnimationName = "4f8ebbde619389d0:DefaultAnimation",
+			uint64 DebugPreviewId = 3efeff003c7b8700,
+		},
+		SimpleAnimation = 
+		{
+			string AnimationName = "5a37c53f07648a62:TitleAnimation_01",
+			AnimPlayMode PlayMode = Pingpong,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 7,
+		},
+		Named = 
+		{
+			string Name = "GameLogo3",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-0.0376988836, 0.276494324, -5.85492162e-05],
+			Vec3 Scale = [0.99999994, 0.99999994, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 0],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "5a075f32e7b83df0:GameFont",
+			uint FontSize = 128,
+			string Text = "Escape Velocity",
+			TextAlign Align = Center,
+			float PixelsPerUnit = 64,
+			bool Smoothing = false,
+		},
+		AnimationGraph = 
+		{
+			bool Active = true,
+			AnimPlayMode PlayMode = PlayOnce,
+			float TimeScale = 1,
+			string AnimationName = "4f8ebbde619389d0:DefaultAnimation",
+			uint64 DebugPreviewId = 5a37cabff43c81c5,
+		},
+		SimpleAnimation = 
+		{
+			string AnimationName = "5a37caf20be5950b:TitleAnimation",
+			AnimPlayMode PlayMode = Loop,
+		},
+		Hierarchy = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 9,
+		},
+		Named = 
+		{
 			string Name = "GameLogo",
 		},
 		Transform = 
@@ -345,150 +519,6 @@ Level =
 		},
 		Hierarchy = 
 		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 7,
-				},
-				Named = 
-				{
-					string Name = "SpriteText",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [-0.035797745, 0.331182897, -0.000393147755],
-					Vec3 Scale = [0.199999988, 0.199999988, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				SpriteText = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 0],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "5a075f32e7b83df0:GameFont",
-					uint FontSize = 128,
-					string Text = "Escape Velocity",
-					TextAlign Align = Center,
-					float PixelsPerUnit = 64,
-					bool Smoothing = false,
-				},
-				AnimationGraph = 
-				{
-					bool Active = true,
-					AnimPlayMode PlayMode = PlayOnce,
-					float TimeScale = 1,
-					string AnimationName = "4f8ebbde619389d0:DefaultAnimation",
-					uint64 DebugPreviewId = 5a37cabff43c81c5,
-				},
-				SimpleAnimation = 
-				{
-					string AnimationName = "5a37caf20be5950b:TitleAnimation",
-					AnimPlayMode PlayMode = Loop,
-				},
-				Hierarchy = 
-				{
-				},
-			},
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 8,
-				},
-				Named = 
-				{
-					string Name = "SpriteText",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [-0.117744133, 0.142262891, 0],
-					Vec3 Scale = [0.199999973, 0.199999973, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				SpriteText = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 0],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "5a075f32e7b83df0:GameFont",
-					uint FontSize = 128,
-					string Text = "Escape Velocity",
-					TextAlign Align = Center,
-					float PixelsPerUnit = 64,
-					bool Smoothing = false,
-				},
-				AnimationGraph = 
-				{
-					bool Active = true,
-					AnimPlayMode PlayMode = PlayOnce,
-					float TimeScale = 1,
-					string AnimationName = "4f8ebbde619389d0:DefaultAnimation",
-					uint64 DebugPreviewId = 3efeff003c7b8700,
-				},
-				SimpleAnimation = 
-				{
-					string AnimationName = "5a37c53f07648a62:TitleAnimation_01",
-					AnimPlayMode PlayMode = Pingpong,
-				},
-			},
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 9,
-				},
-				Named = 
-				{
-					string Name = "SpriteText",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [-0.496315569, 0.232559711, -0.0110978195],
-					Vec3 Scale = [0.199999973, 0.199999973, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				SpriteText = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 0],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "5a075f32e7b83df0:GameFont",
-					uint FontSize = 128,
-					string Text = "Escape Velocity",
-					TextAlign Align = Center,
-					float PixelsPerUnit = 64,
-					bool Smoothing = false,
-				},
-				AnimationGraph = 
-				{
-					bool Active = true,
-					AnimPlayMode PlayMode = PlayOnce,
-					float TimeScale = 1,
-					string AnimationName = "4f8ebbde619389d0:DefaultAnimation",
-					uint64 DebugPreviewId = 3fbbbf883f000000,
-				},
-				SimpleAnimation = 
-				{
-					string AnimationName = "5a37c1f7cdbe4802:TitleAnimation_02",
-					AnimPlayMode PlayMode = Loop,
-				},
-			},
 		},
 	},
 },

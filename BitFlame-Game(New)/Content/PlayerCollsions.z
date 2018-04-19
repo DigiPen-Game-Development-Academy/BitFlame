@@ -23,7 +23,7 @@ class PlayerCollsions : ZilchComponent
         if(this.Timer >= this.Interval)
         {
             this.Timer = 0;
-            if(event.OtherObject.Name == "Oxygen_Field")
+            if(event.OtherObject.Name == "Oxygen_Field" || event.OtherObject.Name == "Ship")
             {
                 
             }

@@ -21,7 +21,9 @@ class IntroLevel_Logic : ZilchComponent
     [Property] var TeamLogo_FadeinTime : Real = 0.0;
     [Property] var TeamLogo_FadeoutTime : Real = 0.0;
     
-    [Property] var GameLogo : CogPath = null;
+    [Property] var GameLogo1 : CogPath = null;
+    [Property] var GameLogo2 : CogPath = null;
+    [Property] var GameLogo3 : CogPath = null;
     [Property] var GameLogo_FadeinTime : Real = 0.0;
     [Property] var Interval_02_Time : Real = 0.0;
     [Property] var GameLogo_FadeoutTime : Real = 0.0;
@@ -41,7 +43,7 @@ class IntroLevel_Logic : ZilchComponent
         
         }
         else if(this.DigipenLogo != null && this.DigipenLogo.Cog != null && this.TeamLogo
-            != null && this.TeamLogo.Cog != null && this.GameLogo != null && this.GameLogo.Cog != null)
+            != null && this.TeamLogo.Cog != null && this.GameLogo1 != null && this.GameLogo1.Cog != null)
         {
             this.GameSession.MenuMusic.Music = this.Space.SoundSpace.PlayCue(SoundCue.Background);
             
@@ -99,15 +101,27 @@ class IntroLevel_Logic : ZilchComponent
             Actions.Delay(teamOutGrp, this.Interval_01_Time);    
             
             //game
-            Actions.Property(gameInGrp, @this.GameLogo.Cog.Transform.Scale, this.GameLogo.Cog.Transform.Scale * 1.1, 
+            Actions.Property(gameInGrp, @this.GameLogo1.Cog.Transform.Scale, this.GameLogo1.Cog.Transform.Scale * 1.1, 
                 this.GameLogo_FadeinTime, Ease.QuadInOut);
-            Actions.Property(gameInGrp, @this.GameLogo.Cog.Sprite.Color, this.GameLogo.Cog.Sprite.Color +
+            Actions.Property(gameInGrp, @this.GameLogo1.Cog.SpriteText.Color, this.GameLogo1.Cog.SpriteText.Color +
                 Real4(0.0, 0.0, 0.0, 1.0), this.GameLogo_FadeinTime, Ease.Linear);
-                
+            Actions.Property(gameInGrp, @this.GameLogo2.Cog.Transform.Scale, this.GameLogo2.Cog.Transform.Scale * 1.1, 
+                this.GameLogo_FadeinTime, Ease.QuadInOut);
+            Actions.Property(gameInGrp, @this.GameLogo2.Cog.SpriteText.Color, this.GameLogo2.Cog.SpriteText.Color +
+                Real4(0.0, 0.0, 0.0, 0.75), this.GameLogo_FadeinTime, Ease.Linear);
+            Actions.Property(gameInGrp, @this.GameLogo3.Cog.Transform.Scale, this.GameLogo3.Cog.Transform.Scale * 1.1, 
+                this.GameLogo_FadeinTime, Ease.QuadInOut);
+            Actions.Property(gameInGrp, @this.GameLogo3.Cog.SpriteText.Color, this.GameLogo3.Cog.SpriteText.Color +
+                Real4(0.0, 0.0, 0.0, 0.5), this.GameLogo_FadeinTime, Ease.Linear);
+                    
             Actions.Delay(gameInGrp, this.Interval_02_Time);
             
-             //game
-            Actions.Property(gameOutGrp, @this.GameLogo.Cog.Sprite.Color,
+            //game
+            Actions.Property(gameOutGrp, @this.GameLogo1.Cog.SpriteText.Color,
+                Real4(0, 0, 0, 0), this.GameLogo_FadeoutTime, Ease.Linear);
+            Actions.Property(gameOutGrp, @this.GameLogo2.Cog.SpriteText.Color,
+                Real4(0, 0, 0, 0), this.GameLogo_FadeoutTime, Ease.Linear);
+            Actions.Property(gameOutGrp, @this.GameLogo3.Cog.SpriteText.Color,
                 Real4(0, 0, 0, 0), this.GameLogo_FadeoutTime, Ease.Linear);
                    
             //switch to menu level
