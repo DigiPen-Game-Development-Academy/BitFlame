@@ -521,38 +521,4 @@ Level =
 		{
 		},
 	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 10,
-		},
-		Named = 
-		{
-			string Name = "SpriteText",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, -7, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		SpriteText = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 0.999899983],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "5a075f32e7b83df0:GameFont",
-			uint FontSize = 150,
-			string Text = "All content © 2018 DigiPen (USA) Corporation, all rights reserved.",
-			TextAlign Align = Center,
-			float PixelsPerUnit = 192,
-			bool Smoothing = false,
-		},
-	},
 },
