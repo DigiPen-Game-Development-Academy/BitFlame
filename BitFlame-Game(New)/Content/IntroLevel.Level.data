@@ -217,7 +217,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 18.2684269,
+			float Size = 9.07183838,
 		},
 		EditorCameraController = 
 		{
@@ -295,7 +295,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a37ce25473420ed:DigiPen_Logo",
+			string SpriteSource = "5aa3406769896a5f:DigiPenLogo",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -316,7 +316,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 0],
+			Vec3 Translation = [0.5, 0, 0],
 			Vec3 Scale = [9, 9, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -351,7 +351,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.100000009, 0.221208021, 0],
+			Vec3 Translation = [0.5, 1.5, 0],
 			Vec3 Scale = [0.999999881, 0.999999881, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -398,7 +398,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.0946838558, 0.21368432, -0.0175082274],
+			Vec3 Translation = [0.5, 1.5, 0],
 			Vec3 Scale = [0.999999881, 0.999999881, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -445,7 +445,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.0376988836, 0.276494324, -5.85492162e-05],
+			Vec3 Translation = [0.5, 1.5, 0],
 			Vec3 Scale = [0.99999994, 0.99999994, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},

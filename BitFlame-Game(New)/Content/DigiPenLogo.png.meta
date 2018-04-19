@@ -2,15 +2,15 @@ ImageContent =
 {
 	SpriteSourceBuilder = 
 	{
-		string Name = "DigiPen_Logo",
-		uint64 ResourceId = 5a37ce25473420ed,
+		string Name = "DigiPenLogo",
+		uint64 ResourceId = 5aa3406769896a5f,
 		uint64 AtlasId = 5274cf95e4a661fd,
-		uint FrameSizeX = 896,
-		uint FrameSizeY = 256,
+		uint FrameSizeX = 0,
+		uint FrameSizeY = 0,
 		uint FrameCount = 1,
 		float FrameDelay = 0.0833333358,
-		float OriginX = 448,
-		float OriginY = 128,
+		float OriginX = 400,
+		float OriginY = 200,
 		float PixelsPerUnit = 64,
 		bool Smoothing = true,
 		bool Looping = true,
