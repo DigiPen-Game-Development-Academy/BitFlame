@@ -1,9 +1,9 @@
 SoundCue = 
 {
 	SoundPlayMode PlayMode = Single,
-	float Volume = 0.099999994,
+	float Volume = 0.199999988,
 	float VolumeVariation = 0.049999997,
-	float VolumeDB = -20,
+	float VolumeDB = -13.9794006,
 	bool UseVolumeDB = false,
 	float VolumeDBVariation = 0,
 	float Pitch = 0,
@@ -19,7 +19,7 @@ SoundCue =
 	[
 		{
 			string SoundName = "5a2e0674aa273732:Static1",
-			string GeneratedSoundName = "",
+			string GeneratedSoundName = "55017c595ef88bf0:DefaultGeneratedSound",
 			WhichSoundType WhichToUse = FromFile,
 			float Weight = 1,
 			float LoopEndTime = 0,
@@ -27,7 +27,7 @@ SoundCue =
 		},
 		{
 			string SoundName = "5a2e0674aa24cb46:Static2",
-			string GeneratedSoundName = "",
+			string GeneratedSoundName = "55017c595ef88bf0:DefaultGeneratedSound",
 			WhichSoundType WhichToUse = FromFile,
 			float Weight = 1,
 			float LoopEndTime = 0,
@@ -42,5 +42,5 @@ SoundCue =
 	],
 	string RolloffCurveName = "",
 	int Version = 1,
-	RolloffCurveType RolloffCurveType = Error,
+	RolloffCurveType RolloffCurveType = Linear,
 },
