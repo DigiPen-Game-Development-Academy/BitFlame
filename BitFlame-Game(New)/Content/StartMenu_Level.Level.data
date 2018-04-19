@@ -146,7 +146,37 @@ Level =
 			},
 			float TeamLogo_FadeinTime = 0,
 			float TeamLogo_FadeoutTime = 0,
-			CogPath GameLogo = 
+			CogPath GameLogo1 = 
+			{
+				string Path = "",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 4294967293,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			CogPath GameLogo2 = 
+			{
+				string Path = "",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 4294967293,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			CogPath GameLogo3 = 
 			{
 				string Path = "",
 				bool ErrorOnResolveToNull = false,
@@ -178,7 +208,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.573906422, -1.01115692, 50],
+			Vec3 Translation = [-23.3757954, 4.97311687, 51.500248],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -190,7 +220,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 20.1896744,
+			float Size = 27.2532139,
 		},
 		EditorCameraController = 
 		{
@@ -198,7 +228,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.573906422, -1.01115692, -2.50866634e-08],
+			Vec3 LookTarget = [-23.3757954, 4.97311687, 1.50024891],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1092,6 +1122,11 @@ Level =
 		{
 			string Name = "background",
 		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
+		},
 		Transform = 
 		{
 			Vec3 Translation = [0, 0, 0],
@@ -1131,6 +1166,11 @@ Level =
 		Named = 
 		{
 			string Name = "background",
+		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
 		},
 		Transform = 
 		{
@@ -1172,6 +1212,11 @@ Level =
 		{
 			string Name = "background",
 		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
+		},
 		Transform = 
 		{
 			Vec3 Translation = [-34, 0, 0],
@@ -1211,6 +1256,11 @@ Level =
 		Named = 
 		{
 			string Name = "background",
+		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
 		},
 		Transform = 
 		{
@@ -1742,55 +1792,6 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Speaker",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-30.5, -40.5, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.504999995, 0.306408733, 0.143925011, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		SoundEmitter = 
-		{
-			float Volume = 0.199526235,
-			float Pitch = 0,
-			float PitchSemitones = 0,
-			bool UsePitchSemitones = false,
-			bool Positional = false,
-			int Version = 1,
-		},
-		SimpleSound = 
-		{
-			bool StartPlaying = true,
-			string CueName = "4e1bd44008b4dc2a:DefaultCue",
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 36,
-		},
-		Named = 
-		{
 			string Name = "SpriteText",
 		},
 		Transform = 
@@ -1822,7 +1823,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 37,
+					uint Id = 36,
 				},
 				Named = 
 				{
@@ -1856,7 +1857,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 38,
+					uint Id = 37,
 				},
 				Named = 
 				{
@@ -1892,7 +1893,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 39,
+			uint Id = 38,
 		},
 		Named = 
 		{
@@ -1921,26 +1922,12 @@ Level =
 			float PixelsPerUnit = 64,
 			bool Smoothing = true,
 		},
-		SoundEmitter = 
-		{
-			float Volume = 0.199526235,
-			float Pitch = 0,
-			float PitchSemitones = 0,
-			bool UsePitchSemitones = false,
-			bool Positional = false,
-			int Version = 1,
-		},
-		SimpleSound = 
-		{
-			bool StartPlaying = true,
-			string CueName = "5a40351f86fd1083:BitFlame_Menu_Music",
-		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 40,
+			uint Id = 39,
 		},
 		Named = 
 		{
@@ -1975,7 +1962,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 41,
+					uint Id = 40,
 				},
 				Named = 
 				{
@@ -2012,7 +1999,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 42,
+					uint Id = 41,
 				},
 				Named = 
 				{
@@ -2048,7 +2035,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 43,
+			uint Id = 42,
 		},
 		Named = 
 		{
@@ -2083,7 +2070,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 44,
+					uint Id = 43,
 				},
 				Named = 
 				{
@@ -2117,7 +2104,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 45,
+					uint Id = 44,
 				},
 				Named = 
 				{
@@ -2153,7 +2140,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 46,
+			uint Id = 45,
 		},
 		Named = 
 		{
@@ -2188,7 +2175,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 47,
+					uint Id = 46,
 				},
 				Named = 
 				{
@@ -2227,7 +2214,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 48,
+					uint Id = 47,
 				},
 				Named = 
 				{
@@ -2268,7 +2255,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 49,
+			uint Id = 48,
 		},
 		Named = 
 		{
@@ -2305,7 +2292,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 50,
+			uint Id = 49,
 		},
 		Named = 
 		{
@@ -2323,7 +2310,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 51,
+					uint Id = 50,
 				},
 				Named = 
 				{
@@ -2386,7 +2373,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 52,
+					uint Id = 51,
 				},
 				Named = 
 				{
@@ -2449,7 +2436,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 53,
+					uint Id = 52,
 				},
 				Named = 
 				{
@@ -2512,7 +2499,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 54,
+					uint Id = 53,
 				},
 				Named = 
 				{
@@ -2575,7 +2562,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 55,
+					uint Id = 54,
 				},
 				Named = 
 				{
@@ -2641,7 +2628,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 56,
+					uint Id = 55,
 				},
 				Named = 
 				{
@@ -2695,7 +2682,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 57,
+							uint Id = 56,
 						},
 						Named = 
 						{
@@ -2735,7 +2722,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 58,
+							uint Id = 57,
 						},
 						Named = 
 						{
@@ -2771,7 +2758,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 59,
+					uint Id = 58,
 				},
 				Named = 
 				{
@@ -2808,7 +2795,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 60,
+			uint Id = 59,
 		},
 		Named = 
 		{
@@ -2847,7 +2834,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 61,
+			uint Id = 60,
 		},
 		Named = 
 		{
@@ -2896,7 +2883,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 60,
+				uint ResolvedCog = 59,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -2910,7 +2897,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 62,
+			uint Id = 61,
 		},
 		Named = 
 		{
@@ -2949,7 +2936,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 63,
+			uint Id = 62,
 		},
 		Named = 
 		{
@@ -2998,7 +2985,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 62,
+				uint ResolvedCog = 61,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -3012,7 +2999,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 64,
+			uint Id = 63,
 		},
 		Named = 
 		{
@@ -3051,7 +3038,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 65,
+			uint Id = 64,
 		},
 		Named = 
 		{
@@ -3100,7 +3087,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 64,
+				uint ResolvedCog = 63,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -3114,7 +3101,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 66,
+			uint Id = 65,
 		},
 		Named = 
 		{
@@ -3153,7 +3140,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 67,
+			uint Id = 66,
 		},
 		Named = 
 		{
@@ -3202,7 +3189,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 66,
+				uint ResolvedCog = 65,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -3216,7 +3203,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 68,
+			uint Id = 67,
 		},
 		Named = 
 		{
@@ -3255,7 +3242,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 69,
+			uint Id = 68,
 		},
 		Named = 
 		{
@@ -3304,7 +3291,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 68,
+				uint ResolvedCog = 67,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -3318,42 +3305,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 70,
-		},
-		Named = 
-		{
-			string Name = "BoolButton",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [29, -1, -1],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.223529428, 0.505882323, 0.643137276, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 71,
+			uint Id = 69,
 		},
 		Named = 
 		{
@@ -3387,7 +3339,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 72,
+			uint Id = 70,
 		},
 		Named = 
 		{
@@ -3421,11 +3373,16 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 73,
+			uint Id = 71,
 		},
 		Named = 
 		{
 			string Name = "background",
+		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
 		},
 		Transform = 
 		{
@@ -3461,7 +3418,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 74,
+			uint Id = 72,
 		},
 		Named = 
 		{
@@ -3550,7 +3507,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 75,
+					uint Id = 73,
 				},
 				Named = 
 				{
@@ -3584,7 +3541,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 76,
+					uint Id = 74,
 				},
 				Named = 
 				{
@@ -3619,7 +3576,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 77,
+					uint Id = 75,
 				},
 				Named = 
 				{
@@ -3656,7 +3613,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 78,
+			uint Id = 76,
 		},
 		Named = 
 		{
@@ -3745,7 +3702,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 79,
+					uint Id = 77,
 				},
 				Named = 
 				{
@@ -3779,7 +3736,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 80,
+					uint Id = 78,
 				},
 				Named = 
 				{
@@ -3814,7 +3771,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 81,
+					uint Id = 79,
 				},
 				Named = 
 				{

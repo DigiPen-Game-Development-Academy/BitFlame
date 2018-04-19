@@ -1,9 +1,9 @@
 SoundCue = 
 {
 	SoundPlayMode PlayMode = Single,
-	float Volume = 1.5,
+	float Volume = 0,
 	float VolumeVariation = 0,
-	float VolumeDB = 3.52182508,
+	float VolumeDB = 0,
 	bool UseVolumeDB = false,
 	float VolumeDBVariation = 0,
 	float Pitch = 0,
@@ -17,14 +17,6 @@ SoundCue =
 	uint MaxPlaybacks = 10,
 	Array Sounds = 
 	[
-		{
-			string SoundName = "5a40351f86fb6da5:BitFlame_Menu_Music",
-			string GeneratedSoundName = "55017c595ef88bf0:DefaultGeneratedSound",
-			WhichSoundType WhichToUse = FromFile,
-			float Weight = 1,
-			float LoopEndTime = 0,
-			float LoopStartTime = 0,
-		},
 	],
 	Array SoundTags = 
 	[
