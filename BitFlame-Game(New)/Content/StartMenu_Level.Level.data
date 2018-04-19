@@ -213,7 +213,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-2.30500841, -7.43179417, 50],
+			Vec3 Translation = [-33.1414757, 0.366752476, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -225,7 +225,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 54.8811989,
+			float Size = 14.9569044,
 		},
 		EditorCameraController = 
 		{
@@ -233,7 +233,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-2.30500841, -7.43179417, -1.31455327e-08],
+			Vec3 LookTarget = [-33.1414757, 0.366752476, -1.3610495e-06],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1417,7 +1417,7 @@ Level =
 					string Text = "Back",
 					TextAlign Align = Center,
 					float PixelsPerUnit = 64,
-					bool Smoothing = true,
+					bool Smoothing = false,
 				},
 			},
 			Cog = 
@@ -1714,7 +1714,7 @@ Level =
 					string Text = "Back",
 					TextAlign Align = Center,
 					float PixelsPerUnit = 64,
-					bool Smoothing = true,
+					bool Smoothing = false,
 				},
 			},
 			Cog = 
@@ -2064,7 +2064,7 @@ Level =
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "5a075f32e7b83df0:GameFont",
 			uint FontSize = 150,
-			string Text = "All content © 2018 DigiPen (USA) Corporation, all rights reserved.",
+			string Text = "All content (c) 2018 DigiPen (USA) Corporation, all rights reserved.",
 			TextAlign Align = Center,
 			float PixelsPerUnit = 256,
 			bool Smoothing = false,
@@ -2788,7 +2788,7 @@ Level =
 							string Text = "50",
 							TextAlign Align = Center,
 							float PixelsPerUnit = 64,
-							bool Smoothing = true,
+							bool Smoothing = false,
 						},
 					},
 				},
@@ -2857,11 +2857,11 @@ Level =
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "5a075f32e7b83df0:GameFont",
-			uint FontSize = 25,
+			uint FontSize = 32,
 			string Text = "Producer",
 			TextAlign Align = Center,
-			float PixelsPerUnit = 21.8303375,
-			bool Smoothing = true,
+			float PixelsPerUnit = 32,
+			bool Smoothing = false,
 		},
 		Reactive = 
 		{
@@ -2900,7 +2900,7 @@ Level =
 			string Text = "Sage",
 			TextAlign Align = Center,
 			float PixelsPerUnit = 21.8303375,
-			bool Smoothing = true,
+			bool Smoothing = false,
 		},
 		Reactive = 
 		{
@@ -2959,11 +2959,11 @@ Level =
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "5a075f32e7b83df0:GameFont",
-			uint FontSize = 25,
+			uint FontSize = 32,
 			string Text = "Design Director",
 			TextAlign Align = Center,
-			float PixelsPerUnit = 21.8303375,
-			bool Smoothing = true,
+			float PixelsPerUnit = 32,
+			bool Smoothing = false,
 		},
 		Reactive = 
 		{
@@ -3002,7 +3002,7 @@ Level =
 			string Text = "Evan",
 			TextAlign Align = Right,
 			float PixelsPerUnit = 21.8303375,
-			bool Smoothing = true,
+			bool Smoothing = false,
 		},
 		Reactive = 
 		{
@@ -3061,11 +3061,11 @@ Level =
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "5a075f32e7b83df0:GameFont",
-			uint FontSize = 25,
+			uint FontSize = 32,
 			string Text = "Tech Director",
 			TextAlign Align = Center,
-			float PixelsPerUnit = 21.8303375,
-			bool Smoothing = true,
+			float PixelsPerUnit = 32,
+			bool Smoothing = false,
 		},
 		Reactive = 
 		{
@@ -3104,7 +3104,7 @@ Level =
 			string Text = "Jakob",
 			TextAlign Align = Left,
 			float PixelsPerUnit = 21.8303375,
-			bool Smoothing = true,
+			bool Smoothing = false,
 		},
 		Reactive = 
 		{
@@ -3163,11 +3163,11 @@ Level =
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "5a075f32e7b83df0:GameFont",
-			uint FontSize = 25,
+			uint FontSize = 32,
 			string Text = "Art Director",
 			TextAlign Align = Center,
-			float PixelsPerUnit = 21.8303375,
-			bool Smoothing = true,
+			float PixelsPerUnit = 32,
+			bool Smoothing = false,
 		},
 		Reactive = 
 		{
@@ -3206,7 +3206,7 @@ Level =
 			string Text = "Luke",
 			TextAlign Align = Right,
 			float PixelsPerUnit = 21.8303375,
-			bool Smoothing = true,
+			bool Smoothing = false,
 		},
 		Reactive = 
 		{
@@ -3265,11 +3265,11 @@ Level =
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "5a075f32e7b83df0:GameFont",
-			uint FontSize = 25,
+			uint FontSize = 32,
 			string Text = "Sound Director",
 			TextAlign Align = Center,
-			float PixelsPerUnit = 21.8303375,
-			bool Smoothing = true,
+			float PixelsPerUnit = 32,
+			bool Smoothing = false,
 		},
 		Reactive = 
 		{
@@ -3308,7 +3308,7 @@ Level =
 			string Text = "Justin",
 			TextAlign Align = Left,
 			float PixelsPerUnit = 21.8303375,
-			bool Smoothing = true,
+			bool Smoothing = false,
 		},
 		Reactive = 
 		{
@@ -3405,7 +3405,7 @@ Level =
 			string Text = "",
 			TextAlign Align = Center,
 			float PixelsPerUnit = 64,
-			bool Smoothing = true,
+			bool Smoothing = false,
 		},
 	},
 	Cog = 
@@ -3573,7 +3573,7 @@ Level =
 					string Text = "Back",
 					TextAlign Align = Center,
 					float PixelsPerUnit = 64,
-					bool Smoothing = true,
+					bool Smoothing = false,
 				},
 			},
 			Cog = 
@@ -3768,7 +3768,7 @@ Level =
 					string Text = "Confirm",
 					TextAlign Align = Center,
 					float PixelsPerUnit = 64,
-					bool Smoothing = true,
+					bool Smoothing = false,
 				},
 			},
 			Cog = 

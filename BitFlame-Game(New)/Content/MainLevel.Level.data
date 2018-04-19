@@ -156,7 +156,7 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
-			float TimeUntilNextWave = 10,
+			float TimeUntilNextWave = 40,
 			float SafeDistanceToSpawnFromPlayer = 50,
 			float FurthestToSpawnFromPlayer = 130,
 			float IncreaseEnemySpawnDistance = 20,
