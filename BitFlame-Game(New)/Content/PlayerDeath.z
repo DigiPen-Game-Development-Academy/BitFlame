@@ -242,8 +242,11 @@ class PlayerDeath : ZilchComponent
         
         if(this.Space1 != null)
         {
-            this.Space1.Cog.AttachTo(this.Owner);
-            this.Space1.Cog.Transform.Translation = Real3(0, 0, -10);
+            if(this.Owner != null)
+            {
+                this.Space1.Cog.AttachTo(this.Owner);
+                this.Space1.Cog.Transform.Translation = Real3(0, 0, -10);
+            }
         }
                 
         if(this.Space2 != null)

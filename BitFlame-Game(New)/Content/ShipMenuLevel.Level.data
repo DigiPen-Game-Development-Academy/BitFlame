@@ -144,7 +144,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-1.03256369, -1.29038715, 60.9997482],
+			Vec3 Translation = [62.4238091, 4.15661812, 60.9997482],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -156,7 +156,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 22.3130817,
+			float Size = 30.1194572,
 		},
 		EditorCameraController = 
 		{
@@ -164,7 +164,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-1.03256369, -1.29038715, 10.9997473],
+			Vec3 LookTarget = [62.4238091, 4.15661812, 10.9997501],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -658,322 +658,6 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-3, 94.5, 1],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.0352941155, 0.525489986, 0.800000072, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		Ship_Menu_Button_Visual = 
-		{
-			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
-			string CantSelect = "5ae3cf4fa1244713:Blip_CantSelect",
-			string HoverSound = "5a64f05e1529e84d:Blip_Hover",
-			Vec4 HoverColor = [0.180392146, 0.376470655, 0.956862807, 1],
-			Vec4 ClickColor = [0.466666698, 0.627450943, 0.776470661, 1],
-			float HoverScale = 1.20000005,
-			float ClickScale = 1,
-		},
-		Ship_Menu_Button_Function = 
-		{
-			CogPath Camera = 
-			{
-				string Path = ":/Camera",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 2,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-			Vec3 NewCameraPosition = [0, 60, 0],
-			float MoveTime = 0.200000003,
-			bool Reload = false,
-			bool ChangeLevel = false,
-			string LevelToChangeTo = "",
-			bool Respawn = false,
-			bool Quit = false,
-			bool WaveGamemode = false,
-			bool GamemodeButton = false,
-		},
-		Area = 
-		{
-			Vec2 Size = [4, 4],
-			Location Origin = Center,
-		},
-		Hierarchy = 
-		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 13,
-				},
-				Named = 
-				{
-					string Name = "Icon",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 0, 20],
-					Vec3 Scale = [2, 2, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Sprite = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5a33d19f8d752ba6:Turret_Base",
-					bool RenderMask = false,
-					bool FlipX = false,
-					bool FlipY = false,
-					bool AnimationActive = true,
-					float AnimationSpeed = 1,
-					uint StartFrame = 0,
-				},
-				Hierarchy = 
-				{
-					Cog = 
-					{
-						LinkId = 
-						{
-							uint Id = 14,
-						},
-						Named = 
-						{
-							string Name = "Icon",
-						},
-						Transform = 
-						{
-							Vec3 Translation = [0, 0, 0],
-							Vec3 Scale = [1, 1, 1],
-							Quat Rotation = [0, 0, 0, 1],
-						},
-						Sprite = 
-						{
-							bool Visible = true,
-							bool VisibilityCulling = true,
-							bool VisibilityEvents = true,
-							bool CastShadows = false,
-							Vec4 Color = [1, 1, 1, 1],
-							BlendMode BlendMode = Alpha,
-							SpriteGeometryMode GeometryMode = ZPlane,
-							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string SpriteSource = "5a33d1678e29284e:Turret_Top",
-							bool RenderMask = false,
-							bool FlipX = false,
-							bool FlipY = false,
-							bool AnimationActive = true,
-							float AnimationSpeed = 1,
-							uint StartFrame = 0,
-						},
-					},
-				},
-			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 15,
-		},
-		Named = 
-		{
-			string Name = "Button",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-3, 124.5, 1],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.0352941155, 0.525489986, 0.800000072, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		Ship_Menu_Button_Visual = 
-		{
-			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
-			string CantSelect = "5ae3cf4fa1244713:Blip_CantSelect",
-			string HoverSound = "5a64f05e1529e84d:Blip_Hover",
-			Vec4 HoverColor = [0.180392146, 0.376470655, 0.956862807, 1],
-			Vec4 ClickColor = [0.466666698, 0.627450943, 0.776470661, 1],
-			float HoverScale = 1.20000005,
-			float ClickScale = 1,
-		},
-		Ship_Menu_Button_Function = 
-		{
-			CogPath Camera = 
-			{
-				string Path = ":/Camera",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 2,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-			Vec3 NewCameraPosition = [0, 60, 0],
-			float MoveTime = 0.200000003,
-			bool Reload = false,
-			bool ChangeLevel = false,
-			string LevelToChangeTo = "",
-			bool Respawn = false,
-			bool Quit = false,
-			bool WaveGamemode = false,
-			bool GamemodeButton = false,
-		},
-		Area = 
-		{
-			Vec2 Size = [4, 4],
-			Location Origin = Center,
-		},
-		Hierarchy = 
-		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 16,
-				},
-				Named = 
-				{
-					string Name = "Icon",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 0, 20],
-					Vec3 Scale = [2, 2, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Sprite = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5a33d19f8d752ba6:Turret_Base",
-					bool RenderMask = false,
-					bool FlipX = false,
-					bool FlipY = false,
-					bool AnimationActive = true,
-					float AnimationSpeed = 1,
-					uint StartFrame = 0,
-				},
-				Hierarchy = 
-				{
-					Cog = 
-					{
-						LinkId = 
-						{
-							uint Id = 17,
-						},
-						Named = 
-						{
-							string Name = "Icon",
-						},
-						Transform = 
-						{
-							Vec3 Translation = [0, 0, 0],
-							Vec3 Scale = [1, 1, 1],
-							Quat Rotation = [0, 0, 0, 1],
-						},
-						Sprite = 
-						{
-							bool Visible = true,
-							bool VisibilityCulling = true,
-							bool VisibilityEvents = true,
-							bool CastShadows = false,
-							Vec4 Color = [1, 1, 1, 1],
-							BlendMode BlendMode = Alpha,
-							SpriteGeometryMode GeometryMode = ZPlane,
-							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string SpriteSource = "5a33d1678e29284e:Turret_Top",
-							bool RenderMask = false,
-							bool FlipX = false,
-							bool FlipY = false,
-							bool AnimationActive = true,
-							float AnimationSpeed = 1,
-							uint StartFrame = 0,
-						},
-					},
-				},
-			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 18,
-		},
-		Named = 
-		{
-			string Name = "Button",
-		},
-		Transform = 
-		{
 			Vec3 Translation = [-8, 4.5, 1],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
@@ -1056,7 +740,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 19,
+					uint Id = 13,
 				},
 				Named = 
 				{
@@ -1093,7 +777,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 20,
+			uint Id = 14,
 		},
 		Named = 
 		{
@@ -1183,7 +867,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 21,
+					uint Id = 15,
 				},
 				Named = 
 				{
@@ -1220,247 +904,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 22,
-		},
-		Named = 
-		{
-			string Name = "Button",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-7.5, 94.5, 1],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.0352941155, 0.525489986, 0.800000072, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		Ship_Menu_Button_Visual = 
-		{
-			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
-			string CantSelect = "5ae3cf4fa1244713:Blip_CantSelect",
-			string HoverSound = "5a64f05e1529e84d:Blip_Hover",
-			Vec4 HoverColor = [0.180392146, 0.376470655, 0.956862807, 1],
-			Vec4 ClickColor = [0.466666698, 0.627450943, 0.776470661, 1],
-			float HoverScale = 1.20000005,
-			float ClickScale = 1,
-		},
-		Ship_Menu_Button_Function = 
-		{
-			CogPath Camera = 
-			{
-				string Path = ":/Camera",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 2,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-			Vec3 NewCameraPosition = [0, 30, 0],
-			float MoveTime = 0.200000003,
-			bool Reload = false,
-			bool ChangeLevel = false,
-			string LevelToChangeTo = "",
-			bool Respawn = false,
-			bool Quit = false,
-			bool WaveGamemode = false,
-			bool GamemodeButton = false,
-		},
-		Area = 
-		{
-			Vec2 Size = [4, 4],
-			Location Origin = Center,
-		},
-		Hierarchy = 
-		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 23,
-				},
-				Named = 
-				{
-					string Name = "Icon",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 0, 20],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Sprite = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5a908111afce96ff:Oxygen_Pipe_Block_Animation",
-					bool RenderMask = false,
-					bool FlipX = false,
-					bool FlipY = false,
-					bool AnimationActive = true,
-					float AnimationSpeed = 1,
-					uint StartFrame = 0,
-				},
-			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 24,
-		},
-		Named = 
-		{
-			string Name = "Button",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-7.5, 124.5, 1],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.0352941155, 0.525489986, 0.800000072, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		Ship_Menu_Button_Visual = 
-		{
-			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
-			string CantSelect = "5ae3cf4fa1244713:Blip_CantSelect",
-			string HoverSound = "5a64f05e1529e84d:Blip_Hover",
-			Vec4 HoverColor = [0.180392146, 0.376470655, 0.956862807, 1],
-			Vec4 ClickColor = [0.466666698, 0.627450943, 0.776470661, 1],
-			float HoverScale = 1.20000005,
-			float ClickScale = 1,
-		},
-		Ship_Menu_Button_Function = 
-		{
-			CogPath Camera = 
-			{
-				string Path = ":/Camera",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 2,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-			Vec3 NewCameraPosition = [0, 30, 0],
-			float MoveTime = 0.200000003,
-			bool Reload = false,
-			bool ChangeLevel = false,
-			string LevelToChangeTo = "",
-			bool Respawn = false,
-			bool Quit = false,
-			bool WaveGamemode = false,
-			bool GamemodeButton = false,
-		},
-		Area = 
-		{
-			Vec2 Size = [4, 4],
-			Location Origin = Center,
-		},
-		Hierarchy = 
-		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 25,
-				},
-				Named = 
-				{
-					string Name = "Icon",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 0, 20],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Sprite = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5a908111afce96ff:Oxygen_Pipe_Block_Animation",
-					bool RenderMask = false,
-					bool FlipX = false,
-					bool FlipY = false,
-					bool AnimationActive = true,
-					float AnimationSpeed = 1,
-					uint StartFrame = 0,
-				},
-			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 26,
+			uint Id = 16,
 		},
 		Named = 
 		{
@@ -1495,7 +939,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 27,
+			uint Id = 17,
 		},
 		Named = 
 		{
@@ -1530,7 +974,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 28,
+			uint Id = 18,
 		},
 		Named = 
 		{
@@ -1566,7 +1010,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 29,
+					uint Id = 19,
 				},
 				Named = 
 				{
@@ -1603,7 +1047,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 30,
+			uint Id = 20,
 		},
 		Named = 
 		{
@@ -1639,7 +1083,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 31,
+					uint Id = 21,
 				},
 				Named = 
 				{
@@ -1676,7 +1120,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 32,
+			uint Id = 22,
 		},
 		Named = 
 		{
@@ -1719,7 +1163,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 33,
+			uint Id = 23,
 		},
 		Named = 
 		{
@@ -1802,7 +1246,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 34,
+					uint Id = 24,
 				},
 				Named = 
 				{
@@ -1838,7 +1282,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 35,
+			uint Id = 25,
 		},
 		Named = 
 		{
@@ -1872,7 +1316,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 36,
+			uint Id = 26,
 		},
 		Named = 
 		{
@@ -1906,7 +1350,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 37,
+			uint Id = 27,
 		},
 		Named = 
 		{
@@ -1940,7 +1384,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 38,
+			uint Id = 28,
 		},
 		Named = 
 		{
@@ -1983,7 +1427,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 39,
+			uint Id = 29,
 		},
 		Named = 
 		{
@@ -2026,7 +1470,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 40,
+			uint Id = 30,
 		},
 		Named = 
 		{
@@ -2069,7 +1513,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 41,
+			uint Id = 31,
 		},
 		Named = 
 		{
@@ -2112,7 +1556,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 42,
+			uint Id = 32,
 		},
 		Named = 
 		{
@@ -2155,50 +1599,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 43,
-		},
-		Named = 
-		{
-			string Name = "FakeButton",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [2, 94.5, 1],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.466666698, 0.627450943, 0.776470661, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Area = 
-		{
-			Vec2 Size = [4, 4],
-			Location Origin = Center,
-		},
-		Hierarchy = 
-		{
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 44,
+			uint Id = 33,
 		},
 		Named = 
 		{
@@ -2264,9 +1665,9 @@ Level =
 		},
 		Ship_Menu_Button_Visual = 
 		{
-			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
-			string CantSelect = "5ae3cf4fa1244713:Blip_CantSelect",
-			string HoverSound = "5a64f05e1529e84d:Blip_Hover",
+			string SelectSound = "5aa37aa1d2b8be90:None",
+			string CantSelect = "5aa37aa1d2b8be90:None",
+			string HoverSound = "5aa37aa1d2b8be90:None",
 			Vec4 HoverColor = [0.203921586, 0.411764741, 0.521568656, 1],
 			Vec4 ClickColor = [0.211764723, 0.431372583, 0.545098066, 1],
 			float HoverScale = 1.20000005,
@@ -2278,7 +1679,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 45,
+					uint Id = 34,
 				},
 				Named = 
 				{
@@ -2314,7 +1715,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 46,
+			uint Id = 35,
 		},
 		Named = 
 		{
@@ -2354,7 +1755,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 47,
+			uint Id = 36,
 		},
 		Named = 
 		{
@@ -2388,7 +1789,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 48,
+			uint Id = 37,
 		},
 		Named = 
 		{
@@ -2422,7 +1823,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 49,
+			uint Id = 38,
 		},
 		Named = 
 		{
@@ -2456,7 +1857,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 50,
+			uint Id = 39,
 		},
 		Named = 
 		{
@@ -2539,7 +1940,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 51,
+					uint Id = 40,
 				},
 				Named = 
 				{
@@ -2575,7 +1976,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 52,
+			uint Id = 41,
 		},
 		Named = 
 		{
@@ -2658,7 +2059,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 53,
+					uint Id = 42,
 				},
 				Named = 
 				{
@@ -2694,7 +2095,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 54,
+			uint Id = 43,
 		},
 		Named = 
 		{
@@ -2738,7 +2139,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 55,
+					uint Id = 44,
 				},
 				Named = 
 				{
@@ -2772,7 +2173,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 56,
+					uint Id = 45,
 				},
 				Named = 
 				{
@@ -2806,7 +2207,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 57,
+					uint Id = 46,
 				},
 				Named = 
 				{
@@ -2841,7 +2242,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 58,
+					uint Id = 47,
 				},
 				Named = 
 				{
@@ -2876,7 +2277,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 59,
+					uint Id = 48,
 				},
 				Named = 
 				{
@@ -2911,7 +2312,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 60,
+					uint Id = 49,
 				},
 				Named = 
 				{
@@ -2946,7 +2347,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 61,
+					uint Id = 50,
 				},
 				Named = 
 				{
@@ -2980,7 +2381,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 62,
+					uint Id = 51,
 				},
 				Named = 
 				{
@@ -3014,7 +2415,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 63,
+					uint Id = 52,
 				},
 				Named = 
 				{
@@ -3050,7 +2451,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 64,
+			uint Id = 53,
 		},
 		Named = 
 		{
@@ -3094,7 +2495,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 65,
+					uint Id = 54,
 				},
 				Named = 
 				{
@@ -3128,7 +2529,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 66,
+					uint Id = 55,
 				},
 				Named = 
 				{
@@ -3162,7 +2563,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 67,
+					uint Id = 56,
 				},
 				Named = 
 				{
@@ -3197,7 +2598,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 68,
+					uint Id = 57,
 				},
 				Named = 
 				{
@@ -3232,7 +2633,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 69,
+					uint Id = 58,
 				},
 				Named = 
 				{
@@ -3267,7 +2668,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 70,
+					uint Id = 59,
 				},
 				Named = 
 				{
@@ -3302,7 +2703,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 71,
+					uint Id = 60,
 				},
 				Named = 
 				{
@@ -3336,7 +2737,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 72,
+					uint Id = 61,
 				},
 				Named = 
 				{
@@ -3370,7 +2771,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 73,
+					uint Id = 62,
 				},
 				Named = 
 				{
@@ -3406,7 +2807,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 74,
+			uint Id = 63,
 		},
 		Named = 
 		{
@@ -3446,7 +2847,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 75,
+			uint Id = 64,
 		},
 		Named = 
 		{
@@ -3495,7 +2896,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 76,
+					uint Id = 65,
 				},
 				Named = 
 				{
@@ -3531,7 +2932,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 77,
+			uint Id = 66,
 		},
 		Named = 
 		{
@@ -3580,7 +2981,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 78,
+					uint Id = 67,
 				},
 				Named = 
 				{
@@ -3616,7 +3017,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 79,
+			uint Id = 68,
 		},
 		Named = 
 		{
@@ -3686,13 +3087,19 @@ Level =
 		MenuTabVisuals = 
 		{
 		},
+		Button_PlaySound = 
+		{
+			string ClickSound = "5ae3cf4fa1253749:Blip_Select",
+			string CantSelectSound = "5ae3cf4fa1244713:Blip_CantSelect",
+			string HoverSound = "5a64f05e1529e84d:Blip_Hover",
+		},
 		Hierarchy = 
 		{
 			Cog = 
 			{
 				LinkId = 
 				{
-					uint Id = 80,
+					uint Id = 69,
 				},
 				Named = 
 				{
@@ -3728,4099 +3135,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 81,
-		},
-		Named = 
-		{
-			string Name = "Button",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [50, 7.5, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.0352941155, 0.525489986, 0.800000072, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a79d6cb6878befe:Holographic display-Animation",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 5,
-			uint StartFrame = 0,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		Ship_Menu_Button_Function = 
-		{
-			CogPath Camera = 
-			{
-				string Path = ":/Camera",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 2,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-			Vec3 NewCameraPosition = [0, 0, 0],
-			float MoveTime = 0.200000003,
-			bool Reload = false,
-			bool ChangeLevel = false,
-			string LevelToChangeTo = "",
-			bool Respawn = false,
-			bool Quit = false,
-			bool WaveGamemode = false,
-			bool GamemodeButton = false,
-		},
-		Area = 
-		{
-			Vec2 Size = [2, 2],
-			Location Origin = BottomCenter,
-		},
-		MenuTabVisuals = 
-		{
-		},
-		Hierarchy = 
-		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 82,
-				},
-				Named = 
-				{
-					string Name = "TabText",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 1.92405415, 2],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				SpriteText = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [0.790000021, 0.943300068, 1, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "5a075f32e7b83df0:GameFont",
-					uint FontSize = 80,
-					string Text = "Crafting",
-					TextAlign Align = Center,
-					float PixelsPerUnit = 128,
-					bool Smoothing = false,
-				},
-			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 83,
-		},
-		Named = 
-		{
-			string Name = "Button",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [54.5, 7.5, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.0352941155, 0.525489986, 0.800000072, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a79d6cb6878befe:Holographic display-Animation",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 5,
-			uint StartFrame = 0,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		Ship_Menu_Button_Function = 
-		{
-			CogPath Camera = 
-			{
-				string Path = ":/Camera",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 2,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-			Vec3 NewCameraPosition = [30, 0, 0],
-			float MoveTime = 0.200000003,
-			bool Reload = false,
-			bool ChangeLevel = false,
-			string LevelToChangeTo = "",
-			bool Respawn = false,
-			bool Quit = false,
-			bool WaveGamemode = false,
-			bool GamemodeButton = false,
-		},
-		Area = 
-		{
-			Vec2 Size = [2, 2],
-			Location Origin = BottomCenter,
-		},
-		MenuTabVisuals = 
-		{
-		},
-		Hierarchy = 
-		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 84,
-				},
-				Named = 
-				{
-					string Name = "TabText",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 1.92405415, 2],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				SpriteText = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [0.790000021, 0.943300068, 1, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "5a075f32e7b83df0:GameFont",
-					uint FontSize = 72,
-					string Text = "Regeneration",
-					TextAlign Align = Center,
-					float PixelsPerUnit = 128,
-					bool Smoothing = false,
-				},
-			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 85,
-		},
-		Named = 
-		{
-			string Name = "Button",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-4.5, 7.5, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.0352941155, 0.525489986, 0.800000072, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a79d6cb6878befe:Holographic display-Animation",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 5,
-			uint StartFrame = 0,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		Ship_Menu_Button_Function = 
-		{
-			CogPath Camera = 
-			{
-				string Path = ":/Camera",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 2,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-			Vec3 NewCameraPosition = [30, 0, 0],
-			float MoveTime = 0.200000003,
-			bool Reload = false,
-			bool ChangeLevel = false,
-			string LevelToChangeTo = "",
-			bool Respawn = false,
-			bool Quit = false,
-			bool WaveGamemode = false,
-			bool GamemodeButton = false,
-		},
-		Area = 
-		{
-			Vec2 Size = [2, 2],
-			Location Origin = BottomCenter,
-		},
-		MenuTabVisuals = 
-		{
-		},
-		Hierarchy = 
-		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 86,
-				},
-				Named = 
-				{
-					string Name = "TabText",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 1.92405415, 2],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				SpriteText = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [0.790000021, 0.943300068, 1, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "5a075f32e7b83df0:GameFont",
-					uint FontSize = 72,
-					string Text = "Regeneration",
-					TextAlign Align = Center,
-					float PixelsPerUnit = 128,
-					bool Smoothing = false,
-				},
-			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 87,
-		},
-		Named = 
-		{
-			string Name = "FakeButton",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-9, 7.5, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.464999974, 0.626199901, 0.774999976, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a79d6cb6878befe:Holographic display-Animation",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = false,
-			float AnimationSpeed = 5,
-			uint StartFrame = 3,
-		},
-		Area = 
-		{
-			Vec2 Size = [2, 2],
-			Location Origin = BottomCenter,
-		},
-		MenuTabVisualsAlreadyThere = 
-		{
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		Hierarchy = 
-		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 88,
-				},
-				Named = 
-				{
-					string Name = "TabText",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 1.92405415, 2],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				SpriteText = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [0.790000021, 0.943300068, 1, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "5a075f32e7b83df0:GameFont",
-					uint FontSize = 80,
-					string Text = "Crafting",
-					TextAlign Align = Center,
-					float PixelsPerUnit = 128,
-					bool Smoothing = false,
-				},
-				Hierarchy = 
-				{
-				},
-			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 89,
-		},
-		Named = 
-		{
-			string Name = "Button",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [21, 7.5, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.0352941155, 0.525489986, 0.800000072, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a79d6cb6878befe:Holographic display-Animation",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 5,
-			uint StartFrame = 0,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		Ship_Menu_Button_Function = 
-		{
-			CogPath Camera = 
-			{
-				string Path = ":/Camera",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 2,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-			Vec3 NewCameraPosition = [0, 0, 0],
-			float MoveTime = 0.200000003,
-			bool Reload = false,
-			bool ChangeLevel = false,
-			string LevelToChangeTo = "",
-			bool Respawn = false,
-			bool Quit = false,
-			bool WaveGamemode = false,
-			bool GamemodeButton = false,
-		},
-		Area = 
-		{
-			Vec2 Size = [2, 2],
-			Location Origin = BottomCenter,
-		},
-		MenuTabVisuals = 
-		{
-		},
-		Hierarchy = 
-		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 90,
-				},
-				Named = 
-				{
-					string Name = "TabText",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 1.92405415, 2],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				SpriteText = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [0.790000021, 0.943300068, 1, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "5a075f32e7b83df0:GameFont",
-					uint FontSize = 80,
-					string Text = "Crafting",
-					TextAlign Align = Center,
-					float PixelsPerUnit = 128,
-					bool Smoothing = false,
-				},
-			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 91,
-		},
-		Named = 
-		{
-			string Name = "SpriteText",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [30, 6.5, 21],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		SpriteText = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "5a075f32e7b83df0:GameFont",
-			uint FontSize = 64,
-			string Text = "Regenerating the world will 
-reset all asteroids. You will
-keep all resources and buildings.",
-			TextAlign Align = Center,
-			float PixelsPerUnit = 64,
-			bool Smoothing = false,
-		},
-		SpriteTextBlock = 
-		{
-			string TextBlock = "5a2d59168044e87d:WorldRegen",
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 92,
-		},
-		Named = 
-		{
-			string Name = "SpriteText",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [59, 6.5, 21],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		SpriteText = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "5a075f32e7b83df0:GameFont",
-			uint FontSize = 64,
-			string Text = "You need to repair your ship to 
-escape space. Repair it here.",
-			TextAlign Align = Center,
-			float PixelsPerUnit = 64,
-			bool Smoothing = false,
-		},
-		SpriteTextBlock = 
-		{
-			string TextBlock = "5a2d587abcbe7e7d:RepairShip",
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 93,
-		},
-		Named = 
-		{
-			string Name = "background",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, 30, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.258823544, 0.58431375, 0.745098054, 0.800000012],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Area = 
-		{
-			Vec2 Size = [22, 15],
-			Location Origin = Center,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 94,
-		},
-		Named = 
-		{
-			string Name = "background",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, 60, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.258823544, 0.58431375, 0.745098054, 0.800000012],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Area = 
-		{
-			Vec2 Size = [22, 15],
-			Location Origin = Center,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 95,
-		},
-		Named = 
-		{
-			string Name = "Button",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [7, 34.5, 1],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.0352941155, 0.525489986, 0.800000072, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		Area = 
-		{
-			Vec2 Size = [6, 3],
-			Location Origin = Center,
-		},
-		Ship_Menu_Button_Crafting = 
-		{
-			int IronCost = 4,
-			int CopperCost = 0,
-			int TitaniumCost = 0,
-			int AluminiumCost = 8,
-			Enum ResultType = Pipe,
-			int ResultNumber = 1,
-			Vec4 HoverColor = [0.180392146, 0.376470655, 0.956862807, 1],
-			Vec4 ClickColor = [0.466666698, 0.627450943, 0.776470661, 1],
-			Vec4 DisabledColor = [0.466666698, 0.627450943, 0.776470661, 1],
-			float HoverScale = 1.20000005,
-			float ClickScale = 1,
-		},
-		Ship_Menu_Button_Visual = 
-		{
-			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
-			string CantSelect = "5ae3cf4fa1244713:Blip_CantSelect",
-			string HoverSound = "5a64f05e1529e84d:Blip_Hover",
-			Vec4 HoverColor = [0.211764723, 0.431372583, 0.545098066, 1],
-			Vec4 ClickColor = [0.266666681, 0.443137288, 0.53725493, 1],
-			float HoverScale = 1.20000005,
-			float ClickScale = 1,
-		},
-		Hierarchy = 
-		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 96,
-				},
-				Named = 
-				{
-					string Name = "CraftText",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 0.536810398, 1],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				SpriteText = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "5a075f32e7b83df0:GameFont",
-					uint FontSize = 75,
-					string Text = "Create",
-					TextAlign Align = Center,
-					float PixelsPerUnit = 64,
-					bool Smoothing = false,
-				},
-			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 97,
-		},
-		Named = 
-		{
-			string Name = "Button",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [7, 64.5, 1],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.0352941155, 0.525489986, 0.800000072, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		Area = 
-		{
-			Vec2 Size = [6, 3],
-			Location Origin = Center,
-		},
-		Ship_Menu_Button_Crafting = 
-		{
-			int IronCost = 0,
-			int CopperCost = 6,
-			int TitaniumCost = 2,
-			int AluminiumCost = 8,
-			Enum ResultType = Turret,
-			int ResultNumber = 1,
-			Vec4 HoverColor = [0.180392146, 0.376470655, 0.956862807, 1],
-			Vec4 ClickColor = [0.466666698, 0.627450943, 0.776470661, 1],
-			Vec4 DisabledColor = [0.466666698, 0.627450943, 0.776470661, 1],
-			float HoverScale = 1.20000005,
-			float ClickScale = 1,
-		},
-		Ship_Menu_Button_Visual = 
-		{
-			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
-			string CantSelect = "5ae3cf4fa1244713:Blip_CantSelect",
-			string HoverSound = "5a64f05e1529e84d:Blip_Hover",
-			Vec4 HoverColor = [0.211764723, 0.431372583, 0.545098066, 1],
-			Vec4 ClickColor = [0.337254912, 0.450980425, 0.56078434, 1],
-			float HoverScale = 1.20000005,
-			float ClickScale = 1,
-		},
-		Hierarchy = 
-		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 98,
-				},
-				Named = 
-				{
-					string Name = "CraftText",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 0.75, 1],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				SpriteText = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "5a075f32e7b83df0:GameFont",
-					uint FontSize = 75,
-					string Text = "Create",
-					TextAlign Align = Center,
-					float PixelsPerUnit = 64,
-					bool Smoothing = false,
-				},
-			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 99,
-		},
-		Named = 
-		{
-			string Name = "FakeButton",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-9, 37.5, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.464999974, 0.626199901, 0.774999976, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a79d6cb6878befe:Holographic display-Animation",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = false,
-			float AnimationSpeed = 5,
-			uint StartFrame = 3,
-		},
-		Area = 
-		{
-			Vec2 Size = [2, 2],
-			Location Origin = BottomCenter,
-		},
-		MenuTabVisualsAlreadyThere = 
-		{
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		Hierarchy = 
-		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 100,
-				},
-				Named = 
-				{
-					string Name = "TabText",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 1.92405415, 2],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				SpriteText = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [0.790000021, 0.943300068, 1, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "5a075f32e7b83df0:GameFont",
-					uint FontSize = 80,
-					string Text = "Crafting",
-					TextAlign Align = Center,
-					float PixelsPerUnit = 128,
-					bool Smoothing = false,
-				},
-				Hierarchy = 
-				{
-				},
-			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 101,
-		},
-		Named = 
-		{
-			string Name = "Button",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-4.5, 37.5, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.0352941155, 0.525489986, 0.800000072, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a79d6cb6878befe:Holographic display-Animation",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 5,
-			uint StartFrame = 0,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		Ship_Menu_Button_Function = 
-		{
-			CogPath Camera = 
-			{
-				string Path = ":/Camera",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 2,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-			Vec3 NewCameraPosition = [30, 0, 0],
-			float MoveTime = 0.200000003,
-			bool Reload = false,
-			bool ChangeLevel = false,
-			string LevelToChangeTo = "",
-			bool Respawn = false,
-			bool Quit = false,
-			bool WaveGamemode = false,
-			bool GamemodeButton = false,
-		},
-		Area = 
-		{
-			Vec2 Size = [2, 2],
-			Location Origin = BottomCenter,
-		},
-		MenuTabVisuals = 
-		{
-		},
-		Hierarchy = 
-		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 102,
-				},
-				Named = 
-				{
-					string Name = "TabText",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 1.92405415, 2],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				SpriteText = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [0.790000021, 0.943300068, 1, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "5a075f32e7b83df0:GameFont",
-					uint FontSize = 72,
-					string Text = "Regeneration",
-					TextAlign Align = Center,
-					float PixelsPerUnit = 128,
-					bool Smoothing = false,
-				},
-			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 103,
-		},
-		Named = 
-		{
-			string Name = "Button",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [1, 37.5, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.0352941155, 0.525489986, 0.800000072, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a79d6cb6878befe:Holographic display-Animation",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 5,
-			uint StartFrame = 0,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		Ship_Menu_Button_Function = 
-		{
-			CogPath Camera = 
-			{
-				string Path = ":/Camera",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 2,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-			Vec3 NewCameraPosition = [60, 0, 0],
-			float MoveTime = 0.200000003,
-			bool Reload = false,
-			bool ChangeLevel = false,
-			string LevelToChangeTo = "",
-			bool Respawn = false,
-			bool Quit = false,
-			bool WaveGamemode = false,
-			bool GamemodeButton = false,
-		},
-		Area = 
-		{
-			Vec2 Size = [2, 2],
-			Location Origin = BottomCenter,
-		},
-		MenuTabVisuals = 
-		{
-		},
-		Hierarchy = 
-		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 104,
-				},
-				Named = 
-				{
-					string Name = "TabText",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 1.92405415, 2],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				SpriteText = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [0.790000021, 0.943300068, 1, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "5a075f32e7b83df0:GameFont",
-					uint FontSize = 80,
-					string Text = "Ship Repair ",
-					TextAlign Align = Center,
-					float PixelsPerUnit = 128,
-					bool Smoothing = false,
-				},
-			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 105,
-		},
-		Named = 
-		{
-			string Name = "FakeButton",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-8.5, 97.5, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.464999974, 0.626199901, 0.774999976, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a79d6cb6878befe:Holographic display-Animation",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = false,
-			float AnimationSpeed = 5,
-			uint StartFrame = 3,
-		},
-		Area = 
-		{
-			Vec2 Size = [2, 2],
-			Location Origin = BottomCenter,
-		},
-		MenuTabVisualsAlreadyThere = 
-		{
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		Hierarchy = 
-		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 106,
-				},
-				Named = 
-				{
-					string Name = "TabText",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 1.92405415, 2],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				SpriteText = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [0.790000021, 0.943300068, 1, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "5a075f32e7b83df0:GameFont",
-					uint FontSize = 80,
-					string Text = "Crafting",
-					TextAlign Align = Center,
-					float PixelsPerUnit = 128,
-					bool Smoothing = false,
-				},
-				Hierarchy = 
-				{
-				},
-			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 107,
-		},
-		Named = 
-		{
-			string Name = "background",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0.5, 120, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.258823544, 0.58431375, 0.745098054, 0.800000012],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Area = 
-		{
-			Vec2 Size = [22, 15],
-			Location Origin = Center,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 108,
-		},
-		Named = 
-		{
-			string Name = "Button",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-7.5, 90, 1],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.466666698, 0.627450943, 0.776470661, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Area = 
-		{
-			Vec2 Size = [4, 4],
-			Location Origin = Center,
-		},
-		Hierarchy = 
-		{
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 109,
-		},
-		Named = 
-		{
-			string Name = "Button",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [5, 97.5, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.0352941155, 0.525489986, 0.800000072, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a79d6cb6878befe:Holographic display-Animation",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 5,
-			uint StartFrame = 0,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		Ship_Menu_Button_Function = 
-		{
-			CogPath Camera = 
-			{
-				string Path = ":/Camera",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 2,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-			Vec3 NewCameraPosition = [90, 0, 0],
-			float MoveTime = 0.200000003,
-			bool Reload = false,
-			bool ChangeLevel = false,
-			string LevelToChangeTo = "",
-			bool Respawn = false,
-			bool Quit = false,
-			bool WaveGamemode = false,
-			bool GamemodeButton = false,
-		},
-		Area = 
-		{
-			Vec2 Size = [2, 2],
-			Location Origin = BottomCenter,
-		},
-		MenuTabVisuals = 
-		{
-		},
-		Hierarchy = 
-		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 110,
-				},
-				Named = 
-				{
-					string Name = "TabText",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 1.92405415, 2],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				SpriteText = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [0.790000021, 0.943300068, 1, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "5a075f32e7b83df0:GameFont",
-					uint FontSize = 80,
-					string Text = "Ship Repair ",
-					TextAlign Align = Center,
-					float PixelsPerUnit = 128,
-					bool Smoothing = false,
-				},
-			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 111,
-		},
-		Named = 
-		{
-			string Name = "Button",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-7.5, 120, 1],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.0352941155, 0.525489986, 0.800000072, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		Ship_Menu_Button_Visual = 
-		{
-			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
-			string CantSelect = "5ae3cf4fa1244713:Blip_CantSelect",
-			string HoverSound = "5a64f05e1529e84d:Blip_Hover",
-			Vec4 HoverColor = [0.180392146, 0.376470655, 0.956862807, 1],
-			Vec4 ClickColor = [0.466666698, 0.627450943, 0.776470661, 1],
-			float HoverScale = 1.20000005,
-			float ClickScale = 1,
-		},
-		Ship_Menu_Button_Function = 
-		{
-			CogPath Camera = 
-			{
-				string Path = ":/Camera",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 2,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-			Vec3 NewCameraPosition = [0, 90, 0],
-			float MoveTime = 0.200000003,
-			bool Reload = false,
-			bool ChangeLevel = false,
-			string LevelToChangeTo = "",
-			bool Respawn = false,
-			bool Quit = false,
-			bool WaveGamemode = false,
-			bool GamemodeButton = false,
-		},
-		Area = 
-		{
-			Vec2 Size = [4, 4],
-			Location Origin = Center,
-		},
-		Hierarchy = 
-		{
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 112,
-		},
-		Named = 
-		{
-			string Name = "Button",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [7.5, 124.5, 1],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.0352941155, 0.525489986, 0.800000072, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		Area = 
-		{
-			Vec2 Size = [6, 3],
-			Location Origin = Center,
-		},
-		Ship_Menu_Button_Crafting = 
-		{
-			int IronCost = 0,
-			int CopperCost = 6,
-			int TitaniumCost = 2,
-			int AluminiumCost = 8,
-			Enum ResultType = Turret,
-			int ResultNumber = 1,
-			Vec4 HoverColor = [0.180392146, 0.376470655, 0.956862807, 1],
-			Vec4 ClickColor = [0.466666698, 0.627450943, 0.776470661, 1],
-			Vec4 DisabledColor = [0.466666698, 0.627450943, 0.776470661, 1],
-			float HoverScale = 1.20000005,
-			float ClickScale = 1,
-		},
-		Ship_Menu_Button_Visual = 
-		{
-			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
-			string CantSelect = "5ae3cf4fa1244713:Blip_CantSelect",
-			string HoverSound = "5a64f05e1529e84d:Blip_Hover",
-			Vec4 HoverColor = [0.192156881, 0.396078467, 0.494117677, 1],
-			Vec4 ClickColor = [0.207843155, 0.403921604, 0.494117677, 1],
-			float HoverScale = 1.20000005,
-			float ClickScale = 1,
-		},
-		Hierarchy = 
-		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 113,
-				},
-				Named = 
-				{
-					string Name = "CraftText",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 0.75, 1],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				SpriteText = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "5a075f32e7b83df0:GameFont",
-					uint FontSize = 75,
-					string Text = "Create",
-					TextAlign Align = Center,
-					float PixelsPerUnit = 64,
-					bool Smoothing = true,
-				},
-			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 114,
-		},
-		Named = 
-		{
-			string Name = "Button",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [7.5, 94.5, 1],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.0352941155, 0.525489986, 0.800000072, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		Area = 
-		{
-			Vec2 Size = [6, 3],
-			Location Origin = Center,
-		},
-		Ship_Menu_Button_Crafting = 
-		{
-			int IronCost = 4,
-			int CopperCost = 0,
-			int TitaniumCost = 0,
-			int AluminiumCost = 8,
-			Enum ResultType = Pipe,
-			int ResultNumber = 1,
-			Vec4 HoverColor = [0.180392146, 0.376470655, 0.956862807, 1],
-			Vec4 ClickColor = [0.466666698, 0.627450943, 0.776470661, 1],
-			Vec4 DisabledColor = [0.466666698, 0.627450943, 0.776470661, 1],
-			float HoverScale = 1.20000005,
-			float ClickScale = 1,
-		},
-		Ship_Menu_Button_Visual = 
-		{
-			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
-			string CantSelect = "5ae3cf4fa1244713:Blip_CantSelect",
-			string HoverSound = "5a64f05e1529e84d:Blip_Hover",
-			Vec4 HoverColor = [0.0274509825, 0.388235331, 0.588235319, 1],
-			Vec4 ClickColor = [0.0274509825, 0.384313762, 0.580392182, 1],
-			float HoverScale = 1.20000005,
-			float ClickScale = 1,
-		},
-		Hierarchy = 
-		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 115,
-				},
-				Named = 
-				{
-					string Name = "CraftText",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 0.536810398, 1],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				SpriteText = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "5a075f32e7b83df0:GameFont",
-					uint FontSize = 75,
-					string Text = "Create",
-					TextAlign Align = Center,
-					float PixelsPerUnit = 64,
-					bool Smoothing = true,
-				},
-			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 116,
-		},
-		Named = 
-		{
-			string Name = "background",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0.5, 90, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.258823544, 0.58431375, 0.745098054, 0.800000012],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Area = 
-		{
-			Vec2 Size = [22, 15],
-			Location Origin = Center,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 117,
-		},
-		Named = 
-		{
-			string Name = "Button",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0.5, 97.5, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.0352941155, 0.525489986, 0.800000072, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a79d6cb6878befe:Holographic display-Animation",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 5,
-			uint StartFrame = 0,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		Ship_Menu_Button_Function = 
-		{
-			CogPath Camera = 
-			{
-				string Path = ":/Camera",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 2,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-			Vec3 NewCameraPosition = [60, 0, 0],
-			float MoveTime = 0.200000003,
-			bool Reload = false,
-			bool ChangeLevel = false,
-			string LevelToChangeTo = "",
-			bool Respawn = false,
-			bool Quit = false,
-			bool WaveGamemode = false,
-			bool GamemodeButton = false,
-		},
-		Area = 
-		{
-			Vec2 Size = [2, 2],
-			Location Origin = BottomCenter,
-		},
-		MenuTabVisuals = 
-		{
-		},
-		Hierarchy = 
-		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 118,
-				},
-				Named = 
-				{
-					string Name = "TabText",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 1.92405415, 2],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				SpriteText = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [0.790000021, 0.943300068, 1, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "5a075f32e7b83df0:GameFont",
-					uint FontSize = 80,
-					string Text = "Upgrades",
-					TextAlign Align = Center,
-					float PixelsPerUnit = 128,
-					bool Smoothing = false,
-				},
-			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 119,
-		},
-		Named = 
-		{
-			string Name = "Button",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [2, 124.5, 1],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.466666698, 0.627450943, 0.776470661, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Area = 
-		{
-			Vec2 Size = [4, 4],
-			Location Origin = Center,
-		},
-		Hierarchy = 
-		{
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 120,
-		},
-		Named = 
-		{
-			string Name = "Button",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-3, 90, 1],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.0352941155, 0.525489986, 0.800000072, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		Ship_Menu_Button_Visual = 
-		{
-			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
-			string CantSelect = "5ae3cf4fa1244713:Blip_CantSelect",
-			string HoverSound = "5a64f05e1529e84d:Blip_Hover",
-			Vec4 HoverColor = [0.180392146, 0.376470655, 0.956862807, 1],
-			Vec4 ClickColor = [0.466666698, 0.627450943, 0.776470661, 1],
-			float HoverScale = 1.20000005,
-			float ClickScale = 1,
-		},
-		Ship_Menu_Button_Function = 
-		{
-			CogPath Camera = 
-			{
-				string Path = ":/Camera",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 2,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-			Vec3 NewCameraPosition = [0, 120, 0],
-			float MoveTime = 0.200000003,
-			bool Reload = false,
-			bool ChangeLevel = false,
-			string LevelToChangeTo = "",
-			bool Respawn = false,
-			bool Quit = false,
-			bool WaveGamemode = false,
-			bool GamemodeButton = false,
-		},
-		Area = 
-		{
-			Vec2 Size = [4, 4],
-			Location Origin = Center,
-		},
-		Hierarchy = 
-		{
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 121,
-		},
-		Named = 
-		{
-			string Name = "Button",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-4, 97.5, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.0352941155, 0.525489986, 0.800000072, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a79d6cb6878befe:Holographic display-Animation",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 5,
-			uint StartFrame = 0,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		Ship_Menu_Button_Function = 
-		{
-			CogPath Camera = 
-			{
-				string Path = ":/Camera",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 2,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-			Vec3 NewCameraPosition = [30, 0, 0],
-			float MoveTime = 0.200000003,
-			bool Reload = false,
-			bool ChangeLevel = false,
-			string LevelToChangeTo = "",
-			bool Respawn = false,
-			bool Quit = false,
-			bool WaveGamemode = false,
-			bool GamemodeButton = false,
-		},
-		Area = 
-		{
-			Vec2 Size = [2, 2],
-			Location Origin = BottomCenter,
-		},
-		MenuTabVisuals = 
-		{
-		},
-		Hierarchy = 
-		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 122,
-				},
-				Named = 
-				{
-					string Name = "TabText",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 1.92405415, 2],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				SpriteText = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [0.790000021, 0.943300068, 1, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "5a075f32e7b83df0:GameFont",
-					uint FontSize = 72,
-					string Text = "Regeneration",
-					TextAlign Align = Center,
-					float PixelsPerUnit = 128,
-					bool Smoothing = false,
-				},
-			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 123,
-		},
-		Named = 
-		{
-			string Name = "Button",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-3, 120, 1],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.466666698, 0.627450943, 0.776470661, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Area = 
-		{
-			Vec2 Size = [4, 4],
-			Location Origin = Center,
-		},
-		Hierarchy = 
-		{
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 124,
-		},
-		Named = 
-		{
-			string Name = "Button",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [1, 67.5, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.0352941155, 0.525489986, 0.800000072, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a79d6cb6878befe:Holographic display-Animation",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 5,
-			uint StartFrame = 0,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		Ship_Menu_Button_Function = 
-		{
-			CogPath Camera = 
-			{
-				string Path = ":/Camera",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 2,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-			Vec3 NewCameraPosition = [60, 0, 0],
-			float MoveTime = 0.200000003,
-			bool Reload = false,
-			bool ChangeLevel = false,
-			string LevelToChangeTo = "",
-			bool Respawn = false,
-			bool Quit = false,
-			bool WaveGamemode = false,
-			bool GamemodeButton = false,
-		},
-		Area = 
-		{
-			Vec2 Size = [2, 2],
-			Location Origin = BottomCenter,
-		},
-		MenuTabVisuals = 
-		{
-		},
-		Hierarchy = 
-		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 125,
-				},
-				Named = 
-				{
-					string Name = "TabText",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 1.92405415, 2],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				SpriteText = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [0.790000021, 0.943300068, 1, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "5a075f32e7b83df0:GameFont",
-					uint FontSize = 80,
-					string Text = "Ship Repair ",
-					TextAlign Align = Center,
-					float PixelsPerUnit = 128,
-					bool Smoothing = false,
-				},
-			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 126,
-		},
-		Named = 
-		{
-			string Name = "FakeButton",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-9, 67.5, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.464999974, 0.626199901, 0.774999976, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a79d6cb6878befe:Holographic display-Animation",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = false,
-			float AnimationSpeed = 5,
-			uint StartFrame = 3,
-		},
-		Area = 
-		{
-			Vec2 Size = [2, 2],
-			Location Origin = BottomCenter,
-		},
-		MenuTabVisualsAlreadyThere = 
-		{
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		Hierarchy = 
-		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 127,
-				},
-				Named = 
-				{
-					string Name = "TabText",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 1.92405415, 2],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				SpriteText = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [0.790000021, 0.943300068, 1, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "5a075f32e7b83df0:GameFont",
-					uint FontSize = 80,
-					string Text = "Crafting",
-					TextAlign Align = Center,
-					float PixelsPerUnit = 128,
-					bool Smoothing = false,
-				},
-				Hierarchy = 
-				{
-				},
-			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 128,
-		},
-		Named = 
-		{
-			string Name = "Button",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-4.5, 67.5, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.0352941155, 0.525489986, 0.800000072, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a79d6cb6878befe:Holographic display-Animation",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 5,
-			uint StartFrame = 0,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		Ship_Menu_Button_Function = 
-		{
-			CogPath Camera = 
-			{
-				string Path = ":/Camera",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 2,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-			Vec3 NewCameraPosition = [30, 0, 0],
-			float MoveTime = 0.200000003,
-			bool Reload = false,
-			bool ChangeLevel = false,
-			string LevelToChangeTo = "",
-			bool Respawn = false,
-			bool Quit = false,
-			bool WaveGamemode = false,
-			bool GamemodeButton = false,
-		},
-		Area = 
-		{
-			Vec2 Size = [2, 2],
-			Location Origin = BottomCenter,
-		},
-		MenuTabVisuals = 
-		{
-		},
-		Hierarchy = 
-		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 129,
-				},
-				Named = 
-				{
-					string Name = "TabText",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 1.92405415, 2],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				SpriteText = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [0.790000021, 0.943300068, 1, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "5a075f32e7b83df0:GameFont",
-					uint FontSize = 72,
-					string Text = "Regeneration",
-					TextAlign Align = Center,
-					float PixelsPerUnit = 128,
-					bool Smoothing = false,
-				},
-			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 130,
-		},
-		Named = 
-		{
-			string Name = "Button",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-4.5, 127.5, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.0352941155, 0.525489986, 0.800000072, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a79d6cb6878befe:Holographic display-Animation",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 5,
-			uint StartFrame = 0,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		Ship_Menu_Button_Function = 
-		{
-			CogPath Camera = 
-			{
-				string Path = ":/Camera",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 2,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-			Vec3 NewCameraPosition = [30, 0, 0],
-			float MoveTime = 0.200000003,
-			bool Reload = false,
-			bool ChangeLevel = false,
-			string LevelToChangeTo = "",
-			bool Respawn = false,
-			bool Quit = false,
-			bool WaveGamemode = false,
-			bool GamemodeButton = false,
-		},
-		Area = 
-		{
-			Vec2 Size = [2, 2],
-			Location Origin = BottomCenter,
-		},
-		MenuTabVisuals = 
-		{
-		},
-		Hierarchy = 
-		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 131,
-				},
-				Named = 
-				{
-					string Name = "TabText",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 1.92405415, 2],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				SpriteText = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [0.790000021, 0.943300068, 1, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "5a075f32e7b83df0:GameFont",
-					uint FontSize = 72,
-					string Text = "Regeneration",
-					TextAlign Align = Center,
-					float PixelsPerUnit = 128,
-					bool Smoothing = false,
-				},
-			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 132,
-		},
-		Named = 
-		{
-			string Name = "Button",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [4.5, 127.5, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.0352941155, 0.525489986, 0.800000072, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a79d6cb6878befe:Holographic display-Animation",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 5,
-			uint StartFrame = 0,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		Ship_Menu_Button_Function = 
-		{
-			CogPath Camera = 
-			{
-				string Path = ":/Camera",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 2,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-			Vec3 NewCameraPosition = [90, 0, 0],
-			float MoveTime = 0.200000003,
-			bool Reload = false,
-			bool ChangeLevel = false,
-			string LevelToChangeTo = "",
-			bool Respawn = false,
-			bool Quit = false,
-			bool WaveGamemode = false,
-			bool GamemodeButton = false,
-		},
-		Area = 
-		{
-			Vec2 Size = [2, 2],
-			Location Origin = BottomCenter,
-		},
-		MenuTabVisuals = 
-		{
-		},
-		Hierarchy = 
-		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 133,
-				},
-				Named = 
-				{
-					string Name = "TabText",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 1.92405415, 2],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				SpriteText = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [0.790000021, 0.943300068, 1, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "5a075f32e7b83df0:GameFont",
-					uint FontSize = 80,
-					string Text = "Ship Repair ",
-					TextAlign Align = Center,
-					float PixelsPerUnit = 128,
-					bool Smoothing = false,
-				},
-			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 134,
-		},
-		Named = 
-		{
-			string Name = "Button",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, 127.5, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.0352941155, 0.525489986, 0.800000072, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a79d6cb6878befe:Holographic display-Animation",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 5,
-			uint StartFrame = 0,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		Ship_Menu_Button_Function = 
-		{
-			CogPath Camera = 
-			{
-				string Path = ":/Camera",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 2,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-			Vec3 NewCameraPosition = [60, 0, 0],
-			float MoveTime = 0.200000003,
-			bool Reload = false,
-			bool ChangeLevel = false,
-			string LevelToChangeTo = "",
-			bool Respawn = false,
-			bool Quit = false,
-			bool WaveGamemode = false,
-			bool GamemodeButton = false,
-		},
-		Area = 
-		{
-			Vec2 Size = [2, 2],
-			Location Origin = BottomCenter,
-		},
-		MenuTabVisuals = 
-		{
-		},
-		Hierarchy = 
-		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 135,
-				},
-				Named = 
-				{
-					string Name = "TabText",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 1.92405415, 2],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				SpriteText = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [0.790000021, 0.943300068, 1, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "5a075f32e7b83df0:GameFont",
-					uint FontSize = 80,
-					string Text = "Upgrades",
-					TextAlign Align = Center,
-					float PixelsPerUnit = 128,
-					bool Smoothing = false,
-				},
-			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 136,
-		},
-		Named = 
-		{
-			string Name = "FakeButton",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-9, 127.5, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.464999974, 0.626199901, 0.774999976, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a79d6cb6878befe:Holographic display-Animation",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = false,
-			float AnimationSpeed = 5,
-			uint StartFrame = 3,
-		},
-		Area = 
-		{
-			Vec2 Size = [2, 2],
-			Location Origin = BottomCenter,
-		},
-		MenuTabVisualsAlreadyThere = 
-		{
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		Hierarchy = 
-		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 137,
-				},
-				Named = 
-				{
-					string Name = "TabText",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 1.92405415, 2],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				SpriteText = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [0.790000021, 0.943300068, 1, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "5a075f32e7b83df0:GameFont",
-					uint FontSize = 80,
-					string Text = "Crafting",
-					TextAlign Align = Center,
-					float PixelsPerUnit = 128,
-					bool Smoothing = false,
-				},
-				Hierarchy = 
-				{
-				},
-			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 138,
-		},
-		Named = 
-		{
-			string Name = "Icon",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [2, 94.5, 11],
-			Vec3 Scale = [2, 2, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.589198768, 0.595000029, 0.478975028, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 139,
-		},
-		Named = 
-		{
-			string Name = "Icon",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [2, 124.5, 11],
-			Vec3 Scale = [2, 2, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.870000005, 0.503816843, 0.0739499927, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 140,
-		},
-		Named = 
-		{
-			string Name = "Icon",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-3, 120, 11],
-			Vec3 Scale = [2, 2, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.870000005, 0.503816843, 0.0739499927, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 141,
-		},
-		Named = 
-		{
-			string Name = "Icon",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-7.5, 90, 11],
-			Vec3 Scale = [2, 2, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.589198768, 0.595000029, 0.478975028, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 142,
-		},
-		Named = 
-		{
-			string Name = "FakeButton",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [6, 25.5, 1],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.677874982, 0.81131953, 0.935000002, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Area = 
-		{
-			Vec2 Size = [4, 4],
-			Location Origin = Center,
-		},
-		Hierarchy = 
-		{
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 143,
-		},
-		Named = 
-		{
-			string Name = "FakeButton",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [1.5, 25.5, 1],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.677874982, 0.81131953, 0.935000002, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Area = 
-		{
-			Vec2 Size = [4, 4],
-			Location Origin = Center,
-		},
-		Hierarchy = 
-		{
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 144,
-		},
-		Named = 
-		{
-			string Name = "FakeButton",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [6, 55.5, 1],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.677874982, 0.81131953, 0.935000002, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Area = 
-		{
-			Vec2 Size = [4, 4],
-			Location Origin = Center,
-		},
-		Hierarchy = 
-		{
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 145,
-		},
-		Named = 
-		{
-			string Name = "FakeButton",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [1.5, 55.5, 1],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.677874982, 0.81131953, 0.935000002, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Area = 
-		{
-			Vec2 Size = [4, 4],
-			Location Origin = Center,
-		},
-		Hierarchy = 
-		{
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 146,
-		},
-		Named = 
-		{
-			string Name = "FakeButton",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [6, 60, 1],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.677874982, 0.81131953, 0.935000002, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Area = 
-		{
-			Vec2 Size = [4, 4],
-			Location Origin = Center,
-		},
-		Hierarchy = 
-		{
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 147,
-		},
-		Named = 
-		{
-			string Name = "FakeButton",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [1.5, 60, 1],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.677874982, 0.81131953, 0.935000002, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Area = 
-		{
-			Vec2 Size = [4, 4],
-			Location Origin = Center,
-		},
-		Hierarchy = 
-		{
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 148,
-		},
-		Named = 
-		{
-			string Name = "FakeButton",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [6.5, 85.5, 1],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.677874982, 0.81131953, 0.935000002, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Area = 
-		{
-			Vec2 Size = [4, 4],
-			Location Origin = Center,
-		},
-		Hierarchy = 
-		{
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 149,
-		},
-		Named = 
-		{
-			string Name = "FakeButton",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [2, 85.5, 1],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.677874982, 0.81131953, 0.935000002, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Area = 
-		{
-			Vec2 Size = [4, 4],
-			Location Origin = Center,
-		},
-		Hierarchy = 
-		{
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 150,
-		},
-		Named = 
-		{
-			string Name = "FakeButton",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [6.5, 90, 1],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.677874982, 0.81131953, 0.935000002, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Area = 
-		{
-			Vec2 Size = [4, 4],
-			Location Origin = Center,
-		},
-		Hierarchy = 
-		{
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 151,
-		},
-		Named = 
-		{
-			string Name = "FakeButton",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [2, 90, 1],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.677874982, 0.81131953, 0.935000002, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Area = 
-		{
-			Vec2 Size = [4, 4],
-			Location Origin = Center,
-		},
-		Hierarchy = 
-		{
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 152,
-		},
-		Named = 
-		{
-			string Name = "FakeButton",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [6.5, 120, 1],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.677874982, 0.81131953, 0.935000002, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Area = 
-		{
-			Vec2 Size = [4, 4],
-			Location Origin = Center,
-		},
-		Hierarchy = 
-		{
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 153,
-		},
-		Named = 
-		{
-			string Name = "FakeButton",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [2, 115.5, 1],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.677874982, 0.81131953, 0.935000002, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Area = 
-		{
-			Vec2 Size = [4, 4],
-			Location Origin = Center,
-		},
-		Hierarchy = 
-		{
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 154,
-		},
-		Named = 
-		{
-			string Name = "FakeButton",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [6.5, 115.5, 1],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.677874982, 0.81131953, 0.935000002, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Area = 
-		{
-			Vec2 Size = [4, 4],
-			Location Origin = Center,
-		},
-		Hierarchy = 
-		{
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 155,
-		},
-		Named = 
-		{
-			string Name = "FakeButton",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [2, 120, 1],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.677874982, 0.81131953, 0.935000002, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Area = 
-		{
-			Vec2 Size = [4, 4],
-			Location Origin = Center,
-		},
-		Hierarchy = 
-		{
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 156,
-		},
-		Named = 
-		{
-			string Name = "CraftingCostIndicator",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [1.5, 29.5, 11],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		SpriteText = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.839215755, 0.133333325, 0.133333325, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "4e7bac697bec55c5:Verdana",
-			uint FontSize = 64,
-			string Text = "0/0",
-			TextAlign Align = Center,
-			float PixelsPerUnit = 64,
-			bool Smoothing = false,
-		},
-		CostIndicator = 
-		{
-			Enum ItemType = Aluminium,
-			int Cost = 8,
-			Vec4 ValidColor = [0.0784313679, 0.576470613, 0.156862706, 0],
-			Vec4 InvalidColor = [0.840000033, 0.13440001, 0.13440001, 0],
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 157,
-		},
-		Named = 
-		{
-			string Name = "CraftingCostIndicator",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [6, 29.5, 11],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		SpriteText = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.839215755, 0.133333325, 0.133333325, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "4e7bac697bec55c5:Verdana",
-			uint FontSize = 64,
-			string Text = "0/0",
-			TextAlign Align = Center,
-			float PixelsPerUnit = 64,
-			bool Smoothing = false,
-		},
-		CostIndicator = 
-		{
-			Enum ItemType = Iron,
-			int Cost = 4,
-			Vec4 ValidColor = [0.0784313679, 0.576470613, 0.156862706, 0],
-			Vec4 InvalidColor = [0.839215755, 0.133333325, 0.133333325, 0],
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 158,
-		},
-		Named = 
-		{
-			string Name = "Sprite",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [1.5, 30, 11],
-			Vec3 Scale = [3, 3, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a6ca865e6dcd3d6:Game_AluminiumOre_Pickup_Animation ",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 159,
-		},
-		Named = 
-		{
-			string Name = "Sprite",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [6, 30, 11],
-			Vec3 Scale = [3, 3, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a861677b874ddb8:Game_ResourceOre_Pickup_Animation",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 160,
-		},
-		Named = 
-		{
-			string Name = "CraftingCostIndicator",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [6, 59.5, 11],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		SpriteText = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.839215755, 0.133333325, 0.133333325, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "4e7bac697bec55c5:Verdana",
-			uint FontSize = 64,
-			string Text = "0/0",
-			TextAlign Align = Center,
-			float PixelsPerUnit = 64,
-			bool Smoothing = false,
-		},
-		CostIndicator = 
-		{
-			Enum ItemType = Copper,
-			int Cost = 6,
-			Vec4 ValidColor = [0.0784313679, 0.576470613, 0.156862706, 0],
-			Vec4 InvalidColor = [0.839215755, 0.133333325, 0.133333325, 0],
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 161,
-		},
-		Named = 
-		{
-			string Name = "CraftingCostIndicator",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [1.5, 55, 11],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		SpriteText = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.839215755, 0.133333325, 0.133333325, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "4e7bac697bec55c5:Verdana",
-			uint FontSize = 64,
-			string Text = "0/0",
-			TextAlign Align = Center,
-			float PixelsPerUnit = 64,
-			bool Smoothing = false,
-		},
-		CostIndicator = 
-		{
-			Enum ItemType = Titanium,
-			int Cost = 2,
-			Vec4 ValidColor = [0.0784313679, 0.576470613, 0.156862706, 0],
-			Vec4 InvalidColor = [0.839215755, 0.133333325, 0.133333325, 0],
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 162,
-		},
-		Named = 
-		{
-			string Name = "CraftingCostIndicator",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [1.5, 59.5, 11],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		SpriteText = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.839215755, 0.133333325, 0.133333325, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "4e7bac697bec55c5:Verdana",
-			uint FontSize = 64,
-			string Text = "0/0",
-			TextAlign Align = Center,
-			float PixelsPerUnit = 64,
-			bool Smoothing = false,
-		},
-		CostIndicator = 
-		{
-			Enum ItemType = Aluminium,
-			int Cost = 8,
-			Vec4 ValidColor = [0.0784313679, 0.576470613, 0.156862706, 0],
-			Vec4 InvalidColor = [0.839215755, 0.133333325, 0.133333325, 0],
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 163,
-		},
-		Named = 
-		{
-			string Name = "Sprite",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [6, 60, 11],
-			Vec3 Scale = [3, 3, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a6ca9e2c229190c:Game_CopperOre_Pickup_Animation",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 164,
-		},
-		Named = 
-		{
-			string Name = "Sprite",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [1.5, 55.5, 11],
-			Vec3 Scale = [3, 3, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a6ca9bdd19de39a:Game_TitaniumOre_Pickup_Animation",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 165,
-		},
-		Named = 
-		{
-			string Name = "Sprite",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [1.5, 60, 11],
-			Vec3 Scale = [3, 3, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a6ca865e6dcd3d6:Game_AluminiumOre_Pickup_Animation ",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 166,
+			uint Id = 70,
 		},
 		Named = 
 		{
@@ -7890,13 +3205,19 @@ escape space. Repair it here.",
 		MenuTabVisuals = 
 		{
 		},
+		Button_PlaySound = 
+		{
+			string ClickSound = "5ae3cf4fa1253749:Blip_Select",
+			string CantSelectSound = "5ae3cf4fa1244713:Blip_CantSelect",
+			string HoverSound = "5a64f05e1529e84d:Blip_Hover",
+		},
 		Hierarchy = 
 		{
 			Cog = 
 			{
 				LinkId = 
 				{
-					uint Id = 167,
+					uint Id = 71,
 				},
 				Named = 
 				{
@@ -7932,7 +3253,1576 @@ escape space. Repair it here.",
 	{
 		LinkId = 
 		{
-			uint Id = 168,
+			uint Id = 72,
+		},
+		Named = 
+		{
+			string Name = "Button",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [50, 7.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.0352941155, 0.525489986, 0.800000072, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a79d6cb6878befe:Holographic display-Animation",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 5,
+			uint StartFrame = 0,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		Ship_Menu_Button_Function = 
+		{
+			CogPath Camera = 
+			{
+				string Path = ":/Camera",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 2,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			Vec3 NewCameraPosition = [0, 0, 0],
+			float MoveTime = 0.200000003,
+			bool Reload = false,
+			bool ChangeLevel = false,
+			string LevelToChangeTo = "",
+			bool Respawn = false,
+			bool Quit = false,
+			bool WaveGamemode = false,
+			bool GamemodeButton = false,
+		},
+		Area = 
+		{
+			Vec2 Size = [2, 2],
+			Location Origin = BottomCenter,
+		},
+		MenuTabVisuals = 
+		{
+		},
+		Button_PlaySound = 
+		{
+			string ClickSound = "5ae3cf4fa1253749:Blip_Select",
+			string CantSelectSound = "5ae3cf4fa1244713:Blip_CantSelect",
+			string HoverSound = "5a64f05e1529e84d:Blip_Hover",
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 73,
+				},
+				Named = 
+				{
+					string Name = "TabText",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 1.92405415, 2],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				SpriteText = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [0.790000021, 0.943300068, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string FontName = "5a075f32e7b83df0:GameFont",
+					uint FontSize = 80,
+					string Text = "Crafting",
+					TextAlign Align = Center,
+					float PixelsPerUnit = 128,
+					bool Smoothing = false,
+				},
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 74,
+		},
+		Named = 
+		{
+			string Name = "Button",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [21, 7.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.0352941155, 0.525489986, 0.800000072, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a79d6cb6878befe:Holographic display-Animation",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 5,
+			uint StartFrame = 0,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		Ship_Menu_Button_Function = 
+		{
+			CogPath Camera = 
+			{
+				string Path = ":/Camera",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 2,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			Vec3 NewCameraPosition = [0, 0, 0],
+			float MoveTime = 0.200000003,
+			bool Reload = false,
+			bool ChangeLevel = false,
+			string LevelToChangeTo = "",
+			bool Respawn = false,
+			bool Quit = false,
+			bool WaveGamemode = false,
+			bool GamemodeButton = false,
+		},
+		Area = 
+		{
+			Vec2 Size = [2, 2],
+			Location Origin = BottomCenter,
+		},
+		MenuTabVisuals = 
+		{
+		},
+		Button_PlaySound = 
+		{
+			string ClickSound = "5ae3cf4fa1253749:Blip_Select",
+			string CantSelectSound = "5ae3cf4fa1244713:Blip_CantSelect",
+			string HoverSound = "5a64f05e1529e84d:Blip_Hover",
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 75,
+				},
+				Named = 
+				{
+					string Name = "TabText",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 1.92405415, 2],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				SpriteText = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [0.790000021, 0.943300068, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string FontName = "5a075f32e7b83df0:GameFont",
+					uint FontSize = 80,
+					string Text = "Crafting",
+					TextAlign Align = Center,
+					float PixelsPerUnit = 128,
+					bool Smoothing = false,
+				},
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 76,
+		},
+		Named = 
+		{
+			string Name = "Button",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [54.5, 7.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.0352941155, 0.525489986, 0.800000072, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a79d6cb6878befe:Holographic display-Animation",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 5,
+			uint StartFrame = 0,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		Ship_Menu_Button_Function = 
+		{
+			CogPath Camera = 
+			{
+				string Path = ":/Camera",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 2,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			Vec3 NewCameraPosition = [30, 0, 0],
+			float MoveTime = 0.200000003,
+			bool Reload = false,
+			bool ChangeLevel = false,
+			string LevelToChangeTo = "",
+			bool Respawn = false,
+			bool Quit = false,
+			bool WaveGamemode = false,
+			bool GamemodeButton = false,
+		},
+		Area = 
+		{
+			Vec2 Size = [2, 2],
+			Location Origin = BottomCenter,
+		},
+		MenuTabVisuals = 
+		{
+		},
+		Button_PlaySound = 
+		{
+			string ClickSound = "5ae3cf4fa1253749:Blip_Select",
+			string CantSelectSound = "5ae3cf4fa1244713:Blip_CantSelect",
+			string HoverSound = "5a64f05e1529e84d:Blip_Hover",
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 77,
+				},
+				Named = 
+				{
+					string Name = "TabText",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 1.92405415, 2],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				SpriteText = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [0.790000021, 0.943300068, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string FontName = "5a075f32e7b83df0:GameFont",
+					uint FontSize = 72,
+					string Text = "Regeneration",
+					TextAlign Align = Center,
+					float PixelsPerUnit = 128,
+					bool Smoothing = false,
+				},
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 78,
+		},
+		Named = 
+		{
+			string Name = "Button",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-4.5, 7.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.0352941155, 0.525489986, 0.800000072, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a79d6cb6878befe:Holographic display-Animation",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 5,
+			uint StartFrame = 0,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		Ship_Menu_Button_Function = 
+		{
+			CogPath Camera = 
+			{
+				string Path = ":/Camera",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 2,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			Vec3 NewCameraPosition = [30, 0, 0],
+			float MoveTime = 0.200000003,
+			bool Reload = false,
+			bool ChangeLevel = false,
+			string LevelToChangeTo = "",
+			bool Respawn = false,
+			bool Quit = false,
+			bool WaveGamemode = false,
+			bool GamemodeButton = false,
+		},
+		Area = 
+		{
+			Vec2 Size = [2, 2],
+			Location Origin = BottomCenter,
+		},
+		MenuTabVisuals = 
+		{
+		},
+		Button_PlaySound = 
+		{
+			string ClickSound = "5ae3cf4fa1253749:Blip_Select",
+			string CantSelectSound = "5ae3cf4fa1244713:Blip_CantSelect",
+			string HoverSound = "5a64f05e1529e84d:Blip_Hover",
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 79,
+				},
+				Named = 
+				{
+					string Name = "TabText",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 1.92405415, 2],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				SpriteText = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [0.790000021, 0.943300068, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string FontName = "5a075f32e7b83df0:GameFont",
+					uint FontSize = 72,
+					string Text = "Regeneration",
+					TextAlign Align = Center,
+					float PixelsPerUnit = 128,
+					bool Smoothing = false,
+				},
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 80,
+		},
+		Named = 
+		{
+			string Name = "FakeButton",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-9, 7.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.464999974, 0.626199901, 0.774999976, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a79d6cb6878befe:Holographic display-Animation",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = false,
+			float AnimationSpeed = 5,
+			uint StartFrame = 3,
+		},
+		Area = 
+		{
+			Vec2 Size = [2, 2],
+			Location Origin = BottomCenter,
+		},
+		MenuTabVisualsAlreadyThere = 
+		{
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 81,
+				},
+				Named = 
+				{
+					string Name = "TabText",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 1.92405415, 2],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				SpriteText = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [0.790000021, 0.943300068, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string FontName = "5a075f32e7b83df0:GameFont",
+					uint FontSize = 80,
+					string Text = "Crafting",
+					TextAlign Align = Center,
+					float PixelsPerUnit = 128,
+					bool Smoothing = false,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 82,
+		},
+		Named = 
+		{
+			string Name = "SpriteText",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [30, 6.5, 21],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "5a075f32e7b83df0:GameFont",
+			uint FontSize = 64,
+			string Text = "Regenerating the world will 
+reset all asteroids. You will
+keep all resources and buildings.",
+			TextAlign Align = Center,
+			float PixelsPerUnit = 64,
+			bool Smoothing = false,
+		},
+		SpriteTextBlock = 
+		{
+			string TextBlock = "5a2d59168044e87d:WorldRegen",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 83,
+		},
+		Named = 
+		{
+			string Name = "SpriteText",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [59, 6.5, 21],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "5a075f32e7b83df0:GameFont",
+			uint FontSize = 64,
+			string Text = "You need to repair your ship to 
+escape space. Repair it here.",
+			TextAlign Align = Center,
+			float PixelsPerUnit = 64,
+			bool Smoothing = false,
+		},
+		SpriteTextBlock = 
+		{
+			string TextBlock = "5a2d587abcbe7e7d:RepairShip",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 84,
+		},
+		Named = 
+		{
+			string Name = "background",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 30, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.258823544, 0.58431375, 0.745098054, 0.800000012],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Area = 
+		{
+			Vec2 Size = [22, 15],
+			Location Origin = Center,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 85,
+		},
+		Named = 
+		{
+			string Name = "background",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 60, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.258823544, 0.58431375, 0.745098054, 0.800000012],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Area = 
+		{
+			Vec2 Size = [22, 15],
+			Location Origin = Center,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 86,
+		},
+		Named = 
+		{
+			string Name = "Button",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [7, 34.5, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.0352941155, 0.525489986, 0.800000072, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		Area = 
+		{
+			Vec2 Size = [6, 3],
+			Location Origin = Center,
+		},
+		Ship_Menu_Button_Crafting = 
+		{
+			int IronCost = 4,
+			int CopperCost = 0,
+			int TitaniumCost = 0,
+			int AluminiumCost = 8,
+			Enum ResultType = Pipe,
+			int ResultNumber = 1,
+			Vec4 HoverColor = [0.180392146, 0.376470655, 0.956862807, 1],
+			Vec4 ClickColor = [0.466666698, 0.627450943, 0.776470661, 1],
+			Vec4 DisabledColor = [0.466666698, 0.627450943, 0.776470661, 1],
+			float HoverScale = 1.20000005,
+			float ClickScale = 1,
+		},
+		Ship_Menu_Button_Visual = 
+		{
+			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
+			string CantSelect = "5ae3cf4fa1244713:Blip_CantSelect",
+			string HoverSound = "5a64f05e1529e84d:Blip_Hover",
+			Vec4 HoverColor = [0.211764723, 0.431372583, 0.545098066, 1],
+			Vec4 ClickColor = [0.266666681, 0.443137288, 0.53725493, 1],
+			float HoverScale = 1.20000005,
+			float ClickScale = 1,
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 87,
+				},
+				Named = 
+				{
+					string Name = "CraftText",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0.536810398, 1],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				SpriteText = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string FontName = "5a075f32e7b83df0:GameFont",
+					uint FontSize = 75,
+					string Text = "Create",
+					TextAlign Align = Center,
+					float PixelsPerUnit = 64,
+					bool Smoothing = false,
+				},
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 88,
+		},
+		Named = 
+		{
+			string Name = "Button",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [7, 64.5, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.0352941155, 0.525489986, 0.800000072, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		Area = 
+		{
+			Vec2 Size = [6, 3],
+			Location Origin = Center,
+		},
+		Ship_Menu_Button_Crafting = 
+		{
+			int IronCost = 0,
+			int CopperCost = 6,
+			int TitaniumCost = 2,
+			int AluminiumCost = 8,
+			Enum ResultType = Turret,
+			int ResultNumber = 1,
+			Vec4 HoverColor = [0.180392146, 0.376470655, 0.956862807, 1],
+			Vec4 ClickColor = [0.466666698, 0.627450943, 0.776470661, 1],
+			Vec4 DisabledColor = [0.466666698, 0.627450943, 0.776470661, 1],
+			float HoverScale = 1.20000005,
+			float ClickScale = 1,
+		},
+		Ship_Menu_Button_Visual = 
+		{
+			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
+			string CantSelect = "5ae3cf4fa1244713:Blip_CantSelect",
+			string HoverSound = "5a64f05e1529e84d:Blip_Hover",
+			Vec4 HoverColor = [0.211764723, 0.431372583, 0.545098066, 1],
+			Vec4 ClickColor = [0.337254912, 0.450980425, 0.56078434, 1],
+			float HoverScale = 1.20000005,
+			float ClickScale = 1,
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 89,
+				},
+				Named = 
+				{
+					string Name = "CraftText",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0.75, 1],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				SpriteText = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string FontName = "5a075f32e7b83df0:GameFont",
+					uint FontSize = 75,
+					string Text = "Create",
+					TextAlign Align = Center,
+					float PixelsPerUnit = 64,
+					bool Smoothing = false,
+				},
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 90,
+		},
+		Named = 
+		{
+			string Name = "FakeButton",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [6, 25.5, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.677874982, 0.81131953, 0.935000002, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Area = 
+		{
+			Vec2 Size = [4, 4],
+			Location Origin = Center,
+		},
+		Hierarchy = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 91,
+		},
+		Named = 
+		{
+			string Name = "FakeButton",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [1.5, 25.5, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.677874982, 0.81131953, 0.935000002, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Area = 
+		{
+			Vec2 Size = [4, 4],
+			Location Origin = Center,
+		},
+		Hierarchy = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 92,
+		},
+		Named = 
+		{
+			string Name = "FakeButton",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [6, 55.5, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.677874982, 0.81131953, 0.935000002, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Area = 
+		{
+			Vec2 Size = [4, 4],
+			Location Origin = Center,
+		},
+		Hierarchy = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 93,
+		},
+		Named = 
+		{
+			string Name = "FakeButton",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [1.5, 55.5, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.677874982, 0.81131953, 0.935000002, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Area = 
+		{
+			Vec2 Size = [4, 4],
+			Location Origin = Center,
+		},
+		Hierarchy = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 94,
+		},
+		Named = 
+		{
+			string Name = "FakeButton",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [6, 60, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.677874982, 0.81131953, 0.935000002, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Area = 
+		{
+			Vec2 Size = [4, 4],
+			Location Origin = Center,
+		},
+		Hierarchy = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 95,
+		},
+		Named = 
+		{
+			string Name = "FakeButton",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [1.5, 60, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.677874982, 0.81131953, 0.935000002, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a073c442a60ccfc:Ship_Menu_Button_Art",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Area = 
+		{
+			Vec2 Size = [4, 4],
+			Location Origin = Center,
+		},
+		Hierarchy = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 96,
+		},
+		Named = 
+		{
+			string Name = "CraftingCostIndicator",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [1.5, 29.5, 11],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.839215755, 0.133333325, 0.133333325, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "4e7bac697bec55c5:Verdana",
+			uint FontSize = 64,
+			string Text = "0/0",
+			TextAlign Align = Center,
+			float PixelsPerUnit = 64,
+			bool Smoothing = false,
+		},
+		CostIndicator = 
+		{
+			Enum ItemType = Aluminium,
+			int Cost = 8,
+			Vec4 ValidColor = [0.0784313679, 0.576470613, 0.156862706, 0],
+			Vec4 InvalidColor = [0.840000033, 0.13440001, 0.13440001, 0],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 97,
+		},
+		Named = 
+		{
+			string Name = "CraftingCostIndicator",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [6, 29.5, 11],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.839215755, 0.133333325, 0.133333325, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "4e7bac697bec55c5:Verdana",
+			uint FontSize = 64,
+			string Text = "0/0",
+			TextAlign Align = Center,
+			float PixelsPerUnit = 64,
+			bool Smoothing = false,
+		},
+		CostIndicator = 
+		{
+			Enum ItemType = Iron,
+			int Cost = 4,
+			Vec4 ValidColor = [0.0784313679, 0.576470613, 0.156862706, 0],
+			Vec4 InvalidColor = [0.839215755, 0.133333325, 0.133333325, 0],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 98,
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [1.5, 30, 11],
+			Vec3 Scale = [3, 3, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a6ca865e6dcd3d6:Game_AluminiumOre_Pickup_Animation ",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 99,
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [6, 30, 11],
+			Vec3 Scale = [3, 3, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a861677b874ddb8:Game_ResourceOre_Pickup_Animation",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 100,
+		},
+		Named = 
+		{
+			string Name = "CraftingCostIndicator",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [6, 59.5, 11],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.839215755, 0.133333325, 0.133333325, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "4e7bac697bec55c5:Verdana",
+			uint FontSize = 64,
+			string Text = "0/0",
+			TextAlign Align = Center,
+			float PixelsPerUnit = 64,
+			bool Smoothing = false,
+		},
+		CostIndicator = 
+		{
+			Enum ItemType = Copper,
+			int Cost = 6,
+			Vec4 ValidColor = [0.0784313679, 0.576470613, 0.156862706, 0],
+			Vec4 InvalidColor = [0.839215755, 0.133333325, 0.133333325, 0],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 101,
+		},
+		Named = 
+		{
+			string Name = "CraftingCostIndicator",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [1.5, 55, 11],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.839215755, 0.133333325, 0.133333325, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "4e7bac697bec55c5:Verdana",
+			uint FontSize = 64,
+			string Text = "0/0",
+			TextAlign Align = Center,
+			float PixelsPerUnit = 64,
+			bool Smoothing = false,
+		},
+		CostIndicator = 
+		{
+			Enum ItemType = Titanium,
+			int Cost = 2,
+			Vec4 ValidColor = [0.0784313679, 0.576470613, 0.156862706, 0],
+			Vec4 InvalidColor = [0.839215755, 0.133333325, 0.133333325, 0],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 102,
+		},
+		Named = 
+		{
+			string Name = "CraftingCostIndicator",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [1.5, 59.5, 11],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.839215755, 0.133333325, 0.133333325, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "4e7bac697bec55c5:Verdana",
+			uint FontSize = 64,
+			string Text = "0/0",
+			TextAlign Align = Center,
+			float PixelsPerUnit = 64,
+			bool Smoothing = false,
+		},
+		CostIndicator = 
+		{
+			Enum ItemType = Aluminium,
+			int Cost = 8,
+			Vec4 ValidColor = [0.0784313679, 0.576470613, 0.156862706, 0],
+			Vec4 InvalidColor = [0.839215755, 0.133333325, 0.133333325, 0],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 103,
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [6, 60, 11],
+			Vec3 Scale = [3, 3, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a6ca9e2c229190c:Game_CopperOre_Pickup_Animation",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 104,
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [1.5, 55.5, 11],
+			Vec3 Scale = [3, 3, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a6ca9bdd19de39a:Game_TitaniumOre_Pickup_Animation",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 105,
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [1.5, 60, 11],
+			Vec3 Scale = [3, 3, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a6ca865e6dcd3d6:Game_AluminiumOre_Pickup_Animation ",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 106,
 		},
 		Named = 
 		{
@@ -7966,7 +4856,7 @@ escape space. Repair it here.",
 	{
 		LinkId = 
 		{
-			uint Id = 169,
+			uint Id = 107,
 		},
 		Named = 
 		{
@@ -8000,7 +4890,7 @@ escape space. Repair it here.",
 	{
 		LinkId = 
 		{
-			uint Id = 170,
+			uint Id = 108,
 		},
 		Named = 
 		{
@@ -8034,7 +4924,7 @@ escape space. Repair it here.",
 	{
 		LinkId = 
 		{
-			uint Id = 171,
+			uint Id = 109,
 		},
 		Named = 
 		{
@@ -8069,7 +4959,7 @@ escape space. Repair it here.",
 		string Name = "5a7f4db494e9d95c:Cursor",
 		LinkId = 
 		{
-			uint Id = 172,
+			uint Id = 110,
 		},
 		Transform = 
 		{
@@ -8080,6 +4970,654 @@ escape space. Repair it here.",
 		Named = 
 		{
 			string Name = "Cursor",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 111,
+		},
+		Named = 
+		{
+			string Name = "Button",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0.5, 37.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.0352941155, 0.525489986, 0.800000072, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a79d6cb6878befe:Holographic display-Animation",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 5,
+			uint StartFrame = 0,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		Ship_Menu_Button_Function = 
+		{
+			CogPath Camera = 
+			{
+				string Path = ":/Camera",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 2,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			Vec3 NewCameraPosition = [60, 0, 0],
+			float MoveTime = 0.200000003,
+			bool Reload = false,
+			bool ChangeLevel = false,
+			string LevelToChangeTo = "",
+			bool Respawn = false,
+			bool Quit = false,
+			bool WaveGamemode = false,
+			bool GamemodeButton = false,
+		},
+		Area = 
+		{
+			Vec2 Size = [2, 2],
+			Location Origin = BottomCenter,
+		},
+		MenuTabVisuals = 
+		{
+		},
+		Button_PlaySound = 
+		{
+			string ClickSound = "5ae3cf4fa1253749:Blip_Select",
+			string CantSelectSound = "5ae3cf4fa1244713:Blip_CantSelect",
+			string HoverSound = "5a64f05e1529e84d:Blip_Hover",
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 112,
+				},
+				Named = 
+				{
+					string Name = "TabText",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 1.92405415, 2],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				SpriteText = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [0.790000021, 0.943300068, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string FontName = "5a075f32e7b83df0:GameFont",
+					uint FontSize = 80,
+					string Text = "Ship Repair ",
+					TextAlign Align = Center,
+					float PixelsPerUnit = 128,
+					bool Smoothing = false,
+				},
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 113,
+		},
+		Named = 
+		{
+			string Name = "Button",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-4.5, 37.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.0352941155, 0.525489986, 0.800000072, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a79d6cb6878befe:Holographic display-Animation",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 5,
+			uint StartFrame = 0,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		Ship_Menu_Button_Function = 
+		{
+			CogPath Camera = 
+			{
+				string Path = ":/Camera",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 2,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			Vec3 NewCameraPosition = [30, 0, 0],
+			float MoveTime = 0.200000003,
+			bool Reload = false,
+			bool ChangeLevel = false,
+			string LevelToChangeTo = "",
+			bool Respawn = false,
+			bool Quit = false,
+			bool WaveGamemode = false,
+			bool GamemodeButton = false,
+		},
+		Area = 
+		{
+			Vec2 Size = [2, 2],
+			Location Origin = BottomCenter,
+		},
+		MenuTabVisuals = 
+		{
+		},
+		Button_PlaySound = 
+		{
+			string ClickSound = "5ae3cf4fa1253749:Blip_Select",
+			string CantSelectSound = "5ae3cf4fa1244713:Blip_CantSelect",
+			string HoverSound = "5a64f05e1529e84d:Blip_Hover",
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 114,
+				},
+				Named = 
+				{
+					string Name = "TabText",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 1.92405415, 2],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				SpriteText = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [0.790000021, 0.943300068, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string FontName = "5a075f32e7b83df0:GameFont",
+					uint FontSize = 72,
+					string Text = "Regeneration",
+					TextAlign Align = Center,
+					float PixelsPerUnit = 128,
+					bool Smoothing = false,
+				},
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 115,
+		},
+		Named = 
+		{
+			string Name = "FakeButton",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-9, 37.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.464999974, 0.626199901, 0.774999976, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a79d6cb6878befe:Holographic display-Animation",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = false,
+			float AnimationSpeed = 5,
+			uint StartFrame = 3,
+		},
+		Area = 
+		{
+			Vec2 Size = [2, 2],
+			Location Origin = BottomCenter,
+		},
+		MenuTabVisualsAlreadyThere = 
+		{
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 116,
+				},
+				Named = 
+				{
+					string Name = "TabText",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 1.92405415, 2],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				SpriteText = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [0.790000021, 0.943300068, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string FontName = "5a075f32e7b83df0:GameFont",
+					uint FontSize = 80,
+					string Text = "Crafting",
+					TextAlign Align = Center,
+					float PixelsPerUnit = 128,
+					bool Smoothing = false,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 117,
+		},
+		Named = 
+		{
+			string Name = "FakeButton",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-9, 67.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.464999974, 0.626199901, 0.774999976, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a79d6cb6878befe:Holographic display-Animation",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = false,
+			float AnimationSpeed = 5,
+			uint StartFrame = 3,
+		},
+		Area = 
+		{
+			Vec2 Size = [2, 2],
+			Location Origin = BottomCenter,
+		},
+		MenuTabVisualsAlreadyThere = 
+		{
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 118,
+				},
+				Named = 
+				{
+					string Name = "TabText",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 1.92405415, 2],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				SpriteText = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [0.790000021, 0.943300068, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string FontName = "5a075f32e7b83df0:GameFont",
+					uint FontSize = 80,
+					string Text = "Crafting",
+					TextAlign Align = Center,
+					float PixelsPerUnit = 128,
+					bool Smoothing = false,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 119,
+		},
+		Named = 
+		{
+			string Name = "Button",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-4.5, 67.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.0352941155, 0.525489986, 0.800000072, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a79d6cb6878befe:Holographic display-Animation",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 5,
+			uint StartFrame = 0,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		Ship_Menu_Button_Function = 
+		{
+			CogPath Camera = 
+			{
+				string Path = ":/Camera",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 2,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			Vec3 NewCameraPosition = [30, 0, 0],
+			float MoveTime = 0.200000003,
+			bool Reload = false,
+			bool ChangeLevel = false,
+			string LevelToChangeTo = "",
+			bool Respawn = false,
+			bool Quit = false,
+			bool WaveGamemode = false,
+			bool GamemodeButton = false,
+		},
+		Area = 
+		{
+			Vec2 Size = [2, 2],
+			Location Origin = BottomCenter,
+		},
+		MenuTabVisuals = 
+		{
+		},
+		Button_PlaySound = 
+		{
+			string ClickSound = "5ae3cf4fa1253749:Blip_Select",
+			string CantSelectSound = "5ae3cf4fa1244713:Blip_CantSelect",
+			string HoverSound = "5a64f05e1529e84d:Blip_Hover",
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 120,
+				},
+				Named = 
+				{
+					string Name = "TabText",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 1.92405415, 2],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				SpriteText = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [0.790000021, 0.943300068, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string FontName = "5a075f32e7b83df0:GameFont",
+					uint FontSize = 72,
+					string Text = "Regeneration",
+					TextAlign Align = Center,
+					float PixelsPerUnit = 128,
+					bool Smoothing = false,
+				},
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 121,
+		},
+		Named = 
+		{
+			string Name = "Button",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0.5, 67.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.0352941155, 0.525489986, 0.800000072, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a79d6cb6878befe:Holographic display-Animation",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 5,
+			uint StartFrame = 0,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		Ship_Menu_Button_Function = 
+		{
+			CogPath Camera = 
+			{
+				string Path = ":/Camera",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 2,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			Vec3 NewCameraPosition = [60, 0, 0],
+			float MoveTime = 0.200000003,
+			bool Reload = false,
+			bool ChangeLevel = false,
+			string LevelToChangeTo = "",
+			bool Respawn = false,
+			bool Quit = false,
+			bool WaveGamemode = false,
+			bool GamemodeButton = false,
+		},
+		Area = 
+		{
+			Vec2 Size = [2, 2],
+			Location Origin = BottomCenter,
+		},
+		MenuTabVisuals = 
+		{
+		},
+		Button_PlaySound = 
+		{
+			string ClickSound = "5ae3cf4fa1253749:Blip_Select",
+			string CantSelectSound = "5ae3cf4fa1244713:Blip_CantSelect",
+			string HoverSound = "5a64f05e1529e84d:Blip_Hover",
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 122,
+				},
+				Named = 
+				{
+					string Name = "TabText",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 1.92405415, 2],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				SpriteText = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [0.790000021, 0.943300068, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string FontName = "5a075f32e7b83df0:GameFont",
+					uint FontSize = 80,
+					string Text = "Ship Repair ",
+					TextAlign Align = Center,
+					float PixelsPerUnit = 128,
+					bool Smoothing = false,
+				},
+			},
 		},
 	},
 },

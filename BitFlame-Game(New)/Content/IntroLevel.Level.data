@@ -125,7 +125,7 @@ Level =
 			},
 			float DigipenLogo_FadeinTime = 5,
 			float DigipenLogo_FadeoutTime = 5,
-			float Interval_01_Time = 1.5,
+			float Interval_01_Time = 5,
 			CogPath TeamLogo = 
 			{
 				string Path = ":/TeamLogo",
@@ -205,7 +205,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.27286816, -1.76387239, 50.0020561],
+			Vec3 Translation = [1.14516425, -2.04378438, 50.0020561],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -217,7 +217,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 9.07183838,
+			float Size = 27.2532349,
 		},
 		EditorCameraController = 
 		{
@@ -225,7 +225,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [1.27286816, -1.76387239, 0.00205782056],
+			Vec3 LookTarget = [1.14516425, -2.04378438, 0.00205781613],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -295,7 +295,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5aa3406769896a5f:DigiPenLogo",
+			string SpriteSource = "5aa36d8a32572e92:DigiPen_WHITE_1024px",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -351,7 +351,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.5, 1.5, 0],
+			Vec3 Translation = [-0.100000001, 1.19523156, 0],
 			Vec3 Scale = [0.999999881, 0.999999881, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -398,7 +398,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.5, 1.5, 0],
+			Vec3 Translation = [-0.101719491, 1.07954538, -0.0227071065],
 			Vec3 Scale = [0.999999881, 0.999999881, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -519,6 +519,40 @@ Level =
 		},
 		Hierarchy = 
 		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 10,
+		},
+		Named = 
+		{
+			string Name = "SpriteText",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, -7, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 0.999899983],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "5a075f32e7b83df0:GameFont",
+			uint FontSize = 150,
+			string Text = "All content © 2018 DigiPen (USA) Corporation, all rights reserved.",
+			TextAlign Align = Center,
+			float PixelsPerUnit = 192,
+			bool Smoothing = false,
 		},
 	},
 },

@@ -134,51 +134,51 @@ RichAnimation =
 												Object value = 
 												{
 													float Time = 0,
-													float Value = 0.150000006,
+													float Value = 1.19033027,
 													Vec2 TangentIn = [-0.0500000007, 0],
 													Vec2 TangentOut = [0.0500000007, 0],
 													uint EditorFlags = 0,
 												},
 											},
 											{
-												float key = 1.39999998,
+												float key = 1.30142295,
 												Object value = 
 												{
-													float Time = 1.39999998,
-													float Value = 0.300000012,
+													float Time = 1.30142295,
+													float Value = 1.33696914,
 													Vec2 TangentIn = [-0.0500000007, 0],
 													Vec2 TangentOut = [0.0500000007, 0],
 													uint EditorFlags = 0,
 												},
 											},
 											{
-												float key = 3.77727413,
+												float key = 3.67477083,
 												Object value = 
 												{
-													float Time = 3.77727413,
-													float Value = 0.297234297,
+													float Time = 3.67477083,
+													float Value = 1.33696914,
 													Vec2 TangentIn = [-0.0500000007, 0],
 													Vec2 TangentOut = [0.0500000007, 0],
 													uint EditorFlags = 0,
 												},
 											},
 											{
-												float key = 6.67973614,
+												float key = 6.58191729,
 												Object value = 
 												{
-													float Time = 6.67973614,
-													float Value = 0.180527925,
+													float Time = 6.58191729,
+													float Value = 1.21289015,
 													Vec2 TangentIn = [-0.0500000007, 0],
 													Vec2 TangentOut = [0.0500000007, 0],
 													uint EditorFlags = 0,
 												},
 											},
 											{
-												float key = 8.98118401,
+												float key = 8.88135529,
 												Object value = 
 												{
-													float Time = 8.98118401,
-													float Value = 0.0638215542,
+													float Time = 8.88135529,
+													float Value = 1.10009098,
 													Vec2 TangentIn = [-0.0500000007, 0],
 													Vec2 TangentOut = [0.0500000007, 0],
 													uint EditorFlags = 0,

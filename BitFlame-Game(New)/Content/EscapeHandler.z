@@ -2,6 +2,11 @@ class EscapeHandler : ZilchComponent
 {
     [Property]
     var ApplyQuit : Boolean = false;
+    
+    [Property]
+    var Pause : Boolean = false;
+
+    var PauseScreen : Cog = null;
 
     function Initialize(init : CogInitializer)
     {
@@ -20,8 +25,8 @@ class EscapeHandler : ZilchComponent
             // Call function to quit game from the GameSession object
             event.Game.Quit();
         }
-        // If this.ApplyQuit is set to false...
-        else
+        // If this.ApplyQuit is set to false and pause is set to true...
+        else if(this.Pause)
         {
             // Supply alternate behavior (pausing/unpausing the game) for Esc key
             var spaces = this.GameSession.AllSpaces;
@@ -29,6 +34,16 @@ class EscapeHandler : ZilchComponent
             {
                 space.TimeSpace.TogglePause();
             }
+            
+            if(this.PauseScreen != null)
+            {
+                this.PauseScreen.Destroy();
+            }
+            else
+            {
+                this.PauseScreen = this.Space.CreateAtPosition( Archetype.PauseScreen, Real3(0, 0, 39)); 
+            }
+            
         }
     }
 }

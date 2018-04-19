@@ -129,6 +129,10 @@ class Ship_Menu_Button_Repair_Function : ZilchComponent
         {
             this.Sprite.Color = this.DisabledColor;
         }
+        else
+        {
+            this.Sprite.Color = this.OriginalColor;
+        }
     }
 
     function OnLeftMouseDown(event : ViewportMouseEvent)
@@ -148,6 +152,8 @@ class Ship_Menu_Button_Repair_Function : ZilchComponent
     {
         if(this.GameSession.GameVars.PlayerResources >= this.CurrentIronCost && this.GameSession.GameVars.PlayerCopper >= this.CurrentCopperCost && this.GameSession.GameVars.PlayerTitanium >= this.CurrentTitaniumCost && this.GameSession.GameVars.PlayerAluminium >= this.CurrentAluminiumCost)
         {   
+            this.Space.SoundSpace.PlayCue(SoundCue.Blip_Hover);
+            
             this.Transform.Translation.Z += 10;
                     
             this.Owner.Actions.Cancel();
@@ -219,6 +225,8 @@ class Ship_Menu_Button_Repair_Function : ZilchComponent
                 
             this.GameSession.GameVars.ShipRepairStage += 1;
         
+            this.Space.SoundSpace.PlayCue(SoundCue.Ship_repair_sound);
+        
             if(this.GameSession.GameVars.ShipRepairStage == 4)
             {
                 var buildingRecall = BuildingRecall();
@@ -226,6 +234,10 @@ class Ship_Menu_Button_Repair_Function : ZilchComponent
                 
                 this.GameSession.GameVars.NewLevel = Level.WinLevel;
             }
+        }
+        else
+        {
+            this.Space.SoundSpace.PlayCue(SoundCue.Blip_CantSelect);
         }     
     }
 }

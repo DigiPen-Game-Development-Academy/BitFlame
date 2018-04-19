@@ -139,10 +139,6 @@ Level =
 		Level_ChangeLevel = 
 		{
 		},
-		EscapeHandler = 
-		{
-			bool ApplyQuit = false,
-		},
 		WaveSpawner = 
 		{
 			CogPath Player = 
@@ -193,6 +189,11 @@ Level =
 		{
 			float Interval1 = 30,
 			float Interval3 = 30,
+		},
+		EscapeHandler = 
+		{
+			bool ApplyQuit = false,
+			bool Pause = false,
 		},
 	},
 	ArchetypeInstance = 

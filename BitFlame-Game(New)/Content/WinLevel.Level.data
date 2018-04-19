@@ -91,6 +91,11 @@ Level =
 			int HilightInterval = 10,
 			bool FollowEditorCamera = false,
 		},
+		EscapeHandler = 
+		{
+			bool ApplyQuit = false,
+			bool Pause = false,
+		},
 	},
 	Cog = 
 	{
@@ -2459,6 +2464,9 @@ Level =
 		},
 		Ship_Menu_Button_Visual = 
 		{
+			string SelectSound = "5ae3cf4fa1253749:Blip_Select",
+			string CantSelect = "5ae3cf4fa1244713:Blip_CantSelect",
+			string HoverSound = "5a64f05e1529e84d:Blip_Hover",
 			Vec4 HoverColor = [1, 1, 1, 1],
 			Vec4 ClickColor = [1, 1, 1, 1],
 			float HoverScale = 1.20000005,
