@@ -76,6 +76,8 @@ class GameVars : ZilchComponent
     
     var SlideIn : Boolean = false;
     
+    var TutorialCompleted : Boolean = false;
+    
     //Gamemode
     var WaveGamemode : Boolean = false;
     

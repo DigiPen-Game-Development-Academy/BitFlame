@@ -16,6 +16,8 @@ class TutorialLogic : ZilchComponent
     
     var GotTitanium : Boolean = false;
     
+    var AccessedShip : Boolean = false;
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -32,7 +34,7 @@ class TutorialLogic : ZilchComponent
         }
         else if(this.TutorialStage == 1) //Shooting intro
         {
-            this.Owner.SpriteText.Text = "Shoot at asteroids  by clicking the mouse";
+            this.Owner.SpriteText.Text = "Shoot at asteroids  by clicking the mouse \n Right Mouse to place a building \n Press middle mouse to select building";
         }
         else if(this.TutorialStage == 2) //Resource Gathering intro
         {
@@ -97,6 +99,30 @@ class TutorialLogic : ZilchComponent
             this.TutorialStage += 1.0;
         }
         
+        if(Math.Distance(this.Space.FindObjectByName("Player").Transform.Translation, Real3(0.0,0.0,0.0)) < 3.0 && this.GameSession.GameVars.SlideIn == true && this.GotTitanium && this.AccessedShip == false)
+        {
+            this.AccessedShip = true;
+            
+            this.TutorialStage += 1.0;
+        }
         
+        if(this.GameSession.GameVars.SlideIn)
+        {
+            this.Owner.SpriteText.Visible = false;
+        }
+        else
+        {
+            this.Owner.SpriteText.Visible = true;
+        }
+        
+        if(this.GameSession.GameVars.ShipRepairStage >= 1.0)
+        {
+            this.GameSession.GameVars.TutorialCompleted = true;
+        }
+        
+        if(this.GameSession.GameVars.TutorialCompleted)
+        {
+            this.Owner.Destroy();
+        }
     }
 }
