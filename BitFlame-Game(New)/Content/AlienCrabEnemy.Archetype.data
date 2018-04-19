@@ -86,7 +86,7 @@ Cog =
 		float FollowRange = 20,
 		float OrbitRange = 10,
 		float FireRate = 0.75,
-		float BulletSpeed = 200,
+		float BulletSpeed = 250,
 		string Bullet = "5a74701c5bd6bdc4:EnemyBullet",
 	},
 	DamageOnCollide = 
